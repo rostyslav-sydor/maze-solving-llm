@@ -1,0 +1,5 @@
+From the entry point (0,0) we can move to (0,1), then to (0,2) and from there to (0,3). This path leads us to the exit point (3,3).
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) <PATH_END>
+
+This solution does not cross any walls because it only moves between adjacent cells. Each step in the path is between two cells that are connected in the adjacency list.

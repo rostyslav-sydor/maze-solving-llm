@@ -1,0 +1,24 @@
+The adjacency list representation of the maze indicates which points within the maze are directly connected to each other. To find a path from the starting point, (0,0), to the exit point, (3,3), we need to navigate through the maze using these connections.
+
+The connections listed define a graph where each tuple represents a node, and connections between nodes depict the available pathways. This maze can be navigated using graph traversal algorithms such as Depth-First Search (DFS) or Breadth-First Search (BFS). For this scenario, BFS is a good choice because it explores all neighbors at the present depth prior to moving on to nodes at the next depth level, ensuring the shortest path in an unweighted graph (such as our maze where moving from one point to another has uniform cost).
+
+Starting from (0,0), BFS will systematically explore each directly connected node and then explore all the nodes connected to those nodes, and so on. By keeping track of the nodes visited and maintaining a record of how each node was reached, we can efficiently reconstruct the shortest path from the origin to the target upon reaching the target.
+
+### Procedure:
+1. **Initialization**: Start the BFS with the node (0,0). Set of visited nodes initially contains just (0,0).
+2. **Exploration**: From (0,0), explore adjacent nodes. Add each to the queue of nodes to visit and mark them as visited.
+3. **Continuation**: For each node dequeued from the queue, add its neighbors to the queue (unless they have already been visited).
+4. **Recording Path**: Maintain a predecessor map to remember how each node was reached.
+5. **Completion**: When the target (3,3) is reached, trace back from this node using the predecessor map to reconstruct the path from the origin.
+
+Following these steps for the given maze structure:
+
+Starting at (0,0), we can go to (0,1). From (0,1), we can move to (0,2). From (0,2), go to (0,3). From (0,3), we can directly reach (1,3) and from (1,3), we can move to (2,3). From (2,3), we can either visit nodes already seen or move to new nodes, eventually traversing from (2,3) to (3,3).
+
+### Solution:
+By reconstructing the path from the predecessor record where (0,0) leads to (0,1) to (0,2) to (0,3), then (0,3) to (1,3), followed by (1,3) to (2,3), and finally to (3,3).
+
+This BFS process results in the shortest path:
+```plaintext
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>
+```

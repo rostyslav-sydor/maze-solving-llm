@@ -1,0 +1,5 @@
+First, let's follow a simple rule: always prioritize going down when possible, then right, then up, and finally left. 
+
+Starting at coordinate (1,1), we can move down to (2,1), then right to (2,2), down to (3,2), right to (3,3), down to (4,3), right to (4,4), down to (5,4), right to (5,5), down to (6,5), and finally right to (6,6). At this point, we are at coordinate (6,6) and the exit point is at (7,7).
+
+Therefore, the solution for this maze is: <PATH_START> (1,1) (2,1) (2,2) (3,2) (3,3) (4,3) (4,4) (5,4) (5,5) (6,5) (6,6) (7,6) (7,7) <PATH_END>

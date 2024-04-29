@@ -1,0 +1,5 @@
+The exit point on row 3 and column 3 is directly connected to two adjacent points on row 2 and columns 2 and 3. We can arbitrarily choose to go to row 2 and column 3, which is connected to an adjacent point on row 2 and column 2. Now we have three paths to choose from connecting to row 1: on columns 2, 1 or 0. We choose row 1 and column 2 which is directly connected to an adjacent point on row 1 and column 1, and finally we reach the initial point on row 0 and column 0.
+
+<PATH_START> (3,3) (2,3) (2,2) (1,2) (1,1) (0,1) (0,0) <PATH_END>
+
+This path does not cross any walls and uses only adjacent cells, because each step in the path moves to an adjacent cell that is connected to the previous cell in the path.

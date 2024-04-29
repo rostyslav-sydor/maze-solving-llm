@@ -1,0 +1,21 @@
+To solve the maze, a graph-based approach can be executed using adjacency list data provided. Given the origin at coordinate (0,0) and the target at (3,3), we will use a simple Breadth-First Search (BFS) algorithm to traverse from start to finish based on the graph's connections.
+
+Let's look at the maze paths provided by the adjacency list:
+- Nodes and their connections (edges) are defined.
+- Using these connections, we construct a graph and apply BFS to find the shortest path from (0,0) to (3,3).
+
+### Steps to execute BFS:
+1. **Initialization**: Start with a queue initiated with the origin node (0,0) and a set to record visited nodes.
+2. **BFS Loop**:
+   - Dequeue a node from the queue.
+   - For the dequeued node, explore all its neighbors.
+   - If a neighbor is the target, complete the search.
+   - If a neighbor has not been visited, mark it visited and enqueue it.
+3. **Path Reconstruction**: Once the target is reached, trace back your steps from target to origin using parent pointers stored during BFS to determine the path.
+
+### Path Solution:
+After applying BFS to the provided node connections, the shortest path from (0,0) to (3,3) in terms of grid coordinates (Considering it's a 4x4 based on max indices) is:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>
+
+Now, using this method ensures an effective solution to find the correct path as required.

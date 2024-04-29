@@ -1,0 +1,25 @@
+To solve the maze represented by the adjacency list provided, I'll trace a path from the origin (0,0) to the target (3,3). In the adjacency list, each pair represents a connection between two points in the maze, allowing movement between them. 
+
+To find a path:
+1. Start from the origin (0,0).
+2. Identify all direct connections from (0,0) and choose a path which brings us closer to the target (3,3).
+3. Continue the process at each step, choosing connections that lead toward the target without repeating any nodes.
+
+Based on the connections listed:
+- From (0,0), the possible moves are to (1,0) and (0,1).
+- Following the optimal path (minimizing distance to the target), move to (1,0) as it is vertically aligned with the target.
+- From (1,0), options are (0,0), already visited, or (1,1).
+- From (1,1), move to (2,1) because it leads us closer to the target column 3.
+- From (2,1), connections are only to previous nodes which would backtrack; thus, reassess and move back to (1,1) and look for alternative paths.
+- From (1,1), go back to (0,0), (1,0), or go (1,2), a new path.
+- From (1,2), progress to (2,2) directly moving closer to the target column and row.
+- From (2,2), a vertical move to (3,2) better aligns with the target's row.
+- Finally, from (3,2) the connection to (3,3) follows completing the path to the target.
+
+Resulting Path:
+<Path from (0,0) through (3,3)>: Start from the origin, heading south, then east climbing rows while reaching closer to the target's column, finally from south to north reaching the target.
+
+This path is optimal considering avoidance of node revisits while constantly progressing toward the target under available connections.
+
+Actual Path:
+<PATH_START> (0,0) (1,0) (1,1) (1,2) (2,2) (3,2) (3,3) <PATH_END>

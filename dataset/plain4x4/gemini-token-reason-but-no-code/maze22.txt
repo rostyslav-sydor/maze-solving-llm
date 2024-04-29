@@ -1,0 +1,12 @@
+To find a solution to a maze represented as a graph, one can use depth-first search or breadth-first search algorithms.
+
+**Depth-First Search**
+Depth-first search (DFS) is an algorithm that explores each possible path before backtracking. It starts at the root of the graph and recursively visits each node, marking them as visited. If a dead-end is reached, it backtracks to the last visited node and explores another path. DFS is a simple algorithm to implement, but it can be inefficient for large graphs.
+
+**Breadth-First Search**
+Breadth-first search (BFS) is an algorithm that explores all the nodes at a given depth before moving on to the next depth. It starts at the root of the graph and visits all its neighbors. Then, it visits all the neighbors of the neighbors, and so on. BFS is a more efficient algorithm for large graphs than DFS because it does not have to backtrack.
+
+In this case, we will use the breadth-first search algorithm to solve the maze. We start at the origin point, and we visit all of its neighbors. We then visit all of the neighbors of those neighbors, and so on. We continue this process until we reach the target point.
+
+The solution to the given maze is:
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (3,2) (3,3) <PATH_END>

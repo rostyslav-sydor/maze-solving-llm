@@ -1,0 +1,11 @@
+<PATH_START> (0,0) (1,0) (1,1) (2,1) (3,1) (3,2) (2,2) (2,3) (3,3) <PATH_END>
+
+The solution was found using depth-first search (DFS) algorithm.
+The algorithm starts from the origin and recursively explores all possible paths until it finds the target or until there are no more paths to explore.
+In each recursive call, the algorithm adds the current node to the solution and marks it as visited.
+If the current node is the target, then the algorithm returns the solution.
+Otherwise, the algorithm explores all adjacent nodes that have not been visited and recursively calls itself on each of these nodes.
+
+To check if the solution is valid, we can check that each step in the solution is adjacent to the previous step, that is, the difference in row or column between two adjacent steps is at most 1.
+
+We can also check that the solution does not cross any walls, that is, there is an edge in the adjacency list between each two adjacent steps in the solution.

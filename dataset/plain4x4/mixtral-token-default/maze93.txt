@@ -1,0 +1,45 @@
+To find the path from the origin to the target, we first need to add start and end nodes to the graph and then extract the path from the graph using Dijkstra's algorithm for shortest path finding. Let's represent the start and end nodes as (-1,-1) and (4,4) respectively.
+
+Here's the adjacency list for the graph:
+
+```python
+graph = {
+    (0,0): [(0,1)], 
+    (0,1): [(0,2)], 
+    (0,2): [(1,2)], 
+    (1,2): [(1,3)], 
+    (1,3): [(2,3)], 
+    (2,3): [(2,2)], 
+    (2,2): [(3,2)], 
+    (3,2): [(3,3)], 
+    (3,3): [], 
+    (3,0): [(3,1), (2,0)], 
+    (3,1): [(3,2)], 
+    (2,1): [(1,1)], 
+    (1,1): [(1,0)], 
+    (1,0): [(2,0)], 
+    (-1,-1): [(0,0)], 
+    (4,4): []
+}
+```
+
+Now, let's run Dijkstra's algorithm on this graph with the origin as the start node and the target as the end node. We'll use a dictionary to store the distances from the origin to each node, and a set to store nodes that we have already visited.
+
+```python
+from collections import deque
+
+def shortest_path(graph, start, target):
+    distances = {start: [start]}
+    frontier = deque()
+    frontier.append(start)
+
+    while frontier:
+        node = frontier.popleft()
+
+        if node == target:
+            return distances[target]
+
+        for neighbor in graph[node]:
+            if neighbor not in distances:
+                new_path = distances[node] + [neighbor]
+                distances[

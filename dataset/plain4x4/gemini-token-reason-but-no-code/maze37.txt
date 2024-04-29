@@ -1,0 +1,7 @@
+To find a solution to a maze, we can use a graph search algorithm such as Depth-First Search (DFS) or Breadth-First Search (BFS). In this case, we can use Depth-First Search.
+
+Depth-First Search (DFS) is a recursive algorithm that starts at the origin node and explores all of its unvisited neighbors recursively. If a neighbor is a target node, the algorithm stops and returns the path from the origin to the target. If all of the neighbors have been visited and no target node has been found, the algorithm backtracks to the previous node and explores its unvisited neighbors.
+
+In this maze, the origin node is (0,0) and the target node is (3,3). We can start the DFS at the origin node and explore its unvisited neighbors. The unvisited neighbors of (0,0) are (0,1), (1,0), and (0,2). We can choose to explore (0,1) first. The unvisited neighbors of (0,1) are (0,0), (0,2), and (1,1). We can choose to explore (0,2) first. The unvisited neighbors of (0,2) are (0,1), (0,3), and (1,2). We can choose to explore (0,3) first. The unvisited neighbors of (0,3) are (0,2), (1,3), and (2,3). We can choose to explore (1,3) first. The unvisited neighbors of (1,3) are (0,3), (2,3), and (1,2). We can choose to explore (2,3) first. The unvisited neighbors of (2,3) are (1,3), (3,3), and (2,2). We can choose to explore (3,3) first. This is the target node, so the DFS algorithm stops and returns the path from the origin to the target:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>

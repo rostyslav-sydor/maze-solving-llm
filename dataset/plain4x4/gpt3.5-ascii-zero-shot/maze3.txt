@@ -1,0 +1,28 @@
+1. Start at coordinate (1,1) and mark it as visited.
+2. Move right to (1,2) and mark it as visited.
+3. Move right to (1,3) and mark it as visited.
+4. Move down to (2,3) and mark it as visited.
+5. Move down to (3,3) and mark it as visited.
+6. Move right to (3,4) and mark it as visited.
+7. Move down to (4,4) and mark it as visited.
+8. Move down to (5,4) and mark it as visited.
+9. Move right to (5,5) and mark it as visited.
+10. Move down to (6,5) and mark it as visited.
+11. Move right to (6,6) and mark it as visited.
+12. Move up to (5,6) and mark it as visited.
+13. Move right to (5,7) and mark it as visited.
+14. Move down to (6,7) and mark it as visited.
+15. Move right to (6,8) and mark it as visited.
+16. Move up to (5,8) and mark it as visited.
+17. Move up to (4,8) and mark it as visited.
+18. Move up to (3,8) and mark it as visited.
+19. Move left to (3,7) and mark it as visited.
+20. Move up to (2,7) and mark it as visited.
+21. Move up to (1,7) and mark it as visited.
+22. Move right to (1,8) and mark it as visited.
+23. Move down to (2,8) and mark it as visited.
+24. Move down to (3,8) and mark it as visited.
+25. Move down to (4,8) and mark it as visited.
+26. Move right to (4,9) and mark it as visited.
+27. Reach the exit at coordinate (7,7).
+28. The solution path is: <PATH_START> (1,1) (1,2) (1,3) (2,3) (3,3) (3,4) (4,4) (5,4) (5,5) (6,5) (6,6) (5,6) (5,7) (6,7) (6,8) (5,8) (4,8) (3,8) (3,7) (2,7) (1,7) (1,8) (2,8) (3,8) (4,8) (4,9) (7,7) <PATH_END>

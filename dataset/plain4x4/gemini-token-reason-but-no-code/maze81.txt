@@ -1,0 +1,10 @@
+The maze can be solved by performing Depth First Search (DFS) or Breadth First Search (BFS).
+The algorithm should begin by initializing an empty list called 'path' to store the coordinates of the current path being explored and the list of all explored coordinates called 'visited'.
+Then we add the entry coordinate (0,0) to the 'visited' list and the 'path' list.
+The algorithm should then iterate over the neighbors of the current coordinate and recursively call itself for each neighbor that has not yet been visited.
+If any of the recursive calls return True, indicating that a solution has been found, the algorithm should add the current coordinate to the 'path' list and return True.
+If none of the recursive calls return True, the algorithm should remove the current coordinate from the 'path' list and return False.
+To find a specific solution for the given maze, we can start from the entry coordinate (0,0) and explore its neighbors in the order specified by the adjacency list.
+By following the algorithm described above, we can find the following solution for the given maze:
+
+<PATH_START> (0,0) (1,0) (2,0) (2,1) (2,2) (3,2) (3,3) <PATH_END>

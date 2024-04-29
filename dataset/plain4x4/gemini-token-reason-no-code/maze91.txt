@@ -1,0 +1,7 @@
+Breadth first search (BFS) can be used to find the shortest path in an unweighted graph. BFS starts from the origin node and iteratively explores all of its neighbors, then all of their neighbors, and so on, until a path to the target node is found.
+
+This maze can be represented as a graph, where each node is a coordinate and each edge is a connection between two coordinates. The origin and target nodes are specified in the input.
+
+By applying BFS to the graph, we can find the shortest path from the origin to the target node. This path will be a sequence of coordinates that connect the origin and target nodes.
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>

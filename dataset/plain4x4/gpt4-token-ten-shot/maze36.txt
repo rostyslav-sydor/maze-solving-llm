@@ -1,0 +1,20 @@
+Given the maze and the adjacency list provided:
+
+<ADJLIST_START> (3,0) <--> (2,0) ; (0,2) <--> (0,3) ; (0,3) <--> (1,3) ; (3,3) <--> (2,3) ; (3,1) <--> (3,0) ; (3,3) <--> (3,2) ; (1,1) <--> (2,1) ; (0,1) <--> (0,0) ; (2,1) <--> (2,2) ; (2,3) <--> (1,3) ; (1,2) <--> (0,2) ; (1,0) <--> (1,1) ; (3,2) <--> (3,1) ; (0,1) <--> (0,2) ; (3,2) <--> (2,2) ; <ADJLIST_END>
+
+We are tasked with finding a solution from the start (0,0) to the end (3,3).
+
+To solve this, we would search for a path through the adjacency list:
+
+1. (0,0) connects to (0,1)
+2. (0,1) connects to (0,2)
+3. (0,2) connects to (0,3)
+4. (0,3) connects to (1,3)
+5. (1,3) connects to (2,3)
+6. (2,3) connects to (3,3)
+
+It is possible to see a valid path from the origin to the target without circling back or traversing any node more than once.
+
+Hence, the solution path would be:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>

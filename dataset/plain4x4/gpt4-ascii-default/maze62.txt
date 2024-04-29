@@ -1,0 +1,14 @@
+To solve the maze, we start from the entry point 'S' located at (1,1) and look for available paths that avoid walls (#) to reach the exit point 'E' located at (7,7). We traverse the maze employing a pathfinding strategy like Breadth-First Search (BFS) which finds the shortest path.
+
+1. Starting at (1,1), we move right to (1,2) and (1,3) since there are no obstacles.
+2. We continue moving right to (1,4) and (1,5).
+3. At (1,6), we can move further right to (1,7).
+4. From (1,7), next is a downward movement to (2,7).
+5. As moving right leads to a wall, we proceed down further to (3,7), (4,7).
+6. At (4,7), we take another downward path to (5,7).
+7. From (5,7), we proceed to explore right to (5,8) and observe an open path down to (6,8).
+8. Similarly, move further down to (7,8) and finally move left to the exit point at (7,7).
+
+The path through the maze can then be summarized and formatted accordingly:
+
+<PATH_START> (1,1) (1,2) (1,3) (1,4) (1,5) (1,6) (1,7) (2,7) (3,7) (4,7) (5,7) (5,8) (6,8) (7,8) (7,7) <PATH_END>

@@ -1,0 +1,25 @@
+To solve the maze provided in the adjacency list format, we first need to understand and analyze the structure of connections between each point of the maze. Essentially, each pair in the adjacency list denotes a bidirectional path between the two points, which represent cells in the maze that can be traversed from one to the other.
+
+The decision-making process to find a path through the maze can be approached using a graph traversal algorithm such as Depth-First Search (DFS) or Breadth-First Search (BFS). These algorithms are efficient for solving mazes mapped as graphs due to their systematic way of exploring all possible paths and choosing the route that leads to the destination.
+
+For this specific maze:
+
+- **Starting Point**: `(0,0)`
+- **Ending Point**: `(4,5)`
+
+Considering using the BFS algorithm due to its nature in finding the shortest path in unweighted graphs like this one. BFS explores all neighbor nodes at the present depth prior to moving on to nodes at the next depth level, which ensures that the first time we visit our destination node, it will be through the shortest path.
+
+Upon running BFS:
+
+1. Load and parse the adjacency list to create a graph representation in the form of a dictionary where each node points to a list of its directly connected neighbors.
+2. Initialize the BFS algorithm from the starting point `(0,0)`.
+3. Explore all connected nodes layer by layer from the origin, marking visited nodes and recording the path taken to reach them until the destination `(4,5)` is found.
+4. Upon reaching the destination, retrieve the path taken by backtracking from the destination to the origin, using the recorded paths.
+
+After conducting BFS on the provided adjacency list starting from `(0,0)`, we pull out the shortest path to `(4,5)` based on the BFS path retrieval:
+
+```
+<PATH_START> (0,0) (1,0) (2,0) (2,1) (2,2) (2,3) (1,3) (0,3) (0,4) (0,5) (1,5) (2,5) (2,4) (3,4) (3,5) (4,5) <PATH_END>
+```
+
+Each step moves logic-wise from one point to another accessible direct neighbor until the maze's exit is successfully reached.

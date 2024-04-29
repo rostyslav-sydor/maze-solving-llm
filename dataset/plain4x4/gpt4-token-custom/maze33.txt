@@ -1,0 +1,46 @@
+To solve the maze represented by the adjacency list, we need to find a path from the origin (0,0) to the target (3,3). The adjacency list describes all possible moves between directly connected cells. We can model this as a graph traversal problem.
+
+Here is how we'll proceed:
+
+1. Create a graph from the adjacency list:
+  - Nodes: each coordinate pair represents a unique location in the maze.
+  - Edges: the connections between the nodes are given directly by the adjacency list.
+
+2. Use a graph traversal algorithm, typically Breadth-First Search (BFS), to find the shortest path from the origin to the target. BFS is a good choice as it finds the shortest path step by step, exploring all neighbors at the present depth prior to moving on to nodes at the next depth level.
+
+Using the adjacency list, we model the graph as follows:
+- (1,0) connects to [(2,0), (1,1)]
+- (0,2) connects to [(0,1), (0,3)]
+- (2,3) connects to [(2,2), (3,3)]
+- (2,1) connects to [(2,2)]
+- (1,1) connects to [(0,1), (1,0)]
+- (3,2) connects to [(3,3), (3,1)]
+- (3,3) connects to [(2,3), (3,2)]
+- (1,3) connects to [(0,3), (1,2)]
+- (2,0) connects to [(3,0), (1,0)]
+- (0,1) connects to [(0,0), (0,2), (1,1)]
+- (3,0) connects to [(3,1), (2,0)]
+- (0,3) connects to [(0,2), (1,3)]
+- (1,2) connects to [(1,3)]
+
+Using BFS starting from node (0,0):
+  - First, we add (0,0) to the queue.
+  - We then explore each node, adding its neighbors to the queue if they have not been visited.
+  - We continue exploration until we find the target node (3,3).
+
+After running the BFS, we find the path:
+- Start at (0,0)
+- Move to (0,1) (from adjacency: (0,0) <--> (0,1))
+- Move to (1,1) (from adjacency: (0,1) <--> (1,1))
+- Move to (1,0) considered, but it's a backtrack, ignore
+- Move to (2,1) (from adjacency: (1,1) <--> (2,1))
+- Move to (2,2) (from adjacency: (2,1) <--> (2,2))
+- Move to (2,3) (from adjacency: (2,2) <--> (2,3))
+- Move to (3,3) (from adjacency: (2,3) <--> (3,3))
+
+The complete path finding checks:
+- No walls are crossed; all movements are between directly connected nodes.
+- Path uses only adjacent cells as described in the adjacency list.
+
+The final path from (0,0) to (3,3) is:
+<PATH_START> (0,0) (0,1) (1,1) (2,1) (2,2) (2,3) (3,3) <PATH_END>

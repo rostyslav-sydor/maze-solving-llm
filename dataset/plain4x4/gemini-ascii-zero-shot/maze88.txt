@@ -1,0 +1,7 @@
+First, we need to find a path from the starting point to the exit point. Starting from the entrance, we can try to move down by one unit. We check if the cell below is a wall or not. If not, we move down and mark the cell as visited. We repeat this process until we reach the exit point.
+
+Once we have found a path, we can output it as a list of coordinates. The starting coordinate is (1,1) and the exit coordinate is (7,7). All the coordinates in between are the coordinates of the cells that we visited to reach the exit point.
+
+So, the solution to the maze is:
+
+<PATH_START> (1,1) (1,2) (2,2) (2,3) (3,3) (3,4) (4,4) (4,5) (5,5) (5,6) (6,6) (6,7) (7,7) <PATH_END>

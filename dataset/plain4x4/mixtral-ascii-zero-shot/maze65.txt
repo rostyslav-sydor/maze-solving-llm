@@ -1,0 +1,17 @@
+To find a valid solution, we first construct the simplest navigation path from the starting coordinates to the target coordinates. In this maze, there are multiple ways to achieve the goal. Here is one method to create a solution step-by-step:
+
+1. From the starting point (1, 1), we must navigate left first to move into an open space and avoid a wall. The coordinates change to (1, 2). We continue to move down the row following the path (1, 3), (1, 4), (1, 5).
+
+2. At this point, we should start to move to the right column. We encounter a wall that we cannot pass through, so we need to turn left back to column 1. The coordinates change to (1, 4).
+
+3. The next move must be down; it changes the row to 2, and the columns stay at 4. This will bring us to the wall blocking the way to the left, and full navigation will take us to the opposite wall. The coordinates change to (2, 4).
+
+4. Subsequently, we change our course down and right, which will bring us to the target location (7, 7). Following the full path will result in the following coordinates: (3, 4), (4, 4), (4, 5), (5, 5), (5, 6), (6, 6), (6, 7), (7, 7), which match the coordinates given in the original diagram.
+
+In this scenario, after a complete solution making use of left and down moves, we can express the path in the following format: <PATH_START> (1, 1), (1, 2), (1, 3), (1, 4), (1, 5), (1, 4), (2, 4), (3, 4), (4, 4), (4, 5), (5, 5), (5, 6), (6, 6), (6, 7), (7, 7) <PATH_END>. 
+
+A solution that is shorter or makes more use of right or up moves might also be valid. ∎
+
+The final, shortest solution as provided in the maze format is:
+
+<PATH_START> (1,1)

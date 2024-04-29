@@ -1,0 +1,51 @@
+ First, we need to extract the maze structure and the origin and target coordinates. From the provided text, the maze is represented as an adjacency list.
+
+The extracted maze structure is as follows:
+
+<ADJLIST_START>
+(1,2) <--> (0,2)
+(1,1) <--> (1,2)
+(3,2) <--> (3,1)
+(0,1) <--> (0,0)
+(2,1) <--> (2,0)
+(3,3) <--> (2,3)
+(2,2) <--> (2,3)
+(0,3) <--> (0,2)
+(2,3) <--> (1,3)
+(1,0) <--> (1,1)
+(2,2) <--> (3,2)
+(3,0) <--> (3,1)
+(1,3) <--> (0,3)
+(1,0) <--> (0,0)
+(3,1) <--> (2,1)
+<ADJLIST_END>
+
+The origin and target coordinates are:
+
+<ORIGIN_START> (0,0) <ORIGIN_END>
+<TARGET_START> (3,3) <TARGET_END>
+
+Now let's search a path from (0,0) to (3,3) within this maze using a backtracking search algorithm:
+
+```python
+def search_path(origin, target, adj_list, path=[]):
+    path = path + [origin]
+    if origin == target:
+        return path
+    if not adj_list.get(origin):
+        return None
+    for neighbor in adj_list[origin]:
+        if neighbor not in path:
+            newpath = search_path(neighbor, target, adj_list, path)
+            if newpath:
+                return newpath
+    return None
+```
+
+Let's parse the text into a suitable data structure for the algorithm:
+
+```python
+adj_list = {
+    (1,2): [(0,2)],
+    (1,1): [(1,2)],
+    (

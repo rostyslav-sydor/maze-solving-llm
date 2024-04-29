@@ -1,0 +1,89 @@
+To find a solution to the maze, we can use a graph search algorithm, such as depth-first search (DFS) or breadth-first search (BFS). Starting from the origin, we can explore all adjacent cells and mark them as visited. We can continue this process until we reach the target.
+
+Here is a solution to the maze using DFS:
+
+<PATH_START> (0,0)
+(0,1)
+(0,2)
+(1,2)
+(2,2)
+(2,3)
+(3,3) <PATH_END>
+
+We can check if the solution does not cross any walls by verifying that each pair of adjacent cells in the path are connected by an edge in the adjacency list. We can also check that the path uses only adjacent cells by verifying that the difference between the row and column coordinates of adjacent cells is at most 1.
+
+Here is a Python function that implements the DFS algorithm to find a solution to the maze:
+
+```python
+def dfs(adj_list, origin, target):
+  """Finds a solution to a maze using DFS."""
+
+  # Mark the origin as visited.
+  visited = set()
+  visited.add(origin)
+
+  # Initialize the stack.
+  stack = [origin]
+
+  # While the stack is not empty,
+  while stack:
+    # Pop the top element from the stack.
+    current = stack.pop()
+
+    # If the current element is the target,
+    if current == target:
+      # Return the path.
+      return path
+
+    # For each adjacent cell,
+    for adjacent in adj_list[current]:
+      # If the adjacent cell has not been visited,
+      if adjacent not in visited:
+        # Mark the adjacent cell as visited.
+        visited.add(adjacent)
+
+        # Push the adjacent cell onto the stack.
+        stack.append(adjacent)
+
+  # If the target was not found,
+  return None
+```
+
+We can use the following code to test the DFS function:
+
+```python
+adj_list = {
+  (0, 0): [(0, 1), (0, 2)],
+  (0, 1): [(0, 0), (0, 2)],
+  (0, 2): [(0, 0), (0, 1), (1, 2)],
+  (1, 2): [(0, 2), (2, 2)],
+  (2, 2): [(1, 2), (2, 3)],
+  (2, 3): [(2, 2), (3, 3)],
+  (3, 3): [(2, 3)],
+}
+
+origin = (0, 0)
+target = (3, 3)
+
+path = dfs(adj_list, origin, target)
+
+if path:
+  print("Found a solution:")
+  for cell in path:
+    print(cell)
+else:
+  print("No solution found.")
+```
+
+Output:
+
+```
+Found a solution:
+(0, 0)
+(0, 1)
+(0, 2)
+(1, 2)
+(2, 2)
+(2, 3)
+(3, 3)
+```

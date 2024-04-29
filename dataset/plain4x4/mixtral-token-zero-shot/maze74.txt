@@ -1,0 +1,37 @@
+[Step 1: Create a Matrix to Represent the Maze]
+To find a solution for the maze, let's first create a 4x4 matrix representation of it from the given adjacency list:
+
+Matrix:
+   -   0 1 2 3
+   0 \__
+         o   o
+             |
+   1  o   o  
+         |
+         |   o
+   2  o o o  
+         |
+         |   o
+   3  o o o  
+             |
+             |
+
+[Step 2: Mark the Origin and Target]
+In this matrix format, the origin (start) is (0,0), and the target (end) is (3,3). Initially, we can move from (0,0) to adjacent tiles (0,1) and (1,0).
+
+[Step 3: Implement a Path-finding Algorithm]
+Use a path-finding algorithm like Depth-First Search (DFS) or Breadth-First Search (BFS) to explore the maze by following adjacent nodes while maintaining a path stack.
+
+1. Start from the origin (0,0).
+2. Mark this (0,0) as visited and add it to the path stack.
+3. Repeat the following steps until you reach the target (3,3):
+    a. Check the neighboring (adjacent) tiles that we haven't visited and can move to: North (row - 1), South (row + 1), East (column + 1), and West (column - 1).
+    b. Try moving to each neighboring tile, maintaining the path stack by adding the current tile to it.
+    c. When a valid move is made (e.g., reaching (1,1) from (0,0)), remove the previous tile from the path stack and add the new one.
+    d. If you can't move to any neighboring tile, backtrack by restoring the previous tile from the stack and remove the current one.
+    e. Keep checking if you reached the target (3,3).
+
+[Step 4: Found the Solution Path]
+After successfully reaching the target (3,3) using the path-finding algorithm, extract the coordinate data from the path stack in reverse order.
+
+The

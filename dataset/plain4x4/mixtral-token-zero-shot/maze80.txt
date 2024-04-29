@@ -1,0 +1,15 @@
+Applying the Breadth-First-Search (BFS) algorithm to find the shortest path from the entry point to the exit point in the provided maze:
+
+1. Parse the given adjacency list to create the graph.
+2. Initialize queue for BFS algorithm.
+3. Start from the entry point, mark it as visited.
+4. Add the entry point coordinates to the visited list and queue.
+5. While the queue is not empty, remove the first item from it, check its neighbors. If any unvisited neighbor exists, mark it as visited, add it to the visited list and queue, and add its coordinates to the previous queue item's connected coordinates list.
+6. Continue until the exit point is found.
+7. Trace back from the exit point using the connected coordinates list, adding the coordinates to the output path list until the entry point is reached.
+
+Final output between <PATH_START> and <PATH_END> tokens as per the format requested:
+
+<PATH_START> (0,0) (1,0) (2,0) (2,1) (3,1) (3,0) (3,2) (3,3) <PATH_END>
+
+It should be noted that this is a simplified description of BFS, and the actual implementation may need to take care of potential obstacles or other specific conditions that might be present in the given maze.

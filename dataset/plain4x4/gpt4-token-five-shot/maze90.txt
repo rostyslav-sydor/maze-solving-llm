@@ -1,0 +1,35 @@
+To solve the maze provided, you first need to convert the adjacency list into a graph representation. Then use a graph search algorithm (like BFS or DFS) to find the shortest path from the origin to the target.
+
+Given Maze:
+<ADJLIST_START> (1,1) <--> (1,0) ; (2,0) <--> (3,0) ; (1,1) <--> (1,2) ; (2,1) <--> (2,2) ; (3,1) <--> (3,2) ; (3,3) <--> (2,3) ; (0,0) <--> (0,1) ; (1,3) <--> (2,3) ; (1,2) <--> (1,3) ; (3,1) <--> (3,0) ; (0,2) <--> (0,1) ; (3,2) <--> (3,3) ; (1,0) <--> (0,0) ; (1,1) <--> (2,1) ; (0,3) <--> (0,2) ; <ADJLIST_END> 
+<ORIGIN_START> (0,0) <ORIGIN_END> 
+<TARGET_START> (3,3) <TARGET_END>
+
+Converting the adjacency list:
+1. (0,0) is adjacent to (0,1) and (1,0)
+2. (0,1) is adjacent to (0,0) and (0,2)
+3. (0,2) is adjacent to (0,1) and (0,3)
+4. (0,3) is adjacent to (0,2)
+5. (1,0) is adjacent to (0,0) and (1,1)
+6. (1,1) is adjacent to (1,0), (2,1), (1,2)
+7. (1,2) is adjacent to (1,1), (1,3)
+8. (1,3) is adjacent to (1,2), (2,3)
+9. (2,0) is connected to (3,0)
+10. (2,1) is adjacent to (1,1), (2,2)
+11. (2,2) is adjacent to (2,1), (2,3)
+12. (2,3) is adjacent to (1,3), (3,3)
+13. (3,0) is adjacent to (2,0), (3,1)
+14. (3,1) is adjacent to (3,0), (3,2)
+15. (3,2) is adjacent to (3,1), (3,3)
+16. (3,3) is adjacent to (3,2), (2,3)
+
+To solve, start at origin (0,0) and explore paths until (3,3) is reached:
+1. From (0,0) to (1,0) (since connected directly)
+2. To (1,1) (adjacent to (1,0))
+3. To (1,2) (adjacent to (1,1))
+4. To (1,3) (adjacent to (1,2))
+5. To (2,3) (adjacent to (1,3))
+6. To (3,3) (adjacent to (2,3))
+
+Thus, the solution path is:
+<PATH_START> (0,0) (1,0) (1,1) (1,2) (1,3) (2,3) (3,3) <PATH_END>

@@ -1,0 +1,31 @@
+To solve the maze, we will use the breadth-first search (BFS) algorithm, which is an efficient graph traversal method. BFS guarantees to find the shortest path between the origin and the target if such a path exists.
+
+Before applying BFS, let's understand the given adjacency list representation of the maze:
+
+<ADJLIST_START>
+(2,0) <--> (3,0) ; (0,1) <--> (0,0) ; (0,3) <--> (0,2) ; (2,2) <--> (3,2) ; (1,3) <--> (1,2) ; (3,2) <--> (3,3) ; (2,3) <--> (3,3) ; (1,1) <--> (2,1) ; (2,2) <--> (2,1) ; (3,0) <--> (3,1) ; (1,3) <--> (2,3) ; (0,1) <--> (0,2) ; (3,1) <--> (3,2) ; (1,2) <--> (0,2) ; (1,0) <--> (1,1)
+<ADJLIST_END>
+<ORIGIN_START> (0,0) <ORIGIN_END>
+<TARGET_START> (3,3) <TARGET_END>
+
+Now, let's implement the BFS algorithm:
+
+1. Initialize an empty queue and enqueue the origin node (0,0).
+2. While the queue is not empty:
+   a. Dequeue the current node from the queue.
+   b. If the current node is the target node (3,3), we have found the path, and we can stop.
+   c. Otherwise, mark the current node as visited.
+   d. For each neighbor node that is not yet visited:
+       i. Enqueue the neighbor node to the queue.
+       ii. Set the current node as the predecessor of the neighbor node.
+3. Reconstruct the path by following the predecessors from the target node back to the origin node.
+
+Applying BFS to the given maze, we obtain the following path:
+
+<PATH_START>
+(0,0) (0,1) (0,2) (0,3) (1,3) (1,2) (1,1) (2,1) (2,2) (2,3) (3,3)
+<PATH_END>
+
+The path in the format of a coordinate list is enclosed between the <PATH_START> and <PATH_END> tokens. The first coordinate represents the row, and the second coordinate represents the column. The path starts at (0,0) and ends at (3,3).
+
+Note: If there is no path from the origin to the target, the BFS algorithm will still terminate, but the queue will be empty, and no path will be found.

@@ -1,0 +1,25 @@
+We can utilize a graph search algorithm like breadth-first search (BFS) or depth-first search (DFS) to find a solution path in the maze. Here, I'll use BFS:
+
+1. Create an empty queue for visited nodes and initialize a 2D grid based on the adjacent list.
+2. Set the starting point's (origin) value to 1.
+3. Add the starting point to the queue, and while there are elements in the queue, do:
+   a. Dequeue the current node and check its neighboring nodes.
+   b. If a neighbor exists (connected according to given adjacency list) and hasn't been visited (value not 1), set that neighbor's value to (1 + total steps taken to reach this point).
+   c. Enqueue the unexplored neighbor node to the queue.
+4. Once there are no more elements left in the queue or the target node is found, stop.
+5. Track the total number of steps taken from the starting point to each point in the graph through their values. 
+
+The initial value of each square should be 0, except for the starting point (value of 1).
+
+Now let's print the solution:
+
+1. Start from the target point.
+2. Iterate from that point backward toward the origin to print out the steps taken in reverse order:
+
+<PATH_START>
+
+ (3,3) (3,2) (2,2) (2,1) (1,1) (1,2) (0,2) (0,1) (0,0)
+
+<PATH_END>
+
+In this example path, the agent moves from (0,0) to (3,3), crossing every square of the specified maze at least once. This path represents a solution for the given maze.

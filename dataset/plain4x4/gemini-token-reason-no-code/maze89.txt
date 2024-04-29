@@ -1,0 +1,10 @@
+A possible solution to the maze is: <PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (3,2) (3,3) <PATH_END>
+
+**Reasoning:**
+
+1. From the starting point at (0,0), the shortest path is to the right towards (1,0).
+2. From (1,0), the only available path is to the right again, towards (2,0).
+3. From (2,0), the only available path is to the right once more, towards (3,0).
+4. From (3,0), the only available path is up, towards (3,1).
+5. From (3,1), the only available path is right, towards (3,2).
+6. Finally, from (3,2), the only available path is up once more, towards the destination point at (3,3).

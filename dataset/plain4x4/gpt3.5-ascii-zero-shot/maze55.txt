@@ -1,0 +1,38 @@
+1. Start at the entry point (1,1)
+2. Move down to (2,1) since (1,2) is a wall
+3. Move down again to (3,1) since (2,2) and (3,2) are walls
+4. Move right to (3,2)
+5. Move right again to (3,3)
+6. Move up to (2,3)
+7. Move up again to (1,3)
+8. Move right to (1,4)
+9. Move down to (2,4)
+10. Move down again to (3,4)
+11. Move right to (3,5)
+12. Move up to (2,5)
+13. Move right to (2,6)
+14. Move down to (3,6)
+15. Move right to (3,7)
+16. Move down to (4,7)
+17. Move down again to (5,7)
+18. Move left to (5,6)
+19. Move down to (6,6)
+20. Move left to (6,5)
+21. Move down to (7,5)
+22. Move right to (7,6)
+23. Move up to (6,6)
+24. Move up again to (5,6)
+25. Move left to (5,5)
+26. Move left again to (5,4)
+27. Move up to (4,4)
+28. Move up again to (3,4)
+29. Move up to (2,4)
+30. Move up again to (1,4)
+31. Move right to (1,5)
+32. Move right again to (1,6)
+33. Move right again to (1,7)
+34. Reach the exit point at (1,7)
+ 
+Therefore, the path solution for this maze is:
+ 
+<PATH_START> (1,1) (2,1) (3,1) (3,2) (3,3) (2,3) (1,3) (1,4) (2,4) (3,4) (3,5) (2,5) (2,6) (3,6) (3,7) (4,7) (5,7) (5,6) (6,6) (6,5) (7,5) (7,6) (6,6) (5,6) (5,5) (5,4) (4,4) (3,4) (2,4) (1,4) (1,5) (1,6) (1,7) <PATH_END>

@@ -1,0 +1,3 @@
+<Path_START> (1,1) (2,1) (3,1) (4,1) (5,1) (5,2) (5,3) (5,4) (5,5) (4,5) (3,5) (2,5) (2,4) (2,3) (2,2) (3,2) (4,2) (5,2) (6,2) (7,2) (7,3) (7,4) (7,5) (6,5) (6,6) (6,7) (6,8) (7,8) (7,7) <PATH_END> 
+
+This solution will guide someone from the starting point (1,1) to the exit point (7,7) by navigating through the maze while avoiding the walls. It's a sequence of coordinates representing the path to follow in order to successfully make it through the maze.

@@ -1,0 +1,14 @@
+1. Start at the entry point (1,1) and explore all possible paths.
+2. Move right to (1,2) since it is not a wall.
+3. Move right to (1,3) since it is not a wall.
+4. Move down to (2,3) since it is not a wall.
+5. Move down to (3,3) since it is not a wall.
+6. Move right to (3,4) since it is not a wall.
+7. Move down to (4,4) since it is not a wall.
+8. Move right to (4,5) since it is not a wall.
+9. Move down to (5,5) since it is not a wall.
+10. Move down to (6,5) since it is not a wall.
+11. Move right to (6,6) since it is not a wall.
+12. Move right to (6,7) since it is not a wall.
+13. Move down to (7,7) which is the exit point.
+14. Path found: <PATH_START> (1,1) (1,2) (1,3) (2,3) (3,3) (3,4) (4,4) (4,5) (5,5) (6,5) (6,6) (6,7) (7,7) <PATH_END>

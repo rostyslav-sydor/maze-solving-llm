@@ -1,0 +1,11 @@
+**Reason:**
+
+We start at the origin and look for adjacent cells that have not been visited. We find that we can move to the right to (0,1). From there, we can move down to (1,1). We can then move right to (1,2), and then down to (2,2). From there, we can move right to (3,2), and then up to (2,3). Finally, we can move right to reach the target at (3,3).
+
+**Output:**
+
+<PATH_START> (0,0) (0,1) (1,1) (1,2) (2,2) (3,2) (2,3) (3,3) <PATH_END>
+
+**Verification:**
+
+We can check that this solution does not cross any walls by looking at the adjacency list and making sure that each move is between two adjacent cells. We can also check that the path uses only adjacent cells by looking at the adjacency list and making sure that each move is between two cells that are connected by an edge.

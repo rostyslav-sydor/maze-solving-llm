@@ -1,0 +1,26 @@
+Here's a solution for this maze:
+
+To represent it as a path coordinate list, let's follow the direction of the arrows. This maze only has single way solution.
+
+1. Start at (0, 0): `(0,0)`
+2. The only path from there is East to (0, 1): `(0,1)`
+3. Then North is the only potential option, leading to (0,2): `(0,2)`
+4. The path then leads East to (1,2): `(1,2)`
+5. Then follows South to (1,1): `(1,1)`
+6. Then East to (2,1): `(2,1)`
+7. Then North to (2,2): `(2,2)`
+8. Then East to (3,2): `(3,2)`
+9. Then North to (3,3): `(3,3)`
+
+Now let's represent the path coordinate list:
+
+<PATH_START>
+(0,0),(0,1),(0,2),(1,2),(1,1),(2,1),(2,2),(3,2),(3,3)
+<PATH_END>
+
+Here's a representation of the path on the maze:
+
+000
+110
+200
+300

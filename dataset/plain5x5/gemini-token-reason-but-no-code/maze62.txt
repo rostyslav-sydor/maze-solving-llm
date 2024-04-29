@@ -1,0 +1,9 @@
+This maze can be solved by using Depth-First Search (DFS) algorithm.
+
+DFS is an algorithm that starts at the origin node and explores as far as possible along each branch before backtracking.
+
+For each node, we can explore its adjacent nodes. If the adjacent node is the target node, then we have found a solution. Otherwise, we can mark the adjacent node as visited and continue to explore its adjacent nodes.
+
+For the given maze, the solution is:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (0,4) (1,4) (2,4) (3,4) (4,4) <PATH_END>

@@ -1,0 +1,16 @@
+<PATH_START> (0,0) (1,0) (2,0) (2,1) (2,2) (2,3) (3,3) <PATH_END>
+
+**Reasoning:**
+1. Start from the origin (0,0).
+2. Move right to (1,0).
+3. Move down to (1,1).
+4. Move right to (2,1).
+5. Move down to (2,2).
+6. Move right to (3,2).
+7. Move down to (3,3).
+
+**Checking the solution:**
+1. The path does not cross any walls.
+2. The path only uses adjacent cells.
+
+Therefore, the solution is correct.

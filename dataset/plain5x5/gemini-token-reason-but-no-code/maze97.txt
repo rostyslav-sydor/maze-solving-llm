@@ -1,0 +1,9 @@
+To solve a maze represented as a graph, one can use a breadth-first search (BFS) algorithm. Starting from the origin point, BFS explores all neighboring nodes level by level, marking each visited node as it goes. When the target point is reached, the path from the origin to the target can be traced back by following the marked nodes.
+
+In the given maze, the BFS algorithm would start from the origin point (0,0) and explore its neighbors: (0,1), (1,0), and (0,2). Since the target point (4,4) is not among these neighbors, the algorithm would continue to explore the neighbors of the visited nodes.
+
+After exploring all neighbors of the origin point, the algorithm would move on to the next level, exploring the neighbors of the visited nodes that have not been visited yet. This process would continue until the target point is reached or until all possible paths have been exhausted.
+
+In this particular maze, the BFS algorithm would find the following path to the target point (4,4):
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (0,4) (1,4) (2,4) (3,4) (4,4) <PATH_END>

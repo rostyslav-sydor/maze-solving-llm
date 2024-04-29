@@ -1,0 +1,19 @@
+Let's break down the problem: we want to find the shortest path from the starting point (1, 1) to the ending point (7, 7). We can represent our search stage in terms of applications of an operator.
+
+Our problem states map can be represented as a search graph where each vertex is a state, and each move from a given vertex to an adjacent one is an application of one of the operators corresponding to the four directions we can move in: up, down, left, or right. Our initial state is (1, 1) and the goal state is (7, 7).
+
+Let's also define a function called 'is_valid_path' which will help us in checking if we can move in a direction or not. This function checks if the destination cell is within the maze bounds and not a wall (i.e., hash sign).
+
+If the search leads to any vertex (or state) from which no further move in any of these directions is possible, this will lead to a dead-end, and the search should backtrack to the previous state where it could choose another direction.
+
+Here's a possible solution using a common search algorithm, Breadth-First Search:
+
+1. We will maintain a queue where we can push all the successor states of a given state as we proceed with the search. We start by pushing the initial state (1, 1).
+2. We will also maintain a dictionary to keep track of the path from the initial state to each visited state during the search process.
+3. Repeat the following process:
+   a. Dequeue the next state from the queue and consider moving in all possible directions (up, down, left, right).
+   b. If we move up or down, we increment or decrement the row index, and if we move left or right, we decrement or increment the column index.
+   c. For each move, we first call is_valid_path to make sure the destination state is within the maze bounds and not a wall. If it is, the new state is pushed onto the queue.
+   d. If the destination state has already been visited, no action is taken, since we have already visited this state before and its path cannot be shorter than the previous visits.
+   e. Update the path dictionary with the paths from the predecessor state to the new state.
+4

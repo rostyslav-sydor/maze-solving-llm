@@ -1,0 +1,42 @@
+To solve this maze using breadth-first search, let's reason through the following steps:
+
+1. Define a graph data structure using an adjacency list representation.
+2. Implement the breadth-first search algorithm to traverse the graph until we find the target node (3,3).
+3. Collect the path from the origin to the target node.
+
+Here's the reasoning translated into code:
+
+```python
+visited = set()  # A set to keep track of visited nodes
+queue = []  # A queue for the breadth-first search
+
+# Define a class to represent the graph nodes
+class Node:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+        self.neighbors = []
+
+    def __repr__(self):
+        return f"({self.x}, {self.y})"
+
+# Function to create the graph from the adjacency list
+def create_graph(adj_list):
+    nodes = {}
+    for edge in adj_list:
+        x1, y1, x2, y2 = [int(c) for c in edge.split()]
+        if (x1, y1) not in nodes:
+            nodes[(x1, y1)] = Node(x1, y1)
+        if (x2, y2) not in nodes:
+            nodes[(x2, y2)] = Node(x2, y2)
+        nodes[(x1, y1)].neighbors.append((x2, y2))
+    return nodes
+
+# Find the origin and target nodes from the adjacency list
+def find_origin_target(adj_list):
+    origin, target = None, None
+    for edge in adj_list:
+        if edge.startswith("<ORIGIN_START>") and edge.endswith("<ORIGIN_END>"):
+            origin = (int(edge.split()[1][1:-1]), int(edge.split()[2][:-1]))
+        elif edge.startswith("<TARGET_START>") and edge.endswith("<TARGET_END>"):
+            target = (int(edge.split()[1][1:-1]), int(edge.split()[2

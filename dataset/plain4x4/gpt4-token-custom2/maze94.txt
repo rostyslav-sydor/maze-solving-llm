@@ -1,0 +1,38 @@
+To solve the maze, I will construct the graph from the adjacency list and then use a breadth-first search (BFS) algorithm to find the shortest path from the origin (0,0) to the destination (3,3). Let's break down the adjacency list into a usable graph form and compute the path:
+
+**Graph Construction:**
+Given adjacency connections:
+- (0,2) <--> (0,1)
+- (2,1) <--> (3,1)
+- (2,3) <--> (2,2)
+- (2,1) <--> (2,0)
+- (0,3) <--> (1,3)
+- (1,0) <--> (0,0)
+- (2,2) <--> (3,2)
+- (3,2) <--> (3,3)
+- (1,1) <--> (0,1)
+- (2,0) <--> (1,0)
+- (1,1) <--> (1,2)
+- (3,0) <--> (2,0)
+- (1,2) <--> (1,3)
+- (3,2) <--> (3,1)
+- (1,3) <--> (2,3)
+
+**Breadth-First Search (BFS) Implementation:**
+1. Start from the origin (0,0).
+2. Enqueue each neighboring node from the graph using a queue, marking visited nodes to prevent revisits.
+3. Continue exploring till the destination (3,3) is reached.
+
+**Steps to Solution:**
+1. Begin at (0,0).
+2. Move to (1,0).
+3. Move to (2,0).
+4. Move to (3,0).
+5. Move to (3,1).
+6. Move to (3,2).
+7. Move to (3,3).
+
+Backtracking the BFS nodes for their predecessors, we form the path:
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (3,2) (3,3) <PATH_END>
+
+This path forms a direct route from the starting point to the target without unnecessary detours, given the adjacency list provided in the graph.

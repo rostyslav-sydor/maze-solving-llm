@@ -1,0 +1,17 @@
+To solve the maze presented in the question, I first interpreted the adjacency list into a graph format to understand the connections between each point (cell) in the maze. The entry (origin) point provided is (0,0) and the exit (target) point is (4,5).
+
+Next, to find a path from the origin to the target, I considered using Breadth-First Search (BFS), which is excellent for finding the shortest path on such an unweighted graph. This strategy ensures that once the BFS reaches the target node, it has found the shortest path due to its level-order traversal property.
+
+I walked through the BFS starting from (0,0), expanding outwards through its adjacent nodes as per the adjacency list, keeping track of visited nodes and their predecessors to reconstruct the path once the target is found. Here's how BFS extends through the adjacency list step-by-step:
+
+1. Start at (0,0), visit adjacent nodes (0,1) and (1,0).
+2. Visit the nodes adjacent to (0,1): (0,2) and then nodes adjacent to (1,0): (2,0).
+3. This expansion continues, exploring each breadth/layer of the maze, moving toward the exit at (4,5).
+
+After processing the BFS and reaching (4,5), I backtracked from the target node (4,5) to the origin (0,0), using the recorded predecessors to form the path taken. Thus, after correctly applying the BFS algorithm, we would find the shortest path through the adjacency node details:
+
+Here is the result formatted as specified by extracting the BFS path reconstruct:
+    
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (4,0) (4,1) (4,2) (4,3) (4,4) (4,5) <PATH_END>
+
+This path ensures the shortest route based on BFS’s properties and respects the adjacency list's connections.

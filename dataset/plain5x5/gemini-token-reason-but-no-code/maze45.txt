@@ -1,0 +1,12 @@
+**Algorithm**:
+
+1. Start from the starting point and add it to the list of visited nodes.
+2. For each unvisited neighbour of the current node, add it to the list of visited nodes and recursively call the algorithm on it.
+3. If the current node is the target node, return the list of visited nodes.
+4. If none of the neighbours of the current node are unvisited, remove the current node from the list of visited nodes and backtrack to the previous node.
+
+**Solution for the given maze**:
+
+```
+<PATH_START> (0,0) (1,0) (1,1) (1,2) (2,2) (3,2) (3,3) (3,4) (4,4) <PATH_END>
+```

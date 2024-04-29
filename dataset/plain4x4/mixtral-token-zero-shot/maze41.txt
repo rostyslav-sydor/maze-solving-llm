@@ -1,0 +1,37 @@
+ We could use different techniques for path finding, such as Breadth-First Search, Dijkstra's algorithm, or A*. However, we'll utilize a simpler approach with Breadth-First Search (BFS). 
+
+To simplify solving the maze using BFS, let's follow these steps:
+
+1. Incrementally expand paths (tokens) originating from the start token (0,0).
+2. Newly explored paths should be marked as explored using a visitation flag on the node or an adjacency set. 
+3. When we arrive at a position, check if it's the goal token. If so, stop the process and output the found path.
+4. Update current path with newly adjacented neighbors until we arrive at the goal token.
+5. Remember to explore some paths by pushing them into a pool (usually a queue or stack) to be processed later. 
+
+Here's what it would look like in pseudo-code:
+
+```
+Function solveMazeByBFS():
+   Set startingToken to token (0,0)
+   Set currentPath to [startingToken]
+   Start from startingToken
+   While we have less explored tokens than total tokens:
+      Explore from currentToken in currentPath
+         For all currently unexplored neighbors (with token as neighbor):
+            Set visite flag on neighbor to true
+            Set neighbor's predeccesor to the current token
+            Enqueue neighbor to the end of the currentPath
+            If token not yet in path, append token into the path
+         If neighbor is the goal token, stop our process here:
+            Set pathFound to true
+            Break the while loop
+      CurrentToken <- Next token which has not yet been explored from the currentPath.
+   If pathFound:
+      Return the path from the start to the goal token (by reading predeccesors)
+   Else:
+      Return "- No solution found -"
+```
+
+This way we'll avoid using extra memory for a separate adjacency set or uniform-cost mapping. It is not as efficient as BFS using a queue or Dijkstra in practice, but it is readable and easy to implement.
+
+Consider a simpler representation of the maze. Write algorithms for constant and reference time (time taken when there is

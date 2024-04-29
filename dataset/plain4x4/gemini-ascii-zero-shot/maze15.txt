@@ -1,0 +1,15 @@
+**Step 1: Start at the entry point and follow one possible path.**
+
+- Start at (1,1).
+- Go right to (1,2).
+- Go down to (2,2).
+- Go right to (2,3).
+- Continue following the path until you reach the exit point (7,7).
+
+**Step 2: Note down the coordinates of each step in the path.**
+
+(1,1), (1,2), (2,2), (2,3), (2,4), (3,4), (4,4), (4,5), (5,5), (5,6), (6,6), (6,7), (7,7)
+
+**Step 3: Output the coordinates in the specified format.**
+
+`<PATH_START> (1,1) (1,2) (2,2) (2,3) (2,4) (3,4) (4,4) (4,5) (5,5) (5,6) (6,6) (6,7) (7,7) <PATH_END>`

@@ -1,0 +1,11 @@
+Let us perform a breadth-first search starting from the origin cell. 
+
+We will keep track of the parent of each cell so that we can reconstruct the path later. 
+
+At each step, we will add all unvisited neighbors to the queue. 
+
+Once we reach the target cell, we can stop the search. 
+
+Let us now reconstruct the path by starting at the target cell and following the parents back to the origin cell.
+
+<PATH_START> (0,0) (1,0) (1,1) (1,2) (1,3) (2,3) (3,3) <PATH_END>

@@ -1,0 +1,5 @@
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>
+
+Starting from origin (0,0), we can move right to (0,1). From there, we can move right again to (0,2). Then, we can move down to (0,3). From there, we can move right to (1,3). Then, we can move down to (2,3). Finally, we can move right to (3,3), which is the target.
+
+This path does not cross any walls because it only uses adjacent cells. It also does not cross any walls because it only moves right or down.

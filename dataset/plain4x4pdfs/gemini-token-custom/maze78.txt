@@ -1,0 +1,13 @@
+1. The origin is at `(0, 0)` and the target is at `(3, 3)`. 
+2. We can move right to `(0, 1)`, then down to `(1, 1)`, then right to `(1, 2)`, and finally down to `(2, 2)`. 
+3. Then we can move right to `(2, 3)` and finally up to `(3, 3)`.
+
+<PATH_START> (0, 0) (0, 1) (1, 1) (1, 2) (2, 2) (2, 3) (3, 3) <PATH_END>
+
+**Checking if path avoids walls**
+- (0,0) and (0,1) are adjacent and there is a connection between them in the adjacency list
+- (0,1) and (1,1) are adjacent and there is a connection between them in the adjacency list
+- (1,1) and (1,2) are adjacent and there is a connection between them in the adjacency list
+- (1,2) and (2,2) are adjacent and there is a connection between them in the adjacency list
+- (2,2) and (2,3) are adjacent and there is a connection between them in the adjacency list
+- (2,3) and (3,3) are adjacent and there is a connection between them in the adjacency list

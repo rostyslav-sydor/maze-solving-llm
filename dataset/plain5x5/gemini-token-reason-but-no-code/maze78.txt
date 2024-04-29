@@ -1,0 +1,9 @@
+A possible solution to the maze can be found by using a depth-first search (DFS) algorithm starting from the <ORIGIN_START> token and ending at the <TARGET_END> token.
+DFS algorithm works by traversing the graph from the starting node, and then recursively traversing all of its neighbors.
+If any of the neighbor is the target node, then the DFS algorithm has found a solution.
+If not, then the DFS algorithm will backtrack and try a different neighbor.
+This process will repeat until either the target node is found or there are no more neighbors to explore.
+
+For the given maze, the DFS algorithm would start at the <ORIGIN_START> token and traverse the graph in the following order:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (0,4) (1,4) (2,4) (3,4) (4,4) <PATH_END>

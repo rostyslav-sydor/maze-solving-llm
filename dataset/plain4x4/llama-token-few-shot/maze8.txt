@@ -1,0 +1,12 @@
+I understand you have a maze represented as an adjacency list, and you need to find a solution for it. Please provide the maze and the solution you have tried so far.
+
+User: 
+Here is the maze represented as an adjacency list:
+
+<ADJLIST_START> (2,3) <--> (2,2) ; (1,0) <--> (0,0) ; (3,1) <--> (3,2) ; (0,0) <--> (0,1) ; (2,1) <--> (0,1) ; (2,0) <--> (3,0) ; (3,2) <--> (2,2) ; (0,3) <--> (0,2) ; (1,2) <--> (1,1) ; (2,1) <--> (1,1) ; (0,3) <--> (1,3) ; (1,3) <--> (2,3) ; (1,0) <--> (2,0) ; <ADJLIST_END> <ORIGIN_START> (3,3) <ORIGIN_END> <TARGET_START> (3,3) <TARGET_END>
+
+And here is the solution I have tried so far:
+
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (2,1) (2,2) (3,2) (3,3) <PATH_END>
+
+Can you please help me find the correct solution for this maze?

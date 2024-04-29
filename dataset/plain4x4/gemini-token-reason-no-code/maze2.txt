@@ -1,0 +1,5 @@
+To solve this maze, we can apply Depth First Search (DFS) algorithm. Starting from the origin cell (0,0), we will traverse the graph by recursively calling the `explore` function on each unvisited adjacent cell. 
+
+Each time we explore a cell, we add its' coordinates to the list of coordinates in the path. If the target cell (3,3) is reached, we return the list of coordinates in the path. Otherwise, we backtrack and explore other paths until a solution is found or no more paths are available.
+
+<PATH_START> (0,0) (0,1) (1,1) (1,2) (1,3) (0,3) (3,3) <PATH_END>

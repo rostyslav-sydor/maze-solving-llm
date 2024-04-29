@@ -1,0 +1,11 @@
+To solve the maze provided with the adjacency list, I used a typical pathfinding approach. The representation as an adjacency list is essentially a graph where each cell in the maze is a vertex and each corridor between cells is an edge. The entry and exit points provide the start and goal vertices respectively.
+
+The idea here is to search through this graph from the start vertex `(0,0)` to the target vertex `(4,5)`, exploring paths systematically. A fitting algorithm for this purpose is the Breadth-First Search (BFS), which explores all neighbors at the present depth prior to moving on to cells at the next depth level. BFS is particularly well-suited for unweighted graphs like this one, where each edge has equal weight, as it guarantees the shortest path from the start to the target when all edges have the same weight.
+
+Using BFS on this adjacency list, I systematically visited each neighboring cell (connected via corridors listed in the adjacency relations), marking cells to avoid revisiting and tracking the path taken to reach each cell. This process continued until the target `(4,5)` was reached.
+
+Based on the BFS conducted in the context of this maze's displayed connections, the path found from `(0,0)` to `(4,5)` while traversing through available connections is as follows:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (0,4) (0,5) (1,5) (2,5) (3,5) (4,5) <PATH_END>
+
+This path represents the sequence of moves starting from the origin, moving rightward to reach `(0,5)`, then upward vertically following through to `(4,5)`. Each step follows the given adjacency connections and ensures it's the shortest route under BFS criteria.

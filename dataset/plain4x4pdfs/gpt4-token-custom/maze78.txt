@@ -1,0 +1,45 @@
+To solve the maze represented by the adjacency list provided, I will determine the shortest path from the origin coordinate (0,0) to the target coordinate (3,3), ensuring that only valid moves (as represented by the adjacency list) are used.
+
+### Step by Step Procedure:
+1. **Convert the adjacency list to a data structure**: The adjacency list is parsed into a Python-like dictionary for easy access, ensuring each point maps to its connected points.
+
+2. **Graph Representation**:
+   - The graph derived from the adjacency list shows that all connections are two-way (bidirectional). For instance, from (0,0) we can proceed to (0,1) and (1,0).
+
+3. **Path Finding**:
+   - Utilize a Breadth-First Search (BFS) approach, which is effective in finding the shortest path in unweighted graphs like this.
+
+4. **Start from the origin** (0,0) and explore all possible paths using the neighbors provided by the adjacency list until reaching the target (3,3).
+
+### Execution:
+- **Initialization**:
+  - Start at the origin (0,0) and initialize a queue with this point.
+  - Define visited locations to avoid revisiting and loops.
+
+- **Process each point**:
+  - At each step, take the current point from the queue, record it as visited, and examine its adjacently connected points.
+  - If a connected point is the target, stop the process; otherwise, add it to the queue for further exploration.
+  
+- **Keep Tracking of Path**:
+  - For each exploration, keep track of the path from the origin to the current point.
+
+### Conclusion of BFS Search:
+- The BFS ensures the shortest path by exploring all possible shortest options level by level.
+- Assuming the graph representation (as guaranteed by the adjacency list) is correct and without errors, the derived path should connect all points directly. 
+
+### Final Path Determination:
+Starting with the initial and adjacent connections:
+- `(0,0) -> (0,1) -> (0,2) -> (1,2) -> (1,3) -> (2,3) -> (3,3)`
+
+### Validate the path:
+- Check each step to ensure each connection exists in the adjacency list:
+  - `(0,0) <-> (0,1)`
+  - `(0,1) <-> (0,2)`
+  - `(0,2) <-> (1,2)`
+  - `(1,2) <-> (1,3)`
+  - `(1,3) <-> (2,3)`
+  - `(2,3) <-> (3,3)`
+- Each move is seen as valid as per the adjacency list, ensuring no wall (unconnected nodes as per list) is crossed and all moves are between adjacent cells, confirming the solution is viable.
+
+### Resulting Path Sequence:
+`<PATH_START> (0,0) (0,1) (0,2) (1,2) (1,3) (2,3) (3,3) <PATH_END>`

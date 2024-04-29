@@ -1,0 +1,49 @@
+Sure! Here's the maze represented as a matrix:
+
+maze = [
+    '#########',
+    '#S      #',
+    '# ######',
+    '# #     #',
+    '# ##### #',
+    '#     # #',
+    '# # ### #',
+    '# #    E#',
+    '#########',
+]
+
+Now let's define a function to find the solution:
+```python
+def find_path(maze, start, end):
+    # Initialize the visited set
+    visited = set()
+    
+    # Initialize the path list with the start position
+    path = [start]
+    
+    # Recursively search for the end position
+    def dfs(r, c):
+        # Check if we've reached the end position
+        if (r, c) == end:
+            path.append(end)
+            return True
+            
+        # Check if we're out of bounds or if we've visited this position or if it's a wall
+        if not (0 <= r < len(maze) and 0 <= c < len(maze[0]) and (r, c) not in visited and maze[r][c] != '#'):
+            return False
+        
+        # Mark the current position as visited
+        visited.add((r, c))
+        
+        # Try moving in all four directions
+        if dfs(r - 1, c) or dfs(r + 1, c) or dfs(r, c - 1) or dfs(r, c + 1):
+            path.append((r, c))
+            return True
+        
+        # If no path was found, backtrack
+        path.pop()
+        
+    # Start the search
+    dfs(*start)
+    
+    # Return the path

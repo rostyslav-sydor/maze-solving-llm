@@ -1,0 +1,8 @@
+To solve the maze and find the path from S (1,1) to E (7,7), I utilized a standard depth-first search (DFS) approach since each junction of paths allows for more than one option, typically taking advantage of the maze's open corridors in all four cardinal directions where not blocked by walls.
+
+Starting at the coordinate (1,1), I moved right as it's free. Continuing to move right towards the east direction, I reached the end at (1,6) of the first row. From here, my path involved moving downward as it's free until I reached (7,6), since from (1,6) to (7,6) there are no obstacles blocking a direct southward movement.
+
+Once at (7,6), the next and final move to complete the route was moving one step right into the exit located at (7,7).
+
+Thus, the resulting path with coordinates from start (S) to end (E) is:
+<PATH_START> (1,1) (1,2) (1,3) (1,4) (1,5) (1,6) (2,6) (3,6) (4,6) (5,6) (6,6) (7,6) (7,7) <PATH_END>

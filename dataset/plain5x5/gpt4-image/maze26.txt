@@ -1,0 +1,15 @@
+According to the maze you've provided, it looks like the path from the entry point (0,0) to the exit point (4,4) follows a specific route that avoids walls. I'll trace through the maze to determine the correct path.
+
+- Start at (0,0)
+- Move right to (0,1)
+- Move down to (1,1)
+- Move down to (2,1)
+- Move right to (2,2)
+- Move right to (2,3)
+- Move down to (3,3)
+- Move down to (4,3)
+- Move right to (4,4)
+
+The path can be outlined as:
+
+<PATH_START> (0,0) (0,1) (1,1) (2,1) (2,2) (2,3) (3,3) (4,3) (4,4) <PATH_END>

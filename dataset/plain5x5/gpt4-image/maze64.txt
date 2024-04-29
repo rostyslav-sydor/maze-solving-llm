@@ -1,0 +1,16 @@
+To solve this maze, I will identify a route from the entry point (0,0) located at the top left corner to the exit point (4,4) located at the bottom right corner. This path avoids all the black lines, which represent walls.
+
+Starting from (0,0), the solution to the maze, as deduced visually, is:
+
+1. Move right to (0,1)
+2. Move right to (0,2)
+3. Move down to (1,2)
+4. Move down to (2,2)
+5. Move down to (3,2)
+6. Move right to (3,3)
+7. Move right to (3,4)
+8. Move down to (4,4)
+
+The resultant path through the maze in coordinate format is:
+
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (2,2) (3,2) (3,3) (3,4) (4,4) <PATH_END>

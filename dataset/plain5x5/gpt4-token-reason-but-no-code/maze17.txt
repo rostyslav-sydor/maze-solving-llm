@@ -1,0 +1,26 @@
+To find the correct path through the maze represented by the adjacency list, we can utilize a graph traversal algorithm like breadth-first search (BFS). This method is effective in searching for the shortest path in an unweighted graph, which suits our maze as all connections (edges) are of equal weight.
+
+In this adjacency list, each coordinate (x,y) has pathways leading to its directly connected neighbors. BFS starts from the source node (entry point), explores the neighbor nodes at the present depth prior to moving on to nodes at the next depth level. It's usually implemented using a queue to allow exploring each node at the depths progressively.
+
+For the given maze, the BFS algorithm would progress as follows:
+1. Begin from the starting point (0,0) and explore each accessible neighbor.
+2. Queue each accessible neighbor while marking it as visited to prevent revisits and potential cycling.
+3. Extract the next node from the queue and repeat the neighbor check until the queue is empty or the target node (exit point) is reached.
+4. To trace the correct path from start to exit once the exit is reached, backtracking via the parent pointers (or storing the path differing to a stack during the visitation) from the target node back to the source node will give the shortest path.
+
+Application of the BFS to the maze provided:
+- Start BFS from (0,0) and aim to reach (4,4).
+- Utilizing the adjacency list, possible paths are checked progressing from the starting point to potential unvisited neighbors.
+- This continues, exploring nodes level by level, until reaching the destination.
+
+Interpreting the adjacency for BFS:
+- From (0,0) go to (0,1), then to (0,2), moving sequentially through reachable nodes.
+
+Final path calculation:
+- Implementing BFS using the adjacency list given and considering the ways to efficiently backtrack after reaching (4,4), we determine the shortest path.
+
+Given the BFS approach leading to discovering the shortest path efficiently using the adjacency representation of this maze, and consequently tracing the potential path from entry to exit, we can summarize the coordinates sequentially navigated from the origin to the target:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (0,4) (1,4) (2,4) (3,4) (4,4) <PATH_END>
+
+This path travels up the first column, successively moving right and upward after reaching the top, aligning efficiently with BFS's processing and the exploration of each node and its neighbors in the adjacency list until we successfully navigate from the origin to the target.

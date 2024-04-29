@@ -1,0 +1,8 @@
+To solve the maze, we start from the entry point (S) at coordinates (1,1) and explore possible paths to reach the exit point (E) at (7,7). We'll employ the right-hand rule where we prioritarily move towards the right whenever possible.
+
+Starting from (1,1), we proceed east until reaching (1,7) each step being unobstructed. At (1,7), the way south is clear, so we go down to (2,7), then continue south to (3,7). From (3,7), the pathway is blocked by walls to the south and east, so we move west to (3,6).
+When we reach (3,6), we again move west to (3,5), then continue moving west to (3,1). From (3,1), we head south to (4,1), then turn east moving through available spaces to (7,1).
+
+From (7,1) the path is only available towards the east, and since we're close to the exit, we proceed to (7,2), (7,3), (7,4), (7,5), (7,6) and finally reach the exit at (7,7).
+
+<PATH_START> (1,1) (1,2) (1,3) (1,4) (1,5) (1,6) (1,7) (2,7) (3,7) (3,6) (3,5) (3,4) (3,3) (3,2) (3,1) (4,1) (5,1) (6,1) (7,1) (7,2) (7,3) (7,4) (7,5) (7,6) (7,7) <PATH_END>

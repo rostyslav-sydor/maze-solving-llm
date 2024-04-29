@@ -1,0 +1,45 @@
+To find a solution for the given maze, we can use the Breadth-First Search (BFS) algorithm, which is a graph traversal algorithm that starts from the origin and explores all the neighboring vertices at the present depth before moving on to the vertices at the next depth level.
+
+Here's a step-by-step explanation of how BFS works:
+
+1. Create a queue (FIFO) and add the origin vertex to the queue.
+2. Mark the origin vertex as visited.
+3. While the queue is not empty:
+   a. Dequeue the front vertex from the queue.
+   b. Iterate through all the adjacent vertices of the current vertex.
+     i. If an adjacent vertex has not been visited:
+       - Mark it as visited.
+       - Add it to the queue.
+       - Set the current vertex as its parent.
+4. Once the target vertex is dequeued, we can backtrack from the target vertex to the origin vertex by following the parent pointers to reconstruct the shortest path.
+
+Now, let's apply the BFS algorithm to the given maze:
+
+1. We create a queue and add the origin vertex (0, 0) to the queue.
+2. We mark the origin vertex as visited and set its parent to None.
+3. We dequeue the origin vertex (0, 0) from the queue.
+4. We iterate through its adjacent vertices: (1, 0) and (0, 1).
+5. Since both (1, 0) and (0, 1) have not been visited, we mark them as visited, add them to the queue, and set their parent to (0, 0).
+6. We repeat the process for the next vertex in the queue, which is (1, 0).
+7. We dequeue (1, 0) from the queue and iterate through its adjacent vertices: (2, 0) and (1, 1).
+8. We mark both (2, 0) and (1, 1) as visited, add them to the queue, and set their parent to (1, 0).
+9. We continue the process until the target vertex (3, 3) is dequeued from the queue.
+
+Now, let's reconstruct the path from the target vertex (3, 3) to the origin vertex (0, 0) by following the parent pointers:
+
+1. The parent of (3, 3) is (3, 2).
+2. The parent of (3, 2) is (3, 1).
+3. The parent of (3, 1) is (2, 1).
+4. The parent of (2, 1) is (1, 1).
+5. The parent of (1, 1) is (1, 2).
+6. The parent of (1, 2) is (1, 3).
+7. The parent of (1, 3) is (0, 3).
+8. The parent of (0, 3) is (0, 2).
+9. The parent of (0, 2) is (0, 1).
+10. The parent of (0, 1) is (0, 0).
+
+The path from the origin vertex (0, 0) to the target vertex (3, 3) is:
+(0, 0) -> (0, 1) -> (0, 2) -> (0, 3) -> (1, 3) -> (1, 2) -> (1, 1) -> (2, 1) -> (3, 1) -> (3, 2) -> (3, 3)
+
+Output the path in the required format between <PATH_START> and <PATH_END> tokens:
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (1,2) (1,1) (2,1) (3,1) (3,2) (3,3) <PATH_END>

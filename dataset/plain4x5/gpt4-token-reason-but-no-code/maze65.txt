@@ -1,0 +1,33 @@
+To solve the maze given in the adjacency list format, we need to understand how to navigate from the entry point (0,0) to the exit point (3,4) using the connections provided. Here's a breakdown of the provided adjacency list:
+
+- Each pair of coordinates mentioned indicates a path between two cells.
+- We should interpret this as an undirected graph, where each cell can potentially connect to adjacent cells.
+
+To find a solution:
+- Use a pathfinding algorithm like Breadth-First Search (BFS), since this algorithm is good for finding the shortest path in an unweighted graph, which matches the structure of our maze.
+- Start from the origin `(0,0)` and explore all reachable nodes, marking visited nodes and keeping track of the path to reach each node.
+- Continue exploring until you find the target node `(3,4)`.
+
+By exploring from `(0,0)`, considering the available paths as described, and using the BFS approach:
+
+1. Start at `(0,0)` and check reachable nodes.
+2. Move to `(0,1)` (since it's connected to `(0,0)`).
+3. Continue to explore `(0,2)` from `(0,1)` (reachable path).
+4. From `(0,2)`, move to `(0,3)`.
+5. Now from `(0,3)`, move to `(1,2)` (as it connects indirectly through previously visited nodes).
+6. Then from `(1,2)`, proceed similarly until reaching `(3,4)`.
+
+Following this process, the resultant path is computed by tracing the nodes visited:
+
+1. From the origin `(0,0)`, go right to `(0,1)`.
+2. From `(0,1)`, continue right to `(0,2)`.
+3. Continue from `(0,2)` to `(0,3)`.
+4. Move upward from `(0,3)` to `(0,4)`.
+5. From `(0,4)`, move to `(1,4)` then its possible to move directly down to `(2,4)`.
+6. From `(2,4)` it's straight down the connection to `(3,4)`.
+
+Therefore, using the sequence of moves our computed path will be:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (0,4) (1,4) (2,4) (3,4) <PATH_END>
+
+This path reflects one possible shortest route through the maze using the knowledge of the graph connections given in the adjacency list.

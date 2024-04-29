@@ -1,0 +1,10 @@
+* First start with the <ORIGIN> token and traverse the graph until <TARGET> token is found.
+* The graph is traversed in the Depth First Search manner, so when a new node is found, all of its neighbors are traversed before backtracking to the previously visited nodes.
+* In our example maze, starting at the <ORIGIN> token at (0,0), we can move to the right to (1,0), or down to (0,1).
+* Let's explore the path to the right first. At (1,0), we can move right to (2,0), or up to (1,1).
+* We will continue to move right until we hit a dead end, which in this case is at (3,0).
+* Now we will backtrack and explore the path down from (0,1).
+* Following this path, we will eventually reach the <TARGET> token at (3,3).
+* The path from <ORIGIN> to <TARGET> is: (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3).
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>

@@ -1,0 +1,14 @@
+To solve the maze, we will track the movement based on the adjacency list provided in the data. We start at the origin (0,0) and make our way through the maze based on the adjacency list to reach the target (3,3).
+
+1) Start at the origin (0,0).
+2) Move down from (0,0) to (1,0) using (0,0) <--> (1,0).
+3) Move down from (1,0) to (2,0) using connected path (2,0) instead directly associated.
+4) Move right from (2,0) to (2,1) using (2,1) <--> (2,0).
+5) Move right from (2,1) to (2,2) moving along horizontal.
+6) Move down from (2,2) to (3,2) using (2,2) <--> (3,2).
+7) Move right from (3,2) to (3,3) using (3,3) <--> (3,2) which is our target.
+
+At each step, we move to an adjacent node described in the adjacency list toward the target.
+Final solution path:
+
+<PATH_START> (0,0) (1,0) (2,0) (2,1) (2,2) (3,2) (3,3) <PATH_END>

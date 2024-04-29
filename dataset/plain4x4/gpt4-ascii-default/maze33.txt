@@ -1,0 +1,15 @@
+To solve the maze, start from the "S" entry point at (1,1) and explore all possible paths to reach the "E" exit at (7,7). The pathfinding can be achieved using methods like depth-first search (DFS) or breadth-first search (BFS). These algorithms move through available paths (spaces not occupied by '#') until the exit is located. After evaluating all possible moves leading from an initial point, a correct succession of steps leading to the exit is found. This result consists of sequential coordinates connecting the start to the end without crossing any walls.
+
+For this maze:
+
+- Start at (1,1)
+- Move right through open spaces until reaching (1,7)
+- Move down two steps to (3,7)
+- Move left to (3,5)
+- Move down to (4,5)
+- Move left through open space to (4,2)
+- Move down to (5,2)
+- Continue right until (5,6)
+- Move down until reaching the exit at (7,7).
+
+<PATH_START> (1,1) (1,2) (1,3) (1,4) (1,5) (1,6) (1,7) (2,7) (3,7) (3,6) (3,5) (4,5) (4,4) (4,3) (4,2) (5,2) (5,3) (5,4) (5,5) (5,6) (6,6) (7,6) (7,7) <PATH_END>

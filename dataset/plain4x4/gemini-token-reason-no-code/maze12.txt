@@ -1,0 +1,16 @@
+The maze can be solved by following the path from the <ORIGIN_START> token to the <TARGET_END> token.
+
+To find the path, we can use a breadth-first search (BFS) algorithm. 
+
+1. Start at the <ORIGIN_START> token.
+2. Add the <ORIGIN_START> token to a queue.
+3. While the queue is not empty, do the following:
+    a. Remove the first token from the queue.
+    b. For each of the tokens that are adjacent to the current token, do the following:
+        i. If the adjacent token is the <TARGET_END> token, then we have found the path.
+        ii. Otherwise, add the adjacent token to the queue.
+4. If we reach the end of the queue without finding the <TARGET_END> token, then there is no path from the <ORIGIN_START> token to the <TARGET_END> token.
+
+Here is the path from the <ORIGIN_START> token to the <TARGET_END> token:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>

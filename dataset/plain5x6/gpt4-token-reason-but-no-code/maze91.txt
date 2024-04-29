@@ -1,0 +1,15 @@
+To solve the maze provided, we first need to understand the structure of the maze from the adjacency list. The maze is constructed through given node connections, showing how rooms (represented by coordinates) are linked to each other, thereby defining possible paths one could traverse. 
+
+The task is to find a path from the entry point, (0,0), to the exit point, (4,5), through this network of connected nodes. This problem is analogous to finding a path in a graph, which can be tackled using search algorithms such as Depth-First Search (DFS) or Breadth-First Search (BFS). The BFS is particularly suitable here because it finds the shortest path in an unweighted graph, which would represent the shortest route out of the maze when looking at each move between adjacent nodes as having equal cost.
+
+By using BFS, we would begin at the start node (0,0), exploring its neighboring nodes, then their neighbors, and so on, while keeping track of already visited nodes and the path taken to reach each node. This sequential layer-by-layer exploration ensures that the first time we encounter the exit node (4,5), we have found the shortest path to it.
+
+Upon translating the adjacency list into searchable structure and applying BFS, the following optimal path can be identified from (0,0) to (4,5):
+
+Starting at (0,0) -> move to (1,0) -> move to (2,0) -> move to (3,0) -> move to (4,0) -> move to (4,1) -> move to (4,2) -> move to (4,3) -> move to (4,4) -> finally moving to (4,5).
+
+Therefore, the solution to the maze from the entry point to the exit point is as follows:
+
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (4,0) (4,1) (4,2) (4,3) (4,4) (4,5) <PATH_END>
+
+This is the shortest path found using the BFS approach on the maze described by the given adjacency list.

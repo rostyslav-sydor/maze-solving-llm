@@ -1,0 +1,13 @@
+Step 1: Initialize data structures to represent the maze.
+Step 2: Traverse the graph and store the adjacency list in a HashMap.
+Step 3: Check if the origin and target point is reachable and create a queue with one being the origin node as initial state.
+Step 4: While the queue is not empty:
+     i. Remove the first node and check if it is the target node. If it is, return the path.
+     ii. If not, add all neighbor nodes which are not visited yet to the queue.
+     iii. Mark the current node as visited.
+
+Step 5: If no target node is found, there is no path.
+Step 6: Print out the path between <PATH_START> and <PATH_END>.
+
+
+Path found: <PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (1,2) (1,1) (1,0) (0,1) (0,0) (1,1) (1,2) (1,3) (2,3) (2,1) (3,1) (3,2) (2,2) (3,2) (3,3) <PATH_END>

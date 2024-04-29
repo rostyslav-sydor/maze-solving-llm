@@ -1,0 +1,42 @@
+In order to find a solution to the maze given by the adjacency list, I will first parse the adjacency list and then use an appropriate pathfinding algorithm to find a pathway from the origin specified to the target. Given the nature of the maze being represented as an adjacency list, each pair can be deemed as an undirected edge between two nodes (cells) in a graph.
+
+Adjacency list parsing:
+- (1,0) <--> (0,0)
+- (1,2) <--> (1,1)
+- (2,3) <--> (1,3)
+- (3,1) <--> (3,0)
+- (2,2) <--> (2,1)
+- (3,2) <--> (3,3)
+- (3,2) <--> (2,2)
+- (1,1) <--> (0,1)
+- (1,2) <--> (1,3)
+- (0,2) <--> (0,3)
+- (2,0) <--> (2,1)
+- (0,3) <--> (1,3)
+- (3,3) <--> (2,3)
+- (1,0) <--> (2,0)
+- (3,0) <--> (2,0)
+
+Origin: (0,0)
+Target: (3,3)
+
+We will use Breadth-First Search (BFS) algorithm for pathfinding:
+
+1. Initialize the queue with the origin node, here (0,0).
+2. Set each cell as unvisited except for the origin cell; mark it as visited.
+3. As dequeuing happens, for each node (i.e., cell) examine its neighbors:
+    - If a neighbor is unvisited, mark it as visited, store its parent for path reconstruction later, and enqueue it.
+4. Continue until the queue is empty or the target (3,3) is found.
+
+Following the maze adjacency:
+
+1. Begin at (0,0)
+2. From (0,0), move to (1,0) using connection (1,0) <--> (0,0)
+3. From (1,0), move to (2,0) using connection (1,0) <--> (2,0)
+4. From (2,0), move to (2,1) using connection (2,0) <--> (2,1)
+5. From (2,1), move to (2,2) using connection (2,2) <--> (2,1)
+6. From (2,2), move to (3,2) using connection (3,2) <--> (2,2)
+7. From (3,2), finally move to (3,3) using connection (3,3) <--> (3,2)
+
+Solution Path:
+<PATH_START> (0,0) (1,0) (2,0) (2,1) (2,2) (3,2) (3,3) <PATH_END>

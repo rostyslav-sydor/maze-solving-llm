@@ -1,0 +1,11 @@
+**Reasoning:**
+
+1. Start from the `(0,0)` which is the entry point and go to `(0,1)`
+2. From `(0,1)` go to `(0,2)`
+3. From `(0,2)` go to `(1,2)`
+4. From `(1,2)` go to `(2,2)`
+5. From `(2,2)` go to `(2,3)`
+6. From `(2,3)` go to `(3,3)` which is the exit point
+
+**Output:**
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (2,2) (2,3) (3,3) <PATH_END>

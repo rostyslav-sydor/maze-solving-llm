@@ -1,0 +1,29 @@
+To solve the ASCII maze, we first interpret the adjacency list which represents the paths (connections between cells) of this maze. Using this adjacency list, we can construct a graph and apply a shortest path algorithm like BFS (Breadth-First Search) to find a path from the origin (0,0) to the target (3,3).
+
+Given edges:
+- (1,1) <--> (1,0)
+- (3,1) <--> (3,2)
+- (2,0) <--> (3,0)
+- (1,2) <--> (1,1)
+- (0,0) <--> (1,0)
+- (2,3) <--> (3,3)
+- (0,3) <--> (1,3)
+- (2,2) <--> (2,3)
+- (0,0) <--> (0,1)
+- (3,1) <--> (2,1)
+- (2,2) <--> (1,2)
+- (0,3) <--> (0,2)
+- (2,3) <--> (1,3)
+- (3,3) <--> (3,2)
+- (2,0) <--> (2,1)
+
+Using BFS starting from (0,0):
+1. Discover neighbors (1,0) and (0,1).
+2. Continue to explore outward until reaching (3,3).
+
+After BFS, we find:
+- Path: (0,0) -> (0,1) -> (0,2) -> (0,3) -> (1,3) -> (2,3) -> (3,3).
+
+Therefore, the solution path is:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>

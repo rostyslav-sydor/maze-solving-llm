@@ -1,0 +1,32 @@
+Great! We want to design a maze solver. Here's what we need to do:
+
+1. Read the maze layout and create a 2D array representing the maze, where 'S' indicates the start, 'E' indicates the end, and '#' indicates walls. We'll replace 'S' and 'E' with periods (.) to represent accessible spaces.
+2. Implement a pathfinding algorithm, such as Depth-First Search (DFS) or A* (pronounced "A star"), to find the shortest path from the start (1, 1) to the end (7, 7).
+3. Once the pathfinding algorithm finds the shortest path, convert it into a list of coordinates in the format you specified.
+4. Output the list of coordinates between <PATH_START> and <PATH_END> tokens.
+
+Let's start with the code. First, let's read the maze layout and create the 2D array:
+```cpp
+#include <iostream>
+#include <vector>
+#include <string>
+
+std::vector<std::vector<char>> readMaze() {
+    std::vector<std::vector<char>> maze = {
+        {'#', '#', '#', '#', '#', '#', '#', '#', '#'},
+        {'#', '.', '.', '.', '.', '.', '.', '.', '#'},
+        {'#', '#', '#', '.', '#', '#', '#', '#', '#'},
+        {'#', '#', '#', '#', '#', '.', '#', '.', '#'},
+        {'#', '#', '#', '#', '#', '#', '#', '#', '#'},
+        {'#', '.', '.', '.', '.', '.', '.', '.', '#'},
+        {'#', '#', '#', '#', '#', '#', '#', '#', '#'},
+        {'#', '.', '.', '.', '.', '.', '.', 'E', '#'},
+        {'#', '#', '#', '#', '#', '#', '#', '#', '#'}
+    };
+
+    return maze;
+}
+```
+Next, let's implement the DFS algorithm to find the shortest path:
+```cpp
+const int MAX_DISTANCE = 8;

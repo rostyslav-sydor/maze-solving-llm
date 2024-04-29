@@ -1,0 +1,15 @@
+Find the path from <ORIGIN_START> to <TARGET_END> by performing a breadth-first search (BFS) on the graph represented by the adjacency list.
+
+During the BFS, maintain a queue of nodes to visit and a set of visited nodes:
+
+1. Start by adding the <ORIGIN_START> node to the queue.
+2. While the queue is not empty,
+    - Dequeue a node from the queue.
+    - If the dequeued node is the <TARGET_END> node, then a path has been found.
+    - Otherwise, for each neighbor of the dequeued node,
+        - If the neighbor has not been visited, then
+            - Add the neighbor to the queue.
+            - Mark the neighbor as visited.
+3. If the BFS completes without finding the <TARGET_END> node, then there is no path from <ORIGIN_START> to <TARGET_END>.
+
+To output the path, backtrack from the <TARGET_END> node to the <ORIGIN_START> node by following the parent pointers that were recorded during the BFS.

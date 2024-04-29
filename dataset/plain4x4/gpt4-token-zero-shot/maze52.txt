@@ -1,0 +1,11 @@
+To solve the maze, we'll begin at the entry point (0,0) and navigate through connected passages to reach the exit point (3,3).
+
+1. Start at (0,0). Adjacent is (1,0) and (0,1). We choose (1,0).
+2. From (1,0), move to (1,1) which connects directly.
+3. From (1,1), move to (2,1).
+4. From (2,1), proceed to (3,1).
+5. From (3,1), go to (3,0). Then directly from there to (3,2), and then (3,3), the exit.
+
+We link these steps in sequence, ensuring each move is legally connected per the adjacency list.
+
+<PATH_START> (0,0) (1,0) (1,1) (2,1) (3,1) (3,0) (3,2) (3,3) <PATH_END>

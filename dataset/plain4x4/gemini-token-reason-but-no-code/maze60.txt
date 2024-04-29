@@ -1,0 +1,10 @@
+**Reasoning:**
+Maze traversal algorithms such as Depth First Search (DFS) and Breadth First Search (BFS) can be used to find a solution for a maze. DFS prioritizes exploring as far as possible along each branch before backtracking, while BFS explores all possibilities at a given depth before moving on to the next depth.
+
+**Solution:**
+Breadth First Search (BFS) is a good choice for this maze because it guarantees the shortest path to the target will be found. BFS starts at the origin and explores all adjacent nodes at depth 1. It then explores all adjacent nodes at depth 2, and so on, until the target is reached.
+
+**Specific solution for the given maze:**
+```
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>
+```

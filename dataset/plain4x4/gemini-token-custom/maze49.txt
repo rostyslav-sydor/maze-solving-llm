@@ -1,0 +1,10 @@
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (3,2) (3,3) <PATH_END>
+
+Reasoning:
+- Start from the origin (0,0) and move towards the target (3,3)
+- For each step, check the available adjacent cells and move to the cell that is closer to the target
+- Repeat the process until the target is reached
+
+Checking if the solution is valid:
+- The path does not cross any walls because it only moves to adjacent cells
+- The path uses only adjacent cells because it only moves to cells that are connected to the current cell

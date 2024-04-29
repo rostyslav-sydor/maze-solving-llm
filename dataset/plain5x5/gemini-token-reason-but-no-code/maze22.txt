@@ -1,0 +1,6 @@
+To find a path in a maze, a search algorithm can be used.
+For example, a DFS (Depth First Search) algorithm can be used to traverse the maze and find a path from the entry point to the exit point.
+The DFS algorithm starts at the entry point and recursively explores all possible paths until it finds an exit point.
+If the algorithm reaches a dead end, it backtracks and explores another path.
+In this specific maze, the DFS algorithm would start at (0,0) and explore the following path: (0,0) -> (0,1) -> (1,1) -> (1,2) -> (1,3) -> (2,3) -> (3,3) -> (3,4) -> (4,4).
+Therefore, the solution to this maze is: <PATH_START> (0,0) (0,1) (1,1) (1,2) (1,3) (2,3) (3,3) (3,4) (4,4) <PATH_END>

@@ -1,0 +1,22 @@
+To solve the maze using the adjacency list provided, we can construct a graph to represent the maze. The graph nodes are the coordinates, and the edges are the connections defined in the adjacency list. We'll then use a search algorithm to find the path from the origin (0,0) to the target (3,3).
+
+Analyzing the adjacency list:
+- It provides a direct connection between coordinates, indicating where movement between spaces is possible.
+
+Using a simplified pathfinding method like breadth-first search (BFS):
+
+1. Start at the origin (0,0).
+2. Explore each neighbor that is connected as per the adjacency list.
+3. Continue exploring until the target (3,3) is reached, ensuring to track the path.
+
+From the adjacency list:
+- Start at (0,0) connected to (0,1). 
+- Then (0,1) to (0,2). 
+- (0,2) to (1,2). 
+- (1,2) to (1,3). 
+- (1,3) to (2,3). 
+- And finally, (2,3) to (3,3), which is the target.
+
+The path is: <PATH_START> (0,0) (0,1) (0,2) (1,2) (1,3) (2,3) (3,3) <PATH_END>. 
+
+This sequence follows the available connections given in the adjacency list to reach from the origin to the target.

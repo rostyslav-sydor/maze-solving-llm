@@ -1,0 +1,9 @@
+1. The maze is represented as an adjacency list. We can use a graph search algorithm, such as breadth-first search (BFS), to find a path from the entry point to the exit point.
+
+2. We start at the entry point and visit all its neighbors. We mark each neighbor as visited and add it to a queue.
+
+3. We then visit the first neighbor in the queue and repeat the process until we reach the exit point.
+
+4. The path from the entry point to the exit point is the sequence of nodes that we visited during the BFS.
+
+<PATH_START> (0,0) (1,0) (2,0) (2,1) (2,2) (3,2) (3,3) <PATH_END>

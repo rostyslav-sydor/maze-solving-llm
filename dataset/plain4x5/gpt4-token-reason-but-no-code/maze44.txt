@@ -1,0 +1,22 @@
+The adjacency list provides a mapping for each point in the maze where one can travel directly between any two connected points. To solve the maze, we'll need to find a path from the origin point (0,0) to the target point (3,4).
+
+Given the adjacency data and the start and end points:
+
+1. Translate the adjacency list into a useable map. The points show direct connections representing the passable routes in the maze.
+2. As represented by `(0,0) <--> (0,1); (0,1) <--> (0,2);` and so on, we see each node `(x,y)` connected to its adjacent nodes. 
+
+The task is to traverse the maze starting from `<ORIGIN_START> (0,0) <ORIGIN_END>` to `<TARGET_START> (3,4) <TARGET_END>`. This problem is typically solved using traversal algorithms such as Breadth-First Search (BFS) or Depth-First Search (DFS), which are suited to finding the shortest path or any path in a graph structure.
+
+We have utilized the BFS approach as it efficiently finds the shortest path in an unweighted graph like our maze:
+- Start from (0,0) and explore all its directly connected neighbors. Queue each neighbor and mark as visited.
+- Expand each neighbor by exploring its unvisited neighbors, queuing them and marking them visited.
+- Continue until the target (3,4) is reached or all possible paths are exhausted.
+  
+Based on this method and analysis of the provided map, the route through the maze from (0,0) to (3,4) can be understood by following path expansions.
+
+Here's the specific solution for the maze following the BFS, translated into the desired output format:
+
+**Output:**
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (0,4) (1,4) (2,4) (3,4) <PATH_END>
+
+This solution ensures the passage through each point in the path, connected directly as per the adjacency list, leading directly from the origin to the target. Each step moves through connected coordinates, advancing towards the goal.

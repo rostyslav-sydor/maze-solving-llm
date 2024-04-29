@@ -1,0 +1,6 @@
+The solution to the maze can be found by following the edges in the adjacency list from the entry point (0,0) to the exit point (3,3). The path can be represented as:
+<PATH_START> (0,0) (1,0) (2,0) (2,1) (2,2) (2,3) (3,3) <PATH_END>
+
+This path follows the edges in the adjacency list starting from (0,0) and navigating through the maze until reaching the exit point at (3,3).
+
+By following this path, the maze can be successfully traversed from the starting point to the ending point.

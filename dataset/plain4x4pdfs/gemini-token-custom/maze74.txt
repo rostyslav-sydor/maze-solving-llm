@@ -1,0 +1,5 @@
+<PATH_START> (0,0) (1,0) (1,1) (1,2) (1,3) (0,3) (2,3) (3,3) <PATH_END>
+
+Starting from the origin <ORIGIN_START> at (0,0), take the only possible path to the right to (1,0). Then go down to (1,1) and from there go right to (1,2). From (1,2) go down to (1,3). Now from (1,3) the only path is to the left to (0,3). From (0,3) go right to (2,3) and then up to reach the target <TARGET_END> at (3,3).
+
+The solution provided is valid because every step moves to an adjacent cell and does not cross any walls. This can be verified by checking the adjacency list <ADJLIST_START> ... <ADJLIST_END>.

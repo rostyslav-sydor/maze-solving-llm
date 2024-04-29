@@ -1,0 +1,15 @@
+To find a solution for the maze represented as an adjacency list, a common approach is to use a graph traversal algorithm like Breadth-First Search (BFS). BFS is suitable in this scenario as it explores the graph layer-by-layer and is guaranteed to find the shortest path between two nodes if one exists.
+
+The adjacency list defines all the directly connected nodes, which in this case are the passageways between coordinates in a grid layout maze. The entry point (origin) is given as (0,0) and the exit (target) point is (4,5).
+
+Here's how BFS works:
+1. Start from the origin node and explore all its neighbors.
+2. For each neighbor, if it hasn’t been visited yet, mark it as visited, and add it to the queue.
+3. Continue exploring by dequeuing the next node and examining its neighbors, repeating the process until the target node is reached or the queue is empty.
+4. To reconstruct the path, keep track of each node’s predecessor.
+
+Using BFS for the specified maze, starting at (0,0), the algorithm explores the neighbors and follows the paths defined by the links in the adjacency list. It stops when it reaches (4,5). Below, the path determined by BFS is given, representing the correct and shortest path through the maze from entrance to exit.
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (0,4) (0,5) (1,5) (2,5) (3,5) (4,5) <PATH_END>
+
+This path is the solution because at each step, every reachable neighboring coordinate is explored starting from the origin and proceeds systematically toward the target without backtracking, making sure each step is a valid move as per the adjacency list until the exit is reached.

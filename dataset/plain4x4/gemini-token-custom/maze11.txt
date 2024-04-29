@@ -1,0 +1,6 @@
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>
+
+This solution starts at the origin (0,0) and moves east one step to (0,1). 
+From there, it continues east to (0,2), then north to (0,3), then east to (1,3), then north to (2,3), and finally east to the target (3,3).
+
+This solution is valid because it does not cross any walls and each step is to an adjacent cell.

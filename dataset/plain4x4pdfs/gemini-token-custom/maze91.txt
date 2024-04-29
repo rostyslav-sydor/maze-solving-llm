@@ -1,0 +1,17 @@
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>
+
+**Reasoning:**
+
+1. Start at the origin (0,0).
+2. Move right to (1,0).
+3. Move down to (1,1).
+4. Move right to (2,1).
+5. Move down to (2,2).
+6. Move right to (3,2).
+7. Move up to (3,1).
+8. Move right to (3,3), the target.
+
+**Checking for validity:**
+
+1. The path does not cross any walls, as it only moves along edges in the adjacency list.
+2. The path only uses adjacent cells, as each move is to a cell that is adjacent to the previous cell.

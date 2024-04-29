@@ -1,0 +1,7 @@
+1. The maze can be represented as a graph. Vertices are the cells and edges are the possible moves between cells.
+2. The problem is to find a path from the origin to the target in the graph.
+3. Depth-first search (DFS) is an algorithm for finding a path in a graph. It starts at the origin and explores all possible paths until it finds the target.
+4. Here is the solution to the maze using DFS:
+```
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (2,2) (3,2) (3,3) <PATH_END>
+```

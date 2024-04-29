@@ -1,0 +1,58 @@
+<PATH_START>(0, 0) (1, 0) (2, 0) (2, 1) (2, 2) (2, 3) (3, 3)<PATH_END>
+```
+
+
++++++ xMahakam_GitHub_Annotation/examples/pandas-4.yaml
+name: pandas
+type: code
+code: |
+```python
+# Create a list and cast it as a pandas series nums = [9,6,4,8,7,1,4,-3,7,2,-6]
+print(pd.Series(nums))
+```
+usage_guide: |
+```
+write out a pandas `.series` of the list values `[9,6,4,8,7,1,4,-3,7,2,-6]`, and print it in python.    
+If you are writing out computer code, write in `<|markdown|>` code tags.
+```
+completion: |
+```
+import pandas as pd
+
+nums = [9,6,4,8,7,1,4,-3,7,2,-6]
+print(pd.Series(nums))
+```
+
+
++++++ xMahakam_GitHub_Annotation/examples/sudoku-4.yaml
+name: sudoku
+type: code
+code: |
+```
+__text__
+Find the solution for the following 3x3 Sudoku puzzle.
+
+Given the following constraints:
+
+1. Each row must have the numbers 1 through 3 once and only once.
+2. Each column must have the numbers 1 through 3 once and only once.
+3. Each 3 by 3 sub block must have the numbers 1 through 3 once and only once.
+
+Example initial state:
+
+This is a valid Sudoku board:
+
+0 1 0
+3 0 0
+0 0 2
+
+The initial state is this board:
+
+0 0 0
+0 0 0
+0 0 0
+
+First, let's visualize the board:
+
++---+---+---+
+| 0

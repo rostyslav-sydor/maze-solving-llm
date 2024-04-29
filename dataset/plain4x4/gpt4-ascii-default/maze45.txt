@@ -1,0 +1,12 @@
+<PATH_START> (1,1) (1,2) (1,3) (1,4) (1,5) (1,6) (1,7) (2,7) (3,7) (4,7) (5,7) (6,7) (7,7) <PATH_END>
+
+Reasoning:
+1. Start at (1,1), where 'S' is.
+2. Since the maze walls at (1,8), we move right (increasing the column number): (1,2) to (1,6).
+3. Move down at (1,7) because the east side is a wall. Going vertically from (2,7) to (6,7).
+4. Reach (7,7) where 'E' is located.
+
+Throughout the path:
+- We ensure each adjacent move is only to accessible spaces (' ').
+- Avoiding '#' ensures we don't encounter walls and make valid moves.
+- Hence, the directed rightward and downward path towards 'E'.

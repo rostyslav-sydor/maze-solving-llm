@@ -1,0 +1,31 @@
+To find a solution for this maze, we will use a depth-first search (DFS) algorithm, which tries to find a path by exploring as far as possible along each branch before backtracking. Here's how we can propose a solution step-by-step:
+
+1. Define the starting point and the target:
+	Starting point: (0, 0)
+	Target: (3, 3)
+
+2. Create a visited set to mark the cells we have visited. Initialize it with the starting point:
+	visited = {(0, 0)}
+
+3. Start from the starting point and perform DFS:
+	a. Look for unvisited neighbors of the current cell. In this case, the unvisited neighbor for (0, 0) is (0, 1):
+		Current cell: (0, 0)
+		Unvisited neighbor: (0, 1)
+
+	b. Add (0, 1) to the visited set and add it to the path:
+		visited = {(0, 0), (0, 1)}
+		path = [(0, 0), (0, 1)]
+
+	c. Now we have explored (0, 1) and found that its only unvisited neighbor is (0, 2). So we do the same:
+		Current cell: (0, 1)
+		Unvisited neighbor: (0, 2)
+		Add to visited, and path:
+		visited = {(0, 0), (0, 1), (0, 2)}
+		path = [(0, 0), (0, 1), (0, 2)]
+
+	d. Now, we have reached the last unvisited neighbor of (0, 2), which is (1, 2). Again, do the same:
+		Current cell: (0, 2)
+		Unvisited neighbor: (1, 2)
+		Add to visited, and path:
+		visited = {(0, 0), (0, 1), (0, 2), (1, 2)}
+		path = [(0, 0), (0, 1), (0,

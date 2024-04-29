@@ -1,0 +1,22 @@
+To solve this maze using a breadth-first search algorithm, we can do the following:
+
+1. Extract the adjacency list from the input.
+2. Extract the origin and target points from the input.
+3. Create an empty queue for storing vertices to be explored and a dictionary to store visited vertices.
+4. Enqueue the origin vertex into the queue and mark it as visited.
+5. Repeat the following steps until the queue is empty or we reach the target vertex:
+	a. Dequeue a vertex from the queue.
+	b. Check if it is the target vertex; if so, print the path and exit.
+	c. Iterate through all its neighbors.
+	d. Mark each unvisited neighbor as visited and enqueue it into the queue.
+	e. Store the current vertex as the predecessor of its neighbors in the dictionary.
+6. If the target vertex hasn't been reached after exploring all possible paths, print "No solution found."
+
+To output the path from the origin to the target, we can do the following:
+
+1. Initialize an empty path list.
+2. Set the current vertex to be the target vertex.
+3. Repeat the following steps until we reach the origin vertex:
+	a. Append the current vertex to the path list.
+	b. Set the current vertex to be the vertex stored as its predecessor in the dictionary.
+4. Reverse the path list and output the coordinates between <PATH_START> and <PATH_END> tokens.

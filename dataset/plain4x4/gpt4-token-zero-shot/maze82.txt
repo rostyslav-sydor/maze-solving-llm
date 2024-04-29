@@ -1,0 +1,31 @@
+To solve the maze presented in the adjacency list format, we first need to understand the connections between points, then determine a path from the origin (0,0) to the target (3,3) by traversing through the connected nodes.
+
+From the adjacency list, we can construct the graph:
+- (0,0) is connected to (1,0) and (0,1).
+- (1,0) is connected to (2,0).
+- (2,0) is connected to (3,0) and (1,0).
+- (3,0) is connected to (3,1).
+- (0,1) is connected to (0,0) and (0,2).
+- (0,2) is connected to (0,1) and (0,3).
+- (0,3) is connected to (0,2) and (1,3).
+- (1,3) is connected to (0,3) and (1,2).
+- (1,2) is connected to (1,1) and (1,3).
+- (1,1) is connected to (1,2) and (2,1).
+- (2,1) is connected to (1,1) and (2,2).
+- (2,2) is connected to (2,1) and (3,2).
+- (3,1) is connected to (3,0) and (3,2).
+- (3,2) is connected to (3,1), (3,3), and (2,2).
+- (3,3) is connected to (3,2) and (2,3).
+- (2,3) is connected to (2,2) and (3,3).
+
+Starting from the origin (0,0), the path to (3,3):
+
+1. Move from (0,0) to (1,0).
+2. From (1,0) to (2,0).
+3. From (2,0) to (3,0).
+4. From (3,0) to (3,1).
+5. From (3,1) to (3,2).
+6. From (3,2) to (3,3).
+
+Thus, the path coordinates are:
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (3,2) (3,3) <PATH_END>

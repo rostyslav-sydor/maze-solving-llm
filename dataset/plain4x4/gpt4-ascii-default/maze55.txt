@@ -1,0 +1,18 @@
+To solve the maze, we start at the entry point (S), located at (1,1), and move towards the exit point (E) at (7,7). The path needs to avoid hash signs (#) representing walls.
+
+1. Start at the entrance (1,1).
+2. Move right to the end of the row (1,7).
+3. Move down one step to (2,7).
+4. Move left, bypassing wall openings until arriving at (2,2).
+5. Move down into the opening at (3,2).
+6. Move right until (3,5) where another wall is met.
+7. Move down to (4,5).
+8. Move left to (4,2) where the path descends further.
+9. Move down to (5,2).
+10. Pass right, broken by a wall section, to (5,4).
+11. Move down to (6,4).
+12. Move right bypassing the opening until (6,7).
+13. Finally, move down to the exit (7,7).
+
+Path traced:
+<PATH_START> (1,1) (1,2) (1,3) (1,4) (1,5) (1,6) (1,7) (2,7) (2,6) (2,5) (2,4) (2,3) (2,2) (3,2) (3,3) (3,4) (3,5) (4,5) (4,4) (4,3) (4,2) (5,2) (5,3) (5,4) (6,4) (6,5) (6,6) (6,7) (7,7) <PATH_END>

@@ -1,0 +1,5 @@
+The correct path is: <PATH_START> (4,4) (3,4) (3,3) (3,2) (2,2) (2,1) (3,1) (4,1) (4,0) <PATH_END>.
+
+From the starting point (4,4), we can move to (3,4) since there is an edge between them. From (3,4), we can move to (3,3). From (3,3) we can move to (3,2). We can then move to (2,2) and then to (2,1) and (3,1). From (3,1) we move to (4,1) and finally to (4,0) and we stop as we reach the target.
+
+Each step in the path is adjacent to the previous step. We never cross any walls, since we only move between adjacent cells that are connected by an edge.

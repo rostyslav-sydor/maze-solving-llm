@@ -1,0 +1,10 @@
+**Reasoning:**
+We can use Depth First Search (DFS) to find a path from the origin to the target in the maze. DFS involves traversing a graph by going as far as possible along each branch before backtracking.
+
+Starting from the origin, we can explore all its adjacent nodes, marking each node as visited to avoid revisiting. If we reach a dead end, we backtrack to the last visited node and try another path.
+
+We continue this process until we reach the target. The path taken from the origin to the target can be represented as a coordinate list, where each coordinate represents a node in the maze.
+
+**Solution:**
+
+<PATH_START> (0,0) (0,1) (1,1) (2,1) (2,2) (3,2) (3,3) <PATH_END>

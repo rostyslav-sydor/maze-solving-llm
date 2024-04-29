@@ -1,0 +1,22 @@
+The adjacency list describes a graph where each node is a coordinate in a grid and nodes are connected if there is a direct path between them. The goal is to find a path from the origin (0,0) to the target (3,4).
+
+To solve the maze, one effective method is to use Breadth-First Search (BFS). BFS explores the graph layer by layer, ensuring that the shortest path in an unweighted graph like this one is found. Starting from the origin, BFS will explore all direct neighbors, then move to the neighbors of these neighbors, and continue this process until the target is reached.
+
+Applying BFS in the described adjacency list with the origin point (0,0) and searching for the point (3,4), the algorithm would progressively explore reachable points, marking each visited point and tracing back the path from target to origin when the target is reached by using a predecessor map that stores where each node was reached from.
+
+Here is how BFS would work through this maze:
+
+1. Start at (0,0), neighbors are (0,1) and (1,0).
+2. From (0,1), visit (0,2).
+3. Continue from (0,2) to (0,3).
+4. Next, expand from (0,3) to (0,4) and then from (0,4) to (1,4).
+5. Proceed from (1,4) to (2,4).
+6. Finally, move from (2,4) to (3,4).
+
+Each movement finds the shortest path to adjacent coordinates not yet visited, iteratively building a path to the target. The flow here guarantees that once we reach (3,4), all previous movements form the shortest possible route in terms of steps thanks to the uniform step-cost in BFS.
+
+Given this series of expansions, the specific path from (0,0) to (3,4) is:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (0,4) (1,4) (2,4) (3,4) <PATH_END> 
+
+This path essentially goes along the top row from the leftmost to the rightmost column, then descends vertically down to the target.

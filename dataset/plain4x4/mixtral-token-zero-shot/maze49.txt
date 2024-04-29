@@ -1,0 +1,10 @@
+Here is a potential solution to the maze problem:
+
+<PATH_START>
+(0, 1)
+(1, 1)
+(2, 1)
+(2, 2)
+(2, 3)
+(3, 3)
+<PATH_END>

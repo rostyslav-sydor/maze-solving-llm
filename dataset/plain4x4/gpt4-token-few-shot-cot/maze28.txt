@@ -1,0 +1,49 @@
+To find a way out of the maze defined in the last section, we will examine the connectivity from (0,0) to (3,3). The maze description can be parsed into an adjacency list, and then we will use a graph traversal technique like BFS or DFS to find the path from the origin to the target:
+
+Maze:
+<ADJLIST_START> (3,1) <--> (3,0) ; (0,2) <--> (0,3) ; (3,3) <--> (3,2) ; (1,2) <--> (2,2) ; (2,1) <--> (3,1) ; (0,0) <--> (0,1) ; (1,2) <--> (0,2) ; (0,0) <--> (1,0) ; (1,0) <--> (1,1) ; (2,3) <--> (3,3) ; (2,1) <--> (2,0) ; (0,3) <--> (1,3) ; (3,1) <--> (3,2) ; (1,1) <--> (1,2) ; (1,3) <--> (2,3) ; <ADJLIST_END> <ORIGIN_START> (0,0) <ORIGIN_END> <TARGET_START> (3,3) <TARGET_END>
+
+1) Parse the adjacency list into a usable graph structure.
+2) Apply a traversal technique to locate a path from the start (0,0) to the end (3,3).
+
+Adjacency List (transformed into python dictionary for explanation):
+```python
+graph = {
+    (0,0): [(0,1), (1,0)],
+    (0,1): [(0,0)],
+    (0,2): [(0,3), (1,2)],
+    (0,3): [(0,2), (1,3)],
+    (1,0): [(1,1), (0,0)],
+    (1,1): [(1,0), (1,2)],
+    (1,2): [(1,1), (2,2), (0,2)],
+    (1,3): [(0,3), (2,3)],
+    (2,0): [(2,1)],
+    (2,1): [(3,1), (2,0)],
+    (2,2): [(1,2)],
+    (2,3): [(3,3), (1,3)],
+    (3,0): [(3,1)],
+    (3,1): [(3,0), (3,2), (2,1)],
+    (3,2): [(3,3), (3,1)],
+    (3,3): [(3,2), (2,3)]
+}
+```
+
+Path Finding:
+Using Depth-First Search (DFS) or Breadth-First Search (BFS), the path would be identified by traversing the graph from (0,0) to (3,3).
+
+**Path (finding using BFS for simplicity):**
+1) From (0,0) to (0,1)
+2) From (0,1) to (0,0)
+3) From (0,0) to (1,0)
+4) From (1,0) to (1,1)
+5) From (1,1) to (1,2)
+6) From (1,2) to (2,2)
+7) From (2,2) to (1,2)
+8) From (1,2) to (0,2)
+9) From (0,2) to (0,3)
+10) From (0,3) to (1,3)
+11) From (1,3) to (2,3)
+12) From (2,3) to (3,3)
+
+Thus, the final path is:
+<PATH_START> (0,0) (0,1) (0,0) (1,0) (1,1) (1,2) (2,2) (1,2) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>

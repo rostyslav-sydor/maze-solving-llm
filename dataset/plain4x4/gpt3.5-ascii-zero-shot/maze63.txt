@@ -1,0 +1,6 @@
+1. Start at the entry point (1,1) and mark it as visited.
+2. Move right to (1,2), then down to (2,2), (3,2), (4,2), (4,3), (4,4) and mark each visited cell.
+3. Move up to (3,4), right to (3,5), down to (4,5), down to (5,5), right to (5,6), and mark each visited cell.
+4. Move up to (4,6), left to (4,5), up to (3,5), left to (3,4), up to (2,4), right to (2,5), right to (2,6), right to (2,7), down to (3,7), right to (3,8) and mark each visited cell.
+5. Move up to (2,8), left to (2,7), up to (1,7), right to (1,8), and reach the exit point (7,7).
+6. The solution path is between <PATH_START> and <PATH_END>: (1,1) (1,2) (2,2) (3,2) (4,2) (4,3) (4,4) (3,4) (3,5) (4,5) (5,5) (5,6) (4,6) (4,5) (3,5) (3,4) (2,4) (2,5) (2,6) (2,7) (3,7) (3,8) (2,8) (2,7) (1,7) (1,8) (7,7) <PATH_END>.

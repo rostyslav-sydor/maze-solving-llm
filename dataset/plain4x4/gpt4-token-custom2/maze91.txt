@@ -1,0 +1,32 @@
+To solve the maze specified, we will utilize the BFS (Breadth-First Search) algorithm due to its effectiveness in finding the shortest path in unweighted graphs like this adjacency list representation of a maze. Here's how you would calculate the path based on the adjacency list given:
+
+**Given Adjacency List:** 
+(2,2) <--> (1,2) ; (1,3) <--> (0,3) ; (3,3) <--> (2,3) ; (1,3) <--> (1,2) ; (3,1) <--> (3,0) ; (3,2) <--> (3,1) ; (3,2) <--> (2,2) ; (1,1) <--> (1,0) ; (2,0) <--> (1,0) ; (3,1) <--> (2,1) ; (1,3) <--> (2,3) ; (2,0) <--> (2,1) ; (0,2) <--> (0,3) ; (0,0) <--> (0,1) ; (1,1) <--> (0,1) ;
+
+**Origin and Target:**
+Origin = (0,0)
+Target = (3,3)
+
+**Steps to Solution Using BFS:**
+1. Add origin (0,0) to the queue.
+2. Extract a node and explore its neighbors. Mark each visited node.
+3. Keep tracking nodes with their parent to reconstruct the path once the target is reached.
+4. Halt when you find the target (3,3).
+
+**Execution of BFS:**
+1. Start at (0,0). Neighbors: (0,1).
+2. From (0,1), go to neighbors (0,0) [visited], (1,1).
+3. From (1,1), go to neighbors (0,1) [visited], (1,0).
+4. From (1,0), go to neighbors (1,1) [visited], (2,0).
+5. From (2,0), go to neighbors (1,0) [visited], (2,1).
+6. From (2,1), go to neighbors (2,0) [visited], (3,1).
+7. From (3,1), go to neighbors (2,1) [visited], (3,0), (3,2).
+8. From (3,2), go to neighbors (3,1) [visited], (3,3), (2,2).
+9. From (3,3), as it is the target, the search completes.
+
+By backtracking from (3,3) to (0,0) using the recorded parent nodes, the path is derived:
+
+**Final Path from Origin to Target:**
+<PATH_START> (0,0) (0,1) (1,1) (1,0) (2,0) (2,1) (3,1) (3,2) (3,3) <PATH_END>
+
+Thus, the BFS has located the shortest pathway through the maze considering the adjacency representation given in the input.

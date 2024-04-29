@@ -1,0 +1,41 @@
+To solve the maze, we can use the breadth-first search (BFS) algorithm, as it is guaranteed to find the shortest path from the origin to the target.
+
+The BFS algorithm works by exploring all the neighboring nodes at the current depth before moving on to the nodes at the next depth level. We start by adding the origin node to a queue and marking it as visited. Then, we repeat the following steps until the queue is empty or the target node is found:
+
+1. Dequeue the first node from the queue.
+2. If the dequeued node is the target, we have found the shortest path, and we can stop the algorithm.
+3. Otherwise, we iterate through all the unvisited neighbors of the dequeued node and add them to the queue.
+
+Now, let's apply the BFS algorithm to the given maze:
+
+1. Mark the origin node (0,0) as visited and add it to the queue.
+2. Dequeue the first node from the queue, which is (0,0).
+3. Add its unvisited neighbors (0,1) and (1,0) to the queue and mark them as visited.
+4. Dequeue the next node from the queue, which is (0,1).
+5. Add its unvisited neighbor (1,1) to the queue and mark it as visited.
+6. Dequeue the next node from the queue, which is (1,0).
+7. Add its unvisited neighbors (1,1) and (2,0) to the queue, but (1,1) is already visited, so we don't add it again. Mark (2,0) as visited.
+8. Dequeue the next node from the queue, which is (1,1).
+9. Add its unvisited neighbors (1,2) and (2,1) to the queue and mark them as visited.
+10. Dequeue the next node from the queue, which is (2,0).
+11. Add its unvisited neighbor (2,1) to the queue, but it's already visited, so we don't add it again.
+12. Dequeue the next node from the queue, which is (1,2).
+13. Add its unvisited neighbor (1,3) to the queue and mark it as visited.
+14. Dequeue the next node from the queue, which is (2,1).
+15. Add its unvisited neighbors (2,2) and (3,1) to the queue and mark them as visited.
+16. Dequeue the next node from the queue, which is (1,3).
+17. Add its unvisited neighbor (2,3) to the queue and mark it as visited.
+18. Dequeue the next node from the queue, which is (2,2).
+19. Add its unvisited neighbor (2,3) to the queue, but it's already visited, so we don't add it again.
+20. Dequeue the next node from the queue, which is (3,1).
+21. Add its unvisited neighbor (3,2) to the queue and mark it as visited.
+22. Dequeue the next node from the queue, which is (2,3).
+23. Add its unvisited neighbor (3,3) to the queue and mark it as visited.
+24. Dequeue the next node from the queue, which is (3,2).
+25. Add its unvisited neighbor (3,3) to the queue, but it's already visited, so we don't add it again.
+26. Dequeue the next node from the queue, which is (3,3).
+27. Since (3,3) is the target node, we have found the shortest path from the origin to the target.
+
+To reconstruct the path, we start from the target node (3,3) and follow the parent pointers until we reach the origin node (0,0). We can store the coordinates in a list in reverse order and then reverse the list to get the correct order.
+
+The final path is: <PATH_START> (0,0) (0,1) (1,1) (1,2) (1,3) (2,3) (3,3) <PATH_END>

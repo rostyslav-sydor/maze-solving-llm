@@ -1,0 +1,22 @@
+To solve this maze, we can use the Depth-First Search (DFS) algorithm with backtracking. This algorithm enables to make recursive decisions at each point in the graph based on its connections. 
+
+For each step: 
+1. Check if the current coordinate is equal to the target, if so, return this coordinate as the solution.
+2. Otherwise, for each connected coordinate, we will repeat the process:
+   * If this new coordinate was not visited before, then we have gone to this room already
+      > * a. mark this new coordinate as visited
+      > * b. continue the loop with the new coordinate
+   * Otherwise, return to previous step as we did not find a solution through this path and continue searching for other paths.
+
+We will repeat this search on all the rooms until we find the solution as a list of coordinates. 
+
+Following this approach, here's the step-by-step thought process in solving the maze: 
+
+* Start from the origin (0, 0). We check all its connected rooms: (0, 1), (0, 2), (0, 3) and (1, 0).
+* Since (1, 0) and (0, 3) are end nodes, there's no path leading to the target through these directions, so we backtrack.
+* Now let's consider (0, 2). We have a connection: (0, 2) -> (0, 3). We mark (0, 3) as visited and continue the search.
+* We see that it's the same connection as the previous step so this is also a dead end. We backtrack again.
+* Next, we check (0, 1). Here, we find the connection: (0, 1) -> (0, 0) and (0, 1) -> (1, 1). We mark (1, 1) as visited, and we continue the search.
+* We are now at (0, 1), and we find the connection: (0, 1) -> (0, 2).
+* This direction leads us to the previously marked (0, 2). We backtrack again.
+* We now come back to the origin once more and check (0, 3). We see the connection (0, 3)

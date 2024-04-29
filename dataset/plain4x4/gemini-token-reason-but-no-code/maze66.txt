@@ -1,0 +1,8 @@
+**Reasoning:**
+The maze can be represented as a graph, where each token is a node and each connecting line is an edge. We can use a breadth-first search (BFS) to find the shortest path from the starting to the ending token.
+
+We start at token number 0, which is the origin, and mark it as visited. Then, we check all the tokens that are connected to token 0 and add them to a queue. We then mark each of those tokens as visited. We repeat this process until we reach the target token.
+
+**Solution:**
+
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (2,2) (3,2) (3,3) <PATH_END>

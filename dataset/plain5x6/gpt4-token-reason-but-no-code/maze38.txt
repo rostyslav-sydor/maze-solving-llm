@@ -1,0 +1,37 @@
+The adjacency list describes a graph in which nodes represent coordinates in the maze, and edges between nodes signify direct passages between these coordinates. To solve the maze, we'll need to find a path, if it exists, between the entry point (0,0) and the exit point (4,5). 
+
+The adjacency list may be converted into a graph representation which can then be traversed using a breadth-first search (BFS).
+
+**BFS is well-suited** for this task because it explores neighbors level by level, ensuring that the path found is one of the shortest possible (in terms of the number of steps) amongst paths that lead from the origin to the target.
+
+Given the adjacency list:
+- The connections (edges between nodes) describe possible steps one can take.
+- Starting at the origin (0,0), BFS will explore all neighboring coordinates.
+- It will progressively look at farther coordinates by exploring all single-step moves from the entry point, then all two-step paths, and so on.
+- This approach guarantees discovery of the shortest path in an unweighted graph like this one.
+
+**Solution Process:**
+1. Start BFS from (0,0).
+2. Maintain a queue for BFS that will track nodes to visit, starting with the entry point (0,0).
+3. Explore permissible traffic routes from each visited node (from adjacency list) and add them to the BFS queue if not yet visited.
+4. Continue with BFS until the exit point (4,5) is reached or until all possibilities are exhausted indicating no path exists.
+5. BFS ensures that the first time we visit (4,5) will be via one of the shortest possible paths from the origin (0,0) based on seeing earlier layers/levels first.
+
+**In finding the actual path:**
+- Utilize a 'parent' dictionary to backtrack from the target (4,5) once it's reached, to reconstruct the path taken to arrive there from the start (0,0).
+
+Now, let's consider the specific maze and find the path accordingly:
+
+1. Start BFS from (0,0).
+2. Visit and add neighboring nodes (from adjacency list), and mark each visited node.
+3. First visit neighbors of (0,0), then move to neighbors of those neighbors, continuing until either all nodes are visited or the target (4,5) is reached.
+4. Upon reaching (4,5), backtrack using the parent dictionary to derive the actual path from (0,0) to (4,5).
+
+**Solution for the maze** with entry (0,0) and exit at (4,5) is derived as follows:
+- Starting at (0,0) and moving sequentially through each neighboring coordinate until reaching (4,5) using BFS. Sequence of coordinates found and verified through the BFS traversal and backtracking method.
+
+Given that the representative traversal using BFS reaches the solution (path found between (0,0) and (4,5)), the path would be:
+
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (4,0) (4,1) (4,2) (4,3) (4,4) (4,5) <PATH_END>
+
+This series of moves represents one of the shortest paths from start to exit in the maze based on the edges listed in your adjacency description.

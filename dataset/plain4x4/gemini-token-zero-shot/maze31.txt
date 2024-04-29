@@ -1,0 +1,11 @@
+1. **Identify the starting and ending points**: The starting point is (0,0) and the ending point is (3,3).
+2. **Create a queue to store the paths**: The queue will store a list of coordinates for each path. Initially, the queue will only contain the starting point.
+3. **While the queue is not empty**:
+    * Dequeue the first path from the queue.
+    * If the last coordinate in the path is the ending point, then the path is a solution.
+    * Otherwise, find all the adjacent coordinates that are not already in the path.
+    * For each adjacent coordinate, create a new path by adding the coordinate to the end of the path.
+    * Enqueue the new path into the queue.
+4. **If the queue is empty and no solution has been found**, then there is no path from the starting point to the ending point.
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>

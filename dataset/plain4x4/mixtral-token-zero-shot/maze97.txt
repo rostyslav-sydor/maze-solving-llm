@@ -1,0 +1,21 @@
+We can use breadth-first search (BFS) to find the shortest path through the maze, starting from the origin (0,0) and ending at the target (3,3). BFS is an algorithm that visits nodes in a graph level by level, starting from the origin and checking all neighboring nodes before moving to the next level. It maintains a queue of nodes to visit and a visited set to avoid visiting the same node multiple times. Here is an implementation of BFS in pseudocode:
+
+1. Initialize an empty queue, a visited set, and a path list.
+2. Add the origin node to the queue and the visited set.
+3. While the queue is not empty:
+   a. Dequeue a node from the queue.
+   b. If the node is the target node, append its path to the path list and return.
+   c. For each neighbor of the node:
+      i. If the neighbor is not in the visited set, add it to the visited set and append it to the current node's path.
+      ii. Then, add the neighbor to the queue.
+   d. Otherwise, backtrack by removing the last element of the current node's path.
+4. If the queue becomes empty, there is no path from the origin to the target.
+
+According to the maze adjacency list:
+
+<ADJLIST_START>
+(0,0) <--> (0,1) , (0,1) <--> (1,1) , (1,1) <--> (1,0) , (1,0) <--> (2,0) , (2,0) <--> (2,1) , (2,1) <--> (3,1) , (3,1) <--> (3,0) , (3,0) <--> (3,1) , (3,1) <--> (3,2) , (3,2) <--> (3,3) , (3,3) <--> (2,3) , (2,3) <--> (2,2) , (2,2) <--> (1,2) , (1,2) <--> (0,2) , (0,2) <--> (0,3)
+
+</ADJLIST_END>
+
+Let

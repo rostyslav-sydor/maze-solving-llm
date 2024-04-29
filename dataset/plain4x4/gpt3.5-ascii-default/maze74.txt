@@ -1,0 +1,5 @@
+<Path_START> (1,1) (2,1) (3,1) (4,1) (5,1) (5,2) (5,3) (5,4) (5,5) (6,5) (7,5) (7,6) (7,7) <PATH_END>
+
+Starting from the entry point at (1,1) and following the path, we move down towards (2,1), then continue down to (3,1) and (4,1). From there, we move right to (5,1) and then up to (5,2), (5,3), (5,4), and (5,5). We then move down to (6,5), right to (7,5), and finally up and right to reach the exit point at (7,7).
+
+This path avoids all walls and successfully navigates through the maze from the start to the finish point.

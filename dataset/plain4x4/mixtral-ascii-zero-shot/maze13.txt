@@ -1,0 +1,31 @@
+Let's begin by creating a matrix representation of the maze:
+
+1. Start at the entry point (1,1):
+         [
+          [ None,   None, None, None, None, None, None, None, None, None,],
+          [ None,   'S',    None,  None,    None, None,   None, None, None,],
+          [ None,   '#',    ' ',    ' ',    '#',    ' ',    ' ',    '#', None,],
+          [ None,   '#',    '#',    '#',    '#',    '#',    '#',    '#', None,],
+          [ None,   '#',    ' ',    ' ',    ' ',    ' ',    '#',    '#', None,],
+          [ None,   '#',    ' ',    '#',    '#',    '#',    '#',    '#', None,],
+          [ None,   '#',    ' ',    ' ',    ' ',    ' ',    'E',    '#', None,],
+          [ None,   '#',    '#',    '#',    '#',    '#',    '#',    '#', None,],
+          [ None,   None, None, None, None, None, None, None, None, None,],
+          [ None,   None, None, None, None, None, None, None, None, None,],
+          ]
+
+Now let's backtrack using recursive logic:
+
+2. Starting from (1,1), we have 4 possible directions to move:
+      i. Move Up   - No as we'll hit a wall
+      ii. Move Down - No as we'll hit a wall
+      iii. Move Left - No as we'll hit a wall
+      iv. Move Right - Yes, we will reach coordinate (1,2)
+
+3. Now we arrive at (1,2), analyze possibilities again:
+     i. Move Up   - Yes, we will hit no wall, next coordinate (0,2)
+
+4. We reach (0,2), analyze possibilities:
+     i. Move Up - We'll hit the boundary and need to move back
+     ii. Move Down - No as we'll hit a wall
+     iii. Move Left - No as we'll hit a

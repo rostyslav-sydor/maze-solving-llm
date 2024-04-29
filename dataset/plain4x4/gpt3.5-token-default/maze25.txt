@@ -1,0 +1,3 @@
+<Path_Start> (0,0) (1,0) (1,1) (2,1) (2,2) (2,3) (3,3) <Path_End>
+
+To solve the maze, we can start at the origin (0,0) and follow the directions mentioned in the adjacency list until we reach the target (3,3). Following the path, we move right to (1,0), then up to (1,1), further up to (2,1), then right to (2,2), up to (2,3), and finally right to (3,3) which is our target. The path found is the shortest path from the origin to the target. The output coordinates in the format of a list enclosed by <Path_Start> and <Path_End> tokens represent the sequence of movements made to reach the target.

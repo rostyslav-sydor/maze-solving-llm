@@ -1,0 +1,7 @@
+
+First, we start at the entry point (1,1) and explore all possible paths. We follow the open spaces while avoiding the walls.
+
+We can move right to (1,2), down to (2,2), down to (3,2), right to (3,3), down to (4,3), right to (4,4), down to (5,4), right to (5,5), down to (6,5), right to (6,6), down to (7,6), and finally right to the exit point (7,7).
+
+Therefore, the solution path is: 
+<PATH_START> (1,1) (1,2) (2,2) (3,2) (3,3) (4,3) (4,4) (5,4) (5,5) (6,5) (6,6) (7,6) (7,7) <PATH_END>.

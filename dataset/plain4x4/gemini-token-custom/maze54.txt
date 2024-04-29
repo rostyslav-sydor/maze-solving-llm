@@ -1,0 +1,10 @@
+<PATH_START> (0,0) (1,0) (2,0) (2,1) (2,2) (2,3) (3,3) <PATH_END>
+
+1. From the starting point (0,0), we can only move right or down. Since the goal is to the right, we move right to (1,0).
+2. From (1,0), we can only move right or down. Since the goal is to the right, we move right to (2,0).
+3. From (2,0), we can only move right or down. Since the goal is to the right, we move right to (3,0).
+4. From (3,0), we can only move right or up. Since the goal is to the up, we move up to (3,1).
+5. From (3,1), we can only move left or up. Since the goal is to the up, we move up to (3,2).
+6. From (3,2), we can only move left or right. Since the goal is to the right, we move right to (3,3).
+
+This path does not cross any walls and uses only adjacent cells.

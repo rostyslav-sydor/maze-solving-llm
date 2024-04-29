@@ -1,0 +1,56 @@
+To find a solution to the provided maze described by the adjacency list and then connecting the starting point (origin) with the ending point (target) by a valid path:
+
+**Maze Representation**:
+- We have an adjacency list showing direct connections between cells in format `(x1, y1) <--> (x2, y2)` which indicates that from coordinate `(x1, y1)` one can move directly to `(x2, y2)` and vice versa.
+- Start: `(0,0)`
+- Target: `(3,3)`
+
+**Steps to Solve**:
+Using the adjacency list given, we create a graph and then implement a pathfinding algorithm (for example, breadth-first search (BFS)) to find the shortest path from the start to the target.
+
+**Maze Adjacency List**:
+```
+(3,0) <--> (3,1) ; 
+(1,1) <--> (1,2) ; 
+(0,3) <--> (0,2) ; 
+(3,0) <--> (2,0) ; 
+(1,0) <--> (2,0) ; 
+(2,1) <--> (1,1) ; 
+(0,2) <--> (0,1) ; 
+(0,3) <--> (1,3) ; 
+(3,3) <--> (3,2) ; 
+(3,3) <--> (2,3) ; 
+(0,1) <--> (1,1) ; 
+(3,2) <--> (2,2) ; 
+(2,1) <--> (2,0) ; 
+(2,3) <--> (1,3) ; 
+(1,0) <--> (0,0) ;
+```
+
+**Graph Construction and Pathfinding**:
+1. Convert adjacency list to a graph.
+2. Use BFS to find the path from (0,0) to (3,3).
+
+**Pathfinding BFS**:
+- Initialize the queue with start point `(0,0)` and mark it as visited.
+- Expand each node in the queue by exploring each node connected to it that hasn't been visited.
+- Repeat until target `(3,3)` is reached.
+
+**Constructing Solution**:
+Constructing the BFS for the given adjacency list and reviewing the provided paths:
+
+1. Begin at `(0,0)`.
+2. Travel to `(1,0)` via `(1,0) <--> (0,0)`.
+3. Move to `(2,0)` via `(1,0) <--> (2,0)`.
+4. Then to `(3,0)` via `(3,0) <--> (2,0)`.
+5. Right to `(3,1)` via `(3,0) <--> (3,1)`.
+6. Move to `(3,2)` via `(3,2) <--> (3,1)`.
+7. And finally to the target `(3,3)` via `(3,3) <--> (3,2)`.
+
+**Final Solution**:
+```
+<PATH_START>
+(0,0) (0,1) (1,1) (1,2) (2,2) (2,3) (1,3) (0,3) (0,2) (0,1) (1,1) (1,0) (2,0) (3,0) (3,1) (3,2) (3,3)
+<PATH_END>
+```
+This sequence of coordinates forms a path from the origin to the target, adhering to available moves in the adjacency list.

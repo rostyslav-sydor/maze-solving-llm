@@ -1,0 +1,21 @@
+Starting from the origin point (0,0), we need to find a path to the target point (4,4) based on the adjacency list provided. This adjacency list tells us directly connected paths between the maze points. Utilizing a graph search method like breadth-first search (BFS) is well-suited for this type of problem as BFS explores the closest nodes first, and in a maze without weights on paths, it will efficiently find the shortest path.
+
+Here's a step-by-step trace of the solving process:
+
+1. From the starting point (0,0), the next connected points we can reach according to the adjacency list are (0,1) and (1,0).
+2. Continuing from (0,1), we can reach (0,2). From (1,0), we can only move back to (0,0) or onward to (2,0).
+3. Progressing from (0,2), we explore (0,1) which just loops back, or move on to (1,2).
+4. From (1,2), we can move to (1,1) or (0,2) back or further to (2,2).
+5. Exploring from (2,2), we can reach (3,2).
+6. From (3,2), connected points are (2,2) for a possible back-movement and (3,1) to move forward.
+7. Moving from (3,1), the next point is (3,0) onward to (4,0).
+8. From (4,0), connected nodes are (3,0) and it connects further to (4,1). 
+9. From (4,1), we move to (4,2), then (4,3) and finally to (4,4). 
+
+Thus, we find a path from (0,0) through a series of connected points ending at (4,4). The pathway is as follows:
+
+(0,0) -> (0,1) -> (0,2) -> (1,2) -> (2,2) -> (3,2) -> (3,1) -> (3,0) -> (4,0) -> (4,1) -> (4,2) -> (4,3) -> (4,4)
+
+Therefore, the solution to the maze, formatted in the required manner, is:
+
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (2,2) (3,2) (3,1) (3,0) (4,0) (4,1) (4,2) (4,3) (4,4) <PATH_END>

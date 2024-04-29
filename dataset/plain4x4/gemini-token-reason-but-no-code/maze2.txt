@@ -1,0 +1,6 @@
+This maze can be solved by using Depth First Search (DFS) or Breadth First Search (BFS) algorithms.
+
+DFS is a recursive algorithm that explores each possible path until a solution is found or all paths are exhausted. BFS, on the other hand, explores all paths at the same level before moving to the next level, ensuring a shortest path is found if one exists.
+
+For the given maze, using DFS, one possible solution is:
+<ORIGIN_START> (0,0) (0,1) (1,1) (2,1) (3,1) (3,2) (3,3) <TARGET_END>

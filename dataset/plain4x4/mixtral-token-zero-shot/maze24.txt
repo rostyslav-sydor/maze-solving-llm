@@ -1,0 +1,12 @@
+ The Dijkstra's Algorithm is a commonly used algorithm to find the shortest path between two nodes on a graph. Here, we can use this algorithm to determine the shortest path between the origin (0, 0) and the target (3, 3) in the provided maze. 
+
+The Dijkstra's Algorithm is an iterative process that maintains a tree (T) of the shortest path from origin to every other node in the graph. 
+
+Follow the steps below to solve the maze:
+
+1. Add the origin node (0, 0) to the tree (T) and set the distance of this node to zero (since it is the origin node and its own shortest path is zero).
+2. Determine which of the candidate nodes (adjacent to the origin node) have already been considered. Using the adjacency list provided, the candidates are: (0, 1), (1, 0), (3, 0), and (2, 0).
+3. Create a queue (priority queue or heap) consisting of these candidate nodes and their distances from the origin [(0, 1), (0.5), (1, 0), (0.5), (3, 0), (1.0), (2, 0), (1.0)], where distance is defined as the minimum number of tiles to travel from the origin to each node in the graph.
+4. Pop the first node of the queue, which is (0, 1). We have reached this node from node (0, 0). Set the distance of this node to 0.5, because it is one step away from the origin (0, 0).
+5. Select the next candidate node in the queue, which is (1, 0). It has the same distance as (0, 1), but since we handled (0, 1) first, we follow the rule that we should prioritize the node with the shortest distance from the origin. We pop (1, 0) from the queue and set its distance to 0.5, just the same way as we did for (0, 1).
+6. Repeat the process for the nodes (3, 0) and (2, 0). Now, we have added four nodes to the tree (1, 0), (0, 

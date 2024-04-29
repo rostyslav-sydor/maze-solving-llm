@@ -1,0 +1,10 @@
+First, we need to explore the maze to find a path from the entry point (1,1) to the exit point (7,7). We can use a simple depth-first search algorithm to traverse the maze.
+
+Starting from the entry point, we can move in all four directions (up, down, left, right) as long as we don't hit a wall or revisit a cell we have already been to. We can mark the visited cells to keep track of our path.
+
+After exploring the maze, we should have found a path from (1,1) to (7,7). We can then output the path as a series of coordinates between <PATH_START> and <PATH_END> tokens.
+
+Here is an example path:
+<PATH_START> (1,1) (2,1) (3,1) (3,2) (3,3) (4,3) (5,3) (5,4) (5,5) (4,5) (3,5) (2,5) (1,5) (1,6) (1,7) (2,7) (3,7) (4,7) (5,7) (6,7) (7,7) <PATH_END>
+
+This path represents moving from (1,1) to (7,7) while avoiding walls and visiting each cell only once.

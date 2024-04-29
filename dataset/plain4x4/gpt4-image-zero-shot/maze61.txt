@@ -1,0 +1,12 @@
+To solve the maze, let's analyze the grid considering the walls that block paths and find a route from the entry point (0,0) to the exit point (3,3).
+
+1. Start at (0,0). Moving right to (0,1) is possible since there is no wall.
+2. Continue from (0,1) to (0,2), and then (0,3), moving right along the top row which is all open.
+3. From (0,3), move down to (1,3) as the path directly downwards is clear.
+4. But, there's a wall at (1,3) preventing further movement down or to the left. So, move down from (1,3) to (2,3), and then proceed to (3,3).
+
+The path from the start to the end is then:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>
+
+This route avoids all the walls and navigates directly through the open corridors in the maze.

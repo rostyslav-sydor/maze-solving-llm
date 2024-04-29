@@ -1,0 +1,26 @@
+Firstly, we convert the adjacency list as the following:
+
+```
+(0,0) <--> [(0,1), (1,0)]
+(0,1) <--> [(0,0), (1,1)]
+(0,2) <--> [(0,3), (1,2)]
+(0,3) <--> [(0,2), (1,3)]
+(1,0) <--> [(1,1), (2,0)]
+(1,1) <--> [(1,0), (1,2), (0,1)]
+(1,2) <--> [(1,1), (1,3), (2,2)]
+(1,3) <--> [(1,2), (2,3)]
+(2,0) <--> [(2,1), (1,0)]
+(2,1) <--> [(2,0), (2,2)]
+(2,2) <--> [(2,1), (1,2), (3,2)]
+(2,3) <--> [(2,2), (1,3), (3,3)]
+(3,0) <--> [(3,1), (2,0)]
+(3,1) <--> [(3,0), (3,2)]
+(3,2) <--> [(3,1), (3,3), (2,2)]
+(3,3) <--> [(3,2), (2,3)]
+```
+
+Now we can start from the origin point (0,0) and try all its neighbors. For each neighbor, if it is the target point, we have found a solution. If not, we try all its neighbors recursively. In this way, we can search the maze in depth-first manner.
+
+Here is a solution for the given maze:
+
+<PATH_START> (0,0) (0,1) (1,1) (1,2) (1,3) (2,3) (3,3) <PATH_END>

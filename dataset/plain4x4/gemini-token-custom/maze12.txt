@@ -1,0 +1,17 @@
+The path from the origin to the target can be found by traversing the adjacency list and finding the shortest path.
+
+First, we need to find the shortest path from the origin to the target. We can do this by using a breadth-first search (BFS). Starting from the origin, we add all of its adjacent cells to a queue. We then visit each cell in the queue, and add all of its adjacent cells to the queue. We continue this process until we reach the target cell.
+
+Once we have found the shortest path from the origin to the target, we can output it in the format of a coordinate list. The first coordinate in the list is the row of the origin cell, and the second coordinate is the column of the origin cell. The last coordinate in the list is the row of the target cell, and the second coordinate is the column of the target cell.
+
+```
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>
+```
+
+Now we need to verify that our solution does not cross any walls and path uses only adjacent cells.
+
+The maze is represented as an adjacency list, where each cell is represented by a tuple of its row and column. The adjacency list contains a list of tuples, where each tuple represents a cell that is adjacent to the current cell.
+
+We can check if a solution crosses any walls by checking if any of the cells in the solution are not adjacent to the previous cell. We can check if a solution uses only adjacent cells by checking if each cell in the solution is adjacent to the previous cell.
+
+In our solution, each cell is adjacent to the previous cell, so our solution does not cross any walls and uses only adjacent cells.

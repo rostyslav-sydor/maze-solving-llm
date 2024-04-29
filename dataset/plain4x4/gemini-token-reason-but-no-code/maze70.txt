@@ -1,0 +1,10 @@
+**Reasoning:** 
+
+- We define origin and target nodes using tokens. The path from origin to target has to go through all the other nodes in the graph.
+- There is no weight assigned to the edges of the graph, we use BFS as the search algorithm.
+- During traversal we check if the current node is the target and if that is the case, we stop as we found the shortest path.
+- The visited nodes are stored in a set to avoid cycles.
+
+**Solution:**
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>

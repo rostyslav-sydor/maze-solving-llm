@@ -1,0 +1,5 @@
+We begin from the origin point and check all the neighbors in the adjacency list. Since the maze has only one possible path, the next point will always be only one. We continue this process until we reach the target point.
+
+For the given maze, the solution is:
+
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (2,2) (2,3) (3,3) <PATH_END>

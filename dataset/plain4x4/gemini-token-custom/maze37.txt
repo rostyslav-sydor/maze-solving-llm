@@ -1,0 +1,9 @@
+To find a solution to the maze, we first need to identify the entry and exit points. In this case, the entry point is (0,0) and the exit point is (3,3).
+
+Next, we can use a depth-first search to find a path from the entry point to the exit point. We can start by creating a stack of nodes to visit. We can add the entry point to the stack and then loop until the stack is empty. In each iteration of the loop, we can pop the top node from the stack and add it to the visited list. Then, we can iterate over the neighbors of the current node and add them to the stack if they have not already been visited.
+
+We continue this process until we reach the exit point. Once we reach the exit point, we can pop all of the nodes from the stack and add them to the path list. The path list will contain the coordinates of the nodes in the order in which they were visited.
+
+Here is the solution path in the format of coordinate list: <PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>
+
+To verify the solution, we can check that the path does not cross any walls and that it uses only adjacent cells. We can do this by comparing the path to the adjacency list. We can see that the path only includes cells that are adjacent to each other and that there are no walls between the cells. Therefore, the solution is valid.

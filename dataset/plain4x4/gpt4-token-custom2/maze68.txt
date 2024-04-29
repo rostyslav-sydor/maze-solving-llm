@@ -1,0 +1,12 @@
+To solve the second maze, we follow a similar BFS approach as explained before. Given the origin at (0,0) and the destination at (3,3) with the adjacency list of connections, we explore the connections systematically:
+1. Start from (0,0)
+2. Move right to (0,1)
+3. Move right to (0,2)
+4. Move right to (0,3)
+5. Move down to (1,3)
+6. Move down to (2,3)
+7. Move down to (3,3)
+
+Upon backtracking and reassembling the path from our BFS, we find the calculated path in your given maze with connected nodes:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>

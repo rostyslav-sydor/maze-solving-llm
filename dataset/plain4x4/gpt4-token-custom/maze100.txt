@@ -1,0 +1,43 @@
+To find a solution for navigating the maze from the origin to the target, we use the adjacency list provided and apply a pathfinding algorithm such as Breadth-First Search (BFS). The BFS algorithm will explore the maze systematically by moving from the starting point to all accessible neighboring points, then to their neighbors, and so forth, until it finds the target.
+
+#### Steps and Reasoning
+
+1. **Parse the adjacency list**: Identify all the connections or paths between nodes (or coordinates), which will help in navigating through the maze. From the adjacency list:
+   - (3,2) <--> (3,1)
+   - (3,2) <--> (3,3)
+   - (3,1) <--> (2,1)
+   - (3,1) <--> (3,0)
+   - ...
+
+2. **Identify the origin and target points from the tokens**: 
+   - Origin: (0,0)
+   - Target: (3,3)
+
+3. **Apply BFS for Pathfinding**:
+   - Start from the origin (0,0).
+   - Check all its directly connected nodes, and mark them with the number of steps taken to reach them.
+   - Repeat for each newly discovered node until the target is reached or all possible paths are exhausted.
+
+4. **Backtrace the Path**:
+   - Once the target node (3,3) is reached, backtrack to find the exact path taken to reach there from the origin (0,0).
+
+5. **Path Validation**:
+   - Check that each consecutive pair of coordinates in the resulting path are indeed adjacent to each other as per the adjacency list and they do not cross any walls (non-adjacent moves).
+
+#### Execution of BFS and Pathfinding
+
+- Initialize the BFS from (0,0).
+- Moving step-by-step, using the adjacency list:
+   - ((0,0) to (0,1) to (0,2) to (0,3))
+   - From (0,3), the move is to (1,3) following the connection (0,3) <-> (1,3).
+   - Next, move from (1,3) to (2,3) based on the existing link.
+   - Finally, move from (2,3) to (3,3).
+
+#### Final Path
+Following the BFS processed connections, the sequence (path) will be:
+
+```
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>
+```
+
+This path fulfills the requirement of connecting only adjacent nodes and reaching from the origin to the target successfully without crossing any walls, using all direct connections provided in the adjacency list. Each step of the path has been validated against the adjacency list, thereby satisfying the condition of moving through only adjacent cells.

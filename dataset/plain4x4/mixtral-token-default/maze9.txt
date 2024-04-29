@@ -1,0 +1,17 @@
+We can use Depth First Search algorithm to find a solution for this maze, and then construct the coordinate list of the path. 
+
+<ADJLIST_START> (0,0) <--> (1,0) ; (2,3) <--> (3,3) ; (2,0) <--> (1,0) ; (3,1) <--> (3,2) ; (0,3) <--> (0,2) ; (1,2) <--> (2,2) ; (2,3) <--> (2,2) ; (1,3) <--> (0,3) ; (2,1) <--> (3,1) ; (2,0) <--> (3,0) ; (0,1) <--> (0,0) ; (1,2) <--> (1,3) ; (3,2) <--> (3,3) ; (2,1) <--> (1,1) ; (0,2) <--> (0,1) <ADJLIST_END> <ORIGIN_START> (0,0) <ORIGIN_END> <TARGET_START> (3,3) <TARGET_END>
+
+First let's run Depth First Search algorithm:
+> -> Depth First Search, starting from node (0,0), recursive calls to children:
+1) Set the current node (0,0) as visited, then make recursive calls to its unvisited children:
+   - node (1,0) is not a targeted node, check unvisited children:
+     - node (1,0) is visited, skip -> no more children
+   - node (1,0) has no unvisited children -> return to caller
+2) Return to caller (0,0) -> node (0,0) has no more unvisited children -> return to caller
+
+Although Depth First Search algorithm didn't find a path to target node (3,3), we can modify it and explore certain paths deeper before backtracking to the parent node (0,0). 
+
+Here's a modification (where nodes indicate visited status and parenthesis indicate target node):
+> -> Depth First Search, starting from node (0,0):
+- node (0,0) is visited

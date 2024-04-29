@@ -1,0 +1,28 @@
+To solve the maze, I first interpret the adjacency list to construct a graph where each node represents a cell in the maze, and each edge represents a direct passageway between two adjacent cells. I then find a path from the entry point (0,0) to the exit point (3,3) using a standard pathfinding algorithm like BFS (Breadth-First Search).
+
+Here are the steps for solution:
+
+1. **Construct the Graph:**
+   - From the given adjacency list, convert every connection, such as (2,1) <--> (2,2), into edges of the graph where each node is keyed by its coordinates, and its value is a set of its directly connected neighbours.
+
+2. **Define Entry and Exit:**
+   - The entry point is (0,0) and the exit is (3,3) as defined between the tokens `<ORIGIN_START>` and `<ORIGIN_END>`, `<TARGET_START>` and `<TARGET_END>`.
+
+3. **Pathfinding:** 
+   - Implement BFS starting at (0,0). Initialize a queue with the start node and a way to track visited nodes and the path taken to reach each node. 
+   - Iterate: Dequeue the next node, and if it's the exit, backtrack to determine the path taken. If not, enqueue all the directly connected and unvisited neighbours, marking that they have been visited and logging the current node as their predecessor. 
+
+4. **Extract Path:**
+   - Once the exit point is reached, backtrack using the recorded predecessors from the exit point back to the start point to retrieve the path.
+
+5. **Validation:**
+   - Ensure the extracted path does not jump between non-adjacent cells using the graph's adjacency sets, and compare this path against the walls or lack of connections (edges) in the graph to ensure the path is valid.
+
+6. **Output the Path:**
+   - Format the complete path as required.
+
+Following the above steps, considering a correct implementation of BFS and correct logging of paths and backtracking, we should attain a valid path through the maze:
+
+`<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (3,2) (3,3) <PATH_END>`
+
+Each of these steps connects directly to its subsequent step as per the adjacency list confirming no walls are crossed, and only adjacent cells are utilized in the solution. Each coordinate differs from the next by one unit in either the x or y direction (not both), which corresponds to valid adjacency in the given maze structure. This path, when traced on the adjacency list, follows the valid connections, verifying that the solution path is correct.

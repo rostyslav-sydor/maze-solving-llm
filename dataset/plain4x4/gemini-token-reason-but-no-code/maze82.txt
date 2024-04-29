@@ -1,0 +1,5 @@
+In order to find a path through a maze we can use a depth-first search (DFS) algorithm. DFS starts from the starting point and explores as far as possible along each path. If it reaches a dead end, it backtracks and tries another path.
+
+In this maze, we can start from the starting point (0,0) and explore south and east. If we go south, we reach a dead end at (0,3). If we go east, we reach (1,0). From there, we can go south to (1,1) and then east to (2,1). From there, we can go south to (3,1) and then east to (3,2). From there, we can go south to (3,3), which is the exit point.
+
+Therefore, the path through the maze is: <PATH_START> (0,0) (1,0) (1,1) (2,1) (3,1) (3,2) (3,3) <PATH_END>

@@ -1,0 +1,14 @@
+To solve the maze, we can use A* search algorithm, which is an informed search algorithm that finds the shortest path from the origin to the target. It combines the benefits of Dijkstra's algorithm and the greedy best-first search. The algorithm works by maintaining a priority queue of nodes, where the priority is determined by a heuristic function that estimates the cost of reaching the target from the current node.
+
+Here is the reasoning behind the A* algorithm:
+
+1. The algorithm starts at the origin and initializes the priority queue with the origin node.
+2. At each iteration, the algorithm selects the node with the lowest priority (i.e., the node with the smallest estimated cost) from the priority queue.
+3. If the selected node is the target, the algorithm has found a solution and can stop.
+4. Otherwise, the algorithm expands the selected node by considering all of its neighbors. For each neighbor, it calculates the estimated cost of reaching the target from that node.
+5. The algorithm then updates the priority queue by adding any new neighbors that were not already in the queue and by updating the priorities of any existing neighbors that have a lower estimated cost.
+6. The algorithm repeats steps 2-5 until the target is reached or the priority queue is empty (in which case there is no solution).
+
+Here is a solution for the specific maze in the required format:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>

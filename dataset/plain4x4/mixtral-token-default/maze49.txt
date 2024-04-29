@@ -1,0 +1,26 @@
+ To find a solution for this maze, we'll implement a breadth-first search (BFS) algorithm to explore the maze. Here's a step-by-step approach to solve the maze:
+
+1. Parse the maze description from the text, split into adjacency list items using the newline character ('\n') as the separator.
+2. Extract the starting position (origin) and the target position from the text using the corresponding tokens `<ORIGIN_START>` and `<TARGET_START>`.
+3. Create a 'Queue' to help implement the BFS and a 'visited' array to keep track of visited coordinates.
+4. Enqueue the starting position into the 'Queue', and mark the starting position as visited ('true') in the 'visited' array.
+5. Repeat until the 'Queue' is empty or the target position is found:
+   a. Dequeue the first item from the 'Queue'.
+   b. Check if it is the target position; if so, output the solution in the format between `<PATH_START>` and `<PATH_END>` tokens, omitting the duplicate parenthesis in each step, and exit the algorithm.
+   c. Otherwise, retrieve the adjacency list for the current coordinate position.
+   d. Explore the adjacency list and enqueue all the valid neighboring positions (indicated by '->') into the 'Queue' one by one, checking if they are not visited ('false') in the 'visited' array. For each one, mark it as visited ('true') in the 'visited' array.
+
+Below is the code applying the algorithm described above:
+
+```python
+def parse_adjacency_list(maze_desc):
+    adj_list = {}
+    for item in maze_desc.split(";"):
+        # separate connected nodes with ':' and rest with ','
+        a, b = item.split(":")
+        adj_list[a] = adj_list.get(a, "") + b + " "
+    return adj_list
+
+def find_maze_path(maze):
+    # Parse the maze description and extract adjacency list, origin and target coordinates
+    adj_list = parse_adjacency_list(

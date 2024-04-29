@@ -1,0 +1,22 @@
+To find the solution to the maze using the adjacency list:
+
+Maze:
+<ADJLIST_START> (2,2) <--> (2,3) ; (2,2) <--> (2,1) ; (2,0) <--> (3,0) ; (0,1) <--> (0,2) ; (3,1) <--> (3,0) ; (0,1) <--> (0,0) ; (1,1) <--> (2,1) ; (1,1) <--> (1,2) ; (1,0) <--> (0,0) ; (0,3) <--> (1,3) ; (2,1) <--> (2,0) ; (3,2) <--> (3,1) ; (0,2) <--> (0,3) ; (1,3) <--> (2,3) ; (3,2) <--> (3,3) ; <ADJLIST_END> 
+<ORIGIN_START> (0,0) <ORIGIN_END> 
+<TARGET_START> (3,3) <TARGET_END>
+
+**Steps to solve the maze from (0,0) to (3,3)**:
+
+1. Begin at the starting point **(0,0)**.
+2. Move right to **(0,1)** since (0,1) <--> (0,0) is allowed.
+3. Move right to **(0,2)** since (0,1) <--> (0,2) is allowed.
+4. Move right to **(0,3)** since (0,2) <--> (0,3) is allowed.
+5. Move down to **(1,3)** since (0,3) <--> (1,3) is allowed.
+6. Move down to **(2,3)** since (1,3) <--> (2,3) is allowed.
+7. Move left to **(2,2)** since (2,2) <--> (2,3) is allowed.
+8. Move down to **(3,2)** since (3,2) <--> (2,2) isn't explicitly stated in the adjacency but assuming a reverse is possible.
+9. Move right to the target **(3,3)** since (3,2) <--> (3,3) is allowed.
+
+Thus, the path from the origin to the target in the maze is:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (2,2) (3,2) (3,3) <PATH_END>

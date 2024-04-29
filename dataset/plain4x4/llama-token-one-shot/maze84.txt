@@ -1,0 +1,24 @@
+Here is the solution to the maze:
+
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (2,1) (2,2) (3,2) (3,3) <PATH_END>
+
+The maze can be solved by starting at the origin (0,0) and following the arrows to the target (3,3). The path consists of the following steps:
+
+1. Move east (0,0) to (1,0)
+2. Move south (1,0) to (2,0)
+3. Move east (2,0) to (3,0)
+4. Move north (3,0) to (3,1)
+5. Move east (3,1) to (3,2)
+6. Move north (3,2) to (2,2)
+7. Move west (2,2) to (1,2)
+8. Move south (1,2) to (1,3)
+9. Move west (1,3) to (0,3)
+10. Move north (0,3) to (0,2)
+11. Move west (0,2) to (0,1)
+12. Move north (0,1) to (3,1)
+13. Move west (3,1) to (2,1)
+14. Move south (2,1) to (2,0)
+15. Move west (2,0) to (1,0)
+16. Move north (1,0) to (0,0)
+
+The total distance traveled is 16 steps.

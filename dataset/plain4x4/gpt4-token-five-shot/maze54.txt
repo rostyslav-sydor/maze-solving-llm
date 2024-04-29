@@ -1,0 +1,82 @@
+To find a solution to this maze represented by an adjacency list, we will first parse the adjacency list to create a graph and then use a pathfinding algorithm to determine the shortest path from the origin (0,0) to the target (3,3).
+
+### Graph Creation ###
+The graph can be created by treating each coordinate as a node and every connection as an undirected edge.
+
+Here is the parsed adjacency list for the graph based on the provided adjacency list input:
+```
+(1,1) <-> (2,1)
+(0,1) <-> (0,2)
+(2,3) <-> (1,3)
+(0,3) <-> (0,2)
+(1,3) <-> (1,2)
+(3,3) <-> (3,2)
+(2,3) <-> (2,2)
+(3,1) <-> (3,0)
+(3,2) <-> (2,2)
+(0,0) <-> (1,0)
+(2,0) <-> (2,1)
+(0,3) <-> (1,3)
+(1,2) <-> (1,1)
+(3,1) <-> (3,2)
+(1,0) <-> (2,0)
+```
+
+### Using a Pathfinding Algorithm ###
+A common algorithm for pathfinding in such graphs is Dijkstra's algorithm, but for small cases as the one shown above (4x4 grid), simpler algorithms like Breadth-First Search (BFS) can be just as effective. We shall implement BFS here.
+
+### BFS Implementation ###
+We will start our BFS from the source coordinate (0,0) and explore all accessible nodes until we reach the target (3,3).
+
+```python
+from collections import deque
+
+# Create the graph as adjacency list
+maze_graph = {
+    (0,0): {(1,0)},
+    (1,0): {(2,0), (0,0)},
+    (2,0): {(2,1), (1,0)},
+    (2,1): {(2,0), (2,2), (3,1), (1,1)},
+    (3,1): {(3,0), (3,2), (2,1)},
+    (3,0): {(3,1)},
+    (3,2): {(3,1), (3,3), (2,2)},
+    (3,3): {(3,2)},
+    (2,2): {(2,1), (2,3), (3,2)},
+    (2,3): {(2,2), (1,3)},
+    (1,3): {(1,2), (0,3), (2,3)},
+    (1,2): {(1,1), (1,3)},
+    (1,1): {(1,2), (2,1), (0,1)},
+    (0,1): {(0,2), (1,1)},
+    (0,2): {(0,1), (0,3)},
+    (0,3): {(1,3), (0,2)}
+}
+
+# BFS to find the shortest path
+def bfs(start, end):
+    queue = deque([ (start, [start]) ])
+    visited = set()
+    
+    while queue:
+        current, path = queue.popleft()
+        
+        if current == end:
+            return path
+        
+        if current not in visited:
+            visited.add(current)
+            
+            for neighbor in maze_graph[current]:
+                if neighbor not in visited:
+                    queue.append((neighbor, path + [neighbor]))
+
+# Set the origin and target
+origin = (0,0)
+target = (3,3)
+
+# Find the path
+path = bfs(origin, target)
+
+# Print the path in the specified format
+print("<PATH_START>", ' '.join(str(p) for p in path), "<PATH_END>")
+```
+This solution will compute and print the shortest path from the origin to the target in the given maze.

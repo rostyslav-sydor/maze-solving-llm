@@ -1,0 +1,7 @@
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (0,4) (1,4) (2,4) (3,4) (4,4) <PATH_END>
+
+Starting from (0,0) we can find a path to (4,4) by following the following sequence of adjacent cells:
+
+(0,0) -> (0,1) -> (0,2) -> (0,3) -> (0,4) -> (1,4) -> (2,4) -> (3,4) -> (4,4)
+
+This path does not cross any walls and uses only adjacent cells, so it is a valid solution.

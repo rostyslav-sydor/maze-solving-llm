@@ -1,0 +1,8 @@
+1. The maze is represented as an adjacency list, where each entry represents a node in the maze and the list of nodes that are connected to it.
+2. The starting and ending points are marked with <ORIGIN_START/END> and <TARGET_START/END> tokens respectively.
+3. To find a solution for the maze, we can use a depth-first search (DFS) algorithm.
+4. Starting from the origin, we can recursively explore all the nodes that are connected to it, until we reach the target.
+5. The solution for the maze is the sequence of nodes that we visited during the DFS.
+6. In this case, the solution is:
+
+<PATH_START> (0,0) (1,0) (1,1) (2,1) (2,2) (2,3) (3,3) <PATH_END>

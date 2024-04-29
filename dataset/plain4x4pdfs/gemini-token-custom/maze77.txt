@@ -1,0 +1,11 @@
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>
+
+Reasoning:
+1. Find the origin and target coordinates from the given maze.
+2. Start from the origin coordinate and explore all adjacent cells in a depth-first manner.
+3. Mark the cells that have been visited and add them to the path.
+4. Continue exploring until the target coordinate is reached.
+5. Check that the path does not cross any walls.
+6. Check that the path uses only adjacent cells.
+
+This solution satisfies all the conditions and provides a valid path from the origin to the target.

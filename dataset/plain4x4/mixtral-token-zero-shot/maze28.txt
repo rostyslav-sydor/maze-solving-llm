@@ -1,0 +1,16 @@
+To find a solution for the given maze, we need to use a pathfinding algorithm like Dijkstra's or A* (A star), which are both breadth-first search algorithms. However, since you haven't specified which one you prefer, I'll use Dijkstra's algorithm for this solution.
+
+1. Set up a graph based on the adjacency list with <ORIGIN> node as our source and <TARGET> node as our destination.
+2. Initialize all other nodes to have a distance of infinity.
+3. Set <ORIGIN> node's distance to 0 and add it to a priority queue, which is ordered by smallest distance first.
+4. For each iteration, we'll extract the smallest distance node from the priority queue (let's call this node X).
+5. For all nodes that are connected to X, we'll compare their distance and update it if it is less than the distance of node X plus the weight of edge (X to new node), also add it to the priority queue.
+6. Repeat steps 4 and 5 until we reach our <TARGET> node or we've checked all nodes.
+7. If we found <TARGET> node, we can trace our path by going backwards from node to ancestor.
+8. Return the path between the <ORIGIN> and <TARGET> by outputting the coordinates between <PATH_START> and <PATH_END>.
+
+Now let's apply the Dijkstra's algorithm to find the path in the maze:
+
+1. Initialise graph:
+Adjacency list:
+(3,1) <--> (3,0) ; (0,2) <--> (0,3) ; (3,3) <--> (3,2) ; (1,2) <--> (2,2) ; (2,1) <--> (3,1) ; (0,0) <--> (0,1) ; (1,2) <--> (0,2) ; (0,0) <--> (1,0) ; (1,0) <--> (1,1) ; (2,3) <--> (3,3) ; (2,1) <--> (2,0) ; (0,3) <--> (1,3) ; (3,

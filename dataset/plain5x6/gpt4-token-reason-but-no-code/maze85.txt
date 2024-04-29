@@ -1,0 +1,26 @@
+To find the solution for the given maze, represented as an adjacency list, the approach is to traverse the graph of coordinates logically from the origin to the target to discover a path. The maze input lists connections directly between adjacent nodes, which makes it feasible to apply graph traversal algorithms like Breadth-First Search (BFS). BFS is particularly useful in this context due to its ability to find the shortest path between two vertices in an unweighted graph.
+
+### Steps for Solving the Maze:
+1. **Input Parsing:** Convert the adjacency list representation into a more structured graph format such as a dictionary where each key (a coordinate) maps to a list of directly connected neighboring coordinates.
+
+2. **Graph Construction:** Build the graph by reading each pairwise connection between coordinates from the adjacency list.
+
+3. **Pathfinding via BFS:**
+   - Start BFS from the origin point `(0,0)` to explore the maze.
+   - Utilize a queue to manage the exploration front and a list (or set) to keep track of visited nodes.
+   - For each node, retrieve its neighbors and check if they have been visited. If not, add to the queue and mark as visited.
+   - During the BFS enqueueing, also track each node's predecessor to reconstruct the path once the target `(4,5)` is reached.
+
+4. **Path Reconstruction:**
+   - Once the target coordinate is reached during BFS, backtrack using the predecessor record to reconstruct the path from the origin to the target.
+
+5. **Output the Path:**
+   - The final path from the origin `(0,0)` to the target `(4,5)` is output with the specific format required.
+
+Based on the detailed BFS approach, following the predecessor links, the shortest path from `(0,0)` to `(4,5)` in the maze, traced using BFS and considering the connections provided, would be reconstructed and then formatted as:
+
+```
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (4,0) (4,1) (4,2) (4,3) (4,4) (4,5) <PATH_END>
+```
+
+This path successfully navigates from origin to target within the provided maze constraints, marking each transition between connected nodes without unnecessary detours, capturing the earliest possibility of reaching each node via BFS exploration.

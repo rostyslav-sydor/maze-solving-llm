@@ -1,0 +1,50 @@
+To solve this problem, we first construct a clear adjacency list of the maze using the given connections:
+
+1. Parse through the ADJLIST and map each tuple to its connected tuple, treating each tuple as a vertex and connections as edges in the graph:
+   ```
+   (1,3) --> (2,3), (1,2), (0,3)
+   (2,3) --> (1,3), (3,3)
+   (3,2) --> (3,1), (2,2)
+   (2,2) --> (1,2), (3,2)
+   (1,2) --> (2,2), (1,3)
+   (0,0) --> (0,1), (1,0)
+   (0,1) --> (0,0), (1,1)
+   (0,3) --> (0,2), (1,3)
+   (0,2) --> (0,3)
+   (1,1) --> (0,1) , (2,1)
+   (3,3) --> (2,3)
+   (2,0) --> (3,0)
+   (3,0) --> (3,1), (2,0)
+   (1,0) --> (0,0)
+   (3,1) --> (3,2), (2,1), (3,0)
+   (2,1) --> (3,1), (1,1)
+   ```
+
+2. Using the start coordinate (0,0), aim to traverse the maze graph towards the end coordinate (3,3). Employ a BFS (Breadth First Search) technique, which is apt for shortest path in unweighted graphs. Here is the process:
+   - Start from the origin (0,0).
+   - Explore all adjacent nodes.
+   - Keep traversing until the target (3,3) is reached.
+
+3. Based on the BFS traversal:
+   - Start at (0,0), possibilities -> (0,1) or (1,0).
+   - Continue from (0,1) -> (1,1).
+   - Then from (1,1) -> (2,1).
+   - From (2,1) -> (3,1).
+   - From (3,1) -> (3,2).
+   - Then from (3,2) -> (2,2).
+   - From (2,2) -> (1,2).
+   - From (1,2) -> (1,3).
+   - From (1,3) -> (2,3).
+   - Finally from (2,3) -> (3,3).
+
+4. The path found:
+   ```
+   <PATH_START> (0,0) (0,1) (1,1) (2,1) (3,1) (3,2) (2,2) (1,2) (1,3) (2,3) (3,3) <PATH_END>
+   ```
+
+5. Validation:
+   - Check each step to confirm traversal between connected nodes.
+   - Confirm that no step transitions to an unconnected node or involves crossing any walls.
+   - Ensure all steps involve only adjacent cells.
+
+This BFS-based solution efficiently finds a path from the origin to the target within the described maze rules.

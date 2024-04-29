@@ -1,0 +1,19 @@
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (2,2) (3,2) (3,3) <PATH_END>
+
+**Reasoning Behind Path Selection:**
+
+1. **Start at Origin:** The provided entry point to the maze is (0,0).
+2. **Move to (0,1):** Direct connection is present.
+3. **Move to (0,2):** There is a direct adjacency from (0,1) to (0,2).
+4. **Move to (1,2):** Connection between (0,2) and (1,2) exists.
+5. **Move to (2,2):** There is a link from (1,2) to (2,2).
+6. **Move to (3,2):** Sequence continues appropriately from (2,2) to (3,2).
+7. **Move to (3,3):** Final link connecting to the target (3,3).
+
+**Validation:**
+
+- **Continuity & Connectivity:** The path follows a sequence of directly connected cells as per the adjacency list without any breaks.
+- **Walls and Restrictions:** No paths utilized in this route involve traversing through walls/non-adjacent points as all steps conform to the adjacency list.
+- **Finish at Target:** The path concludes precisely at the designated exit point (3,3) for the maze. 
+
+The path satisfies all conditions of the maze, utilizing valid connections without breaching any barriers or disconnected points.

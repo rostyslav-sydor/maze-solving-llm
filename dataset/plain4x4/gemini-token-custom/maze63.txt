@@ -1,0 +1,5 @@
+<PATH_START> (0,0) (0,1) (1,1) (1,2) (1,3) (0,3) (3,3) <PATH_END>
+
+The path starts at (0,0) and moves to the right to (0,1). Then, it moves down to (1,1) and to the right to (1,2). From there, it moves down to (1,3) and to the right to (0,3). Finally, it moves up to (3,3).
+
+This path does not cross any walls because it only moves between adjacent cells. It also does not use any loops.

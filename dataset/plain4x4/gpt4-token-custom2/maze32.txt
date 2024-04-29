@@ -1,0 +1,15 @@
+Starting with the origin at (0,0), we shall use Breadth-First Search (BFS) to explore and map the shortest path to the target (3,3). Here is how the BFS would find the path using the adjacency list provided:
+
+1) Start at (0,0).
+2) Move (0,0) to (1,0).
+3) Move (1,0) to (2,0).
+4) Move (2,0) to (3,0).
+5) Move (3,0) to (3,1).
+6) Move (3,1) to (3,2).
+7) Move (3,2) to (3,3), reaching the target.
+
+Using their interconnectedness from the adjacency list, the resulting steps follow a valid path and avoid backtracking unnecessarily. The entries in the adjacency list support each movement from one coordinate to its adjacent coordinate, ensuring connectivity throughout the path.
+
+Following this sequence, the solved path from the origin to the destination for the given maze, constructed using BFS to guarantee an optimal route when unweighted, can be presented between the specified tokens:
+
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (3,2) (3,3) <PATH_END>

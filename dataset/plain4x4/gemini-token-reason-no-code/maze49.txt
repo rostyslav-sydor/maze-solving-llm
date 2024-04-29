@@ -1,0 +1,14 @@
+To solve this maze, we need to apply a DFS (Depth First Search) starting at origin coordinate and end at the destination coordinate.
+
+The reasoning behind DFS is that it is a recursive approach, so it will keep track of the path it took to get to the current coordinate. This is important because if the current coordinate is not the destination, the algorithm can backtrack to a previous coordinate and try a different path.
+
+The DFS algorithm works as follows:
+
+1. Start at the origin coordinate and add it to a stack.
+2. While the stack is not empty, pop a coordinate from the stack.
+3. If the current coordinate is the destination coordinate, return the stack as the solution.
+4. Otherwise, for each of the current coordinate's adjacent coordinates, push it onto the stack if it hasn't already been explored.
+5. Repeat steps 2-4 until the stack is empty or a solution is found.
+
+In this case, starting from (0,0), with DFS we would get the following solution:
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (3,2) (3,3) <PATH_END>

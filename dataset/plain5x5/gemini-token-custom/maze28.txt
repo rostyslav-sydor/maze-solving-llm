@@ -1,0 +1,8 @@
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (4,0) (4,1) (4,2) (4,3) (4,4) <PATH_END>
+
+**Reasoning:**
+
+- Start at the origin (0,0) which is marked with <ORIGIN_START> token.
+- From (0,0) only move to (1,0) as this is the only adjacent cell.
+- Follow the path (1,0) -> (2,0) -> (3,0) -> (4,0) -> (4,1) -> (4,2) -> (4,3) -> (4,4) which will lead us to the target marked with <TARGET_END> token.
+- Check if the path does not cross any walls: Each path only includes adjacent cells and the adjacency list does not include any walls so path does not cross any walls.

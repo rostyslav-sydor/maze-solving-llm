@@ -1,0 +1,22 @@
+To solve the maze described via the adjacency list of coordinates, we first map out the paths connecting various coordinates, determine the entry (origin) and exit (target) points, and then find a path from the entry to the exit point.
+
+From your maze definition:
+- The entry point is (0,0).
+- The exit point is (4,4).
+
+The connections (edges between nodes) can be visualized as relationships where each tuple signifies a direct pathway from one point to another. By tracing a path from (0,0) that follows through these connections to arrive at (4,4), we get:
+
+1. Start at the origin **(0,0)**.
+2. Move to **(0,1)** since it’s directly connected to (0,0).
+3. Continuing to **(1,1)** which connects to (0,1).
+4. Then to **(1,2)**, connected directly to (1,1).
+5. From there, proceed to **(1,3)** connected to (1,2).
+6. Next move to **(2,3)**, it directly connects with (1,3).
+7. From there, you can go to **(3,3)**.
+8. Move on to **(3,4)** connecting from (3,3).
+9. And finally, reach the exit **(4,4)** which connects to (3,4).
+
+This route simply follows connections that enable movement from the entry to the exit without requiring backtracking or hitting any dead ends based on described connections. The above sequence of steps ensures we go through a path that reaches the target from the source using the relationships provided.
+
+Thus, the solution path is written as:
+<PATH_START> (0,0) (0,1) (1,1) (1,2) (1,3) (2,3) (3,3) (3,4) (4,4) <PATH_END>

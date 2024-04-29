@@ -1,0 +1,9 @@
+Let's use depth-first search to find the shortest path from the origin to the target:
+
+1. Define the origin and target: (0,0) and (3,3) respectively.
+2. Build a graph using the adjacency list: (3,1), (3,2), (1,1), (0,1), (2,1), (1,0), (3,2), (1,2), (2,0), (0,0), (3,0), (2,3), (1,2), (0,2), (0,3), (2,2), (3,0), (3,3), (2,3).
+3. Convert the graph to a dictionary: {(3, 1): [(3, 2)], (1, 1): [(0, 1), (2, 1), (1, 0)], (0, 1): [(3, 1)], (2, 1): [(1, 1)], (1, 0): [(1, 1)], (3, 2): [(3, 1), (3, 3)], (1, 2): [(2, 2), (0, 2)], (2, 0): [(1, 0)], (0, 0): [(0, 1), (3, 0)], (3, 0): [(2, 0), (3, 1)], (2, 3): [(1, 3), (2, 2)], (1, 3): [(2, 3)], (0, 2): [(1, 2)], (0, 3): [(1, 3)], (2, 2): [(1, 2), (3, 2)], (3, 3): [(2, 3)]}
+4. Perform a depth-first search on the graph with the origin as the starting point:
+	1. Define the stack to keep track of the path: [(0, 0)]
+	2. Define the visited nodes: {(0, 0)}
+	3. Define the predecessor node list: {(0, 0): None

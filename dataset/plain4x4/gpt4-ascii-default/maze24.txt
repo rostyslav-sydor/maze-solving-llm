@@ -1,0 +1,19 @@
+To solve this maze, the following steps using a simple depth-first search were taken:
+
+1. Start from the entry point (1,1).
+2. Navigate to reachable openings (' ') until reaching the exit (7,7) while avoiding walls ('#').
+3. If at any point the path meets a dead end, backtrack to the previous juncture and try another direction.
+
+Here's the route traversed to solve the maze:
+- Starting southward from the starting point (S) at (1,1).
+- Separately move vertically down to (7,1).
+- Move horizontally right to the exit (E) at (7,7).
+
+The detailed path is:
+
+<PATH_START> 
+(1,1) (2,1) (3,1) (4,1) (5,1) (6,1) (7,1) 
+(7,2) (7,3) (7,4) (7,5) (7,6) (7,7) 
+<PATH_END>
+
+This route has been chosen based on free spaces (' ') from S to E, ensuring that no walls ('#') obstruct the path, and the movement is either vertical or horizontal, changing direction only when necessary and where possible.

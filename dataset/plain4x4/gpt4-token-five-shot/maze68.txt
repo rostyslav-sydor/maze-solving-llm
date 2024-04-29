@@ -1,0 +1,50 @@
+To solve the maze given by the last adjacency list, we first need to reconstruct the graph to see the possible paths from the origin to the target. Then, we can use a graph traversal technique like Breadth-First Search (BFS) to find the shortest path through the graph connections. Here's how the maze's adjacency is structured:
+
+**Adjacency List:**
+- (3,2) <--> (2,2)
+- (3,0) <--> (3,1)
+- (0,0) <--> (0,1)
+- (0,1) <--> (0,2)
+- (0,3) <--> (1,3)
+- (3,1) <--> (2,1)
+- (1,1) <--> (1,2)
+- (1,3) <--> (2,3)
+- (1,0) <--> (0,0)
+- (0,3) <--> (0,2)
+- (3,0) <--> (2,0)
+- (2,3) <--> (3,3)
+- (2,2) <--> (1,2)
+- (3,2) <--> (3,3)
+- (2,0) <--> (1,0)
+
+**Origin:** (0,0)
+**Target:** (3,3)
+
+Let's follow the BFS steps:
+
+1. **Start at (0,0)**.
+2. Check all connected nodes: 
+   - (0,1) (from (0,0) adjacency)
+3. From **(0,1)**, check connected nodes:
+   - (0,0) - already visited
+   - (0,2)
+4. From **(0,2)**, check connected nodes:
+   - (0,3)
+   - (0,1) - already visited
+5. From **(0,3)**, check connected nodes:
+   - (1,3)
+   - (0,2) - already visited
+6. From **(1,3)**, check connected nodes:
+   - (0,3) - already visited
+   - (2,3)
+7. From **(2,3)**, check connected nodes:
+   - (1,3) - already visited
+   - (3,3) - target reached!
+
+Tracing back the discovered path:
+- Start at (0,0), go to (0,1), to (0,2), to (0,3), to (1,3), to (2,3), and finally reach the target at (3,3).
+
+So, the solution to the maze, starting from (0,0) and ending at (3,3), is:
+```
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>
+```

@@ -1,0 +1,8 @@
+Using a graph search algorithm such as Dijkstra's or A\* with a heuristic function approximating the distance to the target, we can find the shortest path from the origin (0,0) to the target (3,3). The path would be represented as a list of vertices, which are pairs of coordinates in row, column order.
+
+For example, the resulting path from origin to target could be:
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (3,2) (3,3) <PATH_END>
+
+This is a simple example, taking the first valid path from origin to target, visiting the edges in row-first order (i.e. moving downwards before moving to the right). Depending on the graph search algorithm and heuristic function chosen, a different, possibly more optimal path could be found, with a potentially shorter length or a better approximation of the shortest available path. 
+
+However, considering the specific requirements of the problem, the above general approach should be sufficient to address the problem as described. Here, the path from origin to target is simply tracing out a path of adjacent vertices from the origin to the target, moving down one row at a time while turning to the right when possible. Ultimately, the choice of algorithm or heuristic function may be irrelevant as long as it finds a valid path.

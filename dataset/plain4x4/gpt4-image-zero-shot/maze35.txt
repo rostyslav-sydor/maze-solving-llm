@@ -1,0 +1,11 @@
+Starting at the entrance (0,0), we observe that moving directly to the right is blocked by a wall. The only possible move is to go down into the cell (1,0). 
+
+From (1,0), moving further down or to the left is impossible due to walls, so the path forwards would be to the right to the cell (1,1) and then (1,2), because moving down from here would again lead to a blocked path.
+
+Next from (1,2), we would go right to (1,3). Moving downwards would now be possible as we navigate to cell (2,3). 
+
+From (2,3), we continue down to (3,3), the exit point of the maze. Moving left or upwards would lead back into paths that do not lead to the exit. 
+
+Therefore, the path to follow would be:
+
+<PATH_START> (0,0) (1,0) (1,1) (1,2) (1,3) (2,3) (3,3) <PATH_END>

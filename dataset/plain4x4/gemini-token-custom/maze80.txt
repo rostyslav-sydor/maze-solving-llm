@@ -1,0 +1,33 @@
+From the entrance <ORIGIN_START> (0,0) there are two possible moves:
+- first move to (1,0)
+- first move to (0,1)
+
+Let's try the first move: (0,0) -> (1,0) -> (1,1) -> (1,2) -> (1,3) -> (2,3) -> (3,3)
+
+This path leads to the exit <TARGET_START> (3,3), so it is a solution.
+
+To check if the solution does not cross any walls, we can check if each pair of adjacent coordinates in the path are connected by an edge in the adjacency list.
+
+(0,0) -> (1,0)
+(1,0) -> (1,1)
+(1,1) -> (1,2)
+(1,2) -> (1,3)
+(1,3) -> (2,3)
+(2,3) -> (3,3)
+
+All these pairs of coordinates are connected by an edge in the adjacency list, so the path does not cross any walls.
+
+To check if the path uses only adjacent cells, we can check if the difference between the row coordinates of each pair of adjacent coordinates is at most 1 and the difference between the column coordinates of each pair of adjacent coordinates is at most 1.
+
+(0,0) -> (1,0): row difference is 1, column difference is 0
+(1,0) -> (1,1): row difference is 0, column difference is 1
+(1,1) -> (1,2): row difference is 0, column difference is 1
+(1,2) -> (1,3): row difference is 0, column difference is 1
+(1,3) -> (2,3): row difference is 1, column difference is 0
+(2,3) -> (3,3): row difference is 1, column difference is 0
+
+All these pairs of coordinates have a row difference of at most 1 and a column difference of at most 1, so the path uses only adjacent cells.
+
+Therefore, the solution path is valid.
+
+<PATH_START> (0,0) (1,0) (1,1) (1,2) (1,3) (2,3) (3,3) <PATH_END>

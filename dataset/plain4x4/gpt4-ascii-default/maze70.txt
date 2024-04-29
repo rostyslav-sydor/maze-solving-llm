@@ -1,0 +1,12 @@
+To solve the maze, a popular approach is using the Breadth-First Search (BFS) algorithm starting from the entrance (S) at coordinate (1,1). BFS explores all neighbors at the present depth prior to moving on to nodes at the next depth level. Below are the steps and determined path:
+
+1. Start at the entrance (1,1).
+2. Explore possible directions (right, left, up, down) while avoiding walls (`#`) and staying within the maze bounds.
+3. From (1,1), move right to (1,2) then continue moving right up to (1,7).
+4. From (1,7), move down to (2,7) then (3,7).
+5. From (3,7), space to the left (3,6) is a wall, continue down to (4,7), then (5,7), (6,7), and (7,7) which is the exit (E).
+
+Final path:
+<PATH_START> (1,1) (1,2) (1,3) (1,4) (1,5) (1,6) (1,7) (2,7) (3,7) (4,7) (5,7) (6,7) (7,7) <PATH_END>
+
+This method ensures all potential corridors are checked without backtracking, offering an optimal solution by visiting all accessible spots in the least number of moves.

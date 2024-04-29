@@ -1,0 +1,23 @@
+Let's start at the entry point (1,1). 
+
+1. Looking at the given grid, we can see there's no wall to the right, so we can move to coordinate (1, 2).
+2. Now, we need to decide where to go. To the right, there's a wall. To the left, there's also a wall. So, let's consider going down.
+3. There's no wall below (1, 2), so we can move down to coordinate (2, 2). Now, we have to make a decision.
+4. At coordinate (2, 2), there's a wall to the right and below. So, let's consider going up.
+5. At coordinate (1, 2), there's a wall to the right. So, let's consider going left.
+6. Coordinate (1, 1) has our starting point, but here, we just made a loop, and went back to the beginning. 
+Let's undo this and return to coordinate (2, 2).
+7. At coordinate (2, 2), we only have the option to go left.
+8. Coordinate (1, 2) is not a good option as we have already been there, and we made a loop. So, let's continue to the left towards coordinate (3, 2).
+9. At coordinate (3, 2), we can only go down.
+10. At coordinate (4, 2), let's go down.
+11. At coordinate (5, 2), let's go down.
+12. At coordinate (6, 2), let's go down.
+13. At coordinate (7, 2), let's go right.
+14. At coordinate (7, 3), let's go right.
+15. At coordinate (7, 4), let's go down.
+16. At coordinate (8, 4), let's go right.
+17. At coordinate (8, 5), let's go up.
+18. At coordinate (7, 5), let's go right.
+19. At coordinate (7, 6), let's go right.
+20. At coordinate (7, 7

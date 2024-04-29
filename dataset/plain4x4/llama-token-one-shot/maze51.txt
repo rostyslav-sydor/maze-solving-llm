@@ -1,0 +1,7 @@
+Here is the solution to the maze:
+
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (2,1) (2,2) (3,2) (3,3) <PATH_END>
+
+The maze is solved by starting at the origin (0,0) and following the adjacency list to reach the target (3,3). The path consists of seven steps, moving east, south, east, south, east, south, and finally west to reach the target.
+
+Please let me know if you have any questions or if there is anything else I can help with.

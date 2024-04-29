@@ -1,0 +1,9 @@
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (3,2) (3,3) <PATH_END>
+
+Explanation:
+
+Starting at the origin (0,0), we move right to (1,0), then right again to (2,0), then right again to (3,0). From there, we move up to (3,1), then up again to (3,2), and finally up one more time to the target (3,3).
+
+This path does not cross any walls because we only move between adjacent cells. It also uses only adjacent cells because we only move one step in each direction.
+
+To check if the solution is correct, we can go through the adjacency list and check that each step we take is a valid move. For example, we can check that the move from (0,0) to (1,0) is valid by looking at the adjacency list and seeing that (0,0) is connected to (0,1), which is connected to (1,1), which is connected to (1,0). We can do this for each step in the path to verify that it is valid.

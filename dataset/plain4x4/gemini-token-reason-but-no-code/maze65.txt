@@ -1,0 +1,8 @@
+Breadth-first search is a suitable algorithm to find the shortest path in a maze represented as an adjacency list.
+The idea is to maintain a queue of possible paths, where each path is represented as a list of coordinates.
+We start by adding the origin coordinate to the queue, and then repeatedly remove the first path from the queue and add all of its neighbors to the queue.
+If we reach the target coordinate, we can stop and return the current path.
+Otherwise, we continue searching until we find a path to the target or until the queue is empty.
+
+In the given maze, we start at (0,0) and aim to reach (3,3).
+The path is found to be: <PATH_START> (0,0) (1,0) (2,0) (2,1) (2,2) (2,3) (3,3) <PATH_END>

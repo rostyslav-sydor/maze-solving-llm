@@ -1,0 +1,24 @@
+To find a solution for the maze, I'll use a classic graph search algorithm called breadth-first search (BFS). This algorithm is suitable here because it explores the graph layer by layer from the origin and finds the shortest path in an unweighted graph. 
+
+We start at the origin coordinate (0,0) as stated in the prompt. We'll continue to visit neighboring cells, marking each as visited and tracking the paths until we reach the target (3,4). Since the maze is represented as an adjacency list, it's straightforward to see which cells can be directly visited from any given cell.
+
+Here's a step-by-step reasoning and the outcome of that process applied to this specific maze, starting from the entry point (0,0) and aiming to reach the exit point (3,4):
+
+1. Beginning at (0,0), we can move to (1,0) based on the adjacency list.
+2. From (1,0), we proceed to (1,1).
+3. From (1,1), there are adjacent points (0,1) and (1,0) which was already visited, so we go to (0,1).
+4. From (0,1), we can next go to (0,2).
+5. From (0,2), options are (0,1) (visited), (1,2), and (0,3) and we proceed to (1,2).
+6. From (1,2), we can go to (2,2) or (1,3). We choose (2,2).
+7. From (2,2), we next proceed to (2,1).
+8. From (2,1), there's incidentally an adjacency to (2,0) and then we follow the path to (3,0).
+9. From (3,0), adjacent (3,1) is unvisited and closer to our target, so we move there.
+10. Now from (3,1), we proceed to (3,2).
+11. From (3,2), we move to (3,3).
+12. And finally, from (3,3), we can reach our target at (3,4).
+
+So, the path traced from the origin to the target using BFS would look like:
+
+<PATH_START> (0,0) (1,0) (1,1) (0,1) (0,2) (1,2) (2,2) (2,1) (2,0) (3,0) (3,1) (3,2) (3,3) (3,4) <PATH_END> 
+
+This path is the shortest possible route given the adjacency list to go from the specified entry to the exit point considering the connections available in the maze.

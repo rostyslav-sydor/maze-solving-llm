@@ -1,0 +1,16 @@
+To solve a maze using a breadth-first search (BFS) algorithm, we can follow these steps:
+
+1. Define the maze as a 2D array.
+2. Define a struct to represent a node in the maze with its coordinates and parent node.
+3. Define a queue to store nodes, and a set to check if a node has been visited already.
+4. Set the start node as `(1,1)`.
+5. Perform a BFS traversal until we reach the end node `(7,7)`.
+   1. Enqueue the current node.
+   2. Loop over its neighbors (up, down, left, right).
+   3. If a neighbor is valid (not out of bounds, nor a wall) and not visited, enqueue it and set its parent to the current node.
+   4. Mark the current node as visited.
+   5. Dequeue and proceed to the next node.
+6. When the algorithm finds the end node `(7,7)`, reconstruct the path by following the parent links up to the start node and add coordinates to the path list.
+7. Print the path list between `<PATH_START>` and `<PATH_END>`.
+
+This is a step-by-step thought process for solving a maze using BFS algorithm. We can now solve the maze according to this thought process.

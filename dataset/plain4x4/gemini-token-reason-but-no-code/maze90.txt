@@ -1,0 +1,9 @@
+**Reasoning:**
+
+1. Starting from the origin, we can check the adjacency list to find which tokens are connected to it.
+2. From the connected tokens, we can further check their adjacency lists to find which tokens are connected to them, and so on.
+3. By recursively exploring the adjacency lists, we can build a path from the origin to the target.
+
+**Solution for the given maze:**
+
+<PATH_START> (0,0) (1,0) (1,1) (1,2) (1,3) (2,3) (3,3) <PATH_END>

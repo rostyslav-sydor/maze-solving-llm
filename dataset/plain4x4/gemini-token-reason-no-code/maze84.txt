@@ -1,0 +1,10 @@
+**Reasoning:**
+
+1. Start from the origin point (0,0) and traverse the maze using the adjacency list.
+2. Keep track of the path taken as a list of coordinates.
+3. Explore adjacent nodes in a depth-first or breadth-first order until the target point is reached.
+4. If a dead end is reached, backtrack to the last intersection and explore a different path.
+
+**Solution Path:**
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>

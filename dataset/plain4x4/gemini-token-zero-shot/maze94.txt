@@ -1,0 +1,6 @@
+1. Start from origin (0, 0) and move towards target (3, 3).
+2. Follow path until dead-end is reached.
+3. Backtrack to last intersection and try alternative path.
+4. Repeat until target is reached.
+
+Solution: <PATH_START> (0, 0) (0, 1) (1, 1) (1, 2) (1, 3) (2, 3) (3, 3) <PATH_END>

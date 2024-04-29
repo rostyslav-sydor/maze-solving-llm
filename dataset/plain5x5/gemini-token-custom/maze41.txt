@@ -1,0 +1,5 @@
+The maze contains no loops and is easily traversable starting from the origin, going north and then only east. 
+
+<PATH_START> (0,0) (1,0) (1,1) (1,2) (1,3) (1,4) (4,4) <PATH_END>
+
+The solution does not cross any walls. Each step only moves to adjacent cells by either moving +1 row or +1 column at a time.

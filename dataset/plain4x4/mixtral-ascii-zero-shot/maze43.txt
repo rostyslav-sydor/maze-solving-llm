@@ -1,0 +1,25 @@
+First, we need to process the maze ASCII representation to store it as a 2D matrix. We'll use a list where each row is a list containing '#' characters for walls or open spaces. 0, 0 in this matrix will be the starting point, while 6, 6 will be the exit.
+
+Next, let's use a recursive algorithm called depth-first search (DFS) to find a path from the starting point to the exit. This will trace a path and automatically backtrack to find a new path if it runs into dead ends. During the process, we will mark the spaces as we trace through them and unmark them if we backtrack.
+
+Here's a step-by-step explanation of the solution:
+
+1. Convert the ASCII representation of the maze to a 2D matrix and initialize the starting point as the origin (0, 0).
+2. Use the DFS algorithm to trace a path from the starting point to the exit, marking and unmarking the spaces as we go.
+3. Print the output path in the required format using <PATH_START> and <PATH_END> tokens, starting from the origin and marking each visited space (row, column) .
+Here's the Python implementation:
+```python
+board = [list(row) for row in text.split('\n')]
+
+def solve_maze(x, y, marked, path, output_path):
+    if x < 0 or y < 0 or x >= len(board) or y >= len(board[0]) or marked[x][y] or board[x][y] == '#':
+        return False
+    marked[x][y] = True
+    path.append((x, y))
+    if x == len(board) - 1 and y == len(board[0]) - 1:
+        return True
+    if solve_maze(x-1, y, marked, path, output_path) or \
+       solve_maze(x+1, y, marked, path, output_path) or \
+       solve_maze(x, y-1, marked, path, output_path) or \
+       solve_maze(x, y+1, marked, path, output_path):
+        output

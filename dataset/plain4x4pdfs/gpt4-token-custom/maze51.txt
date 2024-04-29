@@ -1,0 +1,34 @@
+To solve the maze represented by the adjacency list, we follow these approaches:
+
+1. Parse the adjacency list to understand the layout of the maze and the connectivity between cells.
+2. Use a pathfinding algorithm, such as Breadth-First Search (BFS), to find the shortest path from the origin (entry point) to the target (exit point).
+
+We have:
+- Entry point: (0,0)
+- Exit point: (3,3)
+
+Adjacency relationships are decoded from the input string. Each specified relationship tells us which cells are directly connected. For instance, (1,3) <--> (2,3) indicates that the cell at coordinates (1,3) is connected directly to the cell at (2,3), without any walls between them.
+
+Convert this information into a representation suitable for algorithmic processing. This typically involves creating a graph in which nodes represent cells and edges represent direct connections (permissible movements between cells).
+
+### Steps for BFS:
+1. Start from the origin node and explore all its neighbors.
+2. Add each neighbor to a queue for further exploration.
+3. Mark each visited node to prevent revisiting, storing the path taken by associating each node with its predecessor.
+4. Continue exploration level by level (hence the name Breadth-First), node by node until the target is found.
+5. Once the target is reached, trace back from the target node to the origin using the predecessors to reproduce the path.
+
+### Path Reconstruction:
+After reaching the target (3,3), using the predecessors stored, backtrack to construct the path:
+- From (3,3) to (0,0), navigating through connected cells.
+
+### Validation:
+Ensure the reconstructed path consists solely of consecutive nodes listed in the adjacency relations, verifying that no walls are crossed and that each step is to an adjacent cell.
+
+### Final Path:
+Now, from the raw data and subsequent BFS pathfinding followed by validation, we should have a valid path from (0,0) to (3,3). Each step in the path is a move to an adjacent and connected cell, per the parsed adjacency list.
+
+The path output looks like this:
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (1,3) (2,3) (3,3) <PATH_END>
+
+This output indicates a valid and minimal path moving through adjacent connected nodes as per the adjacency list, from origin to target within the maze.

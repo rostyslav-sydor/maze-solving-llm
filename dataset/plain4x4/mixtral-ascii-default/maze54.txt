@@ -1,0 +1,14 @@
+<PATH_START> (1,1) // Start position
+(1,2) // Move one space down
+(2,2) // Move one space right
+(2,3) // Move one space down
+(3,3) // Move one space right
+(3,4) // Move one space down
+(4,4) // Move one space right
+(5,4) // Move one space right
+(6,4) // Move one space down
+(6,5) // Move one space right
+(7,5) // Move one space right
+(7,6) // Move one space down
+(7,7) // Move one space right - End position
+<PATH_END>

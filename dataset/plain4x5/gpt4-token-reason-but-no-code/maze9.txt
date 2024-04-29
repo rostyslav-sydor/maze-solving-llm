@@ -1,0 +1,30 @@
+To solve the maze provided in the adjacency list, we first extract meaningful information about paths between cells and entry/exit points.
+
+From the adjacency list:
+- Cells such as (0,0), (0,1), etc., represent points in the maze.
+- Links like (0,2) <--> (1,2) show that cell (0,2) is directly connected to cell (1,2).
+
+Given:
+- Entry point (origin) at (0,0).
+- Exit point (target) at (3,4).
+
+Approach:
+1. Start at the origin (0,0).
+2. Explore all possible paths using a basic Breadth-First-Search (BFS) algorithm, which is generally effective for unweighted pathfinding on a graph like this.
+3. Track paths from the origin to neighboring cells, following links provided in the adjacency list.
+4. Continuously expand to the neighboring cells until the target cell (exit) is reached.
+5. Record the successful path from entry to exit.
+
+Step-by-Step Navigation (as derived from the adjacency list and BFS strategy):
+- From (0,0) we can go to (1,0) and to (0,1).
+- Continue exploring each path:
+    - From (1,0) extend to (2,0) following the chain of connections.
+    - From (2,0), move to (2,1) and then to (3,1). 
+    - From (3,1) advance to (3,0) or (3,2). Choose (3,2) since it’s more in the direction of the exit. 
+    - Continue from (3,2) to (3,3) then to (3,4).
+
+- Backtracking and connecting these steps reveals our successful path. Plotting the path with all the connections from the adjacency list, you get:
+
+<PATH_START> (0,0) (1,0) (2,0) (2,1) (3,1) (3,2) (3,3) (3,4) <PATH_END>
+
+This specific path is verified as there’s a direct connection between every consecutive pair of coordinates mentioned in the adjacency list, ensuring no breaks or invalid steps in the journey from the origin to the target.

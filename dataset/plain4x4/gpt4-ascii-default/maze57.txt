@@ -1,0 +1,12 @@
+To solve the maze, we start at the entry point (1,1) and explore the open paths to reach the exit point (7,7). The solution involves choosing paths that do not revisit any position and do not cross walls. We use Breadth-First Search (BFS), where possible moves are up, down, left, and right. We also use a queue and a way to mark visited locations. Here's the solution traced through the maze:
+
+1. Starting at (1,1), move right to (1,2), (1,3), (1,4) until reaching the obstacle at (1,5).
+2. Now, move down from (1,4) to (2,4).
+3. Continue moving right to (2,5) and then down through (3,5), (4,5), (5,5), (6,5).
+4. Move left to (6,4) and further left to (6,3) until (6,2), then move down to (7,2).
+5. Move right through (7,3), (7,4), (7,5) until you reach (7,6).
+6. Finally move right to the exit at (7,7).
+
+Thus, the successful path is:
+
+<PATH_START> (1,1) (1,2) (1,3) (1,4) (2,4) (2,5) (3,5) (4,5) (5,5) (6,5) (6,4) (6,3) (6,2) (7,2) (7,3) (7,4) (7,5) (7,6) (7,7) <PATH_END>

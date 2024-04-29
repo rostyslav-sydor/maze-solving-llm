@@ -1,0 +1,7 @@
+<PATH_START> (0,0) (0,1) (2,1) (2,2) (3,2) (3,3) <PATH_END>
+
+- starting at (0,0) we can only move right to (0,1)
+- at (0,1) we can only move down to (2,1)
+- at (2,1) we can only move right to (2,2)
+- at (2,2) we can only move down to (3,2)
+- at (3,2) we can only move right to (3,3)

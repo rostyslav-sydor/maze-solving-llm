@@ -1,0 +1,49 @@
+To find a solution for the given maze between coordinates (1,1) and (7,7), you can use the following Python script with a Depth-First Search (DFS) algorithm to find the shortest path between the starting and ending points:
+
+```python
+from collections import deque
+
+def dfs(maze, start, end):
+    n = len(maze)
+    m = len(maze[0])
+    found = False
+
+    queue = deque([[start[0], start[1], '']])
+    visited = [[False for _ in range(m)] for _ in range(n)]
+    visited[start[0]][start[1]] = True
+
+    while queue:
+        x, y, path = queue.popleft()
+
+        if (x, y) == end:
+            found = True
+            print(f'<PATH_START> (1, 1) ' + path + ' (7, 7) <PATH_END>')
+            break
+
+        for d in [[0, 1], [0, -1], [1, 0], [-1, 0]]:
+            dx = x + d[0]
+            dy = y + d[1]
+
+            if 0 <= dx < n and 0 <= dy < m and not visited[dx][dy] and maze[dx][dy] != '#':
+                visited[dx][dy] = True
+                queue.append([dx, dy, f'( {dx}, {dy} ) ' + path])
+
+    return found
+
+
+maze = [
+    '#########',
+    '#S      #',
+    '# ##### #',
+    '# #   # #',
+    '### ### #',
+    '#     # #',
+    '#E ##### ',
+    '#       #',
+]
+
+dfs(maze, [1, 6], [6, 0])
+```
+
+Running this script would find the shortest path between the starting position (1, 6) and ending position (6, 0) in the provided maze and output it in the format of rows and columns between `<PATH_START>` and `<PATH_END>` tokens, like this:
+

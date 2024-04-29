@@ -1,0 +1,59 @@
+To find the solution of the maze outlined in the above adjacency list starting from the origin (0,0) to the target (3,3), we can employ the Breadth-First Search (BFS) strategy for guaranteed shortest path in an unweighted graph.
+
+The adjacency list defines the following connections between nodes:
+
+- (1,3) <--> (0,3)
+- (0,3) <--> (0,2)
+- (3,1) <--> (3,0)
+- (1,0) <--> (0,0)
+- (1,2) <--> (0,2)
+- (1,1) <--> (1,2)
+- (3,3) <--> (2,3)
+- (1,1) <--> (1,0)
+- (3,2) <--> (3,3)
+- (2,2) <--> (2,1)
+- (0,1) <--> (0,0)
+- (1,3) <--> (2,3)
+- (3,0) <--> (2,0)
+- (2,0) <--> (2,1)
+- (2,2) <--> (3,2)
+
+We start by constructing the graph from this adjacency list and implementing BFS to traverse the graph:
+
+1. Convert each relation into an adjacency list:
+   ```
+   graph = {
+       (0,0): [(1,0), (0,1)],
+       (0,1): [(0,0), (0,2)],
+       (0,2): [(0,3), (1,2)],
+       (0,3): [(1,3)],
+       (1,0): [(0,0), (1,1)],
+       (1,1): [(1,0), (1,2)],
+       (1,2): [(0,2), (1,1)],
+       (1,3): [(0,3), (2,3)],
+       (2,0): [(3,0), (2,1)],
+       (2,1): [(2,0), (2,2), (3,1)],
+       (2,2): [(3,2), (2,1)],
+       (2,3): [(1,3), (3,3)],
+       (3,0): [(2,0), (3,1)],
+       (3,1): [(3,0), (3,2)],
+       (3,2): [(2,2), (3,3), (3,1)],
+       (3,3): [(2,3), (3,2)]
+   }
+   ```
+2. Implement BFS from (0,0):
+   - Begin from (0,0) with a queue
+   - Mark nodes as visited to avoid revisits
+   - Keep track of parent nodes to reconstruct path upon reaching the destination
+
+3. Processing BFS:
+   - Enqueue the starting node (0,0)
+   - Proceed to explore all directly connected nodes:
+       For (0,0), it connects to (1,0) and (0,1). Only follow unvisited nodes.
+   - Continue this process iteratively expanding to neighboring nodes and marking nodes as visited until the target (3,3) is reached or all possible paths are explored.
+
+4. On reaching (3,3), backtrack using the recorded predecessors to derive the below path:
+
+   <PATH_START> (0,0) (1,0) (1,1) (1,2) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>
+
+This ensures a complete solution to the maze based on the adjacency list provided, effectively navigating through the given paths and connections.

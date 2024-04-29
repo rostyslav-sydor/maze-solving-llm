@@ -1,0 +1,19 @@
+ To direct the AI in finding a solution to the provided maze, please follow these step-by-step instructions and use plain English language.
+
+1. Identify the start and target points in the maze: Start at node (0,0), indicated by <ORIGIN_START> and <ORIGIN_END> tokens. The goal is to reach node (3,3), marked by <TARGET_START> and <TARGET_END> tokens.
+
+2. Explore the adjacency list: Look for nodes connected to the start node. The connected nodes for (0,0) are (1,0), (0,1), and (0,2), based on the following edges: (0,0) <--> (1,0), (0,1) <--> (0,2).
+
+3. Select a new node: Choose one of the connected nodes as the next step in the path. In this case, let's choose (1,0) as it is in the direction of the target (3,3).
+
+4. Add the selected node to the path: The path now consists of one node, (0,0) -> (1,0). Keep track of the visited nodes to avoid revisiting them.
+
+5. Repeat exploration from the new node: Look for nodes connected to (1,0). The connected nodes for (1,0) are (1,1) and (0,0), based on the following edges: (1,0) <--> (0,0), (1,0) <--> (1,1). 
+
+6. Avoid visited nodes: Since (0,0) has already been visited, it cannot be chosen as the next node. We will choose (1,1) instead.
+
+7. Update the path: The path now consists of (0,0) -> (1,0) -> (1,1).
+
+8. Continue exploring: Continue the process of selecting a connected, unvisited node until you reach the target node (3,3) or run out of options.
+
+9. Output the path: Once the target node (3,3) is reached, output the entire path in the format of a coordinate list between <PATH_START> and <PATH_END> tokens, where the first coordinate is the row and the second coordinate is the column. For example:

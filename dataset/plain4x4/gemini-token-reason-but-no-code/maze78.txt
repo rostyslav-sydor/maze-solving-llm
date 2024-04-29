@@ -1,0 +1,7 @@
+This maze can be solved using Depth-first search (DFS). DFS involves traversing potential paths until reaching a dead end, and then backtracking to the most recent node that has unexplored paths.
+
+Starting from the origin <ORIGIN_START> (0,0), we explore the path to (0,1), then to (0,2), and finally to (0,3) which is a dead end. We backtrack to (0,2), and explore the path to (1,2). We then explore the path to (2,2), (3,2), (3,3) which is the target.
+
+Therefore, the solution is:
+
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (2,2) (3,2) (3,3) <PATH_END>

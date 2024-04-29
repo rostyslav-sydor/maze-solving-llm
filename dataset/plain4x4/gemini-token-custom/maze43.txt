@@ -1,0 +1,15 @@
+Reasoning:
+- The entry point is at cell (0,0) and the exit point is at cell (3,3).
+- The path must always move in one of the four cardinal directions (up, down, left, or right).
+- The path cannot cross any walls.
+- The path must use only adjacent cells.
+
+Based on these constraints, the following path can be found:
+
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (2,2) (3,2) (3,3) <PATH_END>
+
+This path satisfies all of the constraints:
+- It starts at the entry point and ends at the exit point.
+- It always moves in one of the four cardinal directions.
+- It does not cross any walls.
+- It uses only adjacent cells.

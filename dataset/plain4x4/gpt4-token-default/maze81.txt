@@ -1,0 +1,14 @@
+To solve the maze, we first interpret the adjacency list given and find the shortest path from the origin (0,0) to the target (3,3) using a breadth-first search (BFS) algorithm. Here's the step-by-step solution:
+
+1. The adjacency list represents the connectivity between spots in the maze. We can use this to define the maze's graph structure.
+
+2. We implement BFS to find the shortest path:
+   - Start from the origin (0,0).
+   - Explore all reachable nodes layer by layer.
+   - Once the target (3,3) is reached, trace back the path from target to origin using visited nodes.
+
+3. Following BFS based on the adjacency list shows the shortest path is: (0,0) -> (0,1) -> (2,1) -> (2,3) -> (3,3). 
+
+Thus, the shortest path output in the specified format is:
+
+<PATH_START> (0,0) (0,1) (2,1) (2,3) (3,3) <PATH_END>

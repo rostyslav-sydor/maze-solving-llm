@@ -1,0 +1,26 @@
+We can represent this maze as a graph where each point is a node.We can use Breadth-First Search algorithm to find the shortest(or optimal) path.
+1. Start at the entry point (1,1) and add the entry point coordinates to a queue.
+2. Dequeue the first element (node) from queue, i.e the position (1,1). This is the current node.
+3. For each 4-connected neighbor(top,bottom,left,right) of the current node: 
+  If the neighbor is not visited and it is traversable:
+     Mark the neighbor as visited. 
+     Add the neighbor's coordinates to the queue.
+     Set the newly explored neighbor as the parent of the old node.
+4. Repeat until the queue is empty.
+
+Let's go:
+
+Found entry point(S), at (1,1), marked as visited.
+Queue: [(1,1)]
+
+Dequeue: (1,1), explore top: (0,1) => wall; bottom: (2,1), left: out of bounds, right: (1,2)
+Queue: [(2,1), (1,2)]
+
+Dequeue: (2,1), explore top: (1,1), bottom: wall, left: (2,0) => wall, right: (2,2) => wall
+Queue: [(1,2), (2,0), (2,2)]
+...
+
+Finally queue is empty.Now let's traverse from end coordinate (7,7) to start following the parent node from the visited map (i.e. backwards).
+
+((7, 7), (7, 6), (7, 5), (7, 4), (6, 4), (6, 3), (5, 3), (5, 2), (4, 2), (3, 2), (2, 2), (1, 2), (1, 1))[::-1]
+<PATH_START> ((1, 1), (1, 2), (2, 2), (3, 2), (4, 2), (5, 2), (5, 3), (6, 3), (

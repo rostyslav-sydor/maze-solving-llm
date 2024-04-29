@@ -1,0 +1,12 @@
+Starting with the origin at (0,0), we explore reachable nodes step-by-step, marking nodes as visited to avoid cycles, while tracing our path to the destination. Given that BFS offers the shortest path in an unweighted graph like this one, using BFS can be particularly effective.
+
+Following the provided adjacency list and implementing BFS, we examine and queue each neighbor of the current node until we reach the target node at (3,3).
+1) Move down from (0,0) to (1,0)
+2) Move down from (1,0) to (2,0)
+3) Move right from (2,0) to (2,1)
+4) Move down from (2,1) to (3,1)
+5) Move down from (3,1) to (3,2)
+6) Move right from (3,2) to (3,3)
+
+Upon backtracking from the end point (3,3) by following predecessors, the calculated shortest path in your maze, considering the graph structure and node connections provided, is as follows:
+<PATH_START> (0,0) (1,0) (2,0) (2,1) (3,1) (3,2) (3,3) <PATH_END>

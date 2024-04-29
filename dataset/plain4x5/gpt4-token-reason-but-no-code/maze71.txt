@@ -1,0 +1,24 @@
+To solve the maze, we translate the adjacency list provided into a graph where each node represents a cell in the maze, and the edges indicate which cells are connected (i.e., where it's possible to move directly from one cell to another). 
+
+The task is to find a path from the origin point (0,0) to the target point (3,4). This can efficiently be tackled using search algorithms meant for graphs, such as Breadth-First Search (BFS) or Depth-First Search (DFS). BFS is particularly suited for this purpose because it explores the nearest nodes first and guarantees a shortest path solution, finding the first available route from the start to the exit.
+
+Let's go through the process systematically:
+
+1. Represent the maze from the adjacency list into a graph representation.
+2. Use BFS starting from the origin node (0,0). During this process:
+   - Mark each visited node
+   - Store the path to reach every node using a queue
+   - For each node, explore the adjacent nodes (connected cells)
+   - Stop the search when reaching the target node (3,4).
+3. Extract and record the path from the origin to the destination as BFS guarantees the shortest path due to its level-wise exploration.
+
+By following the BFS methodology, here is the solved path from (0,0) to (3,4):
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) (3,4) <PATH_END>
+
+Reasoning behind choosing this path:
+- Starting at (0,0), moving in primarily right (east) to (0,1) to (0,2) to (0,3) ensures covering the minimal lateral spread of the grid quickly.
+- Advancing downwards from (0,3) to (1,3) then to (2,3) transitions across the vertical mid-section, making use of available north-south connections.
+- Finally, moving from (2,3) to (3,3) and on to (3,4) completes the path by entering the last row and reaching the target.
+
+This solution ensures that the path taken is direct and uses the connectivity given in the adjacency list with both optimal distance and traversal simplicity in mind.

@@ -1,0 +1,14 @@
+In a maze, there is a single path between entry and exit points, except in cases where there are cycles.
+In the provided example, there are no cycles.
+
+The adjacency list allows us to determine if there is a path between any two adjacent tokens in the maze.
+
+Starting from the entry token <ORIGIN_START>, we can iteratively search for all adjacent tokens and include them in the solution path, until we reach the exit token <TARGET_END>.
+
+In the given maze, we start at <ORIGIN_START> (0,0) and see that there are two adjacent tokens (0,1) and (1,0).
+We arbitrarily choose to move to (0,1), which then gives us two more adjacent tokens (0,2) and (1,1).
+We continue this process until we reach the exit token <TARGET_END> (3,3).
+
+Therefore, the solution path for the given maze is:
+
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (2,2) (1,2) (2,3) (3,3) <PATH_END>

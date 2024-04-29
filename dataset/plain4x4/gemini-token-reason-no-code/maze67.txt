@@ -1,0 +1,3 @@
+The maze can be solved by following the path of tokens from <ORIGIN_START> to <TARGET_END> while ignoring the adjacency list structure.
+
+The path is: <PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>

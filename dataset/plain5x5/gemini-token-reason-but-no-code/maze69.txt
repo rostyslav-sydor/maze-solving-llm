@@ -1,0 +1,11 @@
+Depth-first search is a good choice for finding a path in a maze. It involves exploring each possible path until a solution is found or all paths have been explored.
+
+1. Start at the origin and mark the cell as visited.
+2. If the current cell is the target, then a solution has been found.
+3. Otherwise, explore each of the unvisited neighbors of the current cell.
+4. If a neighbor has not been visited, then mark it as visited and explore it recursively.
+5. If all neighbors have been visited, then backtrack to the previous cell.
+
+Here is a solution for the example maze using the depth-first search algorithm:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (0,4) (1,4) (2,4) (3,4) (4,4) <PATH_END>

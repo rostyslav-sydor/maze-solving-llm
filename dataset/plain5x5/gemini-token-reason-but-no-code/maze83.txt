@@ -1,0 +1,11 @@
+The maze can be solved using Depth-First Search (DFS), which starts at the entry point and explores all possible paths until it finds the exit point.
+
+In DFS, we maintain a stack of visited nodes and explore the maze by moving from the current node to one of its unvisited neighbors.
+
+If the current node has no unvisited neighbors, we backtrack to the previous node in the stack and continue the exploration.
+
+We repeat this process until we reach the exit point.
+
+For the given maze, the solution is:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (0,4) (1,4) (2,4) (3,4) (4,4) <PATH_END>

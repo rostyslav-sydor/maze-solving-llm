@@ -1,0 +1,15 @@
+To solve the maze, I visually inspected and followed possible paths from S (start) to E (end) while avoiding walls. Here's the solution traced manually:
+
+1. Start at (1,1), move right across top row to (1,7).
+2. Move down to (3,7).
+3. From (3,7), move left through the gap in the walls to (3,3).
+4. Move downwards to (4,3), then continue moving down to (7,3).
+5. From (7,3), move right to the endpoint (7,7).
+
+This yields the path:
+
+```
+<PATH_START> (1,1) (1,2) (1,3) (1,4) (1,5) (1,6) (1,7) (2,7) (3,7) (3,6) (3,5) (3,4) (3,3) (4,3) (5,3) (6,3) (7,3) (7,4) (7,5) (7,6) (7,7) <PATH_END>
+```
+
+This sequence avoids all walls and arrives at the exit efficiently using primarily a straight path in feasible corridor directions.

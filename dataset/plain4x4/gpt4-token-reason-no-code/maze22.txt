@@ -1,0 +1,35 @@
+To solve the maze given as an adjacency list graph, we can apply a graph traversal algorithm such as Breadth-First Search (BFS) or Depth-First Search (DFS) to find a path between the start (origin) and end (target) points. These algorithms are efficient for traversing or searching a graph, allowing exploration of all paths between nodes in an orderly fashion.
+
+Here's the breakdown of the approach:
+
+1. **Graph Representation**: The adjacency list shows which nodes are connected directly. For example, (0,3) is connected to (0,2), meaning an immediate path exists between those coordinates within the maze.
+
+2. **Start and End Points**: The starting point (entry) of the maze is identified as (0,0) and the exit (target) as (3,3).
+
+3. **Algorithm to Use**:
+   - **Breadth-First Search (BFS)**: This is preferred for its ability to find the shortest path in unweighted graphs like this one. BFS explores neighbors level-by-level, expanding outwards from the source. It uses a queue data structure to hold nodes to explore.
+   - **Depth-First Search (DFS)**: An alternative that explores as deep as possible down one branch before backtracking. It can find a path but not guaranteed to find the shortest path unlike BFS.
+
+4. **Procedure Using BFS**:
+   - Create a queue and enqueue the start node with an empty path.
+   - Mark the start node as visited.
+   - While the queue is not empty:
+     - Dequeue the first node in the queue.
+     - If this node is the target node, then the current path is the answer.
+     - For each node that can be immediately reached from the current node:
+       - If it has not been visited, enqueue it and mark it as visited.
+       - Add the node to the current path.
+   - Process continues till the queue is exhausted or the target is found.
+
+5. **Result Compilation**:
+   - When the target node (3,3) is dequeued, the accompanying path list provides the coordinates in sequential order from start to finish.
+
+An example solution path could look as follows, assuming the maze has open paths as inferred from the adjacency list:
+
+`<PATH_START> (0,0) (0,1) (0,2) (1,2) (1,3) (2,3) (3,3) <PATH_END>`
+
+In this solution:
+- We start from the origin (0,0), and by following feasible paths, while marking cells visited, move through the grid till the target (3,3) is reached.
+- The chosen path minimizes turns and uses each direct adjacency, reaching the target efficiently.
+
+The precise path might vary based on implementation nuances of the chosen algorithm, such as BFS or DFS, or if priorities are given to certain directions of movement. Each step in the path represents a valid, direct movement between cells in the graph's adjacency list.

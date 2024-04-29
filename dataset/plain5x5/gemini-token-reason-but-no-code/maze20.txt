@@ -1,0 +1,15 @@
+In order to find our way through a maze represented as a graph, we first need to find a path from the origin to the target.
+For this we can use a variety of graph search algorithms like BFS.
+BFS relies on exploring all paths at a particular level before moving on to the next level.
+At each step, starting from the origin, we enqueue all neighboring tokens into a queue.
+For this maze we start at (0.0), enqueue (0,1), (0,2), (0,3), and (0,4).
+We then proceed to check the neighbors of (0,1), (0,2), (0,3), and (0,4) and so on and so on.
+We do this until we reach the target which is (4.4).
+Once we reach the target, we can construct a solution by backtracking the path taken from the target to the origin.
+We first start at (4.4) and then check the list of neighbors for any entry that contains (4.4).
+In this case, the only entry that contains (4.4) is (3.4).
+We proceed to add (3.4) to our solution and move to the next step, which is to check the neighbors for (3.4).
+We continue this process until we reach the origin.
+
+For the example maze given, the solution is:
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (0,4) (1,4) (2,4) (3,4) (4,4) <PATH_END>

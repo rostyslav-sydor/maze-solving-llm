@@ -1,0 +1,9 @@
+We start from the origin and move to the adjacent node: (0,1)
+Then we move to the adjacent node: (1,1)
+Then we move to the adjacent node: (1,2)
+Then we move to the adjacent node: (1,3)
+Then we move to the adjacent node: (2,3)
+Then we move to the adjacent node: (3,3)
+The path does not cross any walls and uses only adjacent cells, so it is a valid solution.
+
+<PATH_START> (0,0) (0,1) (1,1) (1,2) (1,3) (2,3) (3,3) <PATH_END>

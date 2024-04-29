@@ -1,0 +1,12 @@
+Starting from the origin at (0,0), we explore the node connections provided in the adjusted adjacency list to find a feasible route to our goal at (3,3) by employing the Breadth-First Search (BFS) method. This technique ensures that we find one of the shortest paths by exploring the maze layer by layer.
+
+Following a systematic traversal based on the adjacency list, we proceed as:
+1) Move up from (0,0) to (1,0) 
+2) Move left from (1,0) to (1,1)
+3) Continue from (1,1) to (2,1)
+4) From (2,1) go to (3,1)
+5) Travel right from (3,1) to (3,2)
+6) Finally, move up from (3,2) to reach destination (3,3).
+
+The complete path traced, starting from the origin and landing at the target considering the provided connections, is:
+<PATH_START> (0,0) (1,0) (1,1) (2,1) (3,1) (3,2) (3,3) <PATH_END>

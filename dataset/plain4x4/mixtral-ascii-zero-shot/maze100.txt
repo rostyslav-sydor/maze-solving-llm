@@ -1,0 +1,5 @@
+We first need to find the start and end coordinates, which are (1, 1) and (7, 7). The search should start from the start coordinate and then look up, down, left, and right for valid paths that don't hit walls. 
+
+Then let's construct a path by gradually tracing the route that a character would make from the start point to the end point. 
+
+<PATH_START> (1, 1) (2, 1) (3, 1) (4, 1) (5, 1) (5, 2) (6, 2) (7, 2) (7, 3) (7, 4) (7, 5) (7, 6) (7, 7) <PATH_END>

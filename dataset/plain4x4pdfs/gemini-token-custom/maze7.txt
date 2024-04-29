@@ -1,0 +1,23 @@
+**SOLUTION:**
+<PATH_START> (0,0) (1,0) (1,1) (2,1) (2,0) (3,0) (3,1) (2,1) (2,2) (2,3) (3,3) <PATH_END>
+
+
+**REASONING:**
+
+- Start from the origin <ORIGIN_START> (0,0).
+
+- Move right to (1,0).
+- Move down to (1,1).
+- Move right to (2,1).
+- Move up to (2,0).
+- Move right to (3,0).
+- Move down to (3,1).
+- Move right to (2,1). 
+- Move down to (2,2)
+- Move right to (2,3) 
+- Move down to (3,3) which is the target <TARGET_END>
+
+**CHECKING:**
+- The path never crosses a wall because it only moves through adjacent cells.
+- The path starts at the origin and ends at the target.
+- The path does not contain loops or cross itself.

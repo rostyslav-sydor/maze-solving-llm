@@ -1,0 +1,7 @@
+First, we need to start at the origin point (0,0) and explore the maze. We can move through the maze by following the connections given in the adjacency list.
+
+Following the connections, we can move from (0,0) to (0,1), then to (0,2), (1,2), (1,3), (2,3), (3,3) which is our target point.
+
+Therefore, the solution path is: <PATH_START> (0,0) (0,1) (0,2) (1,2) (1,3) (2,3) (3,3) <PATH_END>.
+
+This path follows the connections in the maze and leads us from the origin to the target point.

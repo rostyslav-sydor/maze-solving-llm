@@ -1,0 +1,6 @@
+It is possible to solve this maze by using Breadth First Search approach, starting from the entry point, iterating through neighbors of each cell and marking cells that have been traversed.
+The final path from the entry point to the exit point is obtained by backtracking through previously marked cells until the end point is reached.
+
+The solution below demonstrates a path from the entry point to the exit point:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>

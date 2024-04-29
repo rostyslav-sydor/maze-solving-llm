@@ -1,0 +1,14 @@
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (0,4) (1,4) (2,4) (3,4) (4,4) <PATH_END>
+
+**Reasoning:**
+
+* Start at the origin (0,0) and move right to (0,1).
+* Move down to (1,1) and right to (1,2).
+* Continue moving down to (2,2) and right to (2,3).
+* Move down to (3,3) and right to (3,4).
+* Finally, move up to (4,4), which is the target.
+
+**Checking the solution:**
+
+* The path does not cross any walls because it only moves in the right or down direction, and there are no walls in those directions.
+* The path uses only adjacent cells because each move is to a cell that is adjacent to the previous cell.

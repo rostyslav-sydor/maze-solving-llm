@@ -1,0 +1,19 @@
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (1,3) (2,3) (3,3) <PATH_END>
+
+- The given adjacency list defines the maze's structure, which entails the connections between each cell (or node in graph terminology).
+- The starting point of the maze, mentioned as the origin, is at (0,0). The end point, or target, is at (3,3).
+
+Here’s how the path was found:
+
+1. **Start at (0,0)**, which is given as the origin.
+2. From (0,0), the available connection according to the adjacency list is (0,1).
+3. **Move to (0,1)**, then proceed to (0,2) since these two points are interconnected directly.
+4. From (0,2), proceed to **(1,2)** based on adjacency in the list.
+5. **Next is (1,3)** from (1,2), which leads directly towards the upper rows.
+6. Continue now vertically from **(1,3) to (2,3)**, as they are adjacent vertically.
+7. Lastly, from (2,3), move to the destination point **(3,3)**.
+
+This path uses only connections outlined in the adjacency list, ensuring that none of the steps cross any walls, and every step to the next is between directly adjacent cells (either horizontally or vertically).
+
+- **Validation against Walls:** The sequence does not skip any direct connections or make diagonally implied moves—every transition from one point to the next has a direct adjacency relationship in the list.
+- **Adjacency Check:** Each move from one coordinate to the next (e.g., from (0,1) to (0,2)) corresponds directly to an adjacency relationship provided (e.g., (0,1) <--> (0,2)), confirming that all used connections are valid paths in the maze structure.

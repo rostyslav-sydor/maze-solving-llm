@@ -1,0 +1,4 @@
+One possible solution for this maze is to start from (0,0) and follow the path: (0,0) -> (0,1) -> (0,2) -> (0,3) -> (1,3) -> (2,3) -> (2,2) -> (2,1) -> (3,1) -> (3,2) -> (3,3). This path leads from the starting point to the target point while following the connections specified in the adjacency list.
+
+The output for this solution would be:
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (2,2) (2,1) (3,1) <PATH_END>

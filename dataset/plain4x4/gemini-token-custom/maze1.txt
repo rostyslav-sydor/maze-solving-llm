@@ -1,0 +1,21 @@
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (3,2) (3,3) <PATH_END>
+
+**Reasoning:**
+
+The maze is represented as an adjacency list, where each node is a coordinate and each edge is a connection between two coordinates. The entry point is marked with the token <ORIGIN_START> and the exit point is marked with the token <TARGET_END>.
+
+To find a solution to the maze, we can use a depth-first search (DFS) algorithm. DFS starts at the entry point and explores all possible paths until it reaches the exit point.
+
+Here is the DFS algorithm:
+
+1. Start at the entry point.
+2. Mark the entry point as visited.
+3. For each unvisited neighbor of the entry point, add the neighbor to the stack and go to step 2.
+4. If there are no more unvisited neighbors of the entry point, backtrack to the previous node on the stack.
+5. Repeat steps 3 and 4 until the exit point is reached.
+
+The DFS algorithm will find a solution to the maze if one exists. The solution is a list of coordinates that represents the path from the entry point to the exit point.
+
+To check if the solution does not cross any walls, we can check if each coordinate in the solution is adjacent to the previous coordinate. Two coordinates are adjacent if they are in the same row or column and they differ by 1.
+
+The solution does not cross any walls because each coordinate in the solution is adjacent to the previous coordinate. The path uses only adjacent cells because the DFS algorithm only adds adjacent coordinates to the stack.

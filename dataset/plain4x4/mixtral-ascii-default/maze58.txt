@@ -1,0 +1,54 @@
+First, let's define a function to iterate through the neighbors of a given coordinate on the maze. The neighbors will be checked in the order `up`, `right`, `down`, `left` (North, East, South, West), prioritizing the path towards the exit.
+
+```
+import copy
+
+def check_neighbors(maze, check_coord, visited, path):
+    step_coord = [
+        (check_coord[0] - 1, check_coord[1]),  # Up
+        (check_coord[0], check_coord[1] + 1),  # Right
+        (check_coord[0] + 1, check_coord[1]),  # Down
+        (check_coord[0], check_coord[1] - 1)   # Left
+    ]
+
+    for new_coord in step_coord:
+        if new_coord in visited:
+            continue
+        
+        if maze[new_coord[0]][new_coord[1]] == ' ':
+            # Copy the updated path for recursive visit
+            updated_path = copy.deepcopy(path)
+            updated_path.append(new_coord)
+            
+            if 'E' in maze[new_coord[0]][new_coord[1]]:
+                # Add the step to the solution and return it
+                updated_path.append(new_coord)
+                return [check_coord] + updated_path
+            
+            visited.add(new_coord)
+            # Recursively format the solution
+            result = check_neighbors(maze, new_coord, visited, updated_path)
+            
+            if result:
+                return [check_coord] + result
+
+    return []
+```
+
+Now, let's parse the maze, find the path, and display it.
+
+```
+# Parse the maze
+lines = """
+#########
+#S  # # #
+### # # #
+#   # # #
+# # # # #
+# # # # #
+# ### # #
+#      E#
+#########
+""".strip().split('\n')
+maze = []
+pos = {}  # Keep track of

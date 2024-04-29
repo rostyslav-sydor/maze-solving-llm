@@ -1,0 +1,15 @@
+I understand. You have a maze represented as an adjacency list, with entry and exit points marked. I'll help you find a solution to the maze.
+
+First, let's identify the starting point of the maze, which is marked as <ORIGIN_START>. The starting point is located at coordinate (0,0).
+
+Next, we'll explore the maze one step at a time, following the adjacency list. We'll keep track of the path we take, using the <PATH_START> and <PATH_END> tokens.
+
+Here's the first step:
+
+1. From the starting point (0,0), we move east to coordinate (1,0).
+
+The maze so far:
+
+<ADJLIST_START> (1,0) <--> (0,0) ; (3,1) <--> (3,0) ; (3,1) <--> (2,1) ; (0,3) <--> (1,3) ; (3,3) <--> (3,2) ; (0,2) <--> (1,2) ; (2,1) <--> (2,2) ; (1,2) <--> (1,3) ; (0,2) <--> (0,1) ; (3,3) <--> (2,3) ; (2,0) <--> (1,0) ; (0,0) <--> (0,1) ; (3,0) <--> (2,0) ; (1,3) <--> (2,3) ; (1,2) <--> (1,1) ; <ADJLIST_END> <ORIGIN_START> (0,0) <ORIGIN_END> <TARGET_START> (3,3) <TARGET_END>
+
+Now that we've moved east, we're at coordinate (1,0). What would you like to do next?

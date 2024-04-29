@@ -1,0 +1,9 @@
+First, we need to explore the maze to find the path from the entry point to the exit point. We can start by moving through the maze one step at a time, keeping track of our movements.
+
+We can start by moving right from (1,1) to (1,2), then down to (2,2), (3,2), (4,2). At (4,2) we can either go down to (5,2) or continue right to (4,3), (4,4). After (4,4), we can go down to (5,4), (6,4), (7,4), and finally, (7,5), (7,6), (7,7) to reach the exit point at (7,7).
+
+The solution path could be represented as follows:
+
+<PATH_START> (1,1) (1,2) (2,2) (3,2) (4,2) (5,2) (6,2) (7,2) (7,3) (7,4) (7,5) (7,6) (7,7) <PATH_END>
+
+This path contains the coordinates of each step taken from the entry point to the exit point in the maze.

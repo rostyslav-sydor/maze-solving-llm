@@ -1,0 +1,7 @@
+A solution for this maze can be found using a breadth-first search (BFS) algorithm, starting from the entry point and exploring all adjacent nodes until the exit point is reached.
+
+The BFS algorithm works by maintaining a queue of nodes to be visited. The algorithm starts by adding the entry point to the queue. Then, while the queue is not empty, the algorithm dequeues the first node in the queue and visits it. Visiting a node involves adding all of its adjacent nodes to the queue. The algorithm continues until the exit point is visited.
+
+Once the exit point is visited, the algorithm can backtrack from the exit point to the entry point to find the shortest path between the two points. The shortest path is found by following the parent pointers that were set during the BFS algorithm.
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>

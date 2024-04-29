@@ -1,0 +1,18 @@
+<PATH_START> (0,0) (0,1) (1,1) (1,2) (1,3) (2,3) (3,3) <PATH_END>
+
+**Reasoning**
+
+To find our direction, we look at the first edge from the origin coordinate.
+
+The first edge goes to (0,2), which is south of the origin.
+So we move south.
+
+When we evaluate the adjacency list at (0,2), we see that both edges are north of this coordinate.
+Since we came from the south, we must move north.
+
+We continue to move north, then east, then north, then east, then north, then east, and finally north again to reach the target.
+
+**Checking**
+
+Since we followed edges in the adjacency list for every step, we are confident that we did not cross any walls.
+We also only moved between adjacent cells since we only moved north, east, and south.

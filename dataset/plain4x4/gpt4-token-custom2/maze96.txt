@@ -1,0 +1,38 @@
+To solve the maze starting from the origin (0,0) and reaching the target (3,3), we can use Breadth-First Search (BFS) to find the shortest path. The adjacency list will be transformed into a more practical format, and we'll trace through the maze:
+
+1. Parse the adjacency list and convert into a usable graph dictionary.
+2. Implement BFS to traverse from (0,0) to (3,3).
+
+**Parsed adjacency list:**
+- (2,3) <-> (1,3), (3,3), (2,2)
+- (2,1) <-> (3,1), (1,1), (2,0)
+- (3,0) <-> (2,0)
+- (3,2) <-> (3,1), (2,2), (3,3)
+- (2,0) <-> (1,0), (3,0), (2,1)
+- (1,0) <-> (0,0), (2,0)
+- (0,1) <-> (0,2), (0,0)
+- (2,3) <-> (1,3), (3,3)
+- (1,1) <-> (2,1)
+- (1,2) <-> (0,2), (1,3)
+- (0,0) <-> (0,1), (1,0)
+- (2,2) <-> (2,3), (3,2)
+- (0,2) <-> (0,1), (0,3), (1,2)
+- (0,3) <-> (0,2)
+
+**Applying BFS:**
+Starting node is (0,0). We define the graph as a dictionary `G` where each key is a node and values are lists of neighboring nodes.
+
+Navigate through each node, using BFS:
+1. From (0,0) to (1,0)
+2. From (1,0) to (2,0)
+3. From (2,0) to (3,0)
+4. Continue from (3,0) to (3,1)
+5. From (3,1) to (3,2)
+6. From (3,2) to (3,3)
+
+Upon arrival at (3,3), we backtrack to create the path sequence:
+
+**Resulting Path:**
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (3,2) (3,3) <PATH_END>
+
+This sequence shows the path from the origin (0,0) to the target (3,3) using BFS in the graph representation of the maze.

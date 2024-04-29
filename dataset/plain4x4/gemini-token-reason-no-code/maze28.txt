@@ -1,0 +1,13 @@
+**Depth-First Search (DFS)**
+
+We can use DFS to find a path from the starting point to the ending point in the maze. The basic idea is to start from the starting point and explore all possible paths until we find the ending point. If we reach a dead end (i.e., a point with no unvisited neighbors), we backtrack to the previous point and continue exploring other paths. Here's the reasoning:
+
+1. Start from the starting point (0,0) and mark it as visited.
+2. Visit all unvisited neighbors of the current point.
+3. If any of the neighbors is the ending point (3,3), return the path.
+4. If none of the neighbors is the ending point, mark the current point as visited and backtrack to the previous point.
+5. Repeat steps 2-4 until the ending point is found or all possible paths have been explored.
+
+**Output:**
+
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (2,2) (3,2) (3,3) <PATH_END>

@@ -1,0 +1,9 @@
+<PATH_START> (1,1) (2,1) (3,1) (4,1) (5,1) (6,1) (7,1) (7,2) (7,3) (7,4) (7,5) (7,6) (7,7) <PATH_END>
+
+Reasoning for the above solution:
+1. Begin at the starting point (1,1).
+2. Move downward as the path along the first column is unobstructed until the bottom of the maze.
+3. Then, move to the right when reaching the end of the column, as the path remains clear along the seventh row.
+4. Continue right till reaching the exit point at (7,7).
+
+This solution is derived by visually tracking the feasible path directly from the start to the exit using simple `down` and `right` moves. The path provided avoids all walls marked by `#` ensuring uninterrupted traversal from start (S) to end (E).

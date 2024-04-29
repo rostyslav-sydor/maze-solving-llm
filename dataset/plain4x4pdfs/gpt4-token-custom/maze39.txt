@@ -1,0 +1,28 @@
+To solve the maze given in the adjacency list format, I will use a simple Breadth-First Search (BFS) algorithm to find the shortest path from the origin point (0,0) to the target point (3,3). The BFS approach is suitable for this type of problem, as it explores all possible paths level by level and efficiently finds the shortest path in an unweighted setup like this maze.
+
+Given Adjacency List: 
+- Each pair represents navigable connections between two points in the maze. The adjacency list is broken down into multiple connections implying which cells (or nodes) of the maze are directly accessible from each other.
+
+Origin and Target:
+- Origin is given as (0,0) and target as (3,3).
+
+In a BFS approach:
+1. Start from the origin, marking it as visited.
+2. Explore its neighbors (as given by the adjacency list), and for each unvisited neighbor, mark it as visited and enqueue it for further exploration. Keep track of each node's predecessor to reconstruct the path later.
+3. Continue this until the target is reached or all possible paths are explored.
+
+Using the adjacency list provided:
+- Begin from (0,0) and consult the adjacency list to find its neighbors. (0,0) leads directly to (1,0) and (0,1).
+- Continue exploring neighbors of these newly discovered points while remembering previously visited nodes, until the target (3,3) is ultimately reached.
+  
+By following this approach, the path from (0,0) to (3,3) via their adjacency connections may be derived. The BFS ensures that the first time we reach (3,3) is the shortest path since it does not re-visit any node and explores in level-wise (shortest path) manner.
+
+The proper navigation respecting adjacency is essential, as moving to coordinates not explicitly connected in the list means breaking the walls of the maze. Therefore, after finding the path using BFS, verify by re-checking against the adjacency list for the legality of each move.
+
+Resulting Path:
+Once BFS processing finds the path from (0,0) to (3,3), the coordinates are listed in sequence from the origin to the target. The list is checked so that each consecutive pair of coordinates is connected as per the adjacency list ensuring no walls are crossed, and only adjacent movements are made.
+
+So the path would be:
+<PATH_START> (0,0) (1,0) (1,1) (1,2) (2,2) (3,2) (3,3) <PATH_END>.
+
+This sequence should follow the adjacency rules, with every pair of consecutive coordinates linked, and it leads directly from the origin to the target using valid moves provided in the adjacency list.

@@ -1,0 +1,3 @@
+<Path_start> (1,1) (2,1) (3,1) (4,1) (5,1) (6,1) (6,2) (6,3) (6,4) (6,5) (7,5) (7,6) (7,7) <PATH_END>
+
+To solve the maze, we start at the entry point (1,1) and move down until we hit a wall. Then, we move right until we reach the vertical passage on the left side of the maze. We continue going down until we reach the bottom of the maze, then turn left and follow the path until we reach the exit point (7,7). This path avoids all the walls and successfully reaches the end of the maze.

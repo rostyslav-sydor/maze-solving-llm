@@ -1,0 +1,13 @@
+Step 1: Convert the adjacency list to a graph representation to visualize the maze and find possible paths.
+ 
+Step 2: Extract the coordinates of the entry point (0,0) and the exit point (3,3).
+ 
+Step 3: Perform a graph traversal algorithm (such as Breadth-First Search or Depth-First Search) starting from the entry point to find the shortest path to the exit point.
+ 
+Step 4: Store the coordinates of the nodes visited during the traversal.
+ 
+Step 5: Compare the path length and number of turns for each possible path found during the traversal.
+ 
+Step 6: Select the path with the shortest length and fewest turns as the final solution.
+ 
+Step 7: Output the final path between

@@ -1,0 +1,5 @@
+1. We can start exploring the maze from the entry point (1,1) by moving in different directions while avoiding walls.
+2. We can move right to (1,2), then down to (2,2), (3,2), (4,2), (5,2), (6,2), and finally (7,2) to reach the exit point.
+3. The path can be represented as <PATH_START> (1,1) (1,2) (2,2) (3,2) (4,2) (5,2) (6,2) (7,2) <PATH_END>.
+
+This solution successfully navigates through the maze from the entry point to the exit point while avoiding walls.

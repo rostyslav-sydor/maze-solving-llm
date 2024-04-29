@@ -1,0 +1,9 @@
+Depth-First Search (DFS) can be used to solve a maze. 
+
+Start from the entry point and recursively explore all possible paths until the exit point is reached. 
+
+If a dead end is reached, backtrack to the last junction and explore a different path. 
+
+For the given maze, the solution path is:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) (3,4) (4,4) <PATH_END>

@@ -1,0 +1,29 @@
+To solve the maze, we will use the Depth-First Search (DFS) algorithm, which starts from the origin point and explores as far as possible along each branch before backtracking. Here are the steps:
+
+1. Initialize an empty path list.
+2. Start at the origin point and add it to the path list.
+3. Check if we have reached the target point. If so, return the path list.
+4. Mark the current point as visited to avoid revisiting it later.
+5. Explore all unvisited neighboring points of the current point. If any of them leads to the target point, add it to the path list and recursively call the DFS function on that point. If not, backtrack and try another neighboring point.
+6. If all neighboring points have been explored and the target point has not been found, remove the current point from the path list and backtrack.
+7. Repeat steps 3-6 until the target point is found or all possible paths have been explored.
+
+Now, let's apply the DFS algorithm to the given maze:
+
+<PATH_START>
+(0,0)
+(1,0)
+(1,1)
+(1,2)
+(1,3)
+(2,3)
+(2,2)
+(2,1)
+(3,1)
+(3,0)
+(3,1)
+(3,2)
+(3,3)
+<PATH_END>
+
+The solution path is (0,0) → (1,0) → (1,1) → (1,2) → (1,3) → (2,3) → (2,2) → (2,1) → (3,1) → (3,0) → (3,1) → (3,2) → (3,3).

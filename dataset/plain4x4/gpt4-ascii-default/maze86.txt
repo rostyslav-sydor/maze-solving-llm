@@ -1,0 +1,14 @@
+To solve the maze effectively, we'll use a search algorithm like Breadth-First Search (BFS) or Depth-First Search (DFS) that can thoroughly explore the maze from 'S' to 'E'. We will explore paths grid-wise, moving through open spaces (' ') while avoiding walls ('#'). We use a systematic approach to navigate from the start (S) to exit (E), ensuring every step is saved as coordinates.
+
+Here's the solution path based on logical navigation:
+
+1. Starting at the point 'S' located at (1,1).
+2. Move rightwards to (1,2), (1,3), (1,4), and (1,5) since these are open spaces.
+3. From (1,5), move downward to (2,5) followed by (3,5), as they are connected directly below.
+4. From (3,5), move right (open) to (3,6).
+5. Move downwards from (3,6) through (4,6), (5,6), and (6,6) to (7,6).
+6. Move right from (7,6) to (7,7) at the exit 'E'.
+
+Each move is checked to ensure it avoids walls and follows open paths. The solution is thus:
+
+<PATH_START> (1,1) (1,2) (1,3) (1,4) (1,5) (2,5) (3,5) (3,6) (4,6) (5,6) (6,6) (7,6) (7,7) <PATH_END>

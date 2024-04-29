@@ -1,0 +1,5 @@
+<PATH_START> (0,0) (0,1) (1,1) (2,1) (3,1) (3,2) (3,3) <PATH_END>
+
+Starting at <ORIGIN_START> (0,0) we go right (0,1) as the only possible move, then follow right wall to (3,1), then go up to (3,2), and finally right to the exit <TARGET_END> (3,3)
+
+We can check that all the moves we made are between adjacent cells, and that we did not cross any walls.

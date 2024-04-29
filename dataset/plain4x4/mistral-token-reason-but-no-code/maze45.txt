@@ -1,0 +1,63 @@
+To solve the maze, we will use the A* (A-Star) algorithm, which is an informed search algorithm that uses a heuristic function to guide the search for the shortest path from the origin to the target. The heuristic function we will use is the Manhattan distance between the current node and the target node.
+
+The Manhattan distance is calculated as follows:
+
+Manhattan_distance = |row1 - row2| + |col1 - col2|
+
+This distance gives us an estimate of how far away the target node is from the current node in terms of the number of moves required to reach it.
+
+Here's how we will apply the A* algorithm to solve the maze:
+
+1. Initialize the open list with the origin node, set its g-score (the cost of reaching the node from the origin) to 0, and its h-score (the estimated cost of reaching the target from the node) to the Manhattan distance between the origin and the target.
+
+2. While the open list is not empty:
+
+   a. Remove the node with the lowest f-score (f-score = g-score + h-score) from the open list.
+
+   b. If the node is the target, return the solution path by tracing back the parents of the nodes.
+
+   c. Expand the current node by generating its successors (neighbors).
+
+   d. For each successor:
+
+       i. Calculate its g-score by adding the cost of moving from the current node to the successor to the g-score of the current node.
+
+       ii. If the successor is not in the closed list and not in the open list, add it to the open list, set its parent to the current node, and calculate its h-score (estimated cost) using the Manhattan distance.
+
+       iii. If the successor is in the open list, check if the new g-score is lower than the existing g-score. If it is, update the successor's parent to the current node and recalculate its h-score.
+
+   e. Add the current node to the closed list.
+
+Now, let's apply the A* algorithm to the given maze:
+
+<ADJLIST_START>
+(0,3) <--> (1,3) ;
+(3,2) <--> (3,1) ;
+(2,1) <--> (2,0) ;
+(1,0) <--> (0,0) ;
+(3,0) <--> (3,1) ;
+(2,3) <--> (2,2) ;
+(3,3) <--> (3,2) ;
+(0,3) <--> (0,2) ;
+(3,0) <--> (2,0) ;
+(1,3) <--> (2,3) ;
+(3,3) <--> (2,3) ;
+(0,1) <--> (0,2) ;
+(1,1) <--> (2,1) ;
+(1,1) <--> (1,2) ;
+(0,1) <--> (0,0) ;
+<ADJLIST_END>
+<ORIGIN_START> (0,0) <ORIGIN_END>
+<TARGET_START> (3,3) <TARGET_END>
+
+1. Initialize the open list with the origin node, (0, 0). Set its g-score to 0 and its h-score to the Manhattan distance between (0, 0) and (3, 3), which is 6.
+
+   Open list: [(0, 0)], Closed list: []
+
+2. Remove the node with the lowest f-score from the open list, which is (0, 0). Its neighbors are (1, 0), (0, 1), and (0, 3).
+
+   a. (1, 0) has a g-score of 1 (0 + 1) and an h-score of 5 (|1 - 3| + |0 - 3|). Add it to the open list and set its parent to (0, 0).
+
+   b. (0, 1) has a g-score of 1 (0 + 1) and an h-score of 5 (|0 - 3| + |1 - 3|). Add it to the open list and set its parent to (0, 0).
+
+   c. (0, 3) has a g-score of 3 (0 + 3

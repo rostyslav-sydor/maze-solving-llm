@@ -1,0 +1,30 @@
+To solve this specific maze, which is given in the form of an adjacency list, we start by converting this adjacency information into a more tangible format, such as a graph data structure. From the adjacency list, we understand how each point (or "node") in the maze is connected to other points.
+
+We identify the origin as (0,0) and the target as (3,3). Using a well-known pathfinding method like Breadth-First Search (BFS), which explores the maze level by level and is a guarantee to find the shortest path if it exists, we can track paths from the entry to the exit point. The idea behind BFS for maze-solving is to systematically explore all of the adjacent nodes at the present depth prior to moving on to nodes at the next depth level, using a queue to facilitate this process.
+
+Given our setup:
+1. **Start Point (Origin)**: (0,0)
+2. **End Point (Target)**: (3,3)
+
+From (0,0), we explore its immediate neighbors using the adjacency relationships defined, then gradually move outward in search of the target (3,3). For each step, we record the path taken.
+
+To solve the maze with BFS:
+- Begin at the origin (0,0) and mark it as visited.
+- Explore and enqueue all connected nodes to (0,0), here (0,1).
+- We next explore from (0,1) to its unvisited connections, (0,2) and (0,0); (0,0) is already visited.
+- Continue this pattern checking and moving to unvisited nodes until reaching the goal (3,3).
+
+By navigating the maze based on the adjacency information, and using BFS, let's explore this specific path from point to point:
+
+- Start at (0,0), explore (0,1) because it's connected.
+- From (0,1), move to (0,2).
+- Since (0,2) connects to (1,2), move there next.
+- From (1,2), go to (2,2).
+- (2,2) connects to (2,3).
+- Move from (2,3) to (3,3).
+
+Based on the BFS technique and the maze's structure shared, the path from (0,0) to (3,3) would be as follows in the required format:
+
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (2,2) (2,3) (3,3) <PATH_END>
+
+This sequential, direct path connecting origin to target outlines a clear route through the maze using breadths-first exploration logic.

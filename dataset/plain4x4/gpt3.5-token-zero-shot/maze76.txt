@@ -1,0 +1,8 @@
+First, we need to start at the origin point (0,0) and explore the maze by following the connections in the adjacency list. We can move from point to point until we reach the target point (3,3).
+
+One possible solution for this maze is: 
+<PATH_START> (0,0) (1,0) (2,0) (2,1) (2,2) (2,3) (3,3) <PATH_END>
+
+This path moves through the maze by following the connections in the adjacency list, starting at the origin point, and making moves that lead towards the target point. Each coordinate represents a point in the maze where we move to next.
+
+By following this path, we successfully navigate through the maze from the origin point to the target point while avoiding obstacles and dead ends. The path is represented by a series of coordinates that show the route taken from start to finish.

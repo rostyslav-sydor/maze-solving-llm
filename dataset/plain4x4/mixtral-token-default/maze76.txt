@@ -1,0 +1,22 @@
+To find the path between the origin (0,0) and the target (3,3), we can apply a depth-first search (DFS) or breadth-first search (BFS) algorithm on the graph. Let's use DFS for this example:
+
+1. Start from the origin (0,0) and push it in the stack.
+2. Pop the top node from the stack.
+3. Check if the popped node is the target (3,3). If yes, end the algorithm.
+4. If not, push all unvisited neighbors of the popped node to the stack.
+5. Repeat steps 2-4 until the stack is empty or the target is found.
+
+Applying DFS on the given maze:
+
+<PATH_START>
+1. Start from (0,0) and push it in the stack. Stack: [(0,0)]
+2. Pop (0,0) and push its unvisited neighbor (1,0) to the stack. Stack: [(1,0)]
+3. Pop (1,0) and push its unvisited neighbor (2,0) to the stack. Stack: [(2,0)]
+4. Pop (2,0) and push its unvisited neighbor (1,0) to the stack. Stack: [(1,0)]
+5. Pop (1,0) and push its unvisited neighbor (1,1) to the stack. Stack: [(1,1)]
+6. Pop (1,1) and push its unvisited neighbor (2,1) to the stack. Stack: [(2,1)]
+7. Pop (2,1) and push its unvisited neighbor (2,2) to the stack. Stack: [(2,2)]
+8. Pop (2,2) and push its unvisited neighbor (3,2) to the stack. Stack: [(3,2)]
+9. Pop (3,2) and push its unvisited neighbor (3,1) to the stack. Stack: [(3,1)]
+10. Pop (3,1) and push its unvisited neighbor (3,0) to the stack. Stack: [(3,0)]
+11. Pop (3,0) and push

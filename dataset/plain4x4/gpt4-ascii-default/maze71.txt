@@ -1,0 +1,15 @@
+To solve the given ASCII maze, we can use a common maze-solving algorithm such as the Depth-First Search (DFS) or Breadth-First Search (BFS). Given that each cell can be identified by coordinates, we can track the path from the start ('S') at (1,1) to the exit ('E') at (7,7) using contiguous traversable cells (' ' spaces) around them. The '#' signs represent impassable walls.
+
+For ease of visualization, a BFS approach is useful here, as it considers all possible moves in layers, and is generally preferable for finding the shortest path in an unweighted grid like this:
+
+1. Start from the initial point (S, at (1,1)).
+2. From each point, explore all neighbouring cells that are spaces (' ') and haven't been visited yet.
+3. Each time you move to a new cell, record the move as a step in the path.
+4. Continue this process until the exit (E, at (7,7)) is reached.
+
+Executing a BFS on this maze outputting the sequence of moves would provide a solution sequence that would follow a logical path from start to finish without revisiting any cell unnecessarily.
+
+**Output based on the given maze**:
+<PATH_START> (1,1) (1,2) (1,3) (2,3) (3,3) (3,4) (3,5) (3,6) (3,7) (4,7) (5,7) (6,7) (7,7) <PATH_END>
+
+This path is one of the possible solutions, moving initially towards the right, then down whenever a right move is blocked, and finally moving right along the bottom row until the exit is reached.

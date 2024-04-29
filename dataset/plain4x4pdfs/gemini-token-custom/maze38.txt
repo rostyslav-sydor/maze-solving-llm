@@ -1,0 +1,3 @@
+<PATH_START> (0,0) (0,1) (1,1) (2,1) (3,1) (3,2) (3,3) <PATH_END>
+
+This path was found by following the edges of the adjacency list from the starting point to the ending point, while avoiding any walls. The path only uses adjacent cells, as each step in the path is to a cell that is connected to the previous cell by an edge in the adjacency list.

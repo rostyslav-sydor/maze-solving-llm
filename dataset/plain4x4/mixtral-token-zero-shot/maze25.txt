@@ -1,0 +1,9 @@
+STEP 1: Read the maze representation from user input, identify the entry and exit points.
+
+STEP 2: Create a graph using adjacency list representation, considering each cell as a node and its adjacent locations as its neighbors.
+
+STEP 3: Implement DFS (Depth First Search) or BFS (Breadth First Search) algorithm to find a path from the entry point to the exit point.
+
+STEP 4: Output the path found, enclosed by <PATH_START> and <PATH_END> tokens.
+
+Ensure that the answers are limited to 200 words and do not contain any code.

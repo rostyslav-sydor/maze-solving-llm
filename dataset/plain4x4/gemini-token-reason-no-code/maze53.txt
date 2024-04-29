@@ -1,0 +1,9 @@
+To find a solution for this maze, we can use a breadth-first search (BFS) algorithm. BFS works by starting at the entry point and then iteratively exploring all of its neighbors, then all of the neighbors of those neighbors, and so on, until the exit point is reached.
+
+Here is the reasoning behind the BFS solution:
+- BFS is a graph traversal algorithm that is guaranteed to find the shortest path between two nodes in a graph.
+- In this case, the graph is the maze, and the nodes are the cells in the maze.
+- The entry point is the starting node, and the exit point is the goal node.
+- BFS will explore all of the paths from the entry point to the exit point, and it will choose the shortest path.
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>

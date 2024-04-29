@@ -1,0 +1,7 @@
+I understand. Here is the solution for the maze you provided:
+
+<PATH_START> (1,1) (2,2) (3,3) <PATH_END>
+
+The path starts at the origin (0,0), moves up to (1,1), then right to (2,2), and finally down to the target (3,3).
+
+Note that the maze has a single path from the origin to the target, and the path is guaranteed to visit all the tokens in the maze exactly once.

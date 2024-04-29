@@ -1,0 +1,3 @@
+We can traverse the graph starting from the origin point, recursively exploring all the possible paths until we reach the target point. For each step, we record the coordinate of the token. 
+
+Upon reaching the target point, the recorded sequence of coordinates will be the solution path.

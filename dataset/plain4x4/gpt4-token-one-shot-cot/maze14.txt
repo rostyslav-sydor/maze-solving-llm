@@ -1,0 +1,15 @@
+To solve the maze, we need to analyze the adjacency list, identify possible paths, and find one that leads from the origin to the target. The adjacency list describes the connections between different nodes (coordinates) in the graph, and we have the defined start and end points.
+
+Steps to solve:
+1) Start at (0,0) and move right to (0,1)
+2) Move right to (0,2)
+3) Move down to (1,2)
+4) Move right to (1,3)
+5) Move down to (2,3)
+6) Move left to (2,2)
+7) Move down to (3,2)
+8) Move right to (3,3)
+
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (1,3) (2,3) (2,2) (3,2) (3,3) <PATH_END>
+
+This solution follows the available connections in the adjacency list, successfully reaching the target from the origin through valid pathways.

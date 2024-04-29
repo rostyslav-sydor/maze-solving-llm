@@ -1,0 +1,45 @@
+Sure! First, let's consider the movement within the maze. There are four directions to move: up, down, left, and right. In these directions, the row number will change when moving up or down, and the column number will change when moving left or right.
+
+To maintain our position in the maze, let's create two variables to track the row and column numbers:
+```javascript
+let row = 1;
+let col = 1;
+```
+These variables will keep track of where we are in the maze, and they will always start at the entry point (1,1).
+
+Now let's consider the goals. We have two goals: to reach the letter "E" and to return the shortest possible path.
+
+To keep track of the directions we've tested at each position, let's create a list of directions:
+```javascript
+let directions = [
+    "up",
+    "right",
+    "down",
+    "left",
+];
+```
+During each iteration, we'll check the direction we're going, then try to go there, making sure that we don't run into walls. At the end of each iteration, we must update our row and column numbers and check if we've reached the letter "E".
+
+To check if we're on the right path, let's also add a path variable:
+```javascript
+let path = [];
+```
+This variable will keep track of where we've been. Now the maze looks like this:
+```
++--------+
+|        |
++##S+#+   +
++###+#+#+ +
++# +#+#+#+ +
++# +#E#+#+ +
++# +# ##+# +
++# #+#  # |
++--------+
+```
+Let's check if our row and column numbers are within the maze bounds to make sure we don't walk off the maze:
+```javascript
+if (row < 1 || col < 1 || row > 7 || col > 7) {
+    return "Invalid direction, reached boundary of maze";
+}
+```
+And let's add a function to test one direction at a time and then move in it if

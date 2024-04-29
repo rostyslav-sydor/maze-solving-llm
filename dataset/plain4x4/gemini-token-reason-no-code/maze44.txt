@@ -1,0 +1,14 @@
+A simple depth-first search algorithm can be used to solve this maze. We start at the origin coordinate (0,0) and recursively explore all neighboring coordinates until we reach the target coordinate (3,3). If we reach a dead end, we backtrack and try a different path.
+
+Here is the reasoning for the solution:
+
+1. We start at the origin coordinate (0,0) and recursively explore all neighboring coordinates.
+2. We first explore the coordinate (0,1), but this leads to a dead end.
+3. We backtrack and try the coordinate (1,0), which also leads to a dead end.
+4. We backtrack and try the coordinate (1,1), which leads to the coordinate (1,2).
+5. We continue exploring and reach the coordinate (1,3), which leads to the coordinate (2,3).
+6. We continue exploring and reach the target coordinate (3,3).
+
+Here is the solution in the format of coordinate list between <PATH_START> and <PATH_END> tokens:
+
+<PATH_START> (0,0) (1,0) (1,1) (1,2) (1,3) (2,3) (3,3) <PATH_END>

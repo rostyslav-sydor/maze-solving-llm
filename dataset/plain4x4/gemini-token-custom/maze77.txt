@@ -1,0 +1,34 @@
+**SOLUTION**
+
+<PATH_START> (0,0) (0,1) (1,1) (1,2) (1,3) (2,3) (3,3) <PATH_END>
+
+
+**SOLUTION REASONING**
+
+To start with, find all the coordinates in a maze represented as an adjacency list. 
+
+Next is to identify starting coordinates by looking for a <ORIGIN_START> token, followed by <ORIGIN_END> token to identify ending coordinates and a <TARGET_END> token to identify exit coordinates.
+
+For this example, starting coordinate would be (0,0), exit coordinates would be (3,3). 
+
+Starting from starting coordinate, find all adjacent coordinates and select a coordinate which is not yet in a path. 
+In the first iteration, this would be (0,1) because (1,0) is already in the path. 
+
+Follow this same logic and select adjacent coordinate which does not intersect a wall, and is not yet part of the defined maze. 
+The selected adjacent coordinates should also not be an existing path. 
+
+For this maze, the only valid path would be (0,0), (0,1), (1,1), (1,2), (1,3), (2,3), (3,3).
+
+**SOLUTION VALIDATION**
+
+1. Selected adjacent nodes are part of the initial graph, therefore they are valid nodes for traversal and is guaranteed to not run into any walls.
+
+
+2. Selected path does not cross any walls, because all the selected coordinates do not have walls around it.
+
+
+3. Selected paths use only adjacent nodes, that can be seen from an adjacent list, every next node is either right or down adjacent to its previous one. 
+
+**CONCLUSION**
+
+Therefore the provided solution is the shortest valid path for provided maze definition above.

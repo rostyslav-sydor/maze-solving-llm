@@ -1,0 +1,36 @@
+To solve the maze, we will use breadth-first search (BFS) algorithm. BFS is a graph traversal algorithm that explores all the nodes at the current depth before moving on to the nodes at the next depth level. In the context of a maze, this means that BFS will explore all adjacent cells (up, down, left, right) at the current location before moving on to the next level of cells.
+
+We start by initializing a queue with the starting cell and marking it as visited. Then, we dequeue a cell from the queue, check if it is the target cell, and if not, we enqueue all its unvisited neighbors. We repeat this process until the queue is empty or we find the target cell.
+
+Here's the pseudo-code for BFS:
+
+```
+function BFS(graph, start, target):
+    queue = new Queue()
+    queue.enqueue(start)
+    mark start as visited
+
+    while queue is not empty:
+        current = queue.dequeue()
+        if current is target:
+            return path from start to target
+
+        for each unvisited neighbor of current:
+            mark neighbor as visited
+            queue.enqueue(neighbor)
+
+    return no path found
+```
+
+Now, let's apply BFS to the given maze:
+
+1. We start from the origin (0,0).
+2. Enqueue (0,0) and mark it as visited.
+3. Dequeue (0,0) and check its unvisited neighbors: (1,0), (0,1).
+4. Enqueue (1,0) and (0,1), mark them as visited.
+5. Repeat the process until we find the target (3,3).
+
+The path from the origin to the target is:
+<PATH_START> (0,0) (0,1) (1,1) (1,2) (1,3) (2,3) (3,3) <PATH_END>
+
+In the form of a list, the solution is: [(0,0), (0,1), (1,1), (1,2), (1,3), (2,3), (3,3)].

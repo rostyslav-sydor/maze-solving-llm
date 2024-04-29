@@ -1,0 +1,8 @@
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (4,0) (4,1) (4,2) (4,3) (4,4) <PATH_END>
+
+Reasoning:
+Starting from the origin (0,0), we need to find a path to the target (4,4). We can follow the edges in the adjacency list to explore possible paths.
+
+From (0,0), we can go to (1,0). From there, we can go to (2,0) and then to (3,0). From (3,0), we can go to (4,0) and then to (4,1). From (4,1), we can go to (4,2) and then to (4,3). Finally, from (4,3), we can reach the target (4,4).
+
+This path does not cross any walls, as we are only following the edges in the adjacency list. Additionally, the path only uses adjacent cells, as each step is a move to a neighboring cell.

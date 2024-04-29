@@ -1,0 +1,13 @@
+We can use Depth-First Search (DFS) algorithm to find a solution for this maze. DFS algorithm starts from the entry point and explore all possible paths until it finds the exit point.
+
+Here is how DFS algorithm works:
+
+1. Start from the entry point.
+2. Mark the entry point as visited.
+3. Explore all unvisited neighbors of the current point.
+4. If any of the neighbors is the exit point, return the path from the entry point to the exit point.
+5. If none of the neighbors is the exit point, backtrack to the previous point and continue exploring from there.
+
+Applying DFS algorithm to the given maze, we can find the following solution:
+
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (4,0) (4,1) (4,2) (4,3) (4,4) <PATH_END>

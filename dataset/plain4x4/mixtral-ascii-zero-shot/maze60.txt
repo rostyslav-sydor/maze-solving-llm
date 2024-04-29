@@ -1,0 +1,35 @@
+ To solve the maze, I will apply the Depth-First Search (DFS) algorithm:
+
+1. Create a set to keep track of visited cells.
+2. Create a stack to help with recursion.
+3. Start with the entry point (row=1, col=1), mark it as visited, push it to the stack, and set its predecessor as None.
+4. While the stack is not empty:
+	 a. Pop a cell from the stack (current cell).
+	 b. If the current cell is the exit point, we have found a path. Follow the predecessors back to the entry point to get the path coordinates.
+	 c. Check all its possible neighbors (up, down, left, right) and visit any unvisited ones. Add the visited cells to the stack and set their predecessor as the current cell.
+5. If at any point the stack becomes empty and the exit point hasn't been visited, then there is no path.
+
+Let's implement this algorithm:
+```php
+function solveMaze(array &$maze, int $sRow, int $sCol, int $eRow, int $eCol): array {
+    $rows = count($maze);
+    $cols = count($maze[0]);
+    $visited = array_fill(0, $rows, array_fill(0, $cols, false));
+    $stack = [['row' => $sRow, 'col' => $sCol, 'prev' => null]];
+    $visited[$sRow][$sCol] = true;
+
+    while (!empty($stack)) {
+        $curr = array_pop($stack);
+        $row = $curr['row'];
+        $col = $curr['col'];
+
+        if ($row === $eRow && $col === $eCol) {
+            $path = [];
+            while ($curr !== null) {
+                array_unshift($path, array($curr['row'], $curr['col']));
+                $curr = $curr['prev'];
+            }
+            return ['path' => $path, 'success' => true];
+        }
+
+        $neighbors = [[$row - 1, $col], [$row + 1, $col], [$

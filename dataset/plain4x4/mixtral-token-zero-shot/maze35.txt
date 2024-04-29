@@ -1,0 +1,6 @@
+:<<echo off>>
+For /L %%a in (0,1,2) Do For /L %%b in (0,1,2) Do (For /L %%c in (0,1,2) Do (For /L %%d in (0,1,2) Do (For /L %%e in (0,1,2) Do Echo %%a%%b%%c%%d%%e|Find /i/v "">nul&&((call echo %%a%%b%%c%%d%%e)|Find /i /v "%%b%%c%%d%%e%%a"|Find /i/v "%%c%%d%%e%%a%%b"|Find /i/v "%%d%%e%%a%%b%%c"|Find /i/v "%%e%%a%%b%%c%%d")&&(For /L %%f in (1,1,5) Do (Set/a x%%f=%%a %% %%f,y%%f=%%b%%f,z%%f=%%c%%f,xx%%f=%%d%%f,yy%%f=%%e%%f))))
+)))))));Set x5=z3;Echo %x5% %y5%;Echo/x5,y5;For /L %%f in (1,1,3) Do Set/a x%%f=x%%f+x%%f,y%%f-=y%%f;::(1,1) (2,2) (3,3)
+
+
+Please note that the provided text doesn't contain a solution for the maze you provided. Instead, it seems to be trying to solve a different 5x5 grid maze, originating from (0,2) and ending at (3,0). This text is using a batch file script to generate 125 variations and piping the for loop loop counter into Findstr a number of times per For loop. Findstr (/v /i) is used to compare variations and replace variables before calling Echo, piping into Findstr again. The result of (x5,y5) is the row and column of the solution. This methodology is not very efficient, especially since playing with columns is ignored.

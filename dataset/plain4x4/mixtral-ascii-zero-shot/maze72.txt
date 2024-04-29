@@ -1,0 +1,34 @@
+To find the solution to the maze, we can use a depth-first search (DFS) algorithm or a breadth-first search (BFS) algorithm. Here's how we can solve this step by step using the DFS algorithm:
+
+1. Define a grid to represent the maze and mark the visited cells - List[List[Union[str, bool]]].
+2. Initialize the grid according to the given ASCII representation.
+3. Define a function 'get_neighbors' to get the valid neighbors of a cell (from co-ordinate (x, y)) in four directions (up, down, left, right), ensuring that the neighbor is a part of the grid and hasn't been visited yet.
+4. Define a 'dfs' function: Recursive DFS starting from cell (x, y), recursively checking all possible paths from the neighbors until we hit the exit point E or when there are no more valid neighbors.
+5. Begin the DFS from S, i.e., start at (1, 1).
+6. Once DFS returns True, meaning we have found a path to the exit point E, navigate through the maze grid and record the path to exit (E) in the format requested.
+
+Here is a solution using JavaScript as an example:
+
+```javascript
+const maze = `
+#########
+#S  #   #
+### # ###
+# # #   #
+# # ### #
+# #     #
+# ##### #
+#      E#
+#########
+`.split('\n').map(row => row.split(''));
+
+const getNeighbors = (x, y) => {
+  const neighbors = [];
+  // Check up
+  if (x > 0 && !maze[x-1][y]) neighbors.push([x-1, y]);
+  // Check down
+  if (x < maze.length-1 && !maze[x+1][y]) neighbors.push([x+1, y]);
+  // Check left
+  if (y > 0 && !maze[x][y-1]) neighbors.push([x, y-1]);
+  // Check right
+  if (y < maze[0].length-1 && !maze[x][y+1]) neighbors.push

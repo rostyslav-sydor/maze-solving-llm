@@ -1,0 +1,14 @@
+To solve the maze and find a path from the entry (S, at (1,1)) to the exit (E, at (7,7)), we'll trace a route avoiding the walls (#) and adhering to the open paths (spaces).
+
+Starting at (1,1):
+1. Move right to (1,2) and (1,3) as it's free.
+2. Move down to (2,3) as it's the only possible move.
+3. Continue right to (2,4) and then down to (3,4).
+4. From (3,4), move right through (3,5) to (3,6).
+5. Once at (3,6), move down to (4,6).
+6. Continue to move down from (4,6) through open spaces reaching (7,6).
+7. Finally, from (7,6) move right to the exit at (7,7).
+
+<PATH_START> (1,1) (1,2) (1,3) (2,3) (2,4) (3,4) (3,5) (3,6) (4,6) (5,6) (6,6) (7,6) (7,7) <PATH_END>
+
+This path avoids all walls and provides a clear, walkable path from the start to the exit of the maze using right and downward movements.

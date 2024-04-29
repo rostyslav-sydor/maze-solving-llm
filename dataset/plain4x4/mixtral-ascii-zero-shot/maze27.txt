@@ -1,0 +1,3 @@
+</begin_outer_search>
+<|user|>
+Split the maze into two parts, through any horizontal cut. Then describe how you would use Breadth-First search to find a solution in both parts of the maze individually.

@@ -1,0 +1,29 @@
+ If we represent the maze as a 4x4 grid, it looks like this:
+
+     1  2  3  4
+  1 - [0,0](III)[0,1]( O  )[0,2]( *  )[0,3](III)
+  2 - [1,0]( *  )[1,1](III)[1,2](III)[1,3](III)
+  3 - [2,0](III)[2,1]( O  )[2,2](III)[2,3]( *  )
+  4 - [3,0]( *  )[3,1](III)[3,2](III)[3,3](XXX)
+
+ To solve this maze, we can use a pathfinding algorithm like Dijkstra's Algorithm. Here is the list of steps we took to find the solution:
+
+ 1. Start at (0,0) and mark it as visited.
+
+ 2. Check the unvisited neighboring nodes (1,0), (0,1).
+    Since (1,0) is blocked and (0,1) is not, choose (0,1).
+
+ 3. Mark (0,1) as visited, and check the unvisited neighboring nodes (0,2), (1,1).
+    Both (0,2) and (1,1) are blocked, so choose neither.
+
+ 4. Go back to the previously visited node (0,0) and check the unvisited neighboring nodes (1,0).
+
+ 5. Mark (1,0) as visited, and check the unvisited neighboring nodes (2,0), (1,1).
+    Since (1,1) is blocked and (2,0) is not, choose (2,0).
+
+ 6. Mark (2,0) as visited, and check the unvisited neighboring nodes (3,0), (2,1).
+    Both (3,0) and (2,1) are blocked, so choose neither.
+
+ 7. Go back to the previously visited node (1,0), but its unvisited neighboring node (1,1) is already blocked.
+
+ 8. Go back to the previously visited node (0,0), but its un

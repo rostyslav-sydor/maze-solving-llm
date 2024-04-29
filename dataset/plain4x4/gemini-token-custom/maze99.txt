@@ -1,0 +1,5 @@
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (2,2) (3,2) (3,3) <PATH_END>
+
+Reasoning: We start at the origin (0,0) and move right to (0,1). Then we move down to (0,2) and right to (1,2). Next, we move down to (2,2) and right to (3,2). Finally, we move up to (3,3), which is the target.
+
+Checking for validity: We can see that each step we take is to an adjacent cell. Also, we never cross any walls, since we only move in the four cardinal directions. Therefore, our solution is valid.

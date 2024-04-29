@@ -1,0 +1,13 @@
+To solve this maze, starting at S (1,1), we would explore available pathways while avoiding walls marked by '#'. The goal is to path through to E (7,7).
+
+From the starting position:
+1. Move right from (1,1) to (1,7) navigating through open spaces.
+2. Move down to (7,7) through the rightmost vertical corridor.
+
+There are no other junctions or decisions to make, as other pathways are blocked by walls. This route is direct and straightforward due to the linear nature of the open paths in the maze's design.
+
+Final path:
+<PATH_START> (1,1) (1,2) (1,3) (1,4) (1,5) (1,6) (1,7) (2,7) (3,7) (4,7) (5,7) (6,7) (7,7) <PATH_END>
+
+
+This path covers movement to the right within the first row until reaching the far right, followed by a single vertical move downward all the way to the exit row. It's the only viable pathway given the wall layout in the maze.

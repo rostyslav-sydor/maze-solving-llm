@@ -1,0 +1,60 @@
+Analyzing the provided maze adjacency list for a path from origin (0,0) to target (3,3), we can use Breadth-First Search (BFS) for its simplicity and efficiency in finding the shortest path in unweighted graphs like this one:
+
+We'll represent the graph adjacency as:
+```
+(1,2) <-> (1,3)
+(3,2) <-> (3,1)
+(3,3) <-> (3,2)
+(0,1) <-> (1,1)
+(0,0) <-> (1,0)
+(2,0) <-> (1,0)
+(1,2) <-> (2,2)
+(0,2) <-> (0,1)
+(2,0) <-> (3,0)
+(2,1) <-> (2,0)
+(3,3) <-> (2,3)
+(2,2) <-> (2,3)
+(1,3) <-> (0,3)
+(3,1) <-> (3,0)
+(0,3) <-> (0,2)
+```
+Origin is (0,0) and target is (3,3).
+
+Using BFS, we perform the following steps:
+
+1. **Initialization:**
+   - Start from the origin (0,0).
+   - Enqueue it, marking the node as visited.
+
+2. **Exploring Neighbors:**
+   - Use a queue to explore all reachable nodes in the graph level-by-level:
+
+Iteration through BFS:
+- Start at (0,0). Neighbors: (1,0)
+  - Enqueue (1,0)
+- From (1,0), Neighbors: (2,0)
+  - Enqueue (2,0)
+- From (2,0), Neighbors: (3,0), (2,1)
+  - Enqueue (3,0)
+  - Enqueue (2,1)
+- From (3,0), Neighbors: (3,1)
+  - Enqueue (3,1)
+- From (2,1), Neighbors: No new neighbors
+- From (3,1), Neighbors: (3,2), (2,1)
+  - Enqueue (3,2)
+- From (3,2), Neighbors: (3,3)
+  - Enqueue (3,3)
+
+3. **Reaching Target:**
+   - Path is found when we reach (3,3).
+   
+Backtracking through BFS for constructing the path:
+- Start from (3,3) backtracked to (3,2)
+- From (3,2) backtracked to (3,1)
+- From (3,1) backtracked to (3,0)
+- From (3,0) backtracked to (2,0)
+- From (2,0) backtracked to (1,0)
+- From (1,0) backtracked to (0,0)
+
+Therefore, assembling the complete path:
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (3,2) (3,3) <PATH_END>

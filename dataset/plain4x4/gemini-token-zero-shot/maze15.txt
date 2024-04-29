@@ -1,0 +1,9 @@
+1. Start from the origin (0,0).
+2. Move to (0,1).
+3. Move to (1,1).
+4. Move to (1,2).
+5. Move to (1,3).
+6. Move to (2,3).
+7. Move to (3,3).
+
+<PATH_START> (0, 0) (0, 1) (1, 1) (1, 2) (1, 3) (2, 3) (3, 3) <PATH_END>

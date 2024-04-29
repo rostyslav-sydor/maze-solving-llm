@@ -1,0 +1,5 @@
+Depth-first search starts at the origin token and goes as far as it can along each branch before backtracking.
+
+Following this approach, from origin token at (0, 0) we go to (0, 1), then to (0, 2), (0, 3), (1, 3), (2, 3), (3, 3) (target token) which is a valid path as follows:
+
+<PATH_START> (0, 0) (0, 1) (0, 2) (0, 3) (1, 3) (2, 3) (3, 3) <PATH_END>

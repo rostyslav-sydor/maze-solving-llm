@@ -1,0 +1,18 @@
+To solve the maze outlined in the adjacency list given, we start by mapping the connections between the points in a more understandable manner:
+
+1. Parse the adjacency list to create a graph.
+2. Starting at the origin (0,0), use a pathfinding algorithm such as BFS or DFS to find a path to the target (3,3).
+3. Trace the path and output the coordinates in sequence.
+
+Considering the parsing of adjacency list, we establish a connection between the nodes listed, e.g., (3,2) connects to (3,3), (2,2), and (3,1). Similarly, (3,3) links to (3,2) and (2,3). We continue forming these connections for all entries in the list.
+
+For clarity, in the optimal path solution phase:
+- Start at the origin (0,0),
+- Move based on the traversable paths dictated by the adjacency connections,
+- Continue until reaching the target (3,3),
+- Document each node coordinate visited in sequence to form the path.
+
+Finally, the shortest path can now be be produced. 
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>
+
+This path avoids dead ends and unnecessary loops, offering a direct route from start to finish.

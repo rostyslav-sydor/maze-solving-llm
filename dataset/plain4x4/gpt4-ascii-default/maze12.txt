@@ -1,0 +1,18 @@
+To solve the maze, we can navigate the open paths (' ') starting from the entry point (1,1) and aim to reach the exit point (7,7). We utilize methods like Depth First Search (DFS) or Breadth First Search (BFS) for such tasks, although it's often easier to manually find a path in a small maze like this.
+
+Starting at S (1,1):
+1. Move right to (1,2)
+2. Continue right to (1,3), (1,4), and (1,5)
+3. Move down to (2,5)
+4. Continue moving down to (3,5)
+5. Turn left to (3,4)
+6. Move down to (4,4)
+7. Continue down to (5,4)
+8. Move right to (5,5)
+9. Go down to (6,5)
+10. Continue moving down to (7,5)
+11. Finally, move right to (7,6) and (7,7) to reach 'E'.
+
+This forms a path from 'S' to 'E' without retracing steps or hitting walls.
+
+<PATH_START> (1,1) (1,2) (1,3) (1,4) (1,5) (2,5) (3,5) (3,4) (4,4) (5,4) (5,5) (6,5) (7,5) (7,6) (7,7) <PATH_END>

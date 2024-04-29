@@ -1,0 +1,3 @@
+In order to solve the maze, one should start at the <ORIGIN_START> token and follow the adjacencies until the <TARGET_END> token is reached. At each step of the way, one should check if there are multiple possible next steps. If so, it may be necessary to backtrack and explore other paths. The provided adjacency list can be used to determine which nodes are adjacent to each other.
+
+For the provided maze, there is a single path from the <ORIGIN_START> to the <TARGET_END>. This path is: <PATH_START> (0,0) (1,0) (2,0) (3,0) (4,0) (4,1) (4,2) (4,3) (3,3) (3,4) (4,4) <PATH_END>.

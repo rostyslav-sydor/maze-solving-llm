@@ -1,0 +1,68 @@
+To find the solution to the maze represented by the adjacency list and specified entry and exit points, we need to construct the graph from the adjacency list and then find the shortest path from the origin (entry point) to the target (exit point).
+
+Given the adjacency list and origin and target:
+- Origin: (0,0)
+- Target: (3,3)
+- Adjacency list: 
+  - (2,3) <--> (3,3)
+  - (3,1) <--> (2,1)
+  - (0,3) <--> (0,2)
+  - (3,1) <--> (3,0)
+  - (1,0) <--> (2,0)
+  - (2,0) <--> (2,1)
+  - (0,2) <--> (0,1)
+  - (2,3) <--> (1,3)
+  - (1,0) <--> (0,0)
+  - (1,1) <--> (2,1)
+  - (0,1) <--> (0,0)
+  - (3,2) <--> (3,3)
+  - (3,2) <--> (2,2)
+  - (1,2) <--> (1,1)
+  - (0,3) <--> (1,3)
+
+We construct the graph as a dictionary where keys are vertex coordinates and values are sets of directly connected coordinates. Once the graph is built, we can solve the maze problem using a breadth-first search algorithm to find the shortest path from the origin to the target.
+
+Algorithmically:
+1. Create the graph representation `G` from the adjacency list.
+2. Initialize a queue and visited set starting with the origin.
+3. Process each node:
+   - If the node is the target, then build the found path and exit.
+   - Otherwise, add all unvisited and adjacent nodes to the queue.
+4. Return the path found.
+
+Using the given adjacency list for this specific maze:
+
+```
+G = {
+    (0,0): {(1,0), (0,1)},
+    (1,0): {(0,0), (2,0)},
+    (2,0): {(1,0), (2,1)},
+    (2,1): {(2,0), (1,1), (3,1)},
+    (3,1): {(3,0), (2,1), (3,2)},
+    (3,2): {(3,3), (2,2), (3,1)},
+    (3,3): {(2,3), (3,2)},
+    (2,3): {(1,3), (3,3)},
+    (1,3): {(0,3), (2,3)},
+    (0,3): {(1,3), (0,2)},
+    (0,2): {(0,3), (0,1)},
+    (0,1): {(0,0), (0,2)},
+    (1,1): {(2,1), (1,2)},
+    (1,2): {(1,1)},
+    (2,2): {(3,2)}
+}
+```
+
+Using Breadth-First Search starting from (0,0), we find the shortest path to (3,3):
+
+Solution path: 
+- Start at (0,0)
+- Go to (1,0) through direct connection.
+- Move to (2,0) 
+- Then navigate from (2,0) to (2,1) 
+- From there, move to (3,1) which is connected.
+- Go to (3,2) - allows direct movement to (3,3) the destination.
+
+The path from origin (0,0) to target (3,3) is:
+```
+<PATH_START> (0,0) (1,0) (2,0) (2,1) (3,1) (3,2) (3,3) <PATH_END>
+```

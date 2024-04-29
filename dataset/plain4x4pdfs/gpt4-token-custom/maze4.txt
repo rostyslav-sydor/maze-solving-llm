@@ -1,0 +1,25 @@
+To solve the maze given in the adjacency list format, I followed these steps:
+
+1. **Graph Representation**: First, I parsed the adjacency list format into a usable graph structure where each cell in the grid is a node and each connection (directed path) between two cells is represented as an edge between nodes. 
+
+2. **Define Start and End Points**: According to the description, the maze starts at `(0,0)` and the target is `(3,3)`.
+
+3. **Path Finding Algorithm**: I used the Breadth-First Search (BFS) algorithm, a common strategy for traversing graphs and finding the shortest path between two nodes. BFS explores all the adjacent nodes at the present depth prior to moving on to nodes at the next depth level, making it highly suitable for unweighted graphs like our maze.
+
+   - I created a queue to keep the nodes to be explored next, starting with `(0,0)`.
+   - Each node in the queue also stored the path taken to reach it, enabling easy path reconstruction.
+   - As nodes were visited, they were marked to avoid revisiting and potential loops.
+   - The BFS proceeded by enqueuing all unvisited, adjacent nodes of the current node, capturing paths as it went.
+   - This process continued until the exit node `(3,3)` was reached.
+
+4. **Path Reconstruction**: Once the BFS reached `(3,3)`, the path leading to it was backtracked from the node sequence stored during the BFS execution.
+
+5. **Verification**: Finally, after obtaining the path, I cross-verified that every consecutive pair of nodes (coordinates) in the path were indeed directly connected in the original graph, ensuring that the path did not cross any walls and used only valid adjacencies.
+
+Given below is the solution path derived from applying the BFS algorithm to the maze:
+
+<Path Start>
+(0,0) (1,0) (2,0) (2,1) (2,2) (2,3) (3,3)
+<Path End>
+
+This solution traces a path that successfully moves through adjacent nodes defined in the adjacency list, starting from the origin `(0,0)` and reaching the target `(3,3)` directly with valid adjacency at every step, thus solving the maze.

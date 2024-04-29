@@ -1,0 +1,37 @@
+Okay, let's start analyzing the maze!
+
+The maze's entry point is at row 1, column 1 (position S in the ASCII maze) and exit point is at row 7, column 7 (position E in the ASCII maze).
+
+To find a solution, let's first walk through path possibilities:
+
+1. We can choose to walk towards the first not marked with # character cell in the row 1.
+2. We can choose to walk towards the first not marked with # character cell in the column 1.
+
+Let's say we choose option 1 - walking towards the first not marked with # character cell in the row 1. 
+
+The first not marked with # cell that we can reach is (1,8). 
+
+Now, we got (1,8) cell and we need only translate that to a (row, column) form. Set row = 1 and column = 8. Now we have reached position (1,8).
+
+Continuing with the same approach:
+
+Let's try to walk to the first not marked with # character cell along the column 1 that we have not reached yet.
+
+The cell that we will reach is (2,1).
+
+Again, we translate that to a (row, column) form. Set row = 2 and column = 1. Now we have reached position (2,1).
+
+Continuing with this approach, we can reach a few more cells. Listing them out in the (row, column) order from the ASCII maze representation:
+
+(3,1), (4,1), (5,1)
+
+We are not reaching the exit point by any of these paths. 
+
+However, if we try the option 2 - walking towards the first not marked with # character cell in the column 1, we land at (7,2). 
+
+Again, translating that into a (row, column) form: row = 7 and column = 2. Now we have reached position (7,2).
+
+Continuing walking towards the exit point along that column, we reach two more cells. Listing them out in the (row, column) order from the ASCII maze representation:
+
+(6,2), (5,2)
+

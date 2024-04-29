@@ -1,0 +1,33 @@
+The solution for the maze:
+
+#########
+#S  #   #
+# # # # #
+# # # # #
+# ### ###
+#   #   #
+### ### #
+#      E#
+#########
+
+is:
+
+(1, 1) -> (1, 2) -> (1, 3) -> (2, 3) -> (3, 3) -> (4, 3) -> (4, 4) -> (5, 4) -> (6, 4) -> (6, 3) -> (6, 2) -> (6, 1) -> (7, 1) -> (7, 2) -> (7, 3) -> (7, 4) -> (7, 5) -> (7, 6) -> (7, 7)
+
+The coordinate list for the solution between <PATH_START> and <PATH_END> tokens:
+
+<PATH_START> (1, 1) (1, 2) (1, 3) (2, 3) (3, 3) (4, 3) (4, 4) (5, 4) (6, 4) (6, 3) (6, 2) (6, 1) (7, 1) (7, 2) (7, 3) (7, 4) (7, 5) (7, 6) (7, 7) <PATH_END>
+
+Let's think step by step:
+
+1. Identify the start and end coordinates of the maze:
+   - Start: (1, 1)
+   - End: (7, 7)
+
+2. Use an algorithm, like A* search or Dijkstra's algorithm, to find the shortest path between the start and end coordinates while avoiding walls.
+
+3. Convert the solution path into a coordinate list between <PATH_START> and <PATH_END> tokens.
+
+4. Output the solution:
+
+<PATH_START> (1, 1) (1, 2) (1, 3) (2, 3) (3, 3) (4, 3) (4, 4) (5, 4) (

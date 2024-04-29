@@ -1,0 +1,3 @@
+The provided maze represented as an adjacency list can be solved by performing a depth-first search or breadth-first search algorithm. Starting from the origin point, the algorithm would explore all adjacent paths until it reaches the target point. The solution path would include the sequence of coordinates traversed from the origin to the target.
+
+Here is an example solution for the given maze using depth-first search: <PATH_START> (0,0) (1,0) (1,1) (1,2) (1,3) (2,3) (3,3) <PATH_END>

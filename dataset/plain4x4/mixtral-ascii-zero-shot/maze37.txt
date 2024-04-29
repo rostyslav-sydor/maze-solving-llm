@@ -1,0 +1,63 @@
+To generate a possible path through the maze, we can use a graph search algorithm like Dijkstra's algorithm or A\* search algorithm. Since this maze is relatively simple, we will apply Dijkstra's algorithm manually. For brevity, we will not fully update the maze image for each iteration but describe the process.
+
+Starting at the entry point (1,1), mark current position as "1". Here, the number denotes the distance in hops from the start and will be helpful for path reconstruction. Exclude walls from the iteration.
+
+     1#
+# S      #
+# ##### #
+#   # # #
+# ##### #
+#   #   #
+# ### ###
+#      E#
+#########
+
+From the current position, look at all neighboring cells that are not walls (up, down, left, and right) and add them to the queue if their current distance label is 0 (not yet included in the process). Increment their distance by 1 and mark them as "2".
+
+     1#
+# S2     #
+# ##### #
+# 2# # #
+# ##### #
+# 2#   #
+# ### ###
+#      E#
+#########
+
+Now, the cell with the smallest distance label in the queue, i.e., (1,3), becomes the next current position:
+
+     1#
+# S 2    #
+# ##### #
+#   # # #
+# ##### #
+#   # 2 #
+# ### 2 #
+#      E#
+#########
+
+Repeat the process: find adjacent, not-yet-processed cells and update their distance labels.
+
+     1#
+# S4   2 #
+# ##### #
+#   # # #
+# ##### #
+#   # 22#
+# ### 2 #
+#      E#
+#########
+
+This keeps going until we label the exit with the smallest distance value among the current possible options:
+
+     1#
+# S8   2 3#
+# ##### #
+#   # # 5#
+# ##### #
+#   # 22#
+# ### 26#
+#      E7#
+#########
+
+Now we can go backward, starting from the exit point and following the smallest distance

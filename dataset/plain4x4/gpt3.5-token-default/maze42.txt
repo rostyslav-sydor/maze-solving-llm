@@ -1,0 +1,5 @@
+The solution for this maze is to move from (0,0) to (3,3) as follows: 
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>
+
+The path takes you through the maze by moving right, down, left, up, right, right, and finally up to reach the target at (3,3). This path ensures that you navigate through the maze without any obstacles and reach the exit point successfully. The maze is solved by following the connected nodes in the adjacency list from the starting point to the target point. The coordinates in the path list show the sequence of movements taken to reach the destination.

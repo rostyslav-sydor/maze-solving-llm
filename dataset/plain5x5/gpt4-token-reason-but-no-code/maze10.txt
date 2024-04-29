@@ -1,0 +1,30 @@
+To solve the maze represented by the adjacency list, we will employ a breadth-first search (BFS) strategy, which is a common graph traversal technique effective for unweighted graphs or mazes like this one, where all moves have equal cost or distance. BFS is suitable here because it explores all possible moves from a start position systematically before moving deeper, which ensures that once it reaches the target, it has found the shortest path.
+
+### Breakdown of the adjacency list:
+We need to understand the connections between points provided in the maze. Each pair represents a direct connection between two points. The Maze Entry point is (0,0) and the Exit point is (4,4).
+
+### Steps:
+1. From the origin (0,0), look at adjacent nodes and enqueue them.
+2. Dequeue the first node and explore all its neighbors, marking nodes as visited to avoid revisiting and prevent infinite loops.
+3. Repeat until the target node (4,4) is found.
+4. Track the path from the target to the origin by backtracking from the exit to entrance using a predecessor or parent marking during the BFS.
+
+### Application:
+Starting BFS from (0,0), you explore neighbors systematically. This exploration, following the BFS queuing of neighbor nodes, ultimately leads to the exit node (4,4). The BFS ensures the first time you reach (4,4), you have found the shortest path.
+
+### Result:
+By applying BFS to this adjacency graph, we find the following path which is one of the shortest ways to (4,4) from (0,0):
+
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (4,0) (4,1) (4,2) (4,3) (4,4) <PATH_END>
+
+### Reasoning:
+- (0,0) to (1,0): Connected as listed.
+- (1,0) to (2,0): Connected as listed.
+- (2,0) to (3,0): Connected as listed.
+- (3,0) to (4,0): Connected as listed.
+- (4,0) to (4,1): Connected as listed.
+- (4,1) to (4,2): Connected as listed.
+- (4,2) to (4,3): Connected as listed.
+- (4,3) to (4,4): Connected as listed.
+
+This solution guarantees the shortest path due to BFS’s level-by-level exploration nature.

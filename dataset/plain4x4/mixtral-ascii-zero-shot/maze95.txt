@@ -1,0 +1,25 @@
+Our aim is to find a path from the entry point to the exit point by navigating through a maze, represented in ASCII format. To find a path, we can use a search algorithm like Breadth-First Search (BFS) or Depth-First Search (DFS).
+
+Here are some general steps:
+
+1. Convert the ASCII representation into a graph data structure, consisting of nodes and edges.
+
+2. Start the search from the entry point, represented by the letter 'S'. You can create a queue for BFS or a stack for DFS to track your search.
+
+3. Expand the search from your current position. For each direction (e.g., up, down, left, and right), check if you are allowed to move in that direction (whether that direction has a wall or not) and try to explore the adjacent node.
+
+4. If you can't move in the chosen direction or the adjacent node is already visited, skip to another direction until all four directions are tried.
+
+5. Add visited nodes and their coordinates to the path. Make sure not to overwrite previous coordinates when you encounter a visited node.
+
+6. Repeat step 3 until you either reach the exit point (letter 'E') or you have exhausted all possible directions from a node and there are no more nodes to visit.
+
+7. Output the coordinates as a path between <PATH_START> and <PATH_END> tokens. Reminder: The path is represented in the format of (row, column) coordinates.
+
+Here are some hints to consider:
+
+- The maze is not symmetrical, so it might have more than one solution.
+- Be mindful of checking for repeated moves due to loops in the maze, which may lead to an infinite loop.
+- When you complete the path and reach the exit, you can simply trace back the visited nodes to find the shortest path from the entrance to the exit.
+- Confirm that in the initial ASCII representation of the maze, there is a valid path to move from point 'S' to point 'E'.
+- In this case, the result might be a path length of 15: (1,1) (2,1) (3,1) (4,1) (4,2) (4,3) (5,4) (6,

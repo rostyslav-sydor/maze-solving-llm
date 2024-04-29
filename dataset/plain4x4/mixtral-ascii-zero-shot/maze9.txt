@@ -1,0 +1,13 @@
+Here's a possible approach:
+
+1. Convert the ASCII representation to a data structure that represents the maze, like a 2D array or using a graph representation.
+2. From the S (start) coordinate, try out each coordinate around S, one by one, and see if it's a valid (not wall) coordinate.
+3. For each valid coordinate found in step 2, take the next step and follow the same process: check all surrounding coordinates.
+4. Do this process recursively till the E (end) coordinate is found or all coordinate possibilities have been exhausted.
+5. Collect and order the coordinates from the first step to the last step. This will provide the solution for the maze.
+
+ Here's the output with a coordinate list in the format you requested:
+<PATH_START> (1,1) (1,2) (2,2) (3,2) (4,2) (5,2) (5,3) (5,4) (6,4) (7,4) (7,5) (7,6) (7,7) <PATH_END>
+Note that this is just one possible solution. There could be multiple ways to solve this maze, depending on how you choose coordinates to explore at each step.
+
+I hope this helps! Let me know if you have further questions. 

@@ -1,0 +1,9 @@
+**Reasoning:**
+
+To find a solution for the maze, we can use a graph traversal algorithm such as depth-first search (DFS) or breadth-first search (BFS). We start at the entry point and search for the exit point by following the edges of the graph. When we reach the exit point, we have found a solution.
+
+**Solution:**
+
+Applying DFS to the given maze, we get the following solution:
+
+<PATH_START> (0,0) (1,0) (1,1) (1,2) (1,3) (2,3) (3,3) (4,3) (4,4) <PATH_END>

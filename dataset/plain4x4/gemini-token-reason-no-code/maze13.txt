@@ -1,0 +1,22 @@
+**Step 1: Identify the starting and ending points:**
+
+- Starting point: (0, 0)
+- Ending point: (3, 3)
+
+**Step 2: Perform a Breadth-First Search (BFS) from the starting point:**
+
+- Initialize a queue with the starting point (0, 0).
+- While the queue is not empty:
+  - Dequeue the current point (x, y) from the queue.
+  - Check if the current point is the ending point (3, 3). If yes, stop the search.
+  - Visit all the adjacent points of the current point. For each adjacent point (x', y'):
+    - If the adjacent point has not been visited before, add it to the queue.
+    - Keep track of the parent point (x, y) for each visited point.
+
+**Step 3: Trace the path back from the ending point:**
+
+- Starting from the ending point (3, 3), follow the parent points to reconstruct the path back to the starting point (0, 0).
+
+**Result:**
+
+The solution path is: <PATH_START> (0, 0) (0, 1) (0, 2) (0, 3) (1, 3) (2, 3) (3, 3) <PATH_END>

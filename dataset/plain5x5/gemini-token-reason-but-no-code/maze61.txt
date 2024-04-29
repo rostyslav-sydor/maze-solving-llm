@@ -1,0 +1,11 @@
+The maze can be solved using Depth First Search (DFS) or Breadth First Search (BFS) algorithms.
+DFS keeps track of the current path and backtracks if it hits a dead end.
+BFS explores all the possible paths at each level before moving to the next level.
+
+In this case, we will use DFS to find a solution to the maze.
+Starting from the starting point (0,0), we will explore all the possible paths until we reach the target point (4,4).
+If we hit a dead end, we will backtrack and explore a different path.
+
+Here is the solution to the maze in the required format:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (0,4) (1,4) (2,4) (3,4) (4,4) <PATH_END>

@@ -1,0 +1,7 @@
+First, we need to analyze the maze and find a path from the origin (0,0) to the target (3,3). 
+Starting at (0,0), we can move to (1,0), then to (2,0), (2,1), (2,2), and finally reach (2,3).
+From (2,3), we can move to (3,3) to reach the target.
+Therefore, the solution path is (0,0) -> (1,0) -> (2,0) -> (2,1) -> (2,2) -> (2,3) -> (3,3).
+The output path in the required format is:
+<PATH_START> (0,0) (1,0) (2,0) (2,1) (2,2) (2,3) (3,3) <PATH_END>
+This represents the coordinates to follow to successfully navigate from the origin to the target in the maze.

@@ -1,0 +1,5 @@
+<PATH_START> (0,0) (1,0) (1,1) (1,2) (1,3) (2,3) (3,3) <PATH_END>
+
+Following the adjacency list, starting from the origin (0,0), we can move right to (1,0), then down to (1,1), then right to (1,2), then right again to (1,3), then down to (2,3), and finally right to (3,3), which is the target.
+
+Checking the adjacency list, we can see that each step from one cell to the next is valid, since there is an edge between the two cells. Additionally, the path does not cross any walls, since there are no edges between cells that are not adjacent.

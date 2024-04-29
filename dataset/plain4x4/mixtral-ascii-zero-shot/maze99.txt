@@ -1,0 +1,36 @@
+To create a solution, we need a way to represent the maze in a format our artificial intelligence robot can understand. Let's create an abstract model of the maze using a 2-D array where the walls are represented by 1 and open spaces by 0.
+
+Our robot can use the A* search algorithm to find an optimal path from the starting point to the exit. Before running A*, we need to label all the dead-ends in the maze by identifying cells having more than two open neighbors, which are walls. We can label these dead-ends by setting the corresponding value to -1 in the 2-D array.
+
+Here's the pseudocode for the labelDeadEnds function that detects and labels dead-ends based on their open neighbors:
+
+```python
+def labelDeadEnds(maze):
+  rows, cols = maze.shape
+  dead_ends = []
+
+  # First iteration finds potential dead-ends by looking for cells with 2 or more open neighbors
+  for row in range(rows):
+    for col in range(cols):
+      neighbors = [(row - 1, col), (row, col - 1), (row + 1, col), (row, col + 1)]
+      open_neighbors = [maze[row, col] > 0 and maze[i, j] == 0 for (i, j) in neighbors if 0 <= i < rows and 0 <= j < cols]
+      if len(open_neighbors) > 2:
+        dead_ends.append((row, col))
+
+  # Second iteration confirms whether potential dead-ends are actual dead-ends
+  for (row, col) in dead_ends:
+    confirmed = False
+    for (i, j) in neighbors:
+      if 0 <= i < rows and 0 <= j < cols and maze[i, j] > 0 and (i, j) not in dead_ends:
+        confirmed = True
+        break
+    if not confirmed:
+      maze[row, col] = -1
+
+  return maze
+```
+
+Let's call the labelDeadEnds function with our 2-D array as input:
+
+```python
+labeled_

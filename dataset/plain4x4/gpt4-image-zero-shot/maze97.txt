@@ -1,0 +1,15 @@
+To solve the maze, we need to navigate from the entry point at (0,0) to the exit point at (3,3) while avoiding the walls. We can only move horizontally or vertically between adjacent cells that are not separated by a wall.
+
+Starting from (0,0), the only available move without a wall is down to (1,0).
+
+From (1,0), the only possible move is to the right to (1,1).
+
+From (1,1), move right again to (1,2).
+
+We can keep moving right from (1,2) to (1,3).
+
+At (1,3), we can move down to (2,3).
+
+Finally, from (2,3), we can move down to reach the exit at (3,3).
+
+Therefore, the path from entry to exit is: <PATH_START> (0,0) (1,0) (1,1) (1,2) (1,3) (2,3) (3,3) <PATH_END>. This path navigates through the maze, following accessible paths and avoiding any walls.

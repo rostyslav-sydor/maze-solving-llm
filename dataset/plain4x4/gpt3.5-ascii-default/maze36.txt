@@ -1,0 +1,3 @@
+<Path_Start> (1,1) (2,1) (3,1) (4,1) (4,2) (5,2) (6,2) (6,3) (6,4) (6,5) (5,5) (4,5) (3,5) (2,5) (2,6) (2,7) (3,7) (4,7) (5,7) (6,7) (7,7) <Path_End> 
+
+This solution navigates through the maze from the starting point (1,1) to the exit point (7,7) while avoiding walls represented by hash signs. The path goes down from the starting point, then turns left and progresses towards the exit. It carefully avoids dead ends and backtracks when necessary to find the correct route. By following this path, the maze is successfully solved.

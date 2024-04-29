@@ -1,0 +1,14 @@
+To solve the maze, we need to use the adjacency list information provided to find a path from the origin coordinate (0,0) to the target coordinate (3,3).
+
+From the adjacency list:
+
+- Start from (0,0). The adjacent rooms we can move to are (1,0) and (0,1).
+- Moving from (0,0) to (0,1), the next adjacent rooms are (0,2).
+- From (0,2), go to (1,2).
+- From (1,2), consider (1,1) and (2,2); moving towards (2,2).
+- From (2,2), the next step is (3,2).
+- Continuing from (3,2) leads to (3,3).
+
+Thus, the path from (0,0) to (3,3) is:
+
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (2,2) (3,2) (3,3) <PATH_END>

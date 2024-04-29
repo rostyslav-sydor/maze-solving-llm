@@ -1,0 +1,7 @@
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (0,4) (1,4) (2,4) (3,4) (4,4) <PATH_END>
+
+The solution is found by starting from the <ORIGIN_START> token and following the path through the adjacency list until the <TARGET_END> token is reached. The path must always follow the arrows in the adjacency list, and it must not cross any walls (represented by `;` in the adjacency list).
+
+To check if the solution is valid, we can reconstruct the path by starting from the <ORIGIN_START> token and following the arrows in the adjacency list. If the path reaches the <TARGET_END> token without crossing any walls, then the solution is valid.
+
+In this case, the solution is valid because the path follows the arrows in the adjacency list and it does not cross any walls.

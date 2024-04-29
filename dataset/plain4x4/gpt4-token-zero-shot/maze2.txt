@@ -1,0 +1,13 @@
+To solve the maze, we begin at the origin coordinate (0,0) and aim to reach the target coordinate (3,3) using the adjacency list provided. The path finding will follow a search technique like breadth-first search (BFS) or depth-first search (DFS), considering how edges connect to each node. Here is the step-by-step route:
+
+1. Start at (0,0).
+2. Using the adjacency pairs: Move to (0,1).
+3. From (0,1), go to (0,2).
+4. From (0,2), proceed to (1,2).
+5. From (1,2), move to (1,3).
+6. From (1,3), go to (2,3).
+7. From (2,3), proceed to (3,3), which is the target.
+
+Thus, the solution path through the maze is:
+
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (1,3) (2,3) (3,3) <PATH_END>

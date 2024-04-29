@@ -1,0 +1,48 @@
+ We will use a depth-first approach to solve the maze, exploring and backtracking through possible paths. In this step, we will first define the exploration function.
+```python
+def explore(position, visited, maze, path, origin, target):
+    """
+    Explore the maze from a given position to find a path to the target.
+    
+    Args:
+    - position (tuple): Current position (row, column)
+    - visited (set): Set of already visited positions
+    - maze (dict): Adjacency list representation of the maze
+    - path (list): Path of already visited positions
+    """
+    # Add current position to the path
+    path.append(position)
+
+    # Mark the current position as visited
+    visited.add(position)
+
+    # If we've reached the target, save the path
+    if position == target:
+        return True
+
+    # Try all connected positions not yet visited
+    for connected_position in maze[position]:
+        if connected_position not in visited:
+            if explore(connected_position, visited, maze, path, origin, target):
+                return True
+
+    # Backtrack: remove current position from the path
+    path.pop()
+
+    return False
+```
+Next, we will analyze the adjacency list representation of the maze, transform it into a dict, and find the origin and target positions. Then, we will apply the explore function and check the resulting path.
+
+We will need the following variables:
+- `maze_dict`: dict representation of the maze adjacency list
+- `origin_position`: origin position (row, column)
+- `target_position`: target position (row, column)
+- `visited`: set of visited positions to keep track of already visited positions
+- `path`: list of coordinates representing the path from the origin to the target
+- `solution`: Boolean flag for successful run
+
+Here's the continuation of our step-by-step solution:
+```python
+# Split the maze adjacency list string into a list of edges
+maze_list = tokens.lstrip("<ADJLIST_START>").rstrip("<ADJLIST_END>").split(";")
+

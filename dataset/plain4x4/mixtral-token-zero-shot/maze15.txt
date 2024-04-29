@@ -1,0 +1,5 @@
+This adjacency list defines a maze that is bounded between (0, 0) and (3, 3). We can start at the origin (0, 0) and move through the edges to reach the target (3, 3). Here is a path:
+
+<PATH_START> (0,0) - (0,1) - (1,1) - (1,2) - (1,3) - (2,3) - (3,3) <PATH_END>
+
+In the list above, the first and last points are the origin and the target, respectively. The points in the middle are the step-by-step coordinates that would lead to the target.

@@ -1,0 +1,11 @@
+The dimensions of the maze are 9x9. The start point is (1,1), and the end point is (7,7). To solve the maze, we will consider the following steps:
+
+* Traverse the maze starting from the start point.
+* If the cursor hits a wall or reaches the end point, return the path taken.
+
+In this context, we will represent the cursor's (8,8) as "<PATH_END>" and the starting point (1,1) as "<PATH_START>". The path in the middle will be a list of coordinates separated by a space.
+
+The maze is as below. We can see that the path from S to E travels through a few corridors. There is one possible solution where the agent starts at (1,1) and moves down one row to (2,1). From here, it goes right two columns to (2,3). It continues down to (3,3), then right to (3,6). It turns back left to (2,6) and then reaches an intersection by continuing down to (3,6). Turning left again, it goes up to (2,6). Here it makes a key decision to turn right to (2,7) and continue right to (2,8) and finally into the goal (1,9), which is the exit point.
+
+So, the solution is:
+<PATH_START> (1,1) (2,1) (2,3) (3,3) (3,6) (2,6) (1,7) (2,7) (2,8) (1,8) <PATH_END>

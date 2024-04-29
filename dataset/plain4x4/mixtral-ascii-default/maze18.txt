@@ -1,0 +1,41 @@
+ To solve the maze and extract the coordinate list, we can follow several approaches. Here, I will explain one of the simplest and most effective algorithms to solve a maze: depth-first search.
+
+First, we will define the mapping of the maze from the given ASCII representation. Each hash sign (`#`) represents a wall, and the empty spaces will be represented as path nodes.
+
+Our maze representation will be a two-dimensional list of nodes. Each node will have a row and column property, indicating its coordinates in the maze. Additionally, each node will have "east", "west", "north", and "south" properties, which will hold True if there is no wall at that direction and False if there is a wall.
+
+Here's an example node:
+
+```python
+class Node:
+    def __init__(self, row, col, content):
+        self.row = row
+        self.col = col
+        self.content = content
+        self.east = None
+        self.west = None
+        self.north = None
+        self.south = None
+```
+
+Now, let's create a representation of the given maze. Here, (1, 1) corresponds to the starting (S) coordinate, and (7, 7) is the target (E). The 'S' and 'E' coordinates can be represented as a 0 and a 2 (wall) respectively.
+
+```python
+class Maze:
+    def __init__(self, maze_text):
+        self.start = None
+        self.end = None
+        self.nodes = []
+        lines = maze_text.split("\n")
+        for row, line in enumerate(lines):
+            line = line.strip()
+            row_nodes = []
+            for col, char in enumerate(line):
+                if char == ' ':
+                    node = Node(row, col, None)
+                elif char == '#':
+                    node = Node(row, col, 2)  # wall
+                elif char == 'E' or char == 'S':
+                    node = Node(row, col, 0)  # path
+                row_nodes.append(node)
+            self.nodes.append

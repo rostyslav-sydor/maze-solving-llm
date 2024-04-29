@@ -1,0 +1,3 @@
+<PATH_START> (0,0) (1,0) (1,1) (1,2) (1,3) (2,3) (2,2) (3,2) (3,3) <PATH_END>
+
+Here's a list of coordinates between the <PATH_START> and <PATH_END> tokens to represent the solution for the given maze in the adjacency list format.

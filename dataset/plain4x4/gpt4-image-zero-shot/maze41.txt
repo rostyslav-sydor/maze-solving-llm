@@ -1,0 +1,6 @@
+To solve the maze, start at the entrance at (0,0). There’s no direct passage moving south or east from here due to walls, but you can move east to (0,1) and then (0,2). From (0,2), the path north is blocked, so proceed east to (0,3).
+
+At (0,3), you can move south to (1,3) and then further south to (2,3) since these segments have no obstructing walls. From (2,3), a move directly south to (3,3) is possible, and is also the exit point. We have successfully navigated the maze without retracing any steps or hitting dead ends.
+
+Output of the path (formatted appropriately):
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>

@@ -1,0 +1,58 @@
+To solve this maze using the given adjacency list and identifying the path from the origin (0,0) to the target (3,3), we can employ the Breadth-First Search (BFS) algorithm.
+
+### Step-by-step BFS Approach:
+
+1. **Initialize** the BFS:
+   - Start at the origin (0,0).
+   - Use a queue initialized with the origin.
+   - Maintain a dictionary for visited nodes and their predecessors for backtracking the path.
+
+2. **Parse the Adjacency List**:
+   - Convert the adjacency list (which defines edges in the form '(x1,y1) <--> (x2,y2)') into a usable format in Python (e.g., dictionaries for easy access).
+
+3. **Process the Queue**:
+   - Dequeue the front node.
+   - Mark it as visited.
+   - For each of its neighbors, do the following:
+     - If a neighbor is not visited, mark it as visited, register its predecessor, and enqueue it.
+     - If the target is reached during this search, stop the process.
+     - Continue this until the queue is empty or the target is found.
+
+4. **Backtrack the Path**:
+   - Starting from the target node (3,3), backtrack using the predecessors' dictionary captured during BFS until the origin is reached to reconstruct the path.
+
+### Execution:
+- **Initialization**: Start at (0,0).
+- **Parsing**:
+  ```
+  Adjacency List in graph form:
+  {
+    (0,0): {(0,1), (1,0)},
+    (0,1): {(0,0), (0,2)},
+    (0,2): {(0,1), (0,3), (1,2)},
+    (0,3): {(0,2), (1,3)},
+    (1,0): {(0,0), (1,1)},
+    (1,1): {(1,0), (2,1)},
+    (1,2): {(1,3), (0,2)},
+    (1,3): {(1,2), (2,3), (0,3)},
+    (2,0): {(3,0), (1,0)},
+    (2,1): {(1,1), (2,2), (3,1)},
+    (2,2): {(2,1), (3,2)},
+    (2,3): {(1,3), (3,3)},
+    (3,0): {(3,1), (2,0)},
+    (3,1): {(3,0), (3,2), (2,1)},
+    (3,2): {(3,1), (3,3), (2,2)},
+    (3,3): {(3,2), (2,3)}
+  }
+  ```
+- **BFS Execution**:
+  - Follow through the BFS algorithm as described.
+  
+- **Reconstruct and Return Path**:
+  - Backtrack the path from (3,3) to (0,0).
+
+After executing the BFS and backtracking the path, the solution path traced is:
+```
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (2,1) (2,2) (3,2) (3,3) <PATH_END>
+```
+This provides a valid path through the maze from the origin to the target.

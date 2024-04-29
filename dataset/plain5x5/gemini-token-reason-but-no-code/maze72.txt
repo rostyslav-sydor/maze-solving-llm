@@ -1,0 +1,7 @@
+Breadth-first search can be used to find the shortest path in a maze. 
+Starting from the origin, we can level-wise explore the maze by searching for adjacent nodes. 
+Nodes that are not visited are added to a queue and are visited in the order of insertion. 
+Once we reach the target, the path can be reconstructed by backtracking from the target to the origin. 
+The following is a solution to the given maze:
+
+<PATH_START> (0,0) (0,1) (1,1) (1,2) (1,3) (1,4) (2,4) (3,4) (4,4) <PATH_END>

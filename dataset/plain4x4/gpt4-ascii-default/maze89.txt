@@ -1,0 +1,19 @@
+To find a path through the maze, we can visually trace from the start (S) at (1,1) to the end (E) at (7,7), avoiding walls ('#') and stepping only on spaces. Following the simplest route from the start, we would move right and downwards when possible.
+
+<PATH_START> 
+(1,1) (1,2) (1,3) (1,4) (1,5) 
+(2,5) 
+(3,5) (3,6) (3,7) 
+(4,7) 
+(5,7) 
+(6,7) 
+(7,7) 
+<PATH_END>
+
+Rationalizing each step:
+- Starting at (1,1) and moving to the right (1,5).
+- Taking the first opportunity to move downward when reaching (2,5).
+- Continuing downward until a path to slowly move right and down opens up at intermittent points (3,5 to 3,7).
+- Continue moving downward directly from (4,7) till (7,7), as there are no walls blocking the straight vertical movement.
+
+This provides a clear and effective path from entry to exit.

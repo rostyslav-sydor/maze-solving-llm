@@ -1,0 +1,10 @@
+The path should follow the adjacency list from the starting point to the ending point and it must follow the rule: to proceed to the next vertex in the solution path, this vertex must be both adjacent to the current vertex in the adjacency list and the coordinates of the vertex must progress either by 1 row or 1 column from the current vertex.
+
+The only path that meets all the above criteria is: <PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>\
+
+To confirm the solution, following points can be checked:
+
+1. All coordinates progress by 1 row or 1 column
+2. All transitions between coordinates can be found in the adjacency list
+3. Solution path leads from the starting cell to the endpoint cell
+4. Solution path does not pass through any walls or obstacles

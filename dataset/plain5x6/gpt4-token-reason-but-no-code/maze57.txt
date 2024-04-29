@@ -1,0 +1,21 @@
+To find a solution to the maze, we start by converting the maze's adjacency list into a data structure that represents the grid as nodes connected in a graph. Here, each node corresponds to a coordinate in the maze, and edges between the nodes are represented by the pairings in the adjacency list. 
+
+To solve this puzzle, we use a graph traversal algorithm, Breadth-First Search (BFS), which is ideal for finding the shortest path in an unweighted graph like this one. BFS explores the maze layer by layer out from the starting node, guaranteeing that the first time it encounters the target node, it has found the shortest possible path. The algorithm also keeps track of each node's parent, which allows us to reconstruct the path once we reach the destination.
+
+Given the adjacency list, we map out the connections and implement BFS starting from the origin node (0,0) and aiming to reach the target node (4,5). Throughout the traversal, we keep a record of each node's parent. After reaching the target node, we trace back through the parent nodes starting from the target to the origin to reconstruct the path.
+
+**Applying the BFS step by step for this specific maze:**
+
+1. Start at the origin (0,0), with initial neighbors (0,1) and (1,0).
+2. Continue exploring neighbors:
+   - From (0,1), visit (1,1).
+   - From (1,0), visit (2,0).
+   - This exploration expands layer by layer, considering unvisited neighbors of current nodes.
+3. Gradually explore all nodes till we reach (4,5).
+4. Trace back from (4,5) to the origin using the parent records, establishing the path.
+
+After running BFS and determining the sequence of nodes (coordinates) visited from (0,0) to (4,5), the complete path is:
+
+<PATH_START> (0,0) (0,1) (1,1) (2,1) (2,2) (1,2) (1,3) (2,3) (2,4) (3,4) (3,5) (4,5) <PATH_END>
+
+This path describes the shortest route from the starting point to the target in the described maze.

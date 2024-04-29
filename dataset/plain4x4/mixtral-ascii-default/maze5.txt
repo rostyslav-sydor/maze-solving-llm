@@ -1,0 +1,11 @@
+Since we prefer solutions that humans would come up with, I would suggest following these steps:
+
+- Find the maze entry point.
+- Explore the maze by going straight and turning right when encountering a wall.
+- After reaching the end, retrace the steps based on the metrics established in the process of exploration.
+
+Considering the maze problem presented above, the solution path (in human steps) is as follows:
+(1,1) -> (1,2) -> (1,3) -> (1,4) -> (1,5) -> (1,6) -> (1,7) -> (1,8) -> (2,8) -> (2,7) -> (3,7) -> (4,7) -> (5,7) -> (6,7) -> (7,7) (exit)
+
+And, here is the output represented in the format requested:
+<PATH_START> (1,1) (1,2) (1,3) (1,4) (1,5) (1,6) (1,7) (1,8) (2,8) (2,7) (3,7) (4,7) (5,7) (6,7) (7,7) <PATH_END>

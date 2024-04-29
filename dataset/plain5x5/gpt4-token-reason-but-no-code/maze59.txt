@@ -1,0 +1,19 @@
+The maze challenge provided involves finding a path from the entry point `(0,0)` to the exit point `(4,4)`. This can be approached by using a search algorithm, such as Breadth-First Search (BFS), which is well-suited for this task due to its ability to find the shortest path in an unweighted graph.
+
+BFS explores the graph level by level, starting at the source node, and explores all adjacent nodes at the present depth prior to moving on to nodes at the next depth level. It is an ideal choice for this maze as it ensures the shortest path due to its exhaustive level by level exploration.
+
+### Steps to Solution:
+1. **Model the Maze as a Graph**: The adjacency list given represents pairs of connected coordinates in the maze, forming the edges of a graph.
+2. **Start BFS Traversal** from the origin `(0,0)`, marking visited nodes and keeping a track of the path using a predecessor collection.
+3. **Follow Path from End to Start**: Once the exit `(4,4)` is reached, backtrack using the predecessor records to obtain the path sequence from the origin to the exit.
+
+Upon applying these concepts to the given maze through an appropriate algorithmic implementation (not shown here per instructions), the series of operations would identify the path:
+
+After performing BFS on the provided adjacency list starting from `(0,0)`, the traversal will find `(4,4)` efficiently by exploring all possible paths emanating from the start, ultimately identifying the shortest route.
+
+### Computed Solution:
+The BFS determined the shortest path to be connected in series through the following coordinates:
+
+<PATH_START> (0,0) (1,0) (2,0) (2,1) (2,2) (2,3) (2,4) (3,4) (4,4) <PATH_END>
+
+Here, the path reflects a linear progression mainly along column 0 initially, shifting to row 2, and then moving directly through the columns of row 2 before curving up through row 3 and row 4 to reach the destination. This was deemed to be the most direct route while adhering to the connectivity rules stated in the adjacency list.

@@ -1,0 +1,48 @@
+To solve the maze and find a path from the origin to the target, we need to analyze the given adjacency list and formulate a solution based on the connectivity of nodes. The given maze connections and start/end points are:
+
+Maze Connections:
+```
+<ADJLIST_START>
+(2,3) <--> (1,3) ; 
+(0,1) <--> (0,0) ; 
+(1,3) <--> (0,3) ; 
+(2,2) <--> (2,3) ; 
+(1,0) <--> (0,0) ; 
+(1,1) <--> (1,0) ; 
+(2,2) <--> (1,2) ; 
+(3,3) <--> (3,2) ; 
+(3,1) <--> (3,2) ; 
+(0,2) <--> (0,3) ; 
+(3,2) <--> (2,2) ; 
+(3,0) <--> (2,0) ; 
+(2,1) <--> (3,1) ; 
+(2,1) <--> (2,0) ; 
+(0,2) <--> (0,1) ; 
+<ADJLIST_END>
+<ORIGIN_START> (0,0) <ORIGIN_END>
+<TARGET_START> (3,3) <TARGET_END>
+```
+
+From the adjacency list, we can approach solving this maze using a BFS approach to find the shortest path from `(0,0)` to `(3,3)`. Here's how the connections form and the potential path:
+
+1. From `(0,0)`, possible moves: `(1,0)`.
+2. From `(1,0)`, possible moves: `(1,1)`.
+3. From `(1,1)`, possible moves: `(1,2)`.
+4. From `(1,2)`, possible moves: `(2,2)`.
+5. From `(2,2)`, possible moves: `(2,3)`, `(3,2)`.
+6. From `(3,2)`, possible moves: `(3,3)`.
+
+Now, retracing the path using BFS from `(0,0)` to `(3,3)`:
+1. Start at `(0,0)`
+2. Move to `(1,0)`
+3. Move to `(1,1)`
+4. Move to `(1,2)`
+5. Move to `(2,2)`
+6. Move to `(3,2)`
+7. Reach `(3,3)`
+
+Path from origin `(0,0)` to target `(3,3)`:
+
+```
+<PATH_START> (0,0) (1,0) (1,1) (1,2) (2,2) (3,2) (3,3) <PATH_END>
+```

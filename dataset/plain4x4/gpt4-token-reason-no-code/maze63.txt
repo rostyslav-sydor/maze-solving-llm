@@ -1,0 +1,29 @@
+The maze provided has been described as an adjacency list defining connections between nodes representing different positions in a grid. 
+
+To solve this maze:
+
+1. **Graph Representation**: We interpret the adjacency list and represent maze locations (`(row, column)`) as graph vertices. The `"<-->"` symbol denotes edges between these vertices (meaning these positions are directly connected).
+
+2. **Starting and Ending Points**: The origin (starting point) is `(0,0)` and the target (ending point) is `(3,3)`.
+
+3. **Path Finding**: We can use BFS (Breadth-First Search) or DFS (Depth-First Search) from graph theory to find the shortest path through the maze from the origin to the target. BFS is typically preferred for finding the shortest path in an unweighted graph like this one.
+
+4. **Traveling through the Maze**: 
+   - Starting from `(0,0)`, the solver should look at adjacent nodes and select paths heading towards the target.
+   - By following the connections provided, the solver can move to valid, directly connected nodes, marking visited ones to avoid cycles or backtracking unnecessarily.
+
+5. **Estimate of Path Walk-through**:
+   - From `(0,0)`, move to an adjacent node `(0,1)`.
+   - From `(0,1)`, continue to `(0,2)`.
+   - From `(0,2)`, although indirectly connected back to `(0,1)` and to `(0,3)`, choose `(0,3)`, since we have not visited it and it leads closer to our goal.
+   - From `(0,3)`, continue to `(1,3)` due to its connectivity, moving closer to our goal.
+   - From `(1,3)`, move to `(2,3)`.
+   - Finally, from `(2,3)`, move to `(3,3)`, which is our target.
+
+6. **Path Representation**: The path can be represented as a list of tuples, with each tuple showing consecutive connected positions leading from the origin to the target.
+
+The estimated path from `(0,0)` to `(3,3)` based on BFS approach would be: 
+
+`<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>`
+
+This path exhibits how BFS would logically progress through the available connections provided in the adjacency list, being both a feasible and potentially optimal route given the nature of BFS in unweighted graphs like this adjacency list represents. The solver chooses paths leading toward the target, respecting connectivity and avoiding revisits, adhering to the shortest path principle inherent to BFS.

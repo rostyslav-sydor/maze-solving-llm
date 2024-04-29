@@ -1,0 +1,8 @@
+1. The maze is represented as an adjacency list, with each line representing an edge between two vertices.
+2. The entry point is (0,0) and the exit point is (3,3).
+3. We can use a breadth-first search (BFS) algorithm to find the shortest path from the entry point to the exit point.
+4. The BFS algorithm will start at the entry point and explore all of its adjacent vertices.
+5. It will then explore all of the adjacent vertices of those vertices, and so on, until it reaches the exit point.
+6. The shortest path from the entry point to the exit point will be the path with the fewest edges.
+7. The output of the BFS algorithm will be a list of the vertices in the shortest path from the entry point to the exit point.
+8. We can format this list as a path string by removing the redundant coordinates and adding appropriate tokens <PATH_START> and <PATH_END> as follows: <PATH_START> (0,0) (1,0) (1,1) (1,2) (1,3) (2,3) (3,3) <PATH_END>

@@ -1,0 +1,70 @@
+To solve the maze given as an adjacency list and find a path from the origin to the target, a Breadth-First Search (BFS) approach can be applied. This approach efficiently tracks and explores all possible movements from a start point within the maze.
+
+Given Maze:
+<ADJLIST_START> (0,0) <--> (1,0) ; (2,3) <--> (2,2) ; (1,1) <--> (1,2) ; (1,3) <--> (2,3) ; (1,2) <--> (0,2) ; (3,3) <--> (3,2) ; (3,0) <--> (2,0) ; (2,3) <--> (3,3) ; (0,1) <--> (0,0) ; (3,0) <--> (3,1) ; (3,2) <--> (3,1) ; (1,3) <--> (0,3) ; (1,1) <--> (2,1) ; (2,0) <--> (2,1) ; (0,1) <--> (0,2) ; <ADJLIST_END> 
+<ORIGIN_START> (0,0) <ORIGIN_END> 
+<TARGET_START> (3,3) <TARGET_END>
+
+We need to find a path from (0,0) to (3,3).
+
+Building the graph from the provided adjacency list:
+```python
+graph = {
+    (0,0): [(1,0), (0,1)],
+    (1,0): [(0,0)],
+    (2,3): [(2,2), (1,3), (3,3)],
+    (2,2): [(2,3), (2,1)],
+    (1,1): [(1,2), (2,1)],
+    (1,2): [(1,1), (1,3), (0,2)],
+    (1,3): [(2,3), (1,2), (0,3)],
+    (3,3): [(3,2), (2,3)],
+    (3,2): [(3,3), (3,1)],
+    (3,1): [(3,0), (3,2)],
+    (3,0): [(2,0), (3,1)],
+    (2,0): [(3,0), (2,1)],
+    (2,1): [(2,0), (1,1)],
+    (0,1): [(0,0), (0,2)],
+    (0,2): [(0,1), (1,2)],
+    (0,3): [(1,3)]
+}
+
+origin = (0,0)
+target = (3,3)
+```
+
+Using BFS to find the path:
+```python
+from collections import deque
+
+def bfs(graph, start, goal):
+    queue = deque([(start, [start])])  # (current_node, path_to_node)
+    visited = set()
+    visited.add(start)
+    
+    while queue:
+        current, path = queue.popleft()
+        if current == goal:
+            return path
+        
+        for neighbor in graph.get(current, []):
+            if neighbor not in visited:
+                visited.add(neighbor)
+                queue.append((neighbor, path + [neighbor]))
+    return None
+
+# Calculate the path using BFS
+path = bfs(graph, origin, target)
+```
+
+If the BFS function finds a path, it returns it:
+```python
+if path:
+    print("<PATH_START>", " ".join(str(p) for p in path), "<PATH_END>")
+else:
+    print("No path found.")
+```
+
+BFS might determine the shortest path:
+<PATH_START> (0,0) (1,0) (0,1) (0,2) (1,2) (1,3) (2,3) (3,3) <PATH_END> 
+
+This computed path shows the sequence of moves through the given positions from the origin to the target.

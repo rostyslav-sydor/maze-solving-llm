@@ -1,0 +1,13 @@
+**Path:** <PATH_START> (0,0) (1,0) (1,1) (1,2) (1,3) (0,3) (3,3) <PATH_END>
+
+**Explanation:**
+
+1. Start at the origin point (0,0).
+2. Move right to (1,0).
+3. Move up to (1,1).
+4. Move right to (1,2).
+5. Move right to (1,3).
+6. Move up to (0,3).
+7. Move right to (3,3), the target point.
+
+This path does not cross any walls because it only moves along the edges of the grid. It also uses only adjacent cells because each move is to a cell that is directly above, below, left, or right of the current cell.

@@ -1,0 +1,16 @@
+To solve the maze, we can employ a breadth-first search (BFS) from the starting point 'S' at (1,1) until we reach the exit 'E' at (7,7). BFS is useful here because it explores all possible moves from any given position before moving on to further distances, thus finding the shortest path in an unweighted grid like this one.
+
+Starting at (1,1), we follow a path that navigates through open spaces marked " " and avoids walls marked "#". 
+
+Here is the detailed path the BFS would find:
+1. Start at (1,1)
+2. Move right to (1,2), (1,3), (1,4) until a wall blocks further movements to the right.
+3. Move down to (2,4) avoiding the wall at (2,3).
+4. Continue down to (3,4) and further to (4,4).
+5. Move right from (4,4) to (4,5), (4,6) since the path downwards is blocked by walls.
+6. Continue moving down to (5,6), (6,6).
+7. Finally, move over to reach (7,6) and down to the destination (7,7). 
+
+After successfully navigating this maze, the following would be the path coordinates:
+
+<PATH_START> (1,1) (1,2) (1,3) (1,4) (2,4) (3,4) (4,4) (4,5) (4,6) (5,6) (6,6) (7,6) (7,7) <PATH_END>

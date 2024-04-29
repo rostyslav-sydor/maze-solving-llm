@@ -1,0 +1,7 @@
+This maze can be solved using a depth-first search (DFS) algorithm, which starts at the origin and explores all possible paths until it finds the target. The algorithm first marks the origin as visited, then adds it to a stack. It then iterates through the origin's adjacency list and for each unvisited adjacent node, it adds that node to the stack and marks it as visited.
+
+The algorithm continues in this manner until either the stack is empty, indicating that there is no path from the origin to the target, or the target is reached. If the target is reached, the algorithm returns the path from the origin to the target.
+
+In the given maze, the DFS algorithm would start at (0,0) and explore the following path:
+
+<PATH_START> (0,0) (1,0) (1,1) (2,1) (2,2) (3,2) (3,3) <PATH_END>

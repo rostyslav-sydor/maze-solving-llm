@@ -1,0 +1,3 @@
+<Path_Start> (1,1) (2,1) (3,1) (4,1) (4,2) (4,3) (5,3) (6,3) (7,3) (7,4) (7,5) (7,6) (7,7) <Path_End> 
+
+This path goes from start to end point while avoiding the walls in the maze. It starts at (1,1) and makes its way down to (4,1) before turning right and navigating through the maze. It eventually reaches the exit point at (7,7). The solution follows a path that stays within the empty spaces of the maze, ensuring that it does not hit any walls along the way. The path is represented by the sequence of coordinates enclosed between the <PATH_START> and <PATH_END> tokens.

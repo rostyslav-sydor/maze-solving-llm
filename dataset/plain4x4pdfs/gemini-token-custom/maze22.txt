@@ -1,0 +1,7 @@
+The entry point is (0,0) and the exit point is (3,3).
+
+We can start by moving right to (1,0), then down to (1,1), then right to (2,1), then down to (2,2), then right to (3,2), and finally up to (3,3).
+
+This path does not cross any walls and path uses only adjacent cells.
+
+<PATH_START> (0,0) (1,0) (1,1) (2,1) (2,2) (3,2) (3,3) <PATH_END>

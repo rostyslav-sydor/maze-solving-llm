@@ -1,0 +1,6 @@
+1. Start at the entry point (0,0).
+2. Follow the adjacency list to find a path to the exit point (3,3).
+3. Record the coordinates of each token in the path.
+4. Output the path in the format of coordinate list between <PATH_START> and <PATH_END> tokens.
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>

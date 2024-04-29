@@ -1,0 +1,9 @@
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (2,2) (3,2) (3,3) <PATH_END>
+
+Starting from origin  (0,0) we must move either down or right. Moving down would be a dead end since there is no way to get to the exit from (1,0).
+
+Thus we must move right to (1,0) and this forces us to move down to (1,1). Then we may only move right to (1,2) and down to (2,2). 
+
+From (2,2) we can only move right to (3,2) and then up to (3,3) which is the exit.
+
+This path does not cross any walls and uses only adjacent cells so it is a valid solution.

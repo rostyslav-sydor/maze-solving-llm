@@ -1,0 +1,21 @@
+To find a solution to the maze, we can use the following algorithm:
+
+Dijkstra's algorithm with a modification: While the priority queue is not empty, pop the node with the smallest distance from the start. If the node has not been visited and it's not an obstacle (wall), add all of its neighboring nodes to the priority queue with their respective distances from the start. If the node is an obstacle (wall), backtrack from the node until you reach a node that has more than one neighbor (a branching path in the maze). Put this backtrack node onto the priority queue with the distance of its neighbor (this was the node you backtracked from). Break the loop when the end node is popped.
+
+Using this algorithm, and starting the search from coordinate (1,1), the solution to this maze is:
+
+<PATH_START>
+(1,1)
+(1,2)
+(1,3)
+(2,3)
+(3,3)
+(4,3)
+(5,3)
+(6,3)
+(7,3)
+(7,4)
+(7,5)
+(7,6)
+(7,7)
+<PATH_END>

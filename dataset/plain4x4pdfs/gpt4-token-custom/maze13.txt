@@ -1,0 +1,37 @@
+To solve the maze problem, we can think about it like finding a path in a graph where nodes represent points in the 2D space and edges represent possible paths between those points. The adjacency list provides us with all the direct connections between points in the maze:
+
+- Parse the given adjacency list to extract all connections.
+- Build a graph data structure from the connections, converting each connection into bidirectional edges since each path is represented reciprocally (e.g., (0,0) <--> (0,1) means you can travel both from (0,0) to (0,1) and from (0,1) to (0,0)).
+- Determine start (0,0) and end points (3,3) from the notation.
+- Use Breadth First Search (BFS) or Depth First Search (DFS) algorithm. This is suitable since we need to explore all potential paths from the start node and these algorithms are efficient for such explorations in an unweighted graph.
+- The path returned by the search algorithm would be the list of coordinates from the start to the end node.
+
+Here's how we might reason about the solution:
+
+1. Build the graph:
+    - Nodes are the points like (0,0), (0,1), ..., (3,3).
+    - For each pair in the adjacency list, create edges representing paths.
+    
+    Example of the part of the graph (not complete): 
+    - (0,0) connects to [(0,1), (1,0)]
+    - (0,1) connects to [(0,0), (0,2), (1,1)]
+    - ...
+    - (3,3) connects to [(2,3), (3,2)]
+    
+2. Using BFS, start from node (0,0):
+    - Begin at (0,0).
+    - Visit all neighbors, keeping track of the path and visited nodes.
+    - Continue until (3,3) is reached.
+
+3. BFS should find the shortest path through the maze:
+    - For example: Starting at (0,0) -> (0,1) -> (0,2) -> (0,3) -> (1,3) -> (2,3) -> (3,3).
+    - Verify each step if it's allowed according to our adjacency list.
+    
+4. Write the solution path:
+    - <PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>
+
+Verification:
+- Check each step in our solution to ensure it moves between directly connected nodes per our adjacency list, and there's a corresponding item in the list for each transition.
+- Since BFS finds the shortest path, and given the maze structure where the edges indicate permissible paths without crossing any boundaries, the resulting solution should indeed follow a valid route through the maze. In more complex cases, additional checking for correctness, like looping detection or specific dead-end handling might be required, but with BFS and proper recording of visited nodes, these issues are inherently managed.
+
+Thus, the path provided is both valid and represents a viable solution from entry to exit in the maze.

@@ -1,0 +1,13 @@
+BFS Algorithm:
+1) Initialize a queue data structure to perform BFS.
+2) Enqueue the starting node and mark it as visited.
+3) While the queue is not empty, dequeue the first node.
+4) Check if the dequeued node is the target node. If so, we have reached the destination.
+5) Iterate over all unvisited neighbors of the current node and enqueue them.
+6) Mark the neighbors visited.
+7) Store the predecessor of each visited node to trace the path later.
+8) Repeat step 3-7 until either the queue is empty or we have found the target node.
+
+By following the provided adjacency list, starting at (0,0), and implementing BFS with the steps described above, we can determine the shortest path as below:
+
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (2,1) (2,2) (1,2) (1,3) <PATH_END>

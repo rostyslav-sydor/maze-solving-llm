@@ -1,0 +1,22 @@
+ Here is the solution for the given maze:
+``````lua
+<PATH_START>
+(1, 1)
+(1, 2)
+(2, 2)
+(3, 2)
+(4, 2)
+(4, 3)
+(4, 4)
+(5, 4)
+(6, 4)
+(7, 4)
+(7, 5)
+(7, 6)
+(6, 6)
+(5, 6)
+(6, 6)
+(6, 7)
+<PATH_END>
+``````
+This path represents the shortest route from the starting point (S) to the end point (E). The coordinates (row, column) are listed in order, showing the path taken to reach the exit of the maze.

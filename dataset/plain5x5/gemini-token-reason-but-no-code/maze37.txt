@@ -1,0 +1,13 @@
+**Reasoning for choosing Depth First Search (DFS)**
+
+Since we are only interested in finding a single path from the starting point to the end point, DFS is a suitable choice. DFS explores all possible paths from the starting point until it finds a path to the end point or exhausts all possible paths.
+
+**Choosing the leftmost path when there are multiple options at a junction**
+
+When there are multiple paths available at a junction, we choose the leftmost path. This heuristic helps us to explore all possible paths in a systematic manner and avoid revisiting paths that have already been explored.
+
+**Solution for the given maze**
+
+Following the DFS algorithm with the leftmost path heuristic, we can find the following solution for the given maze:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (0,4) (1,4) (2,4) (3,4) (4,4) <PATH_END>

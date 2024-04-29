@@ -1,0 +1,14 @@
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>
+
+To find the solution, we start at the origin point. We then follow the edges of the graph until we reach the target point. At each step, we choose the edge that leads to the next point in the shortest path.
+
+In this case, the shortest path is:
+
+- (0,0) -> (0,1)
+- (0,1) -> (0,2)
+- (0,2) -> (0,3)
+- (0,3) -> (1,3)
+- (1,3) -> (2,3)
+- (2,3) -> (3,3)
+
+We can check that this path does not cross any walls by verifying that each edge in the path is valid. We can also check that the path uses only adjacent cells by verifying that each edge in the path connects two cells that are adjacent to each other.

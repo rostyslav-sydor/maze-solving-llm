@@ -1,0 +1,18 @@
+I understand. You have a maze represented as an adjacency list, with entry and exit points marked. I'll help you find a solution to the maze.
+
+To start, let's identify the origin and target points in the maze. The origin point is (0,0), and the target point is (3,3).
+
+Next, we'll explore the maze step by step, using the adjacency list to guide us. We'll keep track of our path by listing the coordinates of each step, separated by spaces.
+
+Here's the first step:
+
+(0,0) (0,1) (0,2)
+
+Now it's your turn. Which direction do you want to move? You can choose one of the following options:
+
+A) Move up
+B) Move left
+C) Move right
+D) Move down
+
+Please respond with the letter of your chosen direction.

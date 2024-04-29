@@ -1,0 +1,11 @@
+I understand. Here is the solution for the maze you provided:
+
+<PATH_START> (0,0) (1,1) (2,2) (3,3) <PATH_END>
+
+The path starts at the origin (0,0) and ends at the target (3,3). The maze has a total of 10 tokens, and the shortest path has 4 steps.
+
+Here is the adjacency list for the maze:
+
+<ADJLIST_START> (2,1) (1,1) (3,1) (1,3) (0,3) (2,1) (1,2) (3,2) (2,2) (3,3) <ADJLIST_END>
+
+I hope this helps! Let me know if you have any questions or need further assistance.

@@ -1,0 +1,21 @@
+1. Start at the entry point (1,1).
+2. Move to the right to (1,2).
+3. Move to the right to (1,3).
+4. Move down to (2,3).
+5. Move down to (3,3).
+6. Move to the right to (3,4).
+7. Move to the right to (3,5).
+8. Move to the right to (3,6).
+9. Move down to (4,6).
+10. Move to the left to (4,5).
+11. Move to the right to (4,6).
+12. Move down to (5,6).
+13. Move down to (6,6).
+14. Move to the left to (6,5).
+15. Move to the left to (6,4).
+16. Move down to (7,4).
+17. Move to the right to (7,5).
+18. Move down to the exit point (7,7).
+
+So, the solution path for this maze is as follows:
+<PATH_START> (1,1) (1,2) (1,3) (2,3) (3,3) (3,4) (3,5) (3,6) (4,6) (4,5) (4,6) (5,6) (6,6) (6,5) (6,4) (7,4) (7,5) (7,7) <PATH_END>.

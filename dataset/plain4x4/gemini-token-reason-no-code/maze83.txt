@@ -1,0 +1,4 @@
+1. Start by finding the Origin point, marked with <ORIGIN_START> token
+2. Perform a depth-first search or breadth-first search from the Origin point until the Target point, marked with <TARGET_START> token, is reached
+3. Backtrack from the Target point to the Origin point, recording the path taken
+4. Output the path taken as a list of coordinates in the format specified in the question

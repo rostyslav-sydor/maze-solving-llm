@@ -1,0 +1,9 @@
+<PATH_START> (1,1) (1,2) (1,3) (1,4) (1,5) (2,5) (3,5) (4,5) (4,4) (4,3) (4,2) (5,2) (6,2) (6,3) (6,4) (6,5) (6,6) (7,6) (7,7) <PATH_END>
+
+Reasoning:
+1. Start at (1,1) which is the entry point 'S'.
+2. Progress rightwards as far as possible until reaching (1,5), which is the farthest point reachable in a straight line without hitting a wall.
+3. Move downwards through column 5, navigating around the internal blocks from (2,5) to (4,5).
+4. To bypass the block directly below, move left from (4,5) to (4,2).
+5. Head downwards again from (4,2) and make a right turn at (6,2) towards (6,5), navigating around another set of blockages.
+6. Finally, move right to (6,6) and down to the exit 'E' at (7,7). This path avoids all walls and efficiently makes use of open spaces.

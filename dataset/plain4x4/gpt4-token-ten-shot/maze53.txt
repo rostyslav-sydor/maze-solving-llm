@@ -1,0 +1,53 @@
+To solve the maze given in the adjacency list format, we can apply a graph traversal technique, such as Breadth-First Search (BFS) or Depth-First Search (DFS), to find a path from the origin to the target. Here's the process:
+
+1. Parse the adjacency list to create a graph representation.
+2. Use BFS with the origin as the start node to explore reachable nodes.
+3. Stop the search when the target node is reached.
+4. Trace back from the target to the origin to find the path.
+
+From the adjacency list description given:
+
+<ADJLIST_START> (0,3) <--> (1,3) ; (3,1) <--> (3,2) ; (2,2) <--> (2,1) ; (0,0) <--> (1,0) ; (2,3) <--> (3,3) ; (2,3) <--> (1,3) ; (3,1) <--> (3,0) ; (0,2) <--> (1,2) ; (2,0) <--> (3,0) ; (2,0) <--> (1,0) ; (3,2) <--> (2,2) ; (0,1) <--> (0,2) ; (1,2) <--> (1,1) ; (2,2) <--> (2,3) ; (1,1) <--> (1,0) ; <ADJLIST_END>
+
+Origin: (0,0)
+Target: (3,3)
+
+We will construct the bidirectional graph:
+
+```
+Graph:
+(0,0) <-> (1,0)
+(0,1) <-> (0,2)
+(0,2) <-> (1,2)
+(0,3) <-> (1,3)
+(1,0) <-> (2,0), (1,1)
+(1,1) <-> (1,2)
+(1,2) <-> (2,2)
+(1,3) <-> (2,3)
+(2,0) <-> (3,0)
+(2,1) <-> (2,2)
+(2,2) <-> (3,2), (2,3)
+(2,3) <-> (3,3)
+(3,0) <-> (3,1)
+(3,1) <-> (3,2)
+(3,2) <-> (3,3)
+```
+
+Apply BFS to the graph:
+
+Queue: [(0,0)]
+Visited: {(0,0)}
+
+1. Dequeue (0,0), enqueue neighbors (1,0)
+2. Dequeue (1,0), enqueue neighbors (2,0), (1,1) without revisiting (0,0)
+3. Dequeue (2,0), enqueue neighbors (3,0) without revisiting (1,0)
+4. Dequeue (3,0), enqueue neighbors (3,1) without revisiting (2,0)
+5. Dequeue (3,1), enqueue neighbors (3,2) without revisiting (3,0)
+6. Dequeue (3,2), enqueue neighbors (3,3), (2,2) without revisiting (3,1)
+7. Dequeue (3,3), and found target!
+
+Path found tracing back using parents:
+(3,3) <- parent(3,2) <- parent(3,1) <- parent(3,0) <- parent(2,0) <- parent(1,0) <- parent(0,0)
+
+Solution:
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (3,2) (3,3) <PATH_END>

@@ -1,0 +1,5 @@
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (3,2) (3,3) <PATH_END>
+
+Starting from the origin, we can move to the right to reach (1,0) and then to reach (2,0). From there we can only move down to reach (3,0). Then we can move to the right to reach (3,1) and then down again to reach (3,2). Finally, we can move to the right one last time to reach the target (3,3).
+
+This path is valid because it does not cross any walls and only uses adjacent cells.

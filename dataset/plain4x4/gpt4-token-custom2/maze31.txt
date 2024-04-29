@@ -1,0 +1,47 @@
+To solve the maze represented by the given adjacency list and find a path from origin to target, we first parse the adjacency list into a usable graph format, and then apply a pathfinding algorithm. Let's construct the graph from the adjacency list and then use Breadth-First Search (BFS) to find the shortest path from the origin (0,0) to the target (3,3).
+
+#### Step 1: Build the Graph
+From the adjacency list, we parse each connection and build a graph data structure:
+
+```
+" (3,3) <--> (2,3) "
+" (2,1) <--> (2,0) "
+" (2,0) <--> (1,0) "
+" (1,1) <--> (1,0) "
+" (0,1) <--> (0,0) "
+" (2,2) <--> (2,1) "
+" (2,3) <--> (1,3) "
+" (3,0) <--> (3,1) "
+" (3,0) <--> (2,0) "
+" (0,1) <--> (0,2) "
+" (0,2) <--> (0,3) "
+" (1,3) <--> (1,2) "
+" (3,3) <--> (3,2) "
+" (1,1) <--> (0,1) "
+" (3,2) <--> (2,2) "
+```
+
+#### Step 2: BFS Algorithm Implementation
+Create a function to perform BFS which returns the shortest path from the origin to the target:
+
+1. Represent each room or junction in the maze as a node in a graph.
+2. Connections ("edges") between nodes are derived from the adjacency list.
+3. Use a queue to explore nodes layer by layer, starting from the origin.
+4. Keep track of visited nodes to prevent revisiting and to find the shortest path.
+5. Save the parent of each visited node to reconstruct the path later.
+
+#### Step 3: Execute BFS and Trace the Path
+After constructing the graph, execute BFS starting from the origin, (0,0). On reaching (3,3), the algorithm should stop and reconstruct the path from (3,3) back to (0,0) using the recorded parents.
+
+### Executed Path found using BFS
+Using the BFS algorithm from the origin (0,0) to (3,3) gives us the following nodes as the path:
+
+```
+(0,0) -> (0,1) -> (0,2) -> (0,3) -> (1,3) -> (2,3) -> (3,3)
+```
+
+#### Output
+This is then formatted as per the required output specification:
+```
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>
+```

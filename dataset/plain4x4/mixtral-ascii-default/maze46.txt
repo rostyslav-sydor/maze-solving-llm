@@ -1,0 +1,48 @@
+We can try to implement a breadth-first search (BFS) to find the shortest path from the start (S) to the exit (E). Here's an example in Python:
+
+```python
+maze = [
+    '#########',
+    '#S      #',
+    '# ##### #',
+    '# #   # #',
+    '### ### #',
+    '#       #',
+    '# #######',
+    '#      E#',
+    '#########'
+]
+
+def get_possible_moves(row, col, maze):
+    """Return the possible moves in the maze."""
+    moves = [(row - 1, col), (row, col - 1), (row, col + 1), (row + 1, col)]
+    moves = [(r, c) for r, c in moves if 0 <= r < len(maze) and 0 <= c < len(maze[0])]
+    moves = [(r, c) for r, c in moves if maze[r][c] != '#']
+    return moves
+
+def find_shortest_path(maze):
+    """Find the shortest path in the maze."""
+    # Prepare the data structure for BFS
+    start_row, start_col = None, None
+    for row, row_str in enumerate(maze):
+        col = row_str.find('S')
+        if col != -1:
+            start_row, start_col = row, col
+            break
+
+    queue = [(start_row, start_col)]
+    visited = set()
+    distance = {}
+    distance[(start_row, start_col)] = 0
+
+    while queue:
+        row, col = queue.pop(0)
+        for r, c in get_possible_moves(row, col, maze):
+            if (r, c) not in visited:
+                queue.append((r, c))
+                visited.add((r, c))
+                distance[(r, c)] = distance[(row, col)] + 1
+
+    # Reconstruct the path
+    end_row, end_col = None, None
+    for row, row_

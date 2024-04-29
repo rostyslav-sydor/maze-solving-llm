@@ -1,0 +1,24 @@
+The maze can be represented visually as below:
+
+```
+(0,0) - (0,1) - (0,2) - (0,3)
+|      |      |      |
+(1,0) - (1,1) - (1,2) - (1,3)
+|      |      |      |
+(2,0) - (2,1) - (2,2) - (2,3)
+|      |      |      |
+(3,0) - (3,1) - (3,2) - (3,3)
+```
+
+To solve the maze, we can use Depth-first search (DFS) algorithm. DFS is an algorithm that explores each possible path until a solution is found or all paths are exhausted. In a maze, DFS can be used to find a path from the entrance to the exit by recursively exploring all possible paths and backtracking if a path leads to a dead end.
+
+The DFS algorithm can be implemented as follows:
+
+1. Start at the entrance of the maze.
+2. If the current location is the exit, then a solution has been found.
+3. If the current location is not the exit, then explore all possible paths from the current location.
+4. If a path leads to a dead end, then backtrack to the previous location.
+
+Here is the solution to the given maze using DFS:
+
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (3,2) (3,3) <PATH_END>

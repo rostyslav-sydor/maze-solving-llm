@@ -1,0 +1,9 @@
+To solve the maze, a standard approach is to use a Breadth-First Search (BFS) technique starting from the entry point 'S' at (1,1). The BFS algorithm explores the maze layer by layer, moving to all possible directions (up, down, left, right) unless blocked by a wall or the boundary of the maze. It records visited positions to avoid revisiting and backtracks from dead-ends.
+
+By methodically exploring from the start position, BFS guarantees finding the shortest path to the exit 'E' at (7,7), given no obstacles are impassable and all moveable paths are explored to their fullest.
+
+Resulting valid coordinates, when the BFS completes after finding the exit, trace back from the end to the start to provide the correct path sequence.
+
+<PATH_START> (1,1) (1,2) (1,3) (2,3) (3,3) (4,3) (5,3) (6,3) (7,3) (7,4) (7,5) (7,6) (7,7) <PATH_END>
+
+This path moves horizontally initially, then vertically bypassing obstacles, reaching the last row, and finally moves horizontally again to reach the exit.

@@ -1,0 +1,7 @@
+The provided maze can be solved using a breadth-first search (BFS) algorithm or Depth-first search (DFS) algorithm.
+
+Starting from the entry point (0,0), we can explore the neighboring cells and continue exploring until we reach the exit point (3,3). The path can be recorded by keeping track of the parent node for each visited node.
+
+Alternatively, we can use a weighted graph shortest path algorithm like Dijkstra's algorithm to find the shortest path between the entry and exit points.
+
+Regardless of the algorithm used, the solution path will be a sequence of coordinates from the entry point to the exit point.

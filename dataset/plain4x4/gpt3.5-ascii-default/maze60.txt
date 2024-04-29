@@ -1,0 +1,3 @@
+<Path_Start> (1,1) (2,1) (3,1) (4,1) (4,2) (4,3) (4,4) (5,4) (6,4) (6,5) (6,6) (7,6) (7,7) <Path_End> 
+
+To solve this maze, start at the entry point (1,1) and follow a path towards the exit point (7,7). Move down the first column until you reach the bottom, then move right along the fourth row until you reach column 2. Continue moving down until you reach row 4, then follow the path as it winds through the maze until you reach the exit at (7,7). This path avoids the walls and leads you to the exit in the shortest route possible. Remember to always move in a way that keeps you on the path towards the exit point.

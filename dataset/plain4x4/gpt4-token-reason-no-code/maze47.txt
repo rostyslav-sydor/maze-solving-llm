@@ -1,0 +1,29 @@
+To find a solution to the maze represented by the adjacency list, we need to find a path from the origin (0,0) to the target (3,3) using the connections provided in the adjacency list.
+
+To solve this, we perform a breadth-first search (BFS), which is well-suited for finding the shortest path in an unweighted graph like this one, where all moves are considered to have the same cost. BFS works by continuously expanding the frontiers of the explored area until the target is found.
+
+Here is how BFS would process the maze:
+
+1. Start at the origin node (0,0).
+2. Put this node into a queue and mark it as visited.
+3. Repeatedly dequeue a node from the front, find and enqueue its unvisited neighbors, and record the path leading to each.
+4. Continue until the target node (3,3) is dequeued.
+
+Based on the provided adjacency list, the connections from each node are used to discover the next available nodes to move to, proceeding in breadth-first fashion.
+
+Analyzing the list, the BFS strategy would discover the path from (0,0) to (3,3) as follows:
+
+1. Start from initial node (0,0), where possible moves are (0,1) based on the list "(0,0) <--> (0,1)".
+2. Proceed from (0,1) to (0,2) ("(0,1) <--> (0,2)").
+3. From (0,2), go to (0,3) ("(0,2) <--> (0,3)").
+4. From (0,3), move to (1,3) ("(1,3) <--> (0,3)").
+5. From (1,3), next move to (2,3) ("(2,3) <--> (1,3)").
+6. Finally, from (2,3) to the target (3,3) ("(2,3) <--> (3,3)").
+
+The paths selected at each step provide a continuous link to the target, confirming a viable route.
+
+Thus, the sequence of moves resulting from BFS, forming the shortest path in terms of number of moves from (0,0) to (3,3) is:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>
+
+This output respects the BFS exploration and the connectivity data provided in the adjacency list.

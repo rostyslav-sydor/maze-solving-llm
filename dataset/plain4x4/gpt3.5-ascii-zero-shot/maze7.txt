@@ -1,0 +1,6 @@
+First, we start at coordinate (1,1) and explore all possible paths. We can move right to (1,2), then down to (2,2) and (3,2). From there, we can move right to (3,3) and (3,4) and down to (4,4), (5,4), (6,4), and (7,4). Continuing to move in this manner, we finally reach the exit at coordinate (7,7).
+
+So, the solution path for this maze is:
+<PATH_START> (1,1) (1,2) (2,2) (3,2) (3,3) (3,4) (4,4) (5,4) (6,4) (7,4) (7,5) (7,6) (7,7) <PATH_END>
+
+This path avoids all walls marked by hash signs and successfully reaches the exit at (7,7).

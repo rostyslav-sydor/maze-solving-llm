@@ -1,0 +1,14 @@
+The adjacency list provided describes a graph where vertices are positions (grid coordinates) in a maze and the edges indicate direct paths between these positions. We are given a starting point (origin) of (0,0) and a target destination (exit) of (4,4).
+
+To find the shortest path from the origin to the destination in this maze, a Breadth-First Search (BFS) algorithm is best suited. BFS explores neighbors level by level starting from the source node, which in this scenario translates to visiting all cells of the maze systematically from the entry point. This ensures that we explore all possible paths from the entry simultaneously and will find the shortest path to the exit.
+
+In applying BFS:
+1. We make an initial BFS from the origin (0,0).
+2. For every visited node, all its adjacent nodes (as given by the adjacency list) are explored unless they have been visited before, ensuring we do not loop back or reprocess nodes.
+3. This exploration continues until we find the target node (4,4).
+
+For the given data, translating the adjacency list into a BFS exploration and tracking paths from (0,0) to each node until reaching (4,4), we can derive this shortest path to the exit:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (0,4) (1,4) (2,4) (3,4) (4,4) <PATH_END>
+
+This path is derived by following the BFS approach of moving from the start point to the nearest neighbors first, eventually progressing towards the destination by constantly selecting adjacent, unvisited positions in the maze.

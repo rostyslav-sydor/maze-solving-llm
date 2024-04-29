@@ -1,0 +1,15 @@
+- Start from the origin (0,0) <ORIGIN_END>
+- We can move down or right from the starting position. Let's move right to (0,1) <ADJLIST_END> 
+- From here we can move right or down. Let's move down to (1,1) <ADJLIST_END>
+- From here we can move right or down. Let's move right to (1,2) <ADJLIST_END> 
+- From here we can move right or down. Let's move down to (2,2) <ADJLIST_END>
+- From here we can move right or down. Let's move down to (3,2) <ADJLIST_END>
+- From here we can move right or down. Let's move right to (3,3) <TARGET_END>
+
+<PATH_START> (0,0) (0,1) (1,1) (1,2) (2,2) (3,2) (3,3) <PATH_END>
+
+
+- **Checking for legality**:
+ - Check if all coordinates in the path are adjacent to each other. In this case, all coordinates are adjacent, so the path is valid.
+ - Check if the path does not cross any walls. In this case, there are no walls, so the path is valid.
+- Therefore, the path <PATH_START> (0,0) (0,1) (1,1) (1,2) (2,2) (3,2) (3,3) <PATH_END> is a valid solution for the given maze.

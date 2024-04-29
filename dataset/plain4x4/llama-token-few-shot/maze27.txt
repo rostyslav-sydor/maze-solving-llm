@@ -1,0 +1,5 @@
+Here is the solution to the maze:
+
+<PATH_START> (1,0) (2,0) (3,0) (3,1) (2,1) (2,2) (3,2) (3,3) <PATH_END>
+
+The path starts at the origin (0,0), moves right to (1,0), then down to (2,0), right to (3,0), up to (3,1), right to (3,2), and finally down to the target (3,3).

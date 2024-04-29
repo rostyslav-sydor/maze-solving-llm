@@ -1,0 +1,64 @@
+To solve the maze, we can use a graph traversal algorithm like Depth-First Search (DFS) or Breadth-First Search (BFS). Since the maze is represented as an adjacency list, we can easily implement either of these algorithms.
+
+Let's use Breadth-First Search (BFS) to find the shortest path from the origin to the target. BFS explores all the neighboring nodes at the current depth before moving on to the nodes at the next depth level. This ensures that we find the shortest path to the target.
+
+Here's the reasoning behind using BFS:
+
+1. Initialize a queue and enqueue the origin node.
+2. While the queue is not empty:
+   a. Dequeue a node from the queue.
+   b. If the dequeued node is the target, we have found the shortest path. Break the loop.
+   c. Otherwise, enqueue all the neighboring nodes of the dequeued node that have not been visited yet.
+   d. Mark the dequeued node as visited.
+3. If the target node is not found, there is no path from the origin to the target.
+
+Now, let's apply BFS to the given maze:
+
+1. Initialize a queue and enqueue the origin node (0, 0).
+2. While the queue is not empty:
+   a. Dequeue a node from the queue: (0, 0).
+   b. Enqueue all neighboring nodes of (0, 0) that have not been visited: (0, 1) and (1, 0).
+   c. Mark (0, 0) as visited.
+   d. Repeat steps a-c for the next node in the queue: (0, 1).
+   e. Enqueue all neighboring nodes of (0, 1) that have not been visited: (0, 2) and (1, 1).
+   f. Mark (0, 1) as visited.
+   g. Repeat steps a-c for the next node in the queue: (1, 0).
+   h. Enqueue all neighboring nodes of (1, 0) that have not been visited: (1, 1) and (2, 0).
+   i. Mark (1, 0) as visited.
+   j. Repeat steps a-c for the next node in the queue: (0, 2).
+   k. Enqueue all neighboring nodes of (0, 2) that have not been visited: (0, 3) and (1, 2).
+   l. Mark (0, 2) as visited.
+   m. Repeat steps a-c for the next node in the queue: (1, 1).
+   n. Since (1, 1) has already been visited, skip it.
+   o. Repeat steps a-c for the next node in the queue: (2, 0).
+   p. Enqueue all neighboring nodes of (2, 0) that have not been visited: (2, 1) and (3, 0).
+   q. Mark (2, 0) as visited.
+   r. Repeat steps a-c for the next node in the queue: (0, 3).
+   s. Enqueue all neighboring nodes of (0, 3) that have not been visited: (1, 3).
+   t. Mark (0, 3) as visited.
+   u. Repeat steps a-c for the next node in the queue: (1, 2).
+   v. Since (1, 2) has already been visited, skip it.
+   w. Repeat steps a-c for the next node in the queue: (2, 1).
+   x. Enqueue all neighboring nodes of (2, 1) that have not been visited: (2, 2) and (3, 1).
+   y. Mark (2, 1) as visited.
+   z. Repeat steps a-c for the next node in the queue: (3, 0).
+   aa. Enqueue all neighboring nodes of (3, 0) that have not been visited: (3, 1).
+   bb. Mark (3, 0) as visited.
+   cc. Repeat steps a-c for the next node in the queue: (1, 3).
+   dd. Enqueue all neighboring nodes of (1, 3) that have not been visited: (2, 3).
+   ee. Mark (1, 3) as visited.
+   ff. Repeat steps a-c for the next node in the queue: (2, 2).
+   gg. Since (2, 2) has already been visited, skip it.
+   hh. Repeat steps a-c for the next node in the queue: (3, 1).
+   ii. Since (3, 1) has already been visited, skip it.
+   jj. Repeat steps a-c for the next node in the queue: (2, 3).
+   kk. Enqueue all neighboring nodes of (2, 3) that have not been visited: (3, 3).
+   ll. Mark (2, 3) as visited.
+   mm. Repeat steps a-c for the next node in the queue: (3, 3).
+   nn. The target node (3, 3) has been found. Break the loop.
+
+Now, we can trace back the path from the target node to the origin node:
+
+<PATH_START> (3, 3) (2, 3) (1, 3) (0, 3) (0, 2) (0, 1) (0, 0) <PATH_END>
+
+This is the shortest path from the origin (0, 0) to the target (3, 3) in the given maze.

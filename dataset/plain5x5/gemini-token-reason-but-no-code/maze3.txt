@@ -1,0 +1,11 @@
+**Reasoning:** 
+
+The maze can be solved using Depth First Search (DFS) algorithm. 
+Starting from the entry point, one can follow any path until a dead end is reached. 
+If a dead end is reached, one can backtrack to the last intersection and try a different path. 
+This process is repeated until the exit point is reached. 
+DFS is used because it is a simple and efficient algorithm for solving mazes.
+
+**Solution:** 
+
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (4,0) (4,1) (4,2) (4,3) (3,3) (3,4) <PATH_END>

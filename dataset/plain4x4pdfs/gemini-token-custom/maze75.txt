@@ -1,0 +1,8 @@
+To find a solution to this maze, we can use a depth-first search (DFS) algorithm. Starting from the starting square, we visit each adjacent square. If the square we visit is the ending square then we have found a solution. If not, we continue to visit the remaining adjacent squares, until we either find the ending square or have visited all of the adjacent squares. If we have visited all of the adjacent squares without finding the ending square, then there is no solution for the maze.
+
+Using DFS, starting at the origin, we can see that we can go right to (0,1) or down to (1,0). Going right, we could then go up or down, and continuing in this direction, we would end up at the exit.
+
+Based on this reasoning, the solution is:
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>
+
+We can check that this solution does not cross any walls. By looking at the list of edges in the maze, we can see that all of the squares in the solution are adjacent to each other. Therefore, the solution is valid.

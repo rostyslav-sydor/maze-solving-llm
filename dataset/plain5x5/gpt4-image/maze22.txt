@@ -1,0 +1,15 @@
+Based on the layout of the maze provided in the image, the solution can be traced as follows:
+
+- Start at (0,0)
+- Move right to (0,1)
+- Move right to (0,2)
+- Move down to (1,2)
+- Move down to (2,2)
+- Move down to (3,2)
+- Move down to (4,2)
+- Move right to (4,3)
+- Move right to (4,4), where the exit is located.
+
+Therefore, the path from the entrance to the exit of the maze is:
+
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (2,2) (3,2) (4,2) (4,3) (4,4) <PATH_END>

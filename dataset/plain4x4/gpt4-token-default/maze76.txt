@@ -1,0 +1,15 @@
+To solve the maze from the entry point (0,0) to the exit point (3,3), we can utilize Breadth-First Search (BFS), as the adjacency list represents an unweighted graph where BFS can effectively find the shortest path. Below I describe and implement this approach:
+
+- Construct the graph from the adjacency list.
+- Use BFS starting from (0,0) to explore all reachable points.
+- Track the path by maintaining a predecessor for each point visited.
+- Once the BFS reaches the exit point (3,3), backtrack using the predecessor pointers to reconstruct the path.
+
+Let's write down the solution into the required format:
+
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (3,2) (3,3) <PATH_END>
+
+In this solution:
+- We start at the origin (0,0).
+- Move down the maze vertically to (1,0), then to (2,0), and further down to (3,0).
+- Continue by going right from (3,0) to (3,1), then to (3,2), and finally to the target (3,3).

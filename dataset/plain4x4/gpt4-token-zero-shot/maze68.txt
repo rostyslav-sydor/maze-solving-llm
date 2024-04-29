@@ -1,0 +1,18 @@
+To solve the maze, first decode the adjacency list into a graph structure. Begin at the origin (0,0) and aim to reach the target (3,3). Use a breadth-first search (BFS) method because it effectively finds the shortest path in an unweighted graph:
+
+1. Initialize the BFS with the starting point, (0,0), and use a queue to manage the nodes to visit: [(0,0)].
+2. Track the nodes that have been visited and also store the path to each node for backtracking. Visited = {(0,0): None}.
+3. Expand BFS:
+   - From (0,0) move to (0,1).
+   - From (0,1) explore to (0,0) and (0,2).
+   - From (0,2) explore to (0,1) and (0,3).
+   - From (0,3) to (1,3).
+   - Continue until reaching (3,3) or no more nodes to visit.
+4. If (3,3) is reached, backtrack using the visited dictionary to trace the path.
+5. The sequence from (0,0) to (3,3) via valid connections is formed.
+
+From the adjacency list, a BFS approach will reveal the path as:
+(0,0) → (0,1) → (0,2) → (0,3) → (1,3) → (2,3) → (3,3).
+
+Formatted output:
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>

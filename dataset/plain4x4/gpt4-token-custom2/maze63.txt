@@ -1,0 +1,41 @@
+For the provided maze structure, we'll use the adjacency list representation to find the path from the origin (0,0) to the target (3,3) using Breadth-First Search (BFS), which is efficient for unweighted graphs to find the shortest path.
+
+The adjacency list from your maze input is parsed into a graph representation as follows:
+- (2,0) <--> (1,0), (3,0)
+- (1,2) <--> (1,3), (1,1)
+- (0,1) <--> (0,2)
+- (1,3) <--> (0,3), (2,3)
+- (0,3) <--> (0,2)
+- (3,1) <--> (2,1), (3,2)
+- (2,3) <--> (2,2)
+- (3,2) <--> (2,2), (3,3)
+- (0,0) <--> (0,1)
+- (3,0) <--> (3,1)
+
+**Algorithm:**
+1. Initialize a queue starting at the origin (0,0).
+2. Mark (0,0) as visited.
+3. For each node, check its neighbors. If a neighbor hasn't been visited yet, mark it as visited, record its predecessor, and queue it.
+4. Continue until the queue is empty or the target has been reached.
+
+**Execution:**
+1. Start from (0,0).
+2. Queue all directly connected nodes, resulting in (0,1).
+3. Repeat the BFS step moving from (0,1) to connected nodes, eventually reaching (3,3).
+
+Here’s how the BFS traversal would work detailed step-by-step:
+
+1) Starting at (0,0). Neighbors: (0,1)
+2) Go to (0,1). Neighbors: (0,2)
+3) Go to (0,2). Neighbors: (0,3)
+4) Go to (0,3). Neighbors: (1,3)
+5) Go to (1,3). Neighbors: (2,3)
+6) Go to (2,3). Neighbors: (2,2)
+7) Go to (2,2). Neighbors: (3,2)
+8) Go to (3,2). Neighbors: (3,3) - Destination reached.
+
+Backtracking via recorded predecessors starts from (3,3) all the way back to (0,0):
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (2,2) (3,2) (3,3) <PATH_END>
+
+This path is the shortest sequence of steps derived from the BFS algorithm based on the graph structure given in the adjacency list.

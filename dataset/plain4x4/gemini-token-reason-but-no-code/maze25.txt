@@ -1,0 +1,8 @@
+To find a solution of a maze, the best approach is using a Depth First Search.
+
+Depth First Search is an algorithm that traverses a graph by going as far as possible along each branch of the graph before backtracking. This algorithm finds paths between nodes in a connected graph.
+
+In the case of a maze, it starts at the entry point and iterates one direction until it is blocked. Then it backtracks and tries a different direction and continues this process until a path to the exit point is found.
+In the given maze <ADJLIST_START> (2,2) <--> (1,2) ; (1,3) <--> (2,3) ; (2,0) <--> (3,0) ; (2,3) <--> (3,3) ; (0,3) <--> (1,3) ; (2,1) <--> (2,0) ; (1,2) <--> (1,1) ; (1,0) <--> (1,1) ; (3,1) <--> (3,0) ; (3,3) <--> (3,2) ; (0,1) <--> (0,0) ; (1,0) <--> (0,0) ; (3,2) <--> (3,1) ; (2,2) <--> (2,1) ; (0,2) <--> (0,3) <ADJLIST_END> <ORIGIN_START> (0,0) <ORIGIN_END> <TARGET_START> (3,3) <TARGET_END>, the solution is: 
+
+<PATH_START> (0,0) (1,0) (1,1) (1,2) (1,3) (2,3) (3,3) <PATH_END>

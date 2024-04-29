@@ -1,0 +1,29 @@
+Here is a proposed algorithm in English language:
+
+1) Create a queue structure to store coordinates and append the origin point (0,0) to it.
+2) Define and initialize the visited array such that all cells are set to false.
+3) Initialize two variables - solution array to store visited coordinates and visited flag to keep track of found solution, both as False.
+4) Enqueue the first pair of coordinates (0,0) into the queue structure.
+5) While the queue is not empty:
+    a) Dequeue a pair of coordinates, store it in a variable named current_coordinates.
+    b) If the current pair of coordinates matches the target point (3,3):
+         i) Append the current_coordinates to the solution array.
+         ii) Set the visited flag to True.
+         iii) Break from the while loop.
+    c) Check if current_coordinates are already visited and marked in the visited array.
+       If they are, continue to the next iteration of the loop.
+       Otherwise, set current_coordinates as visited in the visited array and append them to the solution array.
+    d) For all 4 adjacent cells or directions (left, right, up, down) around the current pair of coordinates in the maze:
+         i) For each adjacent_coordinates, if they are valid (within maze boundary), check if they are already visited or not.
+            If not visited and a valid edge exists between the current coordinates and adjacent coordinates in the input adjacency list:
+               a) Enqueue the current coordinates to the queue structure.
+         ii) Keep track of the coordinates and append to the result solution array.
+6) If visited flag is still False, no solution exists, return "No solution found for this given graph" string, else go to next step.
+7) Reverse the solution array to get the solution in a straight line from origin to target, thus avoid cycling/backtracing/reversing paths through the maze
+8) Output <PATH_START> followed by the string representation of the solution array (one pair of coordinates in each line) and finally the <PATH_END>.
+9) Limit the output string to 200 words.
+
+Now let's apply the algorithm:
+
+1) Create a queue structure and append (0,0).
+2

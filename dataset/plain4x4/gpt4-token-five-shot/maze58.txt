@@ -1,0 +1,66 @@
+To find the solution to the maze given in the last example, we first build the adjacency list representation into a graph and then use a graph traversal algorithm to find a path from the origin to the target. Since the adjacency list is provided, let's first parse it and construct a graph, then apply the Breadth-First Search (BFS) algorithm, which is well-suited for finding the shortest path in an unweighted maze or graph.
+
+**Maze**:
+<ADJLIST_START>
+- (3,1) <--> (3,2)
+- (1,1) <--> (0,1)
+- (2,1) <--> (1,1)
+- (1,0) <--> (1,1)
+- (3,2) <--> (3,3)
+- (1,2) <--> (2,2)
+- (2,0) <--> (1,0)
+- (0,0) <--> (0,1)
+- (3,0) <--> (2,0)
+- (2,3) <--> (1,3)
+- (1,2) <--> (0,2)
+- (0,3) <--> (1,3)
+- (2,2) <--> (3,2)
+- (3,0) <--> (3,1)
+- (3,3) <--> (2,3)
+<ADJLIST_END> 
+<ORIGIN_START> (0,0) <ORIGIN_END>
+<TARGET_START> (3,3) <TARGET_END> 
+
+**Steps to solve using BFS**:
+1. Construct the adjacency graph from the adjacency list.
+2. Initialize a queue with the origin point (0,0).
+3. Initialize a dictionary to track visited nodes and the path taken to reach them.
+4. Start BFS from the origin:
+   - Dequeue a node (current position) from the queue.
+   - If this is the target, reconstruct the path from the visited dictionary. 
+   - For each neighboring node of the current node, if it hasn't been visited, enqueue it and mark it as visited.
+5. End BFS when the queue is empty or the target has been found.
+
+**Constructed Graph**:
+```
+{
+    (0, 0): [(0, 1)],
+    (0, 1): [(0, 0), (1, 1)],
+    (1, 1): [(0, 1), (1, 0), (2, 1), (1, 2)],
+    (1, 0): [(1, 1), (2, 0)],
+    (3, 2): [(3, 1), (3, 3), (2, 2)],
+    (3, 1): [(3, 2), (3, 0)],
+    (3, 3): [(3, 2)],
+    (0, 2): [(1, 2)],
+    (1, 2): [(0, 2), (2, 2)],
+    (2, 2): [(1, 2), (3, 2)],
+    (0, 3): [(1, 3)],
+    (1, 3): [(0, 3), (2, 3)],
+    (2, 3): [(1, 3), (3, 3)],
+    (2, 0): [(1, 0), (3, 0)],
+    (3, 0): [(2, 0), (3, 1)]
+}
+```
+
+**Starting BFS**:
+BFS path traversal starting from (0,0) to target (3,3):
+- Start at (0,0)
+- Visit neighbors sequentially and track visited paths.
+
+After performing BFS, the shortest path found is laid out analyzing each move and making sure all moves continue using unvisited sections.
+
+**Resulting Path**:
+```
+<PATH_START> (0,0) (0,1) (1,1) (1,2) (2,2) (3,2) (3,3) <PATH_END> 
+```
+Here, each move from position to the next is connected based on the adjacency list, jumping from cell to cell until the target cell (3,3) is reached.

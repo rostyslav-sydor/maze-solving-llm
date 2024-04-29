@@ -1,0 +1,49 @@
+To solve the maze, I need to perform a search algorithm such as Depth-First Search or Breadth-First Search. Depth-First Search follows the branch of a tree until it reaches the goal or the end of the branch. Here, the maze can be considered as a graph of connected rooms, so I will implement BFS to find the path from the start to the exit.
+
+<python execution>
+import numpy as np
+
+def bfs(maze, start, end, rows, cols):
+    queue = [start]
+    visited = set()
+    parent = {start: None}
+
+    while queue:
+        current = queue.pop(0)
+        visited.add(current)
+        if current == end:
+            path = []
+            while current:
+                path.append(current)
+                current = parent[current]
+            return list(reversed(path))
+
+        neighbors = []
+        for r in range(rows):
+            for c in range(cols):
+                if r == current[0] - 1 and c == current[1]:
+                    neighbors.append((r, c))
+                elif r == current[0] + 1 and c == current[1]:
+                    neighbors.append((r, c))
+                elif r == current[0] and c == current[1] - 1:
+                    neighbors.append((r, c))
+                elif r == current[0] and c == current[1] + 1:
+                    neighbors.append((r, c))
+
+        for neighbor in neighbors:
+            if neighbor not in visited and maze[neighbor[0]][neighbor[1]] == ' ':
+                queue.append(neighbor)
+                parent[neighbor] = current
+
+    return []
+
+def format_path(path):
+    return [(p[1], p[0]) for p in path]
+
+if __name__ == "__main__":
+    maze = np.array([list("#########"),
+                    list("#S   # #"),
+                    list("##### # #"),
+                    list("#   #   #"),
+                    list("# # ### #"),
+                    list("# # # 

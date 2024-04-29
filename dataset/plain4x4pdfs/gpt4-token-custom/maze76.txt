@@ -1,0 +1,31 @@
+<PATH_START> (0,0) (1,0) (2,0) (2,1) (2,2) (2,3) (3,3) <PATH_END>
+
+### Reasoning Behind the Calculations
+
+1. **Start at the Origin**: The given origin is (0,0).
+
+2. **Choose Adjacent Paths**: From (0,0), the possible paths follow the connectivity rules from the adjacency list:
+   - From (0,0) to (1,0) because the adjacency list has (1,0) <--> (0,0).
+
+3. **Proceed to Next Node**:
+   - From (1,0) to (2,0) (since (2,0) <--> (1,0) is listed).
+
+4. **Proceed to the Center of the Maze**:
+   - From (2,0), continue to (2,1) (since (2,0) <--> (2,1) is listed).
+
+5. **Moving Vertically in the Same Column**:
+   - Move from (2,1) to (2,2) (since (2,1) <--> (2,2) is listed).
+
+6. **Approach the Maze Exit**:
+   - Go from (2,2) to (2,3) (since (2,3) <--> (2,2) is listed).
+
+7. **Finally, to the Target**:
+   - From (2,3) to (3,3) (since (3,3) <--> (2,3) is listed).
+
+### Verifying the Path Does Not Cross Any Walls:
+
+- Looking at each step in the path, each move corresponds directly to a connection listed in the adjacency list, ensuring that we are only moving through valid and directly connected paths. No step in the chosen path tries to occupy a position that is not supported by the adjacency list entries.
+
+- Further, by examining the list, every move involves adjacent cells either within the same row (by incrementing or decrementing the column) or within the same column (by incrementing or decrementing the row), which conforms to the adjacency relations provided.
+
+Therefore, this path is valid and optimal within the given constraints.

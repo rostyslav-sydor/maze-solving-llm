@@ -1,0 +1,7 @@
+To solve a maze represented as a graph, we can use the breadth-first search (BFS) algorithm. Starting from the entry point, we can explore all the adjacent nodes and then explore all the adjacent nodes of those nodes, and so on, until we reach the exit point. To keep track of the path, we can use a queue to store the nodes that we have explored but have not yet visited all of their adjacent nodes.
+
+For the given maze, the BFS algorithm would start from the entry point (0,0) and explore the adjacent nodes (0,1), (1,0), and (1,1). It would then add these nodes to the queue and continue exploring the adjacent nodes of these nodes. The algorithm would continue in this way until it reaches the exit point (4,4).
+
+The path from the entry point to the exit point can be obtained by following the parent pointers that were stored during the BFS algorithm. The path would be:
+
+<PATH_START> (0,0) (0,1) (1,1) (1,2) (1,3) (2,3) (3,3) (3,4) (4,4) <PATH_END>

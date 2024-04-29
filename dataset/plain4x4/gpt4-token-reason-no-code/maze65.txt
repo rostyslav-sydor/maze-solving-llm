@@ -1,0 +1,34 @@
+To solve the given maze represented by an adjacency list, we find a path from the origin point (0,0) to the target point (3,3). The solution involves exploring the graph for a route that connects these two points without revisiting any location.
+
+### Strategy for Solution:
+1. **Understand the Graph Representation:** The maze is represented by an adjacency list where each connection between nodes (representing coordinates in the maze) is listed.
+2. **Origin and Target:** We know our starting point is (0,0) and our ending point is (3,3).
+3. **Graph Traversal:** Implement BFS (Breadth First Search) on the graph as it is optimal for finding the shortest path in an unweighted graph like this. BFS ensures that we explore all paths from the source step-by-step.
+
+### Steps in BFS:
+1. **Initialize:** Start at (0,0), mark it visited.
+2. **Queue Operations:** Use a queue to keep track of nodes to explore: Enqueue the starting node.
+3. **Explore Neighbors:** Dequeue a node, examine its neighbors based on the adjacency list, enqueue any unvisited neighbors, and mark them visited. Alongside, track the path that leads to each neighbor so that the route can be reconstructed later.
+4. **Repeat Until Found or Exhausted:** Continue dequeueing and exploring until either (3,3) is dequeued (path found) or the queue is empty (no path).
+
+### Execution:
+Using BFS based on the adjacency list:
+- Start from (0,0). Neighbors: (1,0).
+- From (1,0), move to the neighbors: (2,0) and back to (0,0).
+- From (2,0), move to the neighbors: (2,1) and back to (1,0).
+- Keep expanding like this until reaching (3,3) or all possibilities are exhausted.
+
+### Extracting the Path:
+Once the target (3,3) is reached, trace back the movements from (3,3) to (0,0) using the recorded paths from BFS.
+
+### Example path reconstruction using the adjacency list:
+Given the connections, a possible path through breadth-first traversal would look like:
+- Start at (0,0) → (1,0) → (2,0) → (2,1) → (1,1) → (1,2) → (1,3) → (2,3) → (3,3)
+
+That path sequence matches with possible moves per the defined connections in the adjacency description:
+(0,0) connects to (1,0), (1,0) connects to (2,0), (2,0) connects to (2,1), (2,1) connects to (1,1), (1,1) connects to (1,2), (1,2) connects to (1,3), etc., ensuring that each movement is legal.
+
+### Final Output:
+<PATH_START> (0,0) (1,0) (2,0) (2,1) (1,1) (1,2) (1,3) (2,3) (3,3) <PATH_END>
+
+This output assumes that the BFS search found this to be the shortest valid path from the origin to the target following the adjacencies listed.

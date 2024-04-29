@@ -1,0 +1,15 @@
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>
+
+**Reasoning**:
+
+1. Start from the <ORIGIN_START> token at (0, 0).
+2. Follow the path until you reach the <TARGET_END> token at (3, 3).
+3. Record the coordinates of each cell you visit along the path.
+4. The resulting path is: (0, 0) (0, 1) (0, 2) (0, 3) (1, 3) (2, 3) (3, 3).
+
+**Verification**:
+
+1. Check that the path does not cross any walls.
+2. Check that the path uses only adjacent cells.
+
+Both checks pass, so the solution is valid.

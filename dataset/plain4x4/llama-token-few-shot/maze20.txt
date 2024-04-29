@@ -1,0 +1,9 @@
+Here is the solution to the maze:
+
+<PATH_START> (0,0) (1,0) (1,1) (1,2) (2,2) (2,3) (3,3) <PATH_END>
+
+The maze has 8 nodes, and the shortest path between the origin (0,0) and the target (3,3) is:
+
+(0,0) -> (1,0) -> (1,1) -> (1,2) -> (2,2) -> (2,3) -> (3,3)
+
+The path has a total of 6 edges.

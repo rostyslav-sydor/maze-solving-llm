@@ -1,0 +1,30 @@
+To solve the maze and find the shortest path between the origin and the target, we can use Dijkstra's algorithm. Dijkstra's algorithm is a graph search algorithm that solves the single-source shortest path problem for a graph with non-negative edge weights, producing a shortest path tree. 
+
+Here, our graph is represented as an adjacency list, and the edges have no weights (all are implicitly 1). We will use Dijkstra's algorithm to find the shortest path from the origin to the target.
+
+First, we create an empty list to store the distance of each node from the origin. Then, we initialize the distance of the origin node as 0 and all other nodes as infinity. Next, we create a set of unvisited nodes, which initially contains all nodes.
+
+We then create a priority queue (using a min-heap) to store the nodes with their distances from the origin. We insert the origin node with a distance of 0 into the priority queue.
+
+Now, we start the main loop of the algorithm:
+
+1. We extract the node with the smallest distance from the priority queue. Let's call this node "u".
+2. For each neighbor "v" of node "u", we check if the distance of "v" can be improved by going through "u". If the distance of "u" plus the weight of the edge from "u" to "v" is less than the current distance of "v", we update the distance of "v" and insert "v" into the priority queue (if it's not already there).
+
+We repeat steps 1 and 2 until either the target node is extracted from the priority queue (meaning we have found the shortest path to the target) or the priority queue becomes empty (meaning there is no path from the origin to the target).
+
+Once we have found the shortest path to the target, we can trace back the path by following the predecessor pointers.
+
+Applying Dijkstra's algorithm to the given maze with the origin at (0,0) and the target at (3,3), we find the following shortest path:
+
+<PATH_START>
+(0,0)
+(0,1)
+(1,1)
+(1,2)
+(2,2)
+(2,3)
+(3,3)
+<PATH_END>
+
+This path is represented as a list of coordinates between the <PATH_START> and <PATH_END> tokens, where the first coordinate is the row and the second coordinate is the column.

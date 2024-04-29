@@ -1,0 +1,41 @@
+We can use a depth-first search (DFS) algorithm to find a path from the origin to the target in the given maze. Here's the high-level overview of the DFS algorithm:
+
+1. Start from the origin point and mark it as visited.
+2. Find all adjacent unvisited points and pick one of them.
+3. Follow the chosen path recursively by repeating steps 1 and 2 if necessary.
+4. If the target is reached, add the target point to the path and return the path.
+5. If there's a dead-end, backtrack to the last visited point that has other unvisited adjacent points and continue the search.
+
+Applying this to our problem, the adjacency list representation is described as a dictionary named `adjacent_list`:
+
+```python
+adjacent_list = {
+    (1, 2): [(1, 3)],
+    (3, 2): [(3, 1)],
+    (3, 3): [(3, 2)],
+    (0, 1): [(1, 1)],
+    (0, 0): [(1, 0)],
+    (2, 0): [(1, 0), (3, 0)],
+    (1, 2): [(2, 2)],
+    (0, 2): [(0, 1)],
+    (2, 1): [(2, 0)],
+    (3, 3): [(2, 3)],
+    (2, 2): [(2, 3)],
+    (1, 3): [(0, 3)],
+    (3, 1): [(3, 0)],
+    (0, 3): [(0, 2)]
+}
+```
+
+Here's how the DFS solution function looks like:
+
+```python
+def dfs(adjacent_list, origin, target):
+    visited = set()
+
+    def traverse(path_so_far, current):
+        visited.add(current)
+        for child in adjacent_list.get(current, []):
+            if child in visited:
+                continue
+           

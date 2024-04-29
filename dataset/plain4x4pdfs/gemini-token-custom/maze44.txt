@@ -1,0 +1,66 @@
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (1,3) (2,3) (3,3) <PATH_END>
+
+Let us begin with a brute-force solution:
+
+- The first move can be performed in 3 possible directions (N,E,W)
+- For each of these moves:
+  - For each possible move in the next step:
+    - For each possible move in the following step:
+      - ...
+      - We keep going in depth and trying out all the possibilities recursively until the target cell is found
+      - As soon as the target is found, we back out and remember this sequence of steps for later
+
+We will store every possible path as a sequence of tuples (row, column).
+Here are some of the initial steps for some of these paths:
+
+```
+[ (0, 0), (1, 0) ]
+
+[ (0, 0), (0, 1) ]
+```
+
+Out of all the sequences, the optimal one will comprise of the shortest number of steps needed to get from the starting cell to the target.
+Let us continue with the example and try out some of the paths. Starting with:
+
+```
+[ (0, 0) ]
+```
+The only option for the next move is:
+```
+[ (0, 0), (0, 1) ]
+```
+This allows two possible moves:
+
+```
+[ (0, 0), (0, 1), (0, 2) ]
+
+[ (0, 0), (0, 1), (1, 1) ]
+```
+We will proceed with both of them. First one:
+
+```
+[ (0, 0), (0, 1), (0, 2) ]
+```
+can only be proceeded by
+```
+[ (0, 0), (0, 1), (0, 2), (0, 3) ]
+```
+which hits a wall and is discarded. The other path
+
+```
+[ (0, 0), (0, 1), (1, 1) ]
+```
+allows for three moves
+```
+[ (0, 0), (0, 1), (1, 1) ] -> [ (1, 0), (0, 1), (1, 1) ] -> discarded, hits the wall
+[ (0, 0), (0, 1), (1, 1) ] -> [ (0, 1), (0, 1), (1, 1) ] -> ok, can proceed
+[ (0, 0), (0, 1), (1, 1) ] -> [ (1, 1), (0, 1), (1, 1) ] -> discarded, already visited this node
+
+[ (0, 0), (0, 1), (1, 1), (0, 1), (1, 1), (2, 1) ] -> ok, target reached!
+
+```
+This means the path found:
+```
+[ (0, 0) -> (0, 1) -> (1, 1) -> (0, 1) -> (1, 1) -> (2, 1) -> (3,1) -> (3,2) -> (3,3) ] 
+```
+meets all the requirements and can be considered as a solution.

@@ -1,0 +1,24 @@
+Starting from the given origin, we can follow these steps:
+
+- Start at cell `(0, 0)`
+- Go right to `(0, 1)`
+- Go up to `(0, 0)`
+- Go right to `(0, 1)`
+- Go up to  `(0, 0)`
+- Go right to  `(0, 1)`
+- Go up to  `(0, 0)`
+- Go right to `(0, 1)`
+- Go up to  `(1, 1)`
+- Go right to  `(2, 1)`
+- Go down to `(3, 1)`
+- Go left to  `(3, 0)`
+- Go down to `(3, 1)`
+- Go right to `(3, 2)`
+- Go up to `(3, 1)`
+- Go right to `(3, 2)`
+- Go up to `(3, 3)`
+
+Thus, the path is:
+```
+<PATH_START> (0,0) (0,1) (1,1) (2,1) (3,1) (3,2) (3,3) <PATH_END>
+```

@@ -1,0 +1,20 @@
+First, let's start from the entry point (1,1) and explore the neighboring cells. As we move through the maze, we need to always prioritize paths that lead us closer to the exit point (7,7).
+
+We can follow these steps to navigate through the maze:
+1. Move right to (1,2)
+2. Move down to (2,2)
+3. Move right to (2,3)
+4. Move down to (3,3)
+5. Move down to (4,3)
+6. Move right to (4,4)
+7. Move down to (5,4)
+8. Move right to (5,5)
+9. Move right to (5,6)
+10. Move down to (6,6)
+11. Move left to (6,5)
+12. Move down to (7,5)
+13. Move right to (7,6)
+14. Move down to (8,6) - exit point
+
+Therefore, the solution path for this maze would be: 
+<PATH_START> (1,1) (1,2) (2,2) (2,3) (3,3) (4,3) (4,4) (5,4) (5,5) (5,6) (6,6) (6,5) (7,5) (7,6) (8,6) <PATH_END>

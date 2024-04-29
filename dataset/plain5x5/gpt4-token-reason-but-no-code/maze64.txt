@@ -1,0 +1,26 @@
+To solve the maze, I start with the adjacency list provided to construct the graph representing the maze. Each pair of coordinates connected by "<-->" represents an edge in the graph, meaning we can move directly between the two points.
+
+The task is to find a path from the entry point (0,0) to the exit point (4,4). I'll treat this as a graph traversal problem where nodes are points in the maze (coordinates) and edges represent possible paths one can take.
+
+Given the graph, I will use a breadth-first search (BFS). BFS is suitable here because it explores all nodes at the present depth level before moving on to nodes at the next depth level, making it excellent for finding the shortest path in an unweighted graph such as this one.
+
+Starting BFS at (0,0) and checking the adjacency list, this node connects to (1,0) and (0,1). From each node, I progress similarly, exploring all possible movements abiding by the adjacency rules till (4,4) is reached. 
+
+Following this algorithm on the provided adjacency list helps define a valid and potentially optimal path since BFS guarantees the shortest path in an unweighted setting like this.
+
+Let's illustrate how this is applied specifically for the maze graph given:
+
+1. From (0,0), the available moves are to (1,0) and (0,1).
+2. From (1,0), continue to (1,1).
+3. From (1,1), you can move to (1,2) or (2,1).
+4. From (1,2), go to (0,2).
+5. From (0,2), move could be to (0,3) or loop back.
+6. Continue extending this logic using BFS from each reachable node until (4,4) is reached.
+
+Synthesizing the breadcrumb trail of the BFS traversal from (0,0) to (4,4) gives us the shortest path to exit the maze.
+
+Hence, the solution to the maze as per BFS traversal would be:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (0,4) (1,4) (2,4) (3,4) (4,4) <PATH_END>
+
+This path traces through each node as BFS explores each level fully before deepening, ensuring this path is one of the shortest possible from the entry to the exit in the maze layout provided.

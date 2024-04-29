@@ -1,0 +1,18 @@
+The adjacency list of maze tokens represents a graph with vertices marked by coordinates and edges connecting adjacent vertices. The goal is to find a path from the origin (0,0) to the target (3,3) and output it in coordinate list form.
+
+Step 1: Parse the adjacency list to create the graph data structure, with vertices (vertices) and edges (edges). 
+Step 2: Initiate the search algorithm, such as Dijkstra's algorithm or A*. Set the origin and target to their corresponding graph vertices. 
+Step 3: In the search loop, find all the accessible adjacent vertices (neighbors) of the current vertex, including their Euclidean/Manhattan distances to the target, add them to the priority queue.
+Step 4: Extract the smallest distance vertex from the priority queue and add it to the path.
+Step 5: Repeat steps 3 and 4 until reaching the target node (3,3).
+Step 6: Construct the path by retracing the nodes from the target node to the origin using the edges utilized in the search. This path will be stored in a list or array between <PATH_START> and <PATH_END>.
+Step 7: Answer with the path in the required format.
+
+Summarizing the above steps, here are the instructions to produce the solution:
+1. Parse adjacency list
+2. Apply search algorithm
+3. Find and store vertices to priority queue
+4. Extract and add vertex with smallest distance
+5. Repeat steps 3 and 4 until reaching target
+6. Construct path by retracing nodes
+7. Answer with path (<PATH_START> <coordinate list> <PATH_END>)

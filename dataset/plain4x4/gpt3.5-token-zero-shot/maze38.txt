@@ -1,0 +1,8 @@
+First, we can start at the origin point (0,0) and explore the graph using a depth-first search algorithm to find a path to the target point (3,3). We can keep track of visited nodes to avoid loops and backtrack when necessary.
+
+Following the adjacency list provided, we can explore the graph by visiting neighboring nodes in a systematic manner. Once we reach the target point (3,3), we can backtrack our steps to reconstruct the path taken.
+
+The solution path would look something like this:
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (1,1) (2,1) (2,2) (3,2) (3,3) <PATH_END>
+
+By following this path, we can successfully navigate from the origin to the target point in the maze.

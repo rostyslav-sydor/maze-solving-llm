@@ -1,0 +1,23 @@
+To find the solution to the maze, we will use the adjacency list provided which maps out the possible paths between different coordinates of the maze.
+
+1. **Extract Paths from Adjacency List**:
+   - We are provided with a series of paths like `(0,0) <--> (1,0)`.
+
+2. **Identify Start and End**:
+   - Start (Entry) point: `(1,1)`
+   - Target (Exit) point: `(3,3)`
+
+3. **Convert to Graph**:
+   - Convert the adjacency list pairs into a graph representation where each node represents a coordinate and edges exist between directly connected nodes.
+
+4. **Path Finding**:
+   - Use a pathfinding algorithm (such as Breadth-first search) to find a path from the start coordinate to the end coordinate.
+
+Given the adjacency list and start and end points, here's the computed shortest path:
+```
+(1,1) → (2,1) → (3,1) → (3,2) → (3,3)
+```
+
+As a result, the path from the entry point '(1,1)' to the exit point '(3,3)' is provided below:
+
+<PATH_START> (1,1) (2,1) (3,1) (3,2) (3,3) <PATH_END>

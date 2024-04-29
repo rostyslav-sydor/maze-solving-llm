@@ -1,0 +1,25 @@
+Here is the detailed solution path by analyzing the maze:
+
+Starting from S, the only option is to move right as the other direction is blocked by walls.
+
+Then keep moving right until you hit the second wall, move down bypassing the wall, then right and down bypassing another wall segment. From here, you continue right, and then take the first possibility to move downwards, continue moving down until you have to go left to bypass the wall.
+
+Then, continue downward again, finally move right to reach the position marked by E.
+
+Here's the path in ASCII terms and to be represented with coordinates:
+
+#########
+#S>>># #
+# ###v# #
+#   #v  #
+### ##># #
+# # #  v#
+# # #v###
+#   #>>E#
+#########
+
+Let's convert this movement into coordinate list format:
+
+<PATH_START> (1,1) (1,2) (1,3) (1,4) (2,4) (3,4) (3,5) (3,6) (4,6) (5,6) (6,6) (7,6) (7,7) <PATH_END>
+
+This path sequentially moves from the start to the exit of the maze, following the open corridors and avoiding walls, as per the maze description.

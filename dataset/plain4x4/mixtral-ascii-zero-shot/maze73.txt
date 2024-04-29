@@ -1,0 +1,49 @@
+1. Convert the ASCII representation to a 2D array in Python.
+2. Implement a recursive backtracking algorithm to find a solution to the maze.
+3. Convert the solution path from the 2D array back to coordinate list format between <PATH_START> and <PATH_END> tokens.
+
+Here's a possible solution in Python:
+```python
+import collections
+
+maze = """\
+#########
+#S    # #
+# ### # #
+# #     #
+# ##### #
+# #   # #
+# # ### #
+#   #  E#
+#########"""
+
+def solve_maze(maze, start, end):
+    rows, cols = len(maze), len(maze[0])
+    stack = collections.deque([start])
+    parent = {start: None}
+    while stack:
+        r, c = stack.pop()
+        if (r, c) == end:
+            path = []
+            while (r, c) != start:
+                path.append((r, c))
+                r, c = parent[(r, c)]
+            return [start] + path[::-1]
+        for nr, nc in ((r-1, c), (r+1, c), (r, c-1), (r, c+1)):
+            if 0 <= nr < rows and 0 <= nc < cols and maze[nr][nc] not in '#S':
+                if (nr, nc) not in parent:
+                    parent[(nr, nc)] = (r, c)
+                    stack.append((nr, nc))
+    return None
+
+def format_path(path):
+    return " ".join(f"({r}, {c})" for r, c in path)
+
+def main():
+    start = (1, 1)
+    end = (7, 7)
+    maze = [list(row) for row in maze.splitlines()]
+    path = solve_maze(maze, start, end)
+
+    fmt = "<PATH_START> {} <PATH_END>".format if path else "No solution found"
+    print(fmt(format_path(

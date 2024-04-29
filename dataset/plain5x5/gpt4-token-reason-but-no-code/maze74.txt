@@ -1,0 +1,17 @@
+To solve the maze presented in the adjacency list format, we use a pathfinding algorithm such as Breadth-First Search (BFS). BFS is ideal for unweighted graphs like this because it explores all neighbor vertices at the current depth prior to moving on to nodes at the next depth level, guaranteeing that the shortest path in an unweighted graph will be found.
+
+Given that the origin of the maze is at coordinate (0,0) and the target is at (4,4), we'll use BFS starting from (0,0), exploring all possible paths systematically until we reach (4,4). According to the adjacency list, all direct connections between coordinates are provided, which shows us possible moves at each step without worrying about any walls or barriers.
+
+By systematically following BFS:
+
+1. Start from (0,0).
+2. Look at all adjacent points and enqueue them if they haven't been visited yet.
+3. Move to an adjacent point, then repeat the process with newly found neighbors.
+4. Track the path by remembering the predecessor of each point.
+5. Once we reach (4,4), backtrack using the predecessor links to find the path from (0,0) to (4,4).
+
+Based on the adjacency list given and using BFS traversal, we find the following path as the solution to reach from (0,0) to (4,4):
+
+<PATH_START> (0,0) (1,0) (2,0) (2,1) (2,2) (2,3) (2,4) (3,4) (4,4) <PATH_END>
+
+This path explores the shortest route through the grid, taking advantage of every viable connection presented without retracing steps unnecessarily. Each step moves closer to the target, ensuring an efficient route through the maze. The path is traced based on the connection data provided, maintaining the integrity of shortest path finding typical in BFS.

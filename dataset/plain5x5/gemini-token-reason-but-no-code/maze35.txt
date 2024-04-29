@@ -1,0 +1,5 @@
+The Depth-First search (DFS) algorithm traverses the maze using a stack structure. It starts at the starting point and adds all its neighboring cells to the stack. It then pops the last cell from the stack and adds it to the current path. This is repeated until the stack is empty or the end point is reached.
+
+In this case, the path would be the following:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (0,4) (1,4) (2,4) (3,4) (4,4) <PATH_END>

@@ -1,0 +1,40 @@
+To solve the maze presented in the description, we can employ a Breadth-First Search (BFS) approach. Here’s the step-by-step reasoning:
+
+1. **Convert the Adjacency List to a Graph**:
+    - The adjacency list represents connections between nodes in the maze, where each node is a coordinate (row, column).
+    - We map out these connections in a dictionary format to represent the graph. Each key (node) has a list of directly connected nodes (accessible paths).
+
+2. **Initialize BFS**:
+    - We start BFS from the origin point, which is (0,0).
+    - We maintain a queue to explore nodes level by level, beginning with the origin.
+    - We also maintain a dictionary `parents` to track the path, recording nodes' predecessors.
+
+3. **Explore Nodes**:
+    - Dequeue a node from the front of the queue, explore all its directly connected nodes.
+    - For each connected node, if it hasn't been visited (not present in `parents`), we mark its parent (the node from which we reached it) and enqueue it.
+    - Repeat until the queue is empty or the target node (exit point) is reached.
+
+4. **Construct the Path**:
+    - If we reach the target node (3,3), we backtrack using the `parents` dictionary from the target to the origin to construct the path.
+
+5. **Validation**:
+    - The final path is checked to ensure each step moves to an adjacent coordinate and doesn't bypass any walls as described in the initial adjacency list.
+
+Let's see the BFS in our graph:
+
+Starting at (0,0), we explore the adjacent (1,0). Repeat BFS from (1,0) and then next nodes until you get to the target. Following this approach and exploring nodes iteratively:
+
+- From **(0,0)** -> to **(1,0)** (adjacent and direct connection).
+- From **(1,0)** -> to **(1,1)** (adjacent node).
+- From **(1,1)** -> to **(1,2)** (still adjacent, all moves allowed).
+- Keep moving to **(1,3)** -> Then **(2,3)** -> and finally **(3,3)**.
+
+Now let's construct the path:
+
+Based on BFS, you traverse:
+- (0,0) -> (1,0) -> (1,1) -> (1,2) -> (1,3) -> (2,3) -> (3,3)
+
+Simplified Path:
+- <PATH_START> (0,0) (1,0) (1,1) (1,2) (1,3) (2,3) (3,3) <PATH_END>
+
+This path follows all connections in the maze without violating any wall constraints. Each move from a node to the next is valid, with coordinates differing by a single increment, confirming validity and connectivity based on the adjacency provided.

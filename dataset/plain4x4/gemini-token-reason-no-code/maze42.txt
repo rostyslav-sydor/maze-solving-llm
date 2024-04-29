@@ -1,0 +1,11 @@
+1. Start from the origin at (0,0), and find all possible adjacent cells. In this case, there are two adjacent cells, (0,1) and (1,0).
+
+2. Choose one of the adjacent cells (e.g., (0,1)) and visit it. Mark this cell as visited.
+
+3. From the current cell, find all possible adjacent cells that have not been visited. In this case, there is only one adjacent cell, (1,1).
+
+4. Choose one of the adjacent cells (e.g., (1,1)) and visit it. Mark this cell as visited.
+
+5. Repeat steps 3 and 4 until you reach the target cell. In this case, the target cell is (3,3).
+
+6. Output the path as a list of coordinates. In this case, the path would be <PATH_START> (0,0) (0,1) (1,1) (2,1) (2,2) (3,2) (3,3) <PATH_END>

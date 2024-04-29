@@ -1,0 +1,12 @@
+To solve the maze, begin at the starting point (0,0) and look for available paths by avoiding walls and advancing towards the goal (3,3):
+
+1. Start at (0,0), you can only move right to (0,1) since moving down is blocked.
+2. Move right to (0,2) and (0,3), as these cells are accessible and directly aligned without walls.
+3. At (0,3), the path downwards is blocked by a wall, so backtrack to (0,2) and move downwards, as it’s the only available direction to explore.
+4. From (0,2) move down to (1,2) and then (2,2) since the downward paths are open.
+5. At (2,2), moving right to (2,3) is possible as there is no wall blocking this direction.
+6. Move down from (2,3) to the goal at (3,3).
+
+Thus, the solution path through the maze from entry (0,0) to exit (3,3) is:
+
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (2,2) (2,3) (3,3) <PATH_END>

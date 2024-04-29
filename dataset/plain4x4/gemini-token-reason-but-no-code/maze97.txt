@@ -1,0 +1,3 @@
+To find the a path in the maze we should traverse it depth-first. For each node we should keep track of the parent node that lead us to this node, which can be implemented with a queue of nodes or recursive call. At the end of the traversal we will have a list of parents that can be used to get the actual path from the exit to the entrance of the maze. 
+
+For a given maze the path could be: <PATH_START> (0,0) (0,1) (1,1) (1,2) (1,3) (2,3) (3,3) <PATH_END>

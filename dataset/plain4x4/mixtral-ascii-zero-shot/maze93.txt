@@ -1,0 +1,11 @@
+1. Read the maze from the ASCII representation.
+2. Create a 2D array to store the maze (replace 'S' and 'E' with '.').
+3. Implement a recursive depth-first search (DFS) algorithm with backtracking to find a path from 'S' to 'E'.
+   - Function: void searchPath(int row, int col);
+   - Check if (row, col) is within the maze boundaries and is not a wall.
+   - If we've reached the 'E', print the path and return.
+   - If we haven't reached the 'E', mark the current position as visited (temporarily change it to '#').
+   - Call searchPath(row + 1, col), searchPath(row - 1, col), searchPath(row, col + 1), and searchPath(row, col - 1) to search in all directions.
+   - After the search in all directions is completed, restore the current position (change it back to '.').
+4. Start the search: call searchPath(1, 1);
+5. Print the output in the specified format.

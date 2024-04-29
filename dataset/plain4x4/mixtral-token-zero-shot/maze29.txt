@@ -1,0 +1,21 @@
+Starting from (0, 0), let's consider the possible moves following the adjacency list:
+1. (0, 0) to (0, 1)
+2. (0, 1) to (0, 0), dead-end, back to (0, 1)
+3. (0, 1) to (1, 1)
+4. (1, 1) to (1, 2)
+5. (1, 2) to (1, 1), back to (1, 2)
+6. (1, 2) to (2, 2)
+7. (2, 2) to (2, 3)
+8. (2, 3) to (1, 3)
+9. (1, 3) to (0, 3)
+10. (0, 3) to (0, 2), back to (0, 3)
+11. (0, 3) to (1, 3), back to (0, 3)
+12. (0, 3) to (0, 2), back to (0, 3)
+13. (0, 3) to (1, 3), back to (0, 3)
+
+This sequence indicates a deadlock situation between points (0, 3), (1, 3), and (0, 2). There is no clear path to the target directly from the origin without retracing steps unnecessarily. Here are possible solutions:
+
+1. **(4 steps):** (0, 0) → (0, 1) → (1, 1) → (1, 2) → (2, 2) → (2, 3) → (3, 3) – **Packet loss occurs, needs maintenance and better planning**
+2. **(6 steps):** (0, 0) → (1, 0) → (2, 0) → (2, 1) → (2, 2) → (2, 3) → (3, 3) – **Packet loss occurs, needs maintenance and better planning**
+
+The maze is actually inefficiently routed with deadlocks and unnecessary retrace points, indicating potential network packet loss that requires maintenance and better planning

@@ -1,0 +1,23 @@
+Given the graph representation of the maze, our objective is to find the shortest path from the origin (0,0) to the target (3,3). We can use Breadth-First Search (BFS), a commonly used algorithm for finding shortest paths in unweighted graphs such as this maze, to traverse the graph layer-by-layer, ensuring the shortest path to every node is found in the order of their distances from the start node.
+
+In this case, the adjacency list describes which points in the maze are directly connected, which can be interpreted as passages in the maze. Below is the BFS traversal applied to the provided maze from the start point to the target:
+
+1. Begin at the starting point (0,0). Explore all direct neighbors: (1,0).
+2. From (1,0), explore its neighbors that are not yet visited: (1,1), (0,0) is already visited.
+3. From (1,1), explore its neighbors (1,0) is already visited and find (1,2).
+4. From (1,2), explore its neighbors (1,1) is visited, (1,3) and (0,2) are unvisited.
+5. From (1,3), explore its neighbors: (2,3) and (0,3).
+6. From (0,3), visit its neighbor (0,2).
+7. From (0,2), explore (0,1) as it is unvisited.
+8. From (0,1), no new neighbors are found.
+9. From (2,3), visit its neighbor (3,3), the target.
+
+At each step, we trace the path we have taken to reach each new node so as to backtrack the shortest route once (3,3) is reached. Following this strategy ensures we find a path:
+
+(0,0) -> (1,0) -> (1,1) -> (1,2) -> (1,3) -> (2,3) -> (3,3)
+
+This is a valid path through the maze as each step moves between adjacent locations defined by the adjacency list and reaches the target without revisitng any location unnecessarily.
+
+Hence, the solution path from (0,0) to (3,3) in the maze is:
+
+<PATH_START> (0,0) (1,0) (1,1) (1,2) (1,3) (2,3) (3,3) <PATH_END>

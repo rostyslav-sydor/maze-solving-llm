@@ -1,0 +1,12 @@
+To solve the maze and find a path from the entry (0,0) to the exit (3,3), we treat the adjacency list provided as a graph, where each pair of connected nodes (cells) indicates possible movement between them.
+
+From the adjacency list:
+- Starting at (0,0), we see it's connected to (0,1) and (1,0).
+- Continuing from (0,1), it connects to (0,0) and (1,1).
+- Each step follows by checking each node's adjacent nodes and determining if it's closer to the exit.
+
+Solving this systematically, tracing back which options continue to move to adjacent nodes and ultimately reach (3,3), I found a possible path:
+
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (3,2) (3,3) <PATH_END>
+
+This path directly traverses the grid from the start to the end, navigating through adjacent nodes listed in the adjacency list.

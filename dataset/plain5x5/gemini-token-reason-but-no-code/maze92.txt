@@ -1,0 +1,17 @@
+**Reasoning:**
+
+To find a solution to the maze, we can use a breadth-first search (BFS) algorithm. BFS starts at the origin and explores all possible paths one step at a time, keeping track of the path taken so far. When the target is reached, the path taken can be traced back to find the solution.
+
+**Specific solution for the provided maze:**
+
+<PATH_START>
+(0, 0)
+(0, 1)
+(0, 2)
+(0, 3)
+(0, 4)
+(1, 4)
+(2, 4)
+(3, 4)
+(4, 4)
+<PATH_END>

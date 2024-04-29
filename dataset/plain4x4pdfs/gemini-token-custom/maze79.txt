@@ -1,0 +1,9 @@
+One possible solution to the maze is:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (1,2) (1,1) (2,1) (2,2) (3,2) (3,3) <PATH_END>
+
+This solution is valid because it starts at the origin, ends at the target, and only uses adjacent cells. It also does not cross any walls.
+
+To find this solution, we can use a depth-first search algorithm. Starting at the origin, we explore all possible paths until we reach the target. If we reach a dead end, we backtrack and try a different path.
+
+This algorithm is guaranteed to find a solution if one exists. However, it is not guaranteed to find the shortest solution.

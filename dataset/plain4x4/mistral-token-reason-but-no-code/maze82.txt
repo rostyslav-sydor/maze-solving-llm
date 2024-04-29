@@ -1,0 +1,26 @@
+To find a solution for a maze represented as a graph using its adjacency list, we can apply the Breadth-First Search (BFS) algorithm. BFS is a graph traversal algorithm that explores all the vertices at the same level before moving on to the next level. It is particularly suitable for finding the shortest path between two nodes in an unweighted graph, which is the case with our maze.
+
+Here's a step-by-step explanation of the BFS algorithm applied to our maze:
+
+1. Initialize a queue (FIFO data structure) and enqueue the origin node (0, 0).
+2. While the queue is not empty, repeat the following steps:
+   a. Dequeue the first node from the queue, let's call it the current node.
+   b. Mark the current node as visited.
+   c. If the current node is the target node (3, 3), we have found a solution. Break the loop and proceed to step 4.
+   d. For each unvisited neighbor node of the current node, enqueue it to the queue and mark it as visited.
+3. If we break the loop in step 2c, we have found a solution. If not, there is no path from the origin to the target.
+4. To reconstruct the path from the origin to the target, we need to maintain a parent array that stores the parent of each node in the shortest path. Initially, all entries in the parent array are set to null, except for the origin node, which has no parent.
+   a. Start from the target node and follow its parent pointer until we reach the origin node or a null parent.
+   b. As we follow the parent pointers, add each node to the path in reverse order.
+
+Now, let's apply the BFS algorithm to our specific maze:
+
+1. Initialize the queue with the origin node (0, 0): Queue = [(0, 0)]; Visited = {(0, 0)}; Parent = {(0, 0): None}
+2. Dequeue the first node: (0, 0)
+   a. Enqueue unvisited neighbors of (0, 0): Queue = [(1, 0), (0, 1)]; Visited = {(0, 0), (1, 0), (0, 1)}; Parent = {(0, 0): None, (1, 0): (0, 0), (0, 1): (0, 0)}
+3. Dequeue the first node: (1, 0)
+   a. Enqueue unvisited neighbors of (1, 0): Queue = [(1, 1), (2, 0), (0, 1)]; Visited = {(0, 0), (1, 0), (0, 1), (1, 1), (2, 0)}; Parent = {(0, 0): None, (1, 0): (0, 0), (0, 1): (0, 0), (1, 1): (1, 0), (2, 0): (1, 0)}
+4. Dequeue the first node: (1, 1)
+   a. Enqueue unvisited neighbors of (1, 1): Queue = [(2, 1), (1, 2), (0, 1)]; Visited = {(0, 0), (1, 0), (0, 1), (1, 1), (2, 0), (2, 1), (1, 2)}; Parent = {(0, 0): None, (1, 0): (0, 0), (0, 1): (0, 0), (1, 1): (1, 0), (2, 0): (1, 0), (2, 1): (1, 1), (1, 2): (1, 1)}
+5. Dequeue the first node: (2, 1)
+   a. Enqueue unvisited neighbors of (2, 1): Queue = [(2, 2), (1, 2), (0, 1)]; Visited = {(0, 0), (1, 0), (0, 1), (1, 1), (2, 0), (2, 1), (1, 2), (2, 2)}; Parent = {(0, 0): None, (

@@ -1,0 +1,5 @@
+<PATH_START> (0,0) (1,0) (2,0) (2,1) (2,2) (2,3) (3,3) <PATH_END>
+
+We start at the origin (0,0) and move to the right until we hit a wall at (3,0). 
+Then we move up one row to (3,1) and continue moving right until we reach the target at (3,3).
+This path does not cross any walls and uses only adjacent cells.

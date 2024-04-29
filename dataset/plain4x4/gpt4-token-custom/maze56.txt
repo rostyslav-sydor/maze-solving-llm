@@ -1,0 +1,46 @@
+To solve this maze represented by an adjacency list of graph edges, we first construct the graph and identify a path from the origin to the target using effective pathfinding algorithms like Breadth-First Search (BFS). 
+
+Here's a step-by-step breakdown of how I reasoned out the solution from the maze representation given:
+
+1. **Construct the Graph**: List every coordination and its connections (coordinates it can directly move to):
+   - `(1,3)` connects to `(0,3)`, `(1,2)`, `(2,3)`
+   - `(3,2)` connects to `(2,2)`, `(3,3)`
+   - `(0,0)` connects to `(0,1)`, `(1,0)`
+   - `(2,3)` connects to `(1,3)`, `(3,3)`
+   - `(1,1)` connects to `(2,1)`, `(1,2)`
+   - `(3,3)` connects to `(2,3)`, `(3,2)`
+   - `(0,1)` connects to `(0,0)`, `(0,2)`
+   - `(2,1)` connects to `(1,1)`, `(3,1)`
+   - `(3,1)` connects to `(2,1)`, `(3,0)`
+   - `(0,2)` connects to `(0,1)`, `(0,3)`
+   - `(1,0)` connects to `(0,0)`
+   - `(3,0)` connects to `(3,1)`, `(2,0)`
+   - `(2,0)` connects to `(3,0)`
+
+2. **Define Start and End Points**:
+   - Origin (start point): `(0,0)`
+   - Target (exit point): `(3,3)`
+
+3. **Find the Path Using BFS**:
+   - Start BFS from `(0,0)`, looking to reach `(3,3)`.
+   - Visiting neighbors, we follow paths that are directly connected:
+   - `(0,0)` to `(0,1)` 
+   - `(0,1)` to `(0,2)`
+   - `(0,2)` to `(0,3)`
+   - `(0,3)` to `(1,3)`
+   - `(1,3)` to `(2,3)`
+   - `(2,3)` to `(3,3)`
+
+4. **Compile Final Path**:
+   - List all the nodes visited in sequence without repetition to reach from origin to target.
+
+5. **Verify the Solution**:
+   - Ensure the chosen path does not cross nodes that are not directly linked.
+   - Confirm every move steps only to adjacent cells provided in the adjacency list.
+   - Here, all moves are valid as they follow direct links mentioned.
+
+By following these steps using the adjacency list, I determined the valid, shortest path through the maze:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>
+
+This path leads from the entrance `(0,0)` to the exit `(3,3)`, passing through legitimate routes as described by the original adjacency list. Each step moves from one coordinate to an adjacent coordinate, ensuring no violations of maze walls or restrictions.

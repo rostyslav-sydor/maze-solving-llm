@@ -1,0 +1,14 @@
+The Depth-first search (DFS) algorithm can be used to find a path from the origin to the target in a maze.
+The algorithm starts at the origin and recursively explores all possible paths.
+If a path leads to the target, the algorithm stops and returns the path.
+If no path leads to the target, the algorithm backtracks and tries a different path.
+
+To apply DFS to the provided maze, we can use the adjacency list to represent the maze.
+We can start at the origin token and recursively explore all possible paths.
+If a path leads to the target token, we stop and return the path.
+If no path leads to the target token, we backtrack and try a different path.
+
+In the provided maze, there is only one path from the origin to the target.
+The path is:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>

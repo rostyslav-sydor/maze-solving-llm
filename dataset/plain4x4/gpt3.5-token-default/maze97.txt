@@ -1,0 +1,7 @@
+To solve the maze, we can use a depth-first search algorithm starting from the origin (0,0) towards the target (3,3). By following the path indicated in the adjacency list, we can trace our way through the maze.
+
+One possible solution path could be: <PATH_START> (0,0) (1,0) (2,0) (2,1) (2,2) (1,2) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>.
+
+This path takes us from the origin (0,0) to the target (3,3) by following the edges specified in the adjacency list. The solution path avoids any loops in the maze by only moving to adjacent cells that have not been visited before.
+
+By using this approach, we can guarantee that the path we find is valid and leads us to the target while avoiding any dead ends or repeated visits to the same cell.

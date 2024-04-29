@@ -1,0 +1,11 @@
+The simplest approach to solving the maze would be using a depth-first search (DFS) algorithm starting from the entry coordinate (S at (1,1)) and considering moves up, down, left and right. This will explore all possible paths until it finds the exit coordinate (E at (7,7)), avoiding walls and revisiting any coordinate.
+
+1. From (1,1), we can move to (1,2) since it's an open path.
+2. Continue to the right to (1,3), (1,4), (1,5), and (1,6) since these are all open spaces.
+3. Move down from (1,6) to (2,6). This location is open and closer to the exit on the bottom right.
+4. Proceeding further right to (2,7) also leads to open space.
+5. From (2,7), move downward through the following coordinates: (3,7), (4,7), (5,7), (6,7). These paths are all clear.
+6. Finally, to reach the exit at (7,7) from (6,7).
+
+Thus the path is:
+<PATH_START> (1,1) (1,2) (1,3) (1,4) (1,5) (1,6) (2,6) (2,7) (3,7) (4,7) (5,7) (6,7) (7,7) <PATH_END>

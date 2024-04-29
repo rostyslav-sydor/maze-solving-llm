@@ -1,0 +1,17 @@
+To solve the maze represented by the adjacency list provided, we start from the origin and aim to reach the target, computing the shortest path. Here's the solution sequence:
+
+1. Parse the adjacency list into a format useable for pathfinding algorithms.
+2. Use a pathfinding algorithm, such as BFS (Breadth-First Search), to find the shortest route from the origin to the target in the graph.
+3. Trace the path found and display it in the required format.
+
+Given:
+- Origin at (0,0)
+- Target at (3,3)
+
+From correctly reading the adjacency information and applying BFS, the step sequence leading from the start point to the end point can be computed.
+
+Here's the shortest path from the origin to the destination:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>
+
+This path navigates through the allowed moves described by the adjacency list, avoiding walls and reaching the destination in the shortest possible sequence of steps.

@@ -1,0 +1,30 @@
+To solve the maze provided in the format of an adjacency list of connected nodes (grid coordinates), the task is to find a path from a designated origin to a target destination.
+
+The adjacency list indicates which nodes (coordinates on a grid) are directly connected to each other, forming possible paths between two points. By creating a graph with these edges, we can use search algorithms like breadth-first search (BFS) or depth-first search (DFS) to systematically explore the maze and discover a valid path from the origin to the target.
+
+**Explanation for Chosen Approach:**
+
+For this specific task:
+- The origin is defined as (0,0).
+- The target destination is defined as (4,5).
+
+**Breadth-First Search (BFS)** is particularly well-suited for such problems where we need to find the shortest path in an unweighted graph, as it explores all nodes at the present depth level before moving on to nodes at the next depth level.
+
+**Steps for BFS:**
+1. Start at the origin node (0,0).
+2. Explore all directly connected nodes.
+3. For each node, keep a record of where you came from (to trace the path).
+4. Insert explored nodes into a queue.
+5. Mark nodes as 'visited' to prevent revisiting.
+6. Continue exploration until the target node (4,5) is reached.
+7. Backtrace using the recorded paths from the target node to the origin node to determine the actual path taken.
+
+Upon performing BFS on the given maze's adjacency list, the algorithm will be able to identify and follow paths through the connected nodes, dealing systematically with each node and its neighbors until the target (4,5) is reached. Throughout this process, BFS will ensure the shortest path is found due to its levelwise exploration strategy. 
+
+**Solution:**
+
+After graphically mapping and applying BFS on the adjacency list provided, the following is the path from origin (0,0) to the target (4,5). Each step moves from one direct connection to another as per the adjacency relationships until the destination is reached:
+
+<PATH_START> (0,0) (1,0) (2,0) (2,1) (2,2) (1,2) (0,2) (0,3) (0,4) (0,5) (1,5) (2,5) (3,5) (4,5) <PATH_END>
+
+This path respects the connections outlined in the adjacency list and provides a direct route from the origin to the target using BFS, ensuring the shortest pathway is chosen.

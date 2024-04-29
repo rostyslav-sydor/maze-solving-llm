@@ -1,0 +1,5 @@
+First, we move right from the starting point to (1,2). 
+Then, we go down to (2,2), then move right to (2,3), down to (3,3), right to (3,4), up to (2,4), right to (2,5), and lastly we go down to (3,5).
+
+So, the complete path is:
+<PATH_START> (1,1) (1,2) (2,2) (2,3) (3,3) (3,4) (2,4) (2,5) (3,5) <PATH_END>

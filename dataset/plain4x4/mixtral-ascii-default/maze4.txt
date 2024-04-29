@@ -1,0 +1,19 @@
+Here is the list of coordinates describing the path from the entry point at (1, 1) to the exit point at (7, 7) in the given ASCII representation of a maze:
+
+<PATH_START>
+(1,1)
+(2,1)
+(3,1)
+(4,1)
+(4,2)
+(3,2)
+(3,3)
+(4,3)
+(4,4)
+(4,5)
+(5,5)
+(6,5)
+(6,6)
+(7,6)
+(7,7)
+<PATH_END>

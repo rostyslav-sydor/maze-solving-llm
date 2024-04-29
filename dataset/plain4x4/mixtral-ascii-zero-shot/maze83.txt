@@ -1,0 +1,46 @@
+We can represent this maze as a 2D list:
+
+maze = [
+  ['#', '#', '#', '#', '#', '#', '#', '#', '#'],
+  ['#', 'S', ' ', ' ', ' ', ' ', ' ', ' ', '#'],
+  ['#', '#', '#', '#', '#', '#', '#', ' ', '#'],
+  ['#', ' ', '#', ' ', ' ', ' ', '#', ' ', '#'],
+  ['#', '#', '#', '#', '#', '#', '#', ' ', '#'],
+  ['#', ' ', ' ', ' ', '#', ' ', ' ', ' ', '#'],
+  ['#', '#', '#', '#', '#', '#', '#', ' ', '#'],
+  ['#', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '#'],
+]
+
+Now we can use the breadth-first search algorithm to find a path from the start (S, (1, 1)) to the end (E, (7, 7)):
+```python
+from collections import deque
+
+def find_path(maze):
+    start = (1, 1)
+    end = (7, 7)
+    queue = deque([(start, [])])
+    visited = set()
+    directions = [(1, 0), (-1, 0), (0, 1), (0, -1)]
+
+    while queue:
+        node, path_to_here = queue.popleft()
+        if node == end:
+            return path_to_here
+
+        # Check if the current position is valid
+        x, y = node
+        if x < 0 or y < 0 or x >= len(maze) or y >= len(maze[0]) or maze[x][y] == '#':
+            continue
+
+        # Mark this node as visited
+        visited.add(node)
+
+        # Add this position to the path
+        path_to_here.append(node)
+
+        # Get all four possible paths from this position
+        for dx, dy in directions:
+            next_x, next_y = x + dx, y + dy
+
+            # Check if we reached the end position
+            if (next_

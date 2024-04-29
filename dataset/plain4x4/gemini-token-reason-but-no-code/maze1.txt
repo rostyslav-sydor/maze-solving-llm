@@ -1,0 +1,10 @@
+In order to find a solution for the maze, you can use a breadth-first search algorithm.
+
+This algorithm starts at the origin point and explores all of the adjacent points.
+It then continues to explore all of the adjacent points of the adjacent points, and so on, until it reaches the target point.
+
+The path to the target point can be found by backtracking from the target point to the origin point, recording the coordinates of each point along the way.
+
+For the given maze, the solution is:
+
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (3,2) (3,3) <PATH_END>

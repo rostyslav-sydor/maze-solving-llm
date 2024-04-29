@@ -1,0 +1,25 @@
+To solve the given maze, we can follow the breadth-first search (BFS) algorithm. This algorithm traverses through the maze, starting from the origin point, and explores all possible paths in a layer-by-layer fashion. The BFS algorithm is guaranteed to find the shortest path to the target if it exists.
+
+Here's how we can apply the BFS algorithm to solve the given maze:
+
+1. Initialize a queue and a set to keep track of visited nodes. Enqueue the origin point and mark it as visited.
+2. While the queue is not empty:
+   a. Dequeue the current node from the queue.
+   b. Check if the current node is the target point; if it is, return the path from origin to target.
+   c. For each neighbor of the current node:
+      i. If the neighbor is not visited and not an obstacle:
+         - Enqueue the neighbor and mark it as visited.
+         - Update the parent pointer for the neighbor to the current node.
+3. If the target point is not found, return an empty path.
+
+Now, let's apply the BFS algorithm to the given maze:
+
+```
+<ADJLIST_START> (3,1) <--> (3,2) ; (1,1) <--> (0,1) ; (2,1) <--> (1,1) ; (1,0) <--> (1,1) ; (3,2) <--> (3,3) ; (1,2) <--> (2,2) ; (2,0) <--> (1,0) ; (0,0) <--> (0,1) ; (3,0) <--> (2,0) ; (2,3) <--> (1,3) ; (1,2) <--> (0,2) ; (0,3) <--> (1,3) ; (2,2) <--> (3,2) ; (3,0) <--> (3,1) ; (3,3) <--> (2,3) ; <ADJLIST_END> <ORIGIN_START> (0,0) <ORIGIN_END> <TARGET_START> (3,3) <TARGET_END>
+```
+
+After running the BFS algorithm on the given maze, we find the path from the origin (0, 0) to the target (3, 3):
+
+```
+<PATH_START> (0, 0) (0, 1) (1, 1) (1, 2) (2, 2) (3, 2) (3, 3) <PATH_END>
+```

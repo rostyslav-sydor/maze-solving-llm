@@ -1,0 +1,18 @@
+To solve this maze, let's analyze the adjacency list and trace a path from the origin (0,0) to the target (3,3):
+
+1. Start from (0,0)
+2. Move right to (0,1) via (0,0) <--> (0,1)
+3. Move right to (0,2) using (0,1) <--> (0,2) *(dead end from origin perspective)*
+4. Move right to (0,3) via (0,2) <--> (0,3)
+5. Move down to (1,3) via (1,3) <--> (0,3)
+6. Move left to (1,2) via (1,3) <--> (1,2)
+7. Move left to (1,1) using (1,1) <--> (1,2) *(dead end from origin perspective)*
+8. Move left to (1,0) via (1,1) <--> (1,0)
+9. Move down to (2,0) via (2,0) <--> (1,0)
+10. Move right to (2,1) via (2,0) <--> (2,1)
+11. Move down to (3,1) via (3,1) <--> (2,1)
+12. Move right to (3,2) via (3,2) <--> (3,1)
+13. Move right to (3,3) via (3,3) <--> (3,2)
+
+Final Path Solution:
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (1,2) (1,1) (1,0) (2,0) (2,1) (3,1) (3,2) (3,3) <PATH_END>

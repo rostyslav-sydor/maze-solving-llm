@@ -1,0 +1,11 @@
+To find a path through a maze like this, a simple, recursive algorithm can be used.
+It starts at the origin point and loops through the adjacent points.
+If the adjacent point is the target point, the algorithm stops and returns the path.
+Otherwise, the algorithm recursively calls itself on the adjacent point, passing in the current path and the adjacent point as parameters.
+If the recursive call returns a path, the algorithm returns the path.
+Otherwise, the algorithm continues to the next adjacent point.
+If the algorithm has looped through all of the adjacent points without finding a path, it returns None.
+
+For the given maze, the path is:
+
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (4,0) (4,1) (4,2) (4,3) (4,4) <PATH_END>

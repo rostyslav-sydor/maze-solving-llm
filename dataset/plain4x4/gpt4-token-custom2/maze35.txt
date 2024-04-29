@@ -1,0 +1,44 @@
+To solve the maze from the origin at (0,0) to the target at (3,3) using the adjacency list provided, we'll follow a breadth-first search (BFS) algorithm to ensure that we find the shortest path. We'll transform the adjacency list into a usable graph format, perform BFS to track the path step-by-step, and then backtrack to determine the path from the origin to the target.
+
+1. Parse the adjacency list to create a graph in the form of a dictionary.
+2. Use BFS to find the shortest path from (0,0) to (3,3).
+3. Record the path traversed using a predecessor map.
+4. Backtrack from the target to the origin using the predecessor map to obtain the correct path order.
+
+**Parsed Graph Representation from the Adjacency List:**
+```
+graph = {
+    (2, 2): [(1, 2), (3, 2)],
+    (2, 0): [(3, 0), (2, 1)],
+    (3, 0): [(2, 0), (3, 1)],
+    (3, 2): [(2, 2), (3, 1), (3, 3)],
+    (0, 2): [(0, 3), (0, 1)],
+    (0, 3): [(0, 2), (1, 3)],
+    (0, 1): [(1, 1), (0, 2), (0, 0)],
+    (0, 0): [(1, 0), (0, 1)],
+    (1, 0): [(0, 0)],
+    (1, 1): [(2, 1), (1, 2)],
+    (3, 1): [(3, 0), (2, 1), (3, 2)],
+    (2, 1): [(1, 1), (2, 0), (3, 1)],
+    (2, 3): [(3, 3), (1, 3)],
+    (1, 3): [(0, 3), (2, 3)],
+    (1, 2): [(1, 1), (2, 2)]
+}
+```
+
+**Breadth-First Search Execution:**
+- Start at (0,0).
+- Visit each of the adjacent nodes, marking them as visited and recording the path taken.
+- Enqueue each unvisited neighbor.
+- Continue until the target (3,3) is reached or all possible paths are explored.
+
+**Path Construction Using Backtracking:**
+- Starting at (3,3), trace back using the predecessor map to reach back to (0,0).
+
+Given the graph and BFS, the shortest path is identified:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>
+
+Explanation of Path:
+- Starts at (0,0), moves right across row 0 to (0,3), then moves down column 3 to (1,3) and then to (2,3).
+- Continues from (2,3) to the target (3,3).

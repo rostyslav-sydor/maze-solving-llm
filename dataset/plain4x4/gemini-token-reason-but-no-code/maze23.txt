@@ -1,0 +1,14 @@
+To solve a maze using the adjacency list representation, one has to traverse the list, starting at the entry point, and find all nodes that are connected to the current one.
+Then choose one of the nodes, and continue the process, until the exit point is found.
+
+In our case, the adjacency list starts with (2,1), which has two adjacent nodes, (1,1) and (3,1).
+
+We choose (1,1) as the next node, which has two adjacent nodes, (1,0) and (0,0).
+
+We choose (1,0) as the next node, which has only one adjacent node, (0,0).
+
+Since this is the exit point, we stop here.
+
+The path from the entry point to the exit point is therefore:
+
+<PATH_START> (0,0) (1,0) (1,1) (2,1) <PATH_END>

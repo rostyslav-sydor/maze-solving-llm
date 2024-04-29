@@ -1,0 +1,50 @@
+To find a solution for this maze, I will use the A* (A-Star) search algorithm with a heuristic function that estimates the remaining distance to the goal. I'll start at the entry point (1,1), expand neighboring cells that are not obstacles, and maintain a priority queue of cells sorted by their estimated total cost, which is the sum of their actual cost (distance from the start) and their heuristic cost (estimated distance to the goal). If a better path to a cell is found, its estimated total cost is updated, and it is added back to the priority queue with the new cost.
+
+Below is the Python implementation of the A* search algorithm for this maze problem:
+
+```python
+import heapq
+
+# Define the maze as a 2D list
+maze = [
+    "#########",
+    "#S  #   #",
+    "# ### # #",
+    "# #   # #",
+    "# ##### #",
+    "#   #   #",
+    "# # # ###",
+    "# #    E#",
+    "#########",
+]
+
+# Define the starting and ending coordinates
+start = (1, 1)
+end = (7, 7)
+
+# Define the heuristic function (Manhattan distance)
+def heuristic(a, b):
+    return abs(a[0] - b[0]) + abs(a[1] - b[1])
+
+# Define the A* search algorithm
+def a_star_search(maze, start, end):
+    # Initialize the visited set and priority queue
+    visited, queue = set(), [(0, start)]
+
+    # Initialize the cost and parent dictionary
+    cost, parent = {start: 0}, {}
+
+    # Loop until the queue is empty
+    while queue:
+        # Pop the cell with the lowest estimated cost
+        current_cost, current = heapq.heappop(queue)
+
+        # If we've reached the end, return the path
+        if current == end:
+            path = []
+            while parent.get(current):
+                path.append(current)
+                current = parent[current]
+            path.append(start)
+            return path[::-1]
+

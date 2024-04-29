@@ -1,0 +1,36 @@
+To solve the maze, we can use a backtracking algorithm, where at each position, we check if the current position is not a wall and if it has not been visited yet. Here is the function that returns a solution to a maze, with ASCII representation of a maze, list of walls without spaces, entry point and exit point rolled out from the original ASCII maze representation.
+
+Also, note that we are using a "next" array to store the edges of the maze. The next list contains the relative directions to add to the current position when iterating over possible next positions inside the maze.
+
+Below is the complete algorithm for solving the ASCII maze:
+
+```python
+import numpy as np
+
+def solve_maze(ascii_maze, walls, entry, exit):
+    # Maze dimensions
+    rows, cols = ascii_maze.shape
+    
+    # Initialize array for visited points, where 1 means visited and 0 means not visited
+    visited = np.zeros((rows, cols), dtype=int)
+    
+    # Initial list of positions in the order from entry to exit
+    path = [[exit_r, exit_c]]
+
+    # Mark exit as visited
+    visited[exit_r][exit_c] = 1
+
+    # NEXT represents all possible neighbors in next move
+    NEXT = [(-1,0), (0,-1), (0,1), (1,0), (-1,-1), (-1,1), (1,-1), (1,1)]
+
+    # BFS function for finding shortest path
+    def bfs(bot, l):
+        nonlocal path, visited, NEXT
+        
+        # Base case: if current position is target
+        # Stop searching
+        if bot == l:
+            return True
+        for x, y in NEXT:
+            if 0 <= x + bot[0] < rows and 0 <= y + bot[1] < cols and ascii_maze[x + bot[0]][y + bot[1]] != '#' and visited[x + bot[0]][y + bot[1]] == 0:
+                visited[x + bot[0]][y + bot[1

@@ -1,0 +1,30 @@
+Let's apply depth-first search algorithm to find the solution for this maze. Here are the steps:
+
+1. Read the adjacency list from the input file.
+2. Find the starting and destination points from the input file tokens (<ORIGIN_START>, <TARGET_START>,<ORIGIN_END> and <TARGET_END>). Let's call the starting point as source and the destination as target.
+3. Create a visited set to keep track of the nodes we visited.
+4. Perform depth-first search from source to destination.
+4.1. Start from the source.
+4.2. Visit its adjacent nodes with the following conditions:
+	- Node is not visited
+	- Node is accessible directly or through a door
+	- Node is not a wall/obstacle
+5. If the destination node is found, then return the path from source to destination.
+6. Otherwise, backtrack and try a different path.
+
+Here is the plan for our solution:
+
+1. Start at (0,0). 
+2. Check for its unvisited and accessible neighbors. Possible neighbors are (1,0), (1,1), (0, -1)
+3. Select a neighbor that is not a wall or an obstacle or previously visited node.
+4. Move to this node and set the current node as the parent of the newly selected node.
+5. Repeat the process till we find the destination node (3,3).
+6. Create a path from target node to starting node by following the parent of the selected node.
+7. Print the resultant path between <PATH_START> and <PATH_END> tokens.
+
+The resulting plan is a strategy to traverse the maze using depth-first search algorithm to find a solution. It utilizes the list available in the input file for transition from one node to answer node (3,3).
+
+Summarizing the plan:
+1. Find the start and end points using tokens <ORIGIN_START>, <ORIGIN_END>, <TARGET_START> and <TARGET_END> respectively.
+2. Perform depth-first search using unvisited, accessible and not a wall/obstacle nodes starting from the source.
+3. Upon finding the target, build the path by following the parent nodes of the visited nodes from target

@@ -1,0 +1,12 @@
+1. **Identify the starting and ending points:** The starting point is (0,0) and the ending point is (3,3).
+2. **Create a queue and enqueue the starting point:** We start by enqueuing the starting point (0,0) into a queue.
+3. **While the queue is not empty:**
+    - Dequeue the first element from the queue.
+    - Mark the dequeued element as visited.
+    - Check if the dequeued element is the ending point. If it is, we have found a path.
+    - Enqueue all unvisited neighbors of the dequeued element into the queue.
+4. **If the ending point is not found after processing all the elements in the queue, there is no path.**
+
+In this case, we can find a path from (0,0) to (3,3):
+
+<PATH_START> (0,0) (0,1) (1,1) (1,2) (2,2) (3,2) (3,3) <PATH_END>

@@ -1,0 +1,11 @@
+This maze can be solved by using Depth First Search (DFS) or Breadth First Search (BFS) algorithms to systematically explore different paths starting from entry point until the exit is found.
+
+DFS involves recursively checking each path until the exit is found. If there is a dead end, DFS will backtrack and try the other path, then backtrack again if there is another dead end. This continues until the exit point is reached. 
+
+BFS is similar, but instead of backtracking it keeps track of all potential viable paths in a Queue data structure. This way, all potential shortest paths are evaluated simultaneously until one successfully reaches the exit.
+
+In this specific maze, if DFS were used, the algorithm will systematically check the following paths and backtrack accordingly until it finds the solution:
+
+* (0, 0) -> (0, 1) -> (1, 1) -> (1, 2) -> (0, 2) -> (0, 3) -> (1, 3) -> (0, 3) -> (1, 3) -> (1, 4) -> (2, 4) -> (3, 4) -> (4, 4) 
+
+Therefore, the solution for this maze is: <PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (1,4) (2,4) (3,4) (4,4) <PATH_END>

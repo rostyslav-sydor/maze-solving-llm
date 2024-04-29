@@ -1,0 +1,9 @@
+To solve this maze, we can use the depth-first search algorithm. By traversing the maze from the start point (1,1) to the exit point (7,7), we can find a path. 
+
+One possible solution for this maze is:
+
+<PATH_START> (1,1) (2,1) (2,2) (2,3) (2,4) (3,4) (4,4) (5,4) (5,5) (5,6) (5,7) (6,7) (7,7) <PATH_END>
+
+This path moves downward until the obstacle is reached then moves right until the exit point is reached.
+
+By following this path, the goal of reaching the exit point is achieved. This algorithm successfully navigates through the maze by exploring all possible paths until the exit is found.

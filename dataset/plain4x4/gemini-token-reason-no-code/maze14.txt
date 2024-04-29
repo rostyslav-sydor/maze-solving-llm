@@ -1,0 +1,5 @@
+The maze is a simple grid with no cycles or forks, therefore, to find the shortest path between entry and exit, one can use a simple depth-first algorithm, always moving in the direction closer to the exit. 
+
+The solution path should like as follows:
+ 
+<PATH_START> (0,0) (1,0) (2,0) (2,1) (2,2) (2,3) (3,3) <PATH_END>

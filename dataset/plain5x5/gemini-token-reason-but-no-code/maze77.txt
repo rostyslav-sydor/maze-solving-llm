@@ -1,0 +1,11 @@
+To find a solution for this maze, we can use a depth-first search algorithm. 
+
+Starting from the origin (0,0), we will explore all possible paths recursively, marking each visited cell as we go along. 
+
+If we reach the target cell (4,4), we have found a solution and can stop searching. 
+
+Otherwise, we will backtrack to the last cell we visited and continue exploring from there. 
+
+Here is one possible solution for the given maze:
+
+<PATH_START> (0,0) (1,0) (1,1) (1,2) (1,3) (2,3) (3,3) (3,4) (4,4) <PATH_END>

@@ -1,0 +1,36 @@
+To solve the maze, we first parse the given adjacency list to understand the connections between points.
+  
+Each pair of coordinates shows direct connectivity, thus creating a graph:
+- (0,2) ↔ (1,2)
+- (3,3) ↔ (3,2)
+- (0,0) ↔ (0,1)
+- (2,0) ↔ (1,0)
+- (3,1) ↔ (3,2)
+- (2,0) ↔ (3,0)
+- (2,3) ↔ (1,3)
+- (1,3) ↔ (0,3)
+- (2,2) ↔ (2,1)
+- (3,1) ↔ (3,0)
+- (1,1) ↔ (2,1)
+- (0,3) ↔ (0,2)
+- (1,1) ↔ (1,2)
+- (1,0) ↔ (0,0)
+- (3,3) ↔ (2,3)
+
+The origin point is (0,0) and the target point is (3,3), implying the need to explore paths from origin to target.
+
+Applying a pathfinding algorithm like BFS (Breadth-First Search) or DFS (Depth-First Search) helps us find the shortest route from (0,0) to (3,3):
+
+1. Start at (0,0), which directly connects to (0,1).
+2. Continue to (0,2) then (0,3).
+3. Connected to (1,3), proceed to (1,2), (1,1), (2,1), and reach (2,2).
+4. Advance to (2,3), then to (3,3).
+
+Hence, the path through the maze from the start to the end point is:
+
+<Path from (0,0) to (3,3)>:
+<Path from (0,0)> to (0,1), (0,2), (0,3), (1,3), (1,2), (1,1), (2,1), (2,2), (2,3), and finally reaches (3,3). 
+
+Note: The path can vary slightly depending on the algorithm and rules for traversal, but this is one possible solution path.
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>

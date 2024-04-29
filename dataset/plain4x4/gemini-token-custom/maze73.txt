@@ -1,0 +1,14 @@
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>
+
+1. Starting at the origin (0,0), we move right to (0,1).
+2. We continue moving right to (0,2).
+3. We then move up to (0,3).
+4. We then move right to (1,3).
+5. We then move up to (2,3).
+6. Finally, we move right to the target (3,3).
+
+**Reasoning:**
+
+- Each step moves to a cell adjacent to the current cell.
+- No step crosses a wall, as there are no walls between any of the cells in the path.
+- The path starts at the origin (0,0) and ends at the target (3,3).

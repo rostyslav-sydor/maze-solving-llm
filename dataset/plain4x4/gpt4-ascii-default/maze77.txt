@@ -1,0 +1,11 @@
+<PATH_START> (1,1) (1,2) (1,3) (1,4) (1,5) (2,5) (3,5) (3,6) (3,7) (4,7) (5,7) (6,7) (7,7) <PATH_END>
+
+The solution was found by analyzing the maze layout, beginning at the start position (S), marked at coordinates (1,1). Following the viable path involves moving right, down, or left where possible while avoiding walls (#). The idea is to consistently move toward the exit (E) located at (7,7) without backtracking unless necessary:
+
+1. From the start point (1,1), move horizontally to the right until the path hits a wall.
+2. Then, move vertically down as the path is open.
+3. Continue moving horizontally to the right as the path permits.
+4. Move vertically down at the fifth column until encountering the bottom right corner.
+5. Finally, continue along the last (seventh) row horizontally to the right until reaching the exit.
+
+The maze exploration prioritizes horizontal and vertical movement, making adjustments based on encountered walls, ensuring each step moves closer to the end point, either by minimizing the row or column difference to the end goal.

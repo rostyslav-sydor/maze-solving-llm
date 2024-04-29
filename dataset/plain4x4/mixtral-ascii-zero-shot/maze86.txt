@@ -1,0 +1,32 @@
+The ASCII grid clearly lays out the maze for us, with 'S' representing the start and 'E' being the exit. We need to find a path from S to E, respecting the walls marked by '#'. 
+
+To represent the path, I'll define coordinates in the maze, where the first number is the row and the second is the column. Thus, 'S' is at (1, 1) and 'E' is at (7, 7). 
+
+Here's a simple algorithm to solve this maze:
+
+1. We start at the starting point, which is (1, 1), and we mark it as visited.
+2. We check each available direction (up, down, left, right) but not diagonally.
+3. If any of the adjacent cells is the end point (7, 7), we stop.
+4. If none of the adjacent cells is the end point, we move to the first adjacent cell that is unvisited and repeat steps 2-4.
+5. If all adjacent cells are visited or are walls, we backtrack to the previous cell and repeat steps 2-4.
+
+Let's manually execute this algorithm on our maze:
+
+- Start at (1, 1). Options: up, down, right.
+- No adjacent cells are the end point 'E'.
+- We can only go to the right, so we move to (1, 2).
+- Options: up, down, left, right.
+- No adjacent cells are the end point 'E'.
+- We can only go down, so we move to (2, 2).
+- Options: up, left, right.
+- No adjacent cells are the end point 'E'.
+- We can only go right, so we move to (2, 3).
+- Options: up, down, left.
+- No adjacent cells are the end point 'E'.
+- We can only go down, so we move to (3, 3).
+- Options: up, left, down.
+- No adjacent cells are the end point 'E'.
+- We can only go down, so we move to (4, 3).
+- Options: up, left.
+- No adjacent cells are the end point 'E'.
+- We can only go up, so we move

@@ -1,0 +1,25 @@
+This is a maze that can be represented as an adjacency list for graph with edge weights of 1.
+
+Solution to this maze (and any maze that can be represented as an adjacency list for graph with edge weights of 1) can be found using Breadth-first search which is an algorithm for finding the shortest path between two points in a graph.
+
+The algorithm iteratively explores all paths from the start point, and adds all unvisited neighbours of the current point to the queue. Once all neighbours have been added to the queue, the current point is marked as visited, and the first point in the queue becomes the new current point. The process is repeated until the end point is reached.
+
+Steps of BFS as applied to adjacency list of maze:
+
+1. Start at the origin point marked with <ORIGIN> token
+
+2. Add all unvisited neighbors of the current point to the queue.
+
+3. Mark the current point as visited.
+
+4. Check if the first point in the queue is the target point.
+
+5. If the first point in the queue is the target point, stop the process and return the path.
+
+6. If the first point in the queue is not the target point, make it the new current point and repeat steps 2-5.
+
+7. If the queue is empty and the target point has not been reached, there is no path from the origin point to the target point.
+
+Applied to the adjacency list of given maze the BFS algorithm will take the following steps:
+
+<PATH_START> (0,0) (1,0) (0,1) (1,1) (0,2) (1,2) (2,2) (3,2) (2,3) (3,3) (3,4) (4,4) <PATH_END>

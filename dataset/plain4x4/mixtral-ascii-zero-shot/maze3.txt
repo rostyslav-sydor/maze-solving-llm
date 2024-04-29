@@ -1,0 +1,28 @@
+To find a solution for this maze, we can apply a pathfinding algorithm such as the A* algorithm:
+
+## Initialize values
+Let's assume the start and end coordinates:
+  - `s_row = 1`
+  - `s_col = 1`
+  - `e_row = 7`
+  - `e_col = 7`
+
+Divide the maze into a grid of coordinates
+
+## A* (A Star) Algorithm
+1. Create an open list (to store found but not yet evaluated points) and a closed list (to store already evaluated points).
+2. Add the starting point to the open list (with priority set to 0). Set the starting point as the parent of itself.
+3. While the open list is not empty:
+    a. Mark the point (node) with the lowest priority as the current point. Remove it from the open list and add it to the closed list.
+    b. Expand the current point, considering all possible row and column movements (based on the rule of not hitting the walls).
+    c. Calculate the cost (distance) to reach the goal from each possible neighbor point, adding the cost from the current point to this neighbor. Use the following formula: Euclidean distance = sqrt((x2 - x1)^2 + (y2 - y1)^2), where (x1, y1) is the current point, (x2, y2) is the goal point.
+    d. If the neighbor point already exists in the open or closed list with a shorter distance, then ignore it. Otherwise, add the neighbor point to the open list with its calculated priority (i.e., the distance to its parent plus the predicted distance to the goal), and set the current point as the parent of this new neighbor.
+    e. If the goal point has the lowest priority at any moment, it means the path is found. We can list all steps from the goal back to the start by following the parent nodes, starting from the goal.
+
+
+
+Now, let's apply the algorithm to find a solution for this maze specifically
+
+## Step 1 - Add start point to open list
+We add the start point to the open list with a priority of 0 (since we are currently at this point and no movement is necessary). The list looks like this:
+

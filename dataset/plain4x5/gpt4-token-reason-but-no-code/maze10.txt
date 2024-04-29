@@ -1,0 +1,23 @@
+The maze given in the problem is a classic application for graph traversal algorithms like Breadth-First Search (BFS) or Depth-First Search (DFS). Since BFS explores each vertex and edge in a systematic way through adjacent nodes and thereby ensures shortest paths in an unweighted graph, it’s a suitable choice for this problem.
+
+In BFS, we start at the entry node and explore all its adjacent nodes at the present depth prior to moving on to nodes at the next depth level.
+
+### Breakdown of the BFS Approach:
+
+1. **Initialize**: Start from the origin and place it in a queue. The origin is `(0,0)` as provided. We keep track of visited nodes to prevent cycles and redundant work.
+2. **Explore**: From each node, visit its neighbors based on the adjacency list. Push these neighbors into the queue (if not visited).
+3. **Update**: Mark each node visited when it's pulled from the queue. Track the path by maintaining a predecessor for each node, which naturally forms the path tree.
+4. **Terminate**: Stop when the target is reached. The target according to the problem is `(3,4)`.
+5. **Construct Path**: Backtrack from the target using the predecessor records to generate the path list.
+
+### Applying to the Specific Maze:
+
+By applying BFS as detailed above to the given adjacency list and starting from `(0,0)` with the goal of reaching `(3,4)`, we would sequentially explore nodes level by level. Each connection point (node) has paths to its adjacent nodes as defined by the adjacency list. By processing these nodes via BFS, we will find a path from the origin to the target.
+
+### Solution for the Given Maze:
+
+The nodes are processed in BFS order, with connections allowing movement between points. Following the BFS steps, the path found by BFS when applied to this maze from `(0,0)` to `(3,4)` is:
+
+**<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (3,2) (3,3) (3,4) <PATH_END>**
+
+This path reflects a logical progression from the start to the end, ensuring that each move is to an adjacent node as per the available paths outlined in the adjacency list, and it's computed by tracing back from the target to the source using the predecessor links stored during BFS traversal.

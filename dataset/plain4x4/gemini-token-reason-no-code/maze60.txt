@@ -1,0 +1,10 @@
+This maze can be solved using Depth First Search (DFS) or Breadth First Search (BFS). In this example, we will use DFS.
+
+1. Start from the origin point (0,0) and mark it as visited.
+2. Explore the adjacent nodes of the current node (0,0) and mark them as visited.
+3. Repeat step 2 until the target point (3,3) is reached.
+4. Backtrack to the previous node if the target point is not reached.
+
+The path from the origin point to the target point is:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>

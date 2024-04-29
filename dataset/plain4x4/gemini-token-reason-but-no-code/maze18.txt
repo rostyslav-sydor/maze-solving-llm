@@ -1,0 +1,7 @@
+The maze is represented as a graph and can be solved using a graph search algorithm like Depth-First Search (DFS).
+
+Starting at origin, we can use DFS to find a path to the target by recursively visiting unvisited neighbors until the target is reached.
+
+For the given maze, starting from (0,0), we visit the neighbor (1,0) then (2,0) and reach the target (3,3).
+
+The resulting path is: <PATH_START> (0,0) (1,0) (2,0) (3,3) <PATH_END>

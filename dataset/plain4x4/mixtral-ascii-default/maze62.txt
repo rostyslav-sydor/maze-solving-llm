@@ -1,0 +1,42 @@
+To find a solution for this maze, I will be using the Breadth-First Search (BFS) algorithm, which is efficient for finding shortest paths in a graph with unweighted edges. Here's the pseudo-code for the BFS algorithm and the specific steps for this maze:
+
+1. Make a queue data structure.
+2. Create a "visited" matrix (same size as the maze), initialized with all values as 'False', except the starting point, which is set to 'True'.
+3. Enqueue the starting point's (1,1) coordinates and its ancestor as 0 in the queue.
+4. While the queue is not empty, do the following:
+	a. Dequeue a node (current).
+	b. If the current node is the destination (7,7), construct the shortest path and terminate the algorithm.
+	c. Mark the current node as 'True' in the "visited" matrix.
+	d. Explore neighboring cells (left, right, top, bottom), making sure they're within the maze boundary and haven't been visited. Enqueue these cells with current node as their parent, waiting to be explored in the next iteration.
+
+Let's implement the BFS algorithm for this maze:
+
+ASCIImaze = [
+  '#########',
+  '#S#     #',
+  '# ### # #',
+  '#     # #',
+  '####### #',
+  '#     # #',
+  '# # ### #',
+  '# #    E#',
+  '#########',
+]
+
+row = 9
+col = 9
+
+def is_valid(x, y):
+    return x >= 0 and x < row and y >= 0 and y < col and ASCIImaze[x][y] != '#'
+
+def find_neighbors(x, y):
+    neighbors = []
+    for dx in range(-1, 2):
+        for dy in range(-1, 2):
+            if dx == 0 and dy == 0:
+                continue
+            if is_valid(x+dx, y+dy):
+                neighbors.append((x+dx, y+dy))
+    return neighbors
+
+def BFS(

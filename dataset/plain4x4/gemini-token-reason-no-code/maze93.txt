@@ -1,0 +1,9 @@
+We can use a breadth-first search (BFS) algorithm to find the shortest path from the origin to the target in the maze. The BFS algorithm works by starting at the origin and exploring all of its adjacent nodes, then exploring all of the adjacent nodes of those nodes, and so on, until the target is found.
+
+To implement the BFS algorithm, we can use a queue to keep track of the nodes that we need to explore. We start by adding the origin to the queue. Then, we loop until the queue is empty. For each node in the queue, we explore all of its adjacent nodes. If an adjacent node is the target, then we have found the shortest path and we can stop exploring. Otherwise, we add the adjacent node to the queue.
+
+Once we have found the shortest path, we can output it in the format of coordinate list between <PATH_START> and <PATH_END> tokens. The first coordinate in each pair is the row and the second coordinate is the column.
+
+Here is the shortest path for the given maze:
+
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (1,3) (2,3) (3,3) <PATH_END>

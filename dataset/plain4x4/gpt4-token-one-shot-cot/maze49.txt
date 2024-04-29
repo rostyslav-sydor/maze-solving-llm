@@ -1,0 +1,13 @@
+To solve the maze represented by the adjacency list and find a path from the origin (0,0) to the target (3,3), we must find a sequence of connected nodes that form a route from start to finish without retracing steps. 
+
+Here’s one possible solution:
+1) From (0,0) move right to (0,1).
+2) From (0,1) move right to (0,2).
+3) From (0,2) move right to (0,3).
+4) From (0,3) move down to (1,3).
+5) From (1,3) move down to (2,3).
+6) From (2,3) move right to (3,3).
+
+These steps provide a continuous route from the start node to the end node in the maze.
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>

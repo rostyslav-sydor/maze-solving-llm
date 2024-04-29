@@ -1,0 +1,19 @@
+To solve this maze, we start at the entrance (S) at (1,1) and search for a path to the exit (E) at (7,7). Using a path-finding technique such as Breadth-First Search (BFS), we traverse the maze, exploring all possible routes. In the maze grid, spaces represent passable areas, and hashes (#) are walls which are impassable. 
+
+Here's the solution:
+
+- Begin at the starting point (1,1).
+- Move right continuously till (1,4) as it's an open path.
+- At (1,4), move down to (2,4).
+- At (2,4), move right to (2,7).
+- At (2,7), move down to (4,7).
+- At (4,7), cannot move down due to wall, move left to (4,4).
+- At (4,4), again move down to (6,4).
+- At (6,4), move left to (6,3) and right after to (6,7).
+- Finally, from (6,7), move down to (7,7), the exit.
+
+With each movement, ensure it doesn’t intersect with walls and doesn't backtrack to previously visited paths.
+
+Here’s how the path would be represented:
+
+<PATH_START> (1,1) (1,2) (1,3) (1,4) (2,4) (2,5) (2,6) (2,7) (3,7) (4,7) (4,6) (4,5) (4,4) (5,4) (6,4) (6,3) (6,5) (6,6) (6,7) (7,7) <PATH_END>

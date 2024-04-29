@@ -1,0 +1,23 @@
+<PATH_START>
+(1,1)
+(1,2)
+(1,3)
+(1,4)
+(1,5)
+(1,6)
+(1,7)
+(2,7)
+(3,7)
+(4,7)
+(5,7)
+(6,7)
+(7,7)
+<PATH_END>
+
+Explanation:
+Starting at S (1,1), the goal is to reach E (7,7). Analyzing the maze:
+
+1. First, move right from (1,1) to (1,7) - this is possible since there are no walls obstructing the path.
+2. Next, move down from (1,7) to (7,7). There are no walls blocking the vertical path down the last column.
+
+These movements make use of the openings in the walls, taking the most straightforward and unobstructed path to the exit. This path avoids all interiors of the maze, using the boundary to navigate directly to the exit.

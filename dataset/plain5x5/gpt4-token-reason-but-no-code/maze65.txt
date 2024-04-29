@@ -1,0 +1,13 @@
+To solve this maze, we interpret the given adjacency list as a graph where each cell in the maze is represented as a node and a path exists between two nodes if they are directly connected. The aim is to find a path from the origin (0,0) to the target (4,4).
+
+From the adjacency list, we can extract how each node is connected. We are tasked to find a path which provides a sequence of moves from (0,0) to (4,4). 
+
+For solving, we can use a breadth-first search (BFS), which ensures that we will find the shortest path from the entry to the exit in an unweighted graph, such as this one. BFS explores the neighboring nodes level by level, hence guaranteeing the shortest path in terms of number of edges traversed.
+
+Starting from (0,0), we explored the neighbors as revealed by adjacency list and continue this process till we reach (4,4). If a dead end is hit (i.e., no further progress can be made from a given node), backtracking would be performed to the latest node with unexplored neighbors.
+
+By following the connections in the adjacency list using BFS approach from (0,0), the sequence of steps to reach (4,4) is formulated, recorded, and presented as:
+
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (2,2) (3,2) (3,3) (3,4) (4,4) <PATH_END>
+
+This gives us the required path from the start to the end of the maze. Each movement steps to the next coordinate, ensuring continuous, valid moves as defined by the adjacency list.

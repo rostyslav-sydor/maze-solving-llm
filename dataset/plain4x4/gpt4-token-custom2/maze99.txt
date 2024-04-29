@@ -1,0 +1,27 @@
+To solve the provided maze from the origin (0,0) to the target (3,3) using a BFS approach:
+
+1. **Parse the adjacency list** to create a usable graph representation.
+2. **Perform BFS** on the graph starting from the node (0,0) and aim to reach (3,3).
+3. **Record the path** as you move from the origin to the target using predecessors.
+
+Starting the BFS from the origin node (0,0):
+
+**Step-by-step BFS Traversal**
+- Starting at (0,0), we can move to (1,0) based on the adjacency.
+- From (1,0), the next options are (1,1) and (0,0) but (0,0) is already visited.
+- Moving to (1,1), next possible moves are (1,0) and (0,1).
+- From (0,1), we can go to (0,0) or (0,2), ignoring (0,0) as visited.
+- Moving to (0,2), available moves are to (0,1), (0,3), and (1,2).
+- From (0,3), there are not listed connections back to (0,2), hence this path ends here considering connections.
+- Transitioning to (1,2) from (0,2), we have options to (2,2) and (1,3).
+- Moving to (1,3), we connect to (2,3) and circle back to (1,2).
+- From (2,2), connections lead to (1,2) and back to the row below.
+- Heading to (2,3), there's a move available to (3,3) and (1,3).
+- Finally, from (2,3), moving to (3,3) reaches the target.
+
+This BFS achieves the final path:
+
+**Solution Path Representation**
+<PATH_START> (0,0) (1,0) (1,1) (0,1) (0,2) (1,2) (2,2) (1,3) (2,3) (3,3) <PATH_END>
+
+Following this path, it explores each node connected directly or indirectly to the origin until it reaches the destination at (3,3), maintaining BFS's property of shortest path discovery in an unweighted graph scenario.

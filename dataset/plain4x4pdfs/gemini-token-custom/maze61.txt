@@ -1,0 +1,3 @@
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>
+
+Starting from origin point (0,0) we first need to move right to get to the second column. Then we need to move down to the second row, then right to the third column and then up to the third row. We have now reached target point (3,3). The solution path does not cross any walls, and uses only adjacent cells.

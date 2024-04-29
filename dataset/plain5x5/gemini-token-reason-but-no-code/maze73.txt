@@ -1,0 +1,13 @@
+To find a solution for the maze, we can use a graph search algorithm such as depth-first search (DFS) or breadth-first search (BFS). Starting from the entry point, we can recursively explore all the adjacent nodes until we reach the exit point.
+
+In this particular maze, we can use the following DFS algorithm:
+
+1. Initialize a stack with the entry point.
+2. While the stack is not empty,
+3. Pop the top element of the stack.
+4. If the popped element is the exit point, then we have found a solution.
+5. Otherwise, push all the unvisited adjacent nodes of the popped element onto the stack.
+
+Using this algorithm, we can find the following solution for the given maze:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (0,4) (1,4) (2,4) (3,4) (4,4) <PATH_END>

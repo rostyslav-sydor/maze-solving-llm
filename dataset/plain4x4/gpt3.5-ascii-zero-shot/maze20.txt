@@ -1,0 +1,14 @@
+1. Start at the entry point (1,1).
+2. Move down to (2,1) to avoid the wall.
+3. Move right to (2,2) to progress towards the exit.
+4. Move right to (2,3) to avoid the wall.
+5. Move up to (1,3) to continue towards the exit.
+6. Move right to (1,4) to bypass the wall.
+7. Move down to (2,4) to get closer to the exit.
+8. Move right to (2,5) to maneuver around the wall.
+9. Move down to (3,5) to proceed towards the exit.
+10. Move down to (4,5) to avoid the wall.
+11. Move right to (4,6) to make progress.
+12. Move right to (4,7) to reach the exit point (7,7).
+
+Solution: <PATH_START> (1,1) (2,1) (2,2) (2,3) (1,3) (1,4) (2,4) (2,5) (3,5) (4,5) (4,6) (4,7) <PATH_END>

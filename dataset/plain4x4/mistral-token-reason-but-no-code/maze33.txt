@@ -1,0 +1,38 @@
+To find a solution for the given maze, we can use the breadth-first search (BFS) algorithm. BFS is a graph traversal algorithm that starts from a given source node and explores all the neighboring nodes. Then, it selects the nearest unexplored node and repeats the process until it finds the target node or explores the entire graph.
+
+In the context of a maze, the BFS algorithm will help us find the shortest path from the origin (0,0) to the target (3,3). Here's how we can apply the BFS algorithm to solve the given maze:
+
+1. Create a queue (FIFO data structure) to store the nodes to be explored.
+2. Create a set to keep track of the visited nodes.
+3. Initialize the queue with the origin node (0,0).
+4. While the queue is not empty:
+	* Dequeue a node from the queue.
+	* If the dequeued node is the target node (3,3), construct the path by backtracking from the target node to the origin node using the parent pointers, and output the path between <PATH_START> and <PATH_END> tokens.
+	* If the dequeued node has not been visited, mark it as visited and enqueue all its neighboring nodes into the queue. Set the parent pointer of each neighboring node to the dequeued node.
+5. If the target node is not found, there is no path between the origin and the target.
+
+Now, let's apply the BFS algorithm to the given maze:
+
+1. Queue: [(0,0)]
+2. Visited: {(0,0)}
+3. Dequeue (0,0), enqueue (1,0) and (0,1). Set parent pointers for (1,0) and (0,1) to (0,0).
+4. Queue: [(1,0), (0,1)]
+5. Dequeue (1,0), enqueue (2,0) and (1,1). Set parent pointers for (2,0) and (1,1) to (1,0).
+6. Queue: [(0,1), (2,0), (1,1)]
+7. Dequeue (0,1), enqueue (0,2). Set parent pointer for (0,2) to (0,1).
+8. Queue: [(2,0), (1,1), (0,2)]
+9. Dequeue (2,0), enqueue (3,0) and (2,1). Set parent pointers for (3,0) and (2,1) to (2,0).
+10. Queue: [(1,1), (0,2), (3,0), (2,1)]
+11. Dequeue (1,1), enqueue (1,2). Set parent pointer for (1,2) to (1,1).
+12. Queue: [(0,2), (3,0), (2,1), (1,2)]
+13. Dequeue (0,2), enqueue (0,3). Set parent pointer for (0,3) to (0,2).
+14. Queue: [(3,0), (2,1), (1,2), (0,3)]
+15. Dequeue (3,0), enqueue (3,1). Set parent pointer for (3,1) to (3,0).
+16. Queue: [(2,1), (1,2), (0,3), (3,1)]
+17. Dequeue (2,1), enqueue (2,2). Set parent pointer for (2,2) to (2,1).
+18. Queue: [(1,2), (0,3), (3,1), (2,2)]
+19. Dequeue (1,2), enqueue (1,3). Set parent pointer for (1,3) to (1,2).
+20. Queue: [(0,3), (3,1), (2,2), (1,3)]
+21. Dequeue (0,3). This node has been visited, so skip it.
+22. Queue: [(3,1), (2,2), (1,3)]
+23. Dequeue (3,1), enqueue (3,2). Set parent pointer for (3,

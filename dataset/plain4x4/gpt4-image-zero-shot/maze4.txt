@@ -1,0 +1,11 @@
+To solve the maze from the entry point at (0,0) to the exit at (3,3), observe and navigate through the paths available:
+
+1. Start at (0,0). There's no wall on the southern boundary, so move down to (1,0).
+2. From (1,0), move east to (1,1) as the path is open.
+3. Continue east to (1,2) due to no wall blocking.
+4. Proceed east to (1,3) since the path is clear.
+5. At (1,3), no wall blocks the southern direction, so move to (2,3).
+6. From (2,3), the next step without a wall is south to (3,3), reaching the exit point.
+
+Here is the solution path:
+<PATH_START> (0,0) (1,0) (1,1) (1,2) (1,3) (2,3) (3,3) <PATH_END>

@@ -1,0 +1,9 @@
+**Reasoning:**
+
+To find a solution to a maze, we can use a graph search algorithm like Depth-First Search (DFS). DFS starts at the origin and explores all possible paths until it finds a target. If there is no target, DFS backtracks and explores other paths.
+
+**Specific Solution:**
+
+Using DFS on the given maze, we find the following path:
+
+<PATH_START> (0,0) (0,1) (1,1) (1,2) (1,3) (2,3) (3,3) <PATH_END>

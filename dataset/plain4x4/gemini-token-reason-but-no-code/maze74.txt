@@ -1,0 +1,9 @@
+**Reasoning:**
+
+The maze can be solved by using a graph search algorithm, such as Breadth-First Search (BFS). BFS starts from the origin and explores all possible paths until it reaches the target. The algorithm keeps track of the visited nodes to avoid loops.
+
+**Solution:**
+
+Applying BFS to the provided maze, we can find the following solution:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>

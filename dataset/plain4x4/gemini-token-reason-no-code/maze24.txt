@@ -1,0 +1,7 @@
+To find the solution for the maze represented as an adjacency list, we can use a depth-first search (DFS) algorithm. 
+
+DFS starts at the origin and recursively explores all possible paths until it finds the target.
+
+The solution is:
+
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (3,2) (3,3) <PATH_END>

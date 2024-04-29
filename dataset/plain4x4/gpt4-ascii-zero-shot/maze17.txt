@@ -1,0 +1,36 @@
+To solve the maze given in the adjacency list format, we need to interpret the connections between the nodes, which represent coordinates in the maze. The coordinates provided in the adjacency list format determine which points in the maze are directly connected without any walls between them. 
+
+Given the origin (0,0) and target (3,3), we can trace the path through the maze based on the connections listed. The adjacency list provides the following pairs, indicating connectivity:
+
+- (1,2) <--> (1,3)
+- (3,2) <--> (3,1)
+- (3,3) <--> (3,2)
+- (0,1) <--> (1,1)
+- (0,0) <--> (1,0)
+- (2,0) <--> (1,0)
+- (1,2) <--> (2,2)
+- (0,2) <--> (0,1)
+- (2,0) <--> (3,0)
+- (2,1) <--> (2,0)
+- (3,3) <--> (2,3)
+- (2,2) <--> (2,3)
+- (1,3) <--> (0,3)
+- (3,1) <--> (3,0)
+- (0,3) <--> (0,2)
+
+Since the entrance indicated is (1,1) and the exit is (3,3), we'll find a path from (1,1) to (3,3):
+
+1. Start at (1,1) connect to (0,1)
+2. (0,1) connects to (0,2)
+3. (0,2) connects to (0,3)
+4. (0,3) connects to (1,3)
+5. (1,3) connects to (1,2)
+6. (1,2) connects to (2,2)
+7. (2,2) connects to (2,3)
+8. (2,3) connects to (3,3)
+
+Thus, routing from (1,1) to (3,3) includes passing through these nodes in sequence. Let's assemble the final path:
+
+<PATH_START> (1,1) (0,1) (0,2) (0,3) (1,3) (1,2) (2,2) (2,3) (3,3) <PATH_END> 
+
+This sequence follows the connected routes and satisfies the path from the starting point to the endpoint in this maze configuration.

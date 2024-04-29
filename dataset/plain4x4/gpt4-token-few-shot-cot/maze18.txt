@@ -1,0 +1,46 @@
+To find the solution for the maze described in the fourth scenario, we will analyze the adjacency list and calculate a valid path from the origin (0,0) to the target (3,3):
+
+Looking at the adjacency list given:
+```
+<ADJLIST_START> 
+(1,0) <--> (0,0) ; 
+(1,2) <--> (1,1) ; 
+(2,3) <--> (1,3) ; 
+(3,1) <--> (3,0) ; 
+(2,2) <--> (2,1) ; 
+(3,2) <--> (3,3) ; 
+(3,2) <--> (2,2) ; 
+(1,1) <--> (0,1) ; 
+(1,2) <--> (1,3) ; 
+(0,2) <--> (0,3) ; 
+(2,0) <--> (2,1) ; 
+(0,3) <--> (1,3) ; 
+(3,3) <--> (2,3) ; 
+(1,0) <--> (2,0) ; 
+(3,0) <--> (2,0) ; 
+<ADJLIST_END>
+```
+
+Origin and target are (0,0) and (3,3), respectively.
+
+### Path Solving
+1. Start at (0,0). Possible moves: Down to (1,0)
+2. Move down from (0,0) to (1,0). Possible moves: Down to (2,0)
+3. Move down from (1,0) to (2,0). Possible moves: Down to (3,0) or Right to (2,1)
+4. Move down from (2,0) to (3,0). Possible moves: Right to (3,1)
+5. Move right from (3,0) to (3,1). Possible moves: Right to (3,2)
+6. Move right from (3,1) to (3,2). Possible moves: Right to (3,3) or Left to (2,2)
+7. Move right from (3,2) to (3,3) or Left to (2,2). Since (3,3) is our target, we move there.
+
+Final path from (0,0) to (3,3) is:
+```
+<PATH_START> 
+(0,0) 
+(1,0) 
+(2,0) 
+(3,0) 
+(3,1) 
+(3,2) 
+(3,3) 
+<PATH_END>
+```

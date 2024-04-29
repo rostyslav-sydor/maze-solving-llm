@@ -1,0 +1,14 @@
+To solve this maze, let's follow a simple method by looking at possible pathways from the entrance at (0,0) to the exit at (3,3), avoiding walls:
+
+1. Start at (0,0). Move right to (0,1) as the right side is open.
+2. Move right from (0,1) to (0,2).
+3. From (0,2), move down to (1,2) as there’s no wall blocking the downward path.
+4. Continue moving downward from (1,2) to (2,2) since moving right to (1,3) is blocked by a wall.
+5. Move right from (2,2) to (2,3) since the right path is clear.
+6. Then, move down from (2,3) to (3,3) where the exit is located, as the path is unobstructed.
+
+Each move is chosen based on an accessible path without walls obstructing the way to the adjacent cells. The route traces a path around the center wall, navigating through available corridors created by the spaces without walls.
+
+Here is the path as a coordinate list:
+
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (2,2) (2,3) (3,3) <PATH_END>

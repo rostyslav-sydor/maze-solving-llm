@@ -1,0 +1,39 @@
+To solve this maze represented as an adjacency list, we can employ the Breadth-First Search (BFS) algorithm, which efficiently finds the shortest path in an unweighted graph like this one. This method leverages the concept of exploring all possible moves equally one step at a time, eventually reaching the exit if one exists. BFS uses a queue to handle nodes to explore and ensures that nodes aren't revisited.
+
+Let's analyze the given adjacency list to map out the graph structure of the maze and utilize BFS to find the shortest path from the entry point (0,0) to the exit point (3,4).
+
+Given adjacency pairs from the list are:
+1. (2,1) <--> (1,1)
+2. (2,3) <--> (2,4)
+3. (3,0) <--> (3,1)
+4. (0,1) <--> (1,1)
+5. (2,2) <--> (1,2)
+6. (1,3) <--> (1,4)
+7. (0,4) <--> (0,3)
+8. (1,3) <--> (0,3)
+9. (2,4) <--> (1,4)
+10. (2,2) <--> (2,3)
+11. (2,0) <--> (1,0)
+12. (0,0) <--> (0,1)
+13. (3,2) <--> (3,3)
+14. (1,0) <--> (1,1)
+15. (3,1) <--> (3,2)
+16. (3,3) <--> (3,4)
+17. (3,4) <--> (2,4)
+18. (0,2) <--> (1,2)
+19. (2,0) <--> (3,0)
+
+Using BFS, starting from the origin (0,0), we examine all its adjacent nodes. Then, for each of those nodes, we explore their adjacent nodes, and so forth, while marking each node as visited. This continues until we either run out of nodes (suggesting no path exists), or until we arrive at the targeted exit (3,4).
+
+By applying BFS to the given adjacency structure:
+1. Begin at (0,0), moves available to (0,1).
+2. From (0,1), move to (1,1) or (0,2).
+3. From (1,1), possible to move (2,1) or (1,0).
+4. Exploring further along these lines, progressively through (2,1), (2,2), reaching (2,3), then (2,4).
+5. Lastly, from (2,4), reach the exit at (3,4).
+
+Successfully tracing the path with shortest bfs:
+
+<PATH_START> (0,0) (0,1) (1,1) (2,1) (2,2) (2,3) (2,4) (3,4) <PATH_END>
+
+This list of coordinates comprises the shortest possible path from the entry to the exit in the given maze graph. The logic of BFS guarantees this shortest nature by exploring all closer possibilities before moving on to further ones.

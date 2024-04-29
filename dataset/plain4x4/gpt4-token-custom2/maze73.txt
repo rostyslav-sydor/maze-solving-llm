@@ -1,0 +1,49 @@
+To solve the maze, we will employ the Breadth-First Search (BFS) algorithm because it effectively finds the shortest path in an unweighted graph. The adjacency list provided describes the connectivity between different nodes (points in the maze), and we need to find the shortest path from the origin point (0,0) to the target point (3,3).
+
+First, let's construct a graph based on the adjacency list presented, then apply BFS to determine the shortest path.
+
+**Step 1: Construct the Graph**
+The entries in the adjacency list will be parsed to form a map of each node and its connections (neighboring nodes). Here, each node coordinate is treated as a graph node.
+
+```plaintext
+(3,2) <-> (3,3)
+(1,3) <-> (2,3)
+(1,2) <-> (1,1)
+(0,1) <-> (0,0)
+(3,1) <-> (3,0)
+(2,2) <-> (2,1)
+(1,0) <-> (0,0)
+(0,2) <-> (0,1)
+(3,0) <-> (2,0)
+(2,3) <-> (3,3)
+(0,3) <-> (1,3)
+(1,2) <-> (1,3)
+(2,1) <-> (3,1)
+(2,0) <-> (1,0)
+(0,2) <-> (1,2)
+```
+
+**Step 2: Apply BFS**
+1. Start at the origin (0,0).
+2. Explore all directly connected nodes, then their neighbors, and so on.
+3. Keep track of visited nodes to avoid revisiting.
+4. Track the path taken to get to each node so that, once we reach the target, we can retrace our steps for the shortest path.
+
+**BFS Implementation**
+We enqueue the starting node (0,0) and explore each node layer-by-layer (level-by-level). Given the adjacency relations:
+
+1. From (0,0), we can go to (1,0) and (0,1).
+2. From (1,0), move to (2,0).
+3. From (2,0), we can go to (3,0).
+4. From (3,0) to (3,1).
+5. From (3,1) to (2,1) and (3,2).
+6. Continuing this way, navigate from (2,1) to (2,2).
+7. From (2,2) to (3,2) and finally to (3,3).
+
+Upon reaching (3,3), we backtrack using a path map storing how we reached each node to find the shortest route.
+
+**Path Solution**
+Following the BFS steps and path retrieval from the backtrack map, we obtain:
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (1,3) (2,3) (3,3) <PATH_END>
+
+This path solution offers one of several possible shortest paths through the maze using a BFS approach. Note, there could be multiple routes depending on the order of visiting nodes in BFS.

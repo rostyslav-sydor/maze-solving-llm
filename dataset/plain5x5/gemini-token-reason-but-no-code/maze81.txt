@@ -1,0 +1,33 @@
+Start at the origin coordinate (0,0). Starting from (0,0) there are only two paths one can take from the adjacency list provided, either go to(1,0) or (0,1). Since the end point is (4,4), one has to move right, which can only be done by first going to (1,0).
+
+From (1,0) we either go to (0,0) or (1,1). Since we came from (0,0) we cannot go back hence (1,1) is the next location.
+
+From (1,1) we either go to (1,0), to (1,2) or (0,1). Since we came from (1,0) we cannot go back, (0,1) will lead us back to (1,1) again so the solution is to choose (1,2).
+
+From (1,2) we either go to (1,1) or (2,2). Since we came from (1,1) we cannot go back hence (2,2) is the next location.
+
+From (2,2) we either go to (1,2) or (2,1) again since we came from (1,2) we cannot go back so (2,1) is the next location.
+
+From (2,1) we either go to (2,2) or (2,0), similarly as before (2,2) is not valid because we came from (2,2).
+
+From (2,0) we either go to (2,1) or (1,0), (2,1) is not valid because we came from (2,1), (1,0) is the next location.
+
+From (1,0) we either go to (1,1) or (0,0), from previous paths we know (1,1) leads to a dead end so in order to continue traveling right we first have to go to (0,0).
+
+From (0,0) we either go to (0,1) or (1,0), since we came from (1,0) we cannot go back hence (0,1) is the next location.
+
+From (0,1) we either go to (0,0) or (1,1), similar to before because we came from (0,0) (1,1) has to be the right next move.
+
+From (1,1) we either go to (1,0) or (1,2), again as we came from (0,1) (1,2) is the next location.
+
+From (1,2) we either go to (1,1) or (2,2), (1,1) is not valid as we came from (1,1) hence (2,2) is the next move.
+
+From (2,2) we either go to (2,1) or (2,3), we came from (1,2) hence (2,3) is the next location.
+
+From (2,3) we either go to (2,2) or (3,3), because we came from (2,2) (3,3) is the right move.
+
+From (3,3) we either go to (3,2) or (4,3), similarly as before (4,3) is the right next move.
+
+From (4,3) we either go to (4,4) or (3,3), (4,4) is the end coordinate because we came from (3,3) hence (4,4) is the last location.
+
+Hence the path is: <PATH_START> (0,0) (1,0) (1,1) (1,2) (2,2) (2,1) (2,0) (1,0) (0,0) (0,1) (1,1) (1,2) (2,2) (2,3) (3,3) (4,3) (4,4) <PATH_END>

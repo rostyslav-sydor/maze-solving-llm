@@ -1,0 +1,3 @@
+To solve the maze from the entry point at (0,0) to the exit point at (4,4) given the walls and route accessibility depicted in the image, here is the solution path listed in the required format:
+
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (4,0) (4,1) (4,2) (4,3) (4,4) <PATH_END>

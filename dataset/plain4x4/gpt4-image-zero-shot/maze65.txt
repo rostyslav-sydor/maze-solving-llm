@@ -1,0 +1,14 @@
+To solve the maze, we'll start from the initial coordinate (0,0) and trace a path to the final coordinate (3,3) where the exit is located.
+
+1. Starting at (0,0), could move directly to the right to (0,1), since there are no walls blocking that path.
+2. From (0,1), continue moving to the right to (0,2) as there are no walls directly between these points.
+3. From (0,2), move further right to (0,3). Again, there is no wall directly blocking the eastward movement.
+4. Now at (0,3), move downward to (1,3) as there's no wall blocking the southward path.
+5. From (1,3), continue downward to (2,3), as the path remains unblocked.
+6. From (2,3), can either continue toward (3,3) to the bottom or turn left. Both are open, but since the goal is at (3,3), we move down to (3,3).
+
+Thus, the solution path in coordinate form from entry to exit would be:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>
+
+This pathway avoids all walls and delivers at the exit point (3,3) effectively.

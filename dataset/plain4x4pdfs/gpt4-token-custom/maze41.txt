@@ -1,0 +1,15 @@
+<PATH_START> (0,0) (0,1) (1,1) (2,1) (2,2) (3,2) (3,3) <PATH_END>
+
+Reasoning:
+1. Starting point from the adjacency list and defined entry point is (0,0).
+2. Following valid moves are searched:
+   - From (0,0) go to (0,1), using the connection (0,0) <--> (0,1).
+   - Then, move from (0,1) to (1,1), using (0,1) <--> (1,1).
+   - Proceed from (1,1) to (2,1), using (1,1) <--> (2,1).
+   - From (2,1) move to (2,2), using the connection (2,1) <--> (2,2).
+   - From (2,2), a move to (3,2) is taken, using (2,2) <--> (3,2).
+   - Finally, move from (3,2) to (3,3) using (3,2) <--> (3,3), which is the defined exit point.
+3. The entire path consists of directly connecting nodes without jumping or backtracking:
+   - Each movement connects directly neighboring coordinates as defined in adjacency pairs.
+   - There are no walls crossed as every step uses an explicit link, and hence the path is valid and adheres to adjacency relationships in the maze's design.
+4. No cycles or unused adjacent nodes are part of the path, keeping it efficient and constrained to necessary movements to reach the exit (3,3) from the start (0,0).

@@ -1,0 +1,15 @@
+To solve the maze, one can employ classical methods, such as the Depth-First Search (DFS) or Breadth-First Search (BFS). However, providing eloquent insight without code, I will briefly describe the BFS approach for clarity:
+
+1. **Initialization**: Start at `S`, coordinates (1,1). Enqueue this position.
+2. **Exploration**:
+    - Dequeue the position and check valid adjacent cells (up, down, left, right) ignoring walls.
+    - For each valid move, mark the cell as visited to prevent revisiting and enqueue the new cell position.
+3. **Goal Check**: Each step checks if the current cell is the exit `E`. If it is, traceback from that position to `S` to reconstruct the path.
+4. **Traceback to Construct Path**: Each cell will keep track of where it came from to allow reconstruction of the path from the exit `E` back to the entry `S` once the goal is reached.
+
+Using BFS, which explores layer by layer, ensures the shortest path in an unweighted maze like this.
+
+Following this strategy, the BFS approach would yield this path found:
+<PATH_START> (1,1) (1,2) (1,3) (1,4) (1,5) (1,6) (1,7) (2,7) (3,7) (4,7) (5,7) (6,7) (7,7) <PATH_END>
+
+This path effectively moves horizontally at first opportunity, leverages the horizontal corridor, and completes the vertical movements to the exit.

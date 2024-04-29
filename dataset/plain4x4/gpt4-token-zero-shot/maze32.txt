@@ -1,0 +1,14 @@
+To solve the maze described, we start by creating a graph from the adjacency list provided, identify the origin and target, and then use a graph traversal algorithm (like BFS) to find the shortest path from the origin to the target. The resulting path should visit the coordinates in a sequence that complies with the given adjacency relationships:
+
+1. Build the graph from the given adjacency list.
+2. Mark the origin as (0,0) and the target as (3,3).
+3. Use Breadth-First Search (BFS) to find the shortest path:
+   - Begin at the origin node (0,0).
+   - Explore all directly connected nodes.
+   - Continue exploring neighboring nodes until the target node (3,3) is reached.
+
+After determining the sequence using BFS, the path using the adjacencies is:
+
+<PATH_START> (0,0) (1,0) (2,0) (2,1) (1,1) (1,2) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>
+
+This sequence ensures a valid traversal across connected nodes in the graph from the starting point to the exit point.

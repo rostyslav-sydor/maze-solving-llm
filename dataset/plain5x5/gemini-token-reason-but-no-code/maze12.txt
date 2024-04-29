@@ -1,0 +1,21 @@
+To find a solution for the maze, we can use a graph search algorithm such as depth-first search (DFS) or breadth-first search (BFS). 
+
+These algorithms work by starting at the origin (marked with <ORIGIN_START>) and recursively exploring the maze until the target (marked with <TARGET_END>) is reached. 
+
+As we explore the maze, we should keep track of the path taken as a list of coordinates. 
+
+When we reach the target, we can output the path taken as a list of coordinates by traversing the list of coordinates collected so far. 
+
+For the given maze, a possible solution is:
+
+<PATH_START>
+(0,0)
+(0,1)
+(1,1)
+(1,2)
+(1,3)
+(2,3)
+(3,3)
+(4,3)
+(4,4)
+<PATH_END>

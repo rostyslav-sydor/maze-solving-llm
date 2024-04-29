@@ -1,0 +1,37 @@
+The provided representation of a maze can be traversed using a depth-first search (DFS) or a breadth-first search (BFS) algorithm. DFS starts at the entry point and explores all possible paths in one direction before backtracking and trying another direction. BFS starts at the entry point and explores all nodes at the same level before moving to the next level.
+
+In this particular maze, a DFS would be more efficient than a BFS because the maze is relatively small and there are no long paths that need to be explored.
+
+**DFS Algorithm Reasoning**
+
+1. **Initialization**
+    a. Create a stack to keep track of the current path.
+    b. Add the entry point to the stack.
+2. **While the stack is not empty**
+    a. Pop the top element from the stack.
+    b. If the current element is the exit point, then the maze has been solved and we can return the path.
+    c. For each neighbor of the current element,
+        i. If the neighbor has not been visited, then
+            a. Push the neighbor onto the stack.
+            b. Mark the neighbor as visited.
+3. **If the stack is empty and the maze has not been solved, then there is no solution.**
+
+**BFS Algorithm Reasoning**
+
+1. **Initialization**
+    a. Create a queue to keep track of the current paths.
+    b. Add the entry point to the queue.
+2. **While the queue is not empty**
+    a. Dequeue the front element from the queue.
+    b. If the current element is the exit point, then the maze has been solved and we can return the path.
+    c. For each neighbor of the current element,
+        i. If the neighbor has not been visited, then
+            a. Enqueue the neighbor.
+            b. Mark the neighbor as visited.
+3. **If the queue is empty and the maze has not been solved, then there is no solution.**
+
+**Solution**
+
+The following is the solution path for the given maze:
+
+<PATH_START> (0,0) (1,0) (1,1) (1,2) (1,3) (2,3) (3,3) <PATH_END>

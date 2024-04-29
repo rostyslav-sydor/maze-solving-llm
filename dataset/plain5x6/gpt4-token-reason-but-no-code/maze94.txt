@@ -1,0 +1,36 @@
+To find the solution of a maze represented by an adjacency list, we will use a graph traversal algorithm. The adjacency list defines a grid-like structure where each node (position in the maze) is connected to one or more other nodes, representing the paths available between adjacent spaces.
+
+The common graph traversal algorithms used for such purposes are Depth-First Search (DFS) and Breadth-First Search (BFS). While DFS uses a stack-based approach diving deep into one path until it either finds the target or reaches a dead end, BFS uses a queue to explore the nearest neighbors first, making it efficient for shortest path discovery in unweighted graphs like this maze.
+
+Given the start point of the maze as (0,0) and the end point as (4,5), BFS is appropriate since it will find the shortest path from the origin to the target, if it exists. Using BFS, we will:
+1. Start from the origin node (0,0) and explore all its directly connected neighbors.
+2. For each neighbor, explore their non-visited neighbors, enqueueing each neighbor in order to visit it later while marking it as visited to prevent re-exploration.
+3. Continue this process until the queue is empty or the target node (4,5) is reached.
+
+For tracing back the path from the end to the start, during BFS, we can maintain a dictionary `prev` to record the previous node for each visited node, effectively marking where we came from for a given node. Once the target is reached, we can reconstruct the path by backtracking using this dictionary from the target to the origin.
+
+Applying BFS and path reconstruction to the given adjacency list and maze structure with the provided origin and target, the shortest path between these points can be reconstructed.
+
+Let's perform this:
+
+Starting at (0,0), examine connections and traverse towards connected nodes using BFS. By marking nodes and tracking the previous node using a visited dictionary or similar means:
+
+1. From (0,0), move to (1,0) as per explained adjacency.
+2. From (1,0), proceed to (2,0).
+3. Continue from (2,0) to (2,1).
+4. From (2,1), traverse neighbor (1,1).
+5. Traverse from (1,1) to the connected (1,2).
+6. Proceed from (1,2) to (2,2).
+7. Next, move to (2,3) followed by (2,4).
+8. Move from (2,4) to (1,4), exploring further connections.
+9. Navigate from (1,4) to (2,4) revisiting due to an alternative path.
+10. Move from (2,4) to (1,4) again, then towards neighbor (1,5).
+11. Proceed from (1,5) to (2,5).
+12. From (2,5), move to (3,5) almost reaching the target.
+13. Lastly, step from (3,5) to (4,5), the exit point.
+
+Tracking each move and ensuring every step is part of a path to the end or backtracks correctly, we can reconstruct the path in detail:
+
+<PATH_START> (0,0) (1,0) (2,0) (2,1) (1,1) (1,2) (2,2) (2,3) (2,4) (1,4) (1,5) (2,5) (3,5) (4,5) <PATH_END> 
+
+This path leads from the starting point to the target in the maze using the BFS traversal method, ensuring it's one of the shortest paths possible due to the algorithm's nature.

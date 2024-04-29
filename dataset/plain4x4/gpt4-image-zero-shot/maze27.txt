@@ -1,0 +1,11 @@
+To solve the maze, we begin at the entry point (0,0) and seek the exit at (3,3). We navigate by moving through cells that are not separated by a wall.
+
+1. Starting at (0,0), the next possible move without encountering a wall is downwards to (1,0).
+2. From (1,0), move right to (1,1) and continue to (1,2).
+3. At (1,2), move downwards to (2,2) since moving right to (1,3) is blocked.
+4. Go downwards again from (2,2) to (3,2).
+5. Finally, move right from (3,2) to (3,3) where the exit is located.
+
+Thus, the solution path is structured with a series of row and column shifts that avoid walls, as outlined.
+
+<PATH_START> (0,0) (1,0) (1,1) (1,2) (2,2) (3,2) (3,3) <PATH_END>

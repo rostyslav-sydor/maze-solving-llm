@@ -1,0 +1,13 @@
+**Reasoning:**
+
+The maze is represented as a graph with vertices at each cell and edges between adjacent cells. The goal of the algorithm is to find a path from the origin vertex to the target vertex.
+
+One approach to finding a path in a graph is to use a depth-first search (DFS) algorithm. DFS works by recursively searching all possible paths from a given vertex until a path to the target vertex is found.
+
+To adapt the DFS algorithm to this problem, we can start the search at the origin vertex and recursively visit all adjacent vertices until we reach the target vertex. If a vertex has already been visited, we can skip it to avoid cycles in the path.
+
+**Specific Solution:**
+
+Applying the DFS algorithm to the given maze, we get the following path from the origin vertex (0,0) to the target vertex (4,4):
+
+<PATH_START> (0,0) (0,1) (1,1) (1,2) (1,3) (2,3) (2,2) (2,1) (3,1) (3,2) (4,2) (4,3) (4,4) <PATH_END>

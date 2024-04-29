@@ -1,0 +1,24 @@
+Starting from the entry point (1,1), we can visually trace a path to the exit point. Moving one cell right and two cells down, we can clearly see the shortest path, which is (1,1) → (1,2) → (2,2) → (3,2) → (3,3) → (3,4) → (4,4) → (5,4) → (5,5) → (6,5) → (6,6) → (6,7) → (7,7). Expressed in the required format, our path is `<PATH_START> (1,1) (1,2) (2,2) (3,2) (3,3) (3,4) (4,4) (5,4) (5,5) (6,5) (6,6) (6,7) (7,7) <PATH_END>`. 
+
+Now let's generalize the process since it might be a bit too tedious to visualize it every time. A common way to solve a maze is through depth-first search or breadth-first search. In our case, a breadth-first search (BFS) algorithm seems appropriate. 
+
+Breadth-First Search Algorithm:
+
+1. Start at the maze's start point.
+2. Keep track of the visited cells to avoid exploring the same cell twice and to avoid getting stuck in loops.
+3. Add unvisited adjacent cells from our current location to a queue.
+4. Take the next cell from the queue as our current cell and repeat steps 2 and 3 until we reach the destination.
+
+Here's pseudocode we can follow to achieve our goal:
+
+```python
+def solve_maze(maze, start, end):
+    visited = [[False] * len(maze[0]) for _ in range(len(maze))]
+    steps = []
+    queue = [(start, [])]
+
+    while queue:
+        (row, col), path = queue.pop(0)
+        if row == end[0] and col == end[1]:
+            return steps
+        for dr, dc in [(1, 0), (-1, 0), (0, 

@@ -1,0 +1,10 @@
+ (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3)
+
+Your maze solution:
+<PATH_START>
+(0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3)              
+<PATH_END>
+
+If no solution exists, please output:
+NO SOLUTION FOUND
+

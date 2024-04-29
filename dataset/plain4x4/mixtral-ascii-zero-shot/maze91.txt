@@ -1,0 +1,40 @@
+ Step 1: Convert maze representation into a 2D array for easier processing. We'll use 'S' for the start point, 'E' for the end point, and '#' for walls.
+
+maze = [
+    ['#', '#', '#', '#', '#', '#', '#', '#', '#'],
+    ['#', 'S', '#', ' ', ' ', ' ', ' ', ' ', '#'],
+    ['#', '#', '#', '#', '#', '#', ' ', '#', ' '],
+    ['#', ' ', ' ', '#', ' ', ' ', ' ', '#', ' '],
+    ['#', '#', '#', '#', ' ', '#', '#', ' ', '#'],
+    ['#', ' ', ' ', '#', ' ', ' ', '#', '#', ' '],
+    ['#', '#', 'S', ' ', ' ', '#', '#', ' ', '#'],
+    ['#', ' ', ' ', ' ', ' ', ' ', ' ', '#', 'E'],
+    ['#', '#', '#', '#', '#', '#', '#', '#', '#'],
+]
+
+Step 2: Define a function to find the start position in the maze.
+
+def find_start(maze):
+    for r in range(len(maze)):
+        for c in range(len(maze[r])):
+            if maze[r][c] == 'S':
+                return (r, c)
+
+Step 3: Define a function to move from the current position to a valid neighbor, and mark the path.
+
+def move(current_pos, maze, path):
+    row, col = current_pos
+
+    if maze[row][col + 1] == ' ':
+        col += 1
+    elif maze[row + 1][col] == ' ':
+        row += 1
+    elif maze[row][col - 1] == ' ':
+        col -= 1
+    elif maze[row - 1][col] == ' ':
+        row -= 1
+    maze[row][col] = '•'
+    path.append((row, col))
+
+Step 4: Define a function to check if the current position is the end position.
+

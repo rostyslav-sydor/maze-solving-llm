@@ -1,0 +1,14 @@
+To solve the maze starting from the entry point at (0,0) and reaching the exit at (3,3), observe the available paths and walls:
+
+1. **Start at (0,0)** - No barriers directly below or to the right.
+2. **Move right** to (0,1) as moving downwards leads directly to a wall.
+3. **Move right again** to (0,2) - continuing right as the path down from (0,1) is blocked.
+4. **Move right a third time** to (0,3) - only viable path since moving down from (0,2) is blocked.
+5. **Move down** to (1,3) - only option as other paths are blocked by walls.
+6. **Move down again** to (2,3) - continuing down as the left is blocked.
+7. **Move down once more** to (3,3) - reaching the exit, with other paths blocked.
+
+Thus, the path is adequately traced using accessible routes without crossing any walls.
+
+Here is the solution path:
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>

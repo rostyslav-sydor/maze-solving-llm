@@ -1,0 +1,3 @@
+<Path_START> (1,1) (2,1) (3,1) (3,2) (3,3) (4,3) (4,4) (5,4) (6,4) (6,5) (6,6) (6,7) (7,7) <PATH_END> 
+
+To solve the maze, we start at (1,1) and follow a path that avoids the walls marked with hash signs. We navigate through the maze by moving either up, down, left, or right, making sure not to hit any walls. Eventually, we reach the exit point at (7,7) after successfully navigating through the maze. The solution path is shown above in coordinate form between <PATH_START> and <PATH_END> tokens. It outlines the specific coordinates we pass through in order to successfully navigate from the entry point to the exit point in the maze.

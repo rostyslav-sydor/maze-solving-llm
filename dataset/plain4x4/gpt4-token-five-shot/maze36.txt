@@ -1,0 +1,37 @@
+To find a solution path for the maze represented by the adjacency list, we first parse the adjacency list and then find the shortest path from the origin (entry) to the target (exit). We'll use a graph traversal algorithm such as breadth-first search (BFS) to determine the shortest path.
+
+### Parsing the adjacency list:
+The adjacency list for the maze is provided as:
+```
+<ADJLIST_START> (3,0) <--> (2,0) ; (0,2) <--> (0,3) ; (0,3) <--> (1,3) ; (3,3) <--> (2,3) ; (3,1) <--> (3,0) ; (3,3) <--> (3,2) ; (1,1) <--> (2,1) ; (0,1) <--> (0,0) ; (2,1) <--> (2,2) ; (2,3) <--> (1,3) ; (1,2) <--> (0,2) ; (1,0) <--> (1,1) ; (3,2) <--> (3,1) ; (0,1) <--> (0,2) ; (3,2) <--> (2,2) ; <ADJLIST_END>
+```
+
+From this, we can create an undirected graph, where each node corresponds to a cell, labeled with its coordinates, and each edge connects directly adjacent cells:
+
+- `A[(3,0)]` connects to `[(2,0), (3,1)]`
+- `A[(0,2)]` connects to `[(0,3), (0,1)]`
+- `A[(0,3)]` connects to `[(0,2), (1,3)]`
+- `A[(3,3)]` connects to `[(2,3), (3,2)]`
+- etc.
+
+### Finding the shortest path
+Using BFS from the origin point `(0,0)` to the target point `(3,3)` based on the graph created from the adjacency list, trace the path:
+
+1. **From** `(0,0)` to neighbors: `(0,1)`
+2. **Then to** `(0,2)` and continue to `(0,3)`
+3. **Move from** `(0,3)` to `(1,3)`
+4. **Then to** `(2,3)` and further to `(3,3)`
+
+The path discovered by BFS, ensuring the shortest number of steps, is manually traced as:
+
+- Direct path if formed:
+  - `(0,0) -> (0,1) -> (0,2) -> (0,3) -> (1,3) -> (2,3) -> (3,3)`
+
+### Output
+The solution for the maze from the origin `(0,0)` to the target `(3,3)` based on adjacency list provided:
+
+```
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>
+``` 
+
+This path uses direct connections from the adjacency list, showing a traverse along the first and last rows of the hypothetical grid, eventually reaching the desired destination without backtracking.

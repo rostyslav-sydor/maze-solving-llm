@@ -1,0 +1,13 @@
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (3,2) (3,3) <PATH_END>
+
+Reasoning:
+1. From the origin (0,0), I looked at the adjacent list to determine the valid adjacent cells. 
+2. Starting from (0,0), the options are moving to (1,0) or to (0,1). The aim is to get to (3,3), thus moving downwards or rightwards when possible could form a potentially direct path.
+3. (0,0) to (1,0) was validly connected with (0,0) <--> (1,0).
+4. (1,0) to (2,0) followed, as indicated by (2,0) <--> (1,0).
+5. Next, moving from (2,0) to (3,0) presented a direct route downward, supported by (2,0) <--> (3,0).
+6. Continuing downwards from (3,0) to (3,1) was the only option to advance rightward, substantiated by (3,0) <--> (3,1).
+7. From (3,1) to (3,2) maintained our rightward trajectory across the row, as marked by (3,1) <--> (3,2).
+8. Finally, moving from (3,2) to (3,3) reached the designated target. This step was proper given (3,2) <--> (3,3) existence in the adjacency list.
+
+I checked the path and confirmed that all moves are between direct adjacent cells with pre-existing connections from the adjacency list without crossing any unlisted walls or using non-adjacent steps.

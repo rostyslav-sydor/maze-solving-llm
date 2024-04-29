@@ -1,0 +1,11 @@
+Here is the solution to the maze:
+
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (2,1) (2,2) (3,2) (3,3) <PATH_END>
+
+Solution:
+
+The shortest path from the starting point (0,0) to the target point (3,3) is:
+
+(0,0) (1,0) (2,0) (3,0) (3,1) (2,1) (2,2) (3,2) (3,3)
+
+Please note that the solution is a list of coordinates, where each coordinate is a row and column pair. The first coordinate is the row number, and the second coordinate is the column number.

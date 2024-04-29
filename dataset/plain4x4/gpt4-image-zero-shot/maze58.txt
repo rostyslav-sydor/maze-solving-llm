@@ -1,0 +1,11 @@
+To navigate this maze from entry (0,0) to exit (3,3), we observe the following possible paths without crossing any thick black walls, which represent blockages:
+
+1. Starting from (0,0), move horizontally to the right to (0,1).
+2. From (0,1), vertical movements are blocked by a wall to the south, so continue right to (0,2) and then to (0,3).
+3. At (0,3), you're at the far right of the first row, move down to (1,3), as moving left or further right is blocked.
+4. From (1,3), continue down to (2,3).
+5. At (2,3), the only unblocked movement direction is downward. Therefore, move down to the last row, reaching (3,3).
+
+This path keeps you within the open corridors, skirting around the walls that obstruct other potential directions. Here’s the sequence:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>

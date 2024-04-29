@@ -1,0 +1,20 @@
+<PATH_START> (0,0) (1,0) (1,1) (1,2) (1,3) (2,3) (3,3) <PATH_END>
+
+1. Since the starting point is (0,0), we need to find a path from (0,0) to (3,3).
+2. From (0,0), we can move to (0,1) or (1,0).
+3. From (0,1), we can move to (0,2) or (1,1).
+4. From (1,0), we can move to (1,1) or (2,0).
+5. From (1,1), we can move to (1,2) or (2,1).
+6. From (1,2), we can move to (1,3) or (2,2).
+7. From (2,0), we can move to (2,1) or (3,0).
+8. From (2,1), we can move to (2,2) or (3,1).
+9. From (2,2), we can move to (2,3) or (3,2).
+10. From (3,0), we can move to (3,1) or (3,2).
+11. From (3,1), we can move to (3,2) or (3,3).
+12. From (3,2), we can move to (3,3).
+
+Since we can reach (3,3) from (0,0) by following the path (0,0) (1,0) (1,1) (1,2) (1,3) (2,3) (3,3), this is a solution to the maze.
+
+To check if the solution does not cross any walls, we can check if each pair of consecutive coordinates in the path are adjacent. We can see that all the pairs of consecutive coordinates are adjacent, so the solution does not cross any walls.
+
+To check if the path uses only adjacent cells, we can check if each pair of consecutive coordinates in the path are adjacent. We can see that all the pairs of consecutive coordinates are adjacent, so the path uses only adjacent cells.

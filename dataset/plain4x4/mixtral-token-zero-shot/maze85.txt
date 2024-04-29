@@ -1,0 +1,49 @@
+Perform a depth-first search, starting with the entry point. Keep track of visited nodes and update the best path needed if a target is reached.
+
+Depth-first search:
+
+1. Start at the entry point, initialize an empty path and visually update the entry point.
+2. If the current node is the exit point, a path is found. Update the best path with the current path, and reverse it before returning. If no better path is found, return False.
+3. Traverse the undiscovered neighbors (coordinate pairs as node) and mark them as visited, then repeat step 2, ensuring to restore the unvisited state for these nodes after the recursive call.
+
+Pseudocode:
+
+```python
+def depth_first_search(maze, entrypoint, exitpoint):
+    # Visualize entry and exit points
+    draw_maze(maze, visited=[(entrypoint)])
+
+    # Start depth-first search
+    path, updated_path = dfs(maze, entrypoint, exitpoint, [])
+    if path:
+        updated_path.reverse()
+        draw_maze(maze, updated_path, path_line_color="black")
+        print(f"<PATH_START>{' '.join(map(str, updated_path))}<PATH_END>")
+        return
+
+    # No path found
+    print("No path found!")
+
+def dfs(maze, point, target, path):
+    # Check if a node is the target
+    if point == target:
+        return True, path
+
+    # Traverse unvisited neighbors
+    for neighbor in maze.get_neighbors(point):
+        path.append(neighbor)
+        if dfs(maze, neighbor, target, path):
+            return True, path
+        path.pop()
+
+    # No neighbor is the target; return as is
+    return False, path
+```
+
+To display an ASCII representation of the solution, process the solved path and visualize it in the given location, marking the path with the appropriate color.
+
+Output:
+
+<user>:
+Visualize this update with the depth first search algorithm in an ascii grid.
+Dont output code just output the grid.

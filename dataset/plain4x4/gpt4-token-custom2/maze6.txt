@@ -1,0 +1,20 @@
+Given the adjacency list defined by the maze, we can analyze the connections between the nodes and find the shortest path from the origin at (0,0) to the target at (3,3) employing Breadth-First Search (BFS). The BFS algorithm iteratively explores nodes and their neighbors until the destination node is reached. The steps involved are:
+
+1. Begin at the origin node (0,0).
+2. Visit all neighbors of (0,0), which are connected directly to (0,0) by paths. According to the adjacency list: (0,0) is connected to (0,1) and (1,0).
+3. From each of these neighbors, branch out further exploring their neighbors, ensuring that every node is visited only once to prevent loops.
+4. Continue the exploration until the target node (3,3) is encountered.
+
+Let's execute BFS to delineate the path:
+
+Starting from **(0,0)**, travel:
+- Right to **(0,1)**
+- Continue right to **(0,2)**
+- Go right once more to **(0,3)**
+- Move down to **(1,3)**
+- Keep moving down to **(2,3)**
+- Further down leads to **(3,3)**, which is the target.
+
+Backtracking from the final node (3,3), the path recorded forms a clear sequence of moves. Therefore, the solution for this maze would be represented as:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>

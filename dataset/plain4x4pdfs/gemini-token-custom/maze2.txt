@@ -1,0 +1,21 @@
+The solution is:
+
+<PATH_START> (0,0) (0,1) (1,1) (1,2) (1,3) (2,3) (3,3) <PATH_END>
+
+**Reasoning:**
+
+1. Start at the origin (0,0).
+
+2. Follow the path to the right, reaching (0,1)
+
+3. Follow the path to the right again, reaching (0,2)
+
+4. Then, follow the path up to (0,3)
+
+5. Follow the path to the right again, reaching (1,3)
+
+6. Then, follow the path up to (2,3)
+
+7. Finally, follow the path to the right to reach the target (3,3).
+
+This path uses only adjacent cells and does not cross any walls.

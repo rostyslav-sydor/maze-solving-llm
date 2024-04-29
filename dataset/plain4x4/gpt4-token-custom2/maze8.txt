@@ -1,0 +1,34 @@
+To solve the maze with provided adjacency list, we can use the Breadth-First Search (BFS) algorithm. This algorithm will allow us to find the shortest path from the origin (0,0) to the target (3,3). Below is how the BFS algorithm can be used to determine the path.
+
+1. Start at the origin (0,0).
+2. Explore all directly connected nodes and continue this way until reaching (3,3) or until all possible paths are exhausted.
+3. Track the path by using a predecessor map that records where each node was reached from.
+
+Given adjacency list and using BFS step-by-step:
+
+Starting at (0,0):
+- From (0,0) you can go to (1,0) or (0,1).
+- From (1,0) you can go to (2,0).
+- From (2,0) you can go to (3,0) or (2,1).
+- From (0,1) you can go to (0,2) or (1,1).
+- From (3,0) you can go to (3,1).
+- From (0,2) you can go to (0,3).
+- From (3,1) you can go to (3,2) or (2,1).
+- From (2,1) you can go to (2,2).
+- From (3,2) you can go to (3,3).
+- From (2,2) you can go to (2,3).
+- From (2,3) you can go to (1,3) or (3,3).
+
+Connecting these points using the shortest path:
+
+0. Start at (0,0).
+1. Move to (1,0).
+2. Move down to (2,0).
+3. Move down to (3,0).
+4. Move right to (3,1).
+5. Move right to (3,2).
+6. Move right to (3,3).
+
+This sequence of moves is the shortest path from the origin (0,0) to the target (3,3) based on the adjacency list. Thus, the solution path is:
+
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (3,2) (3,3) <PATH_END>

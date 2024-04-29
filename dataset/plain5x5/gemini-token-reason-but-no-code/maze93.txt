@@ -1,0 +1,7 @@
+Let's first define what a maze is: it is a collection of cells, some of which are blocked, and there is a single path from the entry point to the exit point such that only unblocked cells are visited. The maze can be represented as a graph, where each cell is a vertex and there is an edge between two vertices if the corresponding cells are adjacent and not blocked.
+
+To find a path in a maze, we can use a graph search algorithm, such as depth-first search (DFS) or breadth-first search (BFS). However, for this maze we can simply go to the right and then down till we reach the target.
+
+In this specific maze, the path from the entry point (0,0) to the exit point (4,4) is:
+
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (4,0) (4,1) (4,2) (4,3) (4,4) <PATH_END>

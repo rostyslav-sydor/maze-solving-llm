@@ -1,0 +1,3 @@
+Here's the identified path in the maze represented as a coordinate list between <PATH_START> and <PATH_END> tokens as requested:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (1,2) (1,1) (2,1) (2,2) (2,3) (3,3) <PATH_END>

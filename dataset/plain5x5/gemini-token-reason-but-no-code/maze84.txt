@@ -1,0 +1,16 @@
+To solve a maze using an adjacency list representation, we can use a breadth-first search (BFS) algorithm. 
+
+BFS works by starting at the origin node and exploring all of its adjacent nodes. 
+It then explores all of the adjacent nodes of those nodes, and so on. 
+As it explores each node, it marks it as visited so that it doesn't explore it again. 
+Once it has explored all of the adjacent nodes of a node, it moves on to the next unvisited node in the queue. 
+
+If the BFS algorithm reaches the target node, then it has found a solution to the maze. 
+The solution can be reconstructed by backtracking from the target node to the origin node, following the visited nodes. 
+
+For the given maze, the BFS algorithm would start at the origin node (0,0) and explore its adjacent nodes, which are (0,1), (1,0), and (2,0). 
+It would then explore the adjacent nodes of those nodes, and so on. 
+Eventually, it would reach the target node (4,4), and it would reconstruct the solution by backtracking from (4,4) to (0,0). 
+
+The solution to the given maze is: 
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (0,4) (1,4) (2,4) (3,4) (4,4) <PATH_END>

@@ -1,0 +1,13 @@
+The maze is a graph and we need to find a path from the origin to the target. We can use a depth-first search (DFS) algorithm to find such a path.
+
+DFS starts at the origin and recursively explores all possible paths until it finds a path to the target. If a path is not found, DFS backtracks and tries a different path.
+
+Let's apply DFS to the given maze. We start at the origin (0,0) and explore the following paths:
+
+1. (0,0) -> (0,1) -> (0,2) -> (0,3)
+2. (0,0) -> (0,1) -> (0,2) -> (1,2) -> (2,2) -> (2,3) -> (3,3)
+3. (0,0) -> (1,0) -> (1,1) -> (1,2) -> (2,2) -> (2,3) -> (3,3)
+
+The third path leads to the target (3,3), so it is the solution to the maze.
+
+<PATH_START> (0,0) (1,0) (1,1) (1,2) (2,2) (2,3) (3,3) <PATH_END>

@@ -1,0 +1,13 @@
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>
+
+**Reasoning**:
+
+1. Start from the origin cell `(0,0)`.
+2. Move right to the cell `(0,1)`.
+3. Move right again to the cell `(0,2)`.
+4. Move down to the cell `(0,3)`.
+5. Move right to the cell `(1,3)`.
+6. Move down to the cell `(2,3)`.
+7. Move right to the cell `(3,3)`.
+
+This path does not cross any walls and only uses adjacent cells.

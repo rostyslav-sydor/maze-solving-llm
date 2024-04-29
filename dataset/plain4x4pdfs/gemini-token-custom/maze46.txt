@@ -1,0 +1,20 @@
+To solve the maze, we can use the depth-first search (DFS) algorithm.
+We start at the origin cell and recursively explore all adjacent cells until we reach the target cell.
+If we reach a dead end, we backtrack and try a different path.
+
+Here is the solution to the maze:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>
+
+Reasoning:
+
+We start at the origin cell (0,0).
+We explore the adjacent cell (0,1) and find that it leads to the target cell (3,3).
+We backtrack and explore the adjacent cell (0,2) and find that it leads to a dead end.
+We backtrack and explore the adjacent cell (0,3) and find that it leads to the target cell (3,3).
+We backtrack and explore the adjacent cell (1,3) and find that it leads to the target cell (3,3).
+We backtrack and explore the adjacent cell (2,3) and find that it leads to the target cell (3,3).
+We backtrack and explore the adjacent cell (3,3) and find that it is the target cell.
+
+We have found a path from the origin cell to the target cell.
+The path does not cross any walls and uses only adjacent cells.

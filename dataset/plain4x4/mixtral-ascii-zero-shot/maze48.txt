@@ -1,0 +1,18 @@
+Sure, I will solve the maze for you step by step using a recursive algorithm.
+
+1. I will start from the entry point (1, 1).
+2. Checking if the cell is clear or not by seeing the # symbol. If it's an empty space, then proceed. In this case, it's an empty space.
+3. I will move to the right (1+1) (1, 2).
+4. Checking the cell (1, 2)... It's an empty space. Move again to the right.
+5. Checking the cell (1, 3)... It's a wall (#). Can't move further right, so I'll try to go down (1+1, 3).
+6. Checking the cell (2, 3)... It's an empty space. Move down.
+7. Checking the cell (3, 3)... It's a wall (#). Can't move further down, so I'll try to go left (3, 3-1).
+8. Checking the cell (3, 2)... It's a wall (#). Can't move further left, so I'll try to go up (3-1, 2).
+9. Checking the cell (2, 2)... It's an empty space. Move left.
+10. Checking the cell (2, 1)... It's an empty space. Can move left.
+11. Checking the cell (2, 0)... Not valid cell, so can't move further left, so I'll try up (1-1, 1).
+12. Checking the cell (1, 1)... It's a wall. Can't go up, so I'll try down.
+13. Checking the cell (1, 2)... It's a wall. Can't go down, so I'll try left.
+14. Checking the cell (0, 2)... It's a wall. Can't go left, so I'll try right.
+15. Checking the cell (1, 3)... It's a wall. Can't go right, so I'll try down.
+16

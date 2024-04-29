@@ -1,0 +1,15 @@
+One way to solve mazes using AI is to rely on algorithms such as Dijkstra's Algorithm, A*, Breadth-First Search, or Recursive Backtracking. In this case, let's use Dijkstra's Algorithm since it will help us find the shortest path from the start to the finish. Here is a rough outline of how we can proceed:
+
+1) Convert the ASCII representation of the maze into a graph data structure, where each position in the maze is a node and each connecting node is an edge. We can generate adjacency lists or matrices to represent the graph; in this case, let's use adjacency lists since the maze is sparse.
+
+2) Select the start node and assign it a distance of 0. We will check all nodes adjacent to the start point (up, down, left, and right), add them to the search set, and assign them a distance. Mark the current node status as "visited".
+
+3) From the set of nodes we've already visited (which we initially started with the start node), select the node that has the smallest distance and mark it as the current node. Note that once we've selected the new node as the current node, it will never be reconsidered as an unvisited node.
+
+4) Check all adjacent nodes that the current node hasn't been visited. If the distance from the start node to that unvisited node (through the current node) is less than the node's current distance, update the node's distance and add it to the set of "visited" nodes. 
+
+5) Repeat steps 3-4, updating the current node each time with the closest unvisited node available until we reach the finish node. Once we select the finish node as the current node, we've found the shortest path!
+
+6) Traceback through the path we took to reach the finish node, and print the coordinates in the desired format. 
+
+Note that the specific coordinates will depend on the specific implementation of the algorithm and the representation of the maze. This solution is approximate and may not work as intended since I am a model and could make mistakes. Please try implementing this algorithm and notify me if you encounter any issues. As a next step, please define the algorithm more concretely in code snippets or in the

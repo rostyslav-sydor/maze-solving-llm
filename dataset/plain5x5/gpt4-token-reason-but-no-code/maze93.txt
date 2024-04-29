@@ -1,0 +1,22 @@
+To find a path through the maze from the starting point (0,0) to the exit point (4,4), I'll consider the adjacency list provided. This list shows all possible movements between locations in the maze. Each pair in the list represents a direct passage between two adjacent grid points.
+
+Given that I have to find a path, using a graph traversal algorithm like Breadth-First Search (BFS) would be suitable because BFS explores the nearest nodes first, providing the shortest path in an unweighted graph such as this.
+
+Starting from (0,0), I'll use the adjacency pairs to systematically explore all accessible points. Each time I move, I'll record the cell I came from, allowing me to trace my path back to the beginning once I've reached (4,4).
+
+Now, looking at the adjacency list and expanding it systematically using BFS:
+
+1. Start at (0,0); the neighbors are (0,1).
+2. From (0,1), move to (0,2).
+3. From (0,2), you can proceed to (1,2) and (0,3).
+4. Moving to (1,2), then to (2,2).
+5. From (2,2) to (3,2).
+6. From (3,2), continue to (4,2).
+7. Progress from (4,2) to (4,3).
+8. From (4,3), finally move to (4,4).
+
+Each move is chosen based on available paths from the adjacency list, and since BFS is used, this path is one of the shortest. I retraced steps back from the target to the origin based on where each step came from, confirming the path.
+
+Thus, the solution to the maze in the requested format is:
+
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (2,2) (3,2) (4,2) (4,3) (4,4) <PATH_END>

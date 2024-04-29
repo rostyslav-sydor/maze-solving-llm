@@ -1,0 +1,9 @@
+First, we need to explore the maze to find a path from the start point to the exit point. We can do this by systematically exploring each possible direction at each junction until we reach the exit.
+
+Starting at (1,1), we can move right to (1,2), then down to (2,2), then right to (2,3). From here, we have a choice to go down to (3,3) or continue right to (2,4). Let's go down to (3,3), then right to (3,4), down to (4,4), right to (4,5), down to (5,5), and right to (5,6).
+
+At this point, we can go down to (6,6), right to (6,7), down to (7,7), and finally right to (7,8) where the exit is located at (7,7).
+
+Therefore, the path to follow through the maze is:
+
+<PATH_START> (1,1) (1,2) (2,2) (2,3) (3,3) (3,4) (4,4) (4,5) (5,5) (5,6) (6,6) (6,7) (7,7) <PATH_END>

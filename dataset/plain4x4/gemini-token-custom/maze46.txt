@@ -1,0 +1,10 @@
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>
+
+**Reasoning:**
+
+Following the adjacency list we can see that the only option for the first move is (0,1). From there, we keep moving along the right wall until we reach (0,3). From (0,3) we have to move right to (1,3). At this point we have to move down to (2,3), and finally we can move right to (3,3).
+
+**Checking for validity:**
+
+* No walls are crossed, as we follow the adjacency list.
+* Only adjacent cells are used, as we only move right or down.

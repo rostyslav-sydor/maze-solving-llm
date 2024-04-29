@@ -1,0 +1,32 @@
+To solve this maze, we can either use a depth-first search (DFS) or a breadth-first search (BFS). BFS is particularly well-suited for finding the shortest path in an unweighted graph like this one, where each edge can be considered to have the same weight or distance.
+
+Each node in the adjacency list represents a point in the maze, every pair shows direct adjacency (and thus directly reachable) between those points (cells). Our objective is to find a path from the origin point (0,0) to the target point (3,3) using these connections.
+
+To simplify, we consider:
+- **BFS** traverses level by level, ensuring that when we reach our target, it's by the shortest path possible in terms of the number of edges traversed.
+- We enqueue each node along with their paths that we encounter that are not yet visited.
+- We maintain a visited set to prevent visiting the same node more than once and to avoid cycles.
+
+Given the adjacency list:
+- Start from (0,0) which connects to (1,0) and (0,1). 
+- From (0,1) you can reach (0,2) and (0,0), but (0,0) is already visited.
+- (0,2) goes to (0,3), (1,2), and back to (0,1).
+  - (1,2) further connects to (2,2). 
+- (0,3) goes to (1,3).
+- (3,3) connects from (2,3), but we need how to reach (2,3).
+
+We track tracing from (0,0) to every node until (3,3) is reached:
+
+1. Starting at (0,0), visit (1,0) and (0,1).
+2. From (0,1), visit (0,2).
+3. From (0,2), go to (0,3) and (1,2).
+4. From (1,2), reach (2,2).
+5. (0,3) leads to (1,3), connecting further to (2,3).
+6. From (2,3), make the jump to (3,3).
+
+Each of these visits observes the transitions based on the adjacency in the list. By recording the path of these visits, we can determine the route to the exit.
+
+Thus, the specific sequence of coordinates to navigate through the maze from the origin (0,0) to the target (3,3) is as follows:
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>
+
+This follows the shortest path premise ensured by the BFS approach, making transitions only between directly connected coordinates as specified.

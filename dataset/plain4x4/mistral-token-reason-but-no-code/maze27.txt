@@ -1,0 +1,15 @@
+<PATH_START> (0,0) (1,0) (1,1) (1,2) (1,3) (2,3) (2,2) (3,2) (3,3) <PATH_END>
+
+Reasoning:
+
+1. We start at the origin marked by <ORIGIN_START> and <ORIGIN_END>, which is coordinate (0,0).
+2. From (0,0), we move to (1,0) since (1,0) <--> (0,0) in the adjacency list.
+3. From (1,0), we move to (1,1) since (1,1) <--> (1,0) in the adjacency list.
+4. From (1,1), we move to (1,2) since (1,2) <--> (1,1) in the adjacency list.
+5. From (1,2), we move to (1,3) since (1,3) <--> (1,2) in the adjacency list.
+6. From (1,3), we move to (2,3) since (2,3) <--> (1,3) in the adjacency list.
+7. From (2,3), we move to (2,2) since (2,2) <--> (2,3) in the adjacency list.
+8. From (2,2), we move to (3,2) since (3,2) <--> (2,2) in the adjacency list.
+9. Finally, from (3,2), we move to the target marked by <TARGET_START> and <TARGET_END>, which is coordinate (3,3) since (3,3) <--> (3,2) in the adjacency list.
+
+So, the path from the origin to the target is <PATH_START> (0,0) (1,0) (1,1) (1,2) (1,3) (2,3) (2,2) (3,2) (3,3) <PATH_END>.

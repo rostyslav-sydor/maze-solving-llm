@@ -1,0 +1,14 @@
+Since the graph is undirected and unweighted, we can use breadth-first search to find the shortest path from the origin to the target.
+We start at the origin and add it to a queue.
+Then, for each node in the queue, we add all of its neighbors to the queue, and mark them as visited.
+We continue this process until we reach the target.
+The path from the origin to the target is then the sequence of nodes that were visited.
+
+In the given maze, the origin is at (0,0) and the target is at (3,3).
+We start at the origin and add it to the queue.
+The only neighbor of the origin is (0,1), so we add it to the queue and mark it as visited.
+Next, we visit (0,1) and add its neighbors, (0,2) and (1,1), to the queue.
+We continue this process until we reach the target, which is at (3,3).
+The path from the origin to the target is then:
+
+<PATH_START> (0,0) (0,1) (1,1) (1,2) (1,3) (2,3) (3,3) <PATH_END>

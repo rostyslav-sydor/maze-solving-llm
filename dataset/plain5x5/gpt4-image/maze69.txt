@@ -1,0 +1,3 @@
+For analyzing the image of the maze you provided, I traced through it considering the entry point at (0,0) and the exit at (4,4). According to the connections between the cells and avoiding the walls, the path which I found goes as follows:
+
+<PATH_START> (0,0) (1,0) (2,0) (2,1) (2,2) (3,2) (4,2) (4,3) (4,4) <PATH_END>

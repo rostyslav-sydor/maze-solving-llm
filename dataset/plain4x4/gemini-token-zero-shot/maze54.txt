@@ -1,0 +1,7 @@
+The maze can be solved by finding a path from the origin to the target. We can use a depth-first search (DFS) to find the path.
+
+We start at the origin and visit all of its unvisited neighbors. If any of the neighbors is the target, then we have found the path. Otherwise, we continue the DFS from the neighbor. We repeat this process until we either find the path or we have visited all of the nodes in the graph.
+
+In this case, the path from the origin to the target is:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>

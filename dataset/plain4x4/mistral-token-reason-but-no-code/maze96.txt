@@ -1,0 +1,46 @@
+To solve a maze using the given adjacency list, we can use a pathfinding algorithm such as Dijkstra's or A* (A-star) algorithm. Let's implement the A* algorithm for this task.
+
+The A* algorithm is a pathfinding algorithm that finds the shortest path between the origin and target nodes in a graph. It works by maintaining a priority queue of nodes to visit, where each node is assigned a cost based on the distance from the origin and an estimated distance to the target.
+
+Here's a step-by-step explanation of the A* algorithm:
+
+1. Initialize the priority queue with the origin node.
+2. While the priority queue is not empty:
+	1. Pop the node with the lowest cost from the priority queue.
+	2. If the popped node is the target node, reconstruct the path by tracing back the parent pointers and return the path.
+	3. For each neighbor of the popped node:
+		1. Calculate the cost for the neighbor node by adding the distance from the origin to the popped node and the distance from the popped node to the neighbor node.
+		2. If the neighbor node is not in the priority queue or if its current cost is higher than the calculated cost, update its cost and parent pointer, and add or update it in the priority queue.
+
+For the given maze, the adjacency list representation is:
+
+<ADJLIST_START>
+(2,3) <--> (1,3) ; (2,1) <--> (3,1) ; (3,0) <--> (2,0) ; (3,2) <--> (3,1) ; (2,0) <--> (1,0) ; (1,0) <--> (0,0) ; (0,1) <--> (0,2) ; (2,3) <--> (3,3) ; (2,1) <--> (1,1) ; (1,2) <--> (0,2) ; (1,2) <--> (1,3) ; (0,0) <--> (0,1) ; (2,2) <--> (2,3) ; (0,2) <--> (0,3) ; (2,2) <--> (3,2) ;
+<ADJLIST_END>
+
+And the origin and target nodes are:
+
+<ORIGIN_START> (0,0) <ORIGIN_END>
+<TARGET_START> (3,3) <TARGET_END>
+
+Let's apply the A* algorithm to find the shortest path between the origin and target nodes:
+
+1. Initialize the priority queue with the origin node (0,0).
+2. Pop the node with the lowest cost from the priority queue: (0,0).
+3. Check if the popped node is the target node: No, it's not (3,3).
+4. For each neighbor of the popped node:
+	1. Calculate the cost for the neighbor node (0,1): 1 + 0 = 1.
+	2. Add or update the neighbor node (0,1) in the priority queue with its cost and parent pointer (0,0).
+	3. Repeat steps 4.1 and 4.2 for the other neighbor (1,0).
+5. Pop the node with the lowest cost from the priority queue: (0,1).
+6. Check if the popped node is the target node: No, it's not (3,3).
+7. For each neighbor of the popped node:
+	1. Calculate the cost for the neighbor node (0,2): 1 + 1 = 2.
+	2. Add or update the neighbor node (0,2) in the priority queue with its cost and parent pointer (0,1).
+	3. Repeat steps 7.1 and 7.2 for the other neighbor (1,1).
+8. Continue this process until the target node (3,3) is popped from the priority queue.
+9. Trace back the parent pointers from the target node to reconstruct the shortest path:
+	1. (3,3) --> (2,3) --> (2,2) --> (3,2) --> (3,1) --> (3,0) --> (2,0) --> (1,0) --> (0,0)
+
+Output the path in the required format:
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (3,2) (2

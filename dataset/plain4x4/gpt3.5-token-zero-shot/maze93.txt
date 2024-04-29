@@ -1,0 +1,8 @@
+To solve this maze, we can use the depth-first search algorithm. Starting from the origin at (0,0), we explore all possible paths until we reach the target at (3,3). 
+
+One possible solution path could be:
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (1,3) (2,3) (2,2) (3,2) (3,3) <PATH_END>
+
+By following this path, we start at (0,0), move right to (0,1), then to (0,2), (1,2), (1,3), (2,3), (2,2), (3,2), and finally reach the target at (3,3).
+
+Using depth-first search, we explore all possible paths until we find the target, ensuring that we don't revisit cells we've already explored. This allows us to efficiently find a solution path through the maze.

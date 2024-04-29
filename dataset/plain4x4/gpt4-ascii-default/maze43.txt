@@ -1,0 +1,17 @@
+To solve the maze, we will use a systematic approach to trace a path from 'S' (Start) to 'E' (End) manually, following simple maze-solving strategies like the "right-hand rule" (keeping your right hand in contact with a wall to navigate). The solution assumes we start on (1,1) and explore accessible paths (spaces, not '#') by moving right, down, left, or up without backtracking unnecessarily.
+
+Here’s the step-by-step path solution:
+
+1. Start at (1,1).
+2. Move right up till (1,7).
+3. Move down to (2,7), then (3,7).
+4. Move left to (3,6).
+5. Navigate more leftwards to (3,4).
+6. Move downwards all the way past (4,4), (5,4) to (6,4).
+7. Proceed right to finally reach (6,5), (6,6), and finally the exit at (7,6).
+
+Thus, the shortest path through the maze from the entry point 'S' at (1,1) to the exit 'E' at (7,6) is:
+
+<PATH_START> (1,1) (1,2) (1,3) (1,4) (1,5) (1,6) (1,7) (2,7) (3,7) (3,6) (3,5) (3,4) (4,4) (5,4) (6,4) (6,5) (6,6) (7,6) <PATH_END>
+
+This output lists coordinates that represent consecutive steps to navigate successfully from start to end.

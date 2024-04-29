@@ -1,0 +1,9 @@
+Here is the solution for the maze you provided:
+
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (2,1) (2,2) (3,2) (3,3) <PATH_END>
+
+The maze has a single exit point, which is located at (3,3). The shortest path to the exit point is as follows:
+
+(0,0) -> (1,0) -> (2,0) -> (3,0) -> (3,1) -> (2,1) -> (2,2) -> (3,2) -> (3,3)
+
+Please note that the solution is a list of coordinates, where each coordinate is a row and column pair. The first coordinate is the row number, and the second coordinate is the column number.

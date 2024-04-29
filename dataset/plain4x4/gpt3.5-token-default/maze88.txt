@@ -1,0 +1,4 @@
+The solution for this maze is as follows:
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>
+
+Starting from the entrance at (0,0), we move to (0,1), (0,2), (0,3), (1,3), (2,3) and finally reach the exit at (3,3). This path follows the adjacency list connections and successfully navigates through the maze to the target point. The coordinates listed between <PATH_START> and <PATH_END> represent the path taken to reach the destination. By following these coordinates, one can traverse the maze from start to finish efficiently.

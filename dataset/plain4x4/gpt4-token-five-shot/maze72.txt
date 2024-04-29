@@ -1,0 +1,83 @@
+To solve the maze provided in the last query, we need to convert the adjacency list into a format that allows for graph traversal. We'll use Breath-First Search (BFS) since it is a common approach for finding the shortest path in an unweighted graph, such as this maze. 
+
+The adjacency list provided is as follows:
+```
+(1,2) <--> (1,3) ; 
+(3,0) <--> (2,0) ; 
+(2,2) <--> (2,3) ; 
+(2,3) <--> (3,3) ; 
+(0,3) <--> (0,2) ; 
+(2,3) <--> (1,3) ; 
+(3,2) <--> (3,3) ; 
+(0,2) <--> (1,2) ; 
+(0,1) <--> (1,1) ; 
+(0,0) <--> (0,1) ; 
+(2,1) <--> (2,2) ; 
+(3,0) <--> (3,1) ; 
+(3,1) <--> (3,2) ; 
+(2,0) <--> (1,0) ; 
+(2,1) <--> (1,1) ;
+```
+
+Origin: `(0,0)`
+Target: `(3,3)`
+
+We can convert these adjacency pairs into a graph representation:
+
+```python
+graph = {
+    (0,0): [(0,1)],
+    (0,1): [(0,0), (1,1)],
+    (0,2): [(0,3), (1,2)],
+    (0,3): [(0,2)],
+    (1,0): [(2,0)],
+    (1,1): [(0,1), (1,2)],
+    (1,2): [(1,3), (0,2), (2,2)],
+    (1,3): [(1,2), (2,3)],
+    (2,0): [(1,0), (3,0)],
+    (2,1): [(2,2), (1,1)],
+    (2,2): [(2,1), (2,3)],
+    (2,3): [(2,2), (1,3), (3,3)],
+    (3,0): [(2,0), (3,1)],
+    (3,1): [(3,2), (3,0)],
+    (3,2): [(3,3), (3,1)],
+    (3,3): [(2,3), (3,2)]
+}
+```
+
+Now we will apply BFS from the origin `(0,0)` trying to reach `(3,3)`.
+
+```python
+from collections import deque
+
+def bfs_path(graph, start, goal):
+    queue = deque([(start, [start])])
+    visited = set()
+    
+    while queue:
+        (current, path) = queue.popleft()
+        
+        if current in visited:
+            continue
+        visited.add(current)
+        
+        if current == goal:
+            return path
+        
+        for neighbor in graph[current]:
+            if neighbor not in visited:
+                queue.append((neighbor, path + [neighbor]))
+
+# Using the graph dictionary and BFS function
+path = bfs_path(graph, (0,0), (3,3))
+```
+
+After running this BFS algorithm on the constructed graph, the function `bfs_path` will return the shortest path from `(0,0)` to `(3,3)`. Given the direct connections in the maze and the loops formed, the BFS should navigate to:
+```
+(0,0) -> (0,1) -> (1,1) -> (1,2) -> (1,3) -> (2,3) -> (3,3)
+```
+
+So, the solution for the maze is:
+```
+<PATH_START> (0,0) (0,1) (1,1) (1,2) (1,3) (2,3) (3,3) <PATH_END>
+```

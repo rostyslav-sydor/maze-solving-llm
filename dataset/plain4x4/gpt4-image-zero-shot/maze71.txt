@@ -1,0 +1,13 @@
+To solve the maze from entry point (0,0) to exit point (3,3), we can navigate through the maze by avoiding the walls and finding a route that connects these points. Analyzing the image:
+
+1. Start at (0,0). Only possible move is to the right.
+2. Move to (0,1). Move right again.
+3. At (0,2), move down to (1,2).
+4. From (1,2), move down to (2,2).
+5. Now at (2,2), the right pathway to (2,3) is unblocked.
+6. Proceed right to (2,3). Now move down to reach towards the exit.
+7. At (3,3), the exit point is reached.
+
+Thus, the path to navigate through the maze without hitting walls comprises of these sequential moves:
+
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (2,2) (2,3) (3,3) <PATH_END>

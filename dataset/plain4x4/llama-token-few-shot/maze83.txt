@@ -1,0 +1,15 @@
+Here are the solutions to the three mazes you provided:
+
+Maze 1:
+
+Solution: <PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (2,1) (2,2) (3,2) (3,3) <PATH_END>
+
+Maze 2:
+
+Solution: <PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (3,2) (3,3) <PATH_END>
+
+Maze 3:
+
+Solution: <PATH_START> (0,0) (1,0) (1,1) (1,2) (2,2) (2,3) (3,3) <PATH_END>
+
+In each case, the solution is a list of coordinates (row, column) that represents the shortest path from the starting point to the ending point. The starting point is marked with <ORIGIN_START>, and the ending point is marked with <TARGET_END>. The coordinates are listed in the order in which they should be visited, with the first coordinate being the row and the second coordinate being the column.

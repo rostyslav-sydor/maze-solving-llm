@@ -1,0 +1,13 @@
+Starting from the origin at (0,0) and aiming for the destination at (3,3), we will apply a BFS (Breadth-First Search) algorithm to trace the shortest path through the maze, given the adjacency representation. The BFS considers all immediate neighbors of a node, ensuring no cycles due to the nature of the algorithm, until all possible paths are explored, marking each node as visited once processed.
+
+Following through nodes step-by-step:
+1. From (0,0), it can go to (0,1).
+2. From (0,1), it can go to (0,2).
+3. From (0,2), it branches to (0,3).
+4. Continue from (0,3) to (1,3).
+5. From (1,3), proceed to (2,3).
+6. Following up from (2,3) to (3,3).
+
+This path was determined upon constructing a BFS tree, where we trace each level based on position proximity. Here's the path laid out from start to target:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>

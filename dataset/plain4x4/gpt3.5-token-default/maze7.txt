@@ -1,0 +1,5 @@
+The solution for this maze is as follows:
+
+<PATH_START> (0,0) (1,0) (1,1) (0,1) (0,2) (1,2) (1,3) (2,3) (3,3) <PATH_END>
+
+This path starts at (0,0) and follows the adjacency list edges until reaching the target point at (3,3). The path moves from one coordinate to the next in the maze until reaching the end point. The solution navigates through the maze using the edges specified in the adjacency list and avoids any obstacles or dead ends. The coordinates provided represent the optimal path to reach the target point from the origin point.

@@ -1,0 +1,13 @@
+To find the solution for the maze, we start at the entry point (0,0) and check possible paths. We need to avoid walls and find a clear route to the exit (3,3).
+
+Starting from (0,0), there are walls to the right and bottom, so the only valid move is to go down to (1,0). From (1,0), we can only go down again to (2,0) because moving right is blocked by a wall.
+
+Now at (2,0), we move right twice since the path downwards is blocked. So, we proceed to (2,1) and then (2,2).
+
+At (2,2), there's an opening both to the right and downward. However, to reach the exit point which is (3,3), the strategic move is to go down to (3,2).
+
+Lastly, from (3,2), we move right to the exit point (3,3).
+
+Summarizing the path from the start to the end of the maze:
+
+<PATH_START> (0,0) (1,0) (2,0) (2,1) (2,2) (3,2) (3,3) <PATH_END>

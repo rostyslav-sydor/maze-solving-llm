@@ -1,0 +1,2 @@
+<PATH_START> (0,0) (1,0) (2,0) (2,1) (2,2) (2,3) (3,3) <PATH_END>
+The solution is found by tracing the path backwards from the target point to the origin point using a breadth-first search algorithm. This path is considered a straight path with the least number of steps to traverse the given maze from origin to target. The coordinates are represented as (row, column), as per the given adjacency list format.

@@ -1,0 +1,17 @@
+To solve the maze, the adjacency list provided will be translated into a graph. Nodes represent coordinates, and edges represent connections between them. The graph-based format supports the application of search algorithms to find a path from the starting point (origin) to the target (exit). For such a maze, a breadth-first search (BFS) is suitable because it systematically explores neighbor nodes at the present depth prior to moving on to nodes at the next depth level, ensuring the shortest path in an unweighted graph.
+
+Given the starting point (0,0) and the ending point (4,5), BFS will begin at (0,0), exploring all adjacent nodes by following the graph edges, efficiently locating the shortest path without backtracking unnecessarily.
+
+Analyzing the provided adjacency list, we generate the path using BFS:
+
+Starting from (0,0), we move to (1,0), then proceed to (1,1), shifting next to (0,1) because it connects back, giving a cyclic route. However, checking efficiently, we find clearer paths ahead, so we proceed deeper:
+- Continue from (1,1) to (1,2), moving further to (2,2),
+- From (2,2), proceed to (2,3) and keep advancing to (3,3),
+- Then go from (3,3) to (3,4), moving forward to (2,4), then to (1,4) exploring upward connections back, but the essential move would be towards (2,4), moving further to (2,5),
+- Eventually, connecting to (3,5) and finishing the journey to (4,5).
+
+This path ensures that every move is approached with consideration for the shortest and most efficient route, effectively navigating the maze to reach the exit at (4,5).
+
+The identified shortest path from the origin at (0,0) to the target at (4,5) using BFS is as follows:
+
+<PATH_START> (0,0) (1,0) (1,1) (1,2) (2,2) (2,3) (3,3) (3,4) (2,4) (2,5) (3,5) (4,5) <PATH_END>

@@ -1,0 +1,23 @@
+The adjacency list provided clearly details the paths between coordinates in the maze, and the task is to identify a viable route from the entry point (0,0) to the exit point (3,4). 
+
+To solve this maze, one effective approach is a breadth-first search (BFS), which explores all neighboring nodes at the present depth prior to moving on to nodes at the next depth level. This strategy is ideal for finding the shortest path in an unweighted graph like our maze.
+
+The BFS starts at the origin, expanding out through each node's neighbors, marking each as visited and recording the path. Each node keeps track of its predecessor, allowing us to reconstruct the path from the exit back to the origin once we reach the target node.
+
+Following the breadth-first search methodology, let's examine the provided maze:
+
+1. Start at the origin (0,0). Its neighbors are (0,1) and (1,0).
+2. Move to (0,1). Its neighbors include (0,0) and (1,1), but (0,0) is already visited, so only (1,1) is considered.
+3. Proceed likewise through (1,0) to (2,0).
+4. Continue through (2,0) to (2,1).
+5. Expanding out from both (1,1) and (2,1) eventually leads us to connect and explore other coordinates, marking them as visited and recording the paths.
+
+This continues until we connect all possible paths and reach the specified target (3,4), recording the path at each step.
+
+Upon tracing the path from (3,4) back to (0,0), using the predecessor linkage formed during the BFS process, we construct the shortest path solution.
+
+After careful application of BFS and path recording, the specific solution for the maze given in the adjacency list is:
+
+<PATH_START> (0,0) (0,1) (1,1) (1,2) (0,2) (0,3) (0,4) (1,4) (2,4) (3,4) <PATH_END>
+
+This path sequence effectively moves from the start to the end, navigating through permissible moves as defined in the adjacency list.

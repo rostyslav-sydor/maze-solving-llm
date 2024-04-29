@@ -1,0 +1,7 @@
+1. Start at the origin point (0,0) and explore the graph using a pathfinding algorithm like Dijkstra's or A*.
+2. Follow the edges in the graph to navigate through the maze towards the target point (3,3).
+3. Keep track of the path taken from the origin to the target.
+4. Once the target point is reached, output the path taken in the format of coordinate list between <PATH_START> and <PATH_END> tokens.
+5. The solution path could be something like <PATH_START> (0,0) (1,0) (2,0) (2,1) (2,2) (2,3) (3,3) <PATH_END>.
+6. Make sure to avoid revisiting already visited nodes and to choose paths that move closer to the target point.
+7. Continuing this process will lead to finding the optimal path through the maze from the origin to the target.

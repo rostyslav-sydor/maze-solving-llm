@@ -1,0 +1,7 @@
+To solve this maze, we can use a breadth-first search (BFS) algorithm. We start from the origin point (0,0) and add it to a queue. We then loop through the queue, dequeuing each point and adding its unvisited adjacent points to the queue. We continue this process until we reach the target point (3,3).
+
+Once we have found the path from the origin to the target point, we can output it in the format of a coordinate list between <PATH_START> and <PATH_END> tokens. The coordinates in the list should be in the order in which they are visited by the BFS algorithm.
+
+The following is a solution to the maze:
+
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (2,2) (2,3) (3,3) <PATH_END>

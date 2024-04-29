@@ -1,0 +1,7 @@
+1. Start from the entry point (1,1) and move right until you hit a wall.
+2. Then, move down until you hit a wall.
+3. Then, move left until you hit a wall.
+4. Then, move up until you hit a wall.
+5. Repeat steps 2-4 until you reach the exit point (7,7).
+
+The solution is: <PATH_START> (1,1) (1,2) (1,3) (2,3) (3,3) (3,2) (3,1) (4,1) (5,1) (6,1) (6,2) (6,3) (6,4) (6,5) (6,6) (6,7) <PATH_END>

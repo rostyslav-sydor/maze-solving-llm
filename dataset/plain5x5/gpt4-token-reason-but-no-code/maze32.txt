@@ -1,0 +1,16 @@
+To solve the maze, I utilized an algorithm to parse the adjacency list into a graph structure, establishing connections between each coordinate pair. Then, by employing a common graph traversal algorithm, such as Depth-First Search (DFS) or Breadth-First Search (BFS), the algorithm identifies a route from the origin coordinate to the target coordinate. 
+
+For the maze provided:
+1. The origin is (0,0) and the target is (4,4).
+2. The adjacency list comprehensively defines allowed movements between cells encoded as coordinate pairs.
+3. Using BFS, starting from the origin, we explore all possible paths leading outward until we encounter the target.
+
+The BFS was chosen because it efficiently finds the shortest path in an unweighted graph like this one, ensuring the first time we reach the target node, we have found the shortest path.
+
+Applying this approach, the BFS explores neighbors of each node until it reaches the target, keeping track of each parent node. This allows reconstruction of the path from target back to origin once reaching the target.
+
+The resulting path was then converted into the required output format:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (0,4) (1,4) (2,4) (3,4) (4,4) <PATH_END>
+
+This sequence shows the path that traverses along the row 0, reaches the end, then moves down vertically through column 4 to reach the destination (4,4). Each move is ensured to be legal and shortest based on the BFS traversal from the origin to the target.

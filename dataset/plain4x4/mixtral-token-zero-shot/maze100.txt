@@ -1,0 +1,39 @@
+<PATH_START> (0,0)(0,1)(1,1)(1,2)(2,2)(2,3)(3,3) <PATH_END>
+
+It looks like you're trying to find the shortest path through a maze from the origin point to the target point. To do this, you need to analyze the adjacency list of the maze and then list all the coordinates between the origin and target.
+
+Let's first look at the adjacency list:
+
+```text
+(3,2) <--> (3,1)
+(1,1) <--> (1,2)
+(2,1) <--> (2,0)
+(0,3) <--> (0,2)
+(0,0) <--> (0,1)
+(2,3) <--> (2,2)
+(1,0) <--> (2,0)
+(1,3) <--> (1,2)
+(0,1) <--> (1,1)
+(1,0) <--> (0,0)
+(1,3) <--> (2,3)
+(0,1) <--> (0,2)
+(3,1) <--> (2,1)
+(3,2) <--> (3,3)
+(3,0) <--> (3,1)
+```
+
+Now analyze the maze:
+
+Origin point: (0,0)
+Target point: (3,3)
+
+Possible paths to target:
+
+1. (0,0) -> (0,1) -> (1,1) -> (1,2) -> (1,3) -> (2,3) -> (3,3)
+2. (0,0) -> (0,1) -> (1,1) -> (2,1) -> (2,2) -> (3,2) -> (3,3)
+
+Since we want the shortest path, we select the first path with only 6 moves.
+
+Now list all coordinates between Origin and Target:
+
+Starting from Origin, (0,1), (1,1), (1,2), (1,3), (2,3), (3,3)

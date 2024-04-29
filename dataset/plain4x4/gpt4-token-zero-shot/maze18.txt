@@ -1,0 +1,14 @@
+The provided adjacency list includes all connections between cells in the maze. To find a path between the origin (0,0) and the target (3,3), we can use Breadth-First Search (BFS) as it is optimal for finding the shortest path in an unweighted graph like this maze.
+
+Starting from (0,0), explore its neighbor (1,0), then move from (1,0) to explore its neighbors and continue this pattern, marking nodes as visited and storing the path to each node until the target node (3,3) is reached.
+
+1. From (0,0), we can go to (1,0).
+2. From (1,0), either move back to (0,0) (already visited) or go to (2,0).
+3. At (2,0), the options are going back to (1,0) (already visited), move to (3,0), or (2,1).
+4. (3,0) connects back to (2,0), and from (2,1) go to (2,2).
+5. At (2,2), we go further to (3,2) or (2,1); (2,1) is already visited.
+6. From (3,2), either go back to (2,2) or continue to (3,3).
+
+Path: Start from (0,0) to (1,0) to (2,0) to (3,0) to (2,0) to (2,1) to (2,2) to (3,2) to (3,3).
+
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (2,0) (2,1) (2,2) (3,2) (3,3) <PATH_END>

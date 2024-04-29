@@ -1,0 +1,13 @@
+A step by step solution to the maze is as follows:
+
+- Start at the origin (0,0)
+- Move right to (1,0)
+- Move down to (1,1)
+- Move right to (2,1)
+- Move down to (3,1)
+- Move right to (3,2)
+- Move down to (3,3)
+
+The path between the origin and the target is:
+
+<PATH_START> (0,0) (1,0) (1,1) (2,1) (3,1) (3,2) (3,3) <PATH_END>

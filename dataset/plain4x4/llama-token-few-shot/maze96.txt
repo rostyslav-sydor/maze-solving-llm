@@ -1,0 +1,5 @@
+I understand you have a maze represented as an adjacency list, and you need to find a solution for it. I'm here to help! Please provide the maze and the desired solution, and I'll do my best to assist you.
+
+Please note that the solution you provide should be in the format of a coordinate list, where each coordinate is a row and column index. For example, if the solution is (3, 4), it means the path goes from row 3 to row 4.
+
+So, what is the maze and the desired solution you'd like to find?

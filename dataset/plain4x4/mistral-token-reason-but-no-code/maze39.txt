@@ -1,0 +1,41 @@
+To find a solution for this maze, we need to start from the origin point and move through the adjacency list, checking if we can reach the target point. Since this is a graph represented as an adjacency list, we can use a depth-first search (DFS) or breadth-first search (BFS) algorithm to find the shortest path.
+
+Let's use BFS, as it is more efficient for finding the shortest path in a graph. We will start from the origin point and add it to a queue. At each step, we will remove a coordinate from the queue, check if it's the target point, and if not, we will add all its neighbors that haven't been visited yet to the queue.
+
+Here's a step-by-step explanation of the BFS algorithm for this maze:
+
+1. Initialize an empty queue and add the origin point (0,0) to it.
+2. While the queue is not empty:
+	a. Remove a coordinate from the queue and store it in a variable, let's call it current.
+	b. If current is the target point (3,3), we've found the solution, break the loop.
+	c. Otherwise, add all neighbors of current that haven't been visited yet to the queue.
+3. After the loop ends, check if the target point was reached. If so, reconstruct the path by backtracking from the target point to the origin point.
+
+Now, let's apply the BFS algorithm to the given maze:
+
+1. Initialize an empty queue and add the origin point (0,0) to it.
+2. While the queue is not empty:
+	a. Remove a coordinate from the queue: (0,0).
+	b. Since (0,0) is not the target point (3,3), add its neighbors (0,1) and (1,0) to the queue.
+	c. Repeat step 2a with the next coordinate from the queue: (0,1).
+	d. Since (0,1) is not the target point (3,3), add its neighbors (1,1) and (0,2) to the queue.
+	e. Repeat step 2a with the next coordinate from the queue: (1,0).
+	f. Since (1,0) is not the target point (3,3), add its neighbors (2,0) to the queue.
+	g. Repeat step 2a with the next coordinate from the queue: (0,2).
+	h. Since (0,2) is not the target point (3,3), add its neighbors (1,2) to the queue.
+	i. Repeat step 2a with the next coordinate from the queue: (1,1).
+	j. Since (1,1) is not the target point (3,3), add its neighbors (2,1) to the queue.
+	k. Repeat step 2a with the next coordinate from the queue: (2,0).
+	l. Since (2,0) is not the target point (3,3), add its neighbors (3,0) and (1,0) to the queue.
+	m. Repeat step 2a with the next coordinate from the queue: (1,2).
+	n. Since (1,2) is not the target point (3,3), add its neighbors (2,2) to the queue.
+	o. Repeat step 2a with the next coordinate from the queue: (2,1).
+	p. Since (2,1) is not the target point (3,3), add its neighbors (3,1) and (1,1) to the queue.
+	q. Repeat step 2a with the next coordinate from the queue: (2,2).
+	r. Since (2,2) is not the target point (3,3), add its neighbors (3,2) and (1,2) to the queue.
+	s. Repeat step 2a with the next coordinate from the queue: (3,0).
+	t. Since (3,0) is not the target point (3,3), add its neighbors (2,0) to the queue.
+	u. Repeat step 2a with the next coordinate from the queue: (3,1).
+	v. Since (3,1) is not the target point (3,3), add its neighbors (2,1) to the queue.
+	w. Repeat step 2a with the next coordinate from the queue: (2,3).
+	x. Since (2,

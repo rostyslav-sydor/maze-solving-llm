@@ -1,0 +1,16 @@
+To solve the maze provided, start at the entrance (0,0) and explore possible paths step by step, avoiding walls.
+
+From cell (0,0):
+1. Move to (0,1) - no wall obstructing east side.
+2. Continue to (0,2) and (0,3) - the path to the east remains clear.
+3. Move south to (1,3) - heading to the free path downward.
+4. Proceed south again to (2,3).
+5. Head west to (2,2) and then to (2,1) - path west is open from (2,3).
+6. From (2,1), move north to (1,1).
+
+Now, let’s check the possibility to move to the exit:
+7. From (1,1) moving east to (1,2) and then (1,3) - path east is available.
+8. Move south twice, from (1,3) to (2,3) and finally (3,3) reaching the exit.
+
+Formatted solution:
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (2,2) (2,1) (1,1) (1,2) (1,3) (2,3) (3,3) <PATH_END>

@@ -1,0 +1,35 @@
+To solve the maze, we'll manually trace a path from the origin (0,0) to the target (3,3), using a depth-first search approach based on the adjacency list provided.
+
+Starting from (0,0), we can move to:
+- (0,1) using (0,0) <--> (0,1)
+
+From (0,1), we can move to:
+- (1,1) using (1,1) <--> (0,1)
+
+From (1,1), we can move to:
+- (1,0) using (1,1) <--> (1,0)
+- (1,2) using (1,1) <--> (1,2)
+
+Choosing the path to (1,2) as it appears to be more centrally aligned towards the target:
+- (1,2) using (1,1) <--> (1,2)
+
+From (1,2), we proceed to:
+- (2,2) using (2,2) <--> (1,2)
+
+From (2,2), we can move directly to:
+- (3,2) using (3,2) <--> (2,2)
+
+Continuing from (3,2):
+- (3,1) using (3,2) <--> (3,1)
+
+And from (3,1), we can proceed to:
+- (3,0) using (3,1) <--> (3,0)
+- (2,1) using (3,1) <--> (2,1)
+
+However, to get closer to our target (3,3), backtrack to:
+- (3,2), and then go:
+- (3,3) using (3,3) <--> (3,2)
+
+Thus, we have traced the path from the start to the end of the maze:
+
+<PATH_START> (0,0) (0,1) (1,1) (1,2) (2,2) (3,2) (3,3) <PATH_END>

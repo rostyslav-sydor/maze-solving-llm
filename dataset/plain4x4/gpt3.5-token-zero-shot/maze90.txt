@@ -1,0 +1,9 @@
+Starting from the entrance at (0,0), we can navigate through the maze using the provided adjacency list. Moving through the nodes, we can follow a path that leads us to the exit point at (3,3). 
+
+One possible path through the maze is as follows: 
+(0,0) -> (0,1) -> (0,2) -> (0,3) -> (1,3) -> (2,3) -> (3,3)
+
+Therefore, the output in the format of coordinate list between <PATH_START> and <PATH_END> tokens would be:
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>
+
+This path guides us from the entrance to the exit, successfully navigating the maze using the provided adjacency list.

@@ -1,0 +1,15 @@
+To solve the maze represented as an adjacency list between nodes where nodes are coordinate pairs, it's important to understand that the graph consists of connections ("edges") between points in space ("vertices") on a grid. The primary task is finding a path from the origin (entry point) to the target (exit point). In graph terminology, this is finding a path between two nodes.
+
+Given the adjacency list encodes connections directly, this can be translated directly into a graph structure where traditional graph traversal algorithms such as Depth-First Search (DFS) or Breadth-First Search (BFS) can be applied effectively. These algorithms are suitable for unweighted graphs like this, where all edges effectively have the same "cost" or distance between them. BFS is particularly useful in this scenario because it explores all nodes at the present "depth" before moving on to nodes at the next level of depth, thereby efficiently finding the shortest path in an unweighted map.
+
+Using BFS in this context involves:
+1. Starting at the origin node (0,0).
+2. Exploring all connected nodes (neighbors) and marking each visited node to avoid revisits and loops.
+3. Tracking paths using a queue to manage which node to visit next and to keep the path history from the origin to current position.
+4. Continuing exploration until the target node (4,4) is reached.
+
+Upon applying BFS to the maze specified here, the path traced to find the shortest route from (0,0) to (4,4) considering all linked nodes and avoiding revisits to previously visited nodes results in the following path:
+
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (4,1) (4,2) (4,3) (4,4) <PATH_END>
+
+This sequence represents a logical and efficient traversal from top-left to bottom-right of the graph grid, following the available paths encoded in the adjacency list. The chosen path is efficient, leveraging available connections while ensuring each step progresses closer toward the target in terms of grid coordinates.

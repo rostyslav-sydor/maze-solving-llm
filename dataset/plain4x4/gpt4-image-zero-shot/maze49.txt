@@ -1,0 +1,17 @@
+To find our path from the entry (0,0) to the exit (3,3), we observe that the maze has certain blocked cells or paths due to the walls. Let’s analyze possible routes step by step:
+
+1. Starting at (0,0), we can either move right or down. Since (0,1) is blocked, our only option is to move down to (1,0).
+
+2. From (1,0), we can only move to (2,0) because moving right to (1,1) is not accessible.
+
+3. At (2,0), moving further down to (3,0) or left is not viable because of walls, so we move right to (2,1).
+
+4. Now at (2,1), the options are further right to (2,2) which is not blocked.
+
+5. From (2,2), only moving right to (2,3) is possible, since downwards or further right movements are blocked.
+
+6. At (2,3), moving downwards to (3,3) is open and leads directly to the exit.
+
+Thus, the sequence of moves within the maze from start to finish, navigating through open paths while avoiding walls, is as follows:
+
+<PATH_START> (0,0) (1,0) (2,0) (2,1) (2,2) (2,3) (3,3) <PATH_END>

@@ -1,0 +1,17 @@
+ To solve the maze and find the shortest possible path from the start to the end, we can use breadth-first search (BFS) algorithm. I'll perform the BFS, and whenever the target position is reached, I'll output the path it took to achieve that state. Please note that paths are stored in reverse, so the exit point vector will be in the first place. I've marked the breadth-first search grid as a separate matrix because the maze itself won't be modified; only the BFS state will be maintained.
+
+At any step during BFS, if we're at the exit or have an already found path that starts from the exit and leads us to this coordinate, then we've arrived at a correct solution. At that moment, we can return the rest of the path, pointing from the end to the start.
+
+Let's perform BFS:
+
+1. Initialize the grid visited flag to false and initialize two queues for coordinates (one for the regular neighbors, one for the diagonal neighbors). Insert the destination positioning into the visited flag for faster path extraction. Let's call these queues combinedQueue and diagonalQueue.
+2. Let's also mark the start position as visited and add the start to combinedQueue.
+3. While any of the queues is not empty:
+  4. Deque a coordinate from combinedQueue and assign it to the current variable. Mark the current coordinate as visited.
+  5. Add the current coordinates to alreadyFoundPaths map if there is no path leading to the exit point from this coordinate. We will need it to make sure that after we've found one path to this coordinate, we don't process any further 'paths to this coordinate'.
+  6. If the current coordinate has the exit flag set, we've arrived at a solution. In such case:
+    A. We take the first alreadyFoundPath that leads to this current point and assign it to findPath.
+    B. Remove the last coordinate from the findPath, because we want to avoid deleting the current coordinate's value.
+    C. The findPath can now be output. Later, this path will be reversed, and then its vector form can be copied.
+    D. Jump down to step 13 to exit the algorithm.
+  7. Add combinedQueue's neighboring coordinates to the combinedQueue if

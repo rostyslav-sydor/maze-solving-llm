@@ -1,0 +1,13 @@
+So let's try to figure this out step by step. First, we'll need to define a few constraints. Note that we can only proceed to the next point in the maze if there is a path from the previous point to that point.
+
+Next, let's outline a general strategy for solving mazes. We'll use a breadth-first search algorithm, starting from the origin, and progressively adding paths leading from any coordinate that we've arrived at, along with the coordinates we've already visited. As soon as the algorithm encounters the target, we'll reconstruct the corresponding path.
+
+Now let's go through the actual solution:
+
+1. We have the origin and final points, namely (0, 0) and (3, 3), respectively. Let's denote the coordinates we've arrived at as set "coordinates" and initialize it with only the origin point, so coordinates = [(0, 0)]. Let's denote the indices of points from "coordinates" set in the order of their appearance as visitedSetDeque = [0]. Let's denote the queue of indices from "coordinates" set, with which we'll progressively process maze as unvisitedQueue = [0]. Let's also initialize the startingPath containing the indices of the path that we'll add every time we take a new point: startingPath = [0].
+
+2. Let's now obtain possible coordinates to process next: for coordinate = (0, 0) and index = 0 in "coordinates", we can obtain (possibly duplicate) coordinates [(1, 0), (0, 2)] – we'll be processing these coordinates later on.
+
+3. Then, let's obtain the point with index 1 from unvisitedQueue to make a progress. Reconstructing the path from the origin to the point (1, 0), we'll obtain path from the origin to the point (1, 0).
+
+4. Then, let's come back to step (2) and repeat it. Since within our current iteration we've processed the index 1 in the cycled deque visitedSetDeque, next time it will contain only index 0. Moreover, since we've processed one of the points of the origin, we'll remove coordinate (0, 0

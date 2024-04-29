@@ -1,0 +1,9 @@
+<PATH_START> (0,0) (1,0) (1,1) (1,2) (1,3) (0,3) (0,4) (1,4) (2,4) (3,4) (4,4) <PATH_END>
+
+This path begins at the start square `(0, 0)` and moves toward the exit point at the bottom-right corner of the maze.
+
+Initially, the path can only move one square to the right to occupy the coordinate `(0,1)`. The path could also initially move down at the first step but due to the fact that the exit is on the right from the entrance we move right first. 
+
+From  `(0,1)` the path can move either down to get to `(1,1)` or continue traveling right to get to `(0,2)`. We proceed towards the down direction as that gets us closer to the exit.
+
+Following this logic as well as avoiding dead ends, the path eventually reaches the exit point through adjacent cells and without hitting any walls.

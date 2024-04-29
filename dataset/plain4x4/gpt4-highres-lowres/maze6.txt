@@ -1,0 +1,13 @@
+To find the solution to the maze, observe the walls and paths that connect entry point (0,0) to the exit point (3,3):
+
+1. Start at the top left cell (0,0).
+2. The first movement can be to the right to (0,1) since there is no wall blocking the path.
+3. From (0,1), move further right to (0,2).
+4. At (0,2), we can only move vertically downward to (1,2) since the path to the right is blocked by a wall.
+5. From (1,2), move down again to (2,2).
+6. At (2,2), move right to (2,3) as this is the only path open.
+7. Finally, move from (2,3) down to the exit at (3,3).
+
+This gives us the solution:
+
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (2,2) (2,3) (3,3) <PATH_END>

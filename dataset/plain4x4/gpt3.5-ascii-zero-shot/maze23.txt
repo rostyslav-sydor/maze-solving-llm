@@ -1,0 +1,12 @@
+First, let's identify the available paths in the maze. From the entry point (1,1) at S, we can move either right or down. 
+
+We start by moving down, so the first step is (2,1). Then we have the option to either continue down or move right. If we go right, the next step is (2,2). From here, we can continue right to (2,3), and then down to (3,3) and (4,3).
+
+At this point, we have reached a dead end, so we need to backtrack to the previous intersection at (2,2). We can now explore the other path down from (2,2), leading to (3,2) and then (4,2).
+
+Continuing from (4,2), we go right to (4,3) and then down to (5,3) and (6,3). Finally, we move right to (6,4) and (6,5), reaching the exit point at (7,7) marked as E.
+
+The solution path is as follows:
+<PATH_START> (1,1) (2,1) (2,2) (3,2) (4,2) (4,3) (5,3) (6,3) (6,4) (6,5) (7,7) <PATH_END>
+
+This path successfully navigates through the maze from the start to the exit point.

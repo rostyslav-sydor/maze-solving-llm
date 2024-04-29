@@ -1,0 +1,21 @@
+<PATH_START> (0,0) (1,0) (1,1) (1,2) (1,3) (2,3) (3,3) <PATH_END>
+
+
+The given maze has one entry point at (0,0) and one exit at (3,3). We can follow the adjacency list to find the path from the origin to the target, moving only along adjacent vertices. Each vertex is a pair of coordinates (row, col) representing its position in the grid. Our path moves from one adjacent vertex to another until it reaches the target. Here, we denote adjacency with the symbol "->", indicating a path from one adjacent pair to another. The solution is given below, where we start at the origin, move from one vertex to another adjacent one, and end at the target.
+
+<PATH_START>
+Origin: (0,0)
+(0,0) -> (1,0)
+(1,0) -> (1,1)
+(1,1) -> (1,2)
+(1,2) -> (1,3)
+(1,3) -> (2,3)
+(2,3) -> (3,3) 
+Target: (3,3)
+<PATH_END>
+
+The coordinates between <PATH_START> and <PATH_END> indicate the path from the origin to the target.
+
+If you wish to see the shortest possible path from the origin to the target, you can use a graph search algorithm, like Breadth-First Search (BFS), and output the vertices in order as they're explored. Here, I've outlined the straightest path, though this might not be the shortest one possible.
+
+I hope this helps!

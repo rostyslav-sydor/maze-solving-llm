@@ -1,0 +1,10 @@
+<PATH_START> (1,1) (2,1) (3,1) (3,2) (3,3) (4,3) (5,3) (6,3) (6,4) (6,5) (6,6) (7,6) (7,7) <PATH_END>
+
+To solve this maze, start at S located at (1,1). First, explore downwards since the right pathway is blocked:
+- From (1,1), move down to (2,1), and continue down to (3,1).
+- At (3,1), turn right to (3,2) and continue to (3,3).
+- From (3,3), move downwards to (4,3) and continue downward, bypassing possible left turns, reaching (5,3), (6,3).
+- At (6,3), head right, exploring possible pathways: move to (6,4), (6,5), and (6,6).
+- Finally, from (6,6) move down to (7,6) and then right to the exit at (7,7).
+
+The solution path navigates open spaces, optimizing for forward/right movements while meeting dead ends at some left turns and walls. This simple right-hand/on-the-right wall following strategy (keeping the wall on the right-hand side when possible) efficiently explores and finds a pathway without backtracking unnecessarily, reaching the destination at E (7,7).

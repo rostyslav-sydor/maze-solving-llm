@@ -1,0 +1,15 @@
+The adjacency list provided outlines the connectivity of cells in the maze and defines paths without obstacles (walls). Thus, constructing the maze path between the entry at coordinate (0,0) and the exit at (3,3) can be solved by identifying a connected path through nodes in the list.
+
+By carefully tracing these connections:
+
+1. Start at the origin (0,0).
+2. From (0,0) move right to (0,1) based on connection `(0,0) <--> (0,1)`.
+3. Move down from (0,1) to (1,1) following `(0,1) <--> (1,1)`.
+4. Continue down from (1,1) to (2,1) using `(1,1) <--> (2,1)`.
+5. From (2,1) move right to (2,2) as provided by `(2,1) <--> (2,2)`.
+6. Move right again from (2,2 to 3,2) via `(2,2) <--> (3,2)`.
+7. Finally, move down to the destination (3,3) with the link `(3,2) <--> (3,3)`.
+
+Therefore, based on the given list, the path from the origin to the target is:
+
+<PATH_START> (0,0) (0,1) (1,1) (2,1) (2,2) (3,2) (3,3) <PATH_END>

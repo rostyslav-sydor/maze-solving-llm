@@ -1,0 +1,5 @@
+1. The adjacency list represents the maze, with each node representing a cell and edges representing connections between cells.
+2. The entry point is (0,0) and the exit point is (3,3).
+3. To find a solution, we need to find a path from the entry point to the exit point by traversing the edges.
+4. One possible solution is: (0,0) -> (0,1) -> (0,2) -> (1,2) -> (1,3) -> (2,3) -> (3,3).
+5. Therefore, the solution to the maze is: <PATH_START> (0,0) (0,1) (0,2) (1,2) (1,3) (2,3) (3,3) <PATH_END>

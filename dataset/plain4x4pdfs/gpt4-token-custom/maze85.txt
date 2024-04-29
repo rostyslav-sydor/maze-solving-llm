@@ -1,0 +1,33 @@
+To solve the maze problem, I first decode the adjacency list provided into a usable format to represent the graph. Each pairing `(x1, y1) <--> (x2, y2)` indicates that room `(x1, y1)` is directly connected to room `(x2, y2)`. 
+
+The adjacency information is then used to construct a graph where each node represents a coordinate in the maze, and edges represent a path between directly connected nodes. The BFS (Breadth-First Search) algorithm is suitable for finding the shortest path in an unweighted graph like this maze, since BFS explores all of the neighbor nodes at the present depth prior to moving on to nodes at the next depth level.
+
+Here's a step-by-step look at how I approached finding the path from the origin `(0,0)` to the target `(3,3)`:
+
+1. **Graph Construction**: Convert the adjacency information into a graph structure. Each node or vertex in this graph represents a coordinate pair, and each edge represents a direct path between two coordinate pairs.
+
+2. **Algorithm Choice**: Choose BFS for finding the shortest path in the maze due to its unweighted nature. BFS will explore all neighbors from the starting point and continue until it reaches the target, guaranteeing the shortest path due to its level-by-level exploration.
+
+3. **Path Calculation**:
+   - Start BFS from the initial node `(0,0)`.
+   - Queue the initial node and systematically explore its adjacent nodes as per the maze's adjacency list.
+   - For each node, check if it is the target node `(3,3)`. If found, trace back the path from the target to the origin using a predecessor map populated during the BFS.
+   - If not, continue by enqueuing any unvisited neighbors.
+
+4. **Path Validation**: After the path is constructed via BFS, ensuring the path does not cross any walls and adheres to adjacency connections by comparing each step of the path against the adjacency list from the original maze description.
+
+Following is the step-by-step BFS approach executed:
+- **Initialization**: Start BFS from `(0,0)`.
+- **Exploration and Tracing the path**:
+   - Move from `(0,0)` to `(1,0)` using adjacency link.
+   - From `(1,0)` to `(2,0)`.
+   - From `(2,0)` to `(3,0)`.
+   - Then from `(3,0)` to `(3,1)`.
+   - Move upwards to `(3,2)`.
+   - Finally, from `(3,2)` to `(3,3)`.
+
+Thus, using BFS, the shortest path from `(0,0)` to `(3,3)` is found as:
+
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (3,2) (3,3) <PATH_END>
+
+This solution adheres to the given adjacency links and connects the origin to the target without any detours or wall crossings. Each move is valid and directly linked as per the initial adjacency description.

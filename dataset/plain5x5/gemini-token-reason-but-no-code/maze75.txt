@@ -1,0 +1,64 @@
+**Reasoning:**
+
+To solve a maze, one can use Breadth-First Search (BFS) or Depth-First Search (DFS) algorithms. Both algorithms involve iteratively exploring paths from a starting point, marking visited nodes, and searching for a path to the end point.
+
+**BFS:**
+BFS explores all possibilities at each level before moving on to the next level.
+1. Initialize a queue with the starting point.
+2. While the queue is not empty:
+    - Dequeue the first point from the queue.
+    - Mark the point as visited.
+    - If the point is the end point, return the path.
+    - Otherwise, enqueue all unvisited neighbors of the point.
+
+**DFS:**
+DFS explores one path as far as possible before backtracking.
+1. Initialize a stack with the starting point.
+2. While the stack is not empty:
+    - Pop the first point from the stack.
+    - Mark the point as visited.
+    - If the point is the end point, return the path.
+    - Otherwise, push all unvisited neighbors of the point onto the stack.
+
+**Solution for the given maze:**
+
+Using the BFS algorithm, we can find the path as follows:
+
+1. Initialize the queue with (0,0).
+2. Dequeue (0,0) and mark it as visited.
+3. Enqueue (1,0), (0,1), and (1,1).
+4. Dequeue (1,0) and mark it as visited.
+5. Enqueue (2,0).
+6. Dequeue (0,1) and mark it as visited.
+7. Enqueue (1,1).
+8. Dequeue (1,1) and mark it as visited.
+9. Enqueue (2,1).
+10. Dequeue (2,0) and mark it as visited.
+11. Enqueue (3,0).
+12. Dequeue (2,1) and mark it as visited.
+13. Enqueue (3,1) and (1,2).
+14. Dequeue (3,0) and mark it as visited.
+15. Enqueue (4,0).
+16. Dequeue (3,1) and mark it as visited.
+17. Enqueue (4,1).
+18. Dequeue (1,2) and mark it as visited.
+19. Enqueue (2,2).
+20. Dequeue (4,0) and mark it as visited.
+21. Enqueue (3,3).
+22. Dequeue (4,1) and mark it as visited.
+23. Enqueue (3,2).
+24. Dequeue (3,3) and mark it as visited.
+25. Enqueue (4,4).
+26. Dequeue (3,2) and mark it as visited.
+27. Enqueue (2,2).
+28. Dequeue (2,2) and mark it as visited.
+29. Enqueue (2,3).
+30. Dequeue (2,3) and mark it as visited.
+31. Enqueue (3,3).
+32. Dequeue (3,3) and mark it as visited.
+33. Enqueue (4,4).
+34. Dequeue (4,4) and mark it as visited.
+
+Therefore, the path from (0,0) to (4,4) is:
+
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (4,0) (4,1) (4,2) (4,3) (4,4) <PATH_END>

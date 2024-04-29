@@ -1,0 +1,85 @@
+To find the shortest path in the maze from (0,0) to (3,3) from the adjacency list provided, we'll apply a Breadth-First Search (BFS) strategy. First, we construct the graph from the adjacency list, and then search from the origin to the target using BFS which guarantees the shortest path in an unweighted graph.
+
+### Constructing the Graph:
+The given adjacency list indicates the possible moves between cells in the maze:
+
+```
+<ADJLIST_START> 
+(2,1) <--> (1,1) ; (1,1) <--> (1,0) ; (0,2) <--> (1,2) ; (1,2) <--> (1,3) ;
+(2,1) <--> (3,1) ; (3,0) <--> (3,1) ; (0,2) <--> (0,3) ; (1,3) <--> (2,3) ; 
+(1,2) <--> (2,2) ; (1,0) <--> (0,0) ; (2,3) <--> (3,3) ; (0,2) <--> (0,1) ; 
+(3,2) <--> (3,3) ; (3,2) <--> (3,1) ; (3,0) <--> (2,0) ; 
+<ADJLIST_END> 
+```
+
+### Graph Representation in Python:
+For simplicity, we can represent the adjacency list as a dictionary in Python where the key is a node (a tuple representing coordinates) and the value is a list of neighbor nodes.
+
+```python
+graph = {
+    (2,1): [(1,1), (3,1)],
+    (1,1): [(1,0), (2,1)],
+    (0,2): [(1,2), (0,3), (0,1)],
+    (1,2): [(1,3), (0,2), (2,2)],
+    (1,3): [(1,2), (2,3)],
+    (3,1): [(2,1), (3,0), (3,2)],
+    (3,0): [(3,1), (2,0)],
+    (0,3): [(0,2)],
+    (2,3): [(1,3), (3,3)],
+    (1,0): [(1,1), (0,0)],
+    (0,0): [(1,0)],
+    (3,3): [(2,3), (3,2)],
+    (0,1): [(0,2)],
+    (2,2): [(1,2)],
+    (3,2): [(3,3), (3,1)],
+    (2,0): [(3,0)]
+}
+```
+
+### BFS Implementation:
+To find the shortest path using BFS:
+
+1. Initialize a queue and add the origin.
+2. Mark nodes when visited.
+3. When a node's neighbors are checked, map which node led to it (to trace back the path).
+4. Stop when the target is found, and backtrack the path.
+
+### BFS Code:
+```python
+from collections import deque
+
+def bfs(start, target, graph):
+    queue = deque([start])
+    visited = {start}
+    prev = {start: None}
+    
+    while queue:
+        current = queue.popleft()
+        if current == target:
+            break
+        for neighbor in graph[current]:
+            if neighbor not in visited:
+                queue.append(neighbor)
+                visited.add(neighbor)
+                prev[neighbor] = current
+    
+    path = []
+    step = target
+    while step is not None:
+        path.append(step)
+        step = prev[step]
+        
+    return path[::-1]
+
+origin = (0,0)
+target = (3,3)
+path = bfs(origin, target, graph)
+```
+
+### Format the Solution's Output:
+```python
+formatted_path = " ".join(str(node) for node in path)
+print(f"<PATH_START> {formatted_path} <PATH_END>")
+```
+
+The output will be the shortest path in the desired format between `<PATH_START>` and `<PATH_END>`. This Python code illustrates how the BFS works to find the solution for the maze problem based on the adjacency list given.

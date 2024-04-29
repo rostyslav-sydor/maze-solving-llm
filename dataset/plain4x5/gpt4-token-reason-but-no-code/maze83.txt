@@ -1,0 +1,33 @@
+To solve the maze problem represented in the adjacency list, we can use the breadth-first search (BFS) algorithm because it systematically explores the maze’s nodes layer by layer, starting from the specified origin, making it efficient in finding the shortest path through a maze when it exists.
+
+From the adjacency list, the maze’s graph can be visualized by connecting nodes according to listed edges. Each node represents a coordinate in the maze, and each edge connects walkable paths between nodes.
+
+1. **Origin and Target Identification**:
+   - Origin (start point): (0,0)
+   - Target (end point): (3,4)
+
+2. **Graph Representation**:
+   - Nodes are coordinates such as (0,0), (1,1), etc.
+   - Edges are direct paths like (0,0) <--> (0,1), meaning one can move directly between these coordinates.
+
+3. **Algorithm Application**:
+   - Starting from the origin (0,0), using BFS, we explore all neighboring nodes via direct paths.
+   - We continue exploring each node’s neighbors that haven’t been visited yet.
+   - Track the path taken to each node so that once the destination (target) node is found, the path can be traced back to the origin.
+
+4. **Path Extraction**:
+   - Upon reaching the target node using BFS, backtrack using the recorded paths to extract the sequence of moves from origin to destination. 
+
+Here, following BFS for the given maze and noting down paths:
+- Start at (0,0).
+- Explore neighbors: (0,1) via edge, (1,0) via edge.
+- From (0,1), move to (1,1) via edge, backtrack and explore (0,2) via edge.
+- Progressively apply this method, exploring and recording paths until (3,4) is reached.
+- Once the target is reached, backtrack the path recorded, tracing back to (0,0).
+
+Thus, the BFS gives us the shortest path, and by backtracking, we identify the specific sequence of coordinates to follow.
+
+**Solution path for the maze**:
+<PATH_START> (0,0) (0,1) (1,1) (1,2) (0,2) (0,3) (1,3) (1,4) (2,4) (3,4) <PATH_END>
+
+This path represents a continuous, connected route from the maze's origin to its exit, avoiding blocked paths and unnecessary detours, ensuring the shortest possible route is taken as per BFS guarantees.

@@ -1,0 +1,73 @@
+To find the solution to the maze represented in the adjacency list, I will first reconstruct the adjacency graph, identify the entry point (origin) and exit point (target), then use a graph traversal algorithm like Breadth-First Search (BFS) to find the shortest path from the origin to the target.
+
+According to the given data:
+
+### Maze Adjacency List
+```
+<ADJLIST_START> 
+(2,3) <--> (3,3) ; 
+(3,0) <--> (2,0) ; 
+(2,0) <--> (1,0) ; 
+(3,2) <--> (3,3) ; 
+(1,3) <--> (2,3) ; 
+(3,1) <--> (3,2) ; 
+(0,3) <--> (1,3) ; 
+(0,2) <--> (1,2) ; 
+(2,2) <--> (2,3) ; 
+(1,1) <--> (1,2) ; 
+(0,2) <--> (0,1) ; 
+(2,2) <--> (2,1) ; 
+(0,0) <--> (1,0) ; 
+(3,1) <--> (3,0) ; 
+(0,1) <--> (0,0) ; 
+<ADJLIST_END> 
+```
+
+### Entry (Origin) and Exit (Target) Points
+```
+<ORIGIN_START> (0,0) <ORIGIN_END>
+<TARGET_START> (3,3) <TARGET_END>
+```
+
+### Solution Process:
+
+- Convert the adjacency list into a usable graph format.
+- Implement BFS or another pathfinding algorithm to determine the shortest path from (0,0) to (3,3).
+  
+For this specific case:
+
+#### Maze Graph:
+- Constructed from the adjacency list provided.
+
+#### Pathfinding:
+- Starting at (0,0), BFS will explore all possible paths through its neighbors. 
+- By recording each step and ensuring that each cell is visited only once, BFS continues until it reaches the target node (3,3).
+
+### BFS Solution Path Extraction
+Given the way the adjacency list is structured, let’s find the BFS path:
+1. From (0,0), possible moves are to (1,0) and (0,1).
+2. From these, expand further until reaching (3,3) using the connections.
+
+#### Manual Graph Reconstruction:
+- `(0,0)` connects to `(1,0)`, `(0,1)`.
+- `(0,1)` connects to `(0,2)`.
+- `(0,2)` connects to `(1,2)`.
+- `(1,2)` connects to `(1,3)`, `(2,2)`.
+- `(1,3)` connects to `(2,3)`, `(0,3)`.
+- `(2,3)` connects to `(3,3)`.
+- `(3,3)` is also reached from `(3,2)`.
+
+#### Path
+Breaking down the path visually, we find:
+1. Start from (0,0).
+2. Move right to (0,1).
+3. Move right to (0,2).
+4. Move up to (1,2).
+5. Move right to (1,3).
+6. Move up to (2,3).
+7. Move up to (3,3).
+
+This gives the shortest path via BFS:
+```
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (1,3) (2,3) (3,3) <PATH_END>
+```

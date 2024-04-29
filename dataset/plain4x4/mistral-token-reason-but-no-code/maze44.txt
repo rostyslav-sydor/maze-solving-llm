@@ -1,0 +1,18 @@
+To solve the maze, we can use a breadth-first search (BFS) algorithm. The BFS algorithm starts at the origin (0,0) and explores all the neighboring nodes at the present depth before moving on to the nodes at the next depth level. Below are the steps to find a solution for the given maze:
+
+1. Initialize a queue with the origin node (0,0).
+2. Initialize a dictionary to store visited nodes, and set the origin node as visited.
+3. Initialize a dictionary to store the parent node of each node, which will help us reconstruct the path later.
+4. While the queue is not empty:
+   a. Dequeue the first node from the queue.
+   b. For each neighbor of the current node:
+       i. If the neighbor is the target node (3,3), return the path by following the parent dictionary from the target node to the origin node.
+       ii. If the neighbor is not in the visited dictionary, add it to the queue and update its parent in the parent dictionary.
+       iii. Mark the neighbor as visited in the visited dictionary.
+
+By applying the BFS algorithm to the given maze's adjacency list, we get the following path:
+
+<PATH_START>
+(0,0) (0,1) (0,2) (0,3) (1,3) (1,2) (1,1) (1,0) (2,0) (2,1) (2,2) (2,3) (3,3)
+<PATH_END>
+```

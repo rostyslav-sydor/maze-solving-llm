@@ -1,0 +1,47 @@
+To solve the maze, we can use a graph traversal algorithm like Depth-First Search (DFS) or Breadth-First Search (BFS). Since the maze is represented as an adjacency list, we can easily implement either of these algorithms.
+
+Let's use Breadth-First Search (BFS) to find the shortest path from the origin to the target. BFS explores all the neighboring nodes at the current depth before moving on to the nodes at the next depth level. This ensures that we find the shortest path to the target.
+
+Here's the reasoning behind using BFS:
+
+1. Initialize a queue and enqueue the origin node.
+2. While the queue is not empty:
+   a. Dequeue a node from the queue.
+   b. If the dequeued node is the target, we have found the shortest path. Break the loop.
+   c. Otherwise, enqueue all the neighboring nodes of the dequeued node that have not been visited yet.
+   d. Mark the dequeued node as visited.
+3. If the target node is not found, there is no path from the origin to the target.
+
+Now, let's apply BFS to the given maze:
+
+1. Initialize a queue and enqueue the origin node (0, 0).
+2. Dequeue the origin node (0, 0) and enqueue its unvisited neighbors: (1, 0) and (0, 1).
+3. Dequeue (1, 0) and enqueue its unvisited neighbors: (1, 1) and (2, 0).
+4. Dequeue (0, 1) and enqueue its unvisited neighbors: (0, 2) and (1, 1).
+5. Dequeue (1, 1) and enqueue its unvisited neighbors: (1, 2) and (2, 1).
+6. Dequeue (2, 0) and enqueue its unvisited neighbors: (2, 1) and (3, 0).
+7. Dequeue (0, 2) and enqueue its unvisited neighbors: (0, 3) and (1, 2).
+8. Dequeue (1, 2) and enqueue its unvisited neighbors: (1, 3) and (2, 2).
+9. Dequeue (2, 1) and enqueue its unvisited neighbors: (2, 2) and (3, 1).
+10. Dequeue (3, 0) and enqueue its unvisited neighbors: (3, 1).
+11. Dequeue (0, 3) and enqueue its unvisited neighbors: (1, 3).
+12. Dequeue (1, 3) and enqueue its unvisited neighbors: (2, 3).
+13. Dequeue (2, 2) and enqueue its unvisited neighbors: (2, 3) and (3, 2).
+14. Dequeue (3, 1) and enqueue its unvisited neighbors: (3, 2).
+15. Dequeue (2, 3) and enqueue its unvisited neighbors: (3, 3).
+16. Dequeue (3, 2) and enqueue its unvisited neighbors: (3, 3).
+17. Dequeue (3, 3), which is the target node. We have found the shortest path.
+
+Now, let's backtrace the path from the target node to the origin node:
+
+1. Start at the target node (3, 3).
+2. The previous node is (2, 3).
+3. The previous node is (2, 2).
+4. The previous node is (1, 2).
+5. The previous node is (1, 1).
+6. The previous node is (0, 1).
+7. The previous node is (0, 0), which is the origin node.
+
+The shortest path from the origin to the target is:
+
+<PATH_START> (0, 0) (0, 1) (1, 1) (1, 2) (2, 2) (2, 3) (3, 3) <PATH_END>

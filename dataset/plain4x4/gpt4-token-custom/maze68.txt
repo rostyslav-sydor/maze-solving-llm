@@ -1,0 +1,38 @@
+To solve the maze given in the adjacency list format, follow these steps:
+
+1. **Interpret the Adjacency List:**
+   - The adjacency list specifies connections between cells in pairs, implying these pairs are directly reachable from each other without crossing any boundaries.
+
+2. **Construct the Graph:**
+   - Maps each cell (vertex) to its directly connected neighbors.
+  
+3. **Identify Entry and Exit:**
+   - **Origin**: (0,0)
+   - **Target**: (3,3)
+
+4. **Search for the Path:**
+   - Use a graph search algorithm (like BFS - Breadth-First Search) to find a path from (0,0) to (3,3).
+
+5. **BFS Process Explanation:**
+   - Initialize with the start node (0,0), and explore all connected nodes layer by layer.
+   - Continue until the target node (3,3) is reached or all possible paths are explored.
+   - Track parent nodes to reconstruct the path once (3,3) is found.
+
+6. **Reconstruct the Path:**
+   - Starting from the target (3,3), trace back using the parent-child relationship established during BFS until reaching the origin (0,0).
+
+7. **Validate the Path:**
+   - Ensure every step in the path is present in the adjacency list representing valid movements between nodes.
+
+**Result**:
+Starting BFS at (0,0) and exploring connections, we assess movements to reachable cells:
+- Directly from (0,0) to (0,1), then (0,2), (0,3).
+- Each move strictly follows the list of connections, proving valid transitions.
+- From (0,3), neighboring (1,3) is reached. Then move from (1,3) to (2,3) and finally from (2,3) to (3,3).
+
+Final path fitting the criteria and traced using valid transitions is:
+
+<Path_Start> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <Path_End>
+
+**Checking:**
+- Each pair in the path list sequentially matches directly connected pairs in the original adjacency list, signifying no wall crossings and the usage of adjacent cells only.

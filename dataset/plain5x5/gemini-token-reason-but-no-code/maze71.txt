@@ -1,0 +1,15 @@
+First, we need to find a path from the origin to the target token. This can be done using a graph search algorithm, such as depth-first search or breadth-first search. Starting from the origin token, we can recursively explore all adjacent tokens until we reach the target token.
+
+Once we have found a path from the origin token to the target token, we need to convert it into a list of coordinates. This can be done by iterating over the path and extracting the row and column coordinates of each token.
+
+For the given maze, the following path can be found:
+
+```
+(0,0) -> (1,0) -> (2,0) -> (2,1) -> (3,1) -> (3,0) -> (4,0) -> (4,1) -> (4,2) -> (4,3) -> (4,4)
+```
+
+Therefore, the output in the required format is:
+
+```
+<PATH_START> (0,0) (1,0) (2,0) (2,1) (3,1) (3,0) (4,0) (4,1) (4,2) (4,3) (4,4) <PATH_END>
+```

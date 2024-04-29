@@ -1,0 +1,21 @@
+### Depth-first search (DFS):
+
+To find the solution for a maze, one could use the depth-first search algorithm.
+This algorithm starts at the entry point and recursively explores all paths, until it reaches the exit point.
+DFS builds a stack of yet-to-be-explored paths.
+At each step, it pops the top path from the stack and explores the next adjacent, unvisited node.
+If the node is the exit point, the path is valid and we can return it.
+Otherwise, we push the path onto the stack and continue with the search.
+If we reach a dead end, we discard the path and pop the next path from the stack.
+
+### Solution for the maze:
+
+Starting at the entry point (0,0), we push the path [(0,0)] onto the stack.
+Next, we pop the path [(0,0)] from the stack and explore the adjacent, unvisited node (1,0).
+We push the path [(0,0), (1,0)] onto the stack and continue with the search.
+We repeat this process until we reach the exit point (3,3).
+The valid path is [(0,0), (1,0), (1,1), (1,2), (1,3), (2,3), (3,3)].
+
+### Output:
+
+<PATH_START> (0,0) (1,0) (1,1) (1,2) (1,3) (2,3) (3,3) <PATH_END>

@@ -1,0 +1,36 @@
+To find a solution for the given maze, we will use the A* search algorithm, which is an informed search algorithm that uses a heuristic function to guide the search toward the target node. In this case, our heuristic will be the Manhattan distance between the current node and the target node.
+
+Here's the reasoning for using A*:
+
+1. It's a best-first search algorithm, meaning it tries to find the optimal solution by expanding the most promising node first.
+2. It uses a heuristic function to estimate the cost of reaching the goal from the current node. In our case, the Manhattan distance is a good heuristic because it provides a lower bound on the actual cost of reaching the target node.
+3. A* is guaranteed to find the shortest path if the heuristic is admissible (never overestimates the cost) and consistent (monotonic). The Manhattan distance is both admissible and consistent.
+
+Now let's implement the A* search algorithm for the given maze:
+
+1. Start with the origin node (0,0) and add it to the open list.
+2. While the open list is not empty:
+   a. Select the node with the lowest f-score (f = g + h, where g is the cost of reaching the node from the origin, and h is the estimated cost of reaching the target from the node) and remove it from the open list.
+   b. If the selected node is the target node (3,3), then construct the path by backtracking from the target node to the origin node and output the solution between <PATH_START> and <PATH_END> tokens.
+   c. Otherwise, expand the selected node by adding its unvisited neighbors to the open list and update their g, h, and f scores.
+
+Now, let's apply the A* search algorithm to the given maze:
+
+1. Start with the origin node (0,0). Its g-score is 0, and its h-score (Manhattan distance to the target) is 6. So, its f-score is 6.
+2. Select the node with the lowest f-score, which is (0,0). Remove it from the open list. Its neighbors are (0,1) and (1,0).
+3. Expand the selected node (0,0) by adding its unvisited neighbors (0,1) and (1,0) to the open list. Update their g, h, and f scores:
+   - (0,1): g = 1, h = 5, f = 6
+   - (1,0): g = 1, h = 5, f = 6
+4. Select the node with the lowest f-score, which is (0,1). Remove it from the open list. Its neighbors are (0,2) and (1,1).
+5. Expand the selected node (0,1) by adding its unvisited neighbors (0,2) and (1,1) to the open list. Update their g, h, and f scores:
+   - (0,2): g = 2, h = 4, f = 6
+   - (1,1): g = 2, h = 4, f = 6
+6. Select the node with the lowest f-score, which is (1,0). Remove it from the open list. Its neighbors are (1,1) and (2,0).
+7. Expand the selected node (1,0) by adding its unvisited neighbors (1,1) and (2,0) to the open list. Update their g, h, and f scores:
+   - (1,1): g = 2 (already visited), h = 4, f = 6
+   - (2,0): g = 2, h = 5, f = 7
+8. Select the node with the lowest f-score, which is (0,2). Remove it from the open list. Its neighbors are (0,3) and (1,2).
+9. Expand the selected node (0,2) by adding its unvisited neighbors (0,3) and (1,2) to the open list. Update their g, h, and f scores:
+   - (0,3): g = 3, h = 3, f = 6
+   - (1,2): g = 3, h = 3, f = 6
+10. Select the node with the lowest f-score, which is (1,1). Remove it from the open list. Its neighbors are (0,1) (al

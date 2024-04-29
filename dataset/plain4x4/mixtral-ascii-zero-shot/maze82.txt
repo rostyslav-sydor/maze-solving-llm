@@ -1,0 +1,8 @@
+Step 1: Create a list to store the path.
+Step 2: Create a function to find the starting position.
+Step 3: Create a function to find the neighboring cells.
+Step 4: Create a function to recursively search for the exit.
+Step 5: Call the search function with the starting position.
+Step 6: Check if the exit has been found, and if so, return the path.
+Step 7: Print the path between <PATH_START> and <PATH_END> tokens.
+Let's start with step 1.

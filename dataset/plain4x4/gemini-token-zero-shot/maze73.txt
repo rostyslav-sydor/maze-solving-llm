@@ -1,0 +1,16 @@
+1. **Identify starting and ending points**
+
+<PATH_START> (0,0) <PATH_END>
+
+2. **Traverse the maze using a breadth-first search**
+
+Start from the starting point and add it to a queue.
+While the queue is not empty, remove the first element, check its adjacent elements, and add them to the queue if they have not been visited before.
+Repeat until the target point is found.
+
+3. **Backtrack to find the path**
+
+Once the target point is found, backtrack through the parent pointers to find the path taken.
+Start from the target point and follow the parent pointers until the starting point is reached.
+
+<PATH_START> (0,0) (0,1) (1,1) (1,2) (1,3) (2,3) (3,3) <PATH_END>

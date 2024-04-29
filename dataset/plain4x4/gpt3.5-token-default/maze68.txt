@@ -1,0 +1,4 @@
+The solution for the given maze is as follows: 
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (2,2) (3,2) (3,3) <PATH_END>
+
+To reach the target (3,3) from the origin (0,0), the path taken is as listed above. The coordinates represent the rows and columns within the maze, where the path is navigated from one token to another in order to reach the destination. The maze is successfully solved by following the specified path of tokens.

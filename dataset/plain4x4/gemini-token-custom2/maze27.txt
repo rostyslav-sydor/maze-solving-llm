@@ -1,0 +1,13 @@
+Following the graph structure and node connections provided in the adjacency list, and utilizing BFS to guarantee the shortest path in the unweighted graph, we explore and enqueue neighboring nodes of the current node until reaching the target node at (3,3).
+
+1) Move down from (0,0) to (1,0)
+2) Move right from (1,0) to (2,0)
+3) Move down from (2,0) to (3,0)
+4) Move right from (3,0) to (3,1)
+5) Move up from (3,1) to (2,1)
+6) Move right from (2,1) to (2,2)
+7) Move down from (2,2) to (3,2)
+8) Move right from (3,2) to (3,3)
+
+Backtracking from the end point (3,3) by following predecessors, the shortest path in your maze is:
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (2,1) (2,2) (3,2) (3,3) <PATH_END>

@@ -1,0 +1,9 @@
+To solve the maze, we start at the Origin and recursively follow paths until we reach the target. 
+
+For each token, check if the node has an exit token, if not check if there is an unvisited entry token. 
+
+If we reach a dead end where there are no unvisited entry tokens, we backtrack to the last entry token and continue searching from there. Once we reach the target, we output the path taken. 
+
+For the provided maze, the solution is:
+
+<PATH_START> (0,0) (0,1) (1,1) (2,1) (3,1) (3,2) (3,3) <PATH_END>

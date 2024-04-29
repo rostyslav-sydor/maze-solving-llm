@@ -1,0 +1,47 @@
+To solve the maze, we can use a breadth-first search (BFS) algorithm. The BFS algorithm starts at the origin (0,0) and explores all the neighboring nodes before moving on to the next level of neighbors. This ensures that we find the shortest path to the target (3,3).
+
+1. Create a queue to store the nodes to be visited.
+2. Enqueue the origin node (0,0) to the queue.
+3. While the queue is not empty:
+   a. Dequeue a node from the queue and mark it as visited.
+   b. If the node is the target (3,3), we've found the path. Exit the loop.
+   c. Otherwise, enqueue all unvisited neighboring nodes of the current node to the queue.
+4. Trace the path from the target back to the origin by following the parent pointers.
+
+Applying the BFS algorithm to the given maze:
+
+1. Queue: [(0,0)]
+2. Visit (0,0) and enqueue its unvisited neighbors: (1,0), (0,1), (0,2)
+3. Queue: [(1,0), (0,1), (0,2)]
+4. Visit (1,0) and enqueue its unvisited neighbors: (2,0)
+5. Queue: [(0,1), (0,2), (2,0)]
+6. Visit (0,1) and enqueue its unvisited neighbors: (1,1)
+7. Queue: [(0,2), (2,0), (1,1)]
+8. Visit (0,2) and enqueue its unvisited neighbors: --
+9. Queue: [(2,0), (1,1)]
+10. Visit (2,0) and enqueue its unvisited neighbors: (2,1), (3,0)
+11. Queue: [(1,1), (2,1), (3,0)]
+12. Visit (1,1) and enqueue its unvisited neighbors: (1,2), (2,1)
+13. Queue: [(2,1), (3,0), (1,2), (2,1)]
+14. Visit (2,1) and enqueue its unvisited neighbors: (1,1), (2,2), (3,1)
+15. Queue: [(3,0), (1,2), (2,2), (3,1)]
+16. Visit (3,0) and enqueue its unvisited neighbors: (3,1)
+17. Queue: [(1,2), (2,2), (3,1), (3,1)]
+18. Visit (1,2) and enqueue its unvisited neighbors: (1,3)
+19. Queue: [(2,2), (3,1), (1,3)]
+20. Visit (2,2) and enqueue its unvisited neighbors: (2,3)
+21. Queue: [(3,1), (1,3), (2,3)]
+22. Visit (3,1) and enqueue its unvisited neighbors: --
+23. Queue: [(1,3), (2,3)]
+24. Visit (1,3) and enqueue its unvisited neighbors: (0,3), (2,3)
+25. Queue: [(2,3), (0,3)]
+26. Visit (2,3) and enqueue its unvisited neighbors: (3,3)
+27. Queue: [(0,3), (3,3)]
+28. Visit (0,3) and enqueue its unvisited neighbors: --
+29. Queue: [(3,3)]
+30. Visit (3,3), which is the target. We've found the path.
+
+Tracing the path back from the target to the origin:
+(3,3) -> (2,3) -> (1,3) -> (1,2) -> (0,2) -> (0,1) -> (0,0)
+
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (1,3) (2,3) (3,3) <PATH_END>

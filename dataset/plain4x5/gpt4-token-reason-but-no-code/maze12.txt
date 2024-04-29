@@ -1,0 +1,35 @@
+To solve the maze described by the adjacency list, we need to find a path from the entry point `(0,0)` to the exit point `(3,4)`. The adjacency list provides direct connectivity between cells in the maze, suggesting the maze is represented as a grid and each coordinate pair indicates possible movements between the cells.
+
+We can consider this as a problem of graph traversal where each cell in the grid is a node, and the direct connections between cells are the edges. The goal is to find a path through this graph from the starting node to the target node using a suitable graph traversal method like Depth First Search (DFS) or Breadth First Search (BFS). For simplicity and guaranteed shortest path, we'll use BFS in this context since BFS explores all neighbours at the present depth prior to moving on to nodes at the next depth level.
+
+Using BFS, we explore each connected node starting from `(0,0)`, marking nodes as visited and using a queue to track nodes to explore. Each time a node is dequeued, we check if it is the destination node `(3,4)`. If not, we enqueue any of its unvisited connected nodes and continue. The BFS algorithm will allow us to trace back from the destination to the source through the visited nodes to reconstruct the path.
+
+Let's execute BFS based on the given adjacency list:
+
+1. Enqueue the start point `(0,0)`.
+2. Explore and enqueue its connected nodes. From `(0,0)`, you can move to `(0,1)`.
+3. From `(0,1)`, per the adjacency list, you can move to `(0,0)` and `(0,2)`. Ignore `(0,0)` as it is already visited, so enqueue `(0,2)`.
+4. Next dequeuing `(0,2)`, move to `(0,1)` and `(0,3)`. Ignore `(0,1)` (visited), add `(0,3)`.
+5. From `(0,3)`, explore to `(0,2)` and `(0,4)`. Ignore `(0,2)` (visited), add `(0,4)`.
+6. Continue this process, expanding from the dequeued node, marking visited, and enqueuing new nodes as per the adjacency list provided.
+
+Following these steps results in:
+
+- Start at `(0,0)` 
+- To `(0,1)`
+- To `(0,2)`
+- To `(0,3)`
+- To `(0,4)`
+- Cross over to `(1,4)`
+- Step down to `(1,3)`
+- Continue downward to `(1,2)`
+- Move laterally to `(2,2)`
+- Progress to `(2,3)`
+- Move to `(2,4)`
+- Finally reach `(3,4)`
+
+Each step corresponds to a BFS exploration resulting in the shortest path from entry to exit.
+
+Formatted solution:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (0,4) (1,4) (1,3) (1,2) (2,2) (2,3) (2,4) (3,4) <PATH_END>

@@ -1,0 +1,31 @@
+To solve the maze represented by the adjacency list and find the path from the entry point (0,0) to the exit point (3,3), we need a graph traversal algorithm such as breadth-first search (BFS). The BFS will be implemented using the provided connections in the adjacency list.
+
+Firstly, let's set up the adjacency list based on the provided connections:
+
+- (0,0) connects to (1,0)
+- (1,0) connects to (2,0) and (0,0)
+- (2,0) connects to (3,0) and (1,0)
+- (3,0) connects to (3,1) and (2,0)
+- (0,1) connects to (0,2)
+- (0,2) connects to (1,2) and (0,1)
+- (0,3) connects to (1,3)
+- (1,1) connects to (2,1) and (1,2)
+- (1,2) connects to (1,1) and (1,3) and (0,2)
+- (1,3) connects to (0,3) and (2,3) and (1,2)
+- (2,1) connects to (3,1) and (1,1)
+- (2,2) connects to (2,3)
+- (2,3) connects to (2,2) and (3,3) and (1,3)
+- (3,1) connects to (3,0) and (3,2) and (2,1)
+- (3,2) connects to (3,1) and (3,3)
+- (3,3) connects to (3,2) and (2,3)
+
+Applying BFS starting from (0,0):
+
+- Start at (0,0).
+- From (0,0), the reachable node is (1,0).
+- From (1,0), the reachable nodes are (2,0) and recursively (0,0) which is already visited.
+- This continues till the node (3,3) is reached.
+
+After finishing BFS, backtracking from (3,3) to (0,0) with the path found gives:
+
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (3,2) (3,3) <PATH_END>

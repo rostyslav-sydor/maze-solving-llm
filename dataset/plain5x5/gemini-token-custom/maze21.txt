@@ -1,0 +1,9 @@
+A possible solution is:
+<PATH_START> (0,0) (0,1) (1,1) (2,1) (2,2) (2,3) (3,3) (4,3) (4,4) <PATH_END>
+
+We start at the origin (0,0) and move right to (0,1), then up to (1,1).
+From there, we move right to (2,1), then up to (2,2).
+Next, we move right to (2,3), then up to (3,3).
+Finally, we move right to (4,3) and then up to the target (4,4).
+
+This path does not cross any walls and each step is between adjacent cells, so it is a valid solution.

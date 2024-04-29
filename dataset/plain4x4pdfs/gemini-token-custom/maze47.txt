@@ -1,0 +1,6 @@
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>
+
+Reasoning:
+We can start from the origin (0,0) and move right to (1,0), then down to (1,1), then right to (2,1), then down to (2,2), then right to (3,2), and finally up to (3,3), which is the target.
+
+We can check that this path does not cross any walls by checking that each pair of adjacent coordinates in the path are connected by an edge in the adjacency list. We can also check that the path uses only adjacent cells by checking that the difference between the row coordinates of adjacent coordinates is at most 1 and the difference between the column coordinates of adjacent coordinates is at most 1.

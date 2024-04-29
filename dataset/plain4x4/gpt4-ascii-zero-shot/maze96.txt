@@ -1,0 +1,12 @@
+Based on the ASCII representation of the maze provided in an adjacency list format, we can create a graph that connects various coordinates of the maze. The entry point is (0,0) and the exit point is (3,3), labelled in terms of grid coordinates starting from (0,0).
+
+Here's a breakdown of the connections:
+- (2,3) <-> (1,3); (2,1) <-> (3,1); (3,0) <-> (2,0); (3,2) <-> (3,1); (2,0) <-> (1,0); 
+- (1,0) <-> (0,0); (0,1) <-> (0,2); (2,3) <-> (3,3); (2,1) <-> (1,1); (1,2) <-> (0,2);
+- (1,2) <-> (1,3); (0,0) <-> (0,1); (2,2) <-> (2,3); (0,2) <-> (0,3); (2,2) <-> (3,2).
+
+Starting from (0,0), a Breadth-First Search or Depth-First Search can be used to identify the shortest path to (3,3). Here's a successful path calculated based on adjacency connections ensuring each node is visited appropriately while following the possible paths:
+
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (1,3) (2,3) (3,3) <PATH_END>
+
+This path connects the entrance (0,0) to the exit (3,3) using the allowable moves from the adjacency list. Each tuple represents row and column coordinates in the maze grid.

@@ -1,0 +1,33 @@
+To solve the maze represented by the adjacency list you provided, we can turn the list into an understandable format for pathfinding:
+
+1. Create a graph with connections (edges) as given:
+    - (0,2) <--> (0,1)
+    - (1,2) <--> (1,3)
+    - (2,3) <--> (1,3)
+    - (1,0) <--> (1,1)
+    - (2,1) <--> (2,2)
+    - (2,2) <--> (2,3)
+    - (0,3) <--> (0,2)
+    - (3,2) <--> (3,3)
+    - (1,0) <--> (2,0)
+    - (3,0) <--> (2,0)
+    - (0,2) <--> (1,2)
+    - (0,1) <--> (1,1)
+    - (3,0) <--> (3,1)
+    - (3,1) <--> (3,2)
+    - (1,0) <--> (0,0)
+
+2. Define start (origin) point at (0,0) and target (exit) point at (3,3).
+
+3. Apply a pathfinding algorithm like Breadth-First Search (BFS) or Depth-First Search (DFS) to find a path from the origin to the target.
+
+Following this initialization of the maze:
+
+- Starting from (0,0), observe accessible nodes and move towards the exit. 
+- Possible first moves are to (1,0).
+
+Continue checking for connectivity from each node until the goal (3,3) is reached:
+
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (3,2) (3,3) <PATH_END> 
+
+This path is one of the potentially many solutions, ensured by following each available connection in sequence.

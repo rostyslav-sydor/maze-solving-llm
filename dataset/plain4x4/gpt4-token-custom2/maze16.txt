@@ -1,0 +1,38 @@
+Starting with the origin at (0,0), we'll employ a similar strategy to solve the maze provided, keeping track of visited nodes to prevent revisiting and tracing our path to the destination using BFS. Given the maze data, let's process the adjacency list and execute the BFS.
+
+### Parsing Adjacency List
+
+Given adjacency:
+- (2,1) <--> (1,1)
+- (0,3) <--> (1,3)
+- (2,2) <--> (1,2)
+- (2,0) <--> (3,0)
+- (0,3) <--> (0,2)
+- (3,2) <--> (3,3)
+- (1,0) <--> (1,1)
+- (0,1) <--> (0,2)
+- (3,2) <--> (3,1)
+- (2,2) <--> (2,1)
+- (0,1) <--> (0,0)
+- (3,3) <--> (2,3)
+- (3,1) <--> (3,0)
+- (1,0) <--> (2,0)
+- (2,3) <--> (1,3)
+
+### BFS Algorithm Implementation
+1. **Initialize**: Create a dictionary for the adjacency list, enqueued starting point (0,0), and maintain a `visited` set.
+2. **Exploration**:
+    - If the dequeued node is the target (3,3), backtrack for the path.
+    - Else, continue exploring neighbors not yet visited.
+
+The BFS path seeks:
+- Moving right or down, considering maze constraints.
+
+### Executing BFS for path calculation based on adjacency:
+- Start at (0,0), move right to (0,1) and then to (0,2), move down to (1,2) and (2,2) using adjacency, move right to (2,3) and down to (3,3).
+
+### Constructing the Path:
+On following predecessor links from (3,3) back to the origin:
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (2,2) (2,3) (3,3) <PATH_END>
+
+This ordered list of steps calculates a valid path through the maze using BFS which assures the shortest path, given an unweighted graph model as represented in this adjacency list.

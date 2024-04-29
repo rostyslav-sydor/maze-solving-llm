@@ -1,0 +1,17 @@
+The maze's adjacency list format details the connections between each grid coordinate pair. This maze's origin is at (0,0) and the target is at (3,3). Here's the step-by-step solution to navigate through the maze from the origin to the target:
+
+1) Start at the origin (0,0).
+2) Move right to (0,1) via the adjacency (0,0) <--> (0,1).
+3) Continue right to (0,2) via the adjacency (0,2) <--> (0,1).
+4) Move down to (1,2) via the adjacency (0,2) <--> (1,2).
+5) Move right to (1,3) via the adjacency (1,2) <--> (1,3).
+6) Move down to (2,3) via the adjacency (2,3) <--> (1,3).
+7) Finally, move down into the exit at (3,3) via the adjacency (3,3) <--> (2,3).
+
+Thus, the successful path from the origin to the target is: 
+
+<PATH_START> 
+(0,0) (0,1) (0,2) (1,2) (1,3) (2,3) (3,3)
+<PATH_END> 
+
+This sequence directs us through a viable path in the maze from entry to exit based on the connections provided in the adjacency list.

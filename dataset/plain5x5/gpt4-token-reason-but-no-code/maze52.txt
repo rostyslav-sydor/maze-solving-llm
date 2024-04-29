@@ -1,0 +1,27 @@
+To solve the maze presented as an adjacency list, we can leverage a pathfinding algorithm such as Depth-First Search (DFS) or Breadth-First Search (BFS). Given the structured adjacency list, BFS is suitable since it can efficiently find the shortest path in an unweighted graph like this one by exploring the maze level by level.
+
+**Reasoning with Breadth-First Search (BFS):**
+- **Initialization:** Start from the origin point (0,0) and aim for the target point (4,4).
+- **Process:** Explore all possible moves at each step by referencing the adjacency list, marking visited nodes to avoid cycles, and queue the next steps.
+- **Propagation:** At each step, moves are made according to connections in the adjacency list. If a neighboring node has not been visited, it's added to the queue of nodes to be visited.
+- **Completion:** The search is halted once the target (4,4) is reached. Since BFS is used, the first time it finds (4,4), it guarantees the shortest path in an unweighted grid.
+
+**Algorithm Execution & Forming the Path:**
+Starting from the entry point (0,0), using BFS to find the shortest path to (4,4), the process happens as follow (simplified):
+
+1. Start at (0,0) -> Adjacent nodes are (1,0)
+2. Then from (1,0) -> Adjacent nodes include (0,0) (already visited), (1,1)
+3. From (1,1) -> Adjacent nodes are (1,0) (visited), (0,1), (1,2)
+4. From (1,2) -> Adjacent nodes include (1,1) (visited), (2,2)
+5. From (2,2) -> Adjacent nodes couple with (1,2) (visited), (2,1), (3,2)
+6. From (3,2) -> Adjacent are (2,2) (visited), (3,1), (3,3)
+7. From (3,3) -> Moves to (4,3), (3,4)
+8. From (3,4) -> Moves to (4,4) (Target reached).
+
+**Result:**
+Each step selects moves that progressively reach towards the target node (4,4) from the origin node (0,0), navigating according to the valid paths highlighted in the adjacency list.
+
+**Output Path:**
+<PATH_START> (0,0) (1,0) (1,1) (1,2) (2,2) (3,2) (3,3) (3,4) (4,4) <PATH_END>
+
+Here we see the path emerging via BFS, describing the sequence of the moves from the entry to the exit of the maze as per the adjacency relations given. This movement ensures reaching the destination as efficiently as possible, aligned with the BFS approach that explores nearest frontier nodes first, ensuring the shortest path in an unweighted maze scenario.

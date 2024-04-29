@@ -1,0 +1,33 @@
+We can perform a breadth-first search (BFS) algorithm to find the shortest path from the start point (S) to the end point (E).
+
+In BFS, we start at the start point and explore all connected nodes at the current level before moving to the next level deeper in the graph.
+
+Here are the steps to implement BFS on the given maze:
+
+1. Create a 2D array to represent the maze. Convert the hash signs to empty spaces, 'S' to (1, 1), and 'E' to (7, 7).
+```javascript
+const maze = [
+    ['#', '#', '#', '#', '#', '#', '#', '#', '#'],
+    ['#', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '#'],
+    ['#', '#', '#', '#', '#', ' ', '#', ' ', '#'],
+    ['#', ' ', ' ', '#', ' ', '#', '#', ' ', '#'],
+    ['#', '#', '#', '#', '#', '#', '#', ' ', '#'],
+    ['#', ' ', '#', ' ', ' ', '#', ' ', '#', '#'],
+    ['#', '#', '#', '#', '#', '#', ' ', '#', '#'],
+    ['#', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '#'],
+    ['#', '#', '#', '#', '#', '#', '#', '#', '#'],
+];
+
+maze[0][1] = 'S';
+maze[maze.length - 1][maze[0].length - 2] = 'E';
+```
+2. Define BFS function.
+```javascript
+function bfs(startX, startY, endX, endY, maze) {
+    const queue = [[startX, startY]];
+    const visited = Array(maze.length).fill().map(() => Array(maze[0].length).fill(false));
+    let found = false;
+    const directions = [[0, 1], [0, -1], [1, 0], [-1, 0]];
+
+```
+The BFS function accepts the starting row (startX), starting column (startY), destination row (endX),

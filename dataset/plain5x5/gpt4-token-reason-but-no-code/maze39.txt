@@ -1,0 +1,20 @@
+To solve this maze, I utilized a Breadth-First Search (BFS) algorithm, which is often efficient for finding the shortest path in an unweighted graph, which this maze can be considered as. The BFS explores neighbors of each vertex or node level by level, ensuring the shortest path is found from the origin to the target.
+
+Here's a summarized reasoning of the solution:
+
+1. **Graph Representation**: The maze is represented as an adjacency list showing connections between different points in the maze.
+
+2. **Choice of Algorithm (BFS)**: BFS is selected because it uses a queue to explore each node and its neighbors systematically. Once a node is visited, it is marked, and its unvisited neighbors are added to the queue. This method ensures that the first time we reach the target, we have found the shortest path.
+
+3. **Implementation Details**:
+    - I started from the origin point (0,0).
+    - I used a queue to keep track of nodes to be explored and marked each node as visited to avoid revisiting.
+    - For each node, I stored the path taken to reach there so that once the target is found, the complete path from the origin to the target can be retrieved.
+
+Given the maze input, applying BFS led to the discovery of the shortest path from the origin (0,0) to the target (4,4). The exploration moved systematically through available paths, ensuring that we covered all shortest possible routes before concluding on the actual shortest path.
+
+After determining and validating the paths through the BFS process (omitting intermediate steps and focusing directly on the solution), the path identified from (0,0) to (4,4) is laid out below:
+
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (2,2) (3,2) (4,2) (4,3) (4,4) <PATH_END>
+
+This path connects the origin to the destination with the minimum number of steps, adhering to the connections stipulated in the maze's adjacency list.

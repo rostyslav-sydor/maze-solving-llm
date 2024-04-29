@@ -1,0 +1,64 @@
+To find the solution to the maze, we need to parse the adjacency list provided and calculate the shortest path from the origin to the target using graph traversal techniques such as Breadth-First Search (BFS). Given the adjacency list, the origin (0,0), and the target (3,3), let's simulate the graph traversal to find the solution.
+
+**Adjacency List**:
+- (1,0) <--> (1,1)
+- (1,3) <--> (2,3)
+- (1,2) <--> (1,1)
+- (3,2) <--> (3,1)
+- (1,3) <--> (0,3)
+- (3,0) <--> (2,0)
+- (2,3) <--> (2,2)
+- (0,1) <--> (0,0)
+- (3,2) <--> (3,3)
+- (3,0) <--> (3,1)
+- (2,2) <--> (2,1)
+- (0,2) <--> (0,3)
+- (2,0) <--> (1,0)
+- (0,1) <--> (0,2)
+- (2,3) <--> (3,3)
+
+**Start Point**: (0,0)
+**End Point**: (3,3)
+
+**Constructing the Graph**:
+- From the adjacency list, the graph can be represented as nodes connected by edges. We create a mapping of each node to its neighbors.
+
+**Graph**:
+```plaintext
+(0,0) -> [(0,1)]
+(0,1) -> [(0,0), (0,2)]
+(0,2) -> [(0,1), (0,3)]
+(0,3) -> [(0,2), (1,3)]
+(1,0) -> [(1,1), (2,0)]
+(1,1) -> [(1,0), (1,2)]
+(1,2) -> [(1,1), (1,3)]
+(1,3) -> [(1,2), (0,3), (2,3)]
+(2,0) -> [(3,0), (1,0)]
+(2,1) -> [(2,2)]
+(2,2) -> [(2,1), (2,3)]
+(2,3) -> [(2,2), (1,3), (3,3)]
+(3,0) -> [(3,1), (2,0)]
+(3,1) -> [(3,0), (3,2)]
+(3,2) -> [(3,1), (3,3)]
+(3,3) -> [(3,2), (2,3)]
+```
+
+**Finding Path using BFS**:
+- Begin from start (0,0), explore all connected nodes and keep track of visited nodes and paths.
+- Continue the breadth-first traversal until the target (3,3) is reached.
+
+**Simulation**:
+- Start: (0,0), Queue: [((0,0), [(0,0)])]
+- Visit (0,1), Queue: [((0,1), [(0,0), (0,1)])]
+- Visit (0,2) from (0,1), Queue: [((0,2), [(0,0), (0,1), (0,2)])]
+- Visit (0,3) from (0,2), Queue: [((0,3), [(0,0), (0,1), (0,2), (0,3)])]
+- Visit (1,3) from (0,3), Queue: [((1,3), [(0,0), (0,1), (0,2), (0,3), (1,3)])]
+- Visit (2,3) from (1,3), Queue: [((2,3), [(0,0), (0,1), (0,2), (0,3), (1,3), (2,3)])]
+- Reach (3,3) from (2,3), Path: [(0,0), (0,1), (0,2), (0,3), (1,3), (2,3), (3,3)]
+
+**Solution**:
+```
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>
+```  
+
+Observing the path and maze setup provided, this should correctly simulate finding the solution path using a BFS method based on the given adjacency list.

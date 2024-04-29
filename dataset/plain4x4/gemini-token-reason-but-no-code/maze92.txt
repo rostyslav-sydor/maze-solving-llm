@@ -1,0 +1,13 @@
+We can start from the <ORIGIN_START/END> tokens and perform a depth first search (DFS).
+We can keep a stack of tokens that we have visited to track our path.
+We can also keep a set of tokens that we have already visited to avoid revisiting them.
+Once we reach the <TARGET_START/END> tokens, we can print out the path from the stack.
+
+For the given maze:
+
+We start from (0, 0) and add it to both the stack of visited tokens and set of visited tokens
+Our stack will be [(0,0)]
+Next we move to (1, 0) and add to our stack and set: [(0,0) (1, 0)]
+We then move to (2, 0) and our stack and visited set becomes [(0,0) (1, 0) (2, 0)]
+We continue all the way until we reach (3,3) and the stack and visited set will be [(3, 3) (3, 2) (3, 1) (3, 0) (2, 0) (1, 0) (0, 0)]
+We output the solution: <PATH_START> (3,3) (3,2) (3,1) (3,0) (2,0) (1,0) (0, 0) <PATH_END>

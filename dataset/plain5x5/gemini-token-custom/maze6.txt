@@ -1,0 +1,9 @@
+1. The starting point is (0,0) and the ending point is (4,4).
+
+2. From the starting point, we can go to (1,0) then (2,0) then (3,0) then (4,0).
+
+3. From (4,0), we can go to (4,1) then (4,2) then (4,3) then (4,4).
+
+4. This path does not cross any walls and uses only adjacent cells.
+
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (4,0) (4,1) (4,2) (4,3) (4,4) <PATH_END>

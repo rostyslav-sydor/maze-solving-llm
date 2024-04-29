@@ -1,0 +1,9 @@
+<PATH_START> (1,1) (1,2) (1,3) (1,4) (1,5) (1,6) (1,7) (2,7) (3,7) (3,6) (3,5) (4,5) (5,5) (6,5) (7,5) (7,6) (7,7) <PATH_END>
+
+Explanation:
+1. Start at the entrance represented by 'S' at (1,1).
+2. Navigate rightwards to the eastmost boundary of the first corridor since no south paths exist until reaching coordinate (1,7).
+3. Move downwards into the second corridor (2,7).
+4. Continue down to (3,7). Move left in this corridor until reaching the western opening at (3,5).
+5. Head south through the vertical corridor until (7,5). The walls prevent moving south any earlier.
+6. After reaching (7,5), the exit at 'E' is a short eastward path away. Move to (7,6) and finally (7,7) to exit the maze.

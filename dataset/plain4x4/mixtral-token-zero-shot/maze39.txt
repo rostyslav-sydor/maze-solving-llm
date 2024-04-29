@@ -1,0 +1,25 @@
+Here's a step-by-step process to find a solution for the given maze:
+
+1. Parse the maze representation: Extract all the edges and vertices, mark the entry and exit points.
+2. Use a graph algorithm such as depth-first search (DFS) or breadth-first search (BFS) to find a path from origin to target.
+3. If using DFS, always consider the farthest unexplored node in your path to find the solution faster.
+4. If using BFS, keep expanding the path until the target is found, while maintaining an optimal solution.
+5. Traceback the path from the target to the origin once you find the solution, and store row and column coordinates in a list.
+6. Output the coordinate list between <PATH_START> and <PATH_END> tokens.
+
+For a simple implementation, I'll use BFS:
+
+1. Create a queue of adjacent vertices.
+2. Enqueue the origin point and add it to a set of visited vertices.
+3. While the queue is not empty:
+	 a. Dequeue a vertex (current_v) and remove it from the queue.
+	 b. For each adjacent vertex (v) which is not yet visited:
+		 i. Add it to the queue.
+		 ii. Add it to the set of visited vertices.
+		 iii. Set its distance (distance[v]) as distance[current_v] + 1.
+		 iv. Set its predecessor (pre[v]) as current_v.
+4. Assuming the target point was found in the visited set, follow the predecessors from the target to the origin to get the route, and add these points to the solution list.
+5. Output the solution list as a coordinate list between <PATH_START> and <PATH_END> tokens.
+
+Here's how the solution list could look like (assuming we found a solution):
+<PATH_START> (0,0) (0,1) (1,1) (2,1) (2,2) (2,3) (3,3) <PATH_END>

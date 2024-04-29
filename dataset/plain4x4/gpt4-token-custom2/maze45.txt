@@ -1,0 +1,15 @@
+Starting from the origin at (0,0), we will use a breadth-first search (BFS) algorithm to explore the path to the destination at (3,3). Using BFS entails exploring all neighbors of a node before moving on to the neighbors of those neighbors. It ensures that once we reach the destination node, the path we traversed is one of the shortest possible, given the maze is an unweighted graph.
+
+Let's explore the path in detail:
+
+1. Start at (0,0). From there, the available moves are to (0,1) and (1,0).
+2. Move to (0,1). From there, the next moves are to (0,0) and (0,2).
+3. Move to (0,2). Continuing the path to (0,3) is possible.
+4. From (0,3), move to (1,3). We continue our path to adjacent nodes (2,3).
+5. From (2,3), take another move to (3,3), the exit.
+
+With consideration of the adjacency list's connections, the above path is a valid solution given that each coordinate move is connected to an adjacent available move as described. Tracing back the steps we took using BFS:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>
+
+This represents a valid path from the entry to the exit of the maze following the shortest route according to the BFS used in this undirected graph.

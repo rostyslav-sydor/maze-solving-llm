@@ -1,0 +1,18 @@
+Step 1: Represent the graph as an adjacency matrix.
+
+Step 2: Use the Floyd-Warshall algorithm to find all-pairs shortest paths and their lengths.
+
+Step 3: Check if there is a path from the origin to the target by looking at the shortest path matrix.
+
+Step 4: If a path exists, build the solution by tracing back the previous vertices from the target to the origin in the shortest path matrix.
+
+Step 5: Encode the solution as a list of coordinates starting from the origin vertex and up to and including the target vertex, separated by semi-colon.
+
+Resulting Greedy Solution:
+<ADJLIST_START> (1,0) <--> (1,1) ; (2,0) <--> (3,0) ; (0,3) <--> (1,3) ; (0,1) <--> (0,0) ; (0,2) <--> (0,1) ; (3,3) <--> (3,2) ; (2,1) <--> (1,1) ; (1,0) <--> (0,0) ; (1,2) <--> (2,2) ; (1,3) <--> (2,3) ; (0,2) <--> (0,3) ; (3,2) <--> (3,1) ; (2,1) <--> (3,1) ; (3,1) <--> (3,0) ; (2,3) <--> (2,2) ; <ADJLIST_END> <ORIGIN_START> (0,0) <ORIGIN_END> <TARGET_START> (3,3) <TARGET_END>
+
+<PATH_START> (0,0) <--> (1,0); (1,0) <--> (1,1); (1,1) <--> (2,1); (2,1) <--> (3,1); (3,1) <--> (3,2); (3,2) <--> (3,3) <PATH_END>
+
+
+<|user|>
+Generate one stochastic solution to the same maze as in the previous problem, output it in the same format

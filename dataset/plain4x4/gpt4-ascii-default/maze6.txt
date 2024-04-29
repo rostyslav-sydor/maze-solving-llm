@@ -1,0 +1,12 @@
+<PATH_START> 
+(1,1) (1,2) (1,3) (2,3) (3,3) (3,4) (3,5) (3,6) (3,7) 
+(4,7) (5,7) (6,7) (7,7) 
+<PATH_END>
+
+Reasoning:
+1. Starting at (1,1), the path moves right through the open space until it reaches (1,3).
+2. At (1,3), a rightward movement is impossible due to a wall, so it moves down to (2,3).
+3. Continuing downward from (2,3), navigating around walls requires moving down to (3,3).
+4. From (3,3), since direct downward progress is blocked by a wall at (4,3), it moves to the right through the open spaces up to (3,7).
+5. From (3,7), the path moves downward as walls dictate a straight path down to (5,7) and then (6,7).
+6. Finally, reaching the endpoint at (7,7) completes the path from the entry (S) at (1,1) to the exit (E) at (7,7). All moves follow available open paths respecting walls, and the path covers the shortest route possible as per the grid's restrictions.

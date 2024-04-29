@@ -1,0 +1,5 @@
+We will use a Breadth First Search (BFS) algorithm to find the shortest path between the two points in the maze.
+The BFS algorithm is an efficient way to find the shortest path between two vertices in a graph by exploring adjacent vertices at every level of the search.
+Starting with the origin position, we explore all of its adjacent nodes, then the adjacent nodes of those nodes, and so on, until we reach the target position. 
+We keep track of the path taken by storing the coordinates of each node in the path. 
+Once the target position is reached, we have a list of coordinates of the shortest path and can output it in the desired format.

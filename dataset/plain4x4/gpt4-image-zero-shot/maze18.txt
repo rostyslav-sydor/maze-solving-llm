@@ -1,0 +1,14 @@
+To solve this maze, we begin at the start point (0,0) and navigate through the cells while avoiding walls, heading towards the exit point (3,3). Here’s the logical path:
+
+1. Starting at (0,0), the right side (east) is open, so move to (0,1).
+2. From (0,1), the only open path is down (south) to (1,1).
+3. At (1,1), moving right (east) to (1,2) is allowed.
+4. From (1,2), continue right (east) to (1,3).
+5. Moving down from (1,3) to (2,3).
+6. From (2,3), move down again to (3,3), which is the exit.
+
+Mapping these movements, the path is:
+
+<PATH_START> (0,0) (0,1) (1,1) (1,2) (1,3) (2,3) (3,3) <PATH_END>
+
+This sequence avoids all walls and successfully leads from the entry to exit of the maze.

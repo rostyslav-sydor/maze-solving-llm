@@ -1,0 +1,15 @@
+Given the provided maze represented as a graph adjacency list, we can use an algorithm such as Dijkstra's shortest path finding algorithm, a depth-first search or a breadth-first search to find the solution from the origin point to the target point:
+
+For simplicity, I'll choose Dijkstra's algorithm, using the Manhattan distance (coordinate difference) as the approximate distance estimate for each point in the maze grid:
+
+1. Construct a priority queue (heap) to store the nodes, using the estimated Manhattan distance to the target as the priority order.
+2. Initialize the distance of the origin point to 0 and enqueue it into the priority queue.
+3. Dequeue the node with minimum distance from the priority queue, and examine all its valid neighbors (adjacent nodes not visited before with legal grid coordinates).
+4. For each valid neighbor, compute its "distance from the source" as well as its distance estimate to the target. Enqueue them and update the estimated distance if the newly computed distance is shorter.
+5. Continue this process until the current dequeued node is the target point. Trace back the path from target to origin, using the node's previously visited node, as stored in a predecessor map, to retrieve the solution path.
+
+Respecting the required limit, this is the final solution path, in the output format of a coordinate list:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>
+
+The above path goes from the origin, (0,0), toward the target, (3,3). It took roughly 186 words to explain the structure of the solution.

@@ -1,0 +1,33 @@
+ To solve the maze represented as an adjacency list, we can approach it using a simple graph traversal algorithm like depth-first search (DFS).
+
+First, let's adapt the given representation:
+
+<ADJLIST_START>
+(0,2) -> (0,1);
+(2,3) -> (1,3);
+(3,2) -> (3,1);
+(2,3) -> (2,2);
+(1,1) -> (1,2);
+(0,3) -> (0,2);
+(1,1) -> (1,0);
+(1,0) -> (2,0);
+(0,1) -> (0,0);
+(2,2) -> (2,1);
+(1,0) -> (0,0);
+(3,0) -> (3,1);
+(3,2) -> (3,3);
+(1,3) -> (1,2);
+(2,0) -> (3,0);
+</ADJLIST_END>
+
+1. We start at the origin point: (0,0)
+2. Apply a depth-first search algorithm:
+   a. All available edges are shown in the adjacency list, we cannot move diagonally. So, check for (0,1), (1,0), (1,1), and (0,1).
+   b. Starting with (0,1), the neighbor is (0,2), which we haven't visited yet. So, mark (0,2) as visited and add it to our path.
+   c. From (0,2), the next neighbor is (0,3), which hasn't been visited. Add (0,3) to the path.
+   d. Similar steps would apply for (1,1), (2,1), and (3,1). However, one edge, (1,1) -> (1,2), will lead us to a dead-end. When this happens, backtrack and choose a different neighbor until you reach the target (3,3).
+
+3. After iterating and building a path, we will find the solution from origin to target:
+
+<PATH_START>
+(0,0) -> (0,1) -> (0

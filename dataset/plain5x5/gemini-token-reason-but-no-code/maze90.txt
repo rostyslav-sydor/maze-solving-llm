@@ -1,0 +1,8 @@
+Breadth first search algorithm will find the shortest path between two points in a maze, by exploring every adjacent cell until the target is reached.
+
+**Reasoning:**
+* Graph represented in adjacency list format is very efficient for storing maze representation, because every node in the graph is represented only once, and it is possible to store only edges that exist.
+* Breadth first search guarantees to find the shortest path from starting point to any other point in the maze. This is true, because for any given path from starting point to any point in the maze, there exists the same length of path in a breadth first search exploration, because there cannot be a path with smaller length in a maze, because of obstacles in the maze.
+
+**Solution:**
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (0,4) (1,4) (2,4) (3,4) (3,3) (3,2) (4,2) (4,3) (4,4) <PATH_END>

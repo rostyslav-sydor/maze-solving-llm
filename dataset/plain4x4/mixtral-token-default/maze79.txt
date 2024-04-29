@@ -1,0 +1,15 @@
+To solve the maze, we need to find the path starting from the origin (0,0) and reaching the target (3,3). Since we need to limit the answer size, we cannot write the detailed solution here. Instead, I will guide you through the maze, and you should be able to reproduce the path by following these steps:
+
+1. Start at (0,0)
+2. Move right towards (0,1)
+3. Move up towards (1,1)
+4. Move right towards (1,2)
+5. Move down towards (1,1)
+6. Move right towards (1,2)
+7. Move down towards (2,2)
+8. Move right towards (2,3)
+9. Move down towards (3,3), which is the target
+
+By following these steps, you should get the path:
+
+<PATH_START> (0,0) (0,1) (1,1) (1,2) (1,1) (1,2) (2,2) (2,3) (3,3) <PATH_END>

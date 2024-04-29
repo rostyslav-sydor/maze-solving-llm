@@ -1,0 +1,17 @@
+To solve the maze presented in the adjacency list, we need to find a path from the origin (0,0) to the target (3,3). Based on the adjacency list, we can build the steps to traverse through the maze.
+
+1) Start at (0,0)
+2) Move right to (0,1)
+3) Move right to (0,2)
+4) Move up to (1,2)
+5) Move up to (2,2)
+6) Move down to (3,2)
+7) Move left to (3,1)
+8) Move left to (3,0)
+9) Move up to (2,0)
+10) Move right to (2,1)
+11) Move right to (2,3)
+12) Move down to (3,3), the target point
+
+Here is the list of coordinates forming the path from the origin to the destination:
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (2,2) (3,2) (3,1) (3,0) (2,0) (2,1) (2,3) (3,3) <PATH_END>

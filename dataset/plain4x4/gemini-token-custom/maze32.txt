@@ -1,0 +1,21 @@
+<PATH_START> (0,0) 
+(0,1) (0,2) (0,3)   
+(1,3) (2,3) 
+(2,2) (2,1) 
+(2,0)  (3,0)
+ (3,1) (3,2) (3,3) <PATH_END>
+
+
+ **Explanation:**
+
+Starting the exploration process with BFS and using the breadthfirst search strategy we move level-by-level from (0,0) until all nodes are visited or the target position is not met. The process consists of the two steps which are repeated level-by-level, and the level number defines the distance to the starting position:
+
+
+
+ 1. At each position where exploration was not made (marked `unseen`), all adjacent points (i.e. having distance to this position equal 1) are stored (marked `queue`) until all adjacent elements of level-by-level are not stored to the priority queue.
+ 2. At each position stored by the priority queue in (1), the adjacent positions not belonging to level-by-level or `wall/obstacle(not marked as unseen/seen/target)` are stored, as they are part of next level-by-level and marked them `seen` if and not already `unseen/seen-target' and the corresponding node of this position becomes parent and is updated accordingly. This way all next `unseen` points which are at one unit higher-level-by-level can be stored, so we can iterate over next level of exploration.
+
+
+ If in some point the target is `seen`, there will be a parent to start to trace back the way from target position to initial position in which all the cells will belong a minimum path that connects target with origin and will have minimum distance as the exploration is breadth and at all time it will take minimum distance as we only store new unexplored adjacent positions.
+
+ The final path is: [ (0, 0), (0, 1), (0, 2), (0, 3), (1, 3), (2, 3), (2, 2), (2, 1), (2, 0), (3, 0), (3, 1), (3, 2), (3, 3) ]  and it does not cross any obstacles in the way or uses non adjacent path, which can easily be validated as we move in row (row +1 , row-1 ) and columns ( column +/- 1) of the coordinates for adjacent path in the maze and there were no obstacles at the path

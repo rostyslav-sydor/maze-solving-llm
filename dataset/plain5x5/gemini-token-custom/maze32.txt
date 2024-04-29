@@ -1,0 +1,21 @@
+**Solution:**
+
+<PATH_START> (0,0) (1,0) (1,1) (2,1) (2,2) (3,2) (3,3) (4,3) (4,4) <PATH_END>
+
+**Reasoning:**
+
+1. Start at the <ORIGIN_START> token (0,0).
+2. Move down to coordinate (1,0).
+3. Move right to coordinate (1,1).
+4. Move down to coordinate (2,1).
+5. Move right to coordinate (2,2).
+6. Move down to coordinate (3,2).
+7. Move right to coordinate (3,3).
+8. Move down to coordinate (4,3).
+9. Move right to the <TARGET_END> token (4,4).
+
+**Verification:**
+
+* The path does not cross any walls, as it only moves between adjacent cells.
+* The path uses only adjacent cells, as it moves either right or down at each step.
+* The path starts at the <ORIGIN_START> token and ends at the <TARGET_END> token.

@@ -1,0 +1,42 @@
+ To solve the maze and output the solution in the desired format, we need to perform a graph search algorithm such as depth-first search (DFS) or breadth-first search (BFS). Since the adjacency list representation is already given, we can use BFS to find the shortest path from the origin to the target while respecting the connection constraints:
+
+1. Store the vertex-edge pairs in a list or an array to facilitate easy access and parsing:
+   adj_list = [(2,1) <--> (1,1), (1,1) <--> (1,0), ..., (3,0) <--> (2,0)]
+
+2. Define the origin and target points as separate vertices (list or array):
+    origin_point = (0,0)
+    target_point = (3,3)
+
+3. Create a visited array to ensure we don't visit the same vertex twice while searching the maze in BFS:
+    visited = {}
+    for vertex in adj_list.vertices:
+        visited[vertex] = False
+    visited[origin_point] = True
+
+4. Utilize a queue data structure to store the vertices we've visited:
+    queue = []
+    queue.append(origin_point)
+
+5. Start the BFS search algorithm:
+    while queue is not empty:
+        a. Pop the front vertex from the queue:
+            vertex = queue.popleft()
+            if vertex != target_point:
+                continue
+            else:
+                # When we find the target vertex, extract and print the path in the required format
+                path = []
+                while vertex != origin_point:
+                    for edge in adj_list:
+                        if edge.start == vertex:
+                            path.append((vertex.location))
+                            vertex = edge.end
+                            break
+                path.append((origin_point.location))
+                path.reverse()
+                print(f"<PATH_START>{' '.join(path)}<PATH_END>")
+                break
+
+        b. Assuming target vertex is not found yet, continue the search:
+            for edge in adj_list:
+                if edge.start == vertex and visited[edge.end] == False

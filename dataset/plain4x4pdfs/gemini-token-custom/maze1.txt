@@ -1,0 +1,6 @@
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (2,1) (2,2) (2,3) (1,3) (0,3) <PATH_END>
+
+We start from the origin (0,0) and follow the path until we reach the target (3,3).
+- We first move to (1,0), then (2,0), (3,0), (3,1), (2,1), (2,2), (2,3), (1,3), and finally to (0,3).
+- We can see that each step we take is to an adjacent cell, and we never cross any walls.
+- Therefore, the path we found is a valid solution to the maze.

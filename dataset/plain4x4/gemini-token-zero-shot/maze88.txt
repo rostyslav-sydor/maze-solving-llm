@@ -1,0 +1,8 @@
+1. The maze is represented as an adjacency list, where each node is a tuple representing coordinates and each edge is a connection between two nodes.
+2. The entry and exit points are marked with special tokens <ORIGIN_START/END> and <TARGET_START/END>.
+3. We can use a breadth-first search (BFS) algorithm to find a path from the entry point to the exit point.
+4. The BFS algorithm starts at the entry point and explores all of its adjacent nodes.
+5. It then explores all of the adjacent nodes of the adjacent nodes, and so on, until it reaches the exit point.
+6. The path from the entry point to the exit point can be reconstructed by backtracking from the exit point to the entry point, following the edges that were traversed during the BFS.
+
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (3,2) (3,3) <PATH_END>

@@ -1,0 +1,3 @@
+<Path_Start> (1,1) (2,1) (3,1) (4,1) (5,1) (6,1) (6,2) (6,3) (6,4) (6,5) (5,5) (4,5) (3,5) (3,6) (3,7) (4,7) (5,7) (6,7) <PATH_END> 
+
+This path starts at the entry point (1,1), moves down to reach the bottom wall, then moves right and up to navigate through the maze. It avoids hitting the walls and reaches the exit point at (7,7) successfully. The solution path is enclosed within the <PATH_START> and <PATH_END> tokens as requested.

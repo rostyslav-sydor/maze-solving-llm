@@ -1,0 +1,11 @@
+1. Start from the origin cell (0,0).
+2. Move to the adjacent cell (0,1).
+3. Move to the adjacent cell (1,1).
+4. Move to the adjacent cell (1,2).
+5. Move to the adjacent cell (1,3).
+6. Move to the adjacent cell (2,3).
+7. Move to the adjacent cell (3,3), which is the target cell.
+
+<PATH_START> (0,0) (0,1) (1,1) (1,2) (1,3) (2,3) (3,3) <PATH_END>
+
+The path does not cross any walls and uses only adjacent cells.

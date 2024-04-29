@@ -1,0 +1,15 @@
+<PATH_START> (0,0) (1,0) (1,1) (1,2) (1,3) (0,3) (0,4) (1,4) (2,4) (3,4) (4,4) <PATH_END>
+
+**Reasoning:**
+- We begin at the origin: (0,0).
+- From (0,0) there is only one possible way: down to (1,0), which we take
+- From (1,0) we continue down to (1,1) as that is the only adjacent option available
+- From (1,1) we only can go right to (1,2) because going down leads to a dead-end
+- From (1,2) we can only go right to (1,3) 
+- From (1,3) we can only go down to (0,3) and then right to (0,4)
+- Then we can only go right to (1,4) because going down leads to a dead-end
+- From (1,4) we can only go right to (2,4) then to (3,4) and then to (4,4) which is our target
+
+**Verification:**
+- Every step in the path only moves to an adjacent cell
+- Every step in the path does not cross any walls

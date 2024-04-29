@@ -1,0 +1,50 @@
+```python
+'''
+Your objective is to find a path in a maze represented by the provided adjacency list. 
+Start from the coordinates specified in <ORIGIN_START> and <ORIGIN_END> tokens 
+and reach the coordinates specified in the <TARGET_START> and <TARGET_END> tokens.
+Output the path you find as a list of coordinates between <PATH_START> and <PATH_END> tokens.
+'''
+
+import re
+from collections import deque
+
+def build_map(adjacency_list):
+    lines = adjacency_list.split("; ")
+
+    maze = {}
+    for line in lines:
+        tokens = re.findall(r"\(([0-9,]+)\) <--> \(([0-9,]+)\)", line)
+        if tokens:
+            start, end = tokens[0] # Extract the start and end positions between parentheses
+            start_row, start_col = map(int, start.split(",")) # Split the row and column values for start position
+            end_row, end_col = map(int, end.split(",")) # Split the row and column values for end position
+            if start not in maze:
+                maze[start] = []
+            maze[start].append((end_row, end_col))
+
+    return maze
+
+def find_path(maze, origin, target):
+    queue = deque([(origin, [origin])])
+    visited = set()
+    
+    while queue:
+        current_pos, path = queue.popleft()
+        visited.add(current_pos)
+        
+        if current_pos == target:
+            return path
+        
+        for neighbor in maze[current_pos]:
+            if neighbor not in visited:
+                queue.append((neighbor, path + [neighbor]))
+
+    return None
+
+def format_path(path):
+    path_elements = " ".join(["({}, {})".format(row, col) for row, col in path])
+    return f"<PATH_START> {path_elements} <PATH_END>"
+
+def solve_maze(adjacency_list):
+    maze =

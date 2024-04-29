@@ -1,0 +1,5 @@
+First, we need to navigate through the maze while avoiding walls. One possible solution is to start at (1,1) and move right until reaching the end. Then, move down until reaching the bottom row.
+Start at (1,1) and move right to (1,8), then down to (2,8). 
+Next, move left to (2,3), down to (3,3), right to (3,6), down to (4,6), left to (4,3), down to (5,3), right to (5,8), up to (4,8), right to (4,9), down to (6,9), left to (6,5), down to (7,5), and finally right to (7,7) - the exit point.
+Therefore, the solution would be:
+<PATH_START> (1,1) (1,8) (2,8) (2,3) (3,3) (3,6) (4,6) (4,3) (5,3) (5,8) (4,8) (4,9) (6,9) (6,5) (7,5) (7,7) <PATH_END>

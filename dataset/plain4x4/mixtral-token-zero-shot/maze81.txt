@@ -1,0 +1,28 @@
+ Let's think through finding the shortest path through this maze. 
+
+Here's how: 
+
+1. Obtain the maze as an adjacency list along with its origin and target points. The given maze is represented using adjacency list where each node (e.g. (0,0)) describes the location in the grid with the row number followed by the column number.
+
+2. Create a set to keep track of visited nodes, a priority queue to determine the next possible best step, and a hash map for storing the shortest distance from the origin to all reachable nodes. 
+
+3. Initialize the set of visited nodes as empty, the priority queue with the origin point, and the shortest distance hash map assigning 0 to the origin point. 
+
+4. Iteratively update the state of the tracker data structures as follows:
+
+    - Remove a node from the priority queue with the smallest distance from the origin 
+    - Designate that node as a visited node 
+    - Check the distance between the neighboring nodes and the node if it's not already marked as visited 
+    - If the distance is shorter or nonexisting, update the shortest distance in the hash map and add the neighboring node to the priority queue. 
+
+5. Repeat until a path to the target point is found or all reachable nodes are visited.
+
+6. Extract the accumulated path from the target point up to the origin by following the shortest distances in the hash map.
+
+Here's an example of input and output:
+
+Input MT1:
+<ADJLIST_START> (4,2) <--> (2,4) ; (0,0) <--> (1,0) ; (0,0) <--> (0,1) ; (7,1) <--> (7,0) ; (7,2) <--> (7,1) ; (4,4) <--> (5,4) ; <ORIGIN_START> (0,0) <ORIGIN_END> <TARGET_START> (7,4) <TARGET_END> <ADJLIST_END>
+
+Output MT1:
+<PATH_START> (0,0) (1,0) (7,0) (7,1) (7,2)

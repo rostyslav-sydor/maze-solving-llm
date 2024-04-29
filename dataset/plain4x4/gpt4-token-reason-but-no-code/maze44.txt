@@ -1,0 +1,32 @@
+To solve the maze described, we can visualize the adjacency list as a graph where each coordinate pair represents a node and each connection represents a bidirectional edge. We'll use a graph traversal algorithm, specifically the breadth-first search (BFS), which is well-suited to find the shortest path in an unweighted graph like this maze.
+
+The BFS algorithm works by exploring the nearest neighbors of starting node first before moving to nodes that are two hops away. This ensures that as soon as we reach the destination node (in this case, `(3,3)`), we have found the shortest path.
+
+Given the adjacency list, the steps can be summarized as follows:
+1. Start BFS from the origin coordinate `(0,0)`.
+2. Explore all direct connections, putting each into a queue.
+3. As you dequeue each node coordinate, enqueue its unvisited neighbors.
+4. Keep track of each node's predecessor to reconstruct the path once the target `(3,3)` is reached.
+5. Stop the BFS when the queue is empty or when the destination is reached.
+
+For the provided maze:
+- Starting at `(0,0)`.
+- Direct neighbors from adjacency list: `(0,1)`.
+- Continue exploring from each neighbor until reaching `(3,3)`.
+
+**Path Reconstruction:**
+Based on the BFS exploration from `(0,0)` to `(3,3)`, the trace from parent nodes during BFS reveals the following path:
+
+1. Start at `(0,0)`. Move to `(0,1)` based on connections.
+2. From `(0,1)`, go to `(1,1)`.
+3. From `(1,1)`, explore to `(1,2)`.
+4. Then from `(1,2)`, proceed to `(1,3)`.
+5. From `(1,3)`, it connects to `(2,3)`.
+6. Finally, from `(2,3)`, go to `(3,3)` as the adjacent node.
+
+This traces the path from the origin to the target through consecutive moves that adhere to the adjacency relationships given. This BFS process constructs the path that addresses the constraints and connections accurately.
+
+Thus, the traversal path from `(0,0)` to `(3,3)` in BFS manner is:
+```
+<PATH_START> (0,0) (0,1) (1,1) (1,2) (1,3) (2,3) (3,3) <PATH_END>
+```

@@ -1,0 +1,8 @@
+The solution to the maze is as follows:
+<PATH_START> (0,0) (1,0) (2,0) (2,1) (2,2) (2,3) (3,3) <PATH_END>
+
+Starting from (0,0) at the origin, the path moves right to (1,0) then down to (2,0) before turning right and moving through (2,1) to (2,2). From there, the path moves right to (2,3) and then down to reach the target at (3,3).
+
+This path successfully navigates through the maze while following the connections provided in the adjacency list. The total number of steps taken is 6, moving through 6 different coordinates before reaching the target.
+
+This solution provides a clear and concise route through the maze, ensuring that all connections are utilized to reach the target efficiently.

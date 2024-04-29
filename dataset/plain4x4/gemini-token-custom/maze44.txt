@@ -1,0 +1,5 @@
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>
+
+Starting from the `(0,0)` coordinate, we can move down to `(0,1)` based on the adjacency list provided. From there, we can move right to `(0,2)` and then down again to `(0,3)`. Next, we can move right to `(1,3)` and then up to `(2,3)`. Finally, we can move right to `(3,3)`, which is the target coordinate.
+
+It is important to note that this solution does not cross any walls, as it only uses adjacent cells and does not move through any walls.

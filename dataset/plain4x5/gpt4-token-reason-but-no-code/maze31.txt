@@ -1,0 +1,23 @@
+The adjacency list provided defines the maze as a graph where each node represents a position in the maze, and the edges depict allowable movements from one position to another. The goal is to find a path from the start position (0,0) to the target position (3,4).
+
+Given the maze's configuration as delineated in the adjacency list, a typical approach involves using a breadth-first search (BFS) algorithm due to its efficiency in finding the shortest path in unweighted graphs like this maze, where each step from one node to a neighboring node is unweighted (assumed equal cost or distance).
+
+BFS systematically explores level by level from the source node and uses a queue to keep track of nodes to be explored. On visiting each node, it examines all its adjacent nodes. If an adjacent node has not been visited, it is marked as visited, its parent set (for path reconstruction later), and then enqueued. This continues until all nodes are visited or the target is reached.
+
+Now, implementing BFS on the given graph defined by:
+
+- Start node: (0,0)
+- Target node: (3,4)
+- Edges: [(1,1) <--> (1,0), (0,4) <--> (1,4), ..., (3,1) <--> (2,1)]
+
+We would iterate through the graph, keeping track of each node's visited status and predecessor. The BFS would discover the shortest path by traversing through nodes expanding outwards from the origin (0,0).
+
+Based on the connectivity in the provided adjacency list and the BFS exploration pattern, the path followed from (0,0) to (3,4) can be observed and would be formed as the BFS explores the relevant nodes. 
+
+Since the BFS algorithm finds the shortest path, this path would be:
+(0,0) -> (1,0) -> (1,1) -> (2,1) -> (3,1) -> (3,2) -> (3,3) -> (3,4)
+
+This path is based on how BFS would progress step-by-step from the starting node (0,0) following reachable neighboring nodes until it reaches the target node (3,4), while marking and queueing unvisited neighbors upon visitation.
+
+Therefore, the path from the start to the target in the required format would be:
+<PATH_START> (0,0) (1,0) (1,1) (2,1) (3,1) (3,2) (3,3) (3,4) <PATH_END>

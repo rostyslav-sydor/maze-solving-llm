@@ -1,0 +1,11 @@
+**Reasoning:**
+
+1. Start from the origin point and find all the adjacent points.
+2. For each adjacent point, check if it is the target point.
+3. If it is not the target point, add it to a queue and mark it as visited.
+4. Repeat steps 1-3 until the queue is empty or the target point is found.
+5. If the target point is found, backtrack from the target point to the origin point to obtain the solution path.
+
+**Solution:**
+
+<PATH_START> (4,4) (4,3) (4,2) (3,2) (2,2) (1,2) (0,2) (0,3) (0,4) <PATH_END>

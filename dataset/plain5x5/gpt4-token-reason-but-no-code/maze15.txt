@@ -1,0 +1,21 @@
+To solve the maze provided, we need to navigate from the entry point (0,0) to the exit point (4,4) using the adjacency list, which outlines the possible pathways between various nodes (or coordinates) within the maze.
+
+Using the adjacency list, we can construct a graph where each pair of nodes that are adjacent is connected. Starting from the origin, a Breadth-First Search (BFS) approach is useful here. This method works efficiently for such problems because it explores possible moves stepwise and level by level from the start node until it reaches the target node, guaranteeing the shortest path if one exists.
+
+The BFS approach also ensures that once the shortest path has been found, it terminates, preventing unnecessary exploration of other paths. Utilizing queues to keep track of paths and visited nodes ensures we do not circle back or revisit nodes unnecessarily.
+
+Following this method of traversal from (0,0) to (4,4):
+
+1. Start at node (0,0) and explore its adjacent node, (1,0), also noting its other neighbor (0,1).
+2. From (1,0), explore its neighbor (2,0).
+3. Proceed from (2,0) to (3,0).
+4. From (3,0), move to (4,0).
+5. From (4,0), proceed upward to (4,1) and then to (4,2).
+6. From (4,2), move to (4,3).
+7. Finally, from node (4,3) reach the target (4,4).
+
+Each move is to an adjacent node based on the adjacency list provided, ensuring connectivity. This progressive path ensures reaching the target (4,4) from the origin (0,0) by following valid connected nodes.
+
+This path detailed above is the shortest route, using the BFS strategy from the adjacency list’s connections:
+
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (4,0) (4,1) (4,2) (4,3) (4,4) <PATH_END>

@@ -1,0 +1,36 @@
+To solve the maze with the given adjacency list, we first need to understand the structure in a clearer format by listing out all connections or "paths" between points in a way that respects their spatial relationship. The adjacency list provided already gives us the exact paths between directly connected cells, but it's helpful to visualize these connections on a theoretical grid. 
+
+From the problem statement, we know:
+- Entry point (origin): (0,0)
+- Exit point (target): (4,4)
+
+We can then trace a route from (0,0) to (4,4) using available pathways:
+
+1. Start from the origin (0,0), and look at connections: (0,0) directly connects to (0,1) and (1,0).
+2. From (0,1), move next to (0,2) because it's a direct connection.
+3. Moving from (0,2) to (0,3) is also a direct route following the adjacency list.
+4. From (0,3) we can move to (0,4) because they are connected.
+5. From grid point (0,4), a connection is present directly to (1,4).
+6. From (1,4), following the direct connection, move to (2,4).
+7. Next, (2,4) to (3,4) is a valid move defined by adjacency.
+8. Finally from (3,4), reaching to (4,4) is possible as they are adjacent.
+
+This creates a linear path from the origin to the destination without needing to revisit or loop around any nodes thanks to the clear line of adjacency. The direct path transforms into a list of coordinates starting from the bottom-left corner of the maze (0,0) and ending at the upper right (4,4), following a zigzag-like pattern diagonally upward through the grid.
+
+By following this path we trace:
+- Start at (0,0),
+- go to (0,1),
+- then to (0,2),
+- next go to (0,3),
+- moving to (0,4),
+- up to (1,4),
+- next to (2,4),
+- then (3,4),
+- and finally reaching the target at (4,4).
+
+This movement is completely aligned with the adjacency connections provided and successfully brings you from the entrance to the exit of the maze without any detours.
+
+Now to put this into the desired output format:
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (0,4) (1,4) (2,4) (3,4) (4,4) <PATH_END> 
+
+This lists each move from start to finish, providing a clear solution to the maze challenge.

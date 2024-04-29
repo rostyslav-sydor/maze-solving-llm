@@ -1,0 +1,16 @@
+<PATH_START> (0,0) (1,0) (1,1) (1,2) (1,3) (2,3) (3,3) <PATH_END>
+
+**Reasoning:**
+
+* Start at the origin (0,0).
+* Move right to (1,0).
+* Move up to (1,1).
+* Move right to (1,2).
+* Move right to (1,3).
+* Move down to (2,3).
+* Move right to (3,3).
+
+**Verification:**
+
+* All cells in the path are adjacent.
+* No cell in the path is a wall.

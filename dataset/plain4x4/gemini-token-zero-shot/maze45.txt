@@ -1,0 +1,6 @@
+1. **Extract Adjacency List:** Parse the input to obtain the adjacency list, where each node is represented by its coordinates.
+2. **Identify Entry and Exit Points:** Locate the entry and exit points based on the `<ORIGIN_START>` and `<TARGET_START>` tokens.
+3. **Perform Depth-First Search:** Starting from the entry point, explore the maze by traversing the nodes in the adjacency list recursively until the exit point is reached.
+4. **Backtrack and Record Path:** While exploring the maze, keep track of the path by recording the coordinates of each visited node.
+5. **Validate Solution:** Ensure that the recorded path leads from the entry point to the exit point without any dead ends.
+6. **Output Path:** Convert the recorded coordinates into a sequence of tokens in the format of `<PATH_START>` followed by the coordinates and `<PATH_END>`.

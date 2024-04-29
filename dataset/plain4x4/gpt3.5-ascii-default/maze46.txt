@@ -1,0 +1,3 @@
+<Path_Start> (1,1) (2,1) (3,1) (4,1) (4,2) (4,3) (4,4) (4,5) (4,6) (4,7) (5,7) (6,7) (7,7) <PATH_END> 
+
+This path starts from the entry point S at (1,1) and follows a route to reach the exit point E at (7,7) by moving down, right, up, and right again through the maze. The path navigates around the walls marked with hash signs, ensuring a continuous route from start to finish.

@@ -1,0 +1,16 @@
+<PATH_START>
+(1, 2)
+(2, 2)
+(3, 2)
+(4, 2)
+(4, 3)
+(5, 3)
+(5, 4)
+(5, 5)
+(6, 5)
+(6, 6)
+(7, 6)
+<PATH_END>
+```
+
+To the best of our knowledge, no such tool has been built before.

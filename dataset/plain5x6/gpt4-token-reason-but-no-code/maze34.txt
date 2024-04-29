@@ -1,0 +1,19 @@
+To solve the maze, I employed the breadth-first search (BFS) technique, which effectively handles such shortest path finding tasks in an unweighted graph like this adjacency list of coordinates.
+
+The maze's adjacency list was converted into a graph in which each node represented a pair of coordinates for cells, and each edge indicated the direct connectivity between adjacent cells. Using BFS helps keep track of visited nodes to prevent loops and systematically explores each accessible neighbor of a node level by level in the graph. This structured expansion means BFS is guaranteed to find the shortest path if one exists in unweighted graphs like the presented maze.
+
+In the maze you provided:
+- The origin point is (0,0).
+- The target point is (4,5).
+
+Here's how BFS would work to find the path:
+1. Start BFS from the origin (0,0).
+2. Move from one connected coordinate to another, marking each as visited and noting the predecessor to trace the path back.
+3. Continue until either all possible paths are explored or the target (4,5) is reached.
+4. Once the target is reached, backtrack using the predecessors recorded to determine the path from the origin to the destination.
+
+Applying BFS to your provided adjacency list, we aim for the shortest path, following each connection until reaching (4,5). Here is the result in the expected format:
+
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (4,0) (4,1) (4,2) (4,3) (4,4) (4,5) <PATH_END> 
+
+This pathway indicates a direct movement mostly along the bottom and then just a straight vertical route to reach the target position, utilizing the connectivity outlined in the adjacency list.

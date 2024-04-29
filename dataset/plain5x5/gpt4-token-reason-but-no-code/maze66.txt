@@ -1,0 +1,13 @@
+To solve the maze, the graph's adjacency list must be used to trace a path from the entry point (0,0) to the exit point (4,4). This requires identifying connections between neighboring cells and exploring them in an orderly manner to find a viable route.
+
+Let's consider a breadth-first search (BFS) approach for its efficiency in exploring all nearest possibilities step-by-step and ensuring the shortest path in an unweighted graph like this. We start from (0,0), inspect each directly connected cell, then explore their respective connections until we reach (4,4). 
+
+The adjacency list provides the necessary connections. From (0,0), we know the connectivity but need to check systematically to find a continuous path to (4,4). 
+
+Starting at (0,0), we can go to (0,1), then from (0,1) to (1,1), and so on, always choosing a path that continues toward our target and is accessible according to the adjacency list. We track our path and ensure that we don't revisit nodes unless necessary. This keeps our solution efficient and simple.
+
+Given this approach, our examination of the adjacency list and tracing from (0,0) to (4,4) results in the following shortest path:
+
+<PATH_START> (0,0) (0,1) (1,1) (1,2) (2,2) (2,3) (3,3) (4,3) (4,4) <PATH_END>
+
+Each move is justified by direct transitions provided in the adjacency list, forming a chain leading directly to the exit, reflecting a systematic exploration of available routes.

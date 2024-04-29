@@ -1,0 +1,38 @@
+Let's decompose this task into its parts.
+
+1. Parse the maze: We first have to convert the ASCII representation of the maze into a more convenient and parsable form.
+2. Find path through maze: After we have parsed the maze, we can use a path-finding algorithm to find the solution to the maze.
+3. Return answer: We should output the result in the format described in the problem statement.
+
+For the path-finding, we need to choose an algorithm. The following algorithm would be suitable:
+
+- Dijkstra's Algorithm: This algorithm is very similar to BFS, Dijkstra's algorithm solves the single-source shortest path problem for a graph with non-negative edge path costs. The algorithm uses a priority queue to maintain a frontier. The algorithm solves the problem very efficiently if all weighting functions of edges are identical.
+  
+4. Libraries: Assuming we have access to some programming language like Python or Java, there are many libraries that implement algorithms like Breadth-first Search (BFS, think about basic tree traversal) and Dijkstra's.
+5. Revision: Once the path has been found, we can check the result for mistakes and make sure that it looks correct. We should follow the result with <PATH_END> to signify the end of the path.
+6. Result: Return the answer.
+
+### Pseudo Code:
+
+1. Import necessary libraries
+
+2. Define function to parse the ASCII maze
+
+3. Use a path-finding algorithm like Dijkstra's to solve the maze.
+- Define starting point and ending point (S and E, not hash signs)
+- Mark other coordinates as "visited" when they are encountered
+
+4. Wait for the algorithm to finish its search.
+
+5. Review the path to ensure correctness.
+
+6. Return the answer in the format specified: <PATH_START> <path coordinates row1, column1>...<path coordinates rowN, columnN> <PATH_END>.
+
+7. Print the answer to the terminal.
+-------
+
+Let's implement the maze parsing function, assuming we are using Python:
+
+```python
+def parse_maze(input_string):
+    maze

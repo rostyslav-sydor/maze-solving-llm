@@ -1,0 +1,8 @@
+Start from the entry point (1,1) and mark it as visited. Then, check the adjacent cells and move to the cell that is not a wall and hasn't been visited before. Continue this process until you reach the exit point (7,7).
+
+One possible solution for this maze is as follows:
+<PATH_START> (1,1) (2,1) (3,1) (4,1) (4,2) (4,3) (4,4) (4,5) (4,6) (5,6) (6,6) (7,6) (7,7) <PATH_END>
+
+This path goes down from (1,1) to (4,1), then moves right to (4,6) and finally goes down to reach the exit point at (7,7).
+
+Remember to avoid walls and previously visited cells while searching for the path. You can use algorithms like Breadth-First Search or Depth-First Search to find the solution efficiently.

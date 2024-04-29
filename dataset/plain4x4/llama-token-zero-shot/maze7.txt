@@ -1,0 +1,36 @@
+I understand. You have a maze represented as an adjacency list, and you want to find a solution, which I will provide in the format of a coordinate list between <PATH_START> and <PATH_END> tokens.
+
+To start, let's analyze the maze. We have the following entries and exits:
+
+* <ORIGIN_START> (0,0)
+* <ORIGIN_END> (3,3)
+* <TARGET_START> (3,3)
+* <TARGET_END> (0,0)
+
+We can see that the maze has a rectangular shape, with the origin and target located at the center of the top and bottom edges, respectively.
+
+Now, let's start exploring the maze. We'll begin at the origin and follow the arrows to find the shortest path to the target.
+
+Step 1:
+We start at the origin (0,0) and move right to (1,0).
+
+Step 2:
+We move down to (1,1).
+
+Step 3:
+We move right to (2,1).
+
+Step 4:
+We move down to (2,2).
+
+Step 5:
+We move right to (3,2).
+
+Step 6:
+We move down to (3,3), which is the target!
+
+Here is the solution in the format you requested:
+
+<PATH_START> (0,0) (1,0) (1,1) (2,1) (2,2) (3,2) (3,3) <PATH_END>
+
+I hope this helps! Let me know if you have any questions or need further assistance.

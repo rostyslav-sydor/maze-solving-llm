@@ -1,0 +1,3 @@
+To solve a maze represented as adjacency list, we could use Depth First Search(DFS), which is a recursive algorithm. The algorithm starts from the origin point, and for each step, explores all the paths from the current point. If a dead end is reached, the algorithm backtracks to the most recent unexplored path and continues the exploration until the target point is reached or no more paths are available.
+In this specific case, starting from (0,0), the algorithm could explore paths in the following order: (0,0) -> (0,1) -> (0,2) -> (0,3) -> (1,3) -> (2,3) -> (3,3). Therefore, the path to solve the maze is:
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>

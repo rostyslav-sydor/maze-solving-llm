@@ -1,0 +1,21 @@
+Let's traverse the graph using Depth-First Search algorithm starting from (0,0) and keep track of visited nodes. We can write down the path by keeping track of the path from (0,0) to the target node.
+<PATH_START>
+(0,0)
+(1,0)
+(1,1)
+(1,2)
+(1,3)
+(0,3)
+(3,3)
+<PATH_END>
+
+Let's check if the path does not cross any walls and path uses only adjacent cells. The valid steps are only up, down, left, and right, and a step should lead to a new cell which is adjacent to the previous cell and is not a wall. We can check that the path doesn't cross any walls by checking if the difference between the row or column indices of two adjacent cells in the path is 1. We can also check that the path uses only adjacent cells by checking if the difference between the row or column indices of two adjacent cells in the path is 1. Let's check the path:
+
+(0,0) to (1,0): Valid step, difference in row index is 1
+(1,0) to (1,1): Valid step, difference in column index is 1
+(1,1) to (1,2): Valid step, difference in column index is 1
+(1,2) to (1,3): Valid step, difference in column index is 1
+(1,3) to (0,3): Valid step, difference in row index is 1
+(0,3) to (3,3): Valid step, difference in column index is 3
+
+Therefore, the path does not cross any walls and path uses only adjacent cells.

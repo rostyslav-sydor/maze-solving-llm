@@ -1,0 +1,30 @@
+To solve the maze given in the adjacency list format, we need to find a path from the origin coordinate (0,0) to the target coordinate (3,3). The adjacency list specified indicates which cells in the maze are directly connected, meaning a path can be made between them. 
+
+To determine the solution, Breadth-First Search (BFS) is a suitable algorithm because it systematically explores level by level through the graph from the source node and is guaranteed to find the shortest path in an unweighted setting like ours.
+
+Here's a breakdown of the process using BFS:
+1. Start from the origin (0,0).
+2. Discover all adjacent nodes reachable directly from the origin, enqueuing each and marking it as discovered.
+3. Move to each of these nodes, discovering their adjacent nodes not previously discovered, enqueuing them as well.
+4. Repeat this process until the target (3,3) is reached or all possible paths are exhausted.
+
+The adjacency list tells us the connectivity of nodes:
+- (0,0) connects to (1,0) and (0,1),
+- (0,1) connects to (1,1),
+- (1,0) connects to (2,0),
+...and so on, concluding up to:
+- (3,2) connects to (3,3).
+
+Following this BFS approach using the available connections, we can trace a path from (0,0) to (3,3).
+
+Using this structured exploration, the path traced would be:
+- Starting at (0,0), we can move to (0,1), then onward to its connected node.
+- From (0,1) move to (1,1), then to (1,2).
+- From (1,2) move to (2,2).
+- From (2,2) move to (2,3), and from there to (3,3), the target node.
+
+Finally, the path as per your format requirement:
+
+<PATH_START> (0,0) (0,1) (1,1) (1,2) (2,2) (2,3) (3,3) <PATH_END>
+
+This solution first takes a vertically step-by-step descending path and then proceeds horizontally as needed, ensuring every movement is goal-oriented towards the target (3,3). This effective use of the BFS algorithm ensures the path is not only right but among the shortest possible paths due to the algorithmic properties of BFS.

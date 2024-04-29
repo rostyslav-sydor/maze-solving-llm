@@ -1,0 +1,9 @@
+To solve the maze starting at (0,0) and finishing at (3,3), let's trace a path avoiding the walls marked by thick black lines:
+
+1. From (0,0) move right to (0,1), (0,2), and then (0,3), since there are no horizontal walls blocking this route in the top row.
+2. From (0,3) move down to (1,3) and (2,3) because there are no vertical walls blocking the way along column 3 until row 2.
+3. From (2,3), move down to (3,3) which is the exit point.
+
+Combining all moves, the path through the maze with the coordinates is:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>

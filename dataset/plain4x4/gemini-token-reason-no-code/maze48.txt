@@ -1,0 +1,10 @@
+Here is the solution to the maze represented as a coordinate list:
+
+<PATH_START> (0,0) (1,0) (1,1) (1,2) (1,3) (2,3) (3,3) <PATH_END>
+
+
+**Reasoning:**
+
+1. Start at the starting point and explore all the options until a dead end is encountered. 
+2. Backtrack to the most recent intersection. This will be an unvisited neighbor of the current position 
+3. Repeat the above two steps until the target is reached.

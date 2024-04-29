@@ -1,0 +1,15 @@
+To solve the maze, we begin at the starting point (0,0) and aim to reach the exit at (3,3) while navigating through the possible paths which are not blocked by the walls.
+
+1. Starting from (0,0), only the right move to (0,1) is valid, since moving downwards leads to a wall.
+2. From (0,1), we can again proceed right to (0,2).
+3. At (0,2), movement to the right leads into a wall, thus we must move downward to (1,2).
+4. From (1,2), we can only further go down to (2,2) since the path right is blocked.
+5. Moving further down from (2,2) is not possible due to a wall, so we must move left to (2,1) which is a valid and only move.
+6. We continue left from (2,1) to (2,0), also a viable passage.
+7. At (2,0), the only viable direction is downwards to (3,0), moving towards our goal.
+8. From (3,0), to continue towards the exit, move to the right to (3,1).
+9. Then from (3,1) we proceed to (3,2) moving right.
+10. Finally, move from (3,2) to the exit at (3,3).
+
+Thus, the solution to navigate through this maze is as follows:
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (2,2) (2,1) (2,0) (3,0) (3,1) (3,2) (3,3) <PATH_END>

@@ -1,0 +1,27 @@
+To solve the maze, we need to navigate from the starting point to the exit point using the connections provided in the adjacency list. We can use a graph-based search algorithm like BFS (Breadth-First Search) that can handle this adjacency list structure efficiently.
+
+We will convert the adjacency list into a more direct map format for clear pathfinding:
+
+Nodes and their direct connections:
+- (3,0) connects to [(2,0), (3,1)]
+- (1,0) connects to [(2,0), (0,0)]
+- (3,1) connects to [(2,1), (3,2), (3,0)]
+- (3,3) connects to [(3,2), (2,3)]
+- (2,1) connects to [(1,1), (3,1)]
+- (0,2) connects to [(1,2), (0,1)]
+- (2,2) connects to [(2,3)]
+- (1,2) connects to [(1,1), (0,2)]
+- (0,3) connects to [(1,3)]
+- (3,2) connects to [(3,3), (3,1)]
+- (2,3) connects to [(3,3), (1,3), (2,2)]
+- (1,1) connects to [(2,1), (1,2)]
+- (0,0) connects to [(1,0)]
+- (1,3) connects to [(0,3), (2,3)]
+
+Starting BFS from the entry point (0,0) and navigating through available paths looking for (3,3):
+
+At each step, check for unvisited nodes in the adjacency list, mark them visited, and enqueue them. The path is recorded by tracing which node came from where, enabling backtracking from exit to entry once the target is reached.
+
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (3,2) (3,3) <PATH_END>
+
+This path translates the solution using a valid sequence based on the adjacency connections provided, ensuring each move is to an adjoining node.

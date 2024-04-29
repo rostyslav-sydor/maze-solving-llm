@@ -1,0 +1,7 @@
+To find a solution for the maze represented as an adjacency graph, we can utilize the Breadth-First Search (BFS) algorithm to traverse from the origin to the target efficiently. After thoroughly padding the entries and understanding connections, which are symmetrical (undirected), I performed BFS from the source (0,0) to destination (3,3). The BFS configuration constructs a path by navigating through connected nodes while keeping track of visited nodes and parents for path reconstruction.
+
+Upon completion, BFS allows for backtracking from the target node to the origin using the stored parents, building the correct sequence of movements from start to finish. Based on this methodology, including careful consideration of each connection and ensuring that each step is valid and leads closer to the target, I derived the shortest path for the maze given the adjacency list provided:
+
+<PATH_START> (0,0) (1,0) (1,1) (1,2) (2,2) (3,2) (3,3) <PATH_END>
+
+This path navigates through the maze effectively from the origin, using linked nodes in a logical manner, arriving at the target successfully. Each step was checked to ensure optimal progress towards the target without unnecessary detours.

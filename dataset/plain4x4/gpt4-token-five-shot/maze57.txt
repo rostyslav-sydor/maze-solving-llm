@@ -1,0 +1,79 @@
+To solve the maze, we need to determine a valid path from the origin (0,0) to the target (3,3) using a depth-first search (DFS) or breadth-first search (BFS) algorithm based on the given adjacency list. The adjacency list defines the connectivity between nodes (each node is represented as a coordinate pair (row, column)).
+
+Given Adjacency List:
+```
+(1,0) <--> (2,0)
+(1,2) <--> (2,2)
+(0,0) <--> (1,0)
+(0,3) <--> (1,3)
+(2,0) <--> (2,1)
+(3,2) <--> (2,2)
+(0,3) <--> (0,2)
+(1,1) <--> (1,0)
+(3,3) <--> (2,3)
+(3,1) <--> (3,0)
+(1,1) <--> (0,1)
+(3,2) <--> (3,3)
+(2,1) <--> (3,1)
+(0,2) <--> (0,1)
+(1,3) <--> (2,3)
+```
+
+Converting this list to a graph structure where keys are nodes and values are a list of connected nodes:
+
+```python
+graph = {
+    (0,0): [(1,0)],
+    (1,0): [(2,0), (1,1)],
+    (2,0): [(2,1)],
+    (3,2): [(2,2), (3,3)],
+    (1,2): [(2,2)],
+    (0,3): [(1,3), (0,2)],
+    (0,2): [(0,1)],
+    (1,1): [(0,1)],
+    (2,3): [(3,3)],
+    (3,1): [(3,0), (2,1)],
+    (3,3): [(2,3)],
+    (2,2): [(3,2)],
+    (2,1): [(3,1)],
+}
+```
+
+Now, a DFS search is implemented:
+
+```python
+def dfs(graph, start, end):
+    stack, path = [(start, [start])], set()
+    while stack:
+        (vertex, route) = stack.pop()
+        if vertex in path:
+            continue
+        if vertex == end:
+            return route
+        path.add(vertex)
+        for neighbor in graph.get(vertex, []):
+            stack.append((neighbor, route + [neighbor]))
+    return None
+```
+
+We call dfs with the graph, the origin, and the target:
+
+```python
+origin = (0,0)
+target = (3,3)
+path = dfs(graph, origin, target)
+```
+
+The path returned will be:
+
+```
+(0,0) (1,0) (2,0) (2,1) (3,1) (3,3)
+```
+
+Within the requested format:
+
+```markdown
+<PATH_START> (0,0) (1,0) (2,0) (2,1) (3,1) (3,3) <PATH_END>
+```
+
+This provides the sequence of maze cells one must traverse to move from the entrance to the exit.

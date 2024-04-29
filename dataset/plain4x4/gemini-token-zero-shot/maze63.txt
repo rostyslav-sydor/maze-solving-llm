@@ -1,0 +1,7 @@
+1. Start at the origin (0,0).
+2. Visit the adjacent node (0,1).
+3. Mark the current node as visited.
+4. Repeat steps 2-3 until the target node (3,3) is reached.
+5. Output the path taken.
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>

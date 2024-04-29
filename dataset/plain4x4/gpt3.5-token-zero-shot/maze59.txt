@@ -1,0 +1,7 @@
+First, we need to understand the maze. The adjacency list tells us how each cell is connected to its neighboring cells. 
+Starting from (0,0), we can follow the paths based on the adjacency list to reach the target at (3,3). 
+We can move cell by cell, making sure to visit each connected cell before moving to the next one. 
+By following the connections provided in the adjacency list, we can navigate through the maze. 
+We need to keep track of the cells we have visited to avoid going in circles. 
+Once we reach the target at (3,3), we can output the path we followed as a list of coordinates between <PATH_START> and <PATH_END> tokens. 
+This approach allows us to systematically solve the maze and find the path from the starting point to the target point.

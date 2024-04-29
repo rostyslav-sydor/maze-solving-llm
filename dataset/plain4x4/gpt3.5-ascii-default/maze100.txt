@@ -1,0 +1,3 @@
+<Path_start> (1,1) (2,1) (3,1) (4,1) (5,1) (6,1) (6,2) (6,3) (6,4) (6,5) (6,6) (6,7) (5,7) (4,7) (3,7) (3,8) <Path_end> 
+
+This is one possible solution for navigating through the maze from the entry point to the exit point by following a path that avoids walls. Starting at coordinate (1,1) at the letter S, the path moves down along the left wall, then makes its way around the maze, heading towards the exit at coordinate (7,7) at the letter E. The path stays clear of all walls and eventually reaches the exit point.

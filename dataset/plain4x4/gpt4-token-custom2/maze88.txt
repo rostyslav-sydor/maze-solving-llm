@@ -1,0 +1,86 @@
+To solve the maze provided, we begin at the origin (0,0) and aim to reach the target (3,3) using the shortest path. Based on the adjacency list provided, we create a graph, then use Breadth-First Search (BFS) to explore the nodes systematically. BFS will help find the shortest path between the two points. 
+
+Here are the adjacency lists for the graph parsed from the maze description:
+
+1. (3,2) <--> (3,1)
+2. (0,1) <--> (1,1)
+3. (0,3) <--> (1,3)
+4. (1,1) <--> (1,0)
+5. (0,2) <--> (1,2)
+6. (2,0) <--> (3,0)
+7. (3,3) <--> (3,2)
+8. (0,1) <--> (0,0)
+9. (2,2) <--> (1,2)
+10. (1,0) <--> (2,0)
+11. (1,3) <--> (2,3)
+12. (3,3) <--> (2,3)
+13. (2,2) <--> (2,3)
+14. (3,1) <--> (3,0)
+15. (2,1) <--> (1,1)
+
+From this, we establish the graph:
+
+```python
+graph = {
+    (0,0): [(0,1), (1,0)],
+    (0,1): [(0,0), (1,1)],
+    (0,2): [(1,2)],
+    (0,3): [(1,3)],
+    (1,0): [(2,0), (1,1)],
+    (1,1): [(1,0), (2,1), (0,1)],
+    (1,2): [(0,2), (2,2)],
+    (1,3): [(0,3), (2,3)],
+    (2,0): [(3,0), (1,0)],
+    (2,1): [(1,1)],
+    (2,2): [(1,2), (2,3)],
+    (2,3): [(1,3), (3,3)],
+    (3,0): [(2,0), (3,1)],
+    (3,1): [(3,2), (3,0)],
+    (3,2): [(3,3), (3,1)],
+    (3,3): [(3,2), (2,3)]
+}
+```
+
+Using BFS to find the shortest path:
+
+```python
+from queue import Queue
+
+def bfs_path(graph, start, end):
+    queue = Queue()
+    queue.put([start])
+    visited = set()
+    visited.add(start)
+
+    while not queue.empty():
+        path = queue.get()
+        node = path[-1]
+
+        if node == end:
+            return path
+
+        for adjacent in graph.get(node, []):
+            if adjacent not in visited:
+                visited.add(adjacent)
+                new_path = list(path)
+                new_path.append(adjacent)
+                queue.put(new_path)
+
+    return None
+
+start = (0,0)
+end = (3,3)
+path = bfs_path(graph, start, end)
+```
+
+Outputting the path in the required format involves mapping the coordinates to the specified format:
+
+```python
+stringified_path = f"<PATH_START> {' '.join(map(str, path))} <PATH_END>"
+```
+
+When executed, this code will find the shortest path in the maze between the origin (0,0) and target (3,3), showcasing the path taken:
+
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (3,2) (3,3) <PATH_END>
+
+This sequence follows the connections defined in the adjacency list and represents the shortest route due to the properties of BFS in an unweighted graph.

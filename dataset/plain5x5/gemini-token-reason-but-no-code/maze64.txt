@@ -1,0 +1,12 @@
+This graph represents a 5x5 grid.
+To solve a maze, one needs to find a path between the entry and exit points.
+The entry point is at (0,0) and the exit point is at (4,4).
+One can use a breadth-first search algorithm to find a path between the entry and exit points.
+The algorithm starts at the entry point and adds all of its neighbors to a queue.
+It then removes the first item from the queue and adds all of its neighbors to the queue.
+It continues this process until it reaches the exit point.
+The path from the entry point to the exit point is the sequence of nodes that were removed from the queue.
+
+In this case, the path from the entry point to the exit point is:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (0,4) (1,4) (2,4) (3,4) (4,4) <PATH_END>

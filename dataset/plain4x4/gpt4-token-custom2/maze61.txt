@@ -1,0 +1,49 @@
+To solve the maze defined in the second portion of the prompt using a graph traversal technique like Breadth-First Search (BFS), we need to keep track of nodes visited and the path taken. Let's walk through the steps:
+
+1. Parse the adjacency list to construct the graph structure in a form usable for BFS.
+2. Use BFS to find the shortest path from the origin (0,0) to the target (3,3).
+
+**Parsing the Adjacency List:**
+```
+(1,1) <--> (1,0)
+(3,1) <--> (3,2)
+(2,0) <--> (3,0)
+(1,2) <--> (1,1)
+(0,0) <--> (1,0)
+(2,3) <--> (3,3)
+(0,3) <--> (1,3)
+(2,2) <--> (2,3)
+(0,0) <--> (0,1)
+(3,1) <--> (2,1)
+(2,2) <--> (1,2)
+(0,3) <--> (0,2)
+(2,3) <--> (1,3)
+(3,3) <--> (3,2)
+(2,0) <--> (2,1)
+```
+
+**Construction of Graph:**
+- Using the adjacency list, we can create a graph where each node has its neighbors stored in a dictionary.
+
+**BFS Implementation:**
+- Start BFS from the origin `(0,0)`, and maintain a queue to explore the nodes.
+- Mark each visited node and store the path taken to reach them.
+
+**Solution Implementation in Detail:**
+- Start from `(0,0)`.
+- Explore its neighbors, `(1,0)` and `(0,1)`.
+- From `(1,0)`, go to `(2,0)`.
+- From `(2,0)`, go to `(3,0)`.
+- From `(3,0)`, go to `(3,1)`.
+- From `(3,1)`, go to `(3,2)`.
+- From `(3,2)`, reach the target `(3,3)`.
+
+**Backtracking the Path:**
+- Use the parent pointers stored during BFS traversal to backtrack from `(3,3)` to `(0,0)`, resulting in the path.
+
+**Final Path:**
+```
+<PATH_START> (0,0) (0,1) (1,0) (2,0) (3,0) (3,1) (3,2) (2,1) (2,2) (3,3) <PATH_END> 
+```
+
+This path is calculated by considering each step taken and alternatives provided by BFS, ensuring that we move in optimal directions leveraging BFS properties for unweighted graphs, thus ensuring the shortest path.

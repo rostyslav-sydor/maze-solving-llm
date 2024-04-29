@@ -1,0 +1,13 @@
+In order to solve this maze, we'll examine the layout of the walls and plot a navigational path from the entry point at (0,0) to the exit point at (3,3). We'll navigate cell by cell, considering the possible movement directions (right, down, left, up) at each step, while avoiding the walls.
+
+1. Start at the entry point (0,0). Movement can only be downwards as moving right is blocked.
+2. Move down to (1,0). Here, possible moves are only right, as moving down or left is blocked.
+3. Move to (1,1) and then right to (1,2). From here, both downward and rightward paths are open; however, moving right leads to a dead end at (1,3).
+4. Move down from (1,2) to (2,2). Moving right is possible, leading to (2,3).
+5. Move right to (2,3) and then down to (3,3), which is the exit point.
+
+Thus, the solution path is:
+
+<PATH_START> (0,0) (1,0) (1,1) (1,2) (2,2) (2,3) (3,3) <PATH_END> 
+
+This path is determined by following clear paths and avoiding any direction that is blocked by a wall.

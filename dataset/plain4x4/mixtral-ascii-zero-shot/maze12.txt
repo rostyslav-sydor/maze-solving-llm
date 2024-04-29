@@ -1,0 +1,23 @@
+There is a very successful family of backtracking algorithms suitable for our task, but we should first talk about some necessary features of maze representation. 
+
+1. If we think of our starting position as our current, we should be able to somehow ask for possible next positions, right? If a position is not further than one square away from our current, then it's okay. Otherwise maybe our maze representation is not explicit enough, and we should check for constraints before trying to attempt taking a path.
+
+I think for step 1 maybe your maze needs more descriptive labelling for directions and jumping into them from each cell. This is not 100% ok yet. Is it inherent to this representation that you supplied? I think perhaps we should reconsider the format if so. For priority queue representation I suggest:
+
+For position (i,j):
+nextEligibleSteps =
+['LEFT' for j > 0]
+['UP' for i > 0]
+['RIGHT' for j < cols]
+['DOWN' for i < rows]
+
+Exercise: check if this is accurate! Which positions should have what types of possible direction entry? 
+
+Additionally, we theoretically need a way to recognize when a path is complete. 
+
+So far we should have:
+currentPosition (tuple)
+nextEligibleSteps (dict)
+goalPosition (tuple)
+
+The algorithm we would end up using to create an ideal path is by far better off its completed version

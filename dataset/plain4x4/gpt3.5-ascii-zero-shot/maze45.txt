@@ -1,0 +1,8 @@
+1. Start from the entry point (1,1) and explore all possible paths.
+2. Move to the right until reaching a wall.
+3. Move down until reaching another wall.
+4. Move right again, then down, then left until reaching the bottom wall.
+5. Move up until reaching the top wall, then move right.
+6. Continue moving right until reaching the exit point (7,7).
+7. The solution path is: 
+<PATH_START> (1,1) (1,2) (1,3) (1,4) (1,5) (1,6) (1,7) (2,7) (3,7) (4,7) (4,6) (4,5) (4,4) (3,4) (2,4) (2,5) (3,5) (3,6) (3,7) (4,7) (5,7) (6,7) (7,7) <PATH_END>

@@ -1,0 +1,5 @@
+Start from the <ORIGIN_START> and find a path to the <TARGET_START>. Then we find a path from the <TARGET_START> to the <TARGET_END> by recursively finding a path from the <TARGET_START> to the <ORIGIN_END>.
+
+For the given maze, we can find the following path:
+
+<PATH_START> (0,0) (1,0) (1,1) (1,2) (1,3) (1,4) (2,4) (3,4) (4,4) <PATH_END>

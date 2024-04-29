@@ -1,0 +1,3 @@
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (0,4) (1,4) (2,4) (3,4) (4,4) <PATH_END>
+
+This path is a valid solution to the maze because it starts at the origin (0,0), ends at the target (4,4), and only traverses adjacent cells. Additionally, it does not cross any walls, as indicated by the fact that each cell in the path is connected to the next cell in the path in the adjacency list.

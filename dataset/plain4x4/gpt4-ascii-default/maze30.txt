@@ -1,0 +1,12 @@
+To solve this maze, we start at the entry point (1,1) and need to navigate to the exit point (7,7). The walls are represented by '#' and cannot be traversed. The process involves finding a path that only moves through empty spaces represented by ' '.
+
+Here’s the step-by-step path solution from entry (S) to exit (E):
+1. From S at (1,1), move right to (1,2), (1,3), (1,4), (1,5), (1,6), and (1,7).
+2. At (1,7), move down to (2,7) and further down to (3,7).
+3. From (3,7), no direct path right due to a wall, move left through (3,6) to (3,1).
+4. At (3,1), move downwards consecutive steps to (4,1), (5,1), (6,1), and then to (7,1).
+5. Move right from (7,1) through (7,2), (7,3), (7,4), (7,5), (7,6), and finally to the exit point at (7,7).
+
+Final path:
+<PATH_START> (1,1) (1,2) (1,3) (1,4) (1,5) (1,6) (1,7) (2,7) (3,7) (3,6) (3,5) (3,4) (3,3) (3,2) (3,1) (4,1) (5,1) (6,1) (7,1) (7,2) (7,3) (7,4) (7,5) (7,6) (7,7) <PATH_END>
+This solution is one of the potential paths through the maze, navigating around the walls to reach the exit.

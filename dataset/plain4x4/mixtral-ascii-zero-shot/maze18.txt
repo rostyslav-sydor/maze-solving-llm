@@ -1,0 +1,40 @@
+First, we need to determine the possible paths the player can take through the maze, avoiding the walls (# signs). Let's represent the maze as a 2D array:
+
+labyrinth = [
+    ["#","#","#","#","#","#","#","#","#"],
+    ["#","S","#"," "," "," ","#"," ","#"],
+    ["#","#","#","#","#","#","#"," ","#"],
+    ["#","#"," "," "," "," "," ","#","#"],
+    ["#","#","#","#","#","#","#","#","#"],
+    ["#"," "," "," "," "," "," "," ","#"],
+    ["#","#","#","#","#"," ","#"," ","#"],
+    ["#"," "," "," ","#"," "," "," ","E","#"],
+    ["#","#","#","#","#","#","#","#","#"]
+]
+
+Now let's define a function to find the path, using a recursive depth-first search algorithm:
+```python
+def find_path(x, y, path):
+    if labyrinth[x][y] == "E":
+        print("Found the exit!")
+        print(path)
+        return True
+    elif labyrinth[x][y] != " " and labyrinth[x][y] != "S":
+        return False
+
+    labyrinth[x][y] = "#"
+
+    if x > 0 and find_path(x-1, y, path + [(x, y)]):
+        return True
+    if x < len(labyrinth) - 1 and find_path(x+1, y, path + [(x, y)]):
+        return True
+    if y > 0 and find_path(x, y-1, path + [(x, y)]):
+        return True
+    if y < len(labyrinth[0]) - 1 and find_path(x, y+1, path + [(x, y)]):
+        return True
+
+    labyrinth[x][y] = " "
+    return False
+```
+Now, let's call the function with the starting position:
+```

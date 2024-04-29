@@ -1,0 +1,21 @@
+To solve the final maze, listed below:
+
+<ADJLIST_START> (3,3) <--> (2,3) ; (3,1) <--> (3,2) ; (3,0) <--> (3,1) ; (2,2) <--> (3,2) ; (0,1) <--> (0,2) ; (1,2) <--> (1,3) ; (2,0) <--> (1,0) ; (0,3) <--> (0,2) ; (0,0) <--> (1,0) ; (2,2) <--> (2,3) ; (2,1) <--> (1,1) ; (1,2) <--> (1,1) ; (0,1) <--> (1,1) ; (2,3) <--> (1,3) ; (3,0) <--> (2,0) ; <ADJLIST_END>
+<ORIGIN_START> (0,0) <ORIGIN_END>
+<TARGET_START> (3,3) <TARGET_END>
+
+Here is the step-by-step solution from the origin (0,0) to the target (3,3):
+
+1) Start at the origin: (0,0)
+2) Move right to (0,1) via (0,0) <--> (1,0) then (0,1) <--> (1,1)
+3) Continue moving right to (0,2) via (0,1) <--> (0,2)
+4) Move right to (0,3) via (0,3) <--> (0,2)
+5) Move down to (1,3) via (1,3) <--> (0,3)
+6) Move down to (2,3) via (2,3) <--> (1,3)
+7) Move down to the target (3,3) via (3,3) <--> (2,3)
+
+Thus the path from the origin to the target in the format of coordinate list requested:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>
+
+This sequence of moves follows the connections available in the adjacency list and directs us from the origin (0,0) to the target (3,3) correctly.

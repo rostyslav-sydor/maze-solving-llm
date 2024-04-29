@@ -1,0 +1,8 @@
+1. Start from the origin `<ORIGIN_START>`.
+2. Visit its unvisited neighbors in any order.
+3. Repeat step 2 until `<TARGET_END>` is found.
+4. Backtrack from the `<TARGET_END>` to `<ORIGIN_END>` by following the shortest path from each node to its `<ORIGIN_END>` visited neighbor.
+
+The solution path is:
+
+<PATH_START> (0,0) (1,0) (2,0) (2,1) (2,2) (2,3) (3,3) <PATH_END>

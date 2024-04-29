@@ -1,0 +1,24 @@
+The maze is represented as a graph, where each node is a cell in the maze and each edge is a connection between two cells. The entry and exit points are marked as special nodes.
+
+To find a solution to the maze, we can use a graph search algorithm, such as depth-first search (DFS) or breadth-first search (BFS). These algorithms systematically explore all possible paths from the entry point to the exit point, until a solution is found.
+
+For example, using DFS to find a solution for the given maze.
+
+Start at (0,0)
+Visit (1,0) and since it's a dead end (no adjacent unvisited cells), backtrack to (0,0)
+Visit (0,1)
+Visit (1,1), (1,2), (1,3)
+Visit (2,3) and since it's a dead end, backtrack to (1,3)
+Visit (0,3)
+Visit (1,4), (2,4), and since it's a dead end backtrack to (1,4)
+Visit (3,4) and since it's a dead end, backtrack to (0,3)
+Visit (0,4) and since it's a dead end, backtrack to (0,3)
+Visit (0,2)
+Visit (0,3) and since we've already been here, we backtrack to (0,2)
+Visit (2,2)
+Visit (1,2), and since we've already visited it, backtrack to (2,2)
+Visit(2,0)
+Visit(3,0)
+Visit(4,0), we're at the exit.
+
+So the solution path is: <PATH_START> (0,0) (0,1) (1,1) (1,2) (1,3) (2,3) (1,3) (0,3) (0,2) (2,2) (2,0) (3,0) (4,0) <PATH_END>

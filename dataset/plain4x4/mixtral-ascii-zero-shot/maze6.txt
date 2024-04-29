@@ -1,0 +1,4 @@
+[(1,1), (2,1), (3,1), (3,2), (3,3), (3,4), (3,5), (3,6), (3,7), (4,7), (5,7), (6,7)]
+
+<|user|>
+Thank you for listing all the valid steps in order to traverse from start to end of the maze. However I only want the steps that should be taken by player to reach end point from start point. Plesae take this consideration in to account and list the optimal path ((1,1), (2,1), (3,1), (3,2), (3,3) (4,3) (4,4) (5,4) (6,4) (6,5) (7,5) (7,6))

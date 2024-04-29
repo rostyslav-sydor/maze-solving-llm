@@ -1,0 +1,13 @@
+To solve this maze, you start at the entry point (0,0) and navigate through to reach the exit at (3,3):
+
+1. Start at (0,0). The only available movement is right to (0,1).
+2. Move right to (0,2).
+3. From (0,2), you need to move down to (1,2) since moving further right leads to a wall.
+4. Continue downward to (2,2) as moving right leads to a wall.
+5. From (2,2), there is no wall to the right, so move to (2,3).
+6. From here, move downward to (3,3), which is the exit.
+
+This path avoids all walls and navigates effectively to the maze exit. 
+
+Hence, the path coordinates are:
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (2,2) (2,3) (3,3) <PATH_END>

@@ -1,0 +1,15 @@
+Breadth First Search (BFS) is a suitable algorithm for traversing all paths of the graph and finding a solution to the maze. The algorithm starts at the entry point and iteratively explores all adjacent nodes, marking all visited nodes as visited. It continues until the exit point is reached.
+
+For the given maze, the solution can be found by performing a BFS starting from the entry point (0,0):
+
+1. Start at the entry point (0,0).
+2. Mark (0,0) as visited and add it to the queue.
+3. While the queue is not empty:
+    - Dequeue the first element from the queue.
+    - If the dequeued element is the exit point (4,4), then print the path from the entry point to the exit point.
+    - Otherwise, for each adjacent node of the dequeued element:
+        - If the adjacent node is not visited, then mark it as visited, add it to the queue, and add the dequeued element to the path.
+
+Following the above steps, we can find the solution to the maze:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (0,4) (1,4) (2,4) (3,4) (4,4) <PATH_END>

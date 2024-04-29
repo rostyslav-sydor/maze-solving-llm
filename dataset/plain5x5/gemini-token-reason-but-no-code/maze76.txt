@@ -1,0 +1,40 @@
+**Solution:**
+
+The provided adjaceny list represents the following maze:
+
+```
++-+-+-+-+
+|     |   |
++-+-+-+-+
+|   |   |
++-+-+-+-+
+|   |   |
++-+-+-+-+
+|   |   |
++-+-+-+-+
+```
+
+To solve the maze, we can use the Depth-First Search (DFS) algorithm. DFS involves recursively traversing all possible paths from the starting point, until the target point is reached. If the target point is not reached, then the algorithm backtracks to the last visited point and tries a different path.
+
+**Reasoning:**
+
+* DFS is a suitable algorithm for solving mazes because it explores all possible paths in a systematic way.
+* It is a recursive algorithm, which means it can be easily implemented in a programming language.
+
+**Specific Solution:**
+
+Applying DFS to the provided maze, we get the following solution:
+
+```
+<PATH_START> (0,0) (1,0) (1,1) (1,2) (1,3) (2,3) (3,3) (3,4) (4,4) <PATH_END>
+```
+
+**Explanation:**
+
+* We start at the starting point (0,0).
+* We explore the path (0,0) -> (1,0) -> (1,1) -> (1,2) -> (1,3).
+* We hit a dead end at (1,3), so we backtrack to (1,2).
+* We explore the path (1,2) -> (2,2) -> (2,3).
+* We hit a dead end at (2,3), so we backtrack to (2,2).
+* We explore the path (2,2) -> (2,1) -> (1,1) -> (1,2) -> (1,3) -> (2,3) -> (3,3) -> (3,4) -> (4,4).
+* We reach the target point (4,4), so we stop the algorithm.

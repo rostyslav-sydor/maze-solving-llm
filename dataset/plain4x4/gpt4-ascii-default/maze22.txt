@@ -1,0 +1,18 @@
+To solve the maze, let's manually trace the path from the start (S) to the exit (E). We'll use coordinate notation where the first number is the row and the second number is the column. 
+
+Starting from S at (1,1):
+1. Move right through each open space until you reach (1,7).
+2. Move down to (2,7).
+3. Move down to (3,7).
+4. Move right to (3,8).
+5. Move down to (4,8).
+6. Move down to (5,8).
+7. Move left to (5,7).
+8. Move down to (6,7).
+9. Move down to (7,7) where E is located.
+
+Here is the path specified in the required format:
+
+<PATH_START> (1,1) (1,2) (1,3) (1,4) (1,5) (1,6) (1,7) (2,7) (3,7) (3,8) (4,8) (5,8) (5,7) (6,7) (7,7) <PATH_END>
+
+This path does not backtrack and continuously moves towards the exit, avoiding all walls (depicted by # in the ASCII maze). Each step moves to an adjacent open cell either horizontally or vertically.

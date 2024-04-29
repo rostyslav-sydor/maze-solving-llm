@@ -1,0 +1,18 @@
+Well, to find the path, we need to follow the path from Room E back to Room S. I will try to do this by hand, but be aware that there are algorithms for this process, which is called depth-first search.
+
+First, I will uncover paths by following walls to see where they lead. This is a breadth-first search working backwards. Here's what I found so far:
+
+#########
+#S      #
+### #####
+#   #   #
+# ##### #
+#     # #
+# ### # #
+#   #  E#
+#########
+
+At the point you can see '#' in...
+
+
+// rest of reply

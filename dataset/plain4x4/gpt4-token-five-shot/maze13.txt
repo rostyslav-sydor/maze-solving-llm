@@ -1,0 +1,64 @@
+To find the path in the maze presented, I will parse the adjacency list to define the connections (i.e., the possible moves from each cell) and then apply a search algorithm (BFS or DFS) to determine the shortest path from the origin to the target.
+  
+**Maze Setup**:
+- Origin: (0,0)
+- Target: (3,3)
+- Adjacency List: Indicates which cells are connected.
+
+**From the Adjacency List**:
+```
+(1,3) <--> (2,3); 
+(3,3) <--> (3,2); 
+(2,2) <--> (2,3); 
+(1,2) <--> (1,3); 
+(2,2) <--> (3,2); 
+(1,1) <--> (1,0); 
+(1,2) <--> (0,2); 
+(3,0) <--> (3,1); 
+(2,1) <--> (1,1); 
+(3,1) <--> (2,1); 
+(3,0) <--> (2,0); 
+(0,1) <--> (0,2); 
+(0,0) <--> (0,1); 
+(1,3) <--> (0,3); 
+(1,0) <--> (0,0);
+```
+
+**Graph Representation**:
+- Conversion of the adjacency list into a graph (directions are bidirectional):
+  ```
+  {
+    (0,0): [(0,1), (1,0)],
+    (0,1): [(0,0), (0,2)],
+    (0,2): [(0,1), (1,2)],
+    (0,3): [(1,3)],
+    (1,0): [(1,1), (0,0)],
+    (1,1): [(1,0), (1,2), (2,1)],
+    (1,2): [(1,1), (1,3), (0,2)],
+    (1,3): [(1,2), (2,3), (0,3)],
+    (2,0): [(3,0)],
+    (2,1): [(3,1), (1,1)],
+    (2,2): [(2,3), (3,2)],
+    (2,3): [(2,2), (1,3)],
+    (3,0): [(3,1), (2,0)],
+    (3,1): [(3,0), (2,1)],
+    (3,2): [(3,3), (2,2)],
+    (3,3): [(3,2)]
+  }
+  ```
+**Path Finding Through BFS**:
+- Start BFS search from the origin (0,0).
+- Since every connection allows passage, compute the shortest path to (3,3).
+
+Following the above relationships, navigating through BFS implies visiting (0,0) to its immediate neighbor (0,1), then (0,2), subsequently to (1,2), then to neighbors (1,3) and finally to (2,3), before reaching the target at (3,3):
+
+**Path**:
+```
+(0,0) -> (0,1) -> (0,2) -> (1,2) -> (1,3) -> (2,3) -> (3,3)
+```
+
+Finally, you get the solution as:
+```
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (1,3) (2,3) (3,3) <PATH_END>
+```
+This path represents the sequence to navigate through the maze from the start to the end based on the parsed adjacency list using BFS to ensure the shortest route is found.

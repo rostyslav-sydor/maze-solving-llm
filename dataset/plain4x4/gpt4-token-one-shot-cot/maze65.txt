@@ -1,0 +1,33 @@
+To solve the maze, we'll start from the origin (0,0) and find a path to the target (3,3) using depth-first search (DFS) or breadth-first search (BFS), exploring all possible paths described in the adjacency list:
+
+<ADJLIST_START> 
+(0,2) <--> (0,1); 
+(1,0) <--> (0,0); 
+(1,2) <--> (1,1); 
+(3,0) <--> (3,1); 
+(2,1) <--> (1,1); 
+(3,2) <--> (2,2); 
+(1,0) <--> (2,0); 
+(0,3) <--> (1,3); 
+(3,2) <--> (3,1); 
+(1,3) <--> (2,3); 
+(3,2) <--> (3,3); 
+(1,2) <--> (1,3); 
+(2,0) <--> (2,1); 
+(3,3) <--> (2,3); 
+(0,3) <--> (0,2); 
+<ADJLIST_END> 
+
+<PATH_START> 
+(0,0) 
+(1,0) 
+(2,0) 
+(2,1) 
+(1,1) 
+(1,2) 
+(1,3) 
+(2,3) 
+(3,3) 
+<PATH_END> 
+
+The optimal path details the sequence of movements from the origin to the target, navigating through accessible connections as per the adjacency list. Each coordinate step represents movement between directly connected cells, ensuring all are legally adjacent based on the list provided.

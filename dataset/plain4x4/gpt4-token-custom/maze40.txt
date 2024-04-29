@@ -1,0 +1,44 @@
+To solve the maze, we begin by constructing an adjacency representation of the maze based on the provided adjacency list. We then use a pathfinding algorithm, such as Breadth-First Search (BFS), to find the shortest path from the entry point (0,0) to the exit point (3,3).
+
+Starting with the adjacency list:
+```
+(2,1) <--> (1,1)
+(1,3) <--> (0,3)
+(2,0) <--> (1,0)
+(0,1) <--> (1,1)
+(3,3) <--> (2,3)
+(1,2) <--> (2,2)
+(2,0) <--> (3,0)
+(2,3) <--> (2,2)
+(1,0) <--> (0,0) 
+(1,2) <--> (0,2)
+(0,2) <--> (0,3)
+(3,1) <--> (3,0)
+(2,0) <--> (2,1)
+(3,3) <--> (3,2)
+(3,2) <--> (3,1)
+```
+
+Transforming the adjacency into a graph representation where each node represents a coordinate in the maze, and each edge represents a passage between two adjacent cells.
+
+On applying BFS:
+
+1. Start at the origin (0,0). Add this to the queue.
+2. Expand from (0,0) to (1,0) according to the adjacency (1,0) <--> (0,0).
+3. Expand from (1,0) to (2,0).
+4. Expand from (2,0) through its connections to (2,1) and (3,0).
+5. Continue expansion. From (3,0) to (3,1) to (3,2) and finally to (3,3).
+6. BFS ensures that this is the shortest path due to its level-wise exploration from the source.
+
+Documenting the shortest path:
+(0,0) -> (1,0) -> (2,0) -> (3,0) -> (3,1) -> (3,2) -> (3,3)
+
+As we record each step:
+- Review each step to verify it matches adjacency information and no "walls" are bypassed.
+- Confirm each cell is aligned properly with its neighbors.
+- Ensure path transitions are recorded in the adjacency list.
+
+Final output of the path:
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (3,2) (3,3) <PATH_END>
+
+This path adheres to the adjacency relationships provided, uses all directly connected cells, and does not cross any obstacles or walls, making it a valid solution to the maze.

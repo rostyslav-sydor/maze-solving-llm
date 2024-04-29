@@ -1,0 +1,11 @@
+To find the path from the origin (0,0) to the target (3,3) using the provided adjacency list, we need to traverse the maze effectively. Considering the connections:
+
+1) Start at (0,0).
+2) Move to (1,0), using (1,0) <--> (0,0).
+3) Move to (2,0), using (1,0) <--> (2,0).
+4) Move to (2,1), using (2,1) <--> (2,0).
+5) Move to (2,2), by the connection (2,2) <--> (2,1).
+6) Move to (3,2), using (2,2) <--> (3,2).
+7) Move to (3,3), by the connection (3,3) <--> (3,2).
+
+<PATH_START> (0,0) (1,0) (2,0) (2,1) (2,2) (3,2) (3,3) <PATH_END>

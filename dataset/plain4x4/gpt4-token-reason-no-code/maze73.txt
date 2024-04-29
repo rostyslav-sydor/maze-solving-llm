@@ -1,0 +1,25 @@
+To solve the maze outlined in the adjacency list, it's essential to understand the structure of the graph represented by connected nodes (coordinates of the maze). We are given that the start is at the coordinate (0,0) and the target to reach is at (3,3). The adjacency list defines all the possible moves from one point to another.
+
+1. **Understanding the Adjacency List**: Each entry such as "(3,2) <--> (3,3)" implies that there is a direct path between these points. So, navigating through this graph using a graph traversal method will let us find a path from the origin to the target.
+
+2. **Building the Path**: We can utilize either a depth-first search (DFS) or breadth-first search (BFS) to navigate through the nodes. Here, to find the shortest path typically BFS is considered as more effective because it explores all possible moves at the current depth before moving deeper. However, either approach should work as long as we track which nodes have been visited and backtrack appropriately.
+
+3. **Constructing the BFS Solution for the Maze**:
+   - We start at the origin (0,0) and explore adjacent nodes.
+   - For each node, we check its neighbors as given in the adjlist until we find the target (3,3).
+   - During this, we track the visited nodes and maintain a record of the path followed.
+
+We can find the path:
+- Start at (0,0); it can reach (1,0) and (0,1).
+- From (0,1), we can go to (0,2).
+- From (0,2), reach (1,2).
+- From (1,2), step to (1,3).
+- From (1,3), go to (2,3).
+- Then from (2,3), finally move to the target at (3,3).
+
+Thus, the nodes visited in order form the path from (0,0) to (3,3).
+
+**Output in Required Format**:
+- **Shortest Path**: <PATH_START> (0,0) (0,1) (0,2) (1,2) (1,3) (2,3) (3,3) <PATH_END>
+
+This path traverses each coordinate in the sequence dictated by the simplest route found through BFS or DFS on the adjacency list.

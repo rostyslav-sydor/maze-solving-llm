@@ -1,0 +1,29 @@
+The maze is represented in an adjacency list format indicating the paths between adjacent cells, while the coordinates map to a grid where each cell has connections described in the list.
+
+From the given adjacency list:
+- (3,3) <--> (2,3)
+- (0,3) <--> (1,3)
+- (0,1) <--> (0,0)
+- (1,3) <--> (2,3)
+- (3,1) <--> (3,2)
+- (3,1) <--> (3,0)
+- (0,3) <--> (0,2)
+- (3,1) <--> (2,1)
+- (1,1) <--> (0,1)
+- (1,2) <--> (1,1)
+- (2,0) <--> (2,1)
+- (3,2) <--> (3,3)
+- (2,0) <--> (1,0)
+- (0,1) <--> (0,2)
+- (1,2) <--> (2,2)
+
+We start at (1,1) and end at (3,3). Transforming entries of the adjacency list into possible paths and navigating while avoiding cycles, determines possible progression through the maze.
+
+Following the correct path:
+- Start at (1,1)
+- Move to (1,2) connected from (1,1)
+- Move to (1,3) through (2,3) since it connects to (1,3)
+- Since (1,3) connects directly to (2,3) due to the adjacency, move to (2,3)
+- Finally, move to (3,3) from (2,3)
+
+Thus, the solution path is: <PATH_START> (1,1) (1,2) (1,3) (2,3) (3,3) <PATH_END>

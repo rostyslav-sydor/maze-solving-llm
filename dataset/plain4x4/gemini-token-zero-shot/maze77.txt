@@ -1,0 +1,3 @@
+1. Start from the origin (0,0) and follow the path according to the adjacency list until reaching the target (3,3).
+2. The path is as follows: (0,0) -> (1,0) -> (2,0) -> (3,0) -> (3,1) -> (3,2) -> (3,3).
+3. Output the path in the required format: <PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (3,2) (3,3) <PATH_END>

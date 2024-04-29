@@ -1,0 +1,15 @@
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (0,4) (1,4) (2,4) (3,4) (4,4) <PATH_END>
+
+Let's start from the starting point and explore the maze:
+- We start at (0,0) and can move to (0,1) and (1,0).
+- From (0,1) we can move to (0,0) and (0,2).
+- From (0,2) we can move to (0,1) and (1,2).
+- From (1,2) we can move to (0,2) and (2,2).
+- From (2,2) we can move to (1,2) and (3,2).
+- From (3,2) we can move to (2,2) and (4,2).
+- From (4,2) we can move to (3,2) and (3,3).
+- From (3,3) we can move to (4,2) and (3,4).
+- From (3,4) we can move to (3,3) and (4,4).
+- We reach the end point at (4,4).
+
+All the moves are adjacent and do not cross any walls, so this is a valid solution.

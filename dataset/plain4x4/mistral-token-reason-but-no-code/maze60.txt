@@ -1,0 +1,45 @@
+To find a solution for this maze, we will use Dijkstra's algorithm, a widely used algorithm for finding the shortest path between two nodes in a graph. We will consider the maze as a graph, where each token represents a node, and the connections between tokens represent the edges.
+
+1. First, we need to convert the adjacency list to a graph representation. We can use a dictionary where each key is a node, and the value is a list of its connected nodes.
+
+2. Next, we will create two sets:
+   - "visited", which will contain all the nodes we have visited during our search.
+   - "unvisited", which will contain all the nodes we have not yet visited.
+
+3. We will initialize the "distance" dictionary with all nodes set to infinity, except for the starting node, which will have a distance of 0.
+
+4. We will add the starting node to the "unvisited" set and set its distance to 0.
+
+5. We will then iterate through the "unvisited" set until it is empty.
+
+6. For each iteration, we will find the node with the smallest distance in the "unvisited" set and move it to the "visited" set. For each neighbor of this node that is still in the "unvisited" set, we will update its distance if the path through the current node is shorter.
+
+7. Once the "unvisited" set is empty, we will have found the shortest path to all nodes from the starting node.
+
+8. We can then reconstruct the path by starting from the target node and following the predecessor nodes until we reach the starting node.
+
+9. Finally, we will output the path in the required format between <PATH_START> and <PATH_END> tokens.
+
+Now, let's apply Dijkstra's algorithm to the specific maze given:
+
+<ADJLIST_START> (3,1) <--> (3,0) ; (2,3) <--> (3,3) ; (0,0) <--> (0,1) ; (3,2) <--> (3,1) ; (0,1) <--> (1,1) ; (0,3) <--> (0,2) ; (3,2) <--> (3,3) ; (1,2) <--> (1,3) ; (2,0) <--> (2,1) ; (2,2) <--> (2,3) ; (3,0) <--> (2,0) ; (1,0) <--> (0,0) ; (2,2) <--> (1,2) ; (0,3) <--> (1,3) ; (2,1) <--> (1,1) ; <ADJLIST_END> <ORIGIN_START> (0,0) <ORIGIN_END> <TARGET_START> (3,3) <TARGET_END>
+
+Applying Dijkstra's algorithm, we get the following shortest path:
+
+<PATH_START> (0,0) (1,1) (1,2) (1,3) (2,3) (3,3) <PATH_END>
+
+Here's the detailed reasoning for each step:
+
+1. Convert adjacency list to graph:
+   - {(0,0): [(0,1)], (0,1): [(0,0), (1,1)],
+     (1,1): [(0,1), (2,1)], (1,2): [(1,3)],
+     (1,3): [(1,2), (2,3)], (2,3): [(1,3), (3,3)],
+     (3,3): [(2,3)], (3,1): [(3,0), (3,2)],
+     (3,2): [(3,1), (3,3)], (3,0): [(3,1), (2,0)],
+     (2,0): [(3,0), (2,1)], (2,1): [(2,0), (1,1)],
+     (2,2): [(2,3), (1,2)], (0,3): [(0,2), (1,3)],
+     (0,2): [(0,3)]}
+
+2. Initialize sets and distance dictionary:
+   - visited = {}
+   - unvisited = {(

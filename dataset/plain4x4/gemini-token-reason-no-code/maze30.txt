@@ -1,0 +1,5 @@
+To solve this maze, use a Depth First Search or Breath First Search algorithm with backtracking. Start from the origin point, visit all neighbors and mark them as visited. Continue this process until either the target point is reached or no more paths are available.
+
+**Solution path:**
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>

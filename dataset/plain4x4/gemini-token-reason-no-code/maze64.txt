@@ -1,0 +1,5 @@
+A possible path through the maze is:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (2,2) (2,1) (3,1) (3,2) (3,3) <PATH_END>
+
+This path starts at the origin (0,0) and moves right to (0,1). It then moves right again to (0,2), and then up to (0,3). It then moves right to (1,3), and then up to (2,3). It then moves left to (2,2), and then down to (2,1). It then moves right to (3,1), and then up to (3,2). Finally, it moves right to (3,3), which is the target.

@@ -1,0 +1,27 @@
+To solve this maze, represented as an adjacency list of coordinates, we use graph search techniques like Breadth-First Search (BFS) which is appropriate for unweighted graphs. BFS is ideal for this problem as it finds the shortest path from the start node to the goal node, spanning layer by layer.
+
+Here is a plan for solving this maze:
+1. **Translate the adjacency list into a better-structured format**, such as a dictionary where keys are the node coordinates and values are lists of directly reachable neighbor coordinates.
+2. **Execute BFS starting from the origin point (0,0)**, keeping track of visited nodes and the path needed to reach each node to ensure that we can reconstruct the path easily once we reach the destination point (3,3).
+3. **Retrieve and display the path from the start to the goal** once BFS completes successfully by backtracking from the goal node to the origin using a predecessor mapping maintained during BFS execution.
+
+Specific implementation reasoning:
+- **Initialization**: Begin BFS by marking the origin (0,0) as visited and enqueue it. Initialize a path mapping to track each node's immediate predecessor.
+- **Neighbor Exploration**: From the current node, examine each neighbor (coordinates directly reachable from the current node). If the neighbor hasn't been visited, mark it as visited, record its predecessor (for path reconstruction), and enqueue it.
+- **Path Reconstruction**: Once the goal (3,3) is dequeued, backtrack using the predecessor mapping from (3,3) back to (0,0) to recreate the path taken.
+
+Given this adjacency list and origin/destination:
+- Starting BFS from the origin (0,0), and following the described method, you can trace through each level of BFS and examine reachable nodes till the BFS discovers the path to (3,3).
+
+Let's implement that trace logically:
+- Begin at (0,0), neighbors are (0,1) and (1,0).
+  - Move to (0,1), from there (1,1) is reachable.
+    - Continue to (1,1), then reach (1,2).
+      - From (1,2), reach (1,3) and continue to (0,3) and (2,3).
+        - (0,3) can backtrack to previously visited nodes; continue from (2,3) to (3,3).
+
+Thus, the simplest path, reconstructed from the route mapping, would look like crossing from the top-left of the maze grid to the bottom-right through adjacent connectivity:
+
+Final Output: `<PATH_START> (0,0) (0,1) (1,1) (1,2) (1,3) (2,3) (3,3) <PATH_END>` 
+
+This solution gives us a trace of coordinates from the origin to the destination, moving legally between directly connected nodes as stipulated by the adjacency list, ensuring we traverse the maze using shortest available paths.

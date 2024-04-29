@@ -1,0 +1,19 @@
+Here is an ASCII representation of the maze and its solution:
+
+#########
+#S^>v   #
+### #####
+#_>^<   #
+# ##### #
+#<_>^< #
+# ### # #
+#<_>^  E#
+#########
+
+The path is: <PATH_START> (1,1), (2,1), (3,1), (3,2), (4,2), (5,2), (6,2), (6,3), (7,3), (7,4), (7,5), (6,5), (6,6), (7,6), (7,7) <PATH_END>
+This solution represents the path from the start (S) to the end (E) in the maze, taking the directions represented by the arrows as: 
+- ^ for going up,
+- > for going right,
+- < for going left,
+- v for going down.
+Empty spaces in the path represent when no direction arrow is needed, as the path continues straight in the same direction.

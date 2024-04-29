@@ -1,0 +1,20 @@
+In this scenario, the goal is to find a path from the origin point (0,0) to the target point (3,4) utilizing the adjacency list provided. The adjacency list describes which points (or vertices) in the maze are directly connected to each other, thereby representing permissible paths that can be taken.
+
+To solve this maze, we need to determine a sequence of steps from the origin to the target that navigates through connected points without looping back on itself. One productive approach to achieve this in graphs is Breadth-First Search (BFS), which explores neighbors level by level ensuring the shortest path in an unweighted graph like this one.
+
+The specific solution for the maze given in the query utilizes such a method. Here's the path from (0,0) to (3,4) based on the adjacency data:
+
+1. Start at the origin (0,0).
+2. Move to (1,0) which is directly connected.
+3. Go to (1,1), connected to (1,0).
+4. Proceed to (1,2), connected to (1,1).
+5. Move to (2,2), directly connected to (1,2).
+6. Go to (2,3), which is reachable from (2,2).
+7. Proceed to (3,3), connected to (2,3).
+8. Finally, move to (3,4), directly connected to (3,3).
+
+As verified, each step transitions directly to a connected point, ensuring the solution adheres to the given adjacency constraints. This path calculation assumes straightforward movement allowed by the list without backtracking except to transition between connected nodes.
+
+Hence, the solution path, formatted according to the requested output, is:
+
+<PATH_START> (0,0) (1,0) (1,1) (1,2) (2,2) (2,3) (3,3) (3,4) <PATH_END>

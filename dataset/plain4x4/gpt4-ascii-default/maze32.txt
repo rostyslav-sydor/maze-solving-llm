@@ -1,0 +1,15 @@
+To solve the maze, we will follow a pathfinding strategy like a depth-first search (DFS) or breadth-first search (BFS). Here, we'll opt for BDS, as it's exhaustive and finds the shortest path. Starting at the entry point (1,1), the algorithm will explore available paths:
+
+1. From (1,1), move right to (1,2), continue to (1,3).
+2. From (1,3), move down to (2,3).
+3. Travel right from (2,3) to (5,3).
+4. Move down from (5,3) to (6,3).
+5. Travel left from (6,3) to (6,1).
+6. Move right from (6,1) to (7,1).
+7. Travel from (7,1) down and right through (7,7).
+
+Upon reaching (7,7), we have discovered the exit. Thus, the optimal path from S to E is:
+
+<PATH_START> (1,1) (1,2) (1,3) (2,3) (3,3) (4,3) (5,3) (6,3) (6,2) (6,1) (7,1) (7,2) (7,3) (7,4) (7,5) (7,6) (7,7) <PATH_END>
+
+This sequence of moves was identified by picturing common pathfinding, visualizing clear movements in the maze layout.

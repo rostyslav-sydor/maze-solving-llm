@@ -1,0 +1,31 @@
+<PATH_START> (0,0) (0,1) (1,1) (2,1) (3,1) (3,2) (3,3) <PATH_END>
+
+The first step is (0, 0). The second step is (0, 1), which is adjacent to the previous step. The third step is (1, 1), which is adjacent to the previous step.
+
+The fourth step is (2, 1), which is adjacent to the previous step. The fifth step is (3, 1), which is adjacent to the previous step. The sixth step is (3, 2), which is adjacent to the previous step.
+
+The seventh and final step is (3, 3), which is adjacent to the previous step and also the target.
+
+Let's check if the path crosses any walls:
+
+(0, 0) to (0, 1): No wall
+(0, 1) to (1, 1): No wall
+(1, 1) to (2, 1): No wall
+(2, 1) to (3, 1): No wall
+(3, 1) to (3, 2): No wall
+(3, 2) to (3, 3): No wall
+
+The path does not cross any walls.
+
+Let's check if the path uses only adjacent cells:
+
+(0, 0) to (0, 1): Adjacent
+(0, 1) to (1, 1): Adjacent
+(1, 1) to (2, 1): Adjacent
+(2, 1) to (3, 1): Adjacent
+(3, 1) to (3, 2): Adjacent
+(3, 2) to (3, 3): Adjacent
+
+The path uses only adjacent cells.
+
+Therefore, the solution is correct.

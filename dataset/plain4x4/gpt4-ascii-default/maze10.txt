@@ -1,0 +1,12 @@
+To solve this maze, we start from the initial point (S) and explore possible paths, avoiding walls (#) and moving towards the end point (E). A successful route finds a path from S to E through open spaces.
+
+1. Start at S at (1,1) and move right to (1,2), continue to (1,3).
+2. Move down one step to (2,3), continue moving down to (3,3).
+3. Move right to (3,4), continue moving right to (3,7).
+4. Move down to (4,7), continue moving down to (7,7) where E is located. 
+
+Adding all these coordinates together and encapsulating them within the appropriate tokens:
+
+<PATH_START> (1,1) (1,2) (1,3) (2,3) (3,3) (3,4) (3,5) (3,6) (3,7) (4,7) (5,7) (6,7) (7,7) <PATH_END>
+
+This is a direct path from the starting point to the exit without hitting any walls, demonstrating a viable path solving the maze.

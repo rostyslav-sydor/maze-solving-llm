@@ -1,0 +1,18 @@
+The adjacency list represents a graph where each node is a coordinate in the maze, and edges represent possible paths between these coordinates. From the list, a maze can be navigated by moving from node to node as long as they are directly connected by an edge.
+
+The maze has a defined starting point (origin) at (0,0) and an ending point (target) at (4,5). The objective is to find a path through the maze from the origin to the target following the connections defined by the adjacency list.
+
+In solving the maze, a pathfinding algorithm such as Breadth-First Search (BFS) could be employed. BFS is ideal because it explores the nearest nodes first before moving on to farther layers. It systematically checks each possible path from a starting node, ensuring that the shortest path in an unweighted graph like this one is found.
+
+To find the solution, BFS would start from (0,0) and explore all reachable nodes, using a queue to manage the expansion of nodes. It will keep track of visited nodes to avoid cycles and dead ends due to the two-way nature of connections.
+
+By applying BFS to the adjacency list, the shortest path can be traced as follows:
+1. Begin at (0,0) and consider available moves.
+2. Move to an adjacent node (since (0,1) is connected, it's a viable next step).
+3. Proceed node-by-node, sticking to the connected paths until reaching the target at (4,5).
+
+The specific path from the origin to the exit traversing through the maze is determined accordingly:
+
+<PATH_START> (0,0) (0,1) (1,1) (1,2) (2,2) (3,2) (4,2) (4,3) (4,4) (4,5) <PATH_END>
+
+This path moves first vertically within the first column when possible, and then across columns, aiming directly towards the exit's column once aligned with it vertically, ensuring that the path is continuous and legal according to the given adjacency list. It checks and exhausts all quickest routes first, evident by the direct bottom shift once it reaches the exit's column, ensuring this is one of the efficient paths to solve this maze.

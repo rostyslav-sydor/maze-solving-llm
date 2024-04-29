@@ -1,0 +1,19 @@
+One approach to solving this maze is to use a depth-first search algorithm. We'll start at the origin and move through adjacent edges until we find the target. If we encounter any dead ends, we'll backtrack to the previous intersection and continue from there.
+
+1. Begin by converting the adjacency list to a matrix representation:
+
+|  0  1  2  3 |
+| ---------- |
+|0| [1, 2] [2]  [] [3] |
+|1| [1]   [] [2, 3] [3, 0] |
+|2| []   [3] [1, 2]  [0] |
+|3| []   [2]  [1]  [0] |
+
+2. Initialize the starting point as the origin (0, 0) and place it in a queue.
+3. Mark the origin as visited and take the next coordinate pair from the queue (0, 0).
+4. Check adjacent coordinates of the current pair to see if any of them are the target: (1, 1), (1, 2), and (2, 1). None of them are the target, so we move on to the next step.
+5. Since no adjacent coordinate is the target, place visited coordinates back into the queue.
+6. Repeat steps 3-5 with all unvisited coordinates to find the target.
+7. The target is found at (3, 3).
+
+ output> <PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (3,2) (3,3) <PATH_END>

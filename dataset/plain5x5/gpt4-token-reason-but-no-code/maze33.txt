@@ -1,0 +1,22 @@
+In order to solve the maze presented in the adjacency list, we must first understand the graph of the maze:
+
+The maze is represented by coordinates linked by edges where each link represents a passable route. Each coordinate tuple (x, y) is a node in the graph, and an adjacency such as `(x1, y1) <--> (x2, y2)` indicates that you can move directly between these two nodes.
+
+The entry point `(0,0)` marks where we start in the maze, and the exit point `(4,4)` is where we aim to reach. The goal is to find a path from the entry to the exit by traversing through linked nodes.
+
+The approach involves using a pathfinding algorithm – BFS (Breadth-First Search) is typically selected for such tasks due to its ability to find the shortest path in an unweighted graph like this one. BFS explores the graph level by level, ensuring exploration of all nodes at the present depth before moving deeper.
+
+By following this method using the details from the adjacency list:
+
+1. **Initialization**: Start at the node `(0,0)` and aim for `(4,4)`.
+2. **Exploration**: From each node, explore adjacent nodes that can be reached (as defined in the adjacency list) while ensuring each node is visited no more than once (to avoid cycles).
+3. **Tracking**: Use a queue to manage nodes to explore, and a dictionary or similar data structure to remember the path (how we reached each node).
+
+Using the BFS method, a shortest path is determined from `(0,0)` to `(4,4)` based on the connections in the adjacency list.
+
+**Solution**:
+After processing with BFS on the presented adjacency list and tracking paths, the shortest path calculated was:
+
+`<PATH_START> (0,0) (1,0) (1,1) (1,2) (1,3) (2,3) (3,3) (4,3) (4,4) <PATH_END>`
+
+This sequence of moves represents the shortest steps from entry to exit, as determined by BFS exploration and the adjacency relations in the given maze list.

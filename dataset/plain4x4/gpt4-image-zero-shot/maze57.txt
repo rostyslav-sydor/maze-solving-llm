@@ -1,0 +1,12 @@
+To solve the maze, start from the entry point (0,0) and move towards the exit point (3,3) by navigating through the open paths while avoiding the walls.
+
+1. Begin at (0,0). Since moving right to (0,1) is not obstructed, proceed in that direction.
+2. From (0,1), we can only move right again to (0,2).
+3. From (0,2), move down to (1,2) as moving right to (0,3) or left to (0,1) is blocked by walls.
+4. At (1,2), the only option is to move down further to (2,2).
+5. From (2,2), moving right to (2,3) is clear.
+6. Now at (2,3), since a vertical move to (3,3) encounters no walls, proceed down to reach the exit.
+
+Thus, the solution path from the entry (0,0) to the exit (3,3) is <PATH_START> (0,0) (0,1) (0,2) (1,2) (2,2) (2,3) (3,3) <PATH_END>. 
+
+This path avoids all walls and follows the open corridors of the maze directly to the exit.

@@ -1,0 +1,8 @@
+To solve this maze, we can use a depth-first search algorithm. Start at the entry point (1,1) and explore all possible paths until reaching the exit point (7,7). 
+
+One possible solution would be:
+<PATH_START> (1,1) (2,1) (3,1) (4,1) (5,1) (5,2) (5,3) (5,4) (5,5) (5,6) (5,7) (6,7) (7,7) <PATH_END>
+
+In this solution, we move down the maze until reaching the bottom row, then move right until reaching the exit point. 
+
+This solution is just one of the many possible paths that can be taken to solve the maze. The depth-first search algorithm will ensure that all possible paths are explored until the exit is reached.

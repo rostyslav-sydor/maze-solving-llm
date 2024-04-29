@@ -1,0 +1,14 @@
+First, let's start from the entry point (1,1). We can move right, down, or diagonally. 
+
+The first optimal move would be to move right to (1,2), then down to (2,2), (3,2), and (4,2) as there is a clear path in these directions.
+
+From (4,2), we can go right to (4,3), then right again to (4,4), down to (5,4), and down again to (6,4).
+
+Now, we are at (6,4) and there are only two possible moves - right to (6,5) or down to (7,4). Since (7,4) is closer to the exit, let's choose that path.
+
+Then, we can move right to (7,5), and finally down to the exit at (7,7).
+
+The solution path would be:
+<PATH_START> (1,1) (1,2) (2,2) (3,2) (4,2) (4,3) (4,4) (5,4) (6,4) (7,4) (7,5) (7,6) (7,7) <PATH_END>
+
+This path successfully navigates through the maze from the start point to the exit point while avoiding walls and dead ends.

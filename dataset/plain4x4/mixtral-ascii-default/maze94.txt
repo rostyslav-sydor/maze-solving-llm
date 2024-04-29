@@ -1,0 +1,12 @@
+Here is a solution for the maze:
+
+```ABNF
+<PATH_START>
+(1,1) (1,2) (1,3)
+(1,4) (2,4) (3,4)
+(3,5) (3,6) (3,7)
+(4,7) (5,7) (6,7)
+(6,8)
+<PATH_END>
+```
+The solution follows the path from the start (1,1) to the end (7,7) and lists the coordinates between the `<PATH_START>` and `<PATH_END>` tokens.

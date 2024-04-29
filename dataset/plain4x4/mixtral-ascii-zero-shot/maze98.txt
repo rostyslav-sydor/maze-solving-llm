@@ -1,0 +1,60 @@
+First, let's represent the maze as a 2D array of characters:
+```makefile
+#########
+#S#     #
+# # ### #
+#   #   #
+##### ###
+#   #   #
+# ##### #
+#      E#
+#########
+```
+Now, we'll iterate through each cell in the maze, ignoring walls, and mark cells as visited when we encounter them. We'll also keep track of the current path by appending each cell to a list. If we reach the end of the maze, we've found a valid path.
+
+```makefile
+def solve_maze(maze, start, end):
+    rows, cols = len(maze), len(maze[0])
+    visited = [[False] * cols for _ in range(rows)]
+    path = []
+    def dfs(r, c):
+        if r < 0 or c < 0 or r >= rows or c >= cols or visited[r][c] or maze[r][c] == '#':
+            return False
+        # If the current cell is the end, return True
+        if maze[r][c] == 'E':
+            return True
+        visited[r][c] = True
+        path.append((r, c))
+
+        # Try each possible direction
+        result = (
+            dfs(r - 1, c) or # Up
+            dfs(r + 1, c) or # Down
+            dfs(r, c - 1) or # Left
+            dfs(r, c + 1)    # Right
+        )
+
+        if result:
+            return True
+
+        path.pop()
+        visited[r][c] = False
+        return False
+
+    dfs(start[0], start[1])
+    return path
+
+maze = [list(row) for row in """
+#########
+#S#     #
+# # ### #
+#   #   #
+##### ###
+#   #   #
+# ##### #
+#      E#
+#########
+""".split('\n')]
+start = (1, 1)
+end = (7, 7)
+path = solve_ma

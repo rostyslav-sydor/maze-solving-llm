@@ -1,0 +1,8 @@
+The solution to the maze can be found by following the path from the starting point (0,0) to the target point (3,3) based on the adjacency list provided. 
+
+The path starts at (0,0), moves to (1,0), then to (2,0), (2,1), (2,2), (3,2), and finally reaches the target point at (3,3). 
+
+Therefore, the output in the format of a coordinate list would be:
+<PATH_START> (0,0) (1,0) (2,0) (2,1) (2,2) (3,2) (3,3) <PATH_END>
+
+This represents the path through the maze that leads from the starting point to the target point.

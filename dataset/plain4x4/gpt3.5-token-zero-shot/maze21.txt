@@ -1,0 +1,9 @@
+1. Start at the origin point (0,0).
+2. Move to the right to (1,0), then up to (1,1), then right to (1,2), and finally up to (1,3).
+3. Move to the right to (2,3), then down to (3,3).
+4. Move left to (3,2), then down to (2,2), and finally left to (2,1).
+5. Move down to (3,1), then left to (3,0).
+6. Move up to (2,0), then left to (1,0).
+7. Move up to (0,0).
+8. Reach the target point at (3,3).
+9. The solution path is <PATH_START> (0,0) (1,0) (1,1) (1,2) (1,3) (2,3) (3,3) (3,2) (2,2) (2,1) (3,1) (3,0) (2,0) (1,0) (0,0) <PATH_END>.

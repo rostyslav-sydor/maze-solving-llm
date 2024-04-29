@@ -1,0 +1,5 @@
+We can use a depth-first search algorithm to find a solution to the maze. Starting from the origin, we can recursively explore each of its adjacent vertices, and if any of them are the target, we have found a solution. Otherwise, we can continue exploring the remaining adjacent vertices until we find a solution or have explored all of them.
+
+To avoid exploring the same vertices multiple times, we can keep track of the vertices we have already visited. We can also keep track of the path we have taken so far, so that if we find a solution, we can output it.
+
+Here is a solution for the given maze: <PATH_START> (0,0) (1,0) (1,1) (1,2) (1,3) (2,3) (3,3) <PATH_END>

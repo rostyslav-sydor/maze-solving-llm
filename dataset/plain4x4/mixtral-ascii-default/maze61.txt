@@ -1,0 +1,28 @@
+To solve this maze and find the shortest path from the entry point (1,1) to the exit point (7,7), we can use a pathfinding algorithm like Breadth-First Search (BFS) or A\* algorithm. However, for the sake of simplicity, we will demonstrate this using BFS, which guarantees that we find the shortest path if there is one.
+
+First, let's define the maze in a 2D array for easier processing. Here's the conversion of the ASCII maze to a 2D array (0 for empty spaces, 1 for walls, 2 for the start, 3 for the exit):
+
+```javascript
+const maze = [
+  [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+  [1, 2, 1, 0, 0, 1, 0, 0, 0, 1],
+  [1, 1, 1, 0, 1, 1, 1, 1, 0, 1],
+  [1, 0, 0, 0, 1, 0, 0, 1, 0, 1],
+  [1, 1, 1, 1, 1, 1, 0, 1, 0, 1],
+  [1, 0, 0, 1, 0, 0, 0, 1, 0, 1],
+  [1, 0, 1, 1, 1, 1, 1, 0, 1, 1],
+  [1, 0, 1, 0, 0, 0, 0, 3, 1, 1],
+];
+```
+
+Now let's implement the BFS algorithm and find the shortest path from the entry point to the exit point.
+
+```javascript
+function bfs(maze, start, end){
+  const queue = [[...start]];
+  const visited = new Set(start);
+  
+  while (queue.length > 0) {
+    const currentCell = queue.shift();
+    
+    if (

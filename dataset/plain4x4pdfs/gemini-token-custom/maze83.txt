@@ -1,0 +1,18 @@
+The maze can be solved by the following path:
+<PATH_START>
+(0,0)
+(0,1)
+(1,1)
+(2,1)
+(3,1)
+(3,2)
+(3,3)
+<PATH_END>
+
+Reasoning:
+Starting from the origin (0,0), we can move right to (0,1), then up to (1,1), then right to (2,1), then up to (3,1), then right to (3,2), and finally up to (3,3), which is the target.
+
+Checking validity:
+No walls are crossed, since each move is either right or up, and there are no walls to the right or up of any of the cells in the path.
+
+All cells in the path are adjacent, since each move is either right or up, and adjacent cells are only one row or column apart.

@@ -1,0 +1,36 @@
+To solve the maze, we can use a graph traversal algorithm like Depth-First Search (DFS) or Breadth-First Search (BFS). Since the maze is represented as an adjacency list, we can easily implement either of these algorithms.
+
+Let's use Breadth-First Search (BFS) to find the shortest path from the origin to the target. BFS explores all the neighboring nodes at the current depth before moving on to the nodes at the next depth level. This ensures that we find the shortest path to the target.
+
+Here's the reasoning behind using BFS:
+
+1. Initialize a queue and enqueue the origin node.
+2. While the queue is not empty:
+   a. Dequeue a node from the queue.
+   b. If the node is the target, return the path.
+   c. Otherwise, enqueue all the neighboring nodes that have not been visited yet.
+   d. Mark the current node as visited.
+3. If the target is not found, return an empty path.
+
+Now, let's apply BFS to the given maze:
+
+1. Initialize the queue with the origin node (0, 0).
+2. Dequeue the origin node (0, 0) and enqueue its neighboring nodes: (0, 1) and (1, 0).
+3. Dequeue the next node (0, 1) and enqueue its neighboring nodes: (0, 2).
+4. Dequeue the next node (1, 0) and enqueue its neighboring nodes: (1, 1).
+5. Dequeue the next node (0, 2) and enqueue its neighboring nodes: (1, 2) and (0, 3).
+6. Dequeue the next node (1, 1) and enqueue its neighboring nodes: (2, 1) and (1, 2).
+7. Dequeue the next node (1, 2) and enqueue its neighboring nodes: (1, 3) and (2, 2).
+8. Dequeue the next node (0, 3) and enqueue its neighboring nodes: (1, 3).
+9. Dequeue the next node (2, 1) and enqueue its neighboring nodes: (3, 1).
+10. Dequeue the next node (1, 3) and enqueue its neighboring nodes: (2, 3).
+11. Dequeue the next node (2, 2) and enqueue its neighboring nodes: (1, 2).
+12. Dequeue the next node (3, 1) and enqueue its neighboring nodes: (3, 0).
+13. Dequeue the next node (2, 3) and enqueue its neighboring nodes: (3, 3).
+14. Dequeue the next node (1, 2) and enqueue its neighboring nodes: (1, 3).
+15. Dequeue the next node (3, 0) and enqueue its neighboring nodes: (2, 0).
+16. Dequeue the next node (3, 3) and return the path: (0, 0) -> (0, 1) -> (0, 2) -> (0, 3) -> (1, 3) -> (2, 3) -> (3, 3).
+
+The shortest path from the origin (0, 0) to the target (3, 3) is:
+
+<PATH_START> (0, 0) (0, 1) (0, 2) (0, 3) (1, 3) (2, 3) (3, 3) <PATH_END>

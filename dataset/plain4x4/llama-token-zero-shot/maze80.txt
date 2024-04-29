@@ -1,0 +1,15 @@
+I understand. You have a maze represented as an adjacency list, with entry and exit points marked. I will help you find a solution to the maze.
+
+To start, let's identify the origin and target points in the maze. The origin point is (0,0), and the target point is (3,3).
+
+Next, we'll explore the maze one step at a time, following the adjacency list. We'll keep track of our path as we go.
+
+Here's the first step:
+
+(0,0) -> (1,0)
+
+Now we're at position (1,0). Our path so far is:
+
+(0,0) -> (1,0)
+
+What would you like to do next?

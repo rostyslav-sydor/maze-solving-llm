@@ -1,0 +1,37 @@
+To find a path through the maze from the entry point (0,0) to the exit point (3,3), the adjacency list provided can be analyzed using a graph traversal algorithm like Breadth-First Search (BFS). Here, I describe the steps of BFS and then verify if the generated solution path only consists of adjacent valid cells.
+
+1. **Graph Representation:**
+   - Coordinates (nodes) such as (x, y) given which can be connected to adjacent nodes listed in the adjacency list.
+
+2. **Breadth First Search (BFS):**
+   - BFS would start at the origin (0,0) and explore all adjacent nodes layers by layers.
+   - BFS uses a queue to track the nodes to be explored and a set to keep track of visited nodes.
+   - The algorithm iteratively processes all nodes at the current layer before moving on to nodes at the next layer, ensuring shortest path due to equal weighted edges (path between nodes).
+
+3. **Build BFS:**
+   - Start BFS at the origin (0,0).
+   - From (0,0), valid moves are to (0,1) based on the adjacency.
+   - From (0,1), move to (0,2).
+   - From (0,2), move to (0,3).
+   - From (0,3), you can move to (1,3).
+   - Continue from (1,3) to (2,3).
+   - Move from (2,3) to (3,3), which is the target.
+
+4. **Path Deduction:**
+   - BFS will find this path: (0,0) -> (0,1) -> (0,2) -> (0,3) -> (1,3) -> (2,3) -> (3,3).
+
+5. **Validation of Path:**
+   - Validate the path based on adjacency; every step in the path corresponds to a valid transition in the adjacency list.
+   - All transitions in the path:
+       - (0,0) to (0,1)
+       - (0,1) to (0,2)
+       - (0,2) to (0,3)
+       - (0,3) to (1,3)
+       - (1,3) to (2,3)
+       - (2,3) to (3,3)
+   - All transitions are valid as per the adjacency connections provided in the input list.
+
+Thus, after applying BFS and verifying that each step in the path is supported by an adjacency (connection), we confirm this is a valid and shortest path from the origin (0,0) to the target (3,3).
+
+**Output:**
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>

@@ -1,0 +1,10 @@
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>
+
+**Reasoning:**
+- Start from the origin (0,0) and move right to (1,0).
+- Move down to (1,1) and continue moving right to (2,1).
+- Move down again to (3,1) and finally move right to the target (3,3).
+
+**Checking the solution:**
+- No walls are crossed because the path follows the edges of the maze.
+- All cells in the path are adjacent to each other.

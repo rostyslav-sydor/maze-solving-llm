@@ -1,0 +1,11 @@
+**Step 1.** First, we need to find the starting and ending points of the maze. The starting point is marked with the `<ORIGIN_START>` token, and the ending point is marked with the `<TARGET_START>` token. In this case, the starting point is `(0,0)` and the ending point is `(3,4)`.
+
+**Step 2.** Once we have the starting and ending points, we can start to find a path between them. We can do this by using a depth-first search (DFS) or a breadth-first search (BFS) algorithm. In this case, we will use a DFS algorithm.
+
+**Step 3.** We start the DFS algorithm at the starting point. We then recursively visit all of the adjacent nodes, until we reach the ending point. As we visit each node, we add it to a list of visited nodes.
+
+**Step 4.** Once we reach the ending point, we can backtrack through the list of visited nodes to find the path between the starting point and the ending point.
+
+**Step 5.** The path between the starting point and the ending point is:
+
+`<PATH_START> (0,0) (0,1) (0,2) (0,3) (0,4) (1,4) (2,4) (3,4) <PATH_END>`

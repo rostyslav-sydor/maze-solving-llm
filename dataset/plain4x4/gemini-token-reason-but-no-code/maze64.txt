@@ -1,0 +1,21 @@
+The maze is a directed graph and can be solved using Depth First Search algorithm.
+
+In Depth First Search algorithm, we select a starting node and visit all its unvisited neighbors. If any of the neighbors is the target node, then we have found the solution. Otherwise, we mark the current node as visited and repeat the process for the unvisited neighbors of the current node.
+
+If we reach a dead end, then we backtrack to the most recent node that has unvisited neighbors.
+
+For the given maze, we can start at the origin node (0,0) and visit its unvisited neighbors (1,0) and (0,1). Since (1,0) is not the target node, we mark (0,0) as visited and visit the unvisited neighbor (0,1).
+
+Since (0,1) is not the target node, we mark it as visited and backtrack to (0,0). Since (0,0) has another unvisited neighbor (1,0), we visit it.
+
+Since (1,0) is not the target node, we mark it as visited and visit its unvisited neighbor (1,1).
+
+Since (1,1) is not the target node, we mark it as visited and visit its unvisited neighbor (1,2).
+
+Since (1,2) is not the target node, we mark it as visited and visit its unvisited neighbor (1,3).
+
+Since (1,3) is the target node, we have found the solution.
+
+The solution path is:
+
+<PATH_START> (0,0) (1,0) (1,1) (1,2) (1,3) <PATH_END>

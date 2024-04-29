@@ -1,0 +1,26 @@
+To solve the maze described as an adjacency list, we must find a path from the entry point (0,0) to the exit point (3,3). The maze's connections between cells are bidirectional, as indicated by "<-->". 
+
+One approach to solving mazes is by using the Breadth-First Search (BFS) algorithm, which is ideal for finding the shortest path in an unweighted graph. Here's how BFS works:
+
+1. Start from the origin node.
+2. Explore all neighbors of the current node.
+3. For each neighbor, mark it as visited and add it to the queue if it hasn't been visited.
+4. Move to the next node in the queue and repeat the process.
+5. Continue until the target node is reached or all possible paths are explored.
+
+Using the BFS for the maze:
+- Start at (0,0).
+- From (0,0), the next reachable cell is (0,1).
+- Then from (0,1), go to (0,2).
+- Continue from (0,2) to (1,2).
+- From (1,2) to (1,3).
+- From (1,3), go to (2,3).
+- Finally, from (2,3) move to the exit at (3,3).
+
+Throughout the process, every explored node keeps track of its predecessor. Using this backtracking, you derive the exact path from origin to destination once the destination is reached.
+
+For the specific maze provided, analyzing the adjacency list for the shortest path from (0,0) to (3,3) and following the BFS steps, the shortest route is plotted as:
+
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (1,3) (2,3) (3,3) <PATH_END>
+
+This is deduced by marking nodes, exploring all accessible nodes in succession, and backtracking to define the route.

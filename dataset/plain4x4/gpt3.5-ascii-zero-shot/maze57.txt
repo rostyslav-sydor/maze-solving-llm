@@ -1,0 +1,9 @@
+We can start by exploring the maze using depth-first search or breadth-first search algorithm. We need to keep track of the visited cells to avoid looping in the same path.
+
+Starting from the entry point at (1,1), we can recursively explore the adjacent cells (up, down, left, right) until we reach the exit point at (7,7). We should prioritize exploring unvisited cells and avoid walls.
+
+As we move through the maze, we can keep track of the path we have taken so far to reach the current cell. Once we reach the exit point, we can backtrack from the exit point to the entry point to find the full path.
+
+After finding the path, we can represent it in the format <PATH_START> (1,1) (1,2) ... (7,7) <PATH_END>.
+
+This process will help us find a solution to the maze and visualize the path from the entry to the exit point.

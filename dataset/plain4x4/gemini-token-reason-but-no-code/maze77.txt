@@ -1,0 +1,10 @@
+We would like to move from (0,0) to (3,3), so let us find a path that connects the two.
+
+Starting at (0,0) we have an option to go right to (1,0) or down to (0,1), let us go down first.
+At (0,1) we can either stay in same column and go down to (0,2), or go to right to (1,1) then to (1,2).
+Let us first go right, so that we can connect to (3,3) from the bottom.
+At (1,2) we have a choice between going right or down. Going down would lead to an infinite loop between (1,2) and (1,3).
+Therefore let us go right, and then from (2,2) we have to go right to reach (3,2) and finally from there down to (3,3).
+This gives as a complete path from (0,0) to (3,3) as follows:
+
+<PATH_START> (0,0) (0,1) (1,1) (1,2) (2,2) (3,2) (3,3) <PATH_END>

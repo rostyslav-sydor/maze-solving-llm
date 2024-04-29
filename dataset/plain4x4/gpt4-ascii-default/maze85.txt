@@ -1,0 +1,14 @@
+To solve the maze, we start from the entry point (1,1) and try to reach exit point (7,7). We can follow East or South whenever possible because these directions lead towards the exit. Moving through openings between walls, we navigate towards the exit avoiding any blocked paths.
+
+Here’s a step-by-step path:
+- Start at (1,1), move right to (1,2) and continue to (1,3).
+- From (1,3), move down to (2,3) and then further to (3,3), (4,3), (5,3).
+- From (5,3), move right to (5,4), and then continue to (5,5), (5,6).
+- Now downwards from (5,6) to (6,6).
+- From (6,6), move right to the exit at (7,7).
+
+Thus, the path as a coordinate list is:
+
+<PATH_START> (1,1) (1,2) (1,3) (2,3) (3,3) (4,3) (5,3) (5,4) (5,5) (5,6) (6,6) (7,7) <PATH_END> 
+
+This solution effectively bypasses walls, navigates open corridors, and reaches the destination from start to end following logically minimal turns and practical directions.

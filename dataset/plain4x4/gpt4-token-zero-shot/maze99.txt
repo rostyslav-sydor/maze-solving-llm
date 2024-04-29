@@ -1,0 +1,25 @@
+To solve the maze given in the adjacency list, we will use a path-finding algorithm such as Breadth-First Search (BFS) since it effectively discovers the shortest path in an unweighted graph. The adjacency list represents the connections between points in a grid:
+
+1. Start at the origin (0,0).
+2. Explore all possible moves from a given point, using the adjacency relationships.
+3. Mark each visited coordinate to avoid revisiting.
+4. Track the path to backtrack the route once the target (3,3) is located.
+5. Continue until reaching the target or until all accessible nodes are visited.
+
+From the adjacency list:
+
+- Analyze neighbors and construct a way to navigate through them efficiently. Each coordinate can connect as specified, and these paths can be followed in BFS or DFS order to reach from (0,0) to (3,3).
+
+Running BFS from the origin:
+
+1. Start from (0,0).
+2. Accessible moves are to (1,0), since it's directly connected.
+3. Continue moving and checking connections:
+   - From (1,0) to (1,1) and so on, linking up with the chains per each direct connection.
+4. The final path flows as moves link directly or indirectly to (3,3).
+
+Based on the BFS search, the successful path from (0,0) to (3,3) would look like:
+
+<PATH_START> (0,0) (1,0) (1,1) (1,2) (2,2) (2,3) (3,3) <PATH_END> 
+
+Each step was chosen based on existing legal moves provided in the adjacency list until the destination was reached.

@@ -1,0 +1,14 @@
+To solve this maze, we start at S, the starting point (1,1), and navigate through open spaces (represented by spaces) to reach E, the exit point (7,7). The solution involves looking for available paths from the starting point, avoiding walls represented by '#'s, and finding a route to the exit.
+
+Here is a step-by-step traversal from start to end:
+1. Move right from (1,1) to (1,7), avoiding walls.
+2. Move down to (2,7).
+3. Move down again to (3,7), continuing to pass open spaces.
+4. Move left to (3,2) since the path below at (4,7) is blocked by walls. 
+5. Move down from (3,2) to (6,2).
+6. Move right to (6,7). This row allows horizontal movement as there are no wall interruptions until row-end.
+7. Finally, move down from (6,7) to (7,7), which is the exit.
+
+<PATH_START> (1,1) (1,2) (1,3) (1,4) (1,5) (1,6) (1,7) (2,7) (3,7) (3,6) (3,5) (3,4) (3,3) (3,2) (4,2) (5,2) (6,2) (6,3) (6,4) (6,5) (6,6) (6,7) (7,7) <PATH_END> 
+
+This path lists all the coordinates in sequence, taking the most direct route, ensuring no walls are crossed, and moving systematically from the start point to the end point.

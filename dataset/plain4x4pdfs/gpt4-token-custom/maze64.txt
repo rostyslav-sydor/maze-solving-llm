@@ -1,0 +1,47 @@
+To solve the maze, we need to find a path from the origin (0,0) to the target (3,3) using the adjacency list provided. The adjacency list describes which cells are directly connected and thus can be traveled between.
+
+Here's the outlined strategy:
+
+### 1. Understand the Adjacency List
+From the adjacency list given, convert it to a more workable format, mapping each point to its directly connected neighbors:
+- (2,2) connects to (2,3), (2,1)
+- (3,1) connects to (2,1), (3,0)
+- (0,0) connects to (1,0), (0,1)
+- (1,3) connects to (0,3), (2,3)
+- (1,0) connects to (1,1)
+- (1,1) connects to (2,1), (1,2)
+- (2,1) connects to (2,0), (2,2)
+- (3,3) connects to (2,3), (3,2)
+- (3,2) connects to (2,2)
+- (1,2) connects to (1,3), (1,1), (0,2)
+- (3,0) connects to (2,0)
+- (0,3) connects to (0,2)
+- (0,2) connects to (0,3), (1,2)
+
+### 2. Implement Pathfinding
+Using this mapping, a Breadth-First Search (BFS) would be appropriate to find the shortest path between the origin (0,0) and the target (3,3).
+
+### 3. Execute the BFS
+- Start from (0,0)
+- Explore neighbors (1,0), (0,1)
+- From (1,0), move to (1,1)
+- From (1,1), explore neighbors (2,1), (1,2)
+- Continue this pattern following the adjacency rules until (3,3) is reached.
+
+### 4. Construct the Path
+- As the BFS proceeds, keep track of the path taken to reach each node.
+- Upon reaching (3,3), backtrack using this tracking to determine the path taken.
+
+### 5. Output the Path
+After tracing the path, the coordinates from starting point (0,0) to ending point (3,3) via BFS are collected sequentially. This forms the solution to the maze.
+
+### Path Validation
+- Check that each step in the path only moves between directly connected nodes as per the adjacency list and doesn't skip any intermediate unconnected cells.
+- Make sure no walls (non-connected adjacent cells) are crossed.
+
+### Construct the Final Output
+Provided the correct and validated path from BFS:
+
+<PATH_START> (0,0) (1,0) (1,1) (2,1) (2,2) (2,3) (3,3) <PATH_END>
+
+This path ensures that only legal moves as denoted in the list are taken and no walls are bypassed. Each step progresses to a directly connected neighbor culminating at the target.

@@ -1,0 +1,5 @@
+First, we need to identify the possible paths through the maze using the adjacency list provided. Starting at (0,0), we can move to (1,0) and then to (2,0). From there, we have multiple options to explore. By following the paths provided in the adjacency list, we can eventually reach the target at (3,3).
+
+Traversing the maze by following the adjacency list, we find the path: (0,0) -> (1,0) -> (2,0) -> (2,1) -> (2,2) -> (2,3) -> (3,3). This path leads us from the starting point to the target point while following the connections specified in the adjacency list.
+
+Therefore, the solution to the maze is as follows: <PATH_START> (0,0) (1,0) (2,0) (2,1) (2,2) (2,3) (3,3) <PATH_END>.

@@ -1,0 +1,67 @@
+To solve the maze problem, we first interpret the graph given by the adjacency list. We then perform a Breadth-First Search (BFS) from the origin (0,0) to the target (3,3) on this graph representation.
+
+The adjacency entries suggest direct connections between the nodes or cells in the grid-form of the maze. Using BFS will help discover the shortest path from the origin to the destination by exploring all possible routes one step at a time, expanding paths from the nearest node until the target is reached.
+
+**Graph Representation:**
+- Nodes represent coordinates in the maze.
+- Edges represent the allowed movements between these coordinates.
+
+1. Parse the adjacency list to construct the graph in the form of a dictionary where each key points to a set of its neighbors:
+   ```python
+   graph = {
+       (0,2): {(1,2), (0,1), (0,3)},   
+       (1,2): {(0,2), (1,1)},
+       (3,3): {(3,2), (2,3)},
+       (0,0): {(0,1), (1,0)},
+       (2,0): {(1,0), (3,0)},
+       (3,1): {(3,2), (3,0)},
+       (2,3): {(1,3), (3,3)},
+       (1,3): {(0,3), (1,2)},
+       (2,2): {(2,1)},
+       (2,1): {(2,2), (1,1)},
+       (1,1): {(1,2), (2,1)},
+       (0,3): {(0,2), (1,3)},
+       (0,1): {(0,0)},
+       (3,2): {(3,1), (3,3)},
+       (1,0): {(0,0), (2,0)}
+   }
+   ```
+   
+2. Implement BFS to find the shortest path from (0,0) to (3,3):
+   ```python
+   from collections import deque, defaultdict
+
+   # Start BFS from origin
+   queue = deque([(0,0)])
+   visited = {(0,0)}
+   parent = {(0,0): None}
+
+   while queue:
+       node = queue.popleft()
+       
+       # If target is reached, construct the path
+       if node == (3,3):
+           path = []
+           while node:
+               path.append(node)
+               node = parent[node]
+           path.reverse()
+           break
+
+       # Explore neighbors
+       for neighbor in graph[node]:
+           if neighbor not in visited:
+               visited.add(neighbor)
+               parent[neighbor] = node
+               queue.append(neighbor)
+   ```
+
+3. Construct the path from the BFS traversal:
+   ```python
+   path  # Contains the sequence of steps from origin to destination
+   ```
+
+**Output the path:**
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (3,2) (3,3) <PATH_END>
+
+This walks directly south and then east to the goal, representing the traversal provided by BFS, and following the adjacency links through the maze as provided by the graph structure.

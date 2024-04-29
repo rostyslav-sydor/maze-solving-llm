@@ -1,0 +1,5 @@
+1) Move up from (3,3) to (3,2)
+2) Move left from (3,2) to (2,2)
+3) Move down from (2,2) to (3,2)
+4) Move right from (3,2) to (3,3)
+<PATH_START> (3,3) (3,2) (2,2) (3,2) (3,3) <PATH_END>

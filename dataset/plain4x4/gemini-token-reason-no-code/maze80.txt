@@ -1,0 +1,3 @@
+Starting from entry point at (0,0) take path going south to (1,0), then take path going east to (2,0), then take path going south to (3,0), then take path going east to (3,1), then take path going north to (3,2), and finally take path going east to exit point at (3,3)
+
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (3,2) (3,3) <PATH_END>

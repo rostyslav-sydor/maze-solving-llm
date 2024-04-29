@@ -1,0 +1,6 @@
+This maze can be traversed in several different paths. One of them is:
+<PATH_START> (0,0) (1,0) (1,1) (1,2) (1,3) (1,4) (2,4) (3,4) (4,4) <PATH_END>
+
+The path starts from the origin point at the bottom left corner of the maze and heads north until it reaches the top of the maze. Then it turns right and heads west until it reaches the right edge of the maze. Finally, it turns south and heads down until it reaches the target point at the top right corner of the maze.
+
+All of the steps in the path are valid moves because they are all adjacent to each other and do not cross any walls.

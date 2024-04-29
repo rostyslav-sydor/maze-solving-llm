@@ -1,0 +1,43 @@
+To solve the provided ASCII representation of the maze, consider the following approach:
+
+1. Define the relative position of the exit (E) and the total height and width of the maze.
+   Exit position: (7, 7)
+   Maze height: 9 rows (y-axis)
+   Maze width: 10 columns (x-axis)
+
+2. Represent the maze in a 2D array of characters with `'#'` as walls, `'S'` as the start, `' '` (space) as walkable paths, and `'E'` as the end.
+   Sample mapping:
+
+   ```python
+   maze = \
+   ["#########",   
+    "#S  #   #",   
+    "# ### # #",   
+    "# #   # #",   
+    "# # ### #",   
+    "# #   # #",   
+    "# ##### #",   
+    "#      E#",   
+    "#########"]
+   ```
+
+   Place holder for the positions that have been explored and added to the path so far.
+   ```python
+   visited = [[False for _ in range(width)] for _ in range(height)]
+   ```
+
+3. Define the valid directions to explore (up, down, left, right):
+   ```python
+   directions = [(0, 1), (1, 0), (0, -1), (-1, 0)]
+   ```
+4. Start from the start coordinate (1, 1) and iteratively populate the `visited` array based on the `directions`.
+   To traverse in the maze, maintain a list of nodes with its respective (x, y) coordinates.
+   Use a First-in, First-Out queue structure to efficiently explore the maze.
+   ```python
+   queue = collections.deque([(1, 1)])
+   visited[1][1] = True
+   while queue:
+       current_x, current_y = queue.popleft()
+       for dx, dy in directions:
+           next_x, next_y = current_x + dx, current_y + dy
+           if not (0 <= next_x < height and 0 <= next_y < width

@@ -1,0 +1,25 @@
+To solve the maze, we treat it as a graph where each node represents a position (x, y) within the maze, and each edge represents a permissible step from one node to its adjacent nodes. We can use a graph traversal algorithm such as Breadth-First Search (BFS) to find the shortest path from the origin to the target.
+
+### Reasoning Behind Using BFS:
+1. **Optimal Solution**: BFS explores nodes level by level from the source thus guaranteeing the shortest path in an unweighted graph.
+2. **Complete Approach**: It will exhaust all possible paths by exploring all nodes and continue until it reaches the target.
+3. **Easy Path Reconstruction**: By keeping track of where each node (position in the maze) was accessed from (its parent), we can reconstruct the path from the exit back to the entrance upon reaching the target.
+
+### Understanding the Adjacency List:
+- Nodes are connected indicating possible movements within the maze.
+- The origin is at position `(0,0)` and the target is at position `(4,4)`.
+
+### Solving the Maze:
+Using BFS:
+- Start at the origin `(0,0)`, mark it as visited.
+- Proceed by visiting all connecting nodes, mark them as visited, and store where you came from.
+- The BFS continues until all possible nodes are explored or you reach the target `(4,4)`.
+
+### Solution:
+Following BFS on the adjacency list provided, the path from `(0,0)` to `(4,4)` is traced through the intermediate connections. As each adjacent node is discovered, the path is updated, ensuring the shortest route due to the nature of BFS.
+
+Based on the BFS and tracing parent nodes from `(4,4)` back to `(0,0)`, we derive the path:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (0,4) (1,4) (2,4) (3,4) (4,4) <PATH_END>
+
+This solution ensures it follows the connections strictly as defined in the adjacency list, moving right and upwards through the maze, constantly adhering to the available paths until the end target is reached, resulting in an effective solution given the structure of the maze.

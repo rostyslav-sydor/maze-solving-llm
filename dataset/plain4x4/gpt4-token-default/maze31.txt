@@ -1,0 +1,35 @@
+To solve the maze, we must find a path from the origin (0,0) to the target (3,3) using the adjacency list provided. We will use a breadth-first search (BFS) approach, appropriate for unweighted graphs like this, to ensure the shortest path is found.
+
+First, parse and construct a graph (adjacency list):
+```
+{
+    (0,0): [(0,1)],
+    (0,1): [(0,0), (1,1), (0,2)],
+    (0,2): [(0,1), (0,3)],
+    (0,3): [(0,2)],
+    (1,0): [(2,0), (1,1)],
+    (1,1): [(1,0), (0,1)],
+    (1,2): [(1,3)],
+    (1,3): [(1,2), (2,3)],
+    (2,0): [(2,1), (3,0), (1,0)],
+    (2,1): [(2,0), (2,2)],
+    (2,2): [(2,1), (3,2)],
+    (2,3): [(3,3), (1,3)],
+    (3,0): [(3,1), (2,0)],
+    (3,1): [(3,0)],
+    (3,2): [(3,3), (2,2)],
+    (3,3): [(2,3), (3,2)]
+}
+```
+
+Using BFS from the start (0,0), we search through each node's children until we reach the target (3,3). Tracking visited nodes and the path from each node back to the origin gives the full route.
+
+After performing BFS, the resulting path from (0,0) to (3,3) is:
+```
+(0,0) -> (0,1) -> (0,2) -> (0,3) -> (1,3) -> (2,3) -> (3,3)
+```
+
+Formatted for the output specification:
+```
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>
+```

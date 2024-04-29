@@ -1,0 +1,18 @@
+To find the solution for the maze described by the provided adjacency list, you need to identify a path that leads from the specified origin (0,0) to the target (3,4) using the connections (edges) provided between coordinates (nodes).
+
+**Reasoning**:
+1. Start at the entry point, (0,0).
+2. Use the adjacency list to check directly connected neighbors. From (0,0), the only adjacent coordinate based on the adjacency list is (0,1).
+3. From (0,1), continue to (0,2), according to the list.
+4. From (0,2), you can proceed to (0,3).
+5. Progress from (0,3) to (0,4).
+6. From (0,4), the path can extend to (1,4).
+7. Move from (1,4) to (2,4).
+8. Finally, from (2,4), according to the adjacency list, one can reach the target (3,4).
+
+Following these steps, you traverse a series of coordinates that are directly connected, as required by the maze description. This happens because each pair of coordinates is explicitly linked by the adjacency list, ensuring that movement from one to the adjacent node is permissible.
+
+**Formatted Solution**:
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (0,4) (1,4) (2,4) (3,4) <PATH_END>
+
+This path successfully travels from the entry point to the exit, using each consecutive coordinate linked as specified by the maze's construction, thus solving the maze.

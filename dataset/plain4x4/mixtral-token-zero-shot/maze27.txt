@@ -1,0 +1,36 @@
+To find the shortest path between two points in a maze, we should use a popular path-finding algorithm such as A*.
+The first coordinate given is row 0, column 0 and the second one is row 3, column 3, let's call them A and B respectively.
+A* algorithm needs the ability to check which spots around the current target are accessible.
+Convert the data from adjacency list to an adjacency matrix for easier lookup:
+
+    Maze = [
+        ['X', 'X', 'O', 'X', 'X'],
+        ['X', 'O', 'O', 'O', 'X'],
+        ['O', 'O', 'X', 'O', 'X'],
+        ['O', 'O', 'O', 'O', 'O'],
+        ['X', 'X', 'X', 'X', 'X']
+    ]
+
+    where X = occupied space that cannot pass through
+    and O = open space that you can walk through
+
+Now let's prepare to implement A*:
+
+    Further reduce the data into a matrix of distances between points:
+
+    Matrix = [
+        [0, 0, 0, 0],
+        [0, 1, 1, 1],
+        [1, 1, 2, 2],
+        [2, 2, 1, 2],
+        [3, 3, 3, 3]
+    ]
+
+    We use "O" as Center (0, 0) of matrix and every other point row or column starts from 1
+
+Implement: A* Algorithm
+
+  1. Assign start and goal positions in matrix (A, B) as A: (3,0) and B: (0,3)
+  2. Initialize open list and closed list, add the starting point A (its "g", which means the cost of the movement from the start to this point)
+  3. For each point in the starting open list, check its possible movements, calculate the "f" values (f = g + h, where h(x2,y2) = min(abs(x1-x2) + abs(y1-y2)) and g is the g value of its parent, and add the new point into its open list
+  

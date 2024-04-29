@@ -1,0 +1,43 @@
+To solve the maze represented by the provided adjacency list, we need to find a path from the starting point (0,0) to the ending point (3,4). The adjacency list gives specific connections between the maze cells as bidirectional path possibilities. 
+
+From the origin, we initiate breadth-first search (BFS). BFS is an ideal choice here because it explores all possible movements from a node level by level, ensuring that the first time it reaches the target, it has found the shortest path. Depth-first search (DFS), while useful in certain cases, might get trapped in loops without careful management, or may return a longer path, since it explores as far into each branch as possible before backtracking.
+
+### Step-by-step reasoning using BFS:
+
+1. **Initialization**:
+   - Enqueue the starting point (0,0) with a path list containing this point.
+   - Set of visited nodes to prevent revisiting nodes and getting trapped in a loop.
+
+2. **Processing**:
+   - Each node dequeued will include looking at the adjacent nodes (where it can travel according to the adjacency list).
+   - For each adjacent, non-visited node, append the node to the current path and enqueue it.
+   - If an adjacent node is the target (3,4), the path leading to this node is the solution.
+
+3. **Tracing the Path**:
+   - Using the adjacency details provided and BFS, start from (0,0) and trace the path to (3,4). 
+
+### Execution of BFS:
+
+1. Begin at (0,0) which connects to [(0,1)].
+   - Enqueue [(0,1)].
+2. (0,1) connects to [(0,0), (0,2)].
+   - (0,0) is visited, so skip. Enqueue [(0,2)].
+3. (0,2) connects to [(0,1), (0,3)].
+   - Skip the visited. Enqueue [(0,3)].
+4. (0,3) connects to [(0,2), (0,4), (1,3)].
+   - Skip the visited. Enqueue [(0,4), (1,3)].
+5. (0,4) is dead-end except back to (0,3).
+6. (1,3) connects to [(0,3), (1,4)].
+   - Enqueue [(1,4)].
+7. (1,4) connects to [(1,3), (2,4)].
+   - Enqueue [(2,4)].
+8. (2,4) connects to [(1,4), (3,4), (2,3)].
+   - (3,4) is the target, end search.
+
+### Solution Path
+
+Following the correct BFS path tracked, we collect the shortest path coordinates from (0,0) to (3,4):
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (1,4) (2,4) (3,4) <PATH_END>
+
+This sequence bypasses paths that go back to previously visited cells and follows the shortest route to the exit according to BFS and the adjacency connections.

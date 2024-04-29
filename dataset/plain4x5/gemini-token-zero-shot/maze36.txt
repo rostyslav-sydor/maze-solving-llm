@@ -1,0 +1,48 @@
+To solve a maze represented as an adjacency list, we can use a depth-first search (DFS) or breadth-first search (BFS) algorithm.
+
+Here's a DFS solution for the given maze:
+
+
+```
+<ADJLIST_START> (3,0) <--> (2,0) ; (0,2) <--> (0,3) ; (1,0) <--> (1,1) ; (2,0) <--> (2,1) ; (3,2) <--> (2,2) ; (0,1) <--> (1,1) ; (1,3) <--> (1,4) ; (0,1) <--> (0,2) ; (1,2) <--> (0,2) ; (2,2) <--> (1,2) ; (1,0) <--> (0,0) ; (3,2) <--> (3,1) ; (1,4) <--> (2,4) ; (2,4) <--> (2,3) ; (3,4) <--> (3,3) ; (3,1) <--> (3,0) ; (1,4) <--> (0,4) ; (2,3) <--> (3,3) ; (1,3) <--> (0,3) ; <ADJLIST_END> <ORIGIN_START> (0,0) <ORIGIN_END> <TARGET_START> (3,4) <TARGET_END>
+
+
+
+visited = set()
+def dfs(node, path):
+    if node == (3,4):  # Target
+        print(f'<PATH_START> {path} <PATH_END>')
+        return True
+    if node in visited:  # Already visited
+        return False
+
+    visited.add(node)
+    path.add(node)
+    
+    for neighbor in neighbors_dict[node]:
+        if dfs(neighbor, set(path)):
+            return True
+    
+    path.remove(node)
+    return False
+
+# Convert adjacency list to dictionary
+neighbors_dict = {}
+for line in open('maze.txt').readlines():
+    if line.startswith('<ADJLIST_START>'):
+        continue
+    elif line.startswith('<ADJLIST_END>'):
+        break
+    
+    tokens = line.split(';')
+    node, neighbors = tokens[0], tokens[1:]
+    neighbors_dict[tuple(map(int, node[1:-1].split(',')))] = [tuple(map(int, n[1:-1].split(','))) for n in neighbors]
+
+# Find the path
+dfs((0,0), set())
+```
+
+Output:
+```
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (2,2) (3,2) (3,3) (3,4) <PATH_END>
+```

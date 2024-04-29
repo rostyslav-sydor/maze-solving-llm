@@ -1,0 +1,11 @@
+**Reasoning:**
+
+The given maze is represented as an adjacency list, where each vertex is a coordinate in the maze and each edge is a connection between two adjacent coordinates. The goal is to find a path from the starting coordinate to the ending coordinate while avoiding any dead ends or loops.
+
+To solve the maze, we can use a depth-first search (DFS) algorithm, which starts from the starting coordinate and recursively explores all possible paths until it finds the ending coordinate or exhausts all possibilities.
+
+**Solution:**
+
+Applying DFS to the given maze, we obtain the following path from the starting coordinate (0,0) to the ending coordinate (4,4):
+
+<PATH_START> (0,0) (0,1) (1,1) (1,2) (1,3) (2,3) (2,4) (3,4) (4,4) <PATH_END>

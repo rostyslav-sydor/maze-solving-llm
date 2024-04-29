@@ -1,0 +1,3 @@
+<Path_Start> (1,1) (2,1) (3,1) (4,1) (5,1) (6,1) (7,1) (7,2) (7,3) (7,4) (6,4) (5,4) (4,4) (3,4) (3,5) (3,6) (3,7) (3,8) (4,8) (5,8) (6,8) (7,8) <Path_End> 
+
+To navigate through the maze, follow the path above which starts at the entry point (1,1) and ends at the exit point (7,8). Follow the open spaces while avoiding the walls marked with hash signs. Keep track of your current position and move accordingly to reach the destination. This solution ensures the shortest path from the entry point to the exit point.

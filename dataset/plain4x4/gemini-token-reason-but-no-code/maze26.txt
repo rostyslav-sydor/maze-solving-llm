@@ -1,0 +1,7 @@
+This maze can be solved using Depth-First Search (DFS), because there are no cycles in the maze.
+
+DFS involves starting at the origin, recursively traversing all paths until a dead end is reached, at which point the algorithm backtracks and tries a different path.
+
+Applying DFS to the given maze, we can find the following path:
+
+<PATH_START> (0,0) (1,0) (1,1) (1,2) (1,3) (2,3) (3,3) <PATH_END>

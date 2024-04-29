@@ -1,0 +1,15 @@
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (3,2) (3,3) <PATH_END>
+
+**Reasoning:**
+
+- We start at the origin (0,0) and first move right to (1,0).
+- From there, we can only move down to (2,0).
+- From (2,0), we can either move right to (3,0) or down to (2,1).
+- We choose to move right to (3,0), and then up to (3,1).
+- From (3,1), we can only move right to (3,2), and then up to (3,3).
+- At (3,3), we have reached the target.
+
+**Verification:**
+
+- The path does not cross any walls, as each move is either horizontal or vertical.
+- The path uses only adjacent cells, as each move is to a cell that is either directly above, below, to the left, or to the right of the current cell.

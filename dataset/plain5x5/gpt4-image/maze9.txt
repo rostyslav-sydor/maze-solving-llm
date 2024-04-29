@@ -1,0 +1,7 @@
+Based on the maze shown in the image, we can derive a viable path from the entrance at (0,0) to the exit at (4,4). Observing the configuration of walls, we can move through the open cells to determine a complete route.
+
+Here's the solution path traced through the maze:
+
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (4,0) (4,1) (4,2) (4,3) (4,4) <PATH_END>
+
+Each coordinate represents a step south or east which avoids all the walls and successfully finds a way from the start to the finish of the maze.

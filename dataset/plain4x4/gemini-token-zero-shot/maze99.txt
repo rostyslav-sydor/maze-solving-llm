@@ -1,0 +1,17 @@
+Since the input graph is not connected, we need to find the path from the origin to the exit separately for each connected component.
+First, let's find the connected component of the origin. It consists of the following nodes:
+- (0,0)
+- (1,0)
+- (0,1)
+- (1,1)
+- (0,2)
+- (3,2)
+- (2,2)
+- (1,2)
+- (2,3)
+- (3,3)
+Next, let's find the connected component of the exit. It consists of the following nodes:
+- (3,0)
+- (3,1)
+Since the origin and the exit are in different connected components, there is no path between them. Therefore, the output should be:
+<PATH_START> <PATH_END>

@@ -1,0 +1,5 @@
+The solution for the maze is as follows:
+<PATH_START> (1,1) (2,1) (3,1) (4,1) (4,2) (4,3) (3,3) (2,3) (1,3) (1,4) (2,4) (3,4) (4,4) (5,4) (6,4) (6,5) (6,6) (6,7) (5,7) (4,7) (4,8) (4,9) (5,9) (6,9) (7,9) <PATH_END>
+
+Explanation:
+Starting at (1,1) at the letter S, the path moves down, then right until reaching the upper left corner of the maze. Then it turns down and follows the left wall until reaching the bottom left corner. Moving right, it travels along the bottom wall, making its way to the exit at (7,7) marked with the letter E.

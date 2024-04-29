@@ -1,0 +1,34 @@
+To determine the path through the maze from the start `(0,0)` to the end `(3,3)` for the description provided, we can visualize the adjacency list and find the shortest route. The adjacency list describes all the possible ways to move from one point to another:
+
+```
+(0,3) <--> (0,2)
+(1,0) <--> (2,0)
+(1,1) <--> (1,0)
+(2,3) <--> (3,3)
+(2,3) <--> (1,3)
+(0,2) <--> (1,2)
+(3,0) <--> (3,1)
+(2,2) <--> (3,2)
+(3,2) <--> (3,1)
+(3,0) <--> (2,0)
+(2,3) <--> (2,2)
+(2,1) <--> (2,2)
+(0,2) <--> (0,1)
+(1,3) <--> (1,2)
+(0,1) <--> (0,0)
+```
+
+Starting from `(0,0)`, using the adjacency list data, we can proceed to look for a path to `(3,3)`:
+
+1. Start in `(0,0)`.
+2. Move to `(0,1)`, as `(0,0) <--> (0,1)`.
+3. Next, go to `(0,2)`, as `(0,1) <--> (0,2)`.
+4. Proceed to `(1,2)`, from `(0,2) <--> (1,2)`.
+5. Move next to `(1,3)`, as `(1,2) <--> (1,3)`.
+6. Then go to `(2,3)`, from `(1,3) <--> (2,3)`.
+7. Continue to `(3,3)`, using `(2,3) <--> (3,3)`.
+
+Thus, the solution path in coordinates is:
+```
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (1,3) (2,3) (3,3) <PATH_END>
+```

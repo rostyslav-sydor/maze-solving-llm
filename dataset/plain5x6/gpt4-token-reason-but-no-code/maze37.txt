@@ -1,0 +1,37 @@
+To solve the maze provided as an adjacency list, we need to establish the paths between nodes (coordinates in this case) and find a route from the entry point (0,0) to the exit point (4,5).
+
+1. **Understanding the Maze Structure and Graph Representation**:
+   - Each node represents a coordinate in the maze.
+   - Nodes (coordinates) are connected, representing possible moves between them.
+   - The adjacency list gives details about which pairs of coordinates are directly connected.
+
+2. **Identifying the Entry and Exit**:
+   - Entry (origin) is at coordinate (0,0).
+   - Exit (target) is at coordinate (4,5).
+
+3. **Building the Graph**:
+   - Convert the adjacency list format to a graph data structure where each node has its directly reachable neighboring nodes listed.
+   - The graph representation will be a dictionary where keys are coordinates and values are lists of reachable coordinates.
+
+4. **Pathfinding Method**:
+   - Use a Breadth-First Search (BFS) algorithm, which is efficient for finding the shortest path in an unweighted graph such as this.
+   - BFS explores neighbors level by level, ensuring the shortest path is identified once the exit point is reached.
+
+5. **Implementation of BFS**:
+   - Starting from the entry point (0,0), using a queue to track nodes to explore.
+   - Keep a set or dictionary to track visited nodes to avoid re-exploring them.
+   - Trace the path by backtracking from the exit point to the entry point using a parent node mapping obtained during BFS execution.
+
+6. **Achieving the Solution**:
+   - Following BFS on the maze's graph starting from (0,0), we continue to explore nodes and mark them until we reach (4,5).
+   - As we progress, ensure to mark each node with its predecessor, which will help reconstruct the path once the target is found.
+
+7. **Reconstructing the Path**:
+   - Using the predecessor relationship defined during BFS exploration, backtrack from the exit (4,5) to the entry (0,0).
+
+Using the steps outlined above and applying the BFS, the actual path obtained from (0,0) to (4,5) may vary slightly depending on specific choices made in ambiguous node explorations (when multiple paths can progress equivalently). The tracking of nodes and backtracking will yield:
+
+**Solution**:
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (4,0) (4,1) (4,2) (4,3) (4,4) (4,5) <PATH_END> 
+
+This solution strategically moves down to the bottom row and then proceeds directly across, using the connections defined in the adjacency list which offers a straight path towards the target from that point.

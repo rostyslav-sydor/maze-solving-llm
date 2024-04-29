@@ -1,0 +1,3 @@
+Depth First Search is a suitable algorithm for finding path in a graph which can be utilized to find a solution for the maze as the graph of a maze is undirected.
+Starting at the entry point, perform DFS and backtrack as needed. For each cell in the maze visited, if the cell has no unvisited neighbours, backtrack. If an unvisited neighbour exists, add it to the stack and continue, and output the final path.
+**Solution:** <PATH_START> (0,0) (0,1) (0,2) (1,2) (1,3) (2,3) (3,3) (3,4) (4,4) <PATH_END>

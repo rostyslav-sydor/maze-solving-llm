@@ -1,0 +1,14 @@
+To solve the maze given in the image, let's analyze the possible path starting from the entry point at (0,0) and moving to the exit at (4,4), considering the walls as barriers.
+
+<p>Solution:</p>
+
+1. Start from (0,0), move right to (0,1) as moving downwards is blocked.
+2. Continue to (0,2) since moving upwards or downwards is blocked.
+3. Move to (0,3) and then to (0,4), continuing right as the only direction possible.
+4. From (0,4), go down to (1,4) as moving left, right or up is blocked.
+5. Continue down to (2,4) and (3,4).
+6. At (3,4), the exit (4,4) right below is available. Move to (4,4).
+
+The sequence of coordinates from start to exit forms the path through the maze:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (0,4) (1,4) (2,4) (3,4) (4,4) <PATH_END>

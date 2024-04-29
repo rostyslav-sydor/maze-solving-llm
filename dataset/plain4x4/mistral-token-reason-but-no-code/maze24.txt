@@ -1,0 +1,18 @@
+To solve the given maze, we will use the Breadth-First Search (BFS) algorithm. This algorithm explores all the possible paths in the maze by adding the neighboring cells to a queue, and then traverses the queue to find the shortest path. We will start from the origin (0,0) and search for the target (3,3).
+
+1. Initialize a queue and a set to keep track of visited nodes.
+2. Add the origin node to the queue and mark it as visited.
+3. While the queue is not empty:
+   a. Dequeue a node from the queue.
+   b. If the dequeued node is the target, return the path.
+   c. For each neighbor of the dequeued node:
+       i. If the neighbor is not visited, add it to the queue and mark it as visited.
+       ii. Update the parent of the neighbor to be the dequeued node.
+4. If the queue is empty and the target is not found, there is no path from origin to target.
+5. Trace the path from the target to the origin by following the parent pointers.
+
+Now, let's apply the algorithm to our specific maze:
+
+<PATH_START> (0,0) (0,1) (1,1) (1,2) (1,3) (2,3) (3,3) <PATH_END>
+
+The solution path is (0,0) → (0,1) → (1,1) → (1,2) → (1,3) → (2,3) → (3,3), as represented by the tokens between <PATH_START> and <PATH_END>.

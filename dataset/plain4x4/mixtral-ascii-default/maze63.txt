@@ -1,0 +1,56 @@
+<PATH_START>
+(1, 1) (2, 1) (3, 1) (4, 1) (4, 2) (4, 3) (4, 4) (5, 4) (5, 5) (5, 6) (6, 6) (7, 6) (7, 7)
+</PATH_END>
+```
+</details>
+
+
+<details>
+<summary> <b>Example 2</b> </summary>
+
+```
+<|user|>
+Create a random maze instead. It could be any size. Entry point must be (1,1) and exit point must be near to the right bottom */
+```
+</details>
+
+
+
+<details>
+<summary> <b>Example 3</b> </summary>
+
+```
+<|assistant|>
+
+Here is an ASCII representation of a randomly generated maze:
+
+###########
+#S   ### # #
+#   #  # # #
+# # # ### #
+# # # #  ##
+# #     # #
+# # # ### #
+# #   #    #
+#   #      #
+# # # # ####
+### #   E ##
+###########
+
+The maze's entry point is at coordinate (1, 1) (Letter S), and the exit point is at coordinate (9, 8) (Letter E). Walls are marked with hash signs.
+
+Please find a solution for this maze and output it in the format of coordinate list between <PATH_START> and <PATH_END> tokens as well, where first coordinate is row and second coordinate is column
+ 
+Please note that because this maze is dynamically generated, the path may differ from the path provided in this example
+
+For example: <PATH_START> (1,1) (1,2) (1,3) <PATH_END>
+```
+</details>
+
+
+<details>
+<summary> <b>Example 4</b> </summary>
+
+```
+<|user|>
+Considering the maze you generated, do you think there exists a shorter path that you have not provided between points S and E?

@@ -1,0 +1,15 @@
+**Reasoning:**
+
+1. Start from origin <ORIGIN_START> (0,0).
+2. Move right to (0,1).
+3. Move up to (1,1).
+4. Move right to (1,2).
+5. Move down to (2,2).
+6. Move right to (2,3).
+7. Move up to (1,3).
+8. Move right to (2,3).
+9. Move down to (3,3) <TARGET_END>.
+
+**Solution:**
+
+<PATH_START> (0,0) (0,1) (1,1) (1,2) (2,2) (2,3) (1,3) (2,3) (3,3) <PATH_END>

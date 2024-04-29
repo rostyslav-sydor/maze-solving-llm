@@ -1,0 +1,13 @@
+Following the same principles as in the previous example, we apply BFS to find the shortest path in the provided maze.
+
+1) Move down from (0,0) to (1,0)
+2) Move right from (1,0) to (2,0)
+3) Move right from (2,0) to (3,0)
+4) Move right from (3,0) to (3,1)
+5) Move up from (3,1) to (2,1)
+6) Move right from (2,1) to (2,2)
+7) Move down from (2,2) to (3,2)
+8) Move right from (3,2) to (3,3)
+
+The calculated shortest path is:
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (2,1) (2,2) (3,2) (3,3) <PATH_END>

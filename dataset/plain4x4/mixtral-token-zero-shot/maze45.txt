@@ -1,0 +1,19 @@
+We need to run Dijkstra's Algorithm on the given graph to find the shortest path between the origin (0,0) and the target (3,3). 
+
+Here's a step-by-step process:
+
+1. Define our graph as an adjacency list.
+2. Initialize the distance from the origin to all other nodes as infinity. The distance from the origin to itself is 0.
+3. Create a priority queue that sorts nodes based on their distance from the origin. The node with the smallest distance is at the front of the queue.
+4. While the queue is not empty:
+	* Dequeue the node at the front of the queue and label it current.
+	* Find all neighbors of the current node. For each neighbor, calculate the distance from the current node to the neighbor (which is the current distance to current node plus 1)
+	* If the distance from the current node to the neighbor is less than the neighbor's current shortest distance, update the neighbor's distance and insert it into the priority queue.
+
+Upon completion of these steps, we will have the shortest path distances from the origin to all nodes in the graph. We can then follow the path to the target node by recording our steps along the way.
+
+Remember to follow the graph-traversing steps and build the path from the target back to the original point. You should end up with a path containing (0,0), (0,1), (1,1), (2,1), (2,2), (2,3), (3,3). 
+
+Here is the formatted response between the <PATH_START> and <PATH_END> tokens:
+
+<PATH_START> (0,0) (0,1) (1,1) (2,1) (2,2) (2,3) (3,3) <PATH_END>

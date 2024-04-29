@@ -1,0 +1,22 @@
+To solve the maze presented as an adjacency list, I approached the problem by first understanding the connections scripted between each point (coordinates) and parsed the entry (origin) and exit (target) points.
+
+The adjacency list showed direct connections between pairs of coordinates in the maze. Each pair is directly reachable from one another. This gave me an insight into possible movements throughout the maze.
+
+The maze starts at coordinate (0,0) and needs to find a path to coordinate (3,3). By examining and exploring paths that respect the adjacency connections, I looked for paths that could linearly or strategically move closer to the target.
+
+Based on connections provided:
+1. Started from the origin (0,0).
+2. Went to (1,0), moving in the right direction towards the bottom row.
+3. Continued to (2,0), still pressing downwards.
+4. Went to (3,0), reached the bottom row.
+5. Moved right to (3,1), continued along the bottom row.
+6. Proceeded to (3,2).
+7. Finally, arrived at the target (3,3).
+
+This path effectively uses each immediate reachable coordinate to make a progressive move towards the goal without retracing steps.
+
+Now translating this into the specified format:
+
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (3,2) (3,3) <PATH_END> 
+
+This path represents a clear and direct route from the starting point to the destination based on the connections provided by the adjacency list.

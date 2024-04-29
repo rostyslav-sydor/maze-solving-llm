@@ -1,0 +1,8 @@
+One possible solution to the maze is:
+<PATH_START> (0,0) (1,0) (2,0) (2,1) (2,2) (2,3) (3,3) <PATH_END>
+
+To find this solution, we can begin by traversing the nodes using a Depth-First search and then backtrack while searching for alternative paths to the target. To ensure that we traverse adjacent nodes within the maze, we use the adjacency list provided. To verify that the solution found does not cross any walls, we should verify that for each node in the path they belong to the same region and are adjacent to each other in the list of the adjacency list.  In this case the following condition must hold for all nodes in the solution:
+```python
+adjacent(list[current],target_row, target_col)
+```
+Where adjacent is a function checking if node `(target_row, target_col)` is adjacent to any node in the `current` list.

@@ -1,0 +1,12 @@
+1. **Identify the starting and ending points**: The starting point is (0,0) and the ending point is (3,3).
+2. **Create a queue** to store the coordinates of the cells to be visited.
+3. **Add the starting point** to the queue.
+4. **While the queue is not empty**
+    - **Dequeue the first coordinate** from the queue.
+    - **If the dequeued coordinate is the ending point**, print the path from the starting point to the ending point and stop.
+    - **Otherwise**, for each neighbor of the dequeued coordinate, do the following:
+        - If the neighbor has not been visited and is not an obstacle, add it to the queue.
+5. **If the ending point is not reached**, print "No path found".
+
+Here is the solution path:
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>

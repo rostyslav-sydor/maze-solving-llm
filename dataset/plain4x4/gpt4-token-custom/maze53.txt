@@ -1,0 +1,23 @@
+To solve this maze, we need to trace a path from the origin point (0,0) to the target point (3,3) using the adjacency list provided:
+
+1. Starting from the origin (0,0), observe that the next possible step according to the adjacency list is (1,0).
+2. From (1,0), we can move to (1,1) following the link (1,0) <--> (1,1).
+3. From (1,1), proceed to (1,2) through the connection (1,1) <--> (1,2).
+4. From (1,2), move to (1,3) as per (1,2) <--> (1,3).
+5. From (1,3), we can go to (2,3) via (1,3) <--> (2,3).
+6. From (2,3), advance to (3,3) through (2,3) <--> (3,3).
+
+This builds a valid path from the entry to the exit point. Now let's verify that each step connects only to adjacent cells and there are no walls being crossed:
+
+- (0,0) <--> (1,0): valid move, vertically adjacent.
+- (1,0) <--> (1,1): valid move, horizontally adjacent.
+- (1,1) <--> (1,2): valid move, horizontally adjacent.
+- (1,2) <--> (1,3): valid move, horizontally adjacent.
+- (1,3) <--> (2,3): valid move, vertically adjacent.
+- (2,3) <--> (3,3): valid move, vertically adjacent.
+
+The path maintains a valid connection between cells without crossing any prohibited areas as per the given adjacency list. 
+
+Outputting the final path:
+
+<PATH_START> (0,0) (1,0) (1,1) (1,2) (1,3) (2,3) (3,3) <PATH_END>

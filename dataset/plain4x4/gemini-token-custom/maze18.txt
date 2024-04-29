@@ -1,0 +1,3 @@
+<PATH_START> (0,0) (1,0) (2,0) (2,1) (2,2) (3,2) (3,3) <PATH_END>
+
+We can start from the origin (0,0) and move right to (1,0). From (1,0) we can move either up or right, but moving up would introduce a loop in the path and would not allow us to reach the target. So, we move right to (2,0). From (2,0) we can only move up. We keep moving up until we reach (2,2). From (2,2) we can move either right or down. Moving right would bring us back to the starting position, and moving down would lead us to the target. So, we move down to (2,3) and then right to (3,3), which is the target. This path does not cross any walls and only uses adjacent cells.

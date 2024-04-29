@@ -1,0 +1,9 @@
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>
+
+The solution is found by traversing the maze from the starting point to the ending point while adhering to the following rules:
+
+1. At each step, move to an adjacent cell that has not been visited before.
+2. If there are multiple adjacent cells that have not been visited, choose the one that is closest to the ending point.
+3. If there are no adjacent cells that have not been visited, backtrack to the most recent visited cell that has an unvisited adjacent cell.
+
+By following these rules, we can find a path from the starting point to the ending point without crossing any walls or using any non-adjacent cells.

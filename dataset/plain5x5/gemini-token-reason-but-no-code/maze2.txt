@@ -1,0 +1,6 @@
+1. **Define the boundaries of the maze:** The maze is defined by the <ADJLIST_START> and <ADJLIST_END> tokens, which are the first and last lines of the input.
+2. **Locate the starting and ending points:** The starting and ending points are marked with <ORIGIN_START/END> and <TARGET_START/END> tokens respectively. In this case, the starting point is (0,0) and the ending point is (4,4).
+3. **Traverse the maze:** We can use a depth-first search (DFS) or a breadth-first search (BFS) to traverse the maze. In this case, we will use a DFS.
+4. **Output the solution:** The solution is a list of coordinates between <PATH_START> and <PATH_END> tokens. In this case, the solution is:
+
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (3,2) (3,3) (3,4) (4,4) <PATH_END>

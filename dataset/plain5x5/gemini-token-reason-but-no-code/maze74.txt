@@ -1,0 +1,4 @@
+The maze provided has multiple possible solutions. 
+One of the solutions is to go down, then right, then down again. This can be written as: 
+
+<PATH_START> (0,0) (0,1) (1,1) (1,2) (2,2) (2,3) (2,4) (3,4) (4,4) <PATH_END>

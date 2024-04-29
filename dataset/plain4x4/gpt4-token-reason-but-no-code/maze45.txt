@@ -1,0 +1,39 @@
+To solve the maze presented, we first need to understand the adjacencies and structure provided in the adjacency list format. This defines how various points (nodes) in the maze (graph) are connected. The points are given in (row, column) format. 
+
+The list describes which points are directly connected:
+1. From (0,3) to (1,3) and vice versa
+2. From (3,2) to (3,1) and vice versa
+3. And so forth...
+
+Our entry point, as marked within <ORIGIN_START> and <ORIGIN_END>, is (0,0) and our target exit point within <TARGET_START> and <TARGET_END> is (3,3).
+
+To find the path, one algorithmic approach would be to use either Depth First Search (DFS) or Breadth First Search (BFS) beginning from the entry point. BFS is particularly useful for finding the shortest path in an unweighted graph:
+
+1. Start BFS traversal from the node (0,0).
+2. Explore all neighbouring nodes iteratively, and mark nodes as visited to prevent revisiting.
+3. Use a queue to hold nodes to explore next; BFS utilizes a queue to adopt a first-in-first-out (FIFO) approach to handle nodes.
+4. Every time a node is dequeued, record its path. If it's the exit point (3,3), stop and that's your solution path.
+5. If not, enqueue all its unmarked adjacent nodes and continue.
+
+Using the adjacency list and applying BFS here:
+
+- Start at (0,0). Visited (0,0).
+- Neighbours are (0,1).
+- Move to (0,1), enqueue and mark as visited.
+- (0,1) neighbours are (0,2), (0,0) (already visited).
+- Move to (0,2), enqueue and mark as visited.
+- (0,2) neighbours are (0,3), (0,1) (already visited).
+- Move to (0,3), enqueue and mark as visited.
+- (0,3) neighbours are (0,2) (already visited), (1,3).
+- Move to (1,3), enqueue and mark as visited.
+- (1,3) neighbours are (2,3), (0,3) (already visited).
+- Move to (2,3), enqueue and mark as visited.
+- (2,3) neighbours are (1,3) (already visited), (2,2), (3,3).
+- Continuing to explore adjacent unvisited nodes...
+- Finally move to (3,3), and the path is constructed from queue recording.
+
+So the specific solution path starting from (0,0) and ending at (3,3) follows the sequence of moves as seen in our traversal, which can be tracked back through the recording:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>
+
+This solution comprehensively navigates through the connections provided by the adjacency list, moving horizontally and vertically through connected cells without revisiting any node, achieving the path from start to end efficiently.

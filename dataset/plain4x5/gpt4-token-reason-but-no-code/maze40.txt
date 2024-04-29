@@ -1,0 +1,25 @@
+The adjacency list provided represents a graph where nodes are coordinates on a grid, and the edges show allowed movements between these coordinates. We need to determine a path from the start coordinate (0,0) to the target coordinate (3,4). 
+
+The strategy used here involves treating the problem as a search problem where we traverse the graph using a breadth-first search (BFS) technique. BFS is particularly suitable for this maze as it explores all neighbors at the present depth prior to moving on to nodes at the next depth level. This is effective for unweighted graphs like ours, ensuring the shortest path is found in a grid-like structure.
+
+Following BFS principles:
+1. Start from the initial node (0,0).
+2. Explore all its adjacent nodes.
+3. Mark nodes as visited as they are explored to prevent re-exploration, adding a layer of efficiency.
+4. Utilize a queue to help with the level-order traversal, adding each neighbour to the back of the queue as they are explored.
+5. Keep track of the path by noting down the predecessor of each node visited. This backtracking from the target node using the predecessor will reconstruct the path once the target is reached.
+
+Given the adjacency list, the BFS exploration starts from (0,0), considers all accessible nodes, and explores until it reaches the target (3,4). Then, we backtrack the path using predecessor nodes.
+
+Here is a solution applying this BFS approach specifically derived from the maze's given adjacency list:
+
+<Path Explanation>
+BFS traversal starts at (0,0).
+From (0,0), it goes to (0,1), then (1,1), moving next to (1,0). Each move considers all connectable paths directly from the adjacency list.
+It continues this way systematically exploring upwards and rightwards because those directions lead towards our target (3,4).
+Finally, it reaches the target at (3,4) having explored possible shortest paths and marks the sequence of moves.
+
+<Solution Based on BFS Strategy>
+<PATH_START> (0,0) (0,1) (1,1) (1,2) (2,2) (2,3) (2,4) (3,4) <PATH_END>
+
+This path output reflects the correct traversal from the start to the target node considering all immediate connections and finding the most efficient route as per BFS in a grid maze where every node is a coordinate and every edge defines a direct pathway from one coordinate to another.

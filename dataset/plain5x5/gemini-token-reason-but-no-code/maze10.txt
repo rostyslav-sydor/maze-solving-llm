@@ -1,0 +1,11 @@
+We can use a breadth-first search (BFS) algorithm to find a path from the starting point to the ending point. 
+
+BFS is a graph traversal algorithm that starts at the root node and explores all of its neighbors, then explores all of the neighbors of those nodes, and so on, until it reaches the goal node. 
+
+In the case of a maze, we can represent the maze as a graph, where each node is a cell in the maze, and each edge is a connection between two cells. 
+
+We can then use BFS to find a path from the starting cell to the ending cell.
+
+Here is a specific solution for the given maze:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (1,4) (2,4) (3,4) (4,4) <PATH_END>

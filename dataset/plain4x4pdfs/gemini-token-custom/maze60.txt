@@ -1,0 +1,15 @@
+```
+<PATH_START> (0,0) (0,1) (1,1) (1,2) (2,2) (2,3) (3,3) <PATH_END>
+```
+
+1. Start at the origin (0,0).
+2. Move right to (1,0).
+3. Move down to (1,1).
+4. Move right to (2,1).
+5. Move up to (2,0).
+6. Move right to (3,0).
+7. Move down to (3,1).
+8. Move right to (3,2).
+9. Move down to (3,3).
+
+This path uses only adjacent cells and does not cross any walls, so it is a valid solution to the maze.

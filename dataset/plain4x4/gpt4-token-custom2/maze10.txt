@@ -1,0 +1,54 @@
+To solve the maze provided, we'll construct a graph from the adjacency list and use Breadth-First Search (BFS) to find the shortest path from the origin (0,0) to the target (3,3).
+
+First, let's parse the adjacency list and reconstruct the graph:
+
+```
+(1,1) <--> (0,1)
+(2,0) <--> (3,0)
+(0,3) <--> (1,3)
+(3,0) <--> (3,1)
+(2,0) <--> (2,1)
+(0,0) <--> (1,0)
+(3,3) <--> (3,2)
+(3,1) <--> (3,2)
+(2,2) <--> (2,3)
+(0,2) <--> (0,1)
+(3,3) <--> (2,3)
+(1,0) <--> (2,0)
+(0,2) <--> (0,3)
+(1,2) <--> (1,3)
+(2,2) <--> (1,2)
+```
+
+Graph with nodes connected as above:
+- Entry point: (0,0)
+- Exit point: (3,3)
+
+To find a path from (0,0) to (3,3):
+1. Start BFS from (0,0).
+2. Visit each connected node while ensuring nodes are visited only once.
+3. Track the path using a predecessor mapping.
+
+Starting BFS traversal:
+1. From (0,0) to (1,0)
+2. From (1,0) to (2,0)
+3. From (2,0) to (3,0)
+4. From (3,0) to (3,1)
+5. From (3,1) to (3,2)
+6. From (3,2) to (3,3) - DESTINATION REACHED.
+
+Each transition is feasible based on the adjacency list provided. Let us confirm by tracing the path back from (3,3) to (0,0) using the connections:
+
+Path Construction:
+- (3,3) to (3,2) via direct connection.
+- (3,2) to (3,1) also directly connected.
+- (3,1) to (3,0) directly connected.
+- (3,0) to (2,0) directly connected.
+- (2,0) to (1,0) directly connected.
+- (1,0) to (0,0) directly connected.
+
+The path found traces correctly, thus:
+
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (3,2) (3,3) <PATH_END>
+
+This path respects the adjacency list given and connects the origin to the target, passing through all intermediary nodes listed in the order found by BFS, ensuring minimal steps.

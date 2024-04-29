@@ -1,0 +1,7 @@
+First, we need to find a path from the origin (0,0) to the target (3,3) in the maze. Starting from the origin, we can follow the adjacency list to navigate through the maze until we reach the target.
+
+Following the given adjacency list, one possible path is: (0,0) -> (0,1) -> (0,2) -> (0,3) -> (1,3) -> (2,3) -> (3,3).
+
+Therefore, the solution path would be represented as: <PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>.
+
+By following this path, we successfully navigate from the origin to the target in the maze.

@@ -1,0 +1,32 @@
+To solve the maze provided in the adjacency list, we first understand the structure of the graph. Each pair of coordinates represents a connection or a path segment in the maze between two cells. We are given the entrance at (0,0) and the exit at (4,4).
+
+Using Breadth-First Search (BFS) is suitable for this kind of maze-solving task as BFS explores all neighbor nodes at a present depth prior to moving on to nodes at the next depth level. This nature of BFS is advantageous for finding the shortest path in an unweighted graph like our maze.
+
+We follow these steps to address the problem:
+1. Parse the adjacency list to create a graph representation.
+2. Implement BFS starting from the origin (0,0):
+   - Mark the start node and enqueue it.
+   - Continue until the queue is empty or the target (4,4) is reached.
+   - For each dequeued node, explore its adjacent nodes, mark them visited, and enqueue them if they haven't been visited.
+3. Track the path from start to end by storing predecessors of each node.
+4. Extract the route by backtracking from the destination (4,4) to the origin (0,0) using the predecessor information.
+
+Now, applying this to the provided maze data, we construct the graph and execute BFS:
+
+Start BFS at (0,0), exploring: 
+- from (0,0) to (1,0) 
+- from (0,0) to (0,1) 
+
+Continue expanding from each newly found node:
+- from (1,0) to (2,0) 
+- eventually, (0,1) to (1,1), (1,1) to (1,2), and so on,
+- monitoring each junction and expanding to new paths until we eventually reach (4,4).
+
+After implementing BFS on the provided adjacency list maze structure, the successful path from (0,0) to (4,4) is computed as:
+- (0,0), (1,0), (2,0), (3,0), (4,0), (4,1), (4,2), (4,3), (4,4).
+
+This path is then formatted as required:
+
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (4,0) (4,1) (4,2) (4,3) (4,4) <PATH_END>
+
+This sequence makes logical sense given the adjacency relationships in the list and adherence to the BFS algorithm ensuring the shortest path is achieved.

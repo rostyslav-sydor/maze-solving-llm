@@ -1,0 +1,15 @@
+To solve this maze, we start from the entrance at (0,0) and check available paths from each cell, avoiding walls and making sure not to backtrack to cells we've already visited. The key is to move through cells that are both accessible and leading towards the exit at (4,4). Based on the maze layout provided in the image:
+
+1. Start at the entrance at (0,0). The only possible move is right to (0,1).
+2. From (0,1), move right again to (0,2).
+3. From (0,2), options include moving down to (1,2).
+4. From (1,2), move up to (0,2) and then right to reach (0,3).
+5. From (0,3), move right to (0,4).
+6. From (0,4), move down to (1,4).
+7. From (1,4), move down to (2,4).
+8. From (2,4), move down to (3,4).
+9. From (3,4), move down to the exit at (4,4).
+
+Following this path, each step ensures forward movement towards the exit without crossing any walls, leading to a valid solution. Here is the required format of the solution:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (0,4) (1,4) (2,4) (3,4) (4,4) <PATH_END>

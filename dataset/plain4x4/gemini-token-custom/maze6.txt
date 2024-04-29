@@ -1,0 +1,24 @@
+```
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>
+```
+
+Let's go through the solution step by step:
+
+- We start at the origin (0,0).
+- We can move right to (1,0), but that's a dead end.
+- We can move down to (0,1), which is a valid move.
+- We can move right to (1,1), which is also a valid move.
+- We can move down to (0,2), which is another valid move.
+- We can move right to (1,2), which is a valid move.
+- We can move down to (0,3), which is a valid move.
+- We can move right to (1,3), which is also a valid move.
+- We can move up to (0,3), which is a valid move.
+- We can move right to (1,3), which is a valid move.
+- We can move up to (0,2), which is a valid move.
+- We can move right to (1,2), which is a valid move.
+- We can move up to (0,1), which is a valid move.
+- We can move right to (1,1), which is a valid move.
+- We can move up to (0,0), which is a valid move.
+- We have reached the target (3,3).
+
+We can check that our solution does not cross any walls by checking that each move is a valid move. We can also check that the path uses only adjacent cells by checking that each move is to a cell that is adjacent to the previous cell.

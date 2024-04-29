@@ -1,0 +1,10 @@
+<PATH_START> (1,1) (1,2) (1,3) (2,3) (3,3) (4,3) (4,4) (4,5) (4,6) (4,7) (5,7) (6,7) (7,7) <PATH_END>
+
+To solve the maze:
+1. Start at the entry point, S, which has the coordinates (1,1).
+2. Identify paths by moving horizontally or vertically, avoiding walls represented by "#".
+3. From the start, head right until reaching the third column at (1,3).
+4. At (1,3), move downwards vertically, travelling through column 3, to avoid walls in the way.
+5. At (4,3), start moving to the right; continue moving right until reaching column 7.
+6. Then, continue moving downward until reaching the exit, E, at (7,7).
+7. This path takes advantage of clear rows and columns to minimize encounters with walls, ensuring a safe path to the exit.

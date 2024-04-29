@@ -1,0 +1,22 @@
+To solve this maze problem, we need to find a path from the entry point (0,0) to the exit point (4,4) based on the provided adjacency list, which denotes connections between cells in the maze grid.
+
+The approach involves constructing the graph from the adjacency list and then using Breadth-First Search (BFS) to find the shortest path from the origin to the target. BFS is particularly suitable for this type of unweighted graph since it explores neighbors level by level, ensuring that the first time it visits a node at a certain distance, it has found the shortest path to that node.
+
+1. **Graph Construction**: Start by building a graph where each node represents a cell (x,y) and edges exist between nodes if they are directly connected in the adjacency list. This graph will be used to traverse and find paths.
+
+2. **Use BFS for Pathfinding**: Implement BFS using a queue where each entry contains a node and the path taken to reach it. Begin from the starting node (0,0), exploring all reachable neighbors while keeping track of the nodes visited to avoid cycles. For each node, record the path used to reach it.
+
+3. **Path Extraction**: Once BFS finds the destination node (4,4), the current path in the queue entry for this node represents the shortest path from the start to the exit.
+
+Given the adjacency list in the prompt and following the BFS from (0,0), the path exploration would visualize potential moves based on connected nodes until reaching (4,4). To confirm the path, each move logically follows from a possible connected node until the destination is reached.
+
+To detail this specific solution from the entry point to the exit:
+
+- Start from (0,0) and move sequentially to connected nodes that gradually approach the target (4,4).
+- Track the path by following the BFS exploration where each move leads to a node that is a step closer or strategically aligns the path towards the target.
+
+Here's the optimal path derived through BFS for this specific maze:
+
+<PATH_START> (0,0) (1,0) (2,0) (2,1) (3,1) (3,0) (4,0) (4,1) (4,2) (4,3) (4,4) <PATH_END>
+
+This sequence navigates through permissible movements as dictated by the adjacency list, ensuring each step is possible and connects directly to the next, ultimately leading to the exit at (4,4).

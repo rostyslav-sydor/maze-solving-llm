@@ -1,0 +1,19 @@
+Based on the adjacency list provided, we need to find a path from the origin point (0,0) to the target point (3,3).
+
+To describe the method, I used a common pathfinding algorithm (such as Breadth-First Search - BFS) on the adjacency list. Here's an outline of the thought process and reasoning behind the pathfinding:
+1. The adjacency list describes how each point (or node) in the maze is connected to other points. This tells us direct steps from one point to another that don't cross any walls.
+2. Starting at the origin (0,0), we systematically explore all accessible nodes using BFS, which explores all the neighboring nodes at the present depth prior to moving on to nodes at the next depth level.
+3. From each node, we explore all adjacent nodes listed in the adjacency list. For maintaining the path, we remember which node we came from to each node.
+4. This process continues until we either find the target (3,3) or exhaust all reachable nodes. Given the adjacency list fully describes reachable points from any node, and (3,3) is described as connected to some nodes, it should be reachable.
+5. As the search encounters the target (3,3), we backtrace from the target to the origin using our record of where we came from for each node, giving us the path.
+
+The path calculated from the BFS considering the adjacency list provided and described reasoning:
+
+<PATH_START> (0,0) (1,0) (1,1) (2,1) (2,2) (3,2) (3,3) <PATH_END> 
+
+- We begin at (0,0) and move to (1,0), which is a valid move as shown from the adjacency list: (2,0) <--> (1,0) and (1,0) <--> (0,0).
+- We move from (1,0) to (1,1), also allowed: (1,0) <--> (1,1).
+- We continue to adjacent points (2,1) from (1,1) and into (2,2) from (2,1), both supported by adjacency: (1,1) <--> (2,1); (2,2) <--> (2,1).
+- We progress to (3,2) from (2,2) and eventually reach (3,3) from (3,2), guided by: (3,2) <--> (2,2); (3,3) <--> (3,2).
+
+This path does not cross any walls since only adjacent connections from the provided list were used, and all steps involve adjacent cells as defined in the adjacency list. Also, this is the shortest path since each move brings us closer to the target with no backtracking or unnecessary detours, as dictated by the BFS methodology.

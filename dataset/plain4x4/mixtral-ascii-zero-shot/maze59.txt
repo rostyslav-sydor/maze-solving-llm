@@ -1,0 +1,12 @@
+Let's start exploring the maze from the entry point (1,1) and follow the path.
+
+1. From (1,1) we have walls around us so we must go either right or down. Let's choose right, so our next position is (1,2).
+2. At (1,2) we still can't go left as there's a wall. If we decide to go back to (1,1) we might get stuck in a loop. So let's continue going right and our next position is (1,3).
+3. At (1,3) again we can't go left as there's a wall and going back to (1,2) might get us stuck in a loop. So, we will go right again and reach (1,4) - still surrounded by walls, right is the only path available.
+4. We'll then get to (1,5), but there's a wall in front and going back would lead to a loop. Right seems to be the only way, so we'll move to (1,6).
+5. In (1,6) we're surrounded by walls. If we try to go left, we won't be able to move further due to walls in front and behind. So, the only possible direction is right, which brings us to (1,7).
+6. At (1,7) we can't go right or left due to the walls. The only direction we can proceed is down, so we'll move to (2,7).
+7. At (2,7) we observe a wall in front of us. Going back or down would lead to a loop and going left won't create a path. So, let's go down to (3,7).
+8. At (3,7) we still have walls surrounding us but down seems to be the only path available, so we'll go down to (4,7).
+9. At (4,7) we see that other than the wall in front, we can go left or down. Let's choose left, and we'll reach (4,6).
+10. At (4,6) we can go left or back, but since going left would cause us to get trapped by the wall around the Exit point, we'll go left and reach (4

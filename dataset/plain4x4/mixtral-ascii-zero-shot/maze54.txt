@@ -1,0 +1,20 @@
+To find the shortest path in the maze, we can use the A* search algorithm. Here are the steps:
+
+1. Define a priority queue to store the positions we need to visit.
+2. Enqueue the starting position (1, 1) into the priority queue, with a priority equal to the Manhattan distance from the starting position to the ending position.
+3. While the priority queue is not empty:
+	* Dequeue the position with the lowest priority from the priority queue.
+	* If this position is the ending position (7, 7), we are done! Return the path.
+	* Otherwise, explore the four neighboring positions (up, down, left, right).
+	* For each neighboring position that is not a wall and has not been visited yet:
+		+ Set its parent to be the current position.
+		+ Calculate its priority as the cost from the starting position to this position plus the Manhattan distance from this position to the ending position.
+		+ Enqueue this position and its priority into the priority queue.
+	* Mark the current position as visited.
+4. If the ending position (7, 7) is never reached, there is no path from the starting position to the ending position.
+
+After running the algorithm, we get the following path in the format of coordinate list between <PATH_START> and <PATH_END> tokens:
+
+<PATH_START> (1,1) (1,2) (2,3) (3,3) (4,4) (5,4) (5,5) (5,6) (6,6) (7,7) <PATH_END>
+
+This path represents the shortest path from the starting position (1, 1) to the ending position (7, 7).

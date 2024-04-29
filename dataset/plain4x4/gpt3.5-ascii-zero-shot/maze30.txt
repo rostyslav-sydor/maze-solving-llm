@@ -1,0 +1,10 @@
+- Start at coordinate (1,1)
+- Move right to (1,2), then down to (2,2), then right to (2,3), then down to (3,3)
+- Move left to (3,2), then down to (4,2), then right to (4,3), then down to (5,3), then right to (5,4)
+- Move down to (6,4), then right to (6,5), then down to (7,5), then right to (7,6), then down to (8,6) 
+- Move left to (8,5), then down to (9,5), then left to (9,4), then down to (10,4), then left to (10,3) 
+- Move down to (11,3), then left to (11,2), then down to (12,2), then left to (12,1)
+- Finally, reach the exit at coordinate (7,7) 
+
+Therefore, the solution path is:
+<PATH_START> (1,1) (1,2) (2,2) (2,3) (3,3) (3,2) (4,2) (4,3) (5,3) (5,4) (6,4) (6,5) (7,5) (7,6) (8,6) (8,5) (9,5) (9,4) (10,4) (10,3) (11,3) (11,2) (12,2) (12,1) <PATH_END>

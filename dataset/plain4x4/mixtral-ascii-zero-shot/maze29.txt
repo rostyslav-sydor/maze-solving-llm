@@ -1,0 +1,38 @@
+First, let's try to identify the possible movements from the entry point and to the exit point. We can move either to the right or to the down side recursively.
+
+Let's start with the movement to the right:
+
+1. From (1, 1), we can move to the right first, which leads to (1, 2).
+
+Now check if movement is possible to the right or down:
+
+2. From (1, 2), we cannot move to the right anymore since it's blocked by '##'. So let's move down to (2, 2).
+
+3. From (2, 2), moving to lower row will bring us to (3, 2).
+
+4. From (3, 2), moving right will bring us to (3, 3).
+
+5. From (3, 3), we can move down which leads to (4, 3).
+
+6. From (4, 3), we can move down again to (5, 3).
+
+7. From (5, 3), we cannot move down further since it's blocked by '##'. However, we can move to the right, leading to (5, 4).
+
+8. From (5, 4), the only possible move remaining is down to (6, 4).
+
+9. From (6, 4), the only possible move is to the right going to (6, 5).
+
+10. From (6, 5), we cannot move down anymore, however we can move right to (6, 6).
+
+11. Finally, from (6, 6), we found the exit at (7, 7). 
+
+Please output the path coordinates between <PATH_START> and <PATH_END>:
+<PATH_START> (1,1) (1,2) (2,2) (3,2) (3,3) (4,3) (5,3) (5,4) (6,4) (6,5) (6,6) (7,7) <PATH_END>
+
+Let's check the solution visually:
+
+Ascii representation of the correct path:
+#########
+#S> #>  #
+#  #> ## #
+#  >#  

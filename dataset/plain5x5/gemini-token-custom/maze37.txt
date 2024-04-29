@@ -1,0 +1,5 @@
+<PATH_START> (0,0) (0,1) (1,1) (1,2) (2,2) (3,2) (3,3) (4,3) (4,4) <PATH_END>
+
+This path is valid as it only uses adjacent cells and does not cross any walls.
+
+The path starts at (0,0) and moves right to (0,1). From there, it moves up to (1,1) and then right to (1,2). It continues by moving down to (2,2), then right to (3,2), and up to (3,3). Finally, it moves right to (4,3) and up to (4,4), which is the target.

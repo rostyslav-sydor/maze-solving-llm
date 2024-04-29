@@ -1,0 +1,27 @@
+To solve this maze, we first interpret the adjacency list information into a format we can use to understand the connections between each cell. On examining the list, we create a graph representation where each node corresponds to a coordinate in the maze, and an edge exists between two nodes if the cells corresponding to these coordinates are directly connected.
+
+From the adjacency list:
+1. Parse each pair of connections to form a graph.
+2. Each connection signifies that two spots in the maze are directly accessible to each other.
+3. Notate the origin and target coordinates for path finding purposes.
+
+After building the graph from the adjacency data:
+- The origin/start is at coordinate (0,0).
+- The target/exit is at coordinate (3,3).
+
+We then need to find a path from the origin to the target:
+1. Use a simple graph traversal technique like Breadth-First Search (BFS) to explore the maze from the origin. BFS is appropriate here as it will find the shortest pathway in an unweighted graph.
+2. Moving from one cell to an adjacent cell takes one step. Each connection has equal weight.
+3. BFS will explore layer by layer from the origin until it hits the target, ensuring the shortest path is found due to its level-wise exploration.
+
+Traversing using BFS:
+- Begin from (0,0), and by looking at all possible directions dictated by the graph edges, move to (0,1).
+- Continue from (0,1) to (1,1), then to (2,1), and so on, exploring each accessible coordinate until reaching (3,3).
+
+Validity of the path:
+- We only move along edges defined in the adjacency list, ensuring no movement through walls.
+- Each step of the path connects directly adjacent cells. 
+
+Finally, convert the complete path into the requested output format:
+<PATH_START> (0,0) (0,1) (1,1) (2,1) (3,1) (3,2) (3,3) <PATH_END>
+Ensure every step connects valid adjacent nodes as per the graph formed from the adjacency list, confirming the movement between cells respects the maze’s constraints and doesn't pass through any walls. This forms a valid path from entrance to exit using the shortest route as defined by BFS.

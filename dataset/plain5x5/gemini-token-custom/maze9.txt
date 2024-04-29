@@ -1,0 +1,11 @@
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) (4,3) (4,4) <PATH_END>
+
+**Reasoning**
+
+Starting at the origin (0,0), we can move right to (0,1) and then down to (0,2). From there, we can move right to (0,3) and then up to (1,3). We can then move right to (2,3), down to (3,3), right to (4,3), and finally up to (4,4), the target.
+
+**Checking for validity**
+
+We can check that this solution does not cross any walls by verifying that each move is to an adjacent cell. In this case, each move is either to the right, left, up, or down by one unit, which is allowed.
+
+We can also check that the path uses only adjacent cells by verifying that there are no gaps in the path. In this case, there are no gaps, so the path is valid.

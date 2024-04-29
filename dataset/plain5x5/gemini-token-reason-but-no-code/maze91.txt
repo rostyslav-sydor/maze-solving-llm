@@ -1,0 +1,6 @@
+To find a solution for a maze represented as a graph the following algorithm can be implemented: starting from an entry point (marked as <ORIGIN_START> token), a depth first search (DFS) can be run.
+When a coordinate is visited, it is stored in a stack and its potential next moves are added to the stack and visited.
+When the stack is empty, then there is no path between the origin and target.
+Otherwise, if the stack is not empty and the coordinate on top of the stack is the target coordinate (marked as <TARGET_START> token), then a path has been found and  can be read from the stack in reverse order (from top to bottom).
+
+For the maze in the given example the solution would be: <PATH_START> (4,4) (4,3) (3,3) (3,4) (3,1) (2,1) (1,1) (1,0) (0,0) <PATH_END>

@@ -1,0 +1,13 @@
+1. The starting point is <ORIGIN_START> (0,0) and the ending point is <TARGET_END> (3,3).
+
+2. Starting from the origin, we can move to the following adjacent points: (1,0), (0,1).
+
+3. From (1,0), we can move to (2,0).
+
+4. From (2,0), we can move to (2,1).
+
+5. From (2,1), we can move to (3,1).
+
+6. From (3,1), we can move to (3,2), (3,3).
+
+7. Since (3,3) is the destination, the path is: <PATH_START> (0,0) (1,0) (2,0) (2,1) (3,1) (3,3) <PATH_END>

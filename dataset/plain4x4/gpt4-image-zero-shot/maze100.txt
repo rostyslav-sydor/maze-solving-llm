@@ -1,0 +1,11 @@
+To solve the maze from entry (0,0) to exit (3,3), we need to navigate through open paths, avoiding walls.
+
+- Start at (0,0). The only open path is to move right to (0,1).
+- From (0,1), continue right to (0,2).
+- At (0,2), you can move down to (1,2).
+- From (1,2), move down to (2,2).
+- At (2,2), continue downward to (3,2) as the path directly to (3,3) is blocked by a wall.
+- Finally, from (3,2), move right into the exit at (3,3).
+
+So, the path coordinates are:
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (2,2) (3,2) (3,3) <PATH_END>

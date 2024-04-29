@@ -1,0 +1,17 @@
+Here is the solution for the maze you provided:
+
+[PATH_START] (0,0) (1,0) (2,0) (3,0) (3,1) (2,1) (2,2) (3,2) (3,3) [PATH_END]
+
+The maze has 8 nodes, and the shortest path between the maze's origin (0,0) and target (3,3) is as follows:
+
+1. (0,0)
+2. (1,0)
+3. (2,0)
+4. (3,0)
+5. (3,1)
+6. (2,1)
+7. (2,2)
+8. (3,2)
+9. (3,3)
+
+Please find the solution in the format you provided, with the first coordinate being the row and the second coordinate being the column.

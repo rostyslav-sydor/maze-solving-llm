@@ -1,0 +1,14 @@
+To solve a maze using an adjacency list, the algorithm should perform a depth-first search (DFS) starting from the origin.
+DFS involves recursively exploring all possible paths from the current node until a target is reached or all paths are exhausted.
+For each node, the algorithm should visit all its adjacent nodes that have not been visited before until it reaches the target.
+If the target is not found, the algorithm should backtrack and visit the next unvisited adjacent node of the current node's parent.
+
+In the given maze, starting from the origin at (0,0), the adjacent nodes are (0,1) and (1,0).
+The algorithm visits (0,1) and finds that it has adjacent nodes (0,2) and (1,1).
+It visits (1,1) and finds that it has adjacent nodes (0,1), (1,2), and (2,1).
+It visits (1,2) and finds that it has adjacent nodes (1,1) and (2,2).
+It visits (2,2) and finds that it has adjacent nodes (1,2), (2,1), and (2,3).
+It visits (2,3) and finds that it has adjacent nodes (2,2), (3,3), and (3,2).
+It visits (3,3) and finds that it is the target.
+
+The solution path is: <PATH_START> (0,0) (0,1) (1,1) (1,2) (2,2) (2,3) (3,3) <PATH_END>

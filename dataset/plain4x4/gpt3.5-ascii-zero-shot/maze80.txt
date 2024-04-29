@@ -1,0 +1,23 @@
+1. Start at coordinates (1,1) which is the entry point S.
+2. Move right to coordinates (1,2).
+3. Move right again to coordinates (1,3).
+4. Move down to coordinates (2,3).
+5. Move down again to coordinates (3,3).
+6. Move right to coordinates (3,4).
+7. Move down to coordinates (4,4).
+8. Move down again to coordinates (5,4).
+9. Move left to coordinates (5,3).
+10. Move down to coordinates (6,3).
+11. Move right to coordinates (6,4).
+12. Move right again to coordinates (6,5).
+13. Move down to coordinates (7,5).
+14. Move down again to coordinates (8,5).
+15. Move left to coordinates (8,4).
+16. Move left again to coordinates (8,3).
+17. Move down to coordinates (9,3).
+18. Move right to coordinates (9,4).
+19. Move right again to coordinates (9,5).
+20. Move down to coordinates (10,5) which is the exit point E.
+
+Therefore, the solution path for the maze is:
+<PATH_START> (1,1) (1,2) (1,3) (2,3) (3,3) (3,4) (4,4) (5,4) (5,3) (6,3) (6,4) (6,5) (7,5) (8,5) (8,4) (8,3) (9,3) (9,4) (9,5) (10,5) <PATH_END>

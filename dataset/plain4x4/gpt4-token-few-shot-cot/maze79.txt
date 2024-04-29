@@ -1,0 +1,22 @@
+Given the adjacency list and the origin and target positions, let's solve the maze to find a path from (0,0) to (3,3):
+
+Maze:
+<ADJLIST_START> (2,3) <--> (2,2) ; (1,0) <--> (0,0) ; (3,1) <--> (3,2) ; (0,0) <--> (0,1) ; (2,1) <--> (3,1) ; (3,1) <--> (3,0) ; (2,0) <--> (3,0) ; (0,2) <--> (0,1) ; (3,3) <--> (3,2) ; (0,3) <--> (0,2) ; (1,2) <--> (1,1) ; (2,1) <--> (1,1) ; (0,3) <--> (1,3) ; (1,3) <--> (2,3) ; (1,0) <--> (2,0) ; <ADJLIST_END> <ORIGIN_START> (0,0) <ORIGIN_END> <TARGET_START> (3,3) <TARGET_END>
+
+Steps to solve the maze:
+1. Start from the origin (0,0).
+2. Move right to (0,1) via (0,0) <--> (0,1).
+3. Continue right to (0,2) via (0,1) <--> (0,2).
+4. Continue right to (0,3) via (0,2) <--> (0,3).
+5. Move down from (0,3) to (1,3) via (0,3) <--> (1,3).
+6. Continue down from (1,3) to (2,3) via (1,3) <--> (2,3).
+7. Move left to (2,2) via (2,3) <--> (2,2).
+8. Move left to (2,1) via (2,2) <--> (2,2) (previous adjacent cell reused).
+9. Move down to (3,1) via (2,1) <--> (3,1).
+10. Move right to (3,2) via (3,1) <--> (3,2).
+11. Move right to (3,3) via (3,2) <--> (3,3), reaching the target.
+
+Final path:
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (2,2) (2,1) (3,1) (3,2) (3,3) <PATH_END>
+
+This sequence shows the correct path through the described adjacency list, moving from the start to the end within the constraints given.

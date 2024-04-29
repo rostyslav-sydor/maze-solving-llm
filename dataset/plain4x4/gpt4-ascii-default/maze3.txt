@@ -1,0 +1,10 @@
+<PATH_START> (1,1) (2,1) (3,1) (4,1) (5,1) (5,2) (5,3) (5,4) (5,5) (5,6) (6,6) (7,6) (7,7) <PATH_END>
+
+Explanation:
+1. Starting at point S (1,1), we move vertically down as there are no rightward paths available due to walls.
+2. We continue to move down until reaching (5,1), which is clear from walls.
+3. At (5,1), we start moving to the right through open spaces indicated by the ' ' character until we reach (5,6).
+4. From (5,6), the path leads us down to (6,6).
+5. Finally, we have to move towards the right from (6,6) to (7,6) and down to (7,7), where E is located, and the maze is exited. 
+
+This route avoids all the walls ("#") and follows a straightforward path from the starting point S to the endpoint E, considering all the available open paths (" ").

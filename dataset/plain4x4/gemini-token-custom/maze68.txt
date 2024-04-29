@@ -1,0 +1,9 @@
+First let's establish the path length by traversing the graph from entry to exit point. We start at <ORIGIN_END> and proceed to traverse the adjacency list in DFS manner until we reach the <TARGET_START> token. 
+
+We can start by adding the starting coordinate (0,0) to the solution path, then finding its adjacent neighbors (0,1) and (1,0). We proceed to choose (0,1) and add it to the path. This in turn has two neighbors (0,2) and (1,1). We choose (1,1) and add it to the path. Its neighbors are (1,2) and (1,0) where we can discard (1,0) since it was already visited and choose (1,2). This in turn has neighbors (1,3) and (2,2). We choose (1,3) and add it to the path. (1,3) has neighbors (2,3) and (0,3). We choose (2,3) and add it to the path. This in turn has neighbors (3,3) and (1,3) where we can discard (1,3) since it was already visited and choose (3,3).
+
+This was the last node in the graph, we stop here and backtrack to establish the path from entry to exit.
+
+<PATH_START> (0,0) (0,1) (1,1) (1,2) (1,3) (2,3) (3,3) <PATH_END>
+
+To check if the solution is valid, we can traverse the adjacency list to verify each step has an adjacent cell connection to the next. In this case, the proposed path is valid.

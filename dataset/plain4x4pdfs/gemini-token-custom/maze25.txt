@@ -1,0 +1,5 @@
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (2,2) (3,2) (3,3) <PATH_END>
+
+This path can be found by starting at the origin and moving right until you hit a wall, then moving up until you hit a wall, and then moving right again until you reach the target. It is guaranteed to be a solution because the maze is guaranteed to be solvable.
+
+To check if the solution is valid, we can check if each step in the path is adjacent to the previous step and if it does not cross any walls. We can see that each step is adjacent to the previous step and that no walls are crossed, so the solution is valid.

@@ -1,0 +1,11 @@
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>
+
+The solution was found based on the Depth First Search algorithm.
+
+The adjacency list defines which cells are adjacent, and thus which cells can be visited from the current cell.
+The entry point is (0,0) and the exit point is (3,3), so the solution path must start from (0,0) and end at (3,3).
+Starting from the entry point, we can visit the adjacent cell (0,1). From there, we can visit the adjacent cell (0,2). From there, we can visit the adjacent cell (0,3). From there, we can visit the adjacent cells (1,3) and (2,3). From (1,3) we can visit (2,3). Finally, from (2,3) we can visit the exit point (3,3).
+This path satisfies the following conditions:
+- It starts from the entry point and ends at the exit point.
+- It only uses adjacent cells.
+- It does not cross any walls.

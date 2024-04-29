@@ -1,0 +1,15 @@
+Here are the solutions to the three mazes you provided:
+
+Maze 1:
+
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (2,1) (2,2) (3,2) (3,3) <PATH_END>
+
+Maze 2:
+
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (3,2) (3,3) <PATH_END>
+
+Maze 3:
+
+<PATH_START> (0,0) (1,0) (1,1) (1,2) (2,2) (2,3) (3,3) <PATH_END>
+
+In each case, the solution is a list of coordinates (row, column) that represents the shortest path from the starting point to the target point. The starting point is marked with (0,0), and the target point is marked with (3,3). The mazes are represented as adjacency lists, with each entry representing a possible move from one cell to another. The moves are marked with arrows indicating the direction of the move.

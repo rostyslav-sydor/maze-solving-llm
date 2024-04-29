@@ -1,0 +1,7 @@
+1. Start at the origin, (0,0).
+2. Follow the path to the right, until you reach (3,0).
+3. Go up one row, to (3,1).
+4. Go right one column, to (3,2).
+5. Go up one row, to (3,3).
+
+Therefore, the solution path is: <PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (3,2) (3,3) <PATH_END>

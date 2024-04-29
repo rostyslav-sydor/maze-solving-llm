@@ -1,0 +1,33 @@
+ To solve this maze using the breadth-first search (BFS) algorithm, my step-by-step process would be as follows:
+
+1. Extract the maze information into a data structure, storing the adjacent coordinates for each cell.
+    Based on the provided input, here's the extracted maze in a more readable format:
+    Adjacency list of coordinates:
+    
+    - (1,3) ←→ (0,3)
+    - (3,2) ←→ (2,2)
+    - (0,0) ←→ (0,1)
+    - (2,3) ←→ (1,3)
+    - (1,1) ←→ (2,1)
+    - (1,3) ←→ (1,2)
+    - (3,3) ←→ (2,3)
+    - (1,2) ←→ (1,1)
+    - (3,1) ←→ (2,1)
+    - (3,2) ←→ (3,3)
+    - (0,1) ←→ (0,2)
+    - (1,0) ←→ (0,0)
+    - (3,1) ←→ (3,0)
+    - (0,2) ←→ (0,3)
+    - (2,0) ←→ (3,0)
+
+2. Initialize a queue data structure and a set to keep track of visited cells.
+
+3. Enqueue the origin (0,0). Set the parent of (0,0) as -1 (no parent since it's the origin).
+
+4. While the queue is not empty:
+   a. Dequeue a cell (currentCell).
+   b. If currentCell is the target (3,3), construct the path from the cell's parent and return it.
+   c. If currentCell has not been visited, mark it as visited and add it to the queue.
+   d. For each adjacent cell of currentCell, if that cell is not the parent and has not been visited: Add it to the queue and set its parent as currentCell.
+
+   Once the algorithm finds the target, it will trace back the parents

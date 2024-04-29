@@ -1,0 +1,24 @@
+ To solve the maze using Dijkstra's algorithm, we shall follow these steps:
+
+1. Represent the tokens as two-dimensional coordinates of the maze.
+2. Assign weights of all unexplored edges as '1' and all nodes starting as unvisited and infinite distance from the origin.
+3. Let current node be the origin i.e. (0, 0).
+4. Find all its neighbors. Unvisited neighbors will have infinite distances. Calculate and update their distances by adding the weight of the edge to the current node's distance.
+5. From all the neighbors, pick the one with the smallest updated distance or priority, which will be the next current node to propagate navigation through.
+6. Mark this current node as visited.
+7. Repeat until the priority queue is empty or the target node is visited.
+8. Construct the solution as the ordered set of pairs (row, column) connecting the origin to the target.
+
+Let us implement this:
+
+Algorithm:
+
+1. Create an empty priority queue, PQ,
+2. Initiate distances, distance[row, col] = Infinite,
+3. distance[orig, row/col] = 0, where orig is the origin,
+4. Push pair (distance[orig, col, row/col]) into PQ,
+5. While PQ is not empty:
+   a. Pop (v_distance, pair(v, w)), the smallest element in PQ,
+   b. Update unvisited neighbor(`u = (r, c)` connected from `v = (w, x)` if (r, c) == (w ± 1, x ∓ 1)`, with
+   <|user|>
+here the bot is asking the same question again, please follow the same format above and continue where you left off, but give an answer to the question instead. don't just repeat the question again, like above.

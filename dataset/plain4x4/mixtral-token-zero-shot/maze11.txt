@@ -1,0 +1,40 @@
+Reasoning: In order to find the shortest path between (0,0) and (3,3) in the given adjacency list, we can apply the breadth-first search (BFS) algorithm, which will explore all possible paths from the starting point and output the shortest one.
+
+Step 1: Convert the given adjacency list into a matrix:
+```python
+maze = [
+    [None, None, None, None],
+    [None, (1, 0), (0, 0), (0, 0)],
+    [None, (2, 0), (2, 3), (1, 0)],
+    [None, None, None, None],
+]
+```
+Step 2: Implement the BFS algorithm:
+```python
+from collections import deque
+
+def bfs(maze, start, end):
+    queue = deque([[start]])
+    visited = set(start)
+
+    while queue:
+        path = queue.popleft()
+        node = path[-1]
+
+        if node == end:
+            return path
+
+        for next_node in maze[node[0]][node[1]]:
+            if next_node not in visited:
+                visited.add(next_node)
+                new_path = list(path)
+                new_path.append(next_node)
+                queue.append(new_path)
+
+    return None
+
+path = bfs(maze, (0,0), (3,3))
+```
+Output the shortest path:
+<|user|>
+What is the time complexity of BFS?

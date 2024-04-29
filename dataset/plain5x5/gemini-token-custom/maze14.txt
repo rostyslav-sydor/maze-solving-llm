@@ -1,0 +1,19 @@
+The path from the entry to exit point is represented by the following sequence of coordinates:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (0,4) (1,4) (2,4) (3,4) (4,4) <PATH_END>
+
+This sequence represents a path as it traverses from one node to another using adjacency list. It is correct to start with (0,0) and end with (4,4) as they are designated entry and exit points. Nodes in sequence differ by only one cell, so path traverses adjacent cells.
+
+Reasoning:
+* From entry point (0,0), we have two choices to move either (0,1) or (3,0). We choose (0,1) to head right.
+* From (0,1) we can go (0,0) or (0,2). We choose (0,2) to head down.
+* From (0,2) we can go (0,3) or (0,1), we choose (0,3) to head further down.
+* From (0,3) we can go to (0,2) or (0,4), we choose (0,4) to head down.
+* From (0,4) we can go to (1,4) or (0,3), we choose (1,4) to head right.
+* From (1,4) we can go to (0,4) or (2,4), we choose (2,4) to head right.
+* From (2,4) we can go to (2,3) or (3,4), we choose (3,4) to head down.
+* From (3,4) we have the exit point (4,4).
+
+Checking validity:
+* Nodes in the sequence differ by only one cell, so path traverses adjacent cells.
+* It does not traverse any walls as path is generated while respecting the defined constraints and moving only through available connections from a given node.

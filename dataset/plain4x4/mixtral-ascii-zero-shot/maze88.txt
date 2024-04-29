@@ -1,0 +1,53 @@
+First, let's identify the valid paths from the starting point (1,1). We can move horizontally, vertically, or diagonally.
+
+There are valid downward moves: (2,1)
+
+Moving diagonally up-right: (1,2)
+
+Now let's consider the paths from (1,2):
+
+Up (1,1): visited
+Down (2,2): wall
+Up-left (0,1): not available (boundary)
+Up-right (1,3): valid
+
+Similarly, from (1,3):
+
+Down (2,3): wall
+Up-left (0,2): not available
+Up-right (1,4): valid
+
+From (1,4):
+
+Down (2,4): wall
+Up-right (1,5): valid
+
+From (1,5):
+
+Down (2,5): wall
+Up-right (1,6): valid
+
+Now, let's trace back the paths:
+
+Starting at (1,6):
+
+We came from (1,5)
+
+From (1,5):
+
+We came from (1,4)
+
+From (1,4):
+
+We came from (1,3)
+
+From (1,3):
+
+We came from (1,2)
+
+From (1,2):
+
+We came from (1,1)
+
+Thus, the shortest path from (1,1) to (7,7) is (1,6) -> (1,5) -> (1,4) -> (1,3) -> (1,2) -> (1,1) or
+<PATH_START> (1,1) (1,2) (1,3) (1,4) (1,5) (1,6) <PATH_END>.

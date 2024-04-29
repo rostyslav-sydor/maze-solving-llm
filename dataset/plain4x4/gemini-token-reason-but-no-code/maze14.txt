@@ -1,0 +1,15 @@
+In order to solve the maze, we need to find a path from the origin to the target.
+
+We can use a breadth-first search (BFS) algorithm to find a path. BFS works by starting at the origin and exploring all of its neighbors. If any of the neighbors are the target, then we have found a path. Otherwise, we continue exploring the neighbors of the neighbors, and so on, until we either find a path or we have explored all of the nodes in the graph.
+
+To apply BFS to this maze, we can start at the origin and add it to a queue. Then, we can loop through the queue, removing each node from the queue and adding its neighbors to the queue. If any of the neighbors are the target, then we have found a path. Otherwise, we continue looping through the queue until we either find a path or we have explored all of the nodes in the graph.
+
+In this case, we can start at the origin (0,0) and add it to the queue. Then, we can loop through the queue, removing each node from the queue and adding its neighbors to the queue. The neighbors of (0,0) are (1,0), (0,1), and (0,2). We can add these neighbors to the queue.
+
+Then, we can remove (0,0) from the queue and add its neighbors to the queue. The neighbors of (1,0) are (2,0), (1,1), and (0,0). We already added (0,0) to the queue, so we can ignore it. We can add (2,0) and (1,1) to the queue.
+
+We can continue this process until we either find a path or we have explored all of the nodes in the graph. In this case, we will find a path to the target (3,3).
+
+The path from the origin to the target is:
+
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (3,2) (3,3) <PATH_END>

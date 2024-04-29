@@ -1,0 +1,3 @@
+We start from the origin and add it to the path, then we iteratively find and add next coordinate that is adjacent to the latest coordinate in the path and is not already in the path to the path. We repeat this process until we reach the target.
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>

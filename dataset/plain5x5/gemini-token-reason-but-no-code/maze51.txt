@@ -1,0 +1,9 @@
+To solve a maze using Depth-First-Search (DFS) algorithm, we need to start from the entry point and recursively explore all possible paths until we reach the exit point.
+At each step, we mark the current position as visited and add it to the path.
+If the current position is the exit point, we have found a solution and can return the path.
+Otherwise, we explore all unvisited neighbors of the current position and recursively call the DFS algorithm on each neighbor.
+If none of the neighbors lead to a solution, we backtrack and remove the current position from the path.
+
+Applying this algorithm to the given maze, we start from the entry point (0,0) and explore all possible paths.
+The first path we explore is (0,0) -> (0,1) -> (0,2) -> (0,3) -> (0,4) -> (1,4) -> (2,4) -> (3,4) -> (4,4), which is the exit point.
+Therefore, the solution to the maze is: <PATH_START> (0,0) (0,1) (0,2) (0,3) (0,4) (1,4) (2,4) (3,4) (4,4) <PATH_END>

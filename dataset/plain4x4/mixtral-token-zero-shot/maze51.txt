@@ -1,0 +1,33 @@
+Step 1: Parse the input maze as a graph where each token representing a position (city), and its adjacency list (neighbors). Exclude the origin, exit and path tokens while parsing, as they're not part of the graph.
+
+Step 2: Convert into a traversable form, where each node is represented as a tuple, and its neighbors as a list of tuples. For example, the token (0,0) has neighbors (1,0) and (0,1), so it should be represented as ((0,0), [(1,0), (0,1)]).
+
+Step 3: Run Breadth First Search (BFS) from the origin node to find the shortest path to the exit node. Start by initializing a queue with the origin node as the first element, and a set of visited nodes (empty initially).
+
+```python
+queue = [origin]
+visited = []
+```
+
+Step 4: Iterate through the queue. For each node, append its neighbors to the queue if the neighbor has not been visited yet. Additionally, append the current node to the visited list. Once dequeue is done, the first node in queue will be the exit node.
+
+```python
+node = queue.pop(0)                       # Dequeue the first node in the queue
+visited.append(node)                      # Append the current node to the visited list
+for neighbor in node[1]:                  # For each neighbor of the current node
+    if neighbor not in visited:           # If the neighbor has not been visited yet
+        queue.append(neighbor)            # Append the neighbor to the queue
+```
+
+Step 5: Traverse through the queue starting from the exit node. Follow the parents of each node, and append them to the previously empty path list.
+
+```python
+path = [path.append(queue[0])]
+node = queue[0]
+while node[1] is not None:   # While the node has a neighbor
+    path.append(node[1])     # Append the neighbor to the path
+    node = node[1]           # Update the node to its neighbor
+path.reverse()               # Reverse the path so that it goes from the origin to the exit
+```
+
+Step 6: Convert

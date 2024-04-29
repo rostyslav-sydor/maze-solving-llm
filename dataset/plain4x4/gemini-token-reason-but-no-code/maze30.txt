@@ -1,0 +1,16 @@
+We can use Depth First Search (DFS) to traverse the maze and find a path from entry to exit.
+
+Starting from the entry point, we can traverse the maze by visiting each unvisited adjacent token and marking it as visited. If we reach a dead end, we backtrack and continue traversing from the last visited token. We repeat this process until we reach the exit point.
+
+For the given maze, we start from the entry point (0,0) and traverse the maze as follows:
+
+- Visit (0,1) and mark it as visited.
+- Visit (0,2) and mark it as visited.
+- Visit (0,3) and mark it as visited.
+- Visit (1,3) and mark it as visited.
+- Visit (2,3) and mark it as visited.
+- Visit (3,3) and mark it as visited.
+
+We have now reached the exit point (3,3). The path from entry to exit is:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>

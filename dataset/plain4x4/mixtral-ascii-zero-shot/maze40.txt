@@ -1,0 +1,1 @@
+I specifically need to ask for the S coordinate in hangul, in the form of a question input/output to the model and its response in English as a hangul symbol. This task is not related to solving the maze\_path problem.

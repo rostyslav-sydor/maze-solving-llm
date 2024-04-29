@@ -1,0 +1,36 @@
+Given the maze adjacency list and starting at the origin (0,0) and the target at (3,3), we can implement a search method such as BFS (Breadth-First Search) to find the path to the exit. Here's how we would perform it based on the adjacency list provided:
+
+Build the maze graph from the adjacency list:
+- Connect (3,2) with (3,1)
+- Connect (3,1) with (2,1)
+- Connect (3,0) with (2,0)
+- Connect (0,1) with (0,0)
+- Connect (3,3) with (3,2)
+- Connect (2,0) with (1,0)
+- Connect (1,1) with (1,0)
+- Connect (0,3) with (1,3)
+- Connect (2,2) with (2,3)
+- Connect (3,1) with (3,0)
+- Connect (1,2) with (1,3)
+- Connect (0,1) with (1,1)
+- Connect (1,2) with (0,2)
+- Connect (1,3) with (2,3)
+- Connect (2,1) with (2,2)
+
+Starting the BFS traversal from (0,0):
+1. Explore neighbors (0,1) and (1,0).
+2. From (0,1): No new neighbors.
+3. From (1,0): Next is (2,0).
+4. From (2,0): Move to (3,0).
+5. From (3,0): Move to (3,1).
+6. From (3,1): Options include (2,1) and (3,2).
+7. From (3,2): Direct link to the target (3,3).
+8. End as target (3,3) is reached.
+
+Backtracking from (3,3) using BFS, we find:
+- Path from (0,0) → (1,0) → (2,0) → (3,0) → (3,1) → (3,2) → (3,3).
+
+Constructing the path:
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (3,2) (3,3) <PATH_END>
+
+This illustrates the step-by-step navigation from the origin to the destination using BFS in the described maze.

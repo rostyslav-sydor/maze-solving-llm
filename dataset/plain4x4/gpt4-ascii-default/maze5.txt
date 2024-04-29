@@ -1,0 +1,12 @@
+<PATH_START>
+(1,1) (2,1) (3,1) (3,2) (3,3) (4,3) (4,4) (4,5) (5,5) (6,5) (7,5) (7,6) (7,7)
+<PATH_END>
+
+Explanation:
+- Starting from S, the only direction without a wall is downward. Move from (1,1) to (2,1).
+- Continue downward to (3,1); then move right to (3,2) and (3,3).
+- From (3,3), go down to (4,3) and continue right to (4,4) and (4,5).
+- Move down to (5,5), and continue in the same column down to (6,5), then to (7,5).
+- Finally, move right to (7,6) and further to (7,7) where E is located, which is the exit of the maze. 
+
+This route is concluded as shortest as it avoids unnecessary turns or backtracking while navigating solely through clear paths (' ') adjacent to the current position to reach 'E' (Exit).

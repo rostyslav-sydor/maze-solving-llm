@@ -1,0 +1,3 @@
+<Path_START> (1,1) (2,1) (3,1) (3,2) (3,3) (3,4) (3,5) (2,5) (1,5) (1,6) (1,7) (2,7) (3,7) (4,7) (5,7) (5,6) (5,5) (5,4) (6,4) (7,4) (7,5) (7,6) (7,7) <PATH_END> 
+
+This path starts at the entry point (1,1) and navigates through the maze until reaching the exit point (7,7) by following a series of moves around the walls. Each coordinate represents a move from one space to an adjacent space in the maze. This solution successfully avoids hitting any walls and finds a clear path from the start to the finish.

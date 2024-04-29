@@ -1,0 +1,8 @@
+1) Move down to (1,0) via (0,0) <--> (1,0)
+2) Move right to (1,1) via (1,1) <--> (1,0)
+3) Move down to (2,1) via (1,1) <--> (1,2)
+4) Move right to (2,2) via (2,1) <--> (2,2)
+5) Move down to (3,2) via (2,2) <--> (2,3)
+6) Move right to (3,3) via (3,2) <--> (3,3)
+Final solution:
+<PATH_START> (0,0) (1,0) (1,1) (2,1) (2,2) (3,2) (3,3) <PATH_END>

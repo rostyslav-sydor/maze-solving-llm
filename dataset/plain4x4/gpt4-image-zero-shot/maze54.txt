@@ -1,0 +1,10 @@
+To solve the maze from entry point (0,0) to exit point (3,3), start by analyzing the accessible paths considering the walls.
+
+From the starting point (0,0), you can move down to (1,0). Moving right is blocked by a wall. 
+Next, from (1,0), continue down to (2,0). There's a wall blocking the right side at (1,0).
+Now, from (2,0), move right to (2,1) and (2,2) because there's no wall blocking these moves.
+From (2,2) move down to (3,2). Moving right from (2,2) is blocked, so the only option is to move down.
+Lastly, from (3,2) move right to the exit point at (3,3). No interruption by walls for this final segment.
+
+Formatted path:
+<PATH_START> (0,0) (1,0) (2,0) (2,1) (2,2) (3,2) (3,3) <PATH_END>

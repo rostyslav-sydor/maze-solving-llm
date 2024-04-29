@@ -1,0 +1,15 @@
+## Depth first search
+
+### Reasoning
+
+Depth first search (DFS) is a graph traversal algorithm that traverses a graph as far as possible along each branch before backtracking. It can be used to find a path between two nodes in a graph, if one exists.
+
+### Solution
+
+To find a solution to the given maze using DFS, we can start at the entry point and traverse the graph until we reach the exit point. We can keep track of the path we have taken using a stack. If we reach a dead end, we can backtrack by popping the last node from the stack.
+
+Here is a specific solution for the given maze:
+
+```
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (2,2) (2,3) (3,3) (3,4) (4,4) <PATH_END>
+```

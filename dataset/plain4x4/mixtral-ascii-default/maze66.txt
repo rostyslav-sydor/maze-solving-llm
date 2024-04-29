@@ -1,0 +1,17 @@
+<PATH_START>
+(1,1)
+(1,2)
+(2,2)
+(2,3)
+(2,4)
+(2,5)
+(3,5)
+(4,5)
+(4,6)
+(5,6)
+(6,6)
+(6,7)
+(7,7)
+<PATH_END>
+
+Note: The (x,y) coordinates are row-wise, starting from the top-left, with (1,1) being the entry point in your example. For the sake of simplicity, the solution is depicted as a straight line, but it may not be the optimal path. A more sophisticated algorithm, such as A* (A-star), could be used to find the shortest path in the maze, taking into account wall locations and distance to the exit.

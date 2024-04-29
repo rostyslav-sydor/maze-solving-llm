@@ -1,0 +1,11 @@
+To solve this maze, I'll find the path from the entry point at (0,0) to the exit point at (3,3) considering the presence of walls.
+
+Starting at (0,0), moving right is blocked by a wall, so the only option is to move down to (1,0). From (1,0), the only available move, without encountering a wall, is to continue moving down to (2,0).
+
+At (2,0), we can move right to (2,1) since there's no wall blocking this direction. From (2,1), continue moving right to (2,2). From (2,2), moving right again to (2,3) is possible.
+
+From (2,3), the next move is up to (1,3) since moving right hits the boundary of the maze. Finally, from (1,3), moving up to (0,3), and then right to the exit at (3,3), navigating through (0,3), (1,3), (2,3) and (3,3).
+
+Here's the complete path:
+
+<PATH_START> (0,0) (1,0) (2,0) (2,1) (2,2) (2,3) (1,3) (0,3) (1,3) (2,3) (3,3) <PATH_END>

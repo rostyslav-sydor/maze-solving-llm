@@ -1,0 +1,37 @@
+To solve a maze represented as an adjacency list, you can use a graph traversal algorithm such as Depth-First Search (DFS) or Breadth-First Search (BFS). Since the maze is directed, you can adapt the algorithm accordingly. In this example, I will use BFS.
+
+Here's a step-by-step approach to solve the maze using BFS and print the solution:
+
+1. Extract the adjacency list from the given input and convert it to a map or dictionary called 'adj_list', which maps each vertex to its corresponding neighbors.
+2. Create an empty queue called 'queue', a set called 'visited' to keep track of the vertices already visited, and a list called 'parent', which will help us reconstruct the path later.
+3. Add the origin vertex to the queue and set its parent to None.
+4. While the queue is not empty:
+   a. Dequeue a vertex from the queue.
+   b. Check if the vertex is the target vertex. If so, follow the 'parent' links back from this vertex to the origin to reconstruct the path, print it, and stop.
+   c. Otherwise, mark the vertex as visited and add its unvisited neighbors to the queue, setting their parent to the current vertex.
+5. If the target vertex isn't found, the maze does not have a solution.
+
+Using Python, the detailed program would be:
+```python
+def find_path(adj_list, origin, target):
+    queue = [(origin, [])]  # Queue containing origin and a list for path
+    visited = set()
+    parent = [-1] * len(adj_list)
+
+    while queue:
+        vertex, path = queue.pop(0)
+        visited.add(vertex)
+
+        if vertex == target:
+            return path + [vertex]
+
+        for neighbor in adj_list[vertex]:
+            if neighbor not in visited:
+                visited.add(neighbor)
+                queue.append((neighbor, path + [vertex]))
+                parent[vertex] = neighbor
+
+    return []
+
+def parse_input(input_string):
+    lines = input_string.split('<ADJLIST_START>')[1].split('<

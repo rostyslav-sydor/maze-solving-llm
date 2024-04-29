@@ -1,0 +1,22 @@
+We start at the starting cell and find all adjacent cells.
+From (0,0) the only adjacent cell is (1,0).
+
+Then we move to (1,0) and find all adjacent cells.
+From (1,0) the adjacent cells are (0,0), (2,0), and (1,1).
+
+We continue this process until we reach the ending cell.
+From (1,1) the adjacent cells are (0,1), (1,2), and (2,1).
+From (1,2) the adjacent cells are (1,1), (1,3), and (2,2).
+From (1,3) the adjacent cells are (1,2), (2,3), and (0,3).
+From (2,3) the adjacent cells are (1,3) and (3,3).
+From (3,3) the adjacent cells are (2,3).
+
+The path from the starting cell to the ending cell is:
+
+```
+<PATH_START> (0,0) (1,0) (1,1) (1,2) (1,3) (2,3) (3,3) <PATH_END>
+```
+
+**Note**:
+ - The path never passes through a wall cell because only adjacent cells are considered for the movement.
+ - The path is the shortest one because it traverses the minimum number of cells to get to the end cell

@@ -1,0 +1,32 @@
+To solve the maze, we first interpret the given adjacency list which indicates the possible movements between coordinates in a graph representation. Then, using this graph, we must determine a route from the origin to the target.
+
+Given Graph:
+
+- The adjacency list reveals the connections between each pair of nodes (coordinates).
+- We have been given specific origin `(0,0)` and target `(3,3)` coordinates.
+
+Procedure for solving the maze:
+
+1. **Graph Representation**: The given adjacency list is translated into a graph structure where each node represents a coordinate in the maze, and each edge represents a direct path between two connected nodes.
+
+2. **Pathfinding Algorithm**: Utilize a graph traversal or pathfinding algorithm to find the shortest path from the origin to the target. Common algorithms for this task could include Depth-First Search (DFS), Breadth-First Search (BFS), or Dijkstra's Algorithm. Given that the adjacency list is not weighted, BFS is a suitable and simple choice as it explores the nearest nodes first, guaranteeing the shortest path in an unweighted scenario.
+
+3. **Extract the Path**: Once the algorithm is applied, we could trace back from the target to the origin by keeping track of the nodes visited and their predecessors which lead to the formulation of the path.
+
+4. **Format the Path**: Format the resulting path list of coordinates as per the requirement between `<PATH_START>` and `<PATH_END>` tags.
+
+Steps taken to produce the result:
+
+- Start BFS from the node `(0,0)`.
+- Explore all directly connected nodes. Repeat this until `(3,3)` is reached.
+- Keep track of visited nodes and the path leading to each node.
+- On reaching `(3,3)`, backtrack from node `(3,3)` to `(0,0)` using the recorded predecessors of each node.
+- This reconstructs the path from the origin to the destination.
+
+Final path computation:
+
+Based on the BFS or a similar exploration strategy applied to the adjacency list, the computed path from node `(0,0)` to node `(3,3)` using the valid connections provided would look like this:
+
+- `<PATH_START> (0,0) (0,1) (1,1) (1,2) (2,2) (2,3) (3,3) <PATH_END>`
+
+This path assumes one of the possible correct routes based on the connections, moving logically from start to end using adjacent co-ordinates. As multiple paths could exist, other valid paths might differ if other permissible routes through the maze can satisfy the adjacency list constraints.

@@ -1,0 +1,11 @@
+To solve the maze, I'll identify a path from the start point (0,0) to the exit point (3,3) by observing the open passages and avoiding walls.
+
+1. Starting at (0,0), the only available move is horizontally to the right, as moving down is blocked by a wall. 
+2. Move to (0,1) and continue to (0,2) and reach (0,3), as moving downwards at any of these points is blocked.
+3. From (0,3), the only available move is down to (1,3) because moving to the left or right is inhibited by the boundary and walls.
+4. Now move from (1,3) to (2,3), and then further down to the exit at (3,3) because moving left from (1,3) is blocked by a horizontal wall.
+
+Path traversed considering the specifications:
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END> 
+
+This sequential movement bypasses all walls and reaches the exit while adhering to maze boundaries and wall restrictions.

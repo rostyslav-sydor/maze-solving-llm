@@ -1,0 +1,37 @@
+To solve this maze given the adjacency list provided, I will first list the connections from the adjacency list and then use these to navigate the maze from the origin (0,0) to the target (3,3).
+
+Maze Connections:
+(2,1) <--> (3,1)
+(3,1) <--> (3,2)
+(1,2) <--> (2,2)
+(3,3) <--> (3,2)
+(1,1) <--> (1,2)
+(1,0) <--> (0,0)
+(0,2) <--> (0,3)
+(2,3) <--> (1,3)
+(3,3) <--> (2,3)
+(1,3) <--> (1,2)
+(3,0) <--> (3,1)
+(0,1) <--> (0,2)
+(1,0) <--> (2,0)
+(1,1) <--> (0,1)
+(2,0) <--> (2,1)
+
+Starting from the marked origin (0,0) and using the adjacency list to find a path to (3,3):
+
+1) Start at (0,0)
+2) Move right to (0,1) via connection (0,0) <--> (1,0)
+3) Continue right to (0,2) via connection (0,1) <--> (0,2)
+4) Move right again to (0,3) via connection (0,2) <--> (0,3)
+5) Backtrack as (0,3) has no path directly leading downwards, move back to (0,1)
+6) Move down to (1,1) via connection (1,1) <--> (0,1)
+7) Move right to (1,2) via connection (1,1) <--> (1,2)
+8) Move down to (2,2) via connection (1,2) <--> (2,2)
+9) Move right to (2,3) via connection (2,3) <--> (1,3)
+10) Move down to (3,3) via connection (3,3) <--> (2,3)
+
+The final path from (0,0) to (3,3) using the given adjacency list is:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (0,2) (0,1) (1,1) (1,2) (2,2) (2,3) (3,3) <PATH_END> 
+
+This path illustrates the necessity to backtrack at certain spots when a dead-end is encountered.

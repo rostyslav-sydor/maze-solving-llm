@@ -1,0 +1,30 @@
+Here is a Python program that finds and outputs a path from the origin (0,0) to the target (3,3) in the given maze represented by an adjacency list.
+
+To make the program more general, it first reads in the origin and target coordinates from the input string. The input string should start with a marker like "<ORIGIN_START>" and end with "<ORIGIN_END>" for the origin, and similarly "<TARGET_START>" and "<TARGET_END>" for the target.
+
+It then reads in the maze definition between "<ADJLIST_START>" and "<ADJLIST_END>" markers. The maze is represented as a map or dictionary from each position to a list of adjacent positions, expressed as tuples of integers.
+
+The program does breadth-first search to find a path from the origin to the target. It maintains a list of paths that have already been explored. At each step, it tries to extend each existing path by adding one of its unexplored neighbor edges. In the end it outputs the first path it found between the origin and the target, or the string "No solution" if it cannot find such a path.
+
+Here is the program:
+
+```python
+import re
+
+def parse_maze(maze_str):
+    """ Parse a maze string into a dictionary of adjacency lists. """
+    adjlists = {}
+    for x, pat in enumerate([r'(?P<x1>\d+),',
+                            r'(?P<x2>\d+)']):
+        adjlist_re = re.compile(r'({})(?P<nn>\d+), (?P<nx>\d+)'.
+                               format(pat))
+        groups = adjlist_re.findall(maze_str)
+        for group in groups:
+            x1, x2, y1, y2 = (int(nn) for nn in group)
+            if (x1, y1) not in adjlists:
+                adjlists[(x1, y1)] = []
+            adjlists[(x1, y1)].append((x2, y2))
+    return adjlists
+
+def parse_coords(coords_str):
+    """ Parse a pair of origin and target

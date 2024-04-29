@@ -1,0 +1,29 @@
+The maze is represented using an adjacency list where each connection between nodes indicates a path. By creating a graph representation from the adjacency list and identifying nodes and their edges, we can use search algorithms like breadth-first search (BFS) or depth-first search (DFS) to find a path from the origin to the target.
+
+The origin of the maze is at (0,0) and the target is at (4,5). Using BFS is beneficial in this scenario because it finds the shortest path in an unweighted graph, such as this one where each move to an adjacent node has the same cost.
+
+The BFS algorithm starts at the origin node and explores all of its neighbors before moving on to their neighbors, ensuring that we explore nodes in layers based on their distance from the origin. We maintain a queue to manage nodes to be explored and mark nodes as visited to avoid cycles and redundant work.
+
+After loading and constructing the graph from the adjacency list, applying BFS from (0,0) to (4,5) would involve enqueuing the starting node, visiting it, then visiting all reachable nodes until either the target is found or all possible paths are examined. 
+
+For the provided maze, navigating through available routes and applying BFS yields the shortest path from (0,0) to (4,5). Here's the step by step path found via BFS:
+
+1. Start at (0,0), which is directly connected to (0,1).
+2. From (0,1), move to (0,2).
+3. From (0,2) continue to (0,3).
+4. Move from (0,3) to (0,4).
+5. Go from (0,4) to (0,5).
+6. From (0,5), go to either (1,5) and then to (1,4).
+7. From (1,4) take path to (2,4).
+8. From (2,4), move to (2,5) temporarily to connect back to another path at (2,4).
+9. Return to (2,4) and progress to (1,4).
+10. From there to (1,5), then onward to (1,4) again to loop back to a direct path via (2,4).
+11. Connect from (2,4) directly to (2,5)
+12. From (2,5) to (1,5) and then again returning to (2,5) to return to (2,4).
+13. Finding accessible route to (4,3) via (3,3), progressing to (4,4) and finally to (4,5).
+
+This detailed stage gives us the shortest path in the maze:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (0,4) (0,5) (1,5) (1,4) (2,4) (3,3) (4,3) (4,4) (4,5) <PATH_END> 
+
+This is an optimal path to transfer from the origin to the target in the maze based on the adjacency list provided.

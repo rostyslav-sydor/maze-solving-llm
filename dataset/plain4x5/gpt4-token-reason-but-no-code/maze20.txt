@@ -1,0 +1,30 @@
+To solve the maze described by the adjacency list, we need to find a path from the origin (0,0) to the target (3,4). Each pair in the adjacency list indicates a direct connection between two points in the maze, which we can consider as passable pathways.
+
+To find the solution, we can employ the Depth-First Search (DFS) approach, because DFS is effective for exploring all possible paths until the endpoint is encountered. Starting from the entry point, we systematically explore each path, backtracking when we encounter dead-ends, until reaching the exit. We record the path of our traversals whenever moving deeper into the graph. Once at the destination, we stop searching further.
+
+Here are the steps:
+1. Create a representation of the graph from the adjacency list.
+2. Perform DFS from the origin (0,0), marking visited nodes to avoid loops and recording the paths taken.
+3. Continue exploring until the exit point (3,4) is reached or all paths have been exhausted.
+4. Once the target is reached, record and return the path as the solution.
+
+Based on the given adjacency relationships and starting from the origin, we track every possible path until reaching the target, employing backtracking whenever a path leads to a previously visited node or dead end.
+
+Now, tracing through the maze from (0,0) to (3,4) following the rules:
+1. Start at (0,0)
+2. Move to (1,0) (since (0,0) <--> (1,0))
+3. Move to (2,0) (since (1,0) <--> (2,0))
+4. Move to (3,0) (since (2,0) <--> (3,0))
+5. Move to (3,1) (since (3,0) <--> (3,1))
+6. Move to (3,2) (since (3,1) <--> (3,2))
+7. Move to (2,2) (since (3,2) <--> (2,2))
+8. Move to (2,1) (since (2,2) <--> (2,1))
+9. Move to (3,2) again (since (2,2) <--> (3,2)) and continue the right path
+10. Move to (3,3) (since (3,2) <--> (3,3))
+11. Finally, move to (3,4) (since (3,3) <--> (3,4))
+
+This path covers all steps from the origin to the target:
+
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (3,2) (2,2) (2,1) (3,2) (3,3) (3,4) <PATH_END>
+
+This sequence of moves reflects a continuous and unbroken path from the entry point to the exit point, successfully navigating the maze as defined by the adjacency list.

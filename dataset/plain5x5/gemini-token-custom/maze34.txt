@@ -1,0 +1,19 @@
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) (3,4) (4,4) <PATH_END>
+
+**Reasoning:**
+- Start at the origin (0,0).
+- Move right to (1,0).
+- Move down to (1,1).
+- Move right to the target (4,4).
+
+**Path validation:**
+- [(0,0), (0,1)] is an adjacent move.
+- [(0,1), (0,2)] is an adjacent move.
+- [(0,2), (0,3)] is an adjacent move.
+- [(0,3), (1,3)] is an adjacent move.
+- [(1,3), (2,3)] is an adjacent move.
+- [(2,3), (3,3)] is an adjacent move.
+- [(3,3), (3,4)] is an adjacent move.
+- [(3,4), (4,4)] is an adjacent move.
+
+Therefore, the path does not cross any walls and uses only adjacent cells.

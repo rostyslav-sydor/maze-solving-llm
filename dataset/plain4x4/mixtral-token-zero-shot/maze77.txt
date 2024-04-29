@@ -1,0 +1,22 @@
+Step 1: Parse the adjacency list:
+To solve the maze, we first need to understand its structure. In this case, the maze is represented as an adjacency list, which lists all the possible connections between nodes (coordinates on the maze). We can parse the adjacency list into a graph data structure, where each node represents a coordinate, and edges represent connections between the nodes.
+
+Step 2: Find the origin and target points:
+Next, identify the origin and target points from the given information. In this case, the origin point is (0,0), and the target point is (3,3). 
+
+Step 3: Apply a graph search algorithm:
+Using the graph representation of the maze and the origin and target points, apply a graph search algorithm, such as breadth-first search (BFS) or depth-first search (DFS). We choose BFS for its ability to find the shortest path:
+
+Start with the origin point as the current node, and add it to a queue data structure.
+Repeat the following steps while the queue is not empty:
+Pop the first node from the queue.
+For each unvisited neighbor of the current node:
+Add the neighbor to the queue and mark it as visited.
+If the neighbor is the target point, stop the search, and the path from the origin to the target is found.
+Return to step 3.1.
+Organize the path into a coordinate list:
+Once the target point is found, we can reconstruct the path by following the visited nodes. Insert the coordinates of the nodes in the order they were visited between <PATH_START> and <PATH_END> tokens:
+
+<PATH_START> (origin) (next visited node) ... (target) <PATH_END>
+
+The resulting output will be a list of coordinates representing a solution for the maze.

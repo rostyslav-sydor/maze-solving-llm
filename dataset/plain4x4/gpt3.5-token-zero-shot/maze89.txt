@@ -1,0 +1,8 @@
+To solve the maze, we can start at the origin point (0,0) and move through the graph following the connections specified in the adjacency list until we reach the target point (3,3). 
+
+We can take the following path based on the connections provided: (0,0) -> (0,1) -> (0,2) -> (1,2) -> (2,2) -> (2,3) -> (3,3).
+
+Therefore, the path through the maze can be represented as:
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (2,2) (2,3) (3,3) <PATH_END>.
+
+Following this path will allow us to navigate through the maze and reach the target point successfully.

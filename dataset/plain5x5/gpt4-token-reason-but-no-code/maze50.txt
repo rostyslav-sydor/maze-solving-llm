@@ -1,0 +1,18 @@
+To solve the maze mentioned in the given adjacency list, we need to find a path from the origin coordinate (0,0) to the target coordinate (4,4). We must use the adjacency list provided, which tells us how each node (coordinate) in the graph (maze) is connected to other nodes. A breadth-first search (BFS) algorithm is suited for this task, as it explores all neighbors at the present depth prior to moving on to nodes at the next depth level, ensuring that the shortest path in an unweighted graph like this is found.
+
+Starting with the origin (0,0), we follow connections given in the adjacency list to explore every possible path leading towards the target (4,4). The adjacency list details all directly connected node pairs (showing the maze corridors). Following these paths systematically using BFS will help find the shortest route to the exit:
+
+1. Begin at (0,0) and explore all adjacent coordinates. From the adjacency list, (0,0) connects to (1,0).
+2. From (1,0), there are connections to (2,0) and (1,1). Both paths are explored further.
+3. Following from (2,0) leads to (2,1).
+4. From (2,1), continue to (3,1). From (3,1) to (3,2).
+5. From (3,2), further connect to (3,3). From there, you can proceed to (4,3).
+6. Finally, from (4,3) there is a connection to (4,4), the exit.
+
+The reasoning behind choosing BFS for solving this maze involves its optimum nature for searching the shortest path in an unweighted graph, ensuring that as soon as we visit the target node, it guarantees that the path taken is the shortest. The BFS effectively traverses from node to node, exploring all possible branches nearly simultaneously until it finds the destination, making sure no shorter unexplored route exists by the time the search concludes.
+
+Thus the solution path through the maze, from origin to target, would be shown as:
+
+<PATH_START> (0,0) (1,0) (2,0) (2,1) (3,1) (3,2) (3,3) (4,3) (4,4) <PATH_END> 
+
+This path lists all coordinates to traverse, starting from the entrance and moving through to the exit in the shortest manner prescribed by the stated connections.

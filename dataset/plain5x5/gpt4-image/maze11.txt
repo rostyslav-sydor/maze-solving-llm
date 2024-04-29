@@ -1,0 +1,11 @@
+To solve the 5x5 maze provided in the image, I analyzed the paths visually and identified a route from the entrance at (0,0) to the exit at (4,4) that doesn't cross through any walls.
+
+Here's the sequence of moves through the maze:
+
+1. Start at (0,0).
+2. Move to the right to (0,1), and then to (0,2), (0,3), and (0,4).
+3. Move downwards to (1,4), then (2,4), (3,4), and finally to (4,4) which is the exit.
+
+Thus, the path coordinates from start to exit are:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (0,4) (1,4) (2,4) (3,4) (4,4) <PATH_END>

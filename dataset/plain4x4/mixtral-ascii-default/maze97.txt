@@ -1,0 +1,31 @@
+ To solve this maze for the shortest path, we can use a common algorithm like Dijkstra's algorithm or A* search. Here's a step-by-step description of how to find a solution, using Dijkstra's algorithm, without reference to a specific programming language. To obtain the solution, we'll break the maze down into smaller steps and then move forward to find the solution.
+
+Given the maze:
+
+[ASCII representation provided in the question]
+
+Step 1: Create a graph representation of the maze
+
+To implement the algorithm, we need to represent the maze as a graph, with each cell or space in the maze being a node in the graph. The graph can be directed or undirected, but for simplicity let's make it undirected.
+
+- Create a two-dimensional grid representing the maze
+- Set all nodes (rows and columns) that represent starts, spaces, and parts of the path as 0, and as 1 for the walls.
+
+Here's an example of how the graph might look:
+
+            y
+     ^ 0 0 0 1 0 0 0 0 0
+      1 0 1 1 1 0 0 0 1 1
+    x 2 0 0 0 0 1 1 1 0 0
+      3 0 0 0 0 1 1 1 0 0
+      4 0 0 0 0 1 1 1 1 1
+      5 1 0 0 0 0 0 0 0 0
+      6 0 0 0 0 0 1 1 0 0
+      7 0 0 0 0 0 0 0 0 1
+
+Step 2: Declare variables and arrays
+
+Declare:
+
+- An array, denoted as 'dist', with the size (k-1, k-2), where k is the maximum of x and y values of the maze. The element value, initially set to '∞' for non-starting cells, represents the total cost so far to reach the cell from the starting cell.
+- An array, denoted as 'came_from', with the size

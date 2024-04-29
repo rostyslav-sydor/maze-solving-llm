@@ -1,0 +1,9 @@
+To solve the maze represented by the adjacency list, a graph-based search algorithm like BFS (Breadth-First Search) can be employed to find the shortest path from the origin to the target. Given that the adjacency list describes all paths between connected cells and the specific entry (0,0) and exit (3,3) points, running BFS would allow us to trace the shortest route effectively.
+
+I've applied BFS on the adjacency list data provided, which involves exploring from the origin (0,0), checking adjacent nodes, and making sure not to re-visit any node. Continuously, I've marked nodes as visited and moved to nodes connected directly through edges until reaching the exit point (3,3).
+
+Following is the solution representing the path from the entry to the exit of the maze:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>
+
+This path moves from the starting point directly rightwards along row 0, shifts down into row 1 at column 3, moves further down through column 3 in rows 2 and 3 respectively, successfully finding a route to the exit.

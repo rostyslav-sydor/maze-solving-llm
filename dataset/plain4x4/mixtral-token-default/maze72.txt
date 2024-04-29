@@ -1,0 +1,8 @@
+<PATH_START> (0, 0) (1, 0) (2, 0) (2, 1) (2, 2) (3, 2) (3, 3) <PATH_END>
+
+(0, 0), (1, 0), (2, 0), (2, 1) is the path to traverse from (0, 0) to (2, 1). 
+(2, 1), (2, 2) is the path from (2, 1) to (2, 2).
+(2, 2), (3, 2) is the path from (2, 2) to (3, 2).
+(3, 2), (3, 3) is the path from (3, 2) to (3, 3).
+
+Concatenating all the individual paths gives the overall path from the origin (0, 0) to the target (3, 3): <PATH_START> (0, 0) (1, 0) (2, 0) (2, 1) (2, 2) (3, 2) (3, 3) <PATH_END>.

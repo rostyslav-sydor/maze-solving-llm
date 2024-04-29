@@ -1,0 +1,7 @@
+This maze can be solved using breadth-first search, starting from the entry point and expanding outwards until the exit point is reached.
+
+The algorithm works by maintaining a queue of points to visit, and a set of visited points. At each step, the algorithm dequeues a point from the queue, and adds it to the set of visited points. The algorithm then checks the neighbours of the dequeued point, and adds any unvisited neighbours to the queue. The algorithm terminates when the exit point is dequeued from the queue.
+
+The solution to the given maze is:
+
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (4,0) (4,1) (4,2) (4,3) (4,4) <PATH_END>

@@ -1,0 +1,14 @@
+ Here is a maze:
+Entry and Exit points are marked with <ORIGIN_START/END> and <TARGET_START/END> tokens respectively.
+
+<ADJLIST_START> (2,1) <--> (1,1) ; (0,3) <--> (1,3) ; (2,2) <--> (1,2) ; (2,0) <--> (3,0) ; (0,3) <--> (0,2) ; (3,2) <--> (3,3) ; (1,0) <--> (1,1) ; (0,1) <--> (0,2) ; (3,2) <--> (3,1) ; (2,2) <--> (2,1) ; (0,1) <--> (0,0) ; (3,3) <--> (2,3) ; (3,1) <--> (3,0) ; (1,0) <--> (2,0) ; (2,3) <--> (1,3) ; <ADJLIST_END> <ORIGIN_START> (0,0) <ORIGIN_END> <TARGET_START> (3,3) <TARGET_END>
+
+Here's the step-by-step approach to finding a solution and transforming the coordinates to the given output format:
+
+1. Read the graph represented as an adjacency list.
+2. Identify the entry point as (0, 0) and the exit point as (3, 3).
+3. Initialize an empty list for the path (<PATH_START>).
+4. Add the initial coordinate of the entry point to the path list. (0, 0).
+5. For each neighbor of the entry point, check if it has not been visited. Here, the neighbors of (0, 0) are (0, 1), (0, 2), and (1, 0). Since we're moving from the entry to the exit, choose (0, 1) as the next coordinate.
+6. Update the list with the new coordinate: <PATH_START> (0, 0) (0, 1)
+7. Choose the next neighbor that is also the unvisited neighbor according to DFS. Halt if

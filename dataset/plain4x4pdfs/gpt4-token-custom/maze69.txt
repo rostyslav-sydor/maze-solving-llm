@@ -1,0 +1,38 @@
+To solve the maze using the given adjacency list, we can apply Breadth-First Search (BFS). BFS will explore all possible paths from the starting point (0,0) to the ending point (3,3) by traversing the maze one layer of nodes at a time, which can ensure finding the shortest path.
+
+1. **Build the Graph:** We'll first convert the adjacency list into a usable graph format, where each node represents a cell in the maze with its connections:
+    ```plaintext
+    (2,2) <-> (2,1)
+    (0,3) <-> (1,3)
+    (0,1) <-> (0,0)
+    (2,3) <-> (1,3)
+    (1,0) <-> (1,1)
+    (3,2) <-> (3,1)
+    (0,1) <-> (1,1)
+    (3,3) <-> (3,2)
+    (1,0) <-> (0,0)
+    (1,2) <-> (1,3)
+    (1,0) <-> (2,0)
+    (3,0) <-> (2,0)
+    (3,0) <-> (3,1)
+    (2,1) <-> (1,1)
+    (1,2) <-> (0,2)
+    (2,3) <-> (3,3)  
+    ```
+
+2. **Implement BFS:** Starting from the origin node (0,0), expand to each connected node and continue exploring until we find the target node (3,3).
+    - We start at (0,0), the adjacent nodes are (0,1) and (1,0).
+    - From (0,1), the next nodes are (1,1).
+    - From (1,0), the next nodes are (1,1) and (2,0).
+    - We continue expanding nodes, always moving from current to adjacent connected nodes not yet visited.
+    - When reaching (3,3), stop and trace back the path from (3,3) back to (0,0).
+
+3. **Path Tracing:** By keeping track of which node led to which, we can trace back from (3,3) to (0,0) once we reach our destination.
+
+4. **Validating Path:** The traversal only moves between adjacent cells as declared in adjacencies, ensuring no walls are crossed. Each step in the path follows an allowed link in the adjacency list.
+
+Here is the derived solution after tracing the optimal BFS path:
+
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (3,2) (3,3) <PATH_END>
+
+The solution utilizes only adjacent cells, where each move is supported by the adjacency pairs in the list. This guarantees that all moves are legal, not crossing any walls, and using only connected cells, thereby confirming the viability of the solution.

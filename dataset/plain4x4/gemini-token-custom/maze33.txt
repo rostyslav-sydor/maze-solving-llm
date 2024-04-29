@@ -1,0 +1,13 @@
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (2,2) (3,2) (3,3) <PATH_END>
+
+We chose the path above by first selecting an entry point. It must be one of the tokens marked with <ORIGIN_START/END>. Since we can choose any one of them we picked (0, 0).
+
+From the chosen entry point we selected a neighboring vertex to visit next. We picked (0, 1) since it was a possible choice according to the graph. We could have also picked (1, 0).
+
+Next we continued to pick new neighboring vertices to visit, each of them adjacent to the previously visited vertex, until we reached a token marked with <TARGET_START/END>.
+
+We reached (3, 3) and finished our path, as there are no vertices adjacent to it marked with <TARGET_START/END>.
+
+We verified that the path does not cross any walls by ensuring that we only move to neighboring vertices in the graph, which means that the path cannot cross any walls.
+
+We also verified that the path uses only adjacent cells by ensuring that each step we took was to a vertex that is adjacent to the previous vertex we visited, as defined by the graph.

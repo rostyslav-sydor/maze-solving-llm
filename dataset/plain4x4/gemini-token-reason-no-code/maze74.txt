@@ -1,0 +1,5 @@
+This maze is solvable using depth first search. We first start from the origin and follow any path until we hit a dead end(a node without any unvisited adjacent nodes). If a dead end is reached, then we back track to the last visited node with unvisited nodes and follow that path until we reach a dead end again. This process is continued until the target node is reached or no more paths can be followed (in which case the maze is unsolvable).
+
+The path from origin to target for this maze is:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>

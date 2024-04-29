@@ -1,0 +1,13 @@
+To solve the maze and find a path from the entry point (0, 0) to the exit point (3, 3) with the walls represented as black lines, we will visually trace a path:
+
+1. Begin at (0,0).
+2. Move from (0,0) to (0,1).
+3. Move from (0,1) to (1,1).
+4. Move from (1,1) to (1,2).
+5. Move from (1,2) to (1,3).
+6. Move from (1,3) to (2,3).
+7. Move from (2,3) to (3,3).
+
+Thus, the coordinates of the path from entry to exit without crossing any walls are:
+
+<PATH_START> (0,0) (0,1) (1,1) (1,2) (1,3) (2,3) (3,3) <PATH_END>

@@ -1,0 +1,12 @@
+ To traverse the maze and find the shortest path between the origin and target points, we can use Breadth First Search (BFS) algorithm. BFS expands each node by exploring its adjacent nodes first, then moving to its children, systematically layering its way through every reachable node. BFS starts from the origin point, explores its neighbors (examines each adjacent point represented as a vertex and its edges, highlighted as <-->), creates children from each edge that we have not visited yet, and continues this process until we get to the target point.
+
+By running the BFS algorithm on the given maze, starting from (0,0) and expanding step by step until we reach (3,3), we obtain the following path:
+
+(0,0) - (1,0) - (2,0) - (2,1) - (2,2) - (2,3) - (3,3)
+
+The above path is the shortest path from (0,0) to (3,3), and this path along the lower side of the maze does not contain any loops.
+
+The BFS algorithm is a computation of the BSF set, so it follows a First-In-First-Out strategy where each explored step is immediately followed by its child that was discovered last. We chose the second coordinate of the current coordinate as our priority (smallest coordinate is preferred), to ensure that we can traverse each point without choosing an adjacent point that we could have reached more quickly if we didn't do so earlier.
+
+For your reference, here is the coordinate list of the shortest path between the origin and target points presented in the format of your inquiry:
+<PATH_START> (0,0) (1,0) (2,0) (2,1) (2,2) (2,3) (3,3) <PATH_END>

@@ -1,0 +1,16 @@
+To solve the maze, we start at the entry point (0,0) and progress toward the exit point at (3,3). The path is determined by navigating around the walls, which block direct routes between specific cells.
+
+1. Begin at the starting point (0,0). Moving right or down is possible, but moving right towards (0,1) is blocked by a wall, so the only option is to move down to (1,0).
+
+2. From (1,0), moving further down to (2,0) is possible, as there’s no wall blocking this path.
+
+3. Move from (2,0) to (2,1) because moving down is blocked by a wall.
+
+4. Continue right from (2,1) to (2,2). Again, heading down is blocked, meaning we must keep moving right.
+
+5. Now at (2,2), move down to (3,2), as the path directly to the right is blocked.
+
+6. Finally, from (3,2), move right to reach the exit at (3,3).
+
+Therefore, the maze can be solved as follows:
+<PATH_START> (0,0) (1,0) (2,0) (2,1) (2,2) (3,2) (3,3) <PATH_END>

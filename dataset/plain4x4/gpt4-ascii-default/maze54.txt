@@ -1,0 +1,16 @@
+To solve the maze, I will execute a search algorithm starting from the entry point (1,1), considering the constraints of the walls (#) and open paths (spaces). Below is the step-by-step walkthrough of the path found:
+
+1. Start at (1,1), move right to (1,2).
+2. Continue to the right to (1,3), (1,4), and (1,5).
+3. Move down to (2,5).
+4. Continue down to (3,5).
+5. Move left to (3,4), (3,3), and (3,2).
+6. Move down to (4,2), then to (5,2) and continue to (6,2).
+7. Move right to (6,3), then to (6,4).
+8. Move up to (5,4), then to (4,4).
+9. Move to the right to (4,5), (4,6), and (4,7).
+10. Continue moving down to (5,7), then to (6,7), and finally to (7,7), the exit point.
+
+The path avoids all walls and transitions exclusively through open spaces, resulting in the correct solution to navigate from S to E.
+
+<PATH_START> (1,1) (1,2) (1,3) (1,4) (1,5) (2,5) (3,5) (3,4) (3,3) (3,2) (4,2) (5,2) (6,2) (6,3) (6,4) (5,4) (4,4) (4,5) (4,6) (4,7) (5,7) (6,7) (7,7) <PATH_END>

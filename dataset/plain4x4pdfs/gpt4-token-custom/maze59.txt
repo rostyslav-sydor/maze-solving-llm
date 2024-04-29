@@ -1,0 +1,14 @@
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>
+
+Reasoning:
+1. Start from the origin (0,0) as specified.
+2. The adjacency list shows node (0,0) is connected to (0,1) and (1,0); however, we move towards the target (3,3) to minimize backtracking.
+3. Move from (0,1) to (0,2); per the adjacency list, these nodes are directly connected.
+4. Move from (0,2) to (0,3); again, direct connection via the adjacency list.
+5. Now at (0,3), move to (1,3) since that is a connected node. This step heads south and aligns with our overall direction towards the target.
+6. Next, move from (1,3) to (2,3). The adjacency list confirms that these nodes are connected.
+7. Finally, move from (2,3) to (3,3), reaching the target. This path uses valid, adjacent connections directly aligned with connections listed in the adjacency list.
+
+Verification that the path does not cross any walls and only uses adjacent cells:
+- Each step progresses to an adjacent cell connected directly via the adjacency list; no diagonal or non-listed movements are made.
+- Reviewing the adjacency list connections versus the chosen path, all steps are legitimately connected, and thus no walls are crossed in the solution.

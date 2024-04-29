@@ -1,0 +1,16 @@
+To solve the given maze, we use the Breadth-First Search (BFS) method starting from the entry point (S at (1,1)):
+
+1. From (1,1) move right to (1,2) and (1,3). Up and down are blocked by walls.
+2. From (1,3) continue moving right to (1,4) (open path).
+3. At (1,4), you can move up, down, or right. Moving right leads to a wall at (1,5), and up is blocked by a wall, so move down to (2,4).
+4. From (2,4), move down to (3,4).
+5. At (3,4), move right to (3,5), (3,6), and (3,7), which are all open.
+6. From (3,7), move down to (4,7).
+7. From (4,7), you need to continue down to (5,7) and (6,7).
+8. Finally, from (6,7) move down to (7,7), reaching the exit (E).
+
+Here is the simplest path from the start (S) to the exit (E) using BFS:
+
+<PATH_START> (1,1) (1,2) (1,3) (1,4) (2,4) (3,4) (3,5) (3,6) (3,7) (4,7) (5,7) (6,7) (7,7) <PATH_END> 
+
+This path stays on the available open spaces, moves right until forced to move down, and proceeds straightforwardly to the exit.

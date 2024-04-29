@@ -1,0 +1,40 @@
+To find the shortest path from the origin at (0,0) to the target at (3,3) using the provided adjacency list, we use Breadth-First Search (BFS). This approach ensures we explore paths efficiently in terms of both distance and computation for an unweighted graph.
+
+The adjacency list and relation from the maze can be summarized as follows:
+
+- (0,0) <--> (0,1)
+- (0,1) <--> (0,2), (1,1)
+- (0,2) <--> (1,2)
+- (1,1) <--> (2,1)
+- (1,2) <--> (2,2)
+- (2,0) <--> (1,0), (3,0)
+- (2,1) <--> (3,1)
+- (2,2) <--> (2,3)
+- (2,3) <--> (1,3), (3,3)
+- (3,0) <--> (3,1)
+- (3,1) <--> (3,2)
+- (3,2) <--> (3,3)
+
+These adjacency pairs help lay down the paths and traversal options at each node.
+
+Using BFS, let's find the shortest path from (0,0) to (3,3):
+
+1. Initialize the process from the origin (0,0).
+2. From (0,0), move right to (0,1).
+3. From (0,1), move right to (0,2).
+4. From (0,2), move down to (1,2).
+5. From (1,2), move down to (2,2).
+6. From (2,2), move right to (2,3).
+7. From (2,3), move down to (3,3).
+
+We trace the path from the entry point to the exit using BFS as follows:
+- Start from (0,0)
+- Visit (0,1)
+- Visit (0,2)
+- Visit (1,2)
+- Visit (2,2)
+- Visit (2,3)
+- Reach (3,3)
+
+The quickest path found from parsing through the adjacency list and applying BFS step-by-step is:
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (2,2) (2,3) (3,3) <PATH_END>

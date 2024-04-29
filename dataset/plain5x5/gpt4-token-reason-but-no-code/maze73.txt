@@ -1,0 +1,30 @@
+To solve the maze represented by the adjacency list, we need to find a path from the origin point (0,0) to the target point (4,4). The given adjacency list describes which graph vertices (maze cells) are directly connected to each other.
+
+**Reasoning:**
+1. Use a graph traversal technique to navigate through the graph of the maze. Since we need to find a specific path from a start vertex to an end vertex, Depth-First Search (DFS) or Breadth-First Search (BFS) are suitable options. BFS is generally preferred in solving such problems because it explores all neighboring vertices at the present depth prior to moving on to nodes at the next depth level and could thus find the shortest path.
+
+2. Introduce BFS with a queue mechanism:
+   - Start from the entry point, marking it as visited.
+   - Enqueue it, and as long as the queue is not empty, dequeue the current cell, mark it as visited and check its adjacency list.
+   - Enqueue all adjacent cells that haven't been visited until the target is reached or the list exhausts.
+   
+3. Keep track of each cell's predecessor to reconstruct the path once the target is reached.
+
+**Steps for BFS and Path Finding:**
+
+1. Define the graph using the provided adjacency list, converting each pair-wise connection into a bi-directional graph representation.
+2. Initialize structures for the BFS: a queue (first-in, first-out), a set to store visited nodes, and a dictionary to track the parent of each node.
+3. Start BFS from the origin (0,0), enqueuing initially, and iterate until either the target is found or options are exhausted.
+4. For each node processed (dequeued), mark it as visited, and for each unvisited adjacent node, record its predecessor, mark as visited, and enqueue.
+5. Upon reaching the target node (4,4) using BFS, backtrack from the target to the origin using the predecessor relationships to reconstruct the path.
+
+**Constructing the Solution:**
+   
+1. Initialize the BFS from (0,0), exploring all reachable nodes until either (4,4) is dequeued or the queue is emptied.
+2. The sequence formed by backtracking from (4,4) to (0,0) using the predecessors will generate the required path.
+
+**Thus, given the adjacency list conversion to BFS and applying the above logical reasoning:**
+
+<PATH_START> (0,0) (1,0) (2,0) (2,1) (3,1) (3,2) (4,2) (4,3) (4,4) <PATH_END>
+
+This path logically follows a valid transition from the origin to the target based on BFS—exploring shortest paths layer-by-layer—ensuring each step moves adjacent based on the list provided, and accurately reaches the destination.

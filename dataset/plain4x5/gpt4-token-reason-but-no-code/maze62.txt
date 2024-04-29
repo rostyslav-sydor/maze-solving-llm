@@ -1,0 +1,38 @@
+To find a path through the maze represented by the given adjacency list, we need to determine a route from the origin point (0,0) to the target point (3,4). We will use a graph traversal technique such as Breadth-First Search (BFS) because it explores all possible nodes (in this case, “rooms” or coordinates) at the present depth prior to moving on to nodes at the next depth level. This property of BFS makes it very suitable to find the shortest path in an unweighted graph like our maze.
+
+**Here is the adjacency list and the origin/target points:**
+
+- Adjacency list signifies connections between nodes (coordinates). Each coordinate pair is directly reachable from each other.
+- Origin is (0,0) and the target is to reach (3,4).
+
+**Building the Adjacency List:**
+
+From the input, each coordinate pair connected by `<--->` suggests adjacent rooms in the maze. This representation forms the basis to perform graph traversal.
+
+**Conducting the BFS:**
+
+Begin BFS from the start node (0,0), exploring all its directly connected neighbors. For each node:
+- Mark it visited.
+- Record its parent node (for reconstructing the path once the target is found).
+- Continue this way until we reach (3,4) or exhaust all possibilities.
+
+**Reconstruct and Output the Path:**
+
+After reaching the target using BFS, backtrack utilizing the recorded parent of each node to reconstruct the path from the target back to the origin. Lastly, the path will be output in the coordinate list format as required.
+
+**Following these steps through BFS, let's proceed:**
+
+- Start from (0,0), visit neighboors (1,0) and (0,1).
+- From (0,1), visit (0,2).
+- From (0,2), visit (1,2) and (0,3).
+- From each of these, continue to explore further until the entire graph is either explored or the destination (3,4) is reached. Ensure that no node is revisited to prevent cycles.
+
+**Tracing the specific path to (3,4) after computation would yield:**
+
+(0,0) -> (0,1) -> (0,2) -> (0,3) -> (1,3) -> (1,4) -> (2,4) -> (3,4)
+
+**Therefore, the solution path for the maze is:**
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (1,4) (2,4) (3,4) <PATH_END>
+
+This path details a viable way to navigate from the origin to the target sequentially, ensuring connectivity as defined by the maze's adjacency list.

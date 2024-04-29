@@ -1,0 +1,18 @@
+To find the solution path through the maze shown, one needs to navigate from the starting point at the upper left corner (0,0) to the bottom right corner (3,3), avoiding walls that obstruct the direct path.
+
+**Steps for Solving the Maze:**
+1. **Start at Entry Point (0,0):** This is clear as the entry is specified and there are no wall obstructions.
+2. **Move Horizontally or Vertically:** From each cell, movement can be either horizontal or vertical, but cannot move diagonally.
+3. **Avoid Walls:** As depicted in the image, certain paths are blocked by walls. One must navigate in directions where paths are open, determining accessible rows and columns.
+
+**Finding the Maze Path:**
+- Start at (0,0) and move right to (0,1) and (0,2) as there's no wall on the 0th row.
+- From (0,2), moving to (1,2) and (2,2) vertically, as there is no wall obstructing this movement in column 2.
+- Next, from (2,2) to (2,3) to move horizontally as there's no wall on row 2 at column 3.
+- Finally, from (2,3) move to (3,3), entering the exit point without any walls obstructing the path.
+
+Considering the maze constraints and the allowable path, the solution is as follows:
+
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (2,2) (2,3) (3,3) <PATH_END> 
+
+The reasoning was developed by visually analyzing paths and walls in the image and coordinating the movement choices to reach from the starting point to the exit.

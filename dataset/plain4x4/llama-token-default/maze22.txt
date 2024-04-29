@@ -1,0 +1,14 @@
+I understand. Here is the solution for the maze you provided:
+
+<PATH_START> (0,3) (1,2) (2,1) (2,3) (3,2) (3,0) <PATH_END>
+
+The path starts at the origin (0,0) and ends at the target (3,3). The path consists of the following steps:
+
+1. Move right from (0,0) to (0,3).
+2. Move down from (0,3) to (1,2).
+3. Move right from (1,2) to (2,1).
+4. Move down from (2,1) to (2,3).
+5. Move right from (2,3) to (3,2).
+6. Move down from (3,2) to (3,0).
+
+Please note that the path is represented in a coordinate list format, where the first coordinate is the row and the second coordinate is the column.

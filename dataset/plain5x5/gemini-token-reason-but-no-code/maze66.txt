@@ -1,0 +1,11 @@
+A maze is represented as a graph, and as such a graph traversal algorithm can be used to find the path through the maze.
+
+Since the maze does not have weights associated with the edges, the simplest algorithm is a breadth-first search.
+
+Breadth-first search starts at the starting node and explores all of its neighbors.
+It then explores all of the neighbors of those neighbors, and so on.
+This ensures that the algorithm finds the shortest path to the target node.
+
+In the given maze, starting form (0,0), it would first explore its neighbors (0,1), (1,0), and (2,0), then their neighbors, and so on.
+It would eventually reach the target node (4,4), and the path would be:
+<PATH_START> (0,0) (0,1) (1,1) (1,2) (2,2) (2,3) (3,3) (3,4) (4,4) <PATH_END>

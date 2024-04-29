@@ -1,0 +1,12 @@
+First, we need to explore the maze to find a path from the starting point (1,1) to the exit point (7,7). We can do this by following a maze-solving algorithm such as depth-first search or breadth-first search.
+
+When exploring the maze, we need to keep track of the current position and the path taken so far. We can use a stack or queue data structure to help us backtrack when a dead end is reached.
+
+In this case, let's use breadth-first search to explore the maze. We start at the entry point (1,1) and check all adjacent cells that are not walls. We continue exploring each reachable cell until we reach the exit point (7,7).
+
+During the exploration, we need to mark visited cells to avoid revisiting them and keep track of the path taken so far. Once the exit point is reached, we can backtrack using the path taken to find the solution.
+
+After exploring the maze using breadth-first search, we find the path to be:
+<PATH_START> (1,1) (2,1) (3,1) (4,1) (4,2) (5,2) (6,2) (6,3) (6,4) (5,4) (4,4) (4,5) (4,6) (5,6) (6,6) (7,6) (7,7) <PATH_END>
+
+This path represents the coordinates of the cells visited from the starting point to the exit point, ensuring a way out of the maze.

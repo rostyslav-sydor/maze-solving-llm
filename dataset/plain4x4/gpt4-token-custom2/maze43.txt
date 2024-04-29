@@ -1,0 +1,46 @@
+To solve this maze, let's use a breadth-first search (BFS) algorithm, which is effective for finding the shortest path in an unweighted graph like this maze.
+Here's the breakdown of the process:
+
+1. **Parse the adjacency list** to create a proper graph representation in form of a dictionary where keys are nodes (coordinates) and values are lists of neighboring nodes.
+2. **Perform BFS** from the origin node (0,0) to find the shortest path to the target node (3,3).
+3. **Trace back the path** from the destination to the origin using a predecessor mapping filled during the BFS traversal.
+
+Using the adjacency list provided between `<ADJLIST_START>` and `<ADJLIST_END>`:
+
+```plaintext
+(2,2) <--> (3,2) ; 
+(0,1) <--> (0,2) ; 
+(2,1) <--> (1,1) ; 
+(0,1) <--> (1,1) ; 
+(1,0) <--> (0,0) ; 
+(2,3) <--> (3,3) ; 
+(1,2) <--> (2,2) ; 
+(1,3) <--> (0,3) ;
+(3,0) <--> (3,1) ;
+(1,2) <--> (0,2) ;
+(0,1) <--> (0,0) ;
+(3,1) <--> (3,2) ;
+(2,3) <--> (1,3) ;
+(3,2) <--> (3,3) ;
+(2,0) <--> (2,1) ;
+```
+
+The graph is created and BFS is applied:
+
+- **Start** at (0,0).
+- Explore using BFS: **Neighbors** are appropriately checked and distances updated accordingly until the target (3,3) is reached or all possible paths are exhausted.
+  
+Using BFS let's solve to find the shortest path:
+
+- Start at (0,0)
+- Move to (1,0) using (1,0) <--> (0,0)
+- From (1,0), move to (0,1) using (0,1) <--> (1,0)
+- From (0,1), move to (0,2) using (0,1) <--> (0,2)
+- From (0,2), move to (1,2) using (1,2) <--> (0,2)
+- From (1,2), move to (2,2) using (1,2) <--> (2,2)
+- From (2,2), move to (3,2) using (2,2) <--> (3,2)
+- From (3,2), finally move to (3,3) using (3,2) <--> (3,3)
+
+The path found:
+
+<PATH_START> (0,0) (1,0) (0,1) (0,2) (1,2) (2,2) (3,2) (3,3) <PATH_END>

@@ -1,0 +1,26 @@
+To solve the maze, it is essential to map the adjacency list onto a grid that represents the maze, then find a path from the origin to the target.
+
+**Grid Interpretation:**
+From the adjacency list:
+- Each pair in the list represents a direct passageway between two cells without walls.
+- Coordinates in the list are in the format `(row, column)`.
+
+**Setting up the Grid:**
+- Since the maximum indices from adjacency nodes are `(3,3)`, the maze will be a `4x4` grid.
+- Cells not listed in the adjacency or having no connections can be presumed to be walls.
+
+**Path Finding:**
+From given information:
+- Start `(origin)` at `(0,0)`.
+- End `(target)` at `(3,3)`.
+
+Using Depth-First Search (DFS) or Breadth-First Search (BFS) from the origin `(0,0)` to target `(3,3)` through connected nodes will provide the desired path.
+
+**Solution Path:**
+Following stepping through an assumed correct usage of BFS or DFS:
+- Movement from `(0,0)` to `(3,3)` based on adjacency list.
+
+Based on paths and adjacency list:
+<PATH_START> (0,0) (0,1) (1,1) (1,2) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>
+
+This list represents a possible path through the maze following the connections given.

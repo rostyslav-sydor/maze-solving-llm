@@ -1,0 +1,23 @@
+The maze can be solved by applying Depth First Search (DFS) or Breadth First Search (BFS) and recording the path taken.
+
+**DFS**
+
+1. Start at the origin point (0,0).
+2. Explore the adjacent nodes in any order.
+3. If an adjacent node is the target point (3,3), then the path is found.
+4. If not, backtrack to the previous node and explore the next adjacent node.
+5. Repeat until the path is found or there are no more unexplored adjacent nodes.
+
+**BFS**
+
+1. Start at the origin point (0,0).
+2. Add all adjacent nodes to a queue.
+3. Remove the first node from the queue and explore its adjacent nodes.
+4. Add all unexplored adjacent nodes to the queue.
+5. Repeat until the queue is empty or the target point (3,3) is found.
+
+**Path**
+
+The path for the given maze is:
+
+<PATH_START> (0,0) (0,1) (1,1) (1,2) (1,3) (2,3) (3,3) <PATH_END>

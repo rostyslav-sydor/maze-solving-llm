@@ -1,0 +1,23 @@
+First, we can represent the maze as a 4x4 grid, with cell coordinates in (row, column) format. The maze starts at (0, 0) and ends at (3, 3).
+
+Next, we need to find a path from the origin to the target. We can do this using a depth-first search (DFS) algorithm. Here's how the algorithm will work:
+
+1. Start at the origin cell (0, 0).
+2. Mark the current cell as visited.
+3. Check all neighboring cells for the target cell. If a neighbor is not visited and is not a wall, visit its valid neighbors and move to it.
+4. If the target cell is found, mark it as visited and add it to the path.
+5. Repeat this process until the target cell is visited or all cells are visited and there is no path found.
+
+Here's the adjacency list representation of the graph as given:
+
+(1,3) <--> (0,3)  
+(2,3) <--> (2,2)  
+(2,0) <--> (3,0)  
+(1,3) <--> (2,3)  
+(2,1) <--> (1,1)  
+(1,1) <--> (1,2)  
+
+And the output:
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (3,2) (3,3) <PATH_END>
+
+Therefore, the path from the origin to the target is: (0, 0) → (1, 0) → (2, 0) → (3, 0) → (3, 1) → (3, 2) → (3, 3).

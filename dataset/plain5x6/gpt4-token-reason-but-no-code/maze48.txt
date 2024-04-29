@@ -1,0 +1,27 @@
+To solve the maze given in the adjacency list, we will look for a path from the entry point (0,0) to the exit point (4,5). The adjacency list provides direct connections between the maze cells or nodes. Since there are no weights associated with the connections, a Breadth-First Search (BFS) algorithm, which is ideal for finding the shortest path in an unweighted graph, can be used.
+
+BFS will start at the origin and explore all neighbor nodes at the present depth prior to moving on to nodes at the next depth level. This systematic approach ensures that we find the shortest path from the entry to the exit if a path exists.
+
+**Steps followed to find the path using BFS:**
+
+1. Initialize the BFS with the entry point, (0,0), and add it into a queue.
+2. As each node (or coordinate) is dequeued, all of its adjacent nodes, according to the adjacency list, are examined.
+3. For each adjacent node, if it has not been visited yet, it’s marked as visited and added to the queue. Additionally, track the node from which it was reached.
+4. This process continues until either the exit point (4,5) is dequeued (indicating the path has been found) or the queue is empty (indicating no path exists).
+5. After finding the exit node, backtrack from the exit node to the entry node using the tracking data to reconstruct the path.
+
+**BFS Traversal and Path Determination Process:**
+
+- Start at (0,0) -> explore all connected nodes: (1,0), (0,1)
+- From (1,0) -> explore: (0,0) already visited; move to (1,1)
+- From (0,1) -> explore: (0,0) already visited; move to (0,2)
+- From (0,2) -> explore: (1,2), (0,1) already visited
+- Continue this process until you potentially hit node (4,5) or exhaust all reachable nodes.
+
+This process guarantees that the first time a node is visited, it is the shortest path to that node, hence if you reach (4,5) it is through the shortest path.
+
+**Final solution derived from BFS for this maze scenario:**
+
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (2,2) (3,2) (3,3) (4,3) (4,4) (4,5) <PATH_END>
+
+This represents a shortest path from entry (0,0) to exit (4,5) in the maze described by the adjacency list provided.

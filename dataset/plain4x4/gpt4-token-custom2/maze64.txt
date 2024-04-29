@@ -1,0 +1,25 @@
+Starting with the origin at (0,0), we will use Breadth-First Search (BFS) to explore the nodes and find a path to the destination (3,3), using the provided adjacency list representation of the maze.
+
+Here's how the BFS will generally work step-by-step for solving the maze:
+
+1. Enqueue the start position (0,0) and mark as visited.
+2. Dequeue from queue and check current position.
+3. For all connected nodes (or adjacent cells) of the current node:
+   - If a node is not visited, mark it, enqueue it, and note the parent node.
+4. Repeat the steps until the queue is empty or the destination is found.
+5. Once the destination node is found, backtrack from the destination to the origin using the recorded parents to get the path.
+
+Following these steps and using the adjacency list from the provided input, implementation of BFS will give:
+
+1. Starting at (0,0), we can move to (1,0).
+2. From (1,0), we can move to (1,1).
+3. From (1,1), we can move to (1,2).
+4. From (1,2), we can move to (2,2).
+5. From (2,2), we can move to (3,2).
+6. From (3,2), we can move to (3,3).
+
+Backtracking now from (3,3) to (0,0) based on recorded predecessors, the solution is:
+
+<PATH_START> (0,0) (1,0) (1,1) (1,2) (2,2) (3,2) (3,3) <PATH_END>
+
+This path traverses through each coordinate as given by the valid connections in the adjacency list, ensuring each move is legal and connected accordingly as described originally.

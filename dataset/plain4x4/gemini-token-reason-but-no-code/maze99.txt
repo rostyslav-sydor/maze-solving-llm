@@ -1,0 +1,11 @@
+To find a path through a maze represented as an adjacency list, one can use a depth-first search (DFS) algorithm.
+DFS starts at the origin node and explores all of its adjacent nodes, then all of the adjacent nodes of those nodes, and so on.
+If a dead end is reached, the algorithm backtracks to the most recent node that has unexplored adjacent nodes.
+The algorithm terminates when the target node is reached or when there are no more unexplored nodes.
+
+In the given maze, we can start at the origin node (0,0) and explore its adjacent nodes (1,0) and (0,1).
+We can then explore the adjacent nodes of (1,0), which are (1,1) and (2,0).
+We can continue in this manner until we reach the target node (3,3).
+The path through the maze is:
+
+<PATH_START> (0,0) (1,0) (1,1) (2,1) (2,2) (3,2) (3,3) <PATH_END>

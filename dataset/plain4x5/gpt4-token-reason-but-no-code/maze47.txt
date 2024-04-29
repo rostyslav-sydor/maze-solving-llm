@@ -1,0 +1,15 @@
+To find a solution to this maze, we need to first construct the graph from the given adjacency list. The graph shows nodes as coordinates and edges representing pathways between these coordinates. Using this information, we can conduct a search to find a path from the entry point, marked by the origin, to the exit point, marked by the target.
+
+For this task, one effective algorithm is the Breadth-First Search (BFS), which is well-suited for finding the shortest path in unweighted graphs like this one. BFS explores the graph level by level starting from the source node, ensuring that we find the shortest path from the source to the target if such a path exists.
+
+Given the maze structure from the adjacency list:
+1. Each edge described shows bidirectional connectivity between nodes. For instance, "(2,4) <--> (2,3)" implies we can move both from (2,4) to (2,3) and from (2,3) to (2,4).
+2. The maze's entry point is at (0,0) and the exit point is at (3,4).
+
+Following the BFS approach on this maze from (0,0) to (3,4), we expand nodes layer by layer, processing all neighbors before moving to next distance level. As a consequence, when we reach the exit point (3,4), we're guaranteed to have found the shortest path.
+
+Calculating the BFS on the given graph yields the following path from (0,0) to (3,4):
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (0,4) (1,4) (2,4) (3,4) <PATH_END>
+
+This solution strictly adheres to exploring each viable pathway as permitted by the adjacency connections and successfully finds a path that connects the origin to the target. The chosen BFS method ensures efficiency and optimality in reaching the target from the origin in the shortest possible way given the structure of the maze.

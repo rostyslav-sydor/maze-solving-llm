@@ -1,0 +1,65 @@
+To solve the maze problem using the adjacency list provided, I will follow these steps:
+
+1. **Extract Adjacency Information**:
+   Start by understanding the maze layout, each coordinate pair indicates a cell in the maze, and adjacency (`<-->`) expresses direct accessibility between two cells.
+
+2. **Identify Entry and Exit Points**:
+   - Entry (Origin): (0,0)
+   - Exit (Target): (3,3)
+
+3. **Build Graph Representation**:
+   Transform the adjacency list into a more useable graph format, a dictionary where keys are node coordinates and values are sets of directly connected nodes:
+   ```
+   {
+       (0,0): {(0,1), (1,0)},
+       (0,1): {(0,0), (1,1)},
+       ...
+       (3,3): {(3,2), (2,3)}
+   }
+   ```
+
+4. **Search for a Path from Origin to Target**:
+   Utilize Breadth-First Search (BFS) to explore the shortest path from the origin to the target. This method fits as it explores all neighbors at the present depth prior to moving on to nodes at the next depth level.
+
+5. **Trace the Path**:
+   Once the BFS reaches the target, backtrack from the target cell to the origin cell using the recorded parents to produce the path.
+
+6. **Check the Validity of the Path**:
+   Ensure the path moves through only adjacent cells and doesn't pass through walls based on the adjacency list provided.
+
+### Extracted Graph Construction:
+   Converted the provided adjacency details into a graph:
+   ```
+   {
+       (0,0): {(0,1), (1,0)},
+       (0,1): {(0,0), (1,1)},
+       (0,2): {(0,3)},
+       (0,3): {(0,2), (1,3)},
+       (1,0): {(2,0), (0,0)},
+       (1,1): {(0,1), (1,2), (2,1)},
+       (1,2): {(1,1), (2,2)},
+       (1,3): {(0,3), (2,3)},
+       (2,0): {(3,0), (1,0), (2,1)},
+       (2,1): {(2,0), (1,1)},
+       (2,2): {(3,2), (2,3), (1,2)},
+       (2,3): {(2,2), (3,3), (1,3)},
+       (3,0): {(3,1), (2,0)},
+       (3,1): {(3,0), (3,2)},
+       (3,2): {(3,3), (3,1), (2,2)},
+       (3,3): {(3,2), (2,3)}
+   }
+   ```
+
+### BFS Path Finding:
+   Starting BFS from `(0,0)`, it explores layer by layer until `(3,3)` is found. The parents of each node were recorded during the search. Tracing back from `(3,3)` using these parents:
+
+   Path: `(0,0) → (0,1) → (1,1) → (1,2) → (2,2) → (3,2) → (3,3)`
+
+### Path Validation:
+   Checking through the derived path ensures each consecutive move is made between adjacent cells (i.e., every consecutive pair in the path should match a pairing in the adjacency list).
+
+### Final Result:
+```
+<PATH_START> (0,0) (0,1) (1,1) (1,2) (2,2) (3,2) (3,3) <PATH_END>
+```
+This path adheres to the maze structure defined by the adjacency list, successfully connecting the origin to the target without crossing any barriers.

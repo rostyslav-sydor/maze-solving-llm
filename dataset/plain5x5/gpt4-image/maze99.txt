@@ -1,0 +1,15 @@
+To solve the maze and find the path from the entry point at (0,0) to the exit point at (4,4), I will analyze the maze by visual inspection. Here is a walkthrough explaining the solution, followed by the coordinates of the path:
+
+1. **Start at (0,0)**: This is the entry point of the maze.
+2. **Move down to (1,0)**: This is the only available move at (0,0) as moving right leads to a wall.
+3. **Move down to (2,0)**: Continue moving down.
+4. **Move right to (2,1)**: At (2,0), the only option is to move right since there is a wall below.
+5. **Move right to (2,2)**: Continue moving right.
+6. **Move down to (3,2)**: You should move down next, as moving right leads to a dead-end.
+7. **Move down to (4,2)**: Continue moving down.
+8. **Move right to (4,3)**: At (4,2) the way forward is moving right.
+9. **Move right to (4,4)**: Finally move right to exit the maze at (4,4).
+
+Now, the complete path as required:
+
+<PATH_START> (0,0) (1,0) (2,0) (2,1) (2,2) (3,2) (4,2) (4,3) (4,4) <PATH_END>

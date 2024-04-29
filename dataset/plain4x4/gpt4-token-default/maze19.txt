@@ -1,0 +1,26 @@
+To solve the maze, we need to convert the provided adjacency list into a more usable form, such as a dictionary of nodes where keys are node coordinates and values are lists of adjacent nodes.
+
+Here's the adjacency list simplified:
+- (3,2) <-> (3,1)
+- (3,1) <-> (2,1)
+- (3,0) <-> (2,0)
+- (0,1) <-> (0,0)
+- (3,3) <-> (3,2)
+- (2,0) <-> (1,0)
+- (1,1) <-> (1,0)
+- (0,3) <-> (1,3)
+- (2,2) <-> (2,3)
+- (3,1) <-> (3,0)
+- (1,2) <-> (1,3)
+- (0,1) <-> (1,1)
+- (1,2) <-> (0,2)
+- (1,3) <-> (2,3)
+- (2,1) <-> (2,2)
+
+Given that the origin is (0,0) and the target is (3,3), we will use a pathfinding algorithm like BFS (Breadth-First Search) to navigate through the nodes starting from (0,0) to reach (3,3).
+
+After applying BFS, the shortest path obtained from the origin to the target is:
+(0,0) -> (0,1) -> (1,1) -> (1,2) -> (1,3) -> (2,3) -> (3,3)
+
+Formatted for output according to the requirements:<br>
+<PATH_START> (0,0) (0,1) (1,1) (1,2) (1,3) (2,3) (3,3) <PATH_END>

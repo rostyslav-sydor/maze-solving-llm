@@ -1,0 +1,46 @@
+To solve this maze, we first need to parse the adjacency list description into a usable graph structure and then use a pathfinding algorithm like Breadth-First Search (BFS) or Depth-First Search (DFS) to find a path from the origin to the target. 
+
+Given the maze:
+<ADJLIST_START> (2,0) <--> (3,0) ; (2,1) <--> (3,1) ; (1,2) <--> (1,1) ; (1,0) <--> (0,0) ; (0,2) <--> (0,3) ; (2,1) <--> (2,2) ; (0,0) <--> (0,1) ; (0,1) <--> (0,2) ; (2,0) <--> (1,0) ; (3,1) <--> (3,2) ; (2,3) <--> (3,3) ; (1,3) <--> (0,3) ; (2,3) <--> (1,3) ; (3,2) <--> (3,3) ; (1,2) <--> (2,2) ; <ADJLIST_END> <ORIGIN_START> (0,0) <ORIGIN_END> <TARGET_START> (3,3) <TARGET_END>
+
+Given the adjacency list, here's how the graph looks like in dictionary form (this uses tuples as keys and sets of tuples as connected nodes):
+
+```python
+graph = {
+    (0,0): {(0,1), (1,0)},
+    (0,1): {(0,0), (0,2)},
+    (0,2): {(0,1), (0,3)},
+    (0,3): {(0,2), (1,3)},
+    (1,0): {(0,0), (2,0)},
+    (1,1): {(1,2)},
+    (1,2): {(1,1), (2,2)},
+    (1,3): {(0,3), (2,3)},
+    (2,0): {(1,0), (3,0)},
+    (2,1): {(3,1), (2,2)},
+    (2,2): {(2,1), (1,2)},
+    (2,3): {(1,3), (3,3)},
+    (3,0): {(2,0)},
+    (3,1): {(3,2), (2,1)},
+    (3,2): {(3,3), (3,1)},
+    (3,3): {(3,2), (2,3)}
+}
+```
+
+The origin is `(0,0)` and the target is `(3,3)`.
+
+Use BFS for pathfinding:
+1. Use a queue initialized with `(0,0)` and a dict `previous` to track paths.
+2. Iterate while the queue isn't empty; dequeue node as current, if it matches `(3,3)` break.
+3. For each neighbor of current, if not seen, enqueue and set previous.
+
+If implemented correctly, BFS reaches `(3,3)` and constructs this shortest path by following the 'previous'.
+
+Performing such a BFS query on the shown graph starting from `(0,0)`, we get:
+```python
+path = [(0,0), (0,1), (0,2), (0,3), (1,3), (2,3), (3,3)]
+```
+
+Solution:
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END> 
+
+This algorithm leverages BFS to find the shortest path from origin to destination and uses a mechanism to unwind the previous nodes to generate the correct path sequence.

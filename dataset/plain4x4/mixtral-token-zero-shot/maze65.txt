@@ -1,0 +1,9 @@
+It seems like a graph representation of a maze with some additional tokens. We need to derive a path from the origin point to the target point.
+
+The first sentence states that the maze graph is represented as an adjacency list, which is sandwiched between <ADJLIST_START> and <ADJLIST_END> tokens. The adjacency list represents a bidirectional graph of node connections. Each node is represented by a tuple of coordinates, e.g., (0,2), and each connection is represented by an arrow symbol "–>," from the first node to the second node in the tuple, like (0,2) <--> (0,1). Examining the graph, we can find the origin point sandwiched between <ORIGIN_START> and <ORIGIN_END> tokens, which is (0,0); similarly, the target point is (3,3).
+
+The second sentence states that the solution path should be a list of node coordinates, sandwiched between <PATH_START> and <PATH_END> tokens, composed of only "moves" between connected nodes (following arrow signs in the adjacency list), without any reset (at least one common component between adjacent coordinates, e.g., (1,1) and (1,2) follow).
+
+The third sentence provides a <PATH_START> (1,1) (1,2) (1,3) <PATH_END> example.
+
+That information is enough to figure out the path. Start with (0,0), to (1,1) has an arrow in the adjacency list, so we can move there. Now we are at (1,1), and can move to (1,2) or (1,0), but all arrows exchange (1,1) with (0,1); thus, we can only take the (0,1) <--> (1,0) arrow to get to (1,0). At (1,0), we can move to (2,0), following the arrow. From that point, following the graph, we can reach (2,1) passing through (3,0). However, from that point on, we cannot find any way to reach (3,3), although we could end up again in (3,0). There's a second path available from the origin

@@ -1,0 +1,2 @@
+Following the adjacency list and using BFS, we can compute the shortest path in the provided maze and backtrack to obtain the following solution:
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (2,1) (2,2) (3,2) (3,3) <PATH_END>

@@ -1,0 +1,19 @@
+To find a solution for the maze, the first step is to build the graphical representation of the maze using the adjacency list provided. From this list, we can determine all the possible movements within the maze by mapping out the connections between various points (cells).
+
+We then utilize a search algorithm (such as Breadth-First Search (BFS)) which is ideal for unweighted graphs like this one, to find the shortest path from the entry point to the exit point of the maze. BFS is chosen here because it explores neighbors level by level, ensuring that we find the shortest path in terms of the number of edges traversed.
+
+Starting from the origin (0,0), BFS will examine adjacent nodes and progressively explore their neighbors while keeping track of visited nodes and the paths taken to reach them. This expansion continues until it reaches the target node (3,4). 
+
+BFS is suitable for this scenario as it will guarantee finding the shortest path in an unweighted setting by exploring all possible paths simultaneously until the destination is found. Let us process this search through the maze step-by-step:
+1. Start at (0,0), add to the queue.
+2. Explore (0,0)'s neighbors, which are (0,1) and (1,0).
+3. From (0,1), move to (0,0) [already visited] or (0,2). Add (0,2) to the queue.
+4. From (1,0), move to (0,0) or (2,0). Add (2,0) to the queue.
+5. Continue this process for nodes (0,2), (2,0), etc., as per their connectivity from the adjacency list.
+6. Repeat until the target (3,4) is reached.
+
+Following these steps for the maze provided in the adjacency list, the BFS algorithm when correctly executed would result in the following path between the entry and exit points of the maze:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (0,4) (1,4) (2,4) (3,4) <PATH_END>
+
+This path is the sequence of moves from the entry to the exit that passes through connected corridors (edges), respecting the constraints of the adjacency list that defines this maze. We reached the target cell (3,4) by consistently choosing viable paths from each node's adjacency set, ensuring we don't retrace steps already taken unless necessary and recording the shortest route discovered.

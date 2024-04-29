@@ -1,0 +1,4 @@
+One possible solution for this maze is:
+<PATH_START> (0,0) (1,0) (1,1) (1,2) (1,3) (0,3) (0,2) (0,1) (0,0) (1,0) (2,0) (3,0) (3,1) (3,2) (3,3) <PATH_END>
+
+To reach the target (3,3), start from the origin (0,0) and move along the adjacency list edges, making sure to follow the path to the target (3,3). The solution path visits each coordinate in sequence until reaching the target, thus successfully navigating the maze from the origin to the target.

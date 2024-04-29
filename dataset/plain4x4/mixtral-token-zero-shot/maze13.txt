@@ -1,0 +1,39 @@
+Here's the step-by-step explanation for finding the solution to the given maze in the form of a coordinate list, between <PATH_START> and <PATH_END> tokens. For clarity and debugging purposes, let's first obtain a visual representation of the given maze, which will help us better understand its layout and navigate through it.
+
+First, let's define the method for visualizing the maze, which takes the adjacency list as input:
+
+```python
+def visualize(adjlist):
+    nrows, ncols = 0, 0
+
+    for u, v in adjlist:
+        r1, c1 = u
+        r2, c2 = v
+        nrows = max(nrows, r1, r2)
+        ncols = max(ncols, c1, c2)
+
+    maze = [[' '] * (ncols + 1) for _ in range(nrows + 1)]
+
+    for u, v in adjlist:
+        r1, c1 = u
+        r2, c2 = v
+        maze[r1][c1] = ' ' if maze[r1][c1] == ' ' else '+'
+        maze[r2][c2] = ' ' if maze[r2][c2] == ' ' else '+'
+        if r1 == r2:      # horizontal edge
+            sign = '-' if c1 < c2 else '+'
+            maze[r1][min(c1, c2):max(c1, c2) + 1] = sign
+        else:             # vertical edge
+            sign = '|' if r1 < r2 else '+'
+            maze[min(r1, r2)][c1] = sign
+            maze[max(r1, r2)][c1] = sign
+
+    return '\n'.join(''.join(row) for row in maze)
+```
+
+Next, let's parse the given adjacency list and extract the edge connections:
+
+```python
+edge_connections = {}
+for edge in adjlist.split(';'):
+    node1, node2 = edge.split(' <--> ')
+    if node

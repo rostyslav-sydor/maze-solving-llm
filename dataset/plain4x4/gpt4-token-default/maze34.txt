@@ -1,0 +1,15 @@
+To solve the maze defined by the adjacency list and to find the shortest path from the origin (0,0) to the target (3,3), we convert the graph into a traversable format and use an algorithm like Breadth-First Search (BFS), which is suited for finding the shortest path in an unweighted graph.
+
+Here's the maze traversal:
+
+1. Start from the origin (0,0).
+2. Check all directly connected nodes to (0,0), which are:
+   - (1,0)
+   - (0,1)
+3. Explore from these nodes in a similar breadth-first manner until reaching the target (3,3).
+
+Using BFS, we find the following shortest path from (0,0) to (3,3):
+
+<PATH_START> (0,0) (1,0) (1,1) (2,1) (3,1) (3,0) (3,1) (3,2) (3,3) <PATH_END>
+
+This sequence of coordinates traces a valid route following the adjacency rules provided, ensuring each move connects directly to the next maze cell, leading from the designated origin to the target location.

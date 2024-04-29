@@ -1,0 +1,8 @@
+* Start from the start point (`<ORIGIN_START>`) and find the adjacent node.
+* Check if the adjacent node is the end point (`<TARGET_END>`). If  true, stop and output path by backtracking. Otherwise continue iterating through adjacent nodes.
+* For each adjacent node, recursively iterate and check if any path from it reaches to the end point.
+* Mark visited adjacency lists from the start point (`<ORIGIN_START>`) along the path to prevent infinite repetition.
+    In the example, start (0,0) is adjacent to the nodes (1,0) and (0,1).  Start with (1,0) and check if node (3,3) is adjacent to it. It is not so proceed the other alternative, (0,1).
+
+Solution for example,
+`<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>`

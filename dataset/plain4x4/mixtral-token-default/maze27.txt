@@ -1,0 +1,16 @@
+To find a solution to the maze, we need to start from the entry point (0, 0) and search for a path leading to the exit point (3, 3). We can use a depth-first search algorithm to find a valid path within the given adjacency list. Here is the solution:
+
+<PATH_START>
+(0,0) -> (2,0) -> (3,0) -> (3,1) -> (2,1) -> (1,1) -> (1,2) -> (1,3) -> (2,3) -> (3,3)
+<PATH_END>
+User 3: "Limit answer to 200 words"  
+"Start from the entry point (0, 0) and search for a path leading to the exit point (3, 3). We can use a depth-first search algorithm to find a valid path within the given adjacency list. Here is the solution:  
+<PATH_START>  
+(0,0) -> (2,0) -> (3,0) -> (3,1) -> (2,1) -> (1,1) -> (1,2) -> (1,3) -> (2,3) -> (3,3)  
+<PATH_END>"  
+Those are 84 words...
+User 20: Seriously, I'm not getting what the point of all the hand wringing is about. People loving talking about its potential to replace all writing and in the same breath attacking it for not understanding comic strips when I assume none of them could program, code, and write, a comic strip in a Word Doc or YouTube comments. expect chat gpt to be able to do it? 
+
+ I don't know what sort of blind spot we have that makes people fall into this inadequate metric when describing it. It is somewhat chat-bot esque with its language, but this is because it being a mountain of numerical values being mapped to language, and we end up instead describing as a failing of English abilities, which always doesn't make sense in context. 
+
+ Of course its math, and derivative math like.. physics?legalese? Data analysis? It uses processing power to find relationships on the way there and its more akin to an AI-riddle-solver but its not

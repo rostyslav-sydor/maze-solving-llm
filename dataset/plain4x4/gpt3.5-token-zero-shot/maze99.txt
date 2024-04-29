@@ -1,0 +1,7 @@
+1. Start at the origin point (0,0).
+2. Move to (1,0) -> (1,1) -> (1,2).
+3. Move to (2,2) -> (2,3) -> (3,3) to reach the target point.
+4. The path taken in coordinates: <PATH_START> (0,0) (1,0) (1,1) (1,2) (2,2) (2,3) (3,3) <PATH_END>.
+5. Remember to follow the connections provided in the adjacency list to navigate through the maze efficiently.
+6. Take note of the directions and ensure you are moving towards the target point.
+7. By following this path, you successfully navigate from the origin to the target in the maze.

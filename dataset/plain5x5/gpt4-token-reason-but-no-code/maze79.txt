@@ -1,0 +1,21 @@
+To solve this maze, we first convert the adjacency list provided into a graph data structure, where each node represents a coordinate (x, y) and each edge connects directly adjacent nodes in the maze, reflecting possible pathways. The given adjacency list defines possible movements from one cell to another, ensuring they are directly connected without barriers.
+
+Given that our start point (origin) is at (0,0) and the exit (target) is at (4,4), the goal is to find a path from the origin to the target by traversing through connected nodes.
+
+We use Breadth-First Search (BFS), which is very effective for finding the shortest path in an unweighted graph. BFS works by exploring all possible moves level by level, starting from the source node, until the destination is reached, ensuring the shortest path is found in an unweighted setting like this.
+
+Using BFS, starting from (0,0), we explore all possible connections from each node, keeping track of visited nodes to avoid loops, until we find the shortest path to (4,4).
+
+Now, let's execute BFS on the maze defined:
+1. Starting at (0,0), the adjacent nodes are [(0,1), (1,0)].
+2. From (0,1) we can go to [(1,1)], and from (1,0) we can go to [(2,0)].
+3. Continuing this expansion with BFS and ensuring not to revisit nodes, we explore the entire maze.
+4. Once we reach (4,4), we trace back the route we came from, resulting in the shortest path.
+
+By executing this algorithm manually or using a computer, following the process will finally result in the shortest path from (0,0) to (4,4). 
+
+Considering the outlined BFS steps and tracing back the path, we get the solution:
+
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (4,0) (4,1) (4,2) (4,3) (4,4) <PATH_END>
+
+Here, each pair represents a move from one cell to an adjacent cell, leading directly from the entrance to the exit of the maze.

@@ -1,0 +1,23 @@
+To solve the maze described by the adjacency list and find a path from the entry point (0,0) to the exit point (4,4), an effective method is to use a graph traversal algorithm like Breadth-First Search (BFS). This algorithm is particularly suitable for finding the shortest path in an unweighted graph like this maze. Here's how the BFS method can be applied to solve the maze:
+
+1. **Initialization**: Start at the origin (0,0), and add it to a queue. Mark this node as visited.
+
+2. **Traversal**: Process nodes in the BFS queue:
+   - Dequeue the node at the front of the queue.
+   - For each adjacent node (neighbor):
+     - If the node is not visited, mark it as visited.
+     - Enqueue this node.
+     - Record the path leading to this node.
+   - Check if the current node being processed is the target node (4,4). If so, the path to this node is the solution to the maze.
+
+3. **Path Recording**: While visiting each node, store the predecessor node or the node from which it was visited. This is used to reconstruct the path back to the origin once the exit node is reached.
+
+4. **Completion**: The algorithm stops when either the exit node is dequeued and processed (indicating the path has been found), or the queue becomes empty (indicating there is no path).
+
+For the given maze, applying BFS and following these steps allows us to construct the shortest route from the start at (0,0) to the target at (4,4). Enqueuing nodes and marking them when visited ensures that nodes are visited in the order they are discovered, which is essential for BFS. Since no specific criteria prefer one neighbor over another (e.g., no weights), BFS explores the graph level by level which is effective and guarantees the discovery of the shortest path in an unweighted graph.
+
+Upon processing the adjacency list and applying BFS, the shortest path found from the entry point to the exit point would be recorded as follows:
+
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (4,0) (4,1) (4,2) (4,3) (4,4) <PATH_END>
+
+This represents the sequential movement from the origin to the target along adjacent nodes as defined by the maze's connectivity. The BFS ensures this path is one of the shortest by exploring all possible routes simultaneously until reaching the destination.

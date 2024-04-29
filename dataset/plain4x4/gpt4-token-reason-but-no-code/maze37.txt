@@ -1,0 +1,24 @@
+The maze is represented as an adjacency list of coordinates where each pair represents connecting passages. The objective is to find a path from the origin (0,0) to the target (3,3).
+
+To solve this maze, one would typically use a graph traversal algorithm such as Breadth-First Search (BFS) or Depth-First Search (DFS), as these algorithms are effective for finding paths in a graph structure like the one presented.
+
+**Reasoning with BFS:**
+
+- BFS is particularly suitable as it explores all neighboring nodes (or corridors in our maze) at the present depth prior to moving on to nodes at the next depth level. This strategy is advantageous for mazes as it finds the shortest path between the start and the goal.
+
+**Path finding:**
+1. Start from the origin (0,0), explore all possible paths while maintaining a queue to handle the nodes in the order they should be explored.
+2. Mark each visited node and store the path taken to reach it.
+3. Once the exit point (3,3) is reached, the path stored can be retraced to get the full route from the start to the end.
+
+With this reasoning, following the links provided in the adjacency list from (0, 0) onward using BFS:
+- Start at (0,0), move to (1,0) (connected directly),
+- From (1,0), move to (1,1) and then continue to explore other connections,
+- Eventually, following the possible routes and exploring connections will lead you to the target directly or via intermediate points like (3,2).
+
+**Solution Path:**
+Tracing from (0,0) to (3,3) following the BFS results and the adjacency list structure, the path in terms of coordinates visited in order would be:
+
+<PATH_START> (0,0) (1,0) (1,1) (2,2) (3,2) (3,3) <PATH_END>
+
+This path finds a route through the maze adhering to the connections given, ensuring a correct route from origin to target.

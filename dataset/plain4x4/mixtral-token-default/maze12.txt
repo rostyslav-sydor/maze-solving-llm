@@ -1,0 +1,12 @@
+In this maze, there are multiple paths from the entry to the exit point. However, I will provide the shortest one, and you can enlarge the text if needed to see the detailed instructions better. 
+
+Start from the Origin (0,0) and go to (0,1): (1,1) (2,1) (3,1) (3,0): (3,1)
+
+Then turn right and go to (3,2): (3,1) (3,2)
+
+Finally, turn up and go to (3,3): (3,2) (3,3)
+
+Output format:
+PATH\_START (0,0) (0,1) (1,1) (2,1) (3,1) (3,0) (3,1) (3,2) (3,1) (3,2) (3,3) PATH\_END
+
+This path has the shortest distance from the entry point to the exit point, but there are more paths available. If you want to cover all possible paths, you can work on the adjacency list with any path-finding algorithm like Dijkstra's algorithm or the A* algorithm (if costs are assigned). 

@@ -1,0 +1,19 @@
+To solve the maze, we can use a graph traversal algorithm like Depth-First Search (DFS) or Breadth-First Search (BFS). Since the maze is represented as an adjacency list, we can use BFS to find the shortest path from the origin to the target.
+
+Here's the reasoning behind using BFS:
+
+1. BFS explores all the neighboring nodes at the current depth before moving on to the next depth level. This ensures that we find the shortest path to the target.
+2. BFS uses a queue data structure to store the nodes to be visited. This allows us to process the nodes in the order they are added to the queue, which is crucial for finding the shortest path.
+
+Now, let's apply BFS to the given maze:
+
+1. Initialize an empty queue and a visited set.
+2. Enqueue the origin node (0, 0) and mark it as visited.
+3. While the queue is not empty:
+   a. Dequeue the front node from the queue.
+   b. If the front node is the target node (3, 3), return the path.
+   c. Otherwise, enqueue all unvisited neighboring nodes of the front node and mark them as visited.
+
+Applying BFS to the given maze, we get the following path:
+
+<PATH_START> (0, 0) (1, 0) (2, 0) (2, 1) (2, 2) (2, 3) (3, 3) <PATH_END>

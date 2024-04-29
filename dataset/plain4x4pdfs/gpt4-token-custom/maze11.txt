@@ -1,0 +1,32 @@
+**Maze Representation and Parsing:**
+The adjacency list defines all the direct connections (passages) between points in the maze, where each pair of connected nodes are defined bi-directionally, for instance, `(0,0) <--> (1,0)` implies you can move from `(0,0)` to `(1,0)` and vice versa.
+
+The maze's entry point is `(0,0)` and the exit is `(3,3)`. My task is to find a valid path from the origin to the target that follows the adjacency rules defined.
+
+**Path Finding Process:**
+To solve this, I'll use a method similar to Breadth-First Search (BFS), which efficiently finds the shortest path in an unweighted graph:
+1. Start at the origin `(0,0)`, initializing a queue with this starting node, and mark it as visited.
+2. Expand to all adjacent nodes using the adjacency list, each time marking new nodes as visited and adding them to a path tracking structure.
+3. Continue this expansion until the target `(3,3)` is reached or all possible paths are explored.
+
+From the adjacency list, here is the possible expansion sequence:
+- Starting from `(0,0)`, valid moves are to `(0,1)` and `(1,0)`.
+- Continuing from `(0,1)`, progress can be made to `(1,1)`.
+- From `(1,1)` you can move to `(1,2)`, `(2,1)`.
+- Following the path further, from `(1,2)` moves can be made to `(0,2)`, `(2,2)`.
+- From `(2,2)`, next feasible steps are along `(2,1)`, `(2,3)`.
+- Continuing from `(2,3)` to `(3,3)`, which is the maze's exit.
+
+**Path Calculation and Validation:**
+- Starting from `(0,0)`, progress through `(0,1)`, `(1,1)`, `(1,2)`, `(2,2)`, `(2,3)`, and finally to `(3,3)`.
+- Properly following the adjacency connections, no walls (unlisted connections) are crossed and all moves are between direct neighbors (connected cells).
+
+This results in the shortest path while adhering to the maze's rules:
+
+**Output path:**<br>
+<PATH_START> (0,0) (0,1) (1,1) (1,2) (2,2) (2,3) (3,3) <PATH_END>
+
+This path has been cross-checked for mistakes:
+1. No backtracking or looping unnecessarily.
+2. No connections are utilized that aren't defined in the adjacency list.
+3. The path utilizes only adjacent cells defined by the list, ensuring no "wall crossing".

@@ -1,0 +1,22 @@
+<ADJLIST_START>
+(2,3) <--> (2,2) ; (1,0) <--> (0,0) ; (3,1) <--> (3,2) ; (0,0) <--> (0,1) ; (2,1) <--> (3,1) ; (3,1) <--> (3,0) ; (2,0) <--> (3,0) ; (0,2) <--> (0,1) ; (3,3) <--> (3,2) ; (0,3) <--> (0,2) ; (1,2) <--> (1,1) ; (2,1) <--> (1,1) ; (0,3) <--> (1,3) ; (1,3) <--> (2,3) ; (1,0) <--> (2,0)
+<ADJLIST_END>
+<ORIGIN_START> (0,0) <ORIGIN_END>
+<TARGET_START> (3,3) <TARGET_END>
+
+Let's start from the origin and build the path to the target by going through connected nodes and never going through the same node twice. We can use breadth-first search algorithm (BFS).
+
+First, we use the BFS algorithm to find a path between the origin (0,0) and the target (3,3).
+
+We keep a queue to which we initially add the origin.
+We repeatedly take the first node from the queue and add each unvisited neighbor to the queue, until we either find the target or the queue is empty (indicating there is no path).
+
+Our initial queue is [(0,0)] and we will continue applying this process with the following outcome:
+
+[ (0,1) ]
+[ (1,1), (0,2) ]
+[ (1,2), (2,2), (0,3) ]
+[ (1,3), (2,3), (3,2) ]
+[ (2,1), (1,3) ]
+
+Our final path from (0,0) to (3,3) is: (0,0) (0,1) (0,2) (0,3) (1,3)

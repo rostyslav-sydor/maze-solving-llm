@@ -1,0 +1,17 @@
+To find the solution for this maze, let’s follow the possible path starting from the entry point (0,0) and aiming to reach the exit at (3,3) while avoiding the walls.
+
+1. Begin at (0,0). Move right to (0,1), and (0,2) as there are no walls obstructing these cells to the right.
+   
+2. From (0,2), move down to (1,2). Continue moving down to (2,2), due to an unobstructed path vertically.
+
+3. Move left from (2,2) to (2,1). Continue moving left to (2,0) where again, there are no walls blocking these cells horizontally.
+
+4. Move down from (2,0) to (3,0).
+
+5. From (3,0), now move right to (3,1), and continue to (3,2). From here, proceed to the exit (3,3).
+
+This path successfully navigates around walls:
+
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (2,2) (2,1) (2,0) (3,0) (3,1) (3,2) (3,3) <PATH_END> 
+
+Each move was made by checking the availability of adjacent cells free from walls, moving horizontally or vertically as needed to proceed towards the exit.

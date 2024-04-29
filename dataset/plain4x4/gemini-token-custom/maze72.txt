@@ -1,0 +1,25 @@
+Starting from <ORIGIN_START> at (0,0), the possible moves are (0,1) and (1,0). 
+Going to (0,1), the possible moves are (0,0), (0,2), and (1,1). 
+If we go to (0,2), the only move from there is (0,1), so that is a dead end. 
+Going to (1,1), the possible moves are (0,1), (1,0), and (1,2). 
+If we go to (1,2), the only move from there is (1,1), so that is also a dead end. 
+Therefore, from (0,0), the only valid move is (1,0).
+
+From (1,0), the possible moves are (0,0), (1,1), and (2,0). 
+We have already explored (0,0) and (1,1), so the only remaining valid move is (2,0).
+
+From (2,0), the possible moves are (1,0) and (2,1). 
+We have already explored (1,0), so the only remaining valid move is (2,1).
+
+From (2,1), the possible moves are (1,1), (2,0), and (2,2). 
+We have already explored (1,1) and (2,0), so the only remaining valid move is (2,2).
+
+From (2,2), the possible moves are (1,2), (2,1), and (2,3). 
+We have already explored (1,2) and (2,1), so the only remaining valid move is (2,3).
+
+From (2,3), the possible moves are (1,3), (2,2), and (3,3). 
+We have already explored (1,3) and (2,2), so the only remaining valid move is (3,3), which is the <TARGET_END> token.
+
+Therefore, the solution path is: <PATH_START> (0,0) (1,0) (2,0) (2,1) (2,2) (2,3) (3,3) <PATH_END>
+
+Checking the path, all moves are between adjacent cells and the path does not cross any walls.

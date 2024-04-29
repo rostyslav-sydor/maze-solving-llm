@@ -1,0 +1,49 @@
+To solve the maze and find a path from the origin coordinate (0,0) to the target coordinate (3,3), we'll construct the graph from the adjacency list and then use Breadth-First Search (BFS) to find the shortest path.
+
+**Graph Construction:**
+
+From the adjacency list tokens:
+
+- `(3,2) <--> (3,1)`
+- `(1,1) <--> (1,2)`
+- `(2,1) <--> (2,0)`
+- `(0,3) <--> (0,2)`
+- `(0,0) <--> (0,1)`
+- `(2,3) <--> (2,2)`
+- `(1,0) <--> (2,0)`
+- `(1,3) <--> (1,2)`
+- `(0,1) <--> (1,1)`
+- `(1,0) <--> (0,0)`
+- `(1,3) <--> (2,3)`
+- `(0,1) <--> (0,2)`
+- `(3,1) <--> (2,1)`
+- `(3,2) <--> (3,3)`
+- `(3,0) <--> (3,1)`
+
+These edges define the connectivity between all the nodes.
+
+**Perform BFS:**
+
+Starting from `(0,0)`, explore all connected nodes, noting visited nodes to avoid revisiting and keep track of the path using a queue.
+
+### Path Discovery
+
+1. Start at `(0,0)` and place it in the queue.
+2. Visit and enqueue its neighbors `(0,1)` and `(1,0)`.
+3. From `(0,1)`, the neighbors `(0,2)` and `(1,1)` can be visited. Add `(0,2)` which connects to `(0,3)`.
+4. From `(1,0)` which leads to `(2,0)` and finally to `(3,0)`.
+5. `(3,0)` reaches `(3,1)`, which can connect to `(3,2)`.
+6. `(3,2)` leads directly to `(3,3)`.
+
+Following all connections using BFS:
+
+- From `(0,0)` to `(0,1)`, then to `(0,2)` and to `(0,3)`.
+- Either by continuing horizontally to the top row or dropping back down:
+- `(0,3)` does not connect further down without return, so consider the path through `(0,2)` to `(1,2)`.
+- Then to `(1,3)` which connects further to `(2,3)`.
+- Finally `(2,3)` connects to `(3,3)`.
+
+**Resulting Path:**
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (1,3) (2,3) (3,3) <PATH_END> 
+
+This path goes along the bottom row, moves up vertically and then rights, exploiting direct connections avoiding detours.

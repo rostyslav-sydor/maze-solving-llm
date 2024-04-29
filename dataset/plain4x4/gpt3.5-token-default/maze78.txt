@@ -1,0 +1,5 @@
+The solution for the given maze is as follows: 
+
+<PATH_START> (0,0) (0,1) (1,1) (1,2) (2,2) (3,2) (3,3) <PATH_END>
+
+This path moves from the starting point (0,0) to the ending point (3,3) by following the connections specified in the adjacency list. It starts by moving right to (0,1), then down to (1,1), followed by right to (1,2) and then up to (2,2). From there, it moves right to (3,2) and finally down to reach the target point at (3,3). This path avoids any loops and successfully navigates through the maze to reach the goal.

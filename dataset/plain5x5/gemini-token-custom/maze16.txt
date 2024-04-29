@@ -1,0 +1,18 @@
+The maze is represented by adjacency list, where each node is a cell in the maze.
+Nodes are represented as (row, column), with row being the vertical coordinate and column being the horizontal coordinate.
+Each node has a list of adjacent nodes, which are the nodes that are directly above, below, left, or right of the current node.
+We use the depth-first search algorithm to find a path from the starting node (0,0) to the ending node (4,4).
+First, we mark the starting node as visited, and add it to a stack.
+Then, we iterate over all of the adjacent nodes of the current node, and if any of them have not been visited, we mark them as visited, and add them to the stack.
+We repeat this process until the stack is empty or we reach the ending node.
+If we reach the ending node, we have found a path from the starting node to the ending node.
+The path is represented by a list of coordinates, with each coordinate being a (row, column) pair.
+The first coordinate in the list is the starting node, and the last coordinate in the list is the ending node.
+To check if the path does not cross any walls, we can check that each adjacent node in the path is actually adjacent to the current node.
+To check if the path uses only adjacent cells, we can check that each node in the path is only adjacent to one other node in the path.
+
+The solution to the maze is:
+
+```
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (2,4) (3,4) (4,4) <PATH_END>
+```

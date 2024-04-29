@@ -1,0 +1,26 @@
+To solve the maze provided in the adjacency list format, we start by parsing the adjacency list representation into a usable graph structure and then apply a pathfinding algorithm, such as Breadth-First Search (BFS), to locate the shortest path from the origin to the target coordinates.
+
+**Given Maze Details:**
+- **Adjacency List:**
+  - (1,3) <--> (0,3)
+  - (0,3) <--> (0,2)
+  - (3,1) <--> (3,0)
+  - ...
+  - (2,2) <--> (3,2)
+- **Origin:** (0,0)
+- **Target:** (3,3)
+
+Now, using BFS:
+
+1. Start from the origin (0,0).
+2. Explore all directly connected nodes.
+3. From each node, further explore their neighboring nodes until the target (3,3) is reached.
+4. Record the path taken.
+
+**Sample Solve Path:**
+- Start at (0,0), moves to adjacent nodes like (0,1), then (0,2), (0,3) following to (1,3), and advancing through (2,3) and finally reaching (3,3).
+
+**Final Path Output:**
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>
+
+This pathway traverses a possible shortest path through the legitimate adjacencies from the origin to the destination. The correctness of paths would depend on the maintained graph structure and following the BFS for thorough exploration.

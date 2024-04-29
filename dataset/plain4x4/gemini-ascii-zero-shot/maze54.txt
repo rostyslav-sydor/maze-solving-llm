@@ -1,0 +1,3 @@
+From the starting point, we can move right to (1,2). Then, we can only move down to (2,2). From there, we can either move right to (2,3) or down to (3,2). We choose to move right first, and then down to (3,3). We can then move right again to (3,4), and then down to (4,4). From there, we can move right to (4,5), and then up to (3,5). We can then move right to (3,6), and then up to (2,6). Finally, we can move right to (2,7) and then down to (3,7) to reach the exit.
+
+Therefore, the solution is: <PATH_START> (1,1) (1,2) (2,2) (2,3) (3,3) (3,4) (4,4) (4,5) (3,5) (3,6) (2,6) (2,7) (3,7) <PATH_END>

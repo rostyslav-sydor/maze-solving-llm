@@ -1,0 +1,28 @@
+One of the solutions is:
+<PATH_START> (0,0) (0,1) (1,1) (1,2) (1,3) (0,3) (0,4) (1,4) (2,4) (3,4) (4,4) <PATH_END>
+
+Let's check if this solution is valid by going through each step:
+
+- (0,0) is given as a starting position.
+
+- (0,1) is adjacent to (0,0) as there is an edge between these two coordinates in the graph.
+
+- (1,1) is adjacent to (0,1) as there is an edge between these two coordinates in the graph.
+
+- (1,2) is adjacent to (1,1) as there is an edge between these two coordinates in the graph.
+
+- (1,3) is adjacent to (1,2) as there is an edge between these two coordinates in the graph.
+
+- (0,3) is adjacent to (1,3) as there is an edge between these two coordinates in the graph.
+
+- (0,4) is adjacent to (0,3) as there is an edge between these two coordinates in the graph.
+
+- (1,4) is adjacent to (0,4) as there is an edge between these two coordinates in the graph.
+
+- (2,4) is adjacent to (1,4) as there is an edge between these two coordinates in the graph.
+
+- (3,4) is adjacent to (2,4) as there is an edge between these two coordinates in the graph.
+
+- (4,4) is adjacent to (3,4) as there is an edge between these two coordinates in the graph and given as a ending position.
+
+Therefore, the solution provided is a valid path through the maze.

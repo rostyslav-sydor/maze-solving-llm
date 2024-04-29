@@ -1,0 +1,16 @@
+To solve this maze, we need to find a path from the origin (0,0) to the target (3,3) using the adjacency list provided. We can use Breadth-First Search (BFS) as it is suitable for finding the shortest path in an unweighted graph.
+
+Starting from (0,0), we can explore neighboring nodes till we reach (3,3). Using the adjacency list we can form connections as:
+
+- From (0,0), we can go to (0,1)
+- From (0,1), we can go to (0,2)
+- From (0,2), we can go to (0,3)
+- From (0,3), we can go to (1,3)
+- From (1,3), we can go to (2,3)
+- From (2,3), we can go to (3,3)
+
+Now put these steps together to form the path from (0,0) to (3,3):
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>
+
+This sequence of moves solves the maze from the given entrance to the exit.

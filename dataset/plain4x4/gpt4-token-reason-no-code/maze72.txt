@@ -1,0 +1,41 @@
+To find a solution to the maze represented as an adjacency list, we can use Breadth-First Search (BFS). BFS is ideal for finding the shortest path in an unweighted graph like this one.
+
+### Representation of the maze:
+1. Nodes represent coordinates in the maze, given in pairs like (x, y).
+2. Edges show which nodes (or points in the maze) are directly connected. For instance, `(1,2) <--> (1,3)` means you can move directly from point (1,2) to (1,3) and vice versa.
+
+### Steps to solve the maze:
+1. **Parse the input** to extract the adjacency list, the origin (start) and the target (end) points.
+   - Adjacency List: `(1,2) <--> (1,3) ; ... ; (2,1) <--> (1,1)`
+   - Origin (start): `(0,0)`
+   - Target (end): `(3,3)`
+
+2. **Convert the adjacency list to a graph structure**: Use a map/dictionary where each key is a node (a pair of coordinates), and each value is a list of neighboring nodes.
+
+3. **Initialize BFS**:
+   - Start from the origin node `(0,0)`.
+   - Maintain a queue for BFS exploration: start by enqueueing the origin node.
+   - Keep track of visited nodes to avoid cycles and redundant paths.
+   - Optionally, keep track of the path by maintaining a previous node pointer for each visited node.
+
+4. **Run BFS**:
+   - Dequeue a node from the front of the queue.
+   - For each adjacent node of this dequeued node:
+     - If it is the target node, you've found the path.
+     - If it isn’t yet visited, mark it as visited, record the path (e.g., the current node is reached from the dequeued node), and enqueue it.
+
+5. **Reconstruct the path from the target node back to the origin**:
+   - By tracing back using the previous node pointers, you construct the path from end to start.
+   - Reverse this path since it was constructed backwards.
+
+6. **Output the path**:
+   - Begin with `<PATH_START>` and end with `<PATH_END>`, and enumerate each node pair representing the coordinates along the path from origin to target.
+
+### Example of output:
+Given that we process BFS appropriately and handle the graph correctly, a hypothetical shortest path for our maze might look like:
+
+`<PATH_START> (0,0) (0,1) (0,2) (1,2) (1,3) (2,3) (3,3) <PATH_END>`
+
+This output signifies that the maze traveler starts at the origin `(0,0)`, makes their way through the series of connected points, and finally reaches the destination `(3,3)`.
+
+Note: The actual path might vary depending on node connections derived from BFS based on the adjacency list provided. Assuming adjacency connections allow this path, it represents a valid BFS-derived solution; actual connections must be verified from the input data for precision.

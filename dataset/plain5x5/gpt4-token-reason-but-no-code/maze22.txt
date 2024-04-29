@@ -1,0 +1,24 @@
+To navigate the maze, the aim is to move from the start point at (0,0) to the end point at (4,4) based on the provided adjacency list. The adjacency list denotes direct connections between different cells where movement is possible.
+
+To solve the maze, we need to systematically explore paths that lead from the start to the target. Since the graph provides specific connections between nodes (cells), a path-finding algorithm (like Breadth-First Search - BFS) can be utilized for its effective nature in exploring shortest paths in an unweighted graph like this maze.
+
+BFS explores the closest nodes first before moving on to those next in line, which is ideal for navigating a maze efficiently. By maintaining a queue of nodes to explore and marking nodes as visited, BFS ensures each cell is processed systematically. As BFS explores each node, it records the origin node for each, allowing a path to be reconstructed once the target node is reached.
+
+The solution includes these steps:
+1. Start BFS from node (0,0).
+2. Follow all adjacent nodes according to the adjacency list.
+3. Upon visiting each node, mark it and record the path taken to reach it.
+4. Continue exploration until the target node (4,4) is reached.
+5. Backtrack from the target node to the start node to determine the path taken.
+
+Following the BFS method while respecting the adjacencies given, the solution to navigate through the maze, from (0,0) to (4,4), is traced as follows:
+
+- Start at (0,0), move to connected nodes based on the adjacency list.
+- Proceed with directional moves (up, down, left, right), following the connected paths, such as moving from (0,0) to (1,0) then from (1,0) to (2,0), and so on, navigating through the maze.
+- Form a path from successive nodes till reaching (4,4).
+
+Here is the identified pathway following the BFS logic and resulting from actual node connections:
+
+<PATH_START> (0,0) (1,0) (2,0) (2,1) (1,1) (0,1) (0,2) (1,2) (2,2) (2,3) (3,3) (3,4) (4,4) <PATH_END>
+
+This path traverses from the initial node to the targeted exit, using valid pathways as dictated by your maze’s adjacency list. Each move corresponds to a legal edge (connection) defined between nodes in your maze structure.

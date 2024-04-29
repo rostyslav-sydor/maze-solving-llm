@@ -1,0 +1,5 @@
+Depth first search algorithm can be used to solve a maze by iterating through it in depth, marking visited nodes to avoid loops. The algorithm starts from the entry point and iterates through the maze until it reaches the exit point. If it reaches a dead end, it backtracks to the last visited node and tries a different path.
+
+In this particular maze, we can start from the entry point at (0,0) and move right to (1,0), then down to (1,1), then right to (2,1), then down to (3,1), then right to (4,1), then up to (4,0), then right to (4,1), then down to (4,2), then right to (4,3), then up to (4,2), then right to (4,3), then down to (4,4), the exit point.
+
+Therefore, the solution is: <PATH_START> (0,0) (1,0) (1,1) (2,1) (3,1) (4,1) (4,0) (4,1) (4,2) (4,3) (4,2) (4,3) (4,4) <PATH_END>

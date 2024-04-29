@@ -1,0 +1,8 @@
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>
+
+**Reasoning:** We start at the origin (0,0) and move right to (0,1). Then we move down to (0,2) and right to (0,3). We then move up to (1,3), right to (2,3), and finally up to (3,3), the target.
+
+**Verification:**
+
+* No walls are crossed, as each move is to an adjacent cell.
+* All cells in the path are connected, as each move is to an adjacent cell.

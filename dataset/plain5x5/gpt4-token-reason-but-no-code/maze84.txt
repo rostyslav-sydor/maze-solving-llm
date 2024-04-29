@@ -1,0 +1,13 @@
+The adjacency list provided represents the possible paths between cells in a maze, with each pair denoting a direct connection. To find a path from the origin (0,0) to the target (4,4), I considered each connection as an undirected edge in a graph, and assessed the shortest path algorithm, specifically Breadth-First Search (BFS), which is well-suited for such unweighted graphs to find the shortest path.
+
+Starting from the origin, I systematically explored all possible paths using BFS, keeping track of visited nodes to avoid redundant paths and cycles. For each node visited, its previous node on the discovered path was recorded to backtrack the route once the target was reached.
+
+By iteratively exploring nodes level by level and ensuring all immediate connections were examined before moving deeper, BFS guarantees that the first time the destination is encountered is via the shortest path. This exploration continued until the target (4,4) was reached.
+
+Upon reaching the target, I backtracked from the target cell to the origin using the recorded parent-node relationships, constructing the path in reverse order. This yielded the sequence of coordinates that form the shortest path through the maze, being careful to maintain order from source to destination upon final representation.
+
+Given these steps and considerations, the discovered path from (0,0) to (4,4) in the maze configured from the given adjacency list is:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (2,4) (3,4) (4,4) <PATH_END> 
+
+This path is derived from moving via connected node segments, ensuring it adheres to the graph's constraints and represents the shortest route based on the BFS exploration.

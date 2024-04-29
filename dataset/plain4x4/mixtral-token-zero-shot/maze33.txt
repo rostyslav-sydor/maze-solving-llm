@@ -1,0 +1,26 @@
+ Step 1: Convert the description to a graph. Represent each coordinate as a node, and draw an edge between adjacent coordinates that represent valid moves in the maze. We'll mark the original position as starting node and target position as ending node.
+
+ Step 2: We can use depth-first search (DFS) or breadth-first search (BFS) algorithms to traverse the graph. Let's choose BFS for this problem to avoid getting stuck in infinite loops.
+
+ Step 3: Starting from the node representing the original position, explore adjacent nodes (vertices) until we reach the target node(vertex).
+
+ step 4: Whenever we reach a node, check whether it represents the target position. If it's not the target node, mark it as visited and add unmarked adjacent nodes to a queue.
+
+ Step 5: Once the target node is reached, we'll start reconstructing the path based on the record of previous moves maintained through the search.
+
+ To do this, start from the target node, repeatedly backtrack to the previous node until the original position is reached.
+
+ To reconstruct the path:
+ - Insert the target coordinated into the list.
+ - Starting from the origin coordinated and for each coordinated in your path:
+   - Examine the record of previous moves started at the current coordinated.
+   - Let the deepest level (or last one visited—last in, first out) move be (x,y), then find row x and column y where (x,y) equals the current coordinated.
+   - Record next position (x1,y1) with x1 being either x−1 or +1 and y1 either y−1 or +1 and record its row in array as X coordinate and its column as Y coordinate and go to the next step, then implements the path solving algorithm.
+
+  Write down your solutions:
+
+  - Get the row (x) and column (y) of the start position: S = (xS: row of start position), (yS: column of start position).
+
+  - Get the row (x) and column (y) of the target position: T = (xT: row of target position), (yT: column of target position).
+
+  - Check if start(x,y) or target(x,y) exist as nodes in the graph

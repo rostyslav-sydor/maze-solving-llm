@@ -1,0 +1,17 @@
+From the entry point at (0,0) we can either go to (1,0) or (0,1)
+To make the solution unique, we will prioritize going down the rows first before going right.
+
+Going to (1,0) will lead to a dead end because there is no way to go from (1,0) to (1,1).
+We then have to backtrack to (0,0) and go in the other direction to (0,1)
+From (0,1) we can go to (0,2) and then to (0,3)
+
+Then from (0,3) we can go to (1,3) and then to (2,3)
+We have reached (2,3) and can now go to (2,2)
+We now have two possible paths from (2,2) to (3,2). One path is (2,2) -> (1,2) -> (2,2) -> (3,2) and the other is (2,2) -> (3,2). We will take the shorter path, which is (2,2) -> (3,2).
+From (3,2) we can go to (3,3), which is the exit point.
+
+The solution is: <PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (2,2) (3,2) (3,3) <PATH_END>
+
+To check if the solution does not cross any walls, we can check if each step in the solution is valid according to the adjacency list. For example, the first step in the solution is from (0,0) to (0,1). According to the adjacency list, (0,0) is adjacent to (0,1), so this step is valid. We can repeat this process for each step in the solution to check if it is valid.
+
+To check if the path uses only adjacent cells, we can check if each step in the solution is adjacent to the previous step. For example, the first step in the solution is from (0,0) to (0,1). (0,1) is adjacent to (0,0), so this step is valid. We can repeat this process for each step in the solution to check if it is valid.

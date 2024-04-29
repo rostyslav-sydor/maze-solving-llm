@@ -1,0 +1,16 @@
+To solve the maze, we first interpret the adjacency list to construct a graph representing all the pathways between the various cells. Each node in the graph corresponds to a cell in the maze, and each edge represents a direct pathway between connected cells.
+
+In this case, the entry point is marked at (0,0) and the exit is at (4,5). The aim is to find the shortest path between these two points, navigating through the connections specified in the adjacency list.
+
+Considering this data, we use a pathfinding algorithm called Breadth-First Search (BFS). BFS is well-suited for unweighted grids since it explores the nearest neighbor nodes first, systematically covering layers of nodes increasingly farther from the start point. This property enables BFS to find the shortest path in terms of the number of edges traversed, making it ideal for navigating a maze structured as a grid with all move costs equivalent.
+
+The maze's structure and the BFS traversal are employed to discover the shortest path from the origin to the target. Implementing this, we keep track of each cell's previous node, allowing us to reconstruct the full path once we reach the exit.
+
+Given the maze's adjacency list, and following the BFS system, we explore all potential paths beginning at the entry point, exploring all immediate neighbors first and moving onto more distant relatives only once nearer nodes have been fully inspected. This way, each cell is only visited once, ensuring efficiency and preventing cycles.
+
+Upon reaching the exit node during BFS traversal, we backtrack through the previously stored links between cells to construct the path taken. This results in the sequence of cells for the shortest path from the entry to the exit point.
+
+After conducting the above process for this specific maze, the solution path obtained is:
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (0,4) (0,5) (1,5) (2,5) (2,4) (2,3) (2,2) (3,2) (4,2) (4,3) (4,4) (4,5) <PATH_END>
+
+This series of coordinates represents the shortest possible route within the maze from the start coordinate (0,0) to the end coordinate (4,5), following the connections outlined in the adjacent list without revisiting nodes or backtracking unnecessarily.

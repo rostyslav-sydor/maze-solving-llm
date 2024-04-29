@@ -1,0 +1,3 @@
+<Path_Start> (0,0) (1,0) (2,0) (2,1) (2,2) (3,2) (3,3) <Path_End> 
+
+To reach from the origin at (0,0) to the target at (3,3), follow the path provided above by moving through the maze defined in the adjacency list. Start at the origin point (0,0) and move to (1,0), then to (2,0) and (2,1). Continue on to (2,2), (3,2) and finally to the target at (3,3). This path ensures that every step taken is along a valid edge in the maze graph, leading directly towards the target point. The path is represented in the desired format with each coordinate between <Path_Start> and <Path_End>. This solution successfully navigates through the maze from the origin to the target point in the most efficient manner.

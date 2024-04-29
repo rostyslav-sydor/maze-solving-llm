@@ -1,0 +1,12 @@
+To solve the maze, let's trace a path from the starting point at (0,0) to the finishing point at (3,3) while avoiding thick black lines which represent walls.
+
+1. Start at (0,0). Moving right or down is possible, the former being blocked by a wall at (0,1). Hence, move down to (1,0).
+2. From (1,0), move right to (1,1).
+3. Continue moving right to (1,2).
+4. From (1,2), progress further right to (1,3).
+5. At (1,3), the only feasible direction without a wall is down to (2,3).
+6. From (2,3), move down to (3,3), which is the exit point.
+
+The path consists of coherent forward or downward movements without turning back or encountering walls directly in the path.
+
+<PATH_START> (0,0) (1,0) (1,1) (1,2) (1,3) (2,3) (3,3) <PATH_END>

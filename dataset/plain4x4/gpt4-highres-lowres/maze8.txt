@@ -1,0 +1,17 @@
+To solve this maze, let's visually trace a path. The entry point is at (0,0), and the exit point is at (4,4). We visually analyze the maze and look for possible paths, moving from the entry to the exit without crossing any walls marked by the thick black lines.
+
+Starting at (0,0), the options are limited to moving right or down. The analysis and path selection process are as follows:
+
+1. Start at (0,0).
+2. There's a wall blocking the right, so move down to (1,0).
+3. From (1,0), again move down to (2,0).
+4. From (2,0), move right to (2,1) and once more to (2,2).
+5. From (2,2), there's an ability to either move down or right. Moving down is a better choice since moving right hits a dead-end at (2,3). So, move down to (3,2).
+6. From (3,2), move right to (3,3).
+7. From (3,3), move right to (3,4).
+8. Finally, from (3,4) we can only move down to (4,4), as moving right exits the boundaries of the maze.
+
+Now, this pathway from the start to end is uninterrupted and avoids all walls.
+
+The specific path, formatted as requested:
+<PATH_START> (0,0) (1,0) (2,0) (2,1) (2,2) (3,2) (3,3) (3,4) (4,4) <PATH_END>

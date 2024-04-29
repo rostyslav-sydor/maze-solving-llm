@@ -1,0 +1,19 @@
+Here's a step-by-step guide to solve the maze using a breadth-first search algorithm:
+
+1. Create a 2D grid-based array representing the maze with walls, entry point, and exit point marked.
+2. Define a 2D array to track visited cells, initialized with all values false.
+3. Add the entry point (1, 1) to a queue.
+4. Iterate until the queue is empty:
+   a. Dequeue a cell and mark it as visited.
+   b. Check if the cell is the exit point. If true, we've found a solution; break the loop.
+   c. Check the neighboring cells of the dequeued cell, and if not visited, add them to the queue and update their parent direction.
+5. Trace back through the parent directions to find the path from the exit point to the entry point.
+6. Output the path in the desired format.
+
+Now, let's solve the given maze:
+
+Starting from the entry point (1, 1), the shortest path to the exit point (7, 7) is: 
+(1, 1) → (2, 1) → (3, 1) → (3, 2) → (3, 3) → (3, 4) → (4, 4) → (5, 4) → (5, 5) → (6, 5) → (7, 5) → (7, 6) → (7, 7)
+
+Formatted as you requested, the path is:
+<PATH_START> (1,1) (2,1) (3,1) (3,2) (3,3) (3,4) (4,4) (5,4) (5,5) (6,5) (7,5) (7,6) (7,7) <PATH_END>

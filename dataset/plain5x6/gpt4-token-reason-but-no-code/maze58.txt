@@ -1,0 +1,30 @@
+Given the adjacency list for the maze, the task is to find a path from the entry point (0,0) to the exit point (4,5). The maze is interpreted as a graph where each coordinate pair represents a vertex, and a connection (`<-->`) between two pairs represents an edge implying that one can move directly between the two vertex points.
+
+To solve this, I will perform a Breadth-First Search (BFS), which is particularly adequate for unweighted graphs, ensuring the shortest path in such scenarios. BFS explores all neighboring nodes at the present depth prior to moving on to nodes at the next depth level. It uses a queue to keep track of vertices to explore next, along with marking vertices as visited. In this context, it's instrumental in navigating mazes since it systematically checks each possibility level by level.
+
+Starting BFS from the entry point (0,0), I will move through the vertices according to the adjacency list, marking each visited vertex and noting the path to return to if a given path reaches the exit.
+
+Here’s the step-by-step illustrated solution to traverse this maze:
+
+1. Start at (0,0). Add this to the queue.
+2. Dequeue (0,0). Enqueue its neighbors (1,0) and mark (0,0) as visited.
+3. Dequeue (1,0). Its unvisited neighbors are (2,0). Enqueue and mark them.
+4. Continue this process for each dequeued node:
+   - Dequeue (2,0), enqueue and mark (3,0).
+   - Dequeue (3,0), enqueue and mark (4,0) and (3,1).
+   - Dequeue (4,0), no new nodes to add.
+   - Dequeue (3,1), enqueue and mark (4,1).
+   - Dequeue (4,1), enqueue and mark (4,2).
+   - Dequeue (4,2), enqueue and mark (4,3).
+   - Dequeue (4,3), enqueue and mark (4,4).
+   - Dequeue (4,4), enqueue and mark (3,4).
+   - Dequeue (3,4), enqueue and mark (3,5).
+   - Dequeue (3,5), enqueue and mark (4,5) (exit is found).
+
+On arriving at the node (4,5), I trace back from each node to its parent node starting from (4,5) to (0,0) to establish the final path.
+
+The resulting optimal path in the maze as per BFS, starting from (0,0) and leading to (4,5), is as follows:
+
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (4,0) (3,1) (4,1) (4,2) (4,3) (4,4) (3,4) (3,5) (4,5) <PATH_END> 
+
+This path describes the sequence of moves from start to finish using an efficient breadth-first traversal of the graph.

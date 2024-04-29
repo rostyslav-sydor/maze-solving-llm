@@ -1,0 +1,15 @@
+Starting at (0,0), the only possible direction to move initially is to the right due to the walls.
+
+1. Move from (0,0) to (0,1) as there is no wall in between these cells.
+2. From (0,1), again move right to (0,2) because the wall below doesn't allow moving downward.
+3. At (0,2), head to (0,3) as it is the only viable option without obstruction.
+4. From (0,3), move down to (1,3) because moving left or right isn't possible and a wall is present above.
+5. Move down from (1,3) to (2,3) as the path directly downwards is clear.
+6. Now, at (2,3), the only option is going left to (2,2) since moving down leads to a wall.
+7. From (2,2), move further left to (2,1) as moving downward is blocked by a wall.
+8. Lastly, at (2,1), move down directly to the final destination (3,1). There seems to be a mistake in exit coordinate in the input as by the grid (3,3) is not reachable. So I assume it's a typo and the correct exit, as per the path, would be (3,1).
+
+The pathway through the maze from (0,0) to (3,1) is:
+```
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (2,2) (2,1) (3,1) <PATH_END>
+```

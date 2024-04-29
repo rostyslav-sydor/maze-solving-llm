@@ -1,0 +1,32 @@
+To solve the maze, we can use a graph traversal algorithm like Depth-First Search (DFS) or Breadth-First Search (BFS). Since the maze is represented as an adjacency list, we can easily implement either of these algorithms.
+
+Let's use Breadth-First Search (BFS) to find the shortest path from the origin to the target. BFS explores all the neighboring nodes at the current depth before moving on to the nodes at the next depth level. This ensures that we find the shortest path to the target.
+
+Here's the reasoning behind using BFS:
+
+1. Initialize a queue and enqueue the origin node.
+2. While the queue is not empty:
+   a. Dequeue a node from the queue.
+   b. If the dequeued node is the target, we have found the shortest path. Break the loop.
+   c. Otherwise, enqueue all the neighboring nodes of the dequeued node that have not been visited yet.
+   d. Mark the dequeued node as visited.
+3. If the target node is not found, there is no path from the origin to the target.
+
+Now, let's apply BFS to the given maze:
+
+1. Initialize a queue and enqueue the origin node (0, 0).
+2. While the queue is not empty:
+   a. Dequeue a node from the queue: (0, 0).
+   b. Enqueue all neighboring nodes of (0, 0) that have not been visited: (1, 0) and (0, 1).
+   c. Mark (0, 0) as visited.
+   d. Dequeue a node from the queue: (1, 0).
+   e. Enqueue all neighboring nodes of (1, 0) that have not been visited: (1, 1) and (0, 0) (already visited).
+   f. Mark (1, 0) as visited.
+   g. Dequeue a node from the queue: (0, 1).
+   h. Enqueue all neighboring nodes of (0, 1) that have not been visited: (0, 2) and (1, 1) (already visited).
+   i. Mark (0, 1) as visited.
+   j. Continue this process until the target node (3, 3) is found.
+
+The shortest path from the origin (0, 0) to the target (3, 3) is:
+
+<PATH_START> (0, 0) (1, 0) (1, 1) (1, 2) (2, 2) (2, 3) (3, 3) <PATH_END>

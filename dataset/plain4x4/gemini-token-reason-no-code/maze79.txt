@@ -1,0 +1,11 @@
+To find the solution for the maze, we can use a depth-first search (DFS) algorithm. 
+
+Starting from the origin point, we can recursively explore all the adjacent nodes until we reach the target point. 
+
+If we reach a dead end (i.e., there are no more adjacent nodes to explore), we can backtrack to the previous node and continue exploring from there. 
+
+Once we reach the target point, we can trace back the path from the target point to the origin point to obtain the solution.
+
+The solution for the given maze is as follows:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>

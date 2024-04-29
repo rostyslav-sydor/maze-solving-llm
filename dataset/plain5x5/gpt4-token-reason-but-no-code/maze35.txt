@@ -1,0 +1,19 @@
+To solve the maze represented by the adjacency list, we use a pathfinding algorithm, such as Breadth-First Search (BFS). BFS is appropriate for unweighted graphs like this one, as it explores all adjacent nodes at the present depth prior to moving on to nodes at the next depth level, ensuring the shortest path is found in an unweighted scenario.
+
+Starting from the origin (0,0) and aiming to reach the target (4,4):
+
+1. We first parse the adjacency list to form a more convenient graph data structure (a dictionary where each node has a list of its neighbors).
+
+2. Inject (0,0) into our BFS queue and begin exploration, marking nodes as visited to avoid cycles.
+
+3. For each node dequeued, we check its neighbors. If a neighbor is the target, we conclude the search. If not, we enqueue valid, unvisited neighbors.
+
+4. As nodes are processed via BFS, we record the path taken using a predecessor dictionary which maps each node to the node from which it was reached.
+
+5. Once the target is reached or all possible nodes are explored, we construct the path by tracking back from the target to the origin using the predecessor dictionary.
+
+After executing the above strategy on the given maze, the BFS discovers the shortest path from (0,0) to (4,4) as follows:
+
+<PATH_START> (0,0) (0,1) (1,1) (1,2) (2,2) (2,3) (2,4) (3,4) (4,4) <PATH_END>
+
+This path navigates through the sequence of connections, effectively guiding from the bottom left of the maze grid to the top right, ensuring at each step to move towards the target while adhering to available passageways as denoted in the adjacency list.

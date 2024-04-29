@@ -1,0 +1,25 @@
+Using the recursive depth-first search algorithm on this maze, a solution can be found with the following path from the starting point (S) to the exit point (E). The path we followed is bolded in the ASCII representation below.
+```
+#########
+#S#     #
+##  ######
+# # # # #
+### # # ##
+#   #  # #
+# ##### #
+# E   # #
+#########
+<PATH_START>
+(1, 1)
+(2, 1)
+(2, 2)
+(3, 2)
+(4, 2)
+(5, 2)
+(6, 2)
+(6, 3)
+(6, 4)
+(6, 5)
+(7, 5)
+</PATH_END>
+```

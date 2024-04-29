@@ -1,0 +1,23 @@
+**Solving the maze**
+
+1. **Find the starting point.** This point is marked with the `<ORIGIN_START>` token.
+
+2. **Create an empty stack to store the current path.** This stack will represent the current sequence of nodes that have been visited, and will initially contain just the starting point.
+
+3. **While the stack is not empty, pop the current node from the stack and mark it as visited.** This node represents the current position in the maze.
+
+4. **If the current node is the target node, then the maze has been solved.** The solution is the sequence of nodes in the stack, in reverse order.
+
+5. **If the current node is not the target node, then explore the unvisited neighbors of the current node.** Add each unvisited neighbor to the stack.
+
+6. **If there are no unvisited neighbors of the current node, then backtrack by popping the current node from the stack.** This means that there is no path to the target node from the current node.
+
+7. **Repeat steps 3-6 until the stack is empty or the target node has been found.**
+
+**Solution to the given maze**
+
+The following path is a solution to the given maze:
+
+`<PATH_START> (0,0) (0,1) (0,2) (1,2) (2,2) (3,2) (3,3) (3,4) (4,4) <PATH_END>`
+
+This path starts at the `<ORIGIN_START>` point and follows the right-hand wall until reaching the `<TARGET_END>` point.

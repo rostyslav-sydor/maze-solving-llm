@@ -1,0 +1,44 @@
+In this scenario, let's explore the optimal route from the origin (0,0) to the target (3,3) based on the adjacency list provided. The solution relies on using breadth-first search (BFS) which is appropriate for finding the shortest path in an unweighted maze or graph. Here's how BFS can be used to determine the route:
+
+1. Initialize the BFS with the queue and start from the origin (0,0), marking it as visited.
+2. Enqueue the starting point and iteratively explore each node connected to the current node, enqueueing adjacent nodes until the target is reached.
+3. Keep track of the path using a predecessor map to reconstruct the route back once the target has been hit.
+
+From the adjacency list provided for the graph:
+```
+<ADJLIST_START> 
+(0,2) <--> (0,1) ; 
+(2,3) <--> (1,3) ; 
+(3,2) <--> (3,1) ; 
+(2,3) <--> (2,2) ; 
+(1,1) <--> (1,2) ; 
+(0,3) <--> (0,2) ; 
+(1,1) <--> (1,0) ; 
+(1,0) <--> (2,0) ; 
+(0,1) <--> (0,0) ; 
+(2,2) <--> (2,1) ; 
+(1,0) <--> (0,0) ; 
+(3,0) <--> (3,1) ; 
+(3,2) <--> (3,3) ; 
+(1,3) <--> (1,2) ; 
+(2,0) <--> (3,0) ; 
+<ADJLIST_END>
+```
+
+**Step-by-Step Path Using BFS:**
+
+- Begin at (0,0). Neighboring nodes: (0,1) and (1,0).
+- From (0,0), move to (0,1). Then from (0,1) to (0,2).
+- Next, move from (0,2) to (0,3).
+- From (0,3), move to (1,3), then from (1,3) to (1,2).
+- Move from (1,2) to (1,1) and then to (1,0).
+- From (1,0), move to (2,0) and continue to (3,0).
+- From (3,0), move to (3,1), then to (3,2).
+- Finally, move from (3,2) to (3,3), which is the target.
+
+The optimal path found:
+```
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (1,2) (1,1) (1,0) (2,0) (3,0) (3,1) (3,2) (3,3) <PATH_END>
+```
+
+This reconstructed path from (0,0) to (3,3) traverses through the maze following the valid connections specified in the adjacency list, ensuring it covers all necessary steps from origin to target.

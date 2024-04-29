@@ -1,0 +1,15 @@
+**Reasoning :**
+
+The maze is a simple one, with only one possible path from the starting point to the ending point.
+
+- The starting point is at (0,0) and the ending point is at (3,3).
+- We start by moving to the right to (0,1)
+- Then move down to (1,1)
+- Then move right to (1,2)
+- Then move down to (2,2)
+- Then move right to (2,3)
+- Then move down to (3,3)
+
+**Output :**
+
+<PATH_START> (0,0) (0,1) (1,1) (1,2) (2,2) (2,3) (3,3) <PATH_END>

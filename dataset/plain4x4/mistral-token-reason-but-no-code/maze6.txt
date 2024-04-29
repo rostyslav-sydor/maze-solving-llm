@@ -1,0 +1,35 @@
+To solve the maze, we can use a breadth-first search (BFS) algorithm. The BFS algorithm starts at the origin (0,0) and explores all neighboring vertices before moving to the next level of vertices. It keeps track of all visited vertices to ensure it doesn't explore them again.
+
+Here's how we can apply the BFS algorithm to find a path from the origin to the target in the given maze:
+
+1. Create a queue and add the origin (0,0) to the queue.
+2. Mark the origin as visited.
+3. While the queue is not empty:
+	* Dequeue the first vertex from the queue.
+	* Check if the dequeued vertex is the target. If it is, we have found the path.
+	* Otherwise, add all unvisited neighboring vertices of the dequeued vertex to the queue, and mark them as visited.
+4. If the target is not reached when the queue becomes empty, there is no path from the origin to the target.
+
+To find the path, we can store the parent vertex of each visited vertex. Then, starting from the target, we can backtrack through its parent pointers to find the path from the origin to the target.
+
+Now, let's apply the BFS algorithm to the specific maze:
+
+<ADJLIST_START>
+(1,2) <--> (0,2) ; (1,1) <--> (1,2) ; (3,2) <--> (3,1) ; (0,1) <--> (0,0) ; (2,1) <--> (2,0) ; (3,3) <--> (2,3) ; (2,2) <--> (2,3) ; (0,3) <--> (0,2) ; (2,3) <--> (1,3) ; (1,0) <--> (1,1) ; (2,2) <--> (3,2) ; (3,0) <--> (3,1) ; (1,3) <--> (0,3) ; (1,0) <--> (0,0) ; (3,1) <--> (2,1) ;
+<ADJLIST_END>
+<ORIGIN_START> (0,0) <ORIGIN_END>
+<TARGET_START> (3,3) <TARGET_END>
+
+1. We start at the origin (0,0) and add it to the queue.
+2. We mark (0,0) as visited and explore its neighbors: (0,1), (1,0).
+3. We add (0,1) and (1,0) to the queue and mark them as visited.
+4. We dequeue (0,1) and explore its neighbors: (0,2).
+5. We add (0,2) to the queue and mark it as visited.
+6. We dequeue (1,0) and explore its neighbors: (1,1).
+7. We add (1,1) to the queue and mark it as visited.
+8. We repeat this process, exploring the neighbors of each vertex and adding them to the queue if they are unvisited.
+9. Eventually, we reach the target (3,3).
+
+Now, we can find the path from the origin to the target by backtracking through the parent pointers:
+
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (1,3) (2,3) (3,3) <PATH_END>

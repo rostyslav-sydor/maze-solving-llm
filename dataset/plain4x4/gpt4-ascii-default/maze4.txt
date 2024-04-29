@@ -1,0 +1,13 @@
+To solve the maze, we need to navigate a path from 'S' to 'E' without crossing any walls ('#'). We will proceed as follows:
+
+1. Start from 'S' located at (1,1).
+2. Move right till wall at (1,3), then down to (2,3).
+3. Continue down to (3,3), at the junction.
+4. Move right to (3,7) where we cannot proceed and then down to (6,7).
+5. From (6,7), move left to (6,3), considering non-wall spaces.
+6. Go down from (6,3) to (7,3).
+7. Continue right till you reach the exit 'E' at (7,7).
+
+<PATH_START> (1,1) (1,2) (1,3) (2,3) (3,3) (3,4) (3,5) (3,6) (3,7) (4,7) (5,7) (6,7) (6,6) (6,5) (6,4) (6,3) (7,3) (7,4) (7,5) (7,6) (7,7) <PATH_END>
+
+This approach identifies a clear path from the start to the finish, avoiding all walls and ensuring the path is continuously connected from the entry to the exit.

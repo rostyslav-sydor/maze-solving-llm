@@ -1,0 +1,7 @@
+To solve this maze, we can use graph traversal algorithms such as Depth First Search (DFS) or Breadth First Search (BFS). Starting from the origin point (0,0), we can explore the connected nodes in the adjacency list until we reach the target point (3,3).
+
+Following each edge in the adjacency list, we can move from one node to another, marking each node as visited to avoid loops. By repeating this process, we can find a path from the origin to the target.
+
+After reaching the target point, we can backtrack to trace the path taken from the origin. This path can be represented as a list of coordinates between <PATH_START> and <PATH_END> tokens, following the order in which they were visited.
+
+By carefully following the connections in the adjacency list and considering all possible paths, we can successfully navigate through the maze and find the solution.

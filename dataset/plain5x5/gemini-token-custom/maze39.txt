@@ -1,0 +1,42 @@
+1. Find the start and end points of the maze.
+<ORIGIN_START> (0,0) <ORIGIN_END> <TARGET_START> (4,4) <TARGET_END>
+
+2. Start from the start point and find all the adjacent cells.
+ (0,0) -> [(0,1), (1,0)]
+
+3. Check if any of the adjacent cells is the end point.
+(0,1) is not the end point, (1,0) is not the end point.
+
+4. If none of the adjacent cells is the end point, repeat step 2 and 3 for each of the adjacent cells.
+(0,1) -> [(0,2), (1,1)]
+(1,0) -> [(1,1), (2,0)]
+(0,2) -> [(0,3), (1,2)]
+(1,1) -> [(1,2), (2,1)]
+(2,0) -> [(2,1), (3,0)]
+(1,2) -> [(1,3), (2,2)]
+(2,1) -> [(2,2), (3,1)]
+(3,0) -> [(3,1), (4,0)]
+(2,2) -> [(2,3), (3,2)]
+(3,1) -> [(3,2), (4,1)]
+(4,0) -> [(4,1), (3,0)]
+(2,3) -> [(2,4), (1,3)]
+(3,2) -> [(3,3), (4,2)]
+(1,3) -> [(1,4), (0,3)]
+(4,1) -> [(4,2), (3,1)]
+(3,3) -> [(4,3), (2,3)]
+(4,2) -> [(4,3), (3,2)]
+(1,4) -> [(0,4), (2,4)]
+(4,3) -> [(3,3), (4,4)]
+(0,3) -> [(0,4), (1,3)]
+(2,4) -> [(1,4), (3,4)]
+(0,4) -> [(1,4), (0,3)]
+(3,4) -> [(2,4), (4,4)]
+
+5. Once the end point is found, backtrack the path from the end point to the start point.
+(4,4) -> (3,4) -> (2,4) -> (1,4) -> (0,4) -> (0,3) -> (1,3) -> (2,3) -> (3,3) -> (4,3) -> (4,2) -> (3,2) -> (2,2) -> (1,2) -> (0,2) -> (0,1) -> (0,0)
+
+6. Output the path as a list of coordinates.
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (0,4) (1,4) (2,4) (3,4) (4,4) <PATH_END>
+
+7. Check if the path does not cross any walls and uses only adjacent cells.
+The path does not cross any walls and uses only adjacent cells.

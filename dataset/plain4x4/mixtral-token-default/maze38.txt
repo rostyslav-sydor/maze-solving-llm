@@ -1,0 +1,29 @@
+ To navigate the maze, we will employ a breadth-first search (BFS) algorithm. Here is the solution in pseudocode, which can be translated to any programming language of your preference for execution.
+
+1. Start BFS with the origin, add its coordinates to the queue.
+2. As long as the queue is not empty:
+   a. Dequeue the frontmost coordinate from the queue.
+   b. Mark it as visited to prevent looping.
+   c. If it is the target, end the BFS and initialise a backtrace vector with the current coordinates.
+   d. For each unvisited coordinate adjacent to the current one, add its coordinates to the queue.
+   e. Repeat steps d and e until the queue is empty, or we have reached the target coordinates.
+
+Following the above steps, we now have a backtrace vector with visited coordinates.
+
+3. Reverse the backtrace vector to get the solution in order from origin to target.
+4. Transform the backtrace vector into a string in the desired format between <PATH_START> and <PATH_END> tokens.
+
+Now with this solution, let's write the Python code for the same:
+```python
+adjlist = [(3, 3), (3, 2), (1, 0), (1, 1), (0, 3), (1, 3), (3, 1), (3, 2), (1, 2), (0, 2), (2, 1), (2, 0), (1, 1), (0, 1), (2, 2), (2, 1), (2, 2), (0, 1), (0, 0), (3, 0), (1, 0), (2, 0), (3, 3), (1, 3), (2, 3), (3, 1)]
+
+def is_valid(r, c, bfs_matrix):
+    """
+    Check if (r, c) is valid coordinate, considering adjacency list.
+    """
+    for adj_r, adj_c in adjlist:
+        if r == adj_r and c == adj_c:
+            return True
+    return False
+
+def bfs

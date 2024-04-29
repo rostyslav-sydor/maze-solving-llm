@@ -1,0 +1,9 @@
+The solution for the maze is as follows: 
+
+<PATH_START> (0,0) (0,1) (1,1) (1,2) (2,2) (3,2) (3,3) <PATH_END>
+
+Starting from the origin at (0,0), the path moves to (0,1), (1,1), (1,2), (2,2), and finally reaches the target at (3,3). The maze is navigated by following the adjacency list connections between each cell until reaching the target.
+
+The solution path avoids dead ends and backtracks to find the shortest route to the target, ensuring all cells are visited in the process. The coordinates listed between <PATH_START> and <PATH_END> represent the steps taken to successfully navigate the maze from the origin to the target.
+
+By following this path, the maze is effectively solved in an optimal manner while visiting each cell only once.

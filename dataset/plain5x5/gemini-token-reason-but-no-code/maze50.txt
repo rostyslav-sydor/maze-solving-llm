@@ -1,0 +1,22 @@
+Breadth First Search (BFS) can be used to find a solution for a maze. The algorithm works by starting at the beginning of the maze and then iteratively exploring all of the possible paths from that point. The algorithm keeps track of the current path and the set of all paths that have been explored. If the algorithm reaches the end of the maze, then it has found a solution.
+
+One of the key aspects of BFS is the use of a queue to keep track of the paths that need to be explored. The queue is a first-in, first-out (FIFO) data structure, which means that the first path that is added to the queue will be the first path that is explored.
+
+The following is a step-by-step description of how BFS can be used to solve a maze:
+
+1. Start at the beginning of the maze and add the starting point to the queue.
+2. While the queue is not empty, do the following:
+    a. Remove the first path from the queue.
+    b. If the path leads to the end of the maze, then the algorithm has found a solution.
+    c. Otherwise, add all of the unexplored paths from the current path to the queue.
+3. If the algorithm reaches the end of the queue without finding a solution, then there is no solution to the maze.
+
+To find a solution for the specific maze given in the question, we can use the following steps:
+
+1. Start at the beginning of the maze, (0,0).
+2. Add the starting point to the queue.
+3. While the queue is not empty, do the following:
+    a. Remove the first path from the queue.
+    b. If the path leads to the end of the maze, (4,4), then the algorithm has found a solution.
+    c. Otherwise, add all of the unexplored paths from the current path to the queue.
+4. After a number of iterations, we find the exit point in the queue, which gives us the solution. <PATH_START> (0,0) (1,0) (1,1) (1,2) (1,3) (1,4) (2,4) (3,4) (4,4)  <PATH_END>

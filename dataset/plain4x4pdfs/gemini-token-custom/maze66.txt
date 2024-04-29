@@ -1,0 +1,24 @@
+This maze is solved in the following way:
+Start from origin (0,0) and move right to (1,0)
+Move down to (1,1)
+Move right to (2,1)
+Move down to (2,2)
+Move right to (3,2)
+Move down to (3,3)
+
+This results in the path:
+<PATH_START> (0,0) (1,0) (1,1) (2,1) (2,2) (3,2) (3,3) <PATH_END>
+
+To check validity, let's iterate over the list and make sure each entry is connected to the previous one in the list.
+
+(0,0) can be connected to (0,1) or (1,0)
+(1,0) can be connected to (0,0) or (1,1)
+(1,1) can be connected to (1,0) or (1,2) or (0,1)
+(2,1) can be connected to (2,0) or (2,2) or (1,1)
+(2,2) can be connected to (2,1) or (2,3) or (3,2) or (1,2)
+(3,2) can be connected to (3,1) or (3,3) or (2,2)
+(3,3) can be connected to (3,2) or (2,3)
+
+We can see that each entry in the list is adjacent to the previous one in the list.
+
+Therefore, the solution is valid and does not cross any walls or uses non-adjacent cells.

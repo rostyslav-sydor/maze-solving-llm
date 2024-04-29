@@ -1,0 +1,25 @@
+From the given adjacency list, we can map out the connections between the coordinates to solve the maze from the origin `(0,0)` to the target `(3,3)`:
+
+Here is the adjacency list interpretation:
+- `(3,2) <--> (3,3)`
+- `(0,2) <--> (0,1)`
+- `(2,3) <--> (1,3)`
+- `(3,2) <--> (2,2)`
+- `(2,3) <--> (3,3)`
+- `(0,1) <--> (0,0)`
+- `(0,3) <--> (1,3)`
+- `(3,1) <--> (3,0)`
+- `(2,1) <--> (2,0)`
+- `(1,2) <--> (1,1)`
+- `(3,2) <--> (3,1)`
+- `(1,0) <--> (0,0)`
+- `(0,3) <--> (0,2)`
+- `(1,1) <--> (2,1)`
+- `(1,2) <--> (1,3)`
+
+Analyzing the connectivity and paths possible:
+Starting from `(0,0)`, move to `(0,1)`, then `(0,2)`, then to `(0,3)`. From `(0,3)`, move to `(1,3)`. Progress further from `(1,3)` to `(2,3)`, and then finally to `(3,3)`.
+
+Thus, our path from the origin to the target is:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>

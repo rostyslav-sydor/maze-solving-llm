@@ -1,0 +1,4 @@
+The solution for this maze is as follows:
+<PATH_START> (0,0) (1,0) (1,1) (1,2) (2,2) (2,3) (3,3) <PATH_END>
+
+The path starts at coordinate (0,0) and follows the edges based on the adjacency list provided until reaching the target coordinate (3,3). The coordinates visited along the path are listed between <PATH_START> and <PATH_END> tokens. The path moves through the maze in a way that avoids any obstacles and reaches the target successfully.

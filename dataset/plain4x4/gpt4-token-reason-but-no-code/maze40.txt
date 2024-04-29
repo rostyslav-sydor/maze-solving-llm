@@ -1,0 +1,27 @@
+To solve the maze provided using its adjacency list representation, a pathfinding algorithm like the Breadth-First Search (BFS) can be utilized effectively. The BFS algorithm was chosen due to its efficiency in finding the shortest path in an unweighted graph like ours, where each move from one cell to an adjacent cell represents a uniform step.
+
+### Reasoning:
+1. **Graph Representation:** The maze is represented as an undirected graph, where each node is a cell in the maze identified by coordinates (row, column), and edges exist between nodes that are directly connected.
+
+2. **Starting and Ending Points:** The BFS starts at the node marked by the origin: `(0,0)` and searches for the node marked by the target: `(3,3)`.
+
+3. **Algorithm Overview:**
+   - Start from the origin, marking it as visited.
+   - Use a queue to hold nodes to explore.
+   - For each node, explore all its directly connected neighbors.
+   - If a neighbor is the target, the path is found.
+   - If not, add the neighbor to the queue, marking it as visited and recording the node from which it was reached for path reconstruction.
+
+4. **Path Reconstruction:** Once the target node is reached, reconstruct the path by tracking back from the target node to the origin node using the recorded predecessors.
+
+### Application to Given Maze:
+The BFS is run using the adjacency list. As it processes, each node explored is checked against the target `(3,3)`. Once the target is found (if it can be reached), the path to it from the origin is reconstructed in reverse by following each node back to its predecessor, starting from the target node.
+
+### Solution for the Maze:
+After applying the BFS, the sequence of moves that lead from `(0,0)` to `(3,3)` efficiently, and without unnecessary detours, due to BFS's nature of exploring all nearest possibilities first, leads to the following shortest path:
+
+```plaintext
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (3,2) (3,3) <PATH_END>
+```
+
+This path is identified as shortest owing to BFS's method of layer-wise exploration, ensuring that as soon as `(3,3)` is reached, no shorter path exists based on our setup. The path uses direct connections as given in the adjacency list, proving its validity. Each step moves to an adjacent cell as per the allowed movements specified.

@@ -1,0 +1,19 @@
+1. Start at the entry point (1,1) and mark it as visited.
+2. Move right to (1,2) and mark it as visited.
+3. Move right to (1,3) and mark it as visited.
+4. Move down to (2,3) and mark it as visited.
+5. Move down to (3,3) and mark it as visited.
+6. Move right to (3,4) and mark it as visited.
+7. Move up to (2,4) and mark it as visited.
+8. Move right to (2,5) and mark it as visited.
+9. Move down to (3,5) and mark it as visited.
+10. Move down to (4,5) and mark it as visited.
+11. Move right to (4,6) and mark it as visited.
+12. Move down to (5,6) and mark it as visited.
+13. Move down to (6,6) and mark it as visited.
+14. Move right to (6,7) and mark it as visited.
+15. Move down to (7,7) and mark it as visited.
+16. Reached the exit point (7,7).
+
+So, the solution path for this maze is: 
+<PATH_START> (1,1) (1,2) (1,3) (2,3) (3,3) (3,4) (2,4) (2,5) (3,5) (4,5) (4,6) (5,6) (6,6) (6,7) (7,7) <PATH_END>

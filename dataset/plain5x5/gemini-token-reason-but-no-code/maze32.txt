@@ -1,0 +1,7 @@
+Depth-First Search (DFS) is a popular graph traversal algorithm which is applicable to mazes as well. In DFS, we pick a starting point and follow a path until we reach a dead end and then backtrack and try another path. This process is repeated until we find a path to the exit or we have tried all possible paths.
+
+We can use DFS to solve the given maze. We start at the entry point and follow the path that leads to the exit. If we reach a dead end, we backtrack and try another path. We continue this process until we find a path to the exit.
+
+The following is a solution for the given maze:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (0,4) (1,4) (2,4) (3,4) (4,4) <PATH_END>

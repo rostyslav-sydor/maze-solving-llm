@@ -1,0 +1,14 @@
+To solve the maze, we use depth first search algorithm. 
+We start in the cell (0,0) which is marked with <ORIGIN_START> token, and recursively check all its neighbours. For each neighbour, we check if it has been visited before, and if not, we call the function on that neighbour.
+We continue the process until we reach the cell (3,3) which is marked with <TARGET_END> token. 
+
+Along the way, we store the path from the starting cell to the current cell in a list.
+When we reach the goal cell, we return the list of cells in the path from the starting cell to the goal cell.
+
+In this case, the path from the starting cell (0,0) to the goal cell (3,3) is:
+
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (3,2) (3,3) <PATH_END>
+
+To check if the solution does not cross any walls and path uses only adjacent cells, we compare the current cell with all four neighbours (left, right, up, down). If a current cell is (x,y), then neighbours are (x-1, y), (x+1, y), (x, y-1), (x, y+1). If any of neighbours coincides with the current cell in the maze, then they are adjacent. 
+
+In this case, all cells in the path are adjacent, and the path does not cross any walls.

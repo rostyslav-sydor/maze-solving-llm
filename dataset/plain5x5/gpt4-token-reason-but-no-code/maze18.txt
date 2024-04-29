@@ -1,0 +1,28 @@
+**Maze Explanation and Solution:**
+
+The adjacency list provides the connections (or doors) between each room (cell) in the maze from one coordinate to another. The starting point of the maze is at coordinate (0,0), and our goal is to reach the exit at (4,4).
+
+To solve the maze, a traversal approach (such as Breadth-First Search or Depth-First Search) can be employed to systematically visit each room from the starting point until the exit is reached, ensuring that no cycles are formed. We will use BFS for this explanation because it finds the shortest path first due to its layer-by-layer exploration.
+
+We interpret the adjacency list to form the connections, and by applying BFS, we explore neighbors level-by-level until reaching the target:
+
+1. Starting at (0,0), follow the connections toward adjacent nodes, and keep a queue to track nodes to explore.
+2. Continue exploring from each new node to their adjacent nodes until the destination (4,4) is reached.
+3. As we traverse, we maintain a record of each node's predecessor to reconstruct the path once the exit is reached.
+
+Starting the BFS from (0,0) and exploring as per the adjacency list:
+
+- From (0,0), go to (0,1).
+- From (0,1), go to (0,2).
+- From (0,2), go to (0,3).
+- From (0,3), go to (0,4).
+- From (0,4), go to (1,4).
+- From (1,4), go to (2,4).
+- From (2,4), go to (3,4).
+- From (3,4), go to (4,4) which is the target.
+
+Therefore, the shortest path from (0,0) to (4,4) based on the given adjacency list is:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (0,4) (1,4) (2,4) (3,4) (4,4) <PATH_END> 
+
+This pathway corresponds to the rooms connected directly and available to traverse from the entry to the exit point of the maze, creating an efficient route to the goal.

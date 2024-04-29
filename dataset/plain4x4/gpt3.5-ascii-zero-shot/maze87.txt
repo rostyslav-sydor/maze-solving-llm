@@ -1,0 +1,48 @@
+1. Start at the entry point (1,1) and mark it as visited.
+2. Move one step to the right to (1,2) and mark it as visited.
+3. Move one step to the right to (1,3) and mark it as visited.
+4. Move one step down to (2,3) and mark it as visited.
+5. Move one step down to (3,3) and mark it as visited.
+6. Move one step to the left to (3,2) and mark it as visited.
+7. Move one step to the left to (3,1) and mark it as visited.
+8. Move one step down to (4,1) and mark it as visited.
+9. Move one step to the right to (4,2) and mark it as visited.
+10. Move one step to the right to (4,3) and mark it as visited.
+11. Move one step down to (5,3) and mark it as visited.
+12. Move one step down to (6,3) and mark it as visited.
+13. Move one step to the right to (6,4) and mark it as visited.
+14. Move one step to the right to (6,5) and mark it as visited.
+15. Move one step up to (5,5) and mark it as visited.
+16. Move one step up to (4,5) and mark it as visited.
+17. Move one step up to (3,5) and mark it as visited.
+18. Move one step to the left to (3,4) and mark it as visited.
+19. Move one step to the left to (3,3) and mark it as visited.
+20. Move one step up to (2,3) and mark it as visited.
+21. Move one step to the left to (2,2) and mark it as visited.
+22. Move one step up to (1,2) and mark it as visited.
+23. Move one step to the right to (1,3) and mark it as visited.
+24. Move one step down to (2,3) and mark it as visited.
+25. Move one step to the right to (2,4) and mark it as visited.
+26. Move one step up to (1,4) and mark it as visited.
+27. Move one step to the right to (1,5) and mark it as visited.
+28. Move one step to the right to (1,6) and mark it as visited.
+29. Move one step to the right to (1,7) and mark it as visited.
+30. Move one step down to (2,7) and mark it as visited.
+31. Move one step down to (3,7) and mark it as visited.
+32. Move one step down to (4,7) and mark it as visited.
+33. Move one step to the right to (4,8) and mark it as visited.
+34. Move one step up to (3,8) and mark it as visited.
+35. Move one step up to (2,8) and mark it as visited.
+36. Move one step up to (1,8) and mark it as visited.
+37. Move one step to the right to (1,9) and mark it as visited.
+38. Move one step down to (2,9) and mark it as visited.
+39. Move one step to the right to (2,10) and mark it as visited.
+40. Move one step down to (3,10) and mark it as visited.
+41. Move one step to the right to (3,11) and mark it as visited.
+42. Move one step down to (4,11) and mark it as visited.
+43. Move one step to the right to (4,12) and mark it as visited.
+44. Move one step down to (5,12) and mark it as visited.
+45. Move one step down to (6,12) and mark it as visited.
+46. Move one step down to (7,12) and mark it as visited.
+
+The solution path is: <PATH_START> (1,1) (1,2) (1,3) (2,3) (3,3) (3,2) (3,1) (4,1) (4,2) (4,3) (5,3) (6,3) (6,4) (6,5) (5,5) (4,5) (3,5) (3,4) (3,3) (2,3) (2,2) (1,2) (1,3) (2,3) (2,4) (1,4) (1,5) (1,6) (1,7) (2,7) (3,7) (4,7) (4,8) (3,8) (2,8) (1,8) (1,9) (2,9) (2,10) (3,10) (3,11) (4,11) (4,12) (5,12) (6,12) (7,12) <PATH_END>

@@ -1,0 +1,13 @@
+<PATH_START> (3,3) (3,2) (2,2) (2,3) (1,3) (0,3) (0,2) (0,1) (0,0) <PATH_END>
+
+- Start from the <TARGET_START> vertex (3,3).
+- Move to the adjacent vertex (3,2).
+- Move to the adjacent vertex (2,2).
+- Move to the adjacent vertex (2,3).
+- Move to the adjacent vertex (1,3).
+- Move to the adjacent vertex (0,3).
+- Move to the adjacent vertex (0,2).
+- Move to the adjacent vertex (0,1).
+- Move to the adjacent vertex (0,0) which is the <ORIGIN_END> vertex.
+
+This path does not cross any walls or use non-adjacent cells, as each move is to an adjacent vertex.

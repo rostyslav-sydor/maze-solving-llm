@@ -1,0 +1,16 @@
+To solve the maze, we start from the given origin and look for paths to the target using the adjacency list.
+
+Given entries:
+- (3,2) <--> (3,1) ; (0,1) <--> (1,1) ; (0,3) <--> (1,3) ; (1,1) <--> (1,0) ; (0,2) <--> (1,2) ; (2,0) <--> (3,0) ; (3,3) <--> (3,2) ; (0,1) <--> (0,0) ; (2,2) <--> (1,2) ; (1,0) <--> (2,0) ; (1,3) <--> (2,3) ; (3,3) <--> (2,3) ; (2,2) <--> (2,3) ; (3,1) <--> (3,0) ; (2,1) <--> (1,1)
+
+Origin and target:
+- Origin: (0,0)
+- Target: (3,3)
+
+Using Breadth-First Search (BFS) in the adjacency list:
+1. Start from (0,0), the only place to go next is (0,1)
+2. From (0,1), possible moves to (1,1)
+3. From (1,1), you can traverse to (1,2), then (2,2), then (2,3), and finally reaching the target at (3,3).
+
+Solution path:
+<PATH_START> (0,0) (0,1) (1,1) (1,2) (2,2) (2,3) (3,3) <PATH_END>

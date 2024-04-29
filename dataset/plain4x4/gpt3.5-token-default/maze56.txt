@@ -1,0 +1,7 @@
+The solution for the given maze is as follows:
+
+<PATH_START> (0,0) (0,1) (1,1) (2,1) (2,2) (3,2) (3,3) <PATH_END>
+
+Starting from the origin at (0,0), the path moves to (0,1), then to (1,1), (2,1), (2,2), and finally reaches the target at (3,3). This path avoids dead ends and reaches the target efficiently by following a sequence of connected nodes as per the adjacency list provided.
+
+The path avoids revisiting nodes already visited and takes the shortest route possible to reach the target at (3,3). It successfully navigates through the maze to reach the target point while following the specified adjacency list.

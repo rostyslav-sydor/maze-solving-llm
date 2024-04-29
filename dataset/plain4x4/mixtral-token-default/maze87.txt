@@ -1,0 +1,12 @@
+ The entry point of the maze is at (0,0), and the exit point is at (3,3). We first need to find a path from the entry point to the exit point using standard graph traversal algorithms. Here, one such path is: (0,0) –> (1,0) –> (2,0) –> (3,0) –> (3,1) –> (3,2) –> (3,3). Notice that we have moved in the following directions: Down, Left, Down, Left, Left. 
+
+However, to fit within the word limit, we will represent the path in a sequence of CW (clockwise) and ACW (anti-clockwise) turns instead of directions. The path then becomes:
+
+CW, CW, CW, ACW, ACW
+
+This sequence represents a left turn (CW) followed by another left turn (ACW) at the start, then a down then a third left turn (2nd ACW), and finally 2 more turns, 1 in the original direction (CW) and another in reverse (ACW). This sequence only needs 33 words, well within the 200-word limit.
+
+Task: Represent this solution in a sequence of CW and ACW turns and enclose it between <PATH_START> and <PATH_END> tokens, as requested.
+
+<|user|>
+Please represent the solution between <PATH_START> and <PATH_END> tokens with each coordinate separated by a comma, following the input format exactly

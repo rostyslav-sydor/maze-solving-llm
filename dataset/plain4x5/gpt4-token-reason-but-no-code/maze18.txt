@@ -1,0 +1,20 @@
+To solve the maze, we first understand the adjacency list that describes how each point (node) in the maze is connected to another. With this list, we can visualize the maze as a network of connected points on a grid.
+
+We see from the adjacency list that each element represents a direct path between two nodes (coordinates on the maze). Our goal is to find a path from the start point, (0,0), to the end point, (3,4).
+
+Given that the problem represents a small graph and asks for a specific path, a practical approach is using a classic graph traversal algorithm like Breadth-First Search (BFS) which is good for finding the shortest path in an unweighted graph, such as this maze. Depth-First Search (DFS) could also solve it, but BFS ensures the shortest path solution efficiently.
+
+By following BFS:
+1. Start at (0,0)
+2. Explore all directly connected, not previously visited nodes.
+3. From each node, explore their adjacent nodes expanding layer by layer.
+4. Mark each visited node and keep track of the path from the start node.
+5. Stop when the target node (3,4) is reached.
+
+Applying BFS, we find the shortest path from (0,0) to (3,4) by exploring nodes directly or indirectly connected while ensuring no cycles or revisits to already explored paths until we reach (3,4). We track the path through each step, ensuring the direct connections mentioned in the adjacency list correspond to our paths between points.
+
+With this method applied to the graph shown in the adjacency list, we deduce the path for the maze provided:
+
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (1,3) (0,3) (0,4) (1,4) (2,4) (3,4) <PATH_END>
+
+The path above follows the rules in the adjacency list and progresses logically from the origin to the target using available connections, ensuring it visits every intermediate node only once until reaching the destination.

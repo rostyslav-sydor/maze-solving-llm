@@ -1,0 +1,19 @@
+To solve the maze, we follow the open paths from the starting point "S" at coordinate (1,1) to the ending point "E" at (7,7), avoiding the walls "#".
+
+Starting from (1,1), the path is:
+1. Move right from (1,1) to (1,4), as open spaces are indicated by empty spots.
+2. Move down from (1,4) to (6,4).
+3. Move right from (6,4) to (6,5).
+4. Move down from (6,5) to (7,5).
+5. Finally, move right from (7,5) to (7,7), the end point.
+
+Summarizing the path, taking only steps needed to solve the maze:
+
+<PATH_START>
+(1,1) (1,2) (1,3) (1,4)
+(2,4) (3,4) (4,4) (5,4) (6,4)
+(6,5)
+(7,5) (7,6) (7,7)
+<PATH_END>
+
+This path solution resolves the maze, managing to navigate from S to E efficiently without colliding into any walls and using the shortest possible route available in the given ASCII layout.

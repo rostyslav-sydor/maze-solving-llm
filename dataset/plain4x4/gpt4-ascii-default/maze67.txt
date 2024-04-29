@@ -1,0 +1,28 @@
+To solve this maze, we navigate using simple directions (up, down, left, right) avoiding walls and looking for the shortest route to the end ('E'). We use (row, col) format for coordinates. We start at (1,1).
+
+Here's the solution with a reasoning approach:
+1. Start at (1,1), move right.
+2. Continue to move right until reaching (1,6).
+3. Move down to (2,6).
+4. Move left to (2,5) and then down to (4,5).
+5. Move right to (4,7).
+6. Move down to (7,7), the exit point.
+
+Detailed path:
+<PATH_START> 
+(1,1) 
+(1,2) 
+(1,3) 
+(1,4) 
+(1,5) 
+(1,6) 
+(2,6) 
+(3,6)
+(4,6)
+(4,7)
+(5,7)
+(6,7)
+(7,7) 
+<PATH_END>
+
+This path is derived by logically navigating the map while following permitted clear spaces, from 'S' to 'E' ensuring each step doesn't move against or within a wall ('#') and reaches the destination successfully. Such resolution was found by visual inspection and trial to find the most straight-forward route.

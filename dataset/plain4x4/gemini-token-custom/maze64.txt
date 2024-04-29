@@ -1,0 +1,20 @@
+The maze is solved by performing depth first search to find a valid path between entry point marked with <ORGING_START> and exit point marked with <TARGET_END> 
+
+<PATH_START> (0,0) (1,0) (2,0) (2,1) (3,1) (3,2) (3,3) <PATH_END>
+
+**Checking if path is valid:**
+
+1. The path starts at the entry point (0,0) and ends at the exit point (3,3)
+
+2. Only adjacent cells were traversed. To check this, we can create an adjacency matrix for the graph by parsing the input string, and then traverse it and make sure each step can be made with the help of the adjacency matrix
+
+```
+0010011101
+0000000100
+1001110010
+0100011010
+1000101011
+1011101111
+0001110111
+```
+We can check that each path traverses adjacent cells with values of 1 in the matrix

@@ -1,0 +1,68 @@
+To find a solution to the maze, we will construct the graph from the adjacency list provided, starting with the entry or origin point at (0,0) and seeking the target point at (3,3). We'll use Breadth-First Search (BFS) for pathfinding since it guarantees the shortest path in an unweighted graph like this maze.
+
+Based on the adjacency list, let's first map out the connections between the nodes:
+1. (1,1) <-> (2,1)
+2. (0,1) <-> (0,2)
+3. (2,3) <-> (1,3)
+4. (0,3) <-> (0,2)
+5. (1,3) <-> (1,2)
+6. (3,3) <-> (3,2)
+7. (2,3) <-> (2,2)
+8. (3,1) <-> (3,0)
+9. (3,2) <-> (2,2)
+10. (0,0) <-> (1,0)
+11. (2,0) <-> (2,1)
+12. (0,3) <-> (1,3)
+13. (1,2) <-> (1,1)
+14. (3,1) <-> (3,2)
+15. (1,0) <-> (2,0)
+
+Creating the graph in Python using a dictionary, and then running BFS:
+
+```python
+from collections import deque, defaultdict
+
+# Graph Construction
+graph = defaultdict(list)
+edges = [
+    ((1,1), (2,1)), ((0,1), (0,2)), ((2,3), (1,3)), ((0,3), (0,2)), 
+    ((1,3), (1,2)), ((3,3), (3,2)), ((2,3), (2,2)), ((3,1), (3,0)), 
+    ((3,2), (2,2)), ((0,0), (1,0)), ((2,0), (2,1)), ((0,3), (1,3)), 
+    ((1,2), (1,1)), ((3,1), (3,2)), ((1,0), (2,0))
+]
+for edge in edges:
+    graph[edge[0]].append(edge[1])
+    graph[edge[1]].append(edge[0])
+
+# BFS function to find shortest path
+def bfs(graph, start, end):
+    queue = deque([start])
+    visited = {start}
+    parents = {start: None}
+    
+    while queue:
+        current = queue.popleft()
+        if current == end:
+            break
+        for neighbor in graph[current]:
+            if neighbor not in visited:
+                queue.append(neighbor)
+                visited.add(neighbor)
+                parents[neighbor] = current
+
+    # Reconstruct path
+    path = []
+    step = end
+    while step is not None:
+        path.append(step)
+        step = parents[step]
+    return path[::-1]
+
+# Find the path from (0,0) to (3,3)
+path = bfs(graph, (0,0), (3,3))
+print(f"<PATH_START> {' '.join(map(str, path))} <PATH_END>")
+```
+
+This code processes the adjacent vertices from the input, performs BFS to locate the shortest route from the entry to the exit, and then prints the path.
+
+Make sure Python is available to run this script, and adjust the vertex list if nodes from the input are omitted, duplicated, or incorrectly connected. Adjustments must be made directly in the edge lists provided in the edges array.

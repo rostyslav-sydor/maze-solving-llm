@@ -1,0 +1,12 @@
+Start at the origin, (0,0) and explore the adjacent vertices.
+Go to (1,0) because only (1,0) is adjacent to (0,0).
+From (1,0) go to (2,0) because only (2,0) is adjacent to (1,0).
+From (2,0) go to (3,0) because only (3,0) is adjacent to (2,0).
+From (3,0) go to (4,0) because only (4,0) is adjacent to (3,0).
+From (4,0) go to (4,1) because only (4,1) is adjacent to (4,0).
+From (4,1) go to (4,2) because only (4,2) is adjacent to (4,1).
+From (4,2) go to (4,3) because only (4,3) is adjacent to (4,2).
+From (4,3) go to (4,4) because only (4,4) is adjacent to (4,3).
+We have reached the target, (4,4).
+
+So the solution is: <PATH_START> (0,0) (1,0) (2,0) (3,0) (4,0) (4,1) (4,2) (4,3) (4,4) <PATH_END>

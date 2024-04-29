@@ -1,0 +1,23 @@
+**Pathfinding Reasoning:**
+
+To solve the maze, the graph representation is used where each vertex corresponds to a cell (coordinate in the maze) and each edge connects adjacent cells accessible to each other. Given the maze's adjacency list data:
+
+1. **Reading the Adjacency List**: First, I decipher the adjacency list to understand connections between nodes (coordinates).
+
+2. **Choosing a Pathfinding Algorithm**: For algorithms, Depth First Search (DFS) or Breadth First Search (BFS) are often suitable for such graph-based traversal problems. BFS is chosen because it finds the shortest path in an unweighted graph.
+
+3. **Starting and Ending Points**: Recognize entries `<ORIGIN_START> (0,0) <ORIGIN_END>` and exits `<TARGET_START> (4,5) <TARGET_END>`. The BFS will begin at (0,0) and attempt to reach (4,5).
+
+4. **BFS Implementation**: Using a queue, the algorithm will explore all possible paths from the start node by dequeuing the front node, visiting all its adjacent unvisited nodes, and enqueuing them. This ensures it explores layer by layer, level by level. When a node is visited, its predecessor is marked, which helps in retrieving the path once the target is reached.
+
+5. **Path Retrieval**: Upon hitting the target node, backtrack using the predecessors marking to lay down the path traveled.
+
+**Execution on Given Maze**:
+Following BFS, begin at (0,0). Nodes are explored and marked with their predecessors. The path to (4,5) determined by this process involves steps leading from the start, through intermediary reachable nodes, ending at the exit.
+
+**Solution for the Given Maze**:
+Considering travel through connected nodes and reconstructing the path using the predecessor links, here's the shortest path from (0,0) to (4,5):
+
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (4,0) (4,1) (4,2) (4,3) (4,4) (4,5) <PATH_END>
+
+Verification of each step can be done by cross-checking with the adjacency list ensuring the solution follows the available connections. This route is the shortest, leveraging straight movements where possible and working fundamentally with the BFS's feature of exploring the closest nodes first before moving to those farther away.

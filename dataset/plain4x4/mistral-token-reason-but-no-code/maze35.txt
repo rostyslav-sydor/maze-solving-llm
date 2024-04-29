@@ -1,0 +1,41 @@
+To solve the maze, we can use the breadth-first search (BFS) algorithm, which systematically explores all possible paths from the starting point to find the shortest path to the end point. Here are the steps to solve the maze:
+
+1. Initialize a queue, an empty list to store the coordinates of visited nodes, and a dictionary to store the parent of each node.
+2. Enqueue the source node (0, 0).
+3. While the queue is not empty:
+   a. Dequeue the current node, and check if it is the target node (3, 3). If it is, stop and reconstruct the path.
+   b. Enqueue all the neighboring nodes of the current node, if they have not been visited before.
+   c. Add the current node to the list of visited nodes.
+4. Reconstruct the path by tracing back from the target node to the source node through the parent dictionary.
+
+Now, let's apply the BFS algorithm to the given maze:
+
+1. Adjacency list: (2,2) <--> (1,2) ; (2,0) <--> (3,0) ; (3,0) <--> (3,1) ; (2,2) <--> (3,2) ; (0,2) <--> (0,3) ; (0,3) <--> (1,3) ; (0,1) <--> (1,1) ; (0,2) <--> (0,1) ; (0,0) <--> (1,0) ; (1,1) <--> (2,1) ; (0,1) <--> (0,0) ; (3,3) <--> (2,3) ; (2,1) <--> (2,0) ; (1,3) <--> (2,3) ; (3,2) <--> (3,1)
+2. Initialize the data structures:
+   - queue = [(0, 0)]
+   - visited = []
+   - parent = {(0, 0): None}
+3. Dequeue the current node: (0, 0)
+   - Check if the node is the target node: (0, 0) != (3, 3), so continue.
+   - Enqueue the neighboring nodes: (1, 0)
+   - Add the current node to visited: visited = [(0, 0)]
+4. Dequeue the current node: (1, 0)
+   - Check if the node is the target node: (1, 0) != (3, 3), so continue.
+   - Enqueue the neighboring nodes: (1, 1)
+   - Add the current node to visited: visited = [(0, 0), (1, 0)]
+5. Dequeue the current node: (1, 1)
+   - Check if the node is the target node: (1, 1) != (3, 3), so continue.
+   - Enqueue the neighboring nodes: (2, 1)
+   - Add the current node to visited: visited = [(0, 0), (1, 0), (1, 1)]
+6. Dequeue the current node: (2, 1)
+   - Check if the node is the target node: (2, 1) != (3, 3), so continue.
+   - Enqueue the neighboring nodes: (2, 0)
+   - Add the current node to visited: visited = [(0, 0), (1, 0), (1, 1), (2, 1)]
+7. Dequeue the current node: (2, 0)
+   - Check if the node is the target node: (2, 0) != (3, 3), so continue.
+   - Enqueue the neighboring nodes: (3, 0)
+   - Add the current node to visited: visited = [(0, 0), (1, 0), (1, 1), (2, 1), (2, 0)]
+8. Dequeue the current node: (3, 0)
+   - Check if the node is the target node: (3, 0) != (3, 3), so continue.
+   - Enqueue the neighboring nodes: (3, 1)
+   - Add the current node to visited: visited = [(0, 0), (1, 0), (1, 1), (2, 1), (

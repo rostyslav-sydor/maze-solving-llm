@@ -1,0 +1,46 @@
+To find a solution for navigating this maze, we'll interpret the adjacency list and use Breadth-First Search (BFS) to discover the shortest path from the origin (0,0) to the target (3,3). BFS is suitable particularly for unweighted graphs like this one where we need to find the shortest path in terms of the number of edges.
+
+Based on the adjacency list you provided, let's first map out the connections between the nodes, recognizing that each tuple represents a coordinate in the maze/grid.
+
+Adjacency List:
+- (1,3) <--> (1,2)
+- (0,2) <--> (0,3)
+- (2,2) <--> (3,2)
+- (1,0) <--> (0,0)
+- (1,1) <--> (1,2)
+- (0,1) <--> (0,0)
+- (2,3) <--> (3,3)
+- (1,3) <--> (2,3)
+- (1,0) <--> (2,0)
+- (3,3) <--> (3,2)
+- (3,1) <--> (3,0)
+- (2,1) <--> (2,0)
+- (1,3) <--> (0,3)
+- (0,1) <--> (1,1)
+- (3,2) <--> (3,1)
+
+We can then implement BFS from the origin (0,0) to find the shortest path to the target (3,3).
+
+Algorithm:
+1. Initialize a queue and enqueue the starting node (0,0) with the path to it, i.e., [(0,0)].
+2. Use a set to keep track of visited nodes to avoid revisiting them.
+3. While the queue is not empty, dequeue the front node.
+4. Check if it's the target node. If so, retrieve the path and terminate the search.
+5. Otherwise, enqueue all its neighbours that have not yet been visited, marking them as visited and storing the path taken to reach them.
+6. Continue until the target is reached or all possible paths are exhausted.
+
+By running this algorithm with the given adjacency list, we find the shortest path and backtrace from (3,3) to (0,0):
+
+Starting at (0,0):
+- (0,0) to (1,0)
+- (1,0) to (2,0)
+- (2,0) to (3,0)
+- (3,0) to (3,1)
+- (3,1) to (3,2)
+- (3,2) to (3,3)
+
+Thus, the shortest path from (0,0) to (3,3) in the maze is:
+
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (3,2) (3,3) <PATH_END> 
+
+This path clearly defines a series of moves through the given coordinates reaching the target at (3,3).

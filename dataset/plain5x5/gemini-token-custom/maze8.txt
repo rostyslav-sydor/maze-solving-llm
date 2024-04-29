@@ -1,0 +1,15 @@
+**Reasoning:**
+
+- Starting from the origin (0,0), we can move right to (1,0), then up to (1,1).
+- From (1,1), we can move right to (2,1), then down to (2,2).
+- From (2,2), we can move right to (3,2), then up to (3,3).
+- From (3,3), we can move right to (4,3), then up to (4,4), which is the target.
+
+**Path:**
+
+<PATH_START> (0,0) (1,0) (1,1) (2,1) (2,2) (3,2) (3,3) (4,3) (4,4) <PATH_END>
+
+**Verification:**
+
+- Each step in the path moves to an adjacent cell.
+- No walls are crossed, as there is a valid edge between each pair of consecutive cells in the path.

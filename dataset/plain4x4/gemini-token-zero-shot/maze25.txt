@@ -1,0 +1,5 @@
+To find a solution to the maze, we can use a depth-first search algorithm. We start at the origin and recursively explore all possible paths until we reach the target. If we reach a dead end, we backtrack and explore another path.
+
+Here is a solution to the given maze:
+
+<PATH_START> (0,0) (1,0) (1,1) (2,1) (2,2) (3,2) (3,3) <PATH_END>

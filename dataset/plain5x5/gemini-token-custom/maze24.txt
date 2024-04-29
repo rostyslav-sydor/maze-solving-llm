@@ -1,0 +1,4 @@
+<PATH_START> (4,4) (4,3) (4,2) (3,2) (2,2) (2,3) (1,3) (0,3) (0,2) (0,1) (1,1) (1,2) (2,2) (2,1) (3,1) (3,0) (4,0) <PATH_END>
+
+Explanation:
+Start from the <ORIGIN_START> position (0,0) and start adding adjacent nodes to the path until <TARGET_END> is reached. Every step makes sure that only adjacent nodes are added and walls are not crossed.

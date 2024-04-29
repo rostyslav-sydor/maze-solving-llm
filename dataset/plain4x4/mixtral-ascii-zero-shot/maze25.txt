@@ -1,0 +1,14 @@
+Here are the steps to solve the maze using a depth-first search with backtracking.
+1. The maze is represented by a boolean matrix `maze[][]`, `maze[i][j] = True` indicates that there is a wall at coordinate `(i, j)`. To initialize the matrix using ASCII representation:
+	- Convert the text representation to a string
+	- Extract the coordinate of the start and the end
+	- Iterate through each character in the text representation and initialize the maze matrix accordingly 
+2. Use a `solveMaze(i, j)` function that checks if the provided coordinate `(i, j)` is a valid and unvisited point and within the maze boundary. If the provided coordinate is a wall, the function returns `false`.
+3. If the provided coordinate is the end point, return `true`.
+4. Mark the point as visited and then:
+	- Call `solveMaze(i-1, j)` to check the coordinate above the point. If `solveMaze` returns `true`, add the point to the path and return `true`.
+	- Then call `solveMaze(i+1, j)` to check the coordinate below the point. If `solveMaze` returns `true`, add the point to the path and return `true`.
+	- Then call `solveMaze(i, j-1)` to check the coordinate to the left of the point. If `solveMaze` returns `true`, add the point to the path and return `true`.
+	- Finally, call `solveMaze(i, j+1)` to check the coordinate to the right of the point. If `solveMaze` returns `true`, add the point to the path and return `true`.
+5. If none of the above steps returned `true`, we backtrack by removing the point from the path and marking it as unvisited. Return `false` to let the previous point at the path understand that there is no solution in this direction. 
+6. If `solveMaze(start_point)` returns `true`, the path found so far is the solution. We can then traverse the path and output the coordinates between `<PATH_START>` and `<PATH_END>` tokens

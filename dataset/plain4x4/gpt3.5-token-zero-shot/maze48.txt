@@ -1,0 +1,9 @@
+To solve this maze, we can use a breadth-first search algorithm starting from the origin point (0,0) and moving towards the target point (3,3). We will keep track of visited nodes to avoid revisiting them. 
+
+Starting from (0,0), we can move to (0,1), then (0,2), (1,2), (2,2), (2,3), and finally reach the target point at (3,3). 
+
+Therefore, the solution path is: 
+
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (2,2) (2,3) (3,3) <PATH_END> 
+
+This path represents the coordinates of the cells we need to traverse to reach the target point while following the adjacency list provided. By following this path, we can successfully navigate through the maze from the origin to the target point.

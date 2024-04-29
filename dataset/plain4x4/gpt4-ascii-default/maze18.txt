@@ -1,0 +1,7 @@
+<PATH_START> (1,1) (1,2) (1,3) (1,4) (1,5) (1,6) (1,7) (2,7) (3,7) (3,6) (3,5) (4,5) (5,5) (6,5) (6,6) (6,7) (7,7) <PATH_END>
+
+Explanation:
+- Starting from the entry point (S) at (1,1), the path moves right across the open spaces in the first row until (1,7).
+- At (1,7), there's no path forward, so it goes down to (2,7) and then to (3,7) where there's room to move left to (3,6) and (3,5).
+- At (3,5), the path goes downwards. It moves straight down bypassing the one-block gap at (4,5) and continues down to (5,5) and then to (6,5).
+- From (6,5), the only path without encountering walls moves to (6,6) then to (6,7), and finally to the exit (E) at (7,7).

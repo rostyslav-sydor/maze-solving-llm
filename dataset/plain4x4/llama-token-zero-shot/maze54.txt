@@ -1,0 +1,13 @@
+I understand. You have a maze represented as an adjacency list, with entry and exit points marked. I'll help you find a solution to the maze.
+
+First, let's identify the starting point of the maze, which is the origin (0,0).
+
+Next, we'll explore the maze one step at a time, following the adjacency list. At each step, we'll update the current position with the adjacent cell that has not been visited before.
+
+Here's the first step:
+
+(0,0) -> (1,1)
+
+The current position is (1,1).
+
+What would you like to do next?

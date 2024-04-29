@@ -1,0 +1,16 @@
+To solve the maze, we start at the entry point (0,0) and navigate through the grid while avoiding the walls until we reach the exit point (3,3). The strategy involves checking adjacent cells (left, right, up, and down) and choosing the path which continues towards the exit without crossing any walls.
+
+Here's the step-by-step reasoning to navigate from (0,0) to (3,3):
+1. Start at (0,0)
+2. Move right to (0,1) because moving down is blocked by a wall.
+3. Move right to (0,2) since moving further right or down remains unblocked.
+4. Move down to (1,2) as moving right is blocked by a wall.
+5. Continue moving down to (2,2) because the path to the right is blocked and down is open.
+6. Move right to (2,3), the only available path since moving straight down leads to a dead-end (blocked at both left and down at (3,3)).
+7. Move down to (3,3), the exit point.
+
+Following this path ensures that the walls are always kept on one side where movement is not allowed and we make progress towards the goal to reach (3,3).
+
+Here's the correct path in the specified format:
+
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (2,2) (2,3) (3,3) <PATH_END>

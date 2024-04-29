@@ -1,0 +1,8 @@
+First, identify the starting point at (0,0) and the ending point at (3,3) in the maze. Then, explore the maze by following the connections provided in the adjacency list from the starting point. Traverse through the nodes while avoiding revisiting already visited nodes and dead ends. 
+
+You can start with (0,0) and move to (0,1), then to (1,1), (1,2), (2,2), (3,2), and finally reach the destination at (3,3). This path avoids going in circles and leads to the exit successfully.
+
+The solution path can be represented as:
+<PATH_START> (0,0) (0,1) (1,1) (1,2) (2,2) (3,2) (3,3) <PATH_END>
+
+By following this path, you can navigate from the starting point to the ending point in the maze successfully.

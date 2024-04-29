@@ -1,0 +1,13 @@
+The path can be found using depth-first search algorithm. The algorithm starts at the origin, (0,0), and explores the maze recursively.
+
+- Check if the current position is equal to the target position, if so, then the path has been found.
+- If the current position is not equal to the target position, then check if the current position has any adjacent positions that have not been visited.
+- If there are any adjacent positions that have not been visited, then mark the current position as visited and explore the adjacent position.
+
+The following path represents a valid solution:
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (1,3) (2,3) (3,3) <PATH_END>
+
+Now we must prove that the path never crosses walls and all cells are adjacent.
+
+- **Walls:** Walls are represented by missing edges in the adjacency list. Since we can move only to adjacent cells, the path can never cross walls.
+- **Adjacent cells:** The path only uses adjacent cells because the depth-first search algorithm only explores cells that are adjacent to the current cell.

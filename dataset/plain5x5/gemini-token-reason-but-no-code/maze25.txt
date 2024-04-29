@@ -1,0 +1,7 @@
+We can represent the maze as a graph, where coordinates are vertices and connections between coordinates are edges.
+
+We can then apply a graph search algorithm like BFS to find the shortest path from the starting point to the ending point.
+
+In this case, we can use BFS to find the shortest path from (0,0) to (4,4).
+
+The result of the BFS is the following path: <PATH_START> (0,0) (1,0) (2,0) (3,0) (4,0) (4,1) (4,2) (4,3) (4,4) <PATH_END>

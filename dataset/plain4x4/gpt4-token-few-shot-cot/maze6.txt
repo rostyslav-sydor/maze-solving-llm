@@ -1,0 +1,19 @@
+To solve the maze represented by the adjacency list, we'll follow the connections between the points starting from the origin (0,0) to the target (3,3). Here is the step-by-step solution based on the adjacency list:
+
+1. Start at the origin (0,0).
+2. Move right to (0,1) via (0,1) <--> (0,0).
+3. Move right to (0,2) via (0,2) <--> (0,1).
+4. Move right to (0,3) via (0,3) <--> (0,2).
+5. Move down to (1,3) via (1,3) <--> (0,3).
+6. Move left to (1,2) via (1,2) <--> (1,3).
+7. Move left to (1,1) via (1,1) <--> (1,2).
+8. Move left to (1,0) via (1,0) <--> (1,1).
+9. Move down to (2,0) via (2,0) <--> (1,0).
+10. Move right to (2,1) via (2,1) <--> (2,0).
+11. Move right to (2,2) via (2,2) <--> (2,1).
+12. Move right to (2,3) via (2,3) <--> (2,2).
+13. Move down to (3,3) via (3,3) <--> (2,3).
+
+Now we have successfully found and navigated the path from the origin to the target. Here's the path sequence listed within the required format:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (1,2) (1,1) (1,0) (2,0) (2,1) (2,2) (2,3) (3,3) <PATH_END>

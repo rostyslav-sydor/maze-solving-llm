@@ -1,0 +1,10 @@
+<PATH_START> (1,1) (1,2) (1,3) (1,4) (1,5) (2,5) (3,5) (4,5) (5,5) (6,5) (7,5) (7,6) (7,7) <PATH_END>
+
+To find the solution:
+1. Start at the entry point (1,1).
+2. Move horizontally to the right until reaching the wall at (1,6).
+3. Move vertically down to the hallway leading to the exit area (avoiding dead ends, which would require turning back) following through positions (2,5) to (6,5).
+4. Continue vertically to reach the wall at (7,5).
+5. Move horizontally to the right, finally reaching the exit at (7,7).
+
+This path avoids all walls and dead ends, providing an effective route from the start point 'S' to the exit 'E'.

@@ -1,0 +1,9 @@
+1. Start at the origin point (0,0)
+2. Move from (0,0) to (1,0), then to (2,0), and finally to (3,0)
+3. Move from (3,0) to (3,1) and then to (3,2)
+4. Move from (3,2) to (3,3) which is the target point
+5. The solution path is (0,0) -> (1,0) -> (2,0) -> (3,0) -> (3,1) -> (3,2) -> (3,3)
+6. Output the solution path as <PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (3,2) (3,3) <PATH_END>
+7. This is the optimal path to navigate through the maze from the origin to the target
+
+By following these steps, we have successfully found the solution path for the given maze.

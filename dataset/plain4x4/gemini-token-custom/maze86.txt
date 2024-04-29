@@ -1,0 +1,10 @@
+From the starting point at (0,0), we can move either right to (0,1) or down to (1,0).
+Moving right to (0,1), we can then move down to (1,1).
+From (1,1), we can move right to (1,2) or down to (2,1).
+Moving right to (1,2), we can then move down to (2,2).
+From (2,2), we can move right to (2,3) or up to (1,2).
+Moving right to (2,3), we reach the target point (3,3).
+
+Therefore, the solution path is: <PATH_START> (0,0) (0,1) (1,1) (1,2) (2,2) (2,3) (3,3) <PATH_END>
+
+All the moves are valid as they are either right or down moves and there are no walls between the cells.

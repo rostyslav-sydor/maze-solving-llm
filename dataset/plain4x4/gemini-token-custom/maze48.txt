@@ -1,0 +1,11 @@
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (2,2) (2,3) (3,3) <PATH_END>
+
+**Reasoning:**
+* Start at the origin (0,0).
+* Follow the path to the north (0,1), then east (0,2).
+* Turn south (1,2), then east (2,2).
+* Turn south (2,3), then east (3,3) to reach the target.
+
+**Check:**
+* The path does not cross any walls.
+* Each step in the path moves to an adjacent cell.

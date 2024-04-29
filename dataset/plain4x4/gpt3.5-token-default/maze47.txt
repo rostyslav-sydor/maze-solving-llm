@@ -1,0 +1,5 @@
+One possible solution for the maze is as follows: 
+
+<PATH_START> (0,0) (1,0) (2,0) (2,1) (2,2) (2,3) (3,3) <PATH_END>
+
+In this solution, the path starts at coordinate (0,0) and follows the adjacency list provided to reach the target at coordinate (3,3). The path moves through the maze by moving from one connected coordinate to another until reaching the target. The path taken is the most efficient route through the maze based on the adjacency list provided. The solution is represented in the format requested with each coordinate listed between <PATH_START> and <PATH_END> tokens.

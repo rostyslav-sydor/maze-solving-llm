@@ -1,0 +1,14 @@
+To solve the maze, we move from the starting position (S) to the exit (E) by navigating through open paths (' ') and avoiding walls ('#'). The coordinates are mentioned with the format (row, column), starting from (1,1).
+
+Starting at (1,1):
+
+1. Move right (east) from (1,1) to (1,7) since the direct path is clear.
+2. Move down (south) to (7,7). The path is straightforward here until blocked by walls at various points, which forces specific maneuvering:
+   - (2,7) directly down to (4,7)
+   - However, the wall at (5,7) requires a move left to (5,6), then further south to (7,6), bypassing walls.
+   - Finally, move right to (7,7) which is the exit.
+
+Summary Path:
+<PATH_START> (1,1) (1,2) (1,3) (1,4) (1,5) (1,6) (1,7) (2,7) (3,7) (4,7) (5,7) (5,6) (6,6) (7,6) (7,7) <PATH_END>
+
+Each step avoids walls and follows open paths to the exit, ensuring a valid solution.

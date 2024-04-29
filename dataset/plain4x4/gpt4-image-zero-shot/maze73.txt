@@ -1,0 +1,11 @@
+To solve the maze, we will trace a path from the entry (0,0) to the exit (3,3) by navigating through open pathways, avoiding walls.
+
+1. Start at point (0,0).
+2. Move from (0,0) to (0,1), as going downward or right is blocked by walls.
+3. Continue to (0,2), (0,3) straightforwardly, since moving downwards is blocked by a wall.
+4. From (0,3), the path can now move downwards to (1,3), as heading further right is impossible.
+5. Proceed further down to (2,3) and (3,3).
+
+By moving rightwards first while ascending and then descending downwards from (0,3) to (3,3), we utilize the available open passages and avoid walls to reach the exit successfully.
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>

@@ -1,0 +1,13 @@
+To solve this maze, we can use a stack or recursive breadth-first search (BFS) algorithm to find the shortest path from the origin (0,0) to the target (3,3). Here's a step-by-step approach:
+
+1. Create a 4x4 two-dimensional array (since there are four tokens for each coordinate). Then, set the values of the array to '0' for cells outside the maze and '1' for entry and exit points.
+2. Initialize a pointer to the origin (0,0) and a counter to count the number of cells visited while searching for the path. 
+3. Start exploring the maze by popping a vertex from the pointer and visiting its neighbors that have not been explored yet. Add any previously visited cells back to the stack with a distance value equal to the number of cells visited so far.
+4. Calculate the shortest distance between each cell and compare them to find the shortest distance overall.
+5. Once we find the shortest distance, check if its source and target coordinates match the ones we're looking for. If so, traverse back from the target to the origin to get the shortest path using the distance calculated in the step above.
+6. Translate the coordinates visited while traversing back to create a string of coordinates in the format (row, column). This will be the output path.
+7. Print the path in the format requested between <PATH_START> and <PATH_END> tokens. 
+
+Following the above steps, here's a possible output solution to this maze:
+
+<PATH_START> (0,0) (0,1) (1,1) (1,2) (1,3) (2,3) (3,3) <PATH_END>

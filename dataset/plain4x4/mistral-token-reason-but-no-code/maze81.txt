@@ -1,0 +1,32 @@
+We will use the Breadth-First Search (BFS) algorithm to find a solution for the given maze. BFS is a graph traversal algorithm that starts at the origin, explores all the neighboring vertices, and then recursively explores all the vertices adjacent to those vertices. This ensures that the shortest path is found from the origin to the target, as it explores all possible paths in a level-by-level manner.
+
+Here's the step-by-step reasoning for solving the maze using BFS:
+
+1. Begin at the origin (0, 0) and mark it as visited.
+2. Explore all the neighbors of the origin: (0, 1) and (1, 0). Add them to the queue and mark them as visited.
+3. Dequeue the first vertex from the queue, which is (0, 1). Explore its neighbors: (0, 2) and (1, 1). Add them to the queue and mark them as visited.
+4. Dequeue the first vertex from the queue, which is (1, 0). Explore its neighbors: (2, 0) and (1, 1). Since (1, 1) is already visited, only add (2, 0) to the queue and mark it as visited.
+5. Continue this process until the target (3, 3) is reached or the queue becomes empty (indicating there is no path to the target).
+
+Now, let's apply BFS to the given maze:
+
+1. Start at the origin (0, 0).
+2. Explore the neighbors: (0, 1) and (1, 0). Add them to the queue and mark them as visited.
+3. Dequeue (0, 1) and explore its neighbors: (0, 2) and (1, 1). Add them to the queue and mark them as visited.
+4. Dequeue (1, 0) and explore its neighbors: (2, 0) and (1, 1) (already visited). Add (2, 0) to the queue and mark it as visited.
+5. Dequeue (0, 2) and explore its neighbors: (0, 3) and (1, 2). Add them to the queue and mark them as visited.
+6. Dequeue (2, 0) and explore its neighbors: (2, 1) and (3, 0). Add them to the queue and mark them as visited.
+7. Dequeue (1, 1) and explore its neighbors: (1, 2) (already visited) and (2, 1) (already visited).
+8. Dequeue (0, 3) and explore its neighbors: (1, 3) and (0, 2) (already visited). Add (1, 3) to the queue and mark it as visited.
+9. Dequeue (2, 1) and explore its neighbors: (2, 2) and (3, 1). Add them to the queue and mark them as visited.
+10. Dequeue (1, 3) and explore its neighbors: (2, 3) and (1, 2) (already visited). Add (2, 3) to the queue and mark it as visited.
+11. Dequeue (3, 0) and explore its neighbors: (3, 1) (already visited).
+12. Dequeue (2, 2) and explore its neighbors: (2, 3) (already visited) and (3, 2). Add (3, 2) to the queue and mark it as visited.
+13. Dequeue (3, 1) and explore its neighbors: (3, 2) (already visited).
+14. Dequeue (2, 3) and explore its neighbors: (2, 2) (already visited) and (3, 3) (target reached).
+
+The path from the origin (0, 0) to the target (3, 3) is found. To output the solution in the required format, we need to backtrack from the target (3, 3) to the origin (0, 0) using the visited vertices.
+
+<PATH_START>
+(3, 3) (2, 3) (2, 2) (2, 1) (2, 0) (1, 0) (0, 0)
+<PATH_END>

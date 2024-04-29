@@ -1,0 +1,16 @@
+To find a solution for this maze, let's use Djikstra's shortest path algorithm:
+
+1. First, create a distance matrix D[][], initialized with infinity, and a set S (for the solved part of the graph). 
+2. Add the starting point (1, 1) to S, and set D[1][1] = 0.
+3. While there are unexplored points:
+   - Find the point in S with the smallest distance from the start. Let's call it (x, y).
+   - Add (x, y) to S.
+   - For each neighbor (a, b) of (x, y) that is not in S and not a wall:
+       - Update D[a][b] = min(D[a][b], D[x][y] + 1)
+4. After this, D[][] will store the shortest distance from the starting point to each point in the maze.
+5. Trace back the path from the end point (7, 7), for each point (x, y) on the path, we will choose a neighbor (a, b) such that D[a][b] = D[x][y] - 1. This will lead us back to the starting point.
+6. Output the coordinates of the path.
+
+<PATH_START>
+(1, 1) (1, 2) (2, 2) (2, 3) (2, 4) (2, 5) (1, 5) (1, 6) (1, 7) (2, 7) (2, 8) (2, 9) (2, 10)
+</PATH_END>

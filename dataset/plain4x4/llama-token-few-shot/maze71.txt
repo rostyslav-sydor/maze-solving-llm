@@ -1,0 +1,9 @@
+Here is the solution to the maze:
+
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (2,1) (2,2) (3,2) (3,3) <PATH_END>
+
+The shortest path from the starting point (0,0) to the target point (3,3) is:
+
+(0,0) (1,0) (2,0) (3,0) (3,1) (2,1) (2,2) (3,2) (3,3)
+
+Please let me know if you have any questions or if there's anything else I can help you with!

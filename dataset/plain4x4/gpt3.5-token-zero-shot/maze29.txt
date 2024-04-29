@@ -1,0 +1,7 @@
+To solve this maze, we can use a depth-first search algorithm. Starting at the origin point (0,0), we can explore all possible paths by following the adjacency list connections until we reach the target point (3,3).
+
+Following the adjacency list connections, we can navigate through the maze and keep track of the path we have taken. By exploring all possible paths, we can eventually reach the target point.
+
+Once we reach the target point (3,3), we can backtrack our steps to find the path we took from the origin point. This path can be outputted between <PATH_START> and <PATH_END> tokens in the format of coordinate list.
+
+Using this approach, we can find a solution for the maze and output the path taken through the maze between <PATH_START> and <PATH_END> tokens.

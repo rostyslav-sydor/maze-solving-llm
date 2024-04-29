@@ -1,0 +1,14 @@
+Reasoning:
+
+1. Start at the starting point (0,0) and traverse the maze using depth-first search or breadth-first search.
+
+2. Mark nodes as you visit to avoid loops.
+
+3. Continue searching until you reach the goal (3,3). 
+
+4. The path will be the sequence of nodes that lead from starting point to the destination point.
+5. The path can be represented as a list of coordinates in order of traversal from (0,0) to (3,3).
+
+Output:
+
+ <PATH_START> (0,0) (0,1) (0,2) (1,2) (2,2) (3,2) (3,3) <PATH_END>

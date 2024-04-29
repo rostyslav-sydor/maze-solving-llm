@@ -1,0 +1,12 @@
+One possible solution is:
+
+<PATH_START> (0,0) (1,0) (1,1) (1,2) (1,3) (2,3) (3,3) <PATH_END>
+
+**Reasoning:**
+
+Starting from the origin (0,0), we can move right to (1,0), then down to (1,1), right to (1,2), down to (1,3), right to (2,3), and finally down to (3,3), which is the target.
+
+**Checking for validity:**
+
+* Each move is between adjacent cells.
+* No walls are crossed, since the path follows the edges of the maze.

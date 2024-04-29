@@ -1,0 +1,28 @@
+To solve the maze given in the adjacency list format, I will first convert the provided adjacency list into a more manageable form that represents the connections between the grid cells. Then, I will use a common pathfinding algorithm to find the shortest path from the entry point to the exit point.
+
+1. **Convert Adjacency List to Graph Representation:**
+   I will map every cell (node) provided in the adjacency list to its directly connected neighbors. This sets up a graph-like representation of the maze.
+
+   - For instance, from "(1,0) <--> (0,0)", add (0,0) as a neighbor to (1,0) and vice versa.
+   - Repeat this for all connections.
+
+2. **Choose Pathfinding Algorithm:**
+   Given the need to find a path in a grid that is effectively represented as an undirected graph, a Breadth-First Search (BFS) algorithm seems appropriate. BFS is ideal for unweighted graphs, finding the shortest path in terms of the number of edges traversed.
+
+3. **Perform BFS:**
+   Start BFS from the entry point (0,0), explore all connected nodes level by level, stop once the exit point (3,3) is reached, tracing back the path using the parent-child relationships recorded during the search.
+
+4. **Trace the Path:**
+   Once the exit (3,3) is found, trace back from this point using the parent relationship maintained during BFS to reconstruct the path back to the entry (0,0). The tracing yields the path in reverse; hence, reverse it to start from the entry to the exit.
+
+5. **Validate the Path:**
+   Ensure each step in the path corresponds to a movement between directly connected cells in the adjacency list without crossing any walls or skipping between non-adjacent cells. This guarantees that the path uses only permissible moves according to the maze's layout.
+
+6. **Display the Path:**
+   Format the final path placing it between the requested tokens, showing each step coordinate from the entry (0,0) to the exit (3,3).
+
+The path found using the BFS algorithm would be:
+
+<Path_Start> (0,0) (1,0) (1,1) (1,2) (1,3) (2,3) (3,3) <Path_End>
+
+This output takes you straight through valid movements starting from the top-left of the maze to the bottom-right (exit point), moving straightforwardly wherever possible and navigating toward the rightmost point seamlessly. Each pair of consecutive coordinates in the output can be verified to be directly connected according to the adjacency list, ensuring no walls are crossed and only adjacent cells are used.

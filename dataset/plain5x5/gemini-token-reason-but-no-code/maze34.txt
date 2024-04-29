@@ -1,0 +1,4 @@
+To solve this maze, we can use a depth-first search (DFS) or breadth-first search (BFS) algorithm. Starting at the origin, we traverse the graph by following the edges between the tokens. We keep track of the path taken in a list, and when we reach the target, we output the path.
+
+For this specific maze, the solution is:
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (4,0) (4,1) (4,2) (4,3) (4,4) <PATH_END>

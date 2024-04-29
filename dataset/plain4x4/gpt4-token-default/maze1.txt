@@ -1,0 +1,28 @@
+To solve the maze provided, we first parse the adjacency list data representing the maze's connectivity, identify the entry `(0,0)` and exit `(3,3)` points, and then apply a graph traversal algorithm, such as breadth-first search (BFS), to find the shortest path between the entry and the exit.
+
+Parsing the adjacency list and extracting the graph information:
+
+- (1,0) connected to (2,0)
+- (1,1) connected to (1,2)
+- (2,1) connected to (3,1)
+- (3,3) connected to (2,3) and (3,2)
+- (0,1) connected to (0,0)
+- (1,3) connected to (2,3) and (0,3)
+- (0,2) connected to (0,3) and (0,1)
+- (2,2) connected to (1,2) and (2,1)
+- (3,0) connected to (2,0) and (3,1)
+- (2,0) connected to (1,0) and (3,0)
+
+Using these connections and performing a BFS to find the shortest path from `(0,0)` to `(3,3)`, the path traced would be:
+
+1. Start at (0,0)
+2. Go to (0,1)
+3. Go to (0,2)
+4. Go to (0,3)
+5. Go to (1,3)
+6. Go to (2,3)
+7. Go to (3,3)
+
+This yields the following coordinates as the solution path:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>

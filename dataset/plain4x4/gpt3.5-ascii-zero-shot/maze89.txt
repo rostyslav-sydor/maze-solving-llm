@@ -1,0 +1,16 @@
+1. Start at the entry point (1,1).
+2. Move right to coordinate (1,2).
+3. Move right to coordinate (1,3).
+4. Move down to coordinate (2,3).
+5. Move down to coordinate (3,3).
+6. Move right to coordinate (3,4).
+7. Move down to coordinate (4,4).
+8. Move right to coordinate (4,5).
+9. Move down to coordinate (5,5).
+10. Move right to coordinate (5,6).
+11. Move down to coordinate (6,6).
+12. Move right to coordinate (6,7).
+13. Move down to coordinate (7,7) - exit point.
+
+Therefore, the solution path for this maze is:
+<PATH_START> (1,1) (1,2) (1,3) (2,3) (3,3) (3,4) (4,4) (4,5) (5,5) (5,6) (6,6) (6,7) (7,7) <PATH_END>

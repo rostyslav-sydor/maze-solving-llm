@@ -1,0 +1,17 @@
+Using depth-first search (DFS) algorithm, we start from the origin and explore all possible paths, backtracking when we hit a dead end:
+
+1. Initialize: Set origin as the root node and create a visited array to track explored nodes.
+2. Start DFS: Check that the current node is within the grid and not visited. If yes, add it to the path so far, mark it as visited, and continue with its adjacent nodes. If the current node is the target, return the path.
+3. Do not revisit: When an adjacent node has already been visited, don't add it back to the stack.
+4. Return path: If all adjacent nodes are either visited or out of bounds, return to the previous node. Repeat for any prior nodes, exploring the next available adjacent node until you find a complete path or reach the top.
+5. Compile the path: If the target is reached, create a route by tracing back the path from the target to the source. If no path to target exists, there will be an empty list of coordinates.
+6. Format the output: Enclose the coordinate list with <PATH_START> and <PATH_END> tokens, then print out the solution.
+
+Here's a step-by-step maze navigation, where each number represents a branch or backtracking step in DFS:
+
+1. (0,0) - O  (nr=0, nc=0, v[0][0] = visited)
+2. (0,0)-X- (1,0)  (nr=0, nc=1, v[0][1] = not yet visited)
+3. (0,0)-X-(1,0)-O- (nr=1, nc=0, v[1][0] = visited)
+4. (0,0)-X-(1,0)-X- (0,1)  (nr=1, nc=1, v[0][1] = not yet visited)
+5. (0,0)-X-(1,0)-X-(0,1)-O- (nr=0, nc=1, v[0][1] = visited)
+6. (0,0)-X-(1,0)-X-(0,1)-X- (2,1) (nr=2, nc

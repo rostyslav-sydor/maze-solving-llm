@@ -1,0 +1,16 @@
+To solve the maze described above, let's employ Breadth-First Search (BFS), which is ideal for this type of problems where we are looking for the shortest path in an unweighted graph. We will start from the origin (0,0) and aim to reach the target (3,3).
+
+Here is a step-by-step guide to how the solution was derived using BFS, showing the path exploration:
+
+1. Start at (0,0).
+2. From (0,0), we can move to (0,1) and from (0,1) to (0,2).
+3. Proceed from (0,2) to (1,2) via (0,2) <--> (1,2).
+4. From (1,2), we can move to (2,2).
+5. From (2,2), we proceed to (3,2).
+6. Finally, from (3,2), we move directly to the target at (3,3).
+
+Backtracking from the target point (3,3) to the origin (0,0) using the predecessors mapped during this BFS, we get the actual path:
+
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (2,2) (3,2) (3,3) <PATH_END>
+
+This path moves straight across the 0th row until it hits a possible down movement at (0,2) going straight down to the 2nd column, bypassing clusters of nodes unnecessary for reaching the target (the 3rd column at the bottom row, i.e., (3,3)). This is considered one of the shortest possible paths given the adjacency list without unnecessary detours.

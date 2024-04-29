@@ -1,0 +1,33 @@
+To solve the maze given in the adjacency list format, we need to find a path from the origin coordinate (0,0) to the target coordinate (3,4). The adjacency list gives direct connections between pairs of coordinates representing possible moves within the maze.
+
+We start at the origin (0,0) and repeatedly look to adjacent nodes we can move to until we reach the target (3,4). Here is the step-by-step reasoning using the adjacency list:
+
+1. Start at (0,0).
+   - From (0,0), the possible moves are to (0,1) and (1,0).
+
+2. Move to (0,1).
+   - From (0,1), the connected nodes are (0,0) and (0,2).
+
+3. Move to (0,2).
+   - From (0,2), possible moves are to (0,1) and (0,3).
+
+4. Move to (0,3).
+   - From (0,3), the connections are (0,2) and (0,4).
+
+5. Move to (0,4).
+   - The next possible move from (0,4) is to (1,4).
+
+6. Move to (1,4).
+   - From (1,4), potential next steps are to (0,4), (2,4).
+
+7. Move to (2,4).
+   - From (2,4), go to either (1,4) or (3,4).
+
+8. Move to (3,4).
+   - Since (3,4) is the target, the path ends here.
+
+Following this route, we determined the path from (0,0) to (3,4) directly through connected points without backtracking. This is validated by checking availability and adjacency in each step. The final solution is:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (0,4) (1,4) (2,4) (3,4) <PATH_END> 
+
+This path provides a viable route from the start to the finish, satisfying the given maze structure.

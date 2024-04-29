@@ -1,0 +1,3 @@
+Depth First search algorithms are used to solve mazes as they explore possible paths, and backtrack if they reach a dead end.
+By using Depth First search, we can find the solution for the given maze as:
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (0,4) (1,4) (2,4) (3,4) (4,4) <PATH_END>

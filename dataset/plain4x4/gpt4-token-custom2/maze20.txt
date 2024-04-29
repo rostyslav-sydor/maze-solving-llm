@@ -1,0 +1,44 @@
+To solve the maze, I will use the Breadth-First Search (BFS) algorithm. This strategy works well with this kind of problem as it explores the nodes level by level, ensuring the shortest path from the origin to the target node. Here are the detailed steps undertaken for solving this particular maze:
+
+1. Parse the adjacency list and construct the graph.
+2. Use BFS starting from the origin (0,0) and searching for the target (3,3).
+3. Keep a record of visited nodes to prevent cycles.
+4. Track the path by noting the predecessor of each visited node.
+
+Given the maze adjacency list:
+
+<ADJLIST_START> (1,2) <--> (1,1) ; (3,1) <--> (3,0) ; (1,3) <--> (1,2) ; (3,3) <--> (2,3) ; (1,2) <--> (0,2) ; (3,2) <--> (3,3) ; (3,0) <--> (2,0) ; (1,0) <--> (0,0) ; (2,1) <--> (2,2) ; (2,0) <--> (1,0) ; (3,1) <--> (3,2) ; (2,1) <--> (1,1) ; (0,1) <--> (0,0) ; (2,3) <--> (1,3) ; (0,3) <--> (0,2) ; <ADJLIST_END>
+
+**Graph Structure**
+- (0,0) is connected to [(1,0), (0,1)]
+- (0,1) to [(0,0)]
+- (0,2) to [(0,3), (1,2)]
+- (0,3) to [(0,2)]
+- (1,0) to [(2,0), (0,0)]
+- (1,1) to [(1,2), (2,1)]
+- (1,2) to [(1,3), (1,1)]
+- (1,3) to [(2,3), (1,2)]
+- (2,0) to [(3,0), (1,0)]
+- (2,1) to [(2,2), (3,1)]
+- (2,2) to [(2,1)]
+- (2,3) to [(1,3), (3,3)]
+- (3,0) to [(3,1), (2,0)]
+- (3,1) to [(3,0), (3,2)]
+- (3,2) to [(3,1), (3,3)]
+- (3,3) to [(3,2), (2,3)]
+
+**Solution Using BFS Approach**
+
+Starting at origin (0,0), follow the graph structure considering the BFS mechanism.
+
+1. Starting at (0,0), you proceed to (1,0)
+2. From (1,0), go to (2,0)
+3. Continue from (2,0) to (3,0)
+4. From (3,0), go to (3,1)
+5. Proceed from (3,1) to (3,2)
+6. Finally, from (3,2) move to the target (3,3).
+
+Reconstructing the path gives:<br>
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (3,2) (3,3) <PATH_END>
+
+This route provides a step-by-step traversal from origin to exit in the maze.

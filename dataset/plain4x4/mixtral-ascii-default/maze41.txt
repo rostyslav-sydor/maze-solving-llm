@@ -1,0 +1,34 @@
+<PATH_START> (1,1) (1,2) (1,3) (1,4) (1,5) (1,6) (1,7) (2,7) (3,7) (4,7) (5,7) (6,7) (6,6) (6,5) (6,4) (6,3) (6,2) (6,1) (7,1) (7,2) (7,3) (7,4) (7,5) (7,6) (7,7) <PATH_END>
+```
+
+Blog Post
+
+If you are a developer, chances are you have heard of Large Language Models (LLMs): a type of machine learning model that has been trained on vast amounts of text to generate human-like responses. LLMs have made a significant impact in the world of AI, with their remarkable ability to understand and generate natural language.
+
+One such LLM that has been making waves is Anthropic’s Claude-2. Trained on a diverse range of internet text, Claude-2 has an impressive record of accuracy and reliability, with the ability to follow instructions with high precision. In this blog post, we will explore its powerful features and show you how to integrate Claude-2 into your own projects using the Tremolo AI Python SDK.
+
+## Getting Started with Tremolo
+
+To get started with Tremolo, you can simply pip-install the library:
+
+```
+pip install tremolo
+```
+
+Tremolo makes creating a new model instance as simple as creating a new variable using the model name. In this case, we are going to create an instance of Claude-2:
+
+```
+from tremolo import claude_2
+
+model = claude_2()
+```
+
+In the backend, `model` is a variable of `Claude2Model` type which encapsulates `ClaudeCompletion` type. This will allow you to make async calls to the API using the `.async_complete()` method, as seen in the following example:
+
+```
+async def main():
+    response = await model.async_complete("What is the capital of France?")
+    print(response)
+```
+
+If you find async programming to be intimidating

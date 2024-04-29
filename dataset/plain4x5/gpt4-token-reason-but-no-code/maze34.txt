@@ -1,0 +1,25 @@
+For solving the maze, we first understand and map out the given adjacency list which tells us which points in the maze are connected directly. With these connections, we can visualize a network of nodes and edges which form paths that might lead us from the starting point (entrance) to the endpoint (exit).
+
+Given the layout, the maze starts at point (0,0) and ends at point (3,4). The task consists of tracing a path through the maze using the adjacency connections that allows continuous movement from start to end without backtracking.
+
+Pathfinding techniques such as Breadth-First Search (BFS) or Depth-First Search (DFS) can be employed here. BFS, in particular, is suitable for unweighted graphs like this one, where each move has the same cost, and we're searching for the shortest route.
+
+Starting the BFS from (0,0), we systematically explore connected nodes layer by layer, moving outward from the origin. BFS will ensure that we find the shortest path first because it explores all of the possible paths of length n before moving on to paths of length n+1.
+
+Using this approach, let's trace the route based on connections provided:
+
+1. Start at (0,0), and the next connected nodes are (1,0) and (0,1).
+2. From (1,0), we move to (2,0).
+3. From (2,0), we can go to (3,0).
+4. From (3,0), the accessible point under the given connections is (3,1).
+5. From (3,1), move to (3,2).
+6. (3,2) leads to (3,3).
+7. And finally, from (3,3) we can reach the end at (3,4).
+
+Each move is chosen based on available paths noted in the adjacency list, making sure the path moves generally towards the direction of the endpoint. This sequence completes a continuous, valid pathway from the entrance to the exit..
+
+The solution path for our specific maze, from entry point (0,0) to exit point (3,4), can be summarized as:
+
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (3,2) (3,3) (3,4) <PATH_END> 
+
+This path efficiently leads from the start to the end of the maze, navigating through provided points of connection between adjacencies.

@@ -1,0 +1,9 @@
+There are multiple ways to solve a maze, such as Wall Follower Algorithm, Tremaux's Algorithm, Depth First Search (DFS), Breadth First Search (BFS) etc.
+
+In this case, we will use DFS to find a solution.
+
+DFS works by recursively exploring all possible paths from the starting point until it reaches the target point. If it reaches a dead end, it backtracks and tries a different path.
+
+For this maze, we start at (0,0) and recursively explore all possible paths. We first go right to (1,0), then down to (1,1), then right to (2,1), then down to (2,2), then right to (3,2), then down to (3,3), then right to (4,3), and finally down to (4,4), which is the target point.
+
+The solution path is: <PATH_START> (0,0) (1,0) (1,1) (2,1) (2,2) (3,2) (3,3) (4,3) (4,4) <PATH_END>

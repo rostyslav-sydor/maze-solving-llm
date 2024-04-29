@@ -1,0 +1,14 @@
+To solve the maze from entry point (0,0) to exit point (3,3) while observing the wall placements:
+
+1. Start at (0,0). There is a clear path downward along the first column.
+2. Move from (0,0) downwards, as the column walls block movement to the right from rows 0 to 2 at column 0.
+3. From (0,0), go to (1,0).
+4. Continue from (1,0) to (2,0).
+5. At (2,0), movement to the right is possible (since no walls block it), so move to (2,1).
+6. From (2,1) move to (2,2). Avoid moving to (2,3) because a wall blocks access.
+7. From (2,2), you can move down to (3,2) since it's clear.
+8. Then from (3,2), move right to the exit at (3,3).
+
+Final path from entry to exit is: 
+
+<PATH_START> (0,0) (1,0) (2,0) (2,1) (2,2) (3,2) (3,3) <PATH_END>

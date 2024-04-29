@@ -1,0 +1,10 @@
+First we should find the shortest path between the entry point and exit point in the adjacency list. 
+Let's use the Breadth-First Search (BFS) algorithm for this purpose. 
+We start at the entry point and add it to the queue. 
+We then visit all adjacent nodes and add them to the queue if they have not been visited yet. 
+We repeat this process until we reach the exit point. 
+The path from the entry point to the exit point can be found by backtracking from the exit point to the entry point.
+
+For the given maze, the shortest path from the entry point to the exit point is: 
+
+<PATH_START> (0,0) (0,1) (1,1) (1,2) (1,3) (2,3) (3,3) <PATH_END>

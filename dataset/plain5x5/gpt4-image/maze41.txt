@@ -1,0 +1,3 @@
+Based on the maze you've provided and starting from the entry point at (0,0), the solution path to the exit at (4,4) is as follows:
+
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (4,0) (4,1) (4,2) (4,3) (4,4) <PATH_END>

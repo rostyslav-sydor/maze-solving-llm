@@ -1,0 +1,46 @@
+We can use a pathfinding algorithm like A* or Dijkstra's algorithm to find the shortest path from the start to the exit. Here's a step-by-step approach:
+
+1. Convert the ASCII representation of the maze into a 2D array of characters.
+2. Initialize variables for the start and end positions.
+3. Use a pathfinding algorithm (A* or Dijkstra's) to find the shortest path from the start to the end.
+4. Convert the resulting path to the required format.
+
+Here's an example implementation in Python using the A* algorithm:
+```python
+from heapq import heappop, heappush
+from collections import namedtuple
+
+Point = namedtuple('Point', 'row col')
+
+def reconstruct_path(came_from, start, goal):
+    path = []
+    while True:
+        path = [goal] + path
+        if goal == start:
+            break
+        goal = came_from[goal]
+    return path
+
+def find_maze_path(maze):
+    src = next(i for i, row in enumerate(maze) for c in row if c == 'S')
+    start = Point(src // len(maze[0]), src % len(maze[0]))
+
+    tgt = next(i for i, row in enumerate(maze) for c in row if c == 'E')
+    end = Point(tgt // len(maze[0]), tgt % len(maze[0]))
+
+    frontier = [(0, start)]
+    heapify(frontier)
+    came_from = {start: None}
+    cost_so_far = {start: 0}
+
+    while frontier:
+        _, current = heappop(frontier)
+
+        if current == end:
+            break
+
+        for next_cell in [Point(current.row-1, current.col),
+                          Point(current.row+1, current.col),
+                          Point(current.row, current.col-1),
+                          Point(current.row, current.col+1)]:
+            if not (0 <= next_cell.row < len(

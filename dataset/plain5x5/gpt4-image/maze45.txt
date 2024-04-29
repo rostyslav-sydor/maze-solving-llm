@@ -1,0 +1,7 @@
+Given the maze with the described entry and exit points, and by observing the image, it seems possible to chart a path from the upper left corner (0, 0) to the lower right corner (4, 4) through the available passageways as delineated by the walls.
+
+The path can be described as the following series of coordinates:
+
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (3,2) (3,3) (3,4) (4,4) <PATH_END>
+
+This path moves from the start point to the east along the first row until column 3, goes south all the way to row 3, moves east to column 4, and finally heads south to the exit point.

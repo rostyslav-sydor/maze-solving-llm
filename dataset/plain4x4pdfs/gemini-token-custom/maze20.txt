@@ -1,0 +1,20 @@
+Starting from entry point <ORIGIN_START> (0,0), we can reach cell (1,1) by moving right (<ADJLIST_START> (0,0) <--> (1,0) ;). From (1,1) we can move one cell down to reach (1,2) (<ADJLIST_END> (1,1) <--> (1,2) ;). 
+
+From (1,2) we can move two cells right to reach (3,2) (<ADJLIST_END> (1,2) <--> (2,2) ; <ADJLIST_END> (2,2) <--> (3,2) ;). 
+
+From (3,2) we can move one cell up to reach (3,1) (<ADJLIST_END> (3,2) <--> (3,1) ;) and then one cell to the right to reach exit point (3,3) (<ADJLIST_END> (3,1) <--> (3,3) ;).
+
+So, the solution for provided maze is: 
+<PATH_START> (0,0) (1,0) (1,1) (1,2) (3,2) (3,1) (3,3) <PATH_END>
+
+Checking if the solution does not pass through any walls and cells are adjacent to each other:
+
+(0,0) is adjacent to (1,0) as per adjacency list definition
+(1,0) is adjacent to (1,1) as per adjacency list definition
+(1,1) is adjacent to (1,2) as per adjacency list definition
+(1,2) is adjacent to (2,2) as per adjacency list definition
+(2,2) is adjacent to (3,2) as per adjacency list definition
+(3,2) is adjacent to (3,1) as per adjacency list definition
+(3,1) is adjacent to (3,3) as per adjacency list definition
+
+Thus, the solution is valid and does not cross any walls.

@@ -1,0 +1,2 @@
+Let's see if the returned path is valid for the target maze. 
+<ACTION> START</ACTION>

@@ -1,0 +1,8 @@
+To find the solution for the maze represented as an adjacency list, a breadth-first search (BFS) algorithm can be used.
+Starting from the origin point, the algorithm explores all the adjacent nodes level by level, until the target point is reached.
+In this case, the origin point is (0,0) and the target point is (4,4).
+The algorithm starts by exploring the adjacent nodes of (0,0), which are (1,0) and (0,1).
+It then explores the adjacent nodes of (1,0) and (0,1), and so on.
+The algorithm keeps track of the nodes that have been visited, and the path taken to reach each node.
+Once the target point is reached, the algorithm backtracks to find the shortest path from the origin point to the target point.
+In this case, the shortest path is: <PATH_START> (0,0) (1,0) (2,0) (3,0) (4,0) (4,1) (4,2) (4,3) (4,4) <PATH_END>

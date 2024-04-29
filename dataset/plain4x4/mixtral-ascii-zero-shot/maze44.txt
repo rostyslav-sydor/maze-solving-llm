@@ -1,0 +1,21 @@
+First, we should know that this is a map of a maze with an entry point at (1, 1) representing the letter S and an exit point at (7, 7) representing the letter E. Walls of the maze are represented by #'s, and empty spaces are where movement is possible.
+
+Now, there are various ways to approach searching for the path through the maze, including depth-first search, breadth-first search, or even using heuristic pathfinding algorithms. 
+
+To keep it simple, I'll demonstrate a simple breadth-first search to find the shortest path. In future problems, feel free to discuss options in more detail. Here are the steps:
+
+1. Represent the map as a 2D grid or matrix (list of lists), where 1's are walls and 0's are the path or unvisited cells.
+
+2. Start at the entry point: Mark it as our current node and add it to the 'visited' list.
+
+3. Loop (recursive function later) through adjacent cells (up, down, left, right) of the current node, searching for valid (unvisited) paths using constraints of the maze.
+If a path is found:
+   a. Mark the new cell as visited and add it to the 'visited' list.
+   b. If the new cell is the exit (E), mark it visited and return the path from the entry node to here. Congratulations! We found a path.
+   c. Otherwise, add this node to the 'frontier' list for further exploration in the next cycle.
+
+4. If no unvisited adjacent cells remain, return to the last node explored. Exit this loop when the initial exploratory path returns to the entry or fails to find the exit.
+
+5. Arrange the sequence of visited cells found in the 'visited' list to create the path for your solution. This might require additional processing, such as cycling through until the predecessor of each node is found, then putting the cells in the reverse order to create the path (border-finding or backtracking).
+
+6. Present the path in the format of coordinate list as requested, where (1, 1) specifies the row and column location of the first coordinate and so on, separating coordinates with (x

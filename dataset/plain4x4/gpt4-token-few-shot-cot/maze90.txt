@@ -1,0 +1,39 @@
+Given the current maze and its adjacency list, along with the start point `(0,0)` and the end point `(3,3)`, we need to formulate a solution path:
+
+We start from (0,0), and the corresponding moves are derived from the adjacency list:
+
+**Adjacency List:**
+
+- (1,1) <--> (1,0)
+- (2,0) <--> (3,0)
+- (1,1) <--> (1,2)
+- (2,1) <--> (2,2)
+- (3,1) <--> (3,2)
+- (3,3) <--> (2,3)
+- (0,0) <--> (0,1)
+- (1,3) <--> (2,3)
+- (1,2) <--> (1,3)
+- (3,1) <--> (3,0)
+- (0,2) <--> (0,1)
+- (3,2) <--> (3,3)
+- (1,0) <--> (0,0)
+- (1,1) <--> (2,1)
+- (0,3) <--> (0,2)
+
+**Solution Stages:**
+
+1. Start from (0,0), move right to (0,1) via (0,0) <--> (0,1).
+2. Continue right to (0,2) via (0,2) <--> (0,1).
+3. Keep moving right to (0,3) via (0,3) <--> (0,2).
+4. Descend down diagonal to the (1,2) cell from the adjacent (1,2) via (1,2) <--> (1,3).
+5. Move left to (1,1) via (1,1) <--> (1,2).
+6. Move down to (2,1) via (1,1) <--> (2,1).
+7. Move right to (2,2) via (2,1) <--> (2,2).
+8. Move down to (3,2) via (3,2) <--> (2,2).
+9. Move right to the exit at (3,3) via (3,2) <--> (3,3).
+
+**Final Path:**
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (1,2) (1,1) (2,1) (2,2) (3,2) (3,3) <PATH_END>
+
+This forms the solution using the adjacency list and navigating through it using a direct route based on accessible paths.

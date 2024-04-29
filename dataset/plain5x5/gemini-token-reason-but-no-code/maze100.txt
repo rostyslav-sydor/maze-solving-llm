@@ -1,0 +1,20 @@
+Breadth First Search(BFS) is a commonly used graph traversal algorithm to find the shortest paths from a source node to all other nodes in a graph. 
+
+It works in a level-by-level manner. The BFS approach is useful in mazes as we can check all possible paths between a given starting point and a given ending point in a maze. 
+
+The starting point is added to a queue, and then the following steps are repeated until the queue is empty:
+1) Remove the first vertex from the queue and visit it.
+2) For each neighbor of the visited vertex, check if the neighbor is unvisited. If it is unvisited, add it to the queue and mark it as visited.
+
+In the given adjacency list representation of the maze:
+- Starting Point (0,0) is added to the queue.
+- We start by checking its neighbors (0,1) and (1,0).
+- (0,1) is added to the queue and marked as visited.
+- (1,0) is added to the queue and marked as visited.
+- The next vertex in the queue is (0,1). 
+- Its neighbors are (0,0) (already visited), (0,2), and (1,1). 
+- (0,2) and (1,1) are added to the queue and marked as visited.
+- We continue in this way until we reach the target point (4,4). 
+
+The path from (0,0) to (4,4) can be found by tracing back the visited nodes from (4,4) to (0,0).
+<PATH_START> (0,0) (0,1) (1,1) (2,1) (1,2) (2,2) (3,2) (3,3) (4,3) (4,4) <PATH_END>

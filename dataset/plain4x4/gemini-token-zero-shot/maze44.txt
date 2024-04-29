@@ -1,0 +1,8 @@
+From the origin (0,0), move right to (1,0)
+From (1,0), move down to (1,1)
+From (1,1), move right to (2,1)
+From (2,1), move down to (2,2)
+From (2,2), move right to (3,2)
+From (3,2), move down to (3,3), which is the target
+
+<PATH_START> (0,0) (1,0) (1,1) (2,1) (2,2) (3,2) (3,3) <PATH_END>

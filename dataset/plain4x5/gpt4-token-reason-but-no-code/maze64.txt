@@ -1,0 +1,23 @@
+The maze is laid out with cells as vertices and edges denoting passages between adjacent cells. The task is to find a path from the origin (0,0) to the target (3,4). By converting the adjacency list into a more visual or interpretable form, such as a grid or graph structure, the pathfinding can be systematically tackled using algorithms like Breadth-First Search (BFS) or Depth-First Search (DFS). These methods are suitable as they can explore all possible paths through the maze until they find the shortest route (BFS) or any valid route (DFS).
+
+Given the adjacency list, we construct a graph where each pair (x,y) <-> (a,b) represents a direct walkable connection between the cells (x,y) and (a,b). Here, we refer to each cell by a coordinate pair, where the first component represents the row and the second component represents the column.
+
+In the BFS approach:
+
+1. Start at the origin (0,0).
+2. Explore all neighbors, i.e., directly connected cells.
+3. Use a queue to manage the cells to explore and a way to mark visited cells to avoid cycles.
+4. Track the path by associating each visited cell with the cell from which it was visited (predecessor).
+5. When the target (3,4) is reached, backtrack from the target cell to the origin using the predecessor links to obtain the path.
+
+For the given maze, following these strategies:
+
+Starting at (0,0), you can move to adjacent cells as defined in the list. Keep exploring and marking cells until reaching (3,4). Backtrace the path from (3,4) to (0,0) by following the links of predecessors formed during the traversal.
+
+Understanding that the maze’s connections do not always form symmetric pairs in horizontal or vertical alignments, the algorithm ensures all possible paths are considered without assumptions about the layout beyond the given connections.
+
+After implementing this logic (either using a BFS or DFS algorithm as suited), we derive that the solution path, starting at (0,0) and ending at (3,4) for this specific maze while following the edges listed, results in the path:
+
+<PATH_START> (0,0) (1,0) (1,1) (1,2) (1,3) (1,4) (2,4) (3,4) <PATH_END>
+
+This sequence of moves follows an eastward then northward progression, navigating through available passages as per the adjacency relation provided, and bypasses closed paths or loops effectively.

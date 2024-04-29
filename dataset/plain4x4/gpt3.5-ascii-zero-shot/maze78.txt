@@ -1,0 +1,3 @@
+First, identify the possible paths by looking for open spaces adjacent to the current position starting from (1,1). Move right to (1,2), then down to (2,2), and then right to (2,3). At this point, you reach a dead end so backtrack to (2,2) and proceed downwards to (3,2). Continue by moving right to (3,3), down to (4,3), right to (4,4), and down to (5,4). Turn left to (5,3), down to (6,3), and right to (6,4). Finally, move down to (7,4) and then right to (7,5) to reach the exit at (7,7).
+
+The solution path: <PATH_START> (1,1) (1,2) (2,2) (2,3) (3,3) (4,3) (4,4) (5,4) (5,3) (6,3) (6,4) (7,4) (7,5) (7,7) <PATH_END>

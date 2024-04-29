@@ -1,0 +1,11 @@
+The maze can be solved using depth-first search (DFS) or breadth-first search (BFS). 
+
+Starting from the origin, we can traverse the maze by following the edges in the adjacency list. 
+
+If we reach a dead end, we can backtrack to the previous node and try a different path. 
+
+If we reach the target, we have found a solution. 
+
+For this particular maze, we can find a solution by following the path:
+
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (2,2) (2,3) (1,3) (0,3) <PATH_END>

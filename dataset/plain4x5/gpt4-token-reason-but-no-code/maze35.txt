@@ -1,0 +1,24 @@
+To solve the maze problem provided in the form of an adjacency list, we can apply typical pathfinding algorithms such as Depth-First Search (DFS) or Breadth-First Search (BFS). In this instance, BFS is more suitable due to its ability to find the shortest path in an unweighted graph like our maze.
+
+The BFS algorithm works by exploring the graph layer-by-layer. Starting from the origin point, it explores all adjacent nodes, then moves on to their neighbors, and so on until it reaches the target point. Each node (coordinate) is processed exactly once, ensuring efficiency and completeness in finding the path.
+
+We will follow these steps:
+1. Parse the adjacency list into a usable format like a dictionary where each coordinate is a key and its connected coordinates are the values.
+2. Implement the BFS algorithm using a queue to explore each coordinate in the graph starting from the origin coordinate `(0,0)`.
+3. Record the path taken by storing the predecessor of each node during exploration.
+4. Retrieve the path once the target coordinate `(3,4)` is reached by tracing back from the target coordinate to the origin using the predecessors recorded.
+
+Given the relationships defined in the provided adjacency list and applying the BFS algorithm to explore from `(0,0)` to `(3,4)`, the steps would look like this:
+- Start from `(0,0)`.
+- Move to adjacent points based on adjacency, first exploring coordinate `(0,1)`, then `(1,0)`.
+- Continue this exploration, layer by layer, utilizing connections such as `(1,0)` to `(1,1)`, `(0,1)` to `(0,2)`, and so on.
+- This process will continue, discerning a pathway through coordinates like `(0,3)` to `(1,3)`, moving horizontally and vertically in a BFS manner.
+- Finally, reach `(3,4)` through connected paths like `(2,4)` and `(3,4)`.
+
+Tracing back using the predecessors starting from `(3,4)` would conclude at the origin `(0,0)` with the entire path recorded.
+
+Hence, the solution to the maze following the path from `(0,0)` to `(3,4)` is:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (1,2) (2,2) (3,2) (3,3) (2,3) (2,4) (3,4) <PATH_END> 
+
+This outputted path indicates the series of moves you would make through the maze, proceeding from the start at `(0,0)` to the finish at `(3,4)`, ensuring each step is connected to the next based on the adjacency list given.

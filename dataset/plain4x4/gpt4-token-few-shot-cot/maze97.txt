@@ -1,0 +1,12 @@
+Considering the adjacency information given in the maze and the specified origin starting point (0,0) and target destination (3,3), the solution can be found by following the paths outlined below:
+
+1) Start at (0,0).
+2) Move right to (0,1), connection given by (0,0) <--> (0,1).
+3) Move right to (0,2), using (0,2) <--> (0,1).
+4) Move down to (1,2), via (1,2) <--> (0,2).
+5) From (1,2), move down to (2,2), connection exists in (1,2) <--> (2,2).
+6) Move to the left from (2,2) to (2,3), as (2,3) <--> (2,2).
+7) Move down from (2,3) to (3,3), connection given by (3,3) <--> (2,3).
+
+Final path: 
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (2,2) (2,3) (3,3) <PATH_END>

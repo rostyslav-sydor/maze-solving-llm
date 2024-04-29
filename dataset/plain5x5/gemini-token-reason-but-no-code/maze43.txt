@@ -1,0 +1,13 @@
+**Reasoning:**
+
+The maze is represented as an adjacency list, where each node is a coordinate in the maze and each edge is a connection between two nodes. The entry and exit points are marked with special tokens.
+
+To find a solution to the maze, we can use a search algorithm such as depth-first search (DFS) or breadth-first search (BFS). DFS explores all possible paths from the entry point until it finds a path to the exit point. BFS explores all paths of a given length before exploring paths of a greater length.
+
+In this case, we can use DFS to find a solution. We start at the entry point and explore all possible paths until we find a path to the exit point.
+
+**Solution:**
+
+The following is a solution to the maze given in the format of coordinate list between <PATH_START> and <PATH_END> tokens:
+
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (4,0) (4,1) (4,2) (4,3) (4,4) <PATH_END>

@@ -1,0 +1,12 @@
+To solve the maze starting from the entry point at (0,0) and aiming to reach the exit at (3,3), we need to follow paths between cells, avoiding walls marked by thick black lines.
+
+1. Start from (0,0), the only option is to move right to (0,1).
+2. From (0,1), move right again to (0,2).
+3. From (0,2), move downward to (1,2) as moving right leads to a wall.
+4. From (1,2), continue downward to (2,2) as moving right leads to a wall.
+5. At (2,2), you can move right to (2,3) since directly moving down leads to a block at (3,2).
+6. From (2,3), the only option without encountering a wall is to move down to (3,3), which is the exit point.
+
+Thus, the path solution in the required format is:
+
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (2,2) (2,3) (3,3) <PATH_END>

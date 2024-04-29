@@ -1,0 +1,46 @@
+To solve the maze given as an adjacency list of graph nodes (coordinates), we will follow a backtracking pathfinding approach typically done using Depth-First Search (DFS) or Breadth-First Search (BFS). The maze problem can be redefined as finding a path between a start node `(0,0)` and an end node `(3,3)`.
+
+### Steps to Solve the Maze:
+
+1. **Graph Representation**: We convert the adjacency list into a structured form where each node points to its adjacent nodes. Here's an interpretation of the adjacency data:
+   
+   ```
+   (2,2) <-> (1,2)
+   (1,3) <-> (0,3)
+   (3,3) <-> (2,3)
+   (1,3) <-> (1,2)
+   (3,1) <-> (3,0)
+   (3,2) <-> (3,1)
+   (3,2) <-> (2,2)
+   (1,1) <-> (1,0)
+   (2,0) <-> (1,0)
+   (3,1) <-> (2,1)
+   (1,3) <-> (2,3)
+   (2,0) <-> (2,1)
+   (0,2) <-> (0,3)
+   (0,0) <-> (0,1)
+   (1,1) <-> (0,1)
+   ```
+
+   This represents each node connection where nodes can bi-directionally move between connected points.
+
+2. **Choose an Algorithm**: Apply BFS starting from `(0,0)`:
+
+   - BFS uses a queue mechanism to explore nodes level by level, which suits our requirement to find the shortest path.
+   - We will use a queue to manage our nodes for exploration, and a dictionary to keep track of visited nodes and their parent nodes for path reconstruction.
+
+3. **Algorithm Execution**: Begin BFS from `(0,0)`, marking it visited and enqueue it. Iteratively take the next node from the queue:
+   
+   - For each current node, explore its connections:
+     - If the connection has not been visited, mark it as visited, record its parent node (for path tracing), and enqueue it.
+   - If you reach the target `(3,3)`, exit the loop.
+
+4. **Path Reconstruction**: Starting from `(3,3)`, backtrack through the parent nodes until the origin `(0,0)` is reached, effectively reconstructing the path traveled.
+
+5. **Maze Solving Outcome**:
+   - An example output could be, based on the BFS:
+   ```
+   <PATH_START> (0,0) (0,1) (1,1) (1,2) (1,3) (2,3) (3,3) <PATH_END>
+   ```
+
+This approach ensures that the path found is one of the shortest possible because BFS explores all possible routes from the start in an expanding "wavefront" until it finds the target. This comprehensive exploration helps in navigating complex mazes effectively.

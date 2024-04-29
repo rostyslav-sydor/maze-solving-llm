@@ -1,0 +1,39 @@
+To find a solution for the given maze, we need to implement a pathfinding algorithm. Since we don't have any obstacles other than walls, we can use a simple algorithm like depth-first search (DFS) or breadth-first search (BFS). Here, I will demonstrate the solution using DFS:
+
+1. Convert the maze to a graph representation where nodes are empty spaces (spaces without 'S', 'E', or '#').
+2. Perform DFS starting from the entry point (1, 1).
+3. Track the visited nodes to avoid visiting them again.
+4. If the DFS reaches the exit point (7, 7), we have found a solution.
+5. Output the solution as a list of coordinates between <PATH_START> and <PATH_END> tokens.
+
+Run the following Python script:
+
+```python
+import queue
+
+maze = "\n".join(
+    [
+        "#########",
+        "#S      #",
+        "####### #",
+        "#     # #",
+        "# ##### #",
+        "# #     #",
+        "# ##### #",
+        "#      E#",
+        "#########",
+    ]
+)
+
+def convert_maze_to_graph(maze):
+    graph = {}
+    for row in range(len(maze)):
+        for col in range(len(maze[0])):
+            if maze[row][col] != "#":
+                key = (row, col)
+                graph[key] = []
+                if row > 0 and maze[row - 1][col] != "#":
+                    graph[key].append((row - 1, col))
+                if col > 0 and maze[row][col - 1] != "#":
+                    graph[key].append((row, col - 1))
+                if row < len(maze) - 1

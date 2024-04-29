@@ -1,0 +1,15 @@
+Starting with the origin at (0,0) for the maze, we will implement a Breadth-First Search (BFS) algorithm to find the shortest path to the destination (3,3). BFS is an appropriate choice here as it finds the shortest path in an unweighted graph. Below are the steps taken and the exploration path order.
+
+1) Start at (0,0).
+2) From (0,0) you have choices to go to (1,0) or (0,1). Pick (1,0).
+3) From (1,0), move on to (2,0).
+4) From (2,0), go next to (3,0).
+5) From (3,0), you can move to (3,1).
+6) From (3,1), go to (3,2).
+7) From (3,2), a direct access to the target at (3,3) is available.
+
+The sequence of moves, tracing a path from the origin to the destination through the graph, gives us the required path. Each step moves to an adjacent node till the target is reached.
+
+Thus, the shortest path from (0,0) to (3,3) generated from the BFS search and providing connectivity based on the adjacency list is:
+
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (3,2) (3,3) <PATH_END>

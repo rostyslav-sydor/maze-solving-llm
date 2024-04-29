@@ -1,0 +1,36 @@
+To solve the maze, we analyze the adjacency list which tells us the connections between the grid coordinates. The adjacency list is shown between <ADJLIST_START> and <ADJLIST_END>. 
+
+Let's rearrange the adjacency list to actual grid coordinates and find a way from the origin `(0,0)` to the target `(3,3)`. However, the problem specifies the entry point as `(1,1)` and the exit as `(3,3)`.
+
+The adjacency connections in grid form are:
+- (0,0) <--> (0,1)
+- (0,1) <--> (0,2)
+- (0,2) <--> (0,3)
+- (0,3) <--> (1,3)
+- (1,3) <--> (2,3)
+- (2,3) <--> (3,3)
+- (1,0) <--> (0,0)
+- (1,1) <--> (1,0)
+- (2,2) <--> (1,2)
+- (2,2) <--> (2,3)
+- (2,2) <--> (3,2)
+- (3,3) <--> (3,2)
+- (3,2) <--> (3,1)
+- (3,1) <--> (2,1)
+- (2,1) <--> (2,0)
+- (3,0) <--> (2,0)
+
+By traversing from the start `(1,1)` and following the connections:
+1. start `(1,1)`
+2. go to `(1,0)` via `(1,1) <--> (1,0)`
+3. go to `(0,0)` via `(1,0) <--> (0,0)`
+4. go to `(0,1)` via `(0,0) <--> (0,1)`
+5. go to `(0,2)` via `(0,1) <--> (0,2)`
+6. go to `(0,3)` via `(0,2) <--> (0,3)`
+7. go to `(1,3)` via `(0,3) <--> (1,3)`
+8. go to `(2,3)` via `(1,3) <--> (2,3)`
+9. go to `(3,3)` via `(2,3) <--> (3,3)`
+
+Thus, a possible path from the entry at `(1,1)` to the exit at `(3,3)` would be:
+
+<PATH_START> (1,1) (1,0) (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>

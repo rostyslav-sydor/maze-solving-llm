@@ -1,0 +1,21 @@
+To solve the maze, the adjacency list is converted into a more understandable format which helps in finding the path from the start to the target:
+
+- Vertex (x, y) will have an edge to vertex (u, v) if "(x,y) <--> (u,v)" exists in the list.
+
+The origin and target are given as (1,1) and (3,3), respectively.
+
+Now, we will utilize BFS (Breadth First Search) for finding the shortest path:
+
+1. Parse the adjacency list to create a graph structure (a dictionary of connections for each node).
+2. Implement BFS to explore from (1,1). Store visited nodes and the path for each visited vertex.
+3. When the destination (3,3) is reached, retrace the path using the recorded parent pointers.
+
+Here’s the path based on the adjacency list:
+
+- Starting at (1,1):
+- Visit the neighbors and proceed according to the given edges.
+- Sequence to find (3,3) is (1,1) → (1,2) → move horizontally → (3,2) (using vertical edges), then to → (3,3).
+
+Hence, the output is:
+
+<PATH_START> (1,1) (1,2) (2,2) (3,2) (3,3) <PATH_END>

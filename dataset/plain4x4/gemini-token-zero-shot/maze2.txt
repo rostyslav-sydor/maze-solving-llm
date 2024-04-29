@@ -1,0 +1,12 @@
+Identify the origin and target coordinates:
+
+**Origin**: (0, 0)
+**Target**: (3, 3)
+
+From the origin, explore all adjacent coordinates and recursively perform the same operation until the target coordinate is reached.
+
+Here's a possible solution path:
+
+<PATH_START> (0, 0) --> (0, 1) --> (0, 2) --> (1, 2) --> (1, 3) --> (2, 3) --> (3, 3) <PATH_END>
+
+This path starts from the origin, moves right, then up, and continues to follow the right-hand wall until reaching the target.

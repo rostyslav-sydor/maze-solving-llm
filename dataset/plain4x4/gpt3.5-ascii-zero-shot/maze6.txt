@@ -1,0 +1,6 @@
+- The first step is to move right from the starting point at (1,1) to (1,2).
+- Then, go down to (2,2), (3,2), (4,2) until you reach (7,2).
+- From (7,2), move right to (7,3) and then continue down to reach (7,7) which is the exit point.
+
+Therefore, the solution for this maze is:
+<PATH_START> (1,1) (1,2) (2,2) (3,2) (4,2) (5,2) (6,2) (7,2) (7,3) (7,4) (7,5) (7,6) (7,7) <PATH_END>

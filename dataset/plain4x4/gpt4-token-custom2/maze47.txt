@@ -1,0 +1,47 @@
+To solve the given maze with the origin at (0,0) and the target at (3,3), we start by interpreting the adjacency list and translate it into a form suitable for applying Breadth-First Search (BFS). BFS is utilized for finding the shortest path in an unweighted graph.
+
+Here's a step-by-step solution:
+
+### Building the Graph
+From the adjacency list provided:
+```
+(2,0) <--> (3,0) 
+(2,1) <--> (3,1) 
+(1,2) <--> (1,1) 
+(1,0) <--> (0,0) 
+(0,2) <--> (0,3) 
+(2,1) <--> (2,2) 
+(0,0) <--> (0,1) 
+(0,1) <--> (0,2) 
+(2,0) <--> (1,0) 
+(3,1) <--> (3,2) 
+(2,3) <--> (3,3) 
+(1,3) <--> (0,3) 
+(2,3) <--> (1,3) 
+(3,2) <--> (3,3) 
+(1,2) <--> (2,2)
+```
+We construct a graph where each node has edges to its connected nodes as listed above.
+
+### BFS to Find the Shortest Path
+1. Start BFS from the origin node (0,0).
+2. Explore all neighbors of each node, while marking nodes as visited.
+3. Track the node from which each visited node was reached for path reconstruction.
+4. Stop when the target node (3,3) is reached.
+
+### Reconstructing the Path
+- Backtrack from the target node (3,3) to the origin node (0,0) using the saved parent information.
+
+Following the logic with our BFS and given the provided connections, the shortest path is:
+1. Start at (0,0).
+2. Go right to (0,1).
+3. Continue right to (0,2).
+4. Go right again to reach (0,3).
+5. Move down to (1,3).
+6. Continue traveling down to (2,3).
+7. Finally, go down once more to enter (3,3), the target.
+
+Thereby, the path solution is as follows:
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>
+
+This path represents a valid way from the start to the end, going through directly connectable points in the traversal order specified.

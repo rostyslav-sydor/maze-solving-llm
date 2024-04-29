@@ -1,0 +1,9 @@
+1. The starting point is (0,0) and the ending point is (3,3).
+2. From (0,0), we can move to (0,1), (1,0), or (1,1).
+3. If we move to (0,1), we can then move to (0,2) or (1,1).
+4. If we move to (1,0), we can then move to (1,1) or (1,2).
+5. If we move to (1,1), we can then move to (1,2) or (1,3).
+6. If we move to (1,2), we can then move to (1,3) or (2,2).
+7. If we move to (2,2), we can then move to (2,3) or (3,2).
+8. If we move to (3,2), we can then move to (3,3).
+9. Therefore, the path from (0,0) to (3,3) is: (0,0) -> (1,0) -> (1,1) -> (1,2) -> (1,3) -> (2,3) -> (3,3) <PATH_START> (0,0) (1,0) (1,1) (1,2) (1,3) (2,3) (3,3) <PATH_END>

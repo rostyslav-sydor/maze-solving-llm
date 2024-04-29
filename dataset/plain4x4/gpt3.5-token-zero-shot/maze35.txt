@@ -1,0 +1,9 @@
+1. Start at the origin (0,0).
+2. Move to (1,0), then (2,0), then (3,0).
+3. Move to (3,1), then (3,2), then (3,3).
+4. Reached the target at (3,3).
+
+Therefore, the solution to the maze is: 
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (3,2) (3,3) <PATH_END> 
+
+This path follows the adjacency list provided and navigates from the origin to the target, marking the coordinates passed along the way.

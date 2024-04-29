@@ -1,0 +1,7 @@
+1. We can start from the <ORIGIN_START> token and follow the edges to find a path to the <TARGET_END> token.
+2. We can use a depth-first search (DFS) or breadth-first search (BFS) algorithm to find a path in the graph.
+3. Once we find a path, we can output the coordinates of the tokens along the path in the format of <PATH_START> (row, column) (row, column) ... <PATH_END> tokens.
+
+For example, one possible solution for the given maze is:
+
+<PATH_START> (0,0) (1,0) (1,1) (1,2) (1,3) (2,3) (3,3) <PATH_END>

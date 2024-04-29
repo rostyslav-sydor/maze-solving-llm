@@ -1,0 +1,26 @@
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>
+
+This path is a valid solution to the maze because it does not cross any walls and path uses only adjacent cells.
+
+We start at the origin (0,0) and move right to (0,1).
+From (0,1) we can move either up to (1,1) or right to (0,2).
+We choose to move right to (0,2).
+From (0,2) we can move either up to (1,2) or right to (0,3).
+We choose to move right to (0,3).
+From (0,3) we can move either up to (1,3) or right to (0,4).
+We choose to move up to (1,3).
+From (1,3) we can move either left to (0,3) or right to (2,3).
+We choose to move right to (2,3).
+From (2,3) we can move either left to (1,3) or down to (3,3).
+We choose to move down to (3,3).
+From (3,3) we can move either left to (2,3) or right to (4,3).
+We choose to move left to (2,3).
+From (2,3) we can move either up to (1,3) or left to (1,2).
+We choose to move left to (1,2).
+From (1,2) we can move either down to (2,2) or left to (0,2).
+We choose to move left to (0,2).
+From (0,2) we can move either up to (1,2) or left to (0,1).
+We choose to move left to (0,1).
+From (0,1) we can move either up to (1,1) or left to (0,0).
+We choose to move left to (0,0).
+From (0,0) we have reached the target (3,3).

@@ -1,0 +1,18 @@
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (3,2) (4,2) (4,3) (4,4) <PATH_END>
+
+We start at the origin point (0,0) and move right until we hit a wall.
+Then we go up and move right again until we hit a wall, then move up.
+This repeats until we reach the exit point. 
+
+We can check that this solution does not cross any walls and that it uses only adjacent cells by going through the path and checking that each coordinate is adjacent to the previous one:
+
+(0,0) is adjacent to (1,0)
+(1,0) is adjacent to (2,0)
+(2,0) is adjacent to (3,0)
+(3,0) is adjacent to (3,1)
+(3,1) is adjacent to (3,2)
+(3,2) is adjacent to (4,2)
+(4,2) is adjacent to (4,3)
+(4,3) is adjacent to (4,4)
+
+So this is indeed a valid solution

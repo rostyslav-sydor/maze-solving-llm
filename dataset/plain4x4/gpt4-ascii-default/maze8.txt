@@ -1,0 +1,11 @@
+To solve the maze, we can use the Depth-First Search (DFS) method to explore all possible paths from the start to the end. We start at the initial position 'S' (1,1) and move to adjacent non-wall cells (' ') while avoiding revisiting cells to prevent loops.
+
+1. Starting at 'S' (1,1), we move right (east), the only possible direction without encountering walls.
+2. We continue moving right until we reach (1,7). At this point, moving further right would crash into a wall.
+3. We then move down (south) to (2,7). Continuing to move down leads us to a wall.
+4. We take the next available step down to (3,7) and continue this pattern, bypassing walls when needed.
+5. At each juncture where movement in the target direction is blocked by a wall, we probe right, down, left, up sequentially to see if those paths are open, then proceed.
+6. Once we're at (7,7), we reach the ending position 'E'.
+
+Following this path, we traverse from 'S' to 'E' smoothly using open passage cells. The successful path from 'S' to 'E' is:
+<PATH_START> (1,1) (1,2) (1,3) (1,4) (1,5) (1,6) (1,7) (2,7) (3,7) (4,7) (5,7) (6,7) (7,7) <PATH_END>

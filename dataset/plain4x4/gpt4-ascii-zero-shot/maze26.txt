@@ -1,0 +1,42 @@
+Given the maze adjacencies and the start and end points, we can frame this as a pathfinding problem. 
+
+From the adjacency list, we map out the connected nodes in the maze:
+
+```
+(1,2) <-> (1,1) ; 
+(2,3) <-> (3,3) ; 
+(2,0) <-> (1,0) ; 
+(0,0) <-> (1,0) ; 
+(3,1) <-> (3,0) ; 
+(0,0) <-> (0,1) ; 
+(3,3) <-> (3,2) ; 
+(2,3) <-> (1,3) ; 
+(0,2) <-> (0,1) ; 
+(0,3) <-> (1,3) ; 
+(2,1) <-> (3,1) ; 
+(2,2) <-> (1,2) ; 
+(3,2) <-> (2,2) ; 
+(1,2) <-> (0,2) ; 
+(2,0) <-> (3,0) ; 
+```
+
+Now the Origin (start) is (0,0) and the Target (end) is (3,3).
+
+Using a breadth-first search (BFS) approach to find the shortest path from the origin to the target in the graph simplified from the adjacency list:
+
+1. Begin at (0,0).
+2. Explore to (1,0), and (0,1).
+3. Continue exploration:
+4. (1,0) to (2,0) and (1,1).
+5. (0,1) to (0,2).
+6. Continuing this exploration with BFS while following the connectivity until you reach (3,3).
+
+This yields the path:
+```
+(0,0) -> (1,0) -> (2,0) -> (3,0) -> (3,1) -> (2,1) -> (1,1) -> (1,2) -> (1,3) -> (2,3) -> (3,3) 
+```
+
+Thus, the path is:
+```
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (2,1) (1,1) (1,2) (1,3) (2,3) (3,3) <PATH_END>
+```

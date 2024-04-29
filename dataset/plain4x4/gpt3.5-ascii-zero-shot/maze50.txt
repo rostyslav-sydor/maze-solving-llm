@@ -1,0 +1,17 @@
+1. Start at the entry point (1,1) and explore all possible paths.
+
+2. Move right to coordinate (1,2), then move down to coordinate (2,2), then move right to coordinate (2,3).
+
+3. Move right to coordinate (2,4), then move down to coordinate (3,4), then move right to coordinate (3,5).
+
+4. Move right to coordinate (3,6), then move down to coordinate (4,6), then move right to coordinate (4,7).
+
+5. Move down to coordinate (5,7), then move left to coordinate (5,6), then move down to coordinate (6,6).
+
+6. Move left to coordinate (6,5), then move up to coordinate (5,5), then move left to coordinate (5,4).
+
+7. Move up to coordinate (4,4), then move left to coordinate (4,3), finally move down to the exit point (7,7).
+
+8. The solution path is as follows: <PATH_START> (1,1) (1,2) (2,2) (2,3) (2,4) (3,4) (3,5) (3,6) (4,6) (4,7) (5,7) (5,6) (6,6) (6,5) (5,5) (5,4) (4,4) (4,3) (7,7) <PATH_END> 
+
+9. This is the shortest path from the entry point to the exit point in the maze.

@@ -1,0 +1,18 @@
+Starting from the entry point, which is (0,0), we can follow the path of adjacent cells to reach the exit point which is (3,3).
+
+1. <ORIGIN_START> (0,0) <ORIGIN_END>
+
+2. (0,0)-(0,1) --> (0,2) --> (1,2) --> (2,2) --> (2,3) --> (3,3) <TARGET_END>
+
+3. Check if the path uses only adjacent cells and does not cross any walls:
+
+    - (0,0)-(0,1): Adjacent cells
+    - (0,1)-(0,2): Adjacent cells
+    - (0,2)-(1,2): Adjacent cells
+    - (1,2)-(2,2): Adjacent cells
+    - (2,2)-(2,3): Adjacent cells
+    - (2,3)-(3,3): Adjacent cells
+
+4. Therefore, the path does not cross any walls and uses only adjacent cells.
+   
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (2,2) (2,3) (3,3) <PATH_END>

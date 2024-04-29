@@ -1,0 +1,4 @@
+<PATH_START> (1,1) (1,2) (1,3) (1,4) (1,5) (1,6) (1,7) (2,7) (3,7) (3,6) (3,5) (4,5) (5,5) (5,4) (5,3) (6,3) (6,2) (6,1) (7,1) (7,2) (7,3) (7,4) (7,5) (7,6) (7,7) <PATH_END>
+
+Explanation:
+The maze is solved by primarily following open paths that don't backtrack or hit walls. Begin at the start (1,1), move right until forced downward at (1,7). Continue down to (3,7), then left to (3,5). From (3,5), descend all the way down to (5,5), then go left to (5,3). Go down again to (6,3) then move all the way left to (6,1), descending finally down to row 7 and moving right to reach the exit at (7,7).

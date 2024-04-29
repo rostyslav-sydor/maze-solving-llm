@@ -1,0 +1,19 @@
+To find a solution to the maze provided in the description, the adjacency list representation is first converted into a more manageable structure for pathfinding algorithms like breadth-first search (BFS) or depth-first search (DFS). Both of these algorithms are effective in graph traversal and can be used to identify a valid path from a starting point, or origin, to a destination point, or target, in a maze.
+
+In the case of BFS, the uses of its algorithm in a maze consist of exploring the maze level by level, from the start point, and expanding outward until it reaches the target. This allows BFS to find the shortest path in an unweighted graph like our maze, where each step from one cell to another can be considered as having equal weight or cost.
+
+Similarly, DFS explores as far as possible along each branch before backtracking, which might not always guarantee the shortest path but will explore possible pathways from start to finish.
+
+Parsing the adjacency list, we generate a graph representation where each point such as `(x1, y1)` has direct connections `(x2, y2)` indicating one can move from `(x1, y1)` to `(x2, y2)` directly, and vice versa. With the entry point defined as `(0,0)` and the exit point as `(4,5)`, we start the search:
+
+1. **Initialization**: Begin at the origin `(0,0)`.
+2. **Expanding Path**: Use BFS to explore all possible paths. For each point, keep track of the prior point to eventually trace back the path from the target to the origin once the exit is reached.
+3. **Exploration**: Follow edges in the adjacency list to move to neighbouring cells, ensuring not to revisit cells which are already part of the current path exploration to avoid cycles.
+4. **Reaching the Target**: Upon reaching `(4,5)`, backtrace using the recorded path's history from the target back to the origin.
+5. **Output the Path Found**: Format the output starting from `(0,0)` up to `(4,5)` capturing all intermediate points.
+
+For this maze, by executing these steps with BFS to ensure we find the shortest path, we reach the solution. Below follows the output, matching the format specified in the prompt:
+
+<PATH_START> (0,0) (0,1) (1,1) (1,2) (2,2) (3,2) (3,3) (4,3) (4,4) (4,5) <PATH_END>
+
+This path navigates from the bottom left corner to the top right corner of the maze grid, utilizing the allowed paths as defined in the adjacency list. The results offer a clear, step-by-step journey through the maze connecting the designated start to the end point.

@@ -1,0 +1,12 @@
+Since the representation of the maze is given as an adjacency list for a graph, it's possible to solve it using a graph search algorithm like breadth-first search (BFS) or depth-first search (DFS). Here's how the maze can be solved using BFS:  
+
+1. Start from the origin point (0,0) and add it to the queue.
+2. While the queue is not empty:
+3.    Remove the first element from the queue and mark it as visited.
+4.    If the removed element is the target point (3,3), then the path has been found and the algorithm stops.
+5.    Otherwise, iterate over the neighbors of the removed element and add them to the queue if they haven't been visited yet.
+6.    Repeat steps 2-5 until the target point is found or the queue is empty.
+
+The path from the origin to the target point can be reconstructed by storing the parent of each visited node in a dictionary. Once the target point is reached, the path can be obtained by backtracking from the target point to the origin point using the stored parents.  
+
+Here's the solution path for the given maze: <PATH_START> (0,0) (0,1) (0,2) (1,2) (2,2) (2,3) (3,3) <PATH_END>

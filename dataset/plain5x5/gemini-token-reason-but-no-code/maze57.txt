@@ -1,0 +1,11 @@
+**Reasoning**: Depth First Search (DFS) algorithm can be used to solve this problem. DFS starts from the origin point, and explores all possible paths until it finds the target point or exhausts all possible paths. 
+
+DFS starts at the origin point (0,0), and first explores the path (0,0) -> (1,0) -> (1,1) -> (1,2) -> (1,3). 
+Since there is no path further from (1,3), it backtracks to (1,2), and explores the path (1,2) -> (2,2) -> (2,3) -> (2,4).
+Since there is no path further from (2,4), it backtracks to (2,2), and explores the path (2,2) -> (1,2) -> (1,1) -> (2,1). 
+Since there is no path further from (2,1), it backtracks to (1,1), and explores the path (1,1) -> (0,1) -> (0,2) -> (0,3) -> (0,4).
+Since there is no path further from (0,4), it backtracks to (0,3), and explores the path (0,3) -> (0,2) -> (0,1) -> (0,0) -> (1,0) -> (2,0) -> (3,0) -> (3,1) -> (3,2) -> (4,2) -> (4,3) -> (4,4). 
+Since this is the target point, DFS stops and the path is found.
+
+**Output**: 
+<PATH_START> (0,0) (1,0) (1,1) (1,2) (1,3) (2,3) (2,4) (2,2) (1,2) (1,1) (2,1) (2,0) (3,0) (3,1) (3,2) (4,2) (4,3) (4,4) <PATH_END>

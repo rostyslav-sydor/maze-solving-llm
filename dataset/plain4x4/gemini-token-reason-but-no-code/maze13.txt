@@ -1,0 +1,6 @@
+**Reasoning**: This maze is a simple graph, where every node has only two or three neighbors, so we can find a path through it using Depth-First Search (DFS) algorithm. 
+The path can be found by starting from any node and following any path until we reach the target node. 
+If we reach a dead end (a node with no unvisited neighbours), we backtrack to the most recent node with unvisited neighbors.
+
+**Path**:
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>

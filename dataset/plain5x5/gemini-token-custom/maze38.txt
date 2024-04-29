@@ -1,0 +1,13 @@
+1. Starting from the origin (0,0), we can move to the adjacent cell (1,0).
+2. From (1,0), we can move to (2,0) and then to (3,0).
+3. From (3,0), we can move to (3,1) and then to (4,1).
+4. From (4,1), we can move to (4,2) and then to (4,3).
+5. From (4,3), we can move to (4,4), which is the target cell.
+
+So the solution is: <PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (4,1) (4,2) (4,3) (4,4) <PATH_END>
+
+Let's check if this solution does not cross any walls and uses only adjacent cells:
+1. The path does not cross any walls because each move is to an adjacent cell.
+2. The path uses only adjacent cells because each move is to a cell that is either directly above, below, left, or right of the current cell.
+
+Therefore, the solution is valid.

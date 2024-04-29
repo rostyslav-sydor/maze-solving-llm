@@ -1,0 +1,47 @@
+To find a solution through the maze presented in the adjacency list format, I will be using the breadth-first search (BFS) algorithm, which is ideal for finding the shortest path in unweighted graphs like mazes presented as adjacency lists.
+
+**Steps to use the BFS algorithm for maze pathfinding:**
+
+1. **Parse the adjacency list**: Convert the adjacency list format into a usable graph representation in memory that I can operate on. This graph will have nodes as coordinates of cells and edges as permissible moves between cells.
+
+2. **Identify start and end points**: The origin (entry point) is marked as (0,0) and the target (exit point) is (3,3). These will be used as the starting and terminating conditions respectively for the BFS.
+
+3. **Set up BFS Algorithm**:
+   - Utilize a queue to keep track of all nodes to explore, starting with the origin node.
+   - Maintain a set or dictionary (`visited`) of visited nodes to avoid revisits and loops.
+   - Keep a dictionary (`prev`) that maps each cell to the cell from which it was visited. This will help in reconstructing the path once the target is found.
+
+4. **BFS Exploration**:
+   - Dequeue a node (initially the origin).
+   - Mark it as visited.
+   - For each adjacent node (retrievable from the adjacency list):
+     - If it's not visited, enqueue it, mark it as visited, and record its `prev`.
+     - If the dequeued node is the target, stop the search.
+
+5. **Reconstruct and Print the Path**:
+   - Starting from the end (target), use the `prev` dictionary to backtrack the steps taken to reach the target, reconstructing the path from end to origin.
+   - Reverse the reconstructed path since it’s constructed backwards from target to origin.
+
+**Constructing the Path for the Maze**:
+
+Based on the adjacency list given, the pairs of connectable nodes (i.e., paths through the maze without walls) are well-defined. Here's the BFS traversal constructed from the input:
+
+- Start at (0,0).
+- From (0,0), possible next steps are to (0,1) or (1,0) due to direct connections.
+  - Then at (0,1), move to (0,2).
+  - And at (0,2), next can move to (1,2) or to (0,3).
+    - From (1,2), can then move to (1,3).
+      - From (1,3), can then move to (2,3).
+        - From (2,3), can then move to (2,2).
+          - From (2,2), move directly to (3,2) and then (3,3) which is the target.
+
+Thus, the complete path in sequential coordinates would be: 
+(0,0) -> (0,1) -> (0,2) -> (1,2) -> (1,3) -> (2,3) -> (2,2) -> (3,2) -> (3,3).
+
+**Output the solution**:
+
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (1,3) (2,3) (2,2) (3,2) (3,3) <PATH_END>
+
+**Validation**:
+
+Each step in the output path moves to an adjacent cell, with no jumps across unconnected cells or 'walls' in the maze. Thus, the solution adheres to the maze's structure as defined by the initial adjacency list. Each coordinate pair in the path transitions only to coordinate pairs that share an edge as defined in the adjacency list, successfully navigating from the start to the end point without error.

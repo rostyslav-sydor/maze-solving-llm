@@ -1,0 +1,15 @@
+1. The maze is represented as an adjacency list. First, we need to convert it to an adjacency matrix.
+2. Once we have the adjacency matrix, we can use a graph search algorithm, such as depth-first search or breadth-first search, to find a path from the start to the end.
+3. The output should be a list of coordinates that represent the path from the start to the end.
+
+For example, given the following adjacency list:
+
+```
+(1,2) <--> (1,1) ; (2,3) <--> (3,3) ; (2,0) <--> (1,0) ; (0,0) <--> (1,0) ; (3,1) <--> (3,0) ; (0,0) <--> (0,1) ; (3,3) <--> (3,2) ; (2,3) <--> (1,3) ; (0,2) <--> (0,1) ; (0,3) <--> (1,3) ; (2,1) <--> (3,1) ; (2,2) <--> (1,2) ; (3,2) <--> (2,2) ; (1,2) <--> (0,2) ; (2,0) <--> (3,0) ;
+```
+
+The following would be a valid solution:
+
+```
+<PATH_START> (0,0) (1,0) (1,1) (1,2) (1,3) (2,3) (3,3) <PATH_END>
+```

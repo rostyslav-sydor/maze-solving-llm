@@ -1,0 +1,13 @@
+This is a undirected graph with no weights.
+To solve this maze we can use Depth First Search (DFS)/Breadth First Search (BFS) algorithms.
+
+Here is DFS solution:
+
+1. We start at the origin (0,0) and add it to the stack.
+2. We then iterate over the neighbors of (0,0) and add them to the stack.
+3. We continue this process until we reach the target (3,3).
+4. Once we reach the target, we can output the path by popping the elements from the stack.
+
+Here is a specific solution for the given maze:
+
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (2,2) (2,3) (3,3) <PATH_END>

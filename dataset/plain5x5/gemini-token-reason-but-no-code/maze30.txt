@@ -1,0 +1,8 @@
+The maze can be solved using a breadth first search algorithm.
+The algorithm starts at the entry point and explores all of the nodes that are adjacent to it.
+It then explores all of the nodes that are adjacent to those nodes, and so on.
+The algorithm stops when it reaches the exit point.
+
+The following is a solution to the maze:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (0,4) (1,4) (2,4) (3,4) (4,4) <PATH_END>

@@ -1,0 +1,19 @@
+To solve the maze, we will interpret the edges in the adjacency list to find the shortest path from the origin to the target. We can use a simple graph traversal algorithm like BFS.
+
+1. Represent the maze as a graph where each node is a coordinate in the maze (e.g., (1,1)).
+2. The adjacency list provides the edges:
+   ```
+   (1,3) <--> (2,3);
+   (0,0) <--> (1,0);
+   ...
+   (3,3) <--> (3,2);
+   ```
+3. Start BFS from the origin (0,0) up to the target (3,3).
+
+Following the adjacency list, the actual path from the start to the exit (manually traced or simulated using BFS considering the edges):
+
+Path: (0,0) -> (0,1) -> (0,2) -> (0,3) -> (1,3) -> (2,3) -> (3,3)
+
+Thus, the final solution is:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>

@@ -1,0 +1,10 @@
+1. Start at the entry point (1,1) and mark it as visited.
+2. Move to the right to (1,2) as it is a valid path.
+3. Move down to (2,2), (3,2), and (4,2) as they are also valid paths.
+4. Move right to (4,3), (4,4), (4,5), and (4,6) to reach the bottom right corner of the maze.
+5. Move up to (3,6), (2,6), and (1,6) to reach the final path.
+6. Move right to (1,7) and reach the exit point at (7,7).
+
+Therefore, the solution path for this maze is:
+
+<PATH_START> (1,1) (1,2) (2,2) (3,2) (4,2) (4,3) (4,4) (4,5) (4,6) (3,6) (2,6) (1,6) (1,7) (7,7) <PATH_END>

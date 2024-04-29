@@ -1,0 +1,6 @@
+1. Parse adjacency list to build graph representation of maze.
+2. Perform BFS from starting position (0,0).
+3. While performing the breadth-first search keep track of the parent node for each node.
+4. Back-trace from target node to starting position by following the parent nodes to construct path.
+
+<PATH_START> (0,0) (1,0) (1,1) (1,3) (2,3) (3,3) <PATH_END>

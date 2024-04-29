@@ -1,0 +1,7 @@
+First, we need to start at the origin point (0,0) and explore the maze using the given adjacency list. We can move from one cell to another if they are connected in the adjacency list.
+
+Following the connections, we can move through the maze towards the target point (3,3). By tracing the path, we can find a route that leads us from the origin to the target.
+
+After exploring the maze and finding the path from the origin to the target, we can output the solution in the format of coordinate list between <PATH_START> and <PATH_END> tokens. This will show a sequence of coordinates that represent the path taken through the maze.
+
+By following these steps and tracing the path, we can successfully find a solution to the maze and output it in the required format.

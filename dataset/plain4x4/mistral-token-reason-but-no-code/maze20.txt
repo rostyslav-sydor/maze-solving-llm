@@ -1,0 +1,39 @@
+To solve the maze, we can use a graph search algorithm like Depth-First Search (DFS) or Breadth-First Search (BFS). In this case, we'll use BFS since it is more suitable for finding the shortest path.
+
+1. First, we need to convert the adjacency list representation into a graph. We can do this by creating a 2D array to represent the maze, where each cell corresponds to a node in the graph.
+2. Initialize a queue with the starting point (0, 0) and mark it as visited.
+3. While the queue is not empty:
+	* Dequeue the current node from the queue.
+	* Check if the current node is the target (3, 3). If it is, we have found the solution, and we can stop the search.
+	* Otherwise, for each unvisited neighbor of the current node:
+		+ Enqueue the neighbor in the queue.
+		+ Mark the neighbor as visited.
+		+ Set the parent of the neighbor to be the current node.
+4. Once we find the target node, we can trace back the path from the target to the origin by following the parent pointers.
+
+Now, let's apply this algorithm to the given maze:
+
+1. Convert the adjacency list to a graph:
+```
+0 0 0 0
+0 0 0 0
+0 0 0 0
+0 0 0 0
+```
+2. Initialize the queue with the starting point (0, 0) and mark it as visited.
+3. While the queue is not empty:
+	* Dequeue the current node (0, 0).
+	* Check if the current node is the target (3, 3). It is not, so continue.
+	* Enqueue and mark as visited the unvisited neighbors of the current node: (1, 0), (0, 1).
+	* Set the parent of (1, 0) and (0, 1) to be (0, 0).
+	* Repeat the process for the next node in the queue, which is now (1, 0).
+	* Continue until the target node (3, 3) is found.
+4. Trace back the path from the target to the origin:
+```
+(3, 3) -> (3, 2) -> (2, 2) -> (2, 1) -> (1, 1) -> (1, 0) -> (0, 0)
+```
+5. Reverse the path to get the solution:
+```
+<PATH_START> (0, 0) (1, 0) (1, 1) (2, 1) (2, 2) (3, 2) (3, 3) <PATH_END>
+```
+This is the shortest path from the origin (0, 0) to the target (3, 3) in the given maze.

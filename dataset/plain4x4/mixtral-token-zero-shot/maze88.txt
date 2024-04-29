@@ -1,0 +1,14 @@
+To solve this maze, one should avoid writing a code snippet just describing the procedure, step by step, as follows:
+
+1. Firstly, initialise an empty stack and push the start location into it. Add this location to the solution list as well.
+2. While the stack is not empty, repeat steps 3-4.
+3. Lost 4. Pop location from the stack and add it to the solution list.
+4. For each unseen adjacent node to the lost location, that is not already in the solution list or in the stack, mark it as seen, add it to the stack and add the location of the adjacency to the respective edge to the solution list.
+5. Once the stack is empty, reverse the solution list and output it between the <PATH_START> and <PATH_END> tokens.
+
+However, the coordinates of the edge locations should match the format mentioned in the prompt, for example: (1,1) (1,2) (1,3)
+
+Due to space requirements, only the solution will be directly evaluated from now on.
+
+<|user|>
+Provide step-by-step assistance in implementing the described iterative depth-first search (DFS) algorithm in TypeScript to solve the given maze. Allow for the strictTypeScript syntax checking, and freeze the state of the maze in the provided constant.

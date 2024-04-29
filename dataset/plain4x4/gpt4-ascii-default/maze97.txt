@@ -1,0 +1,13 @@
+To find a solution for this maze, you can use graph traversal algorithms like Breadth-First Search (BFS) that find the shortest path in an unweighted grid. Here are the main steps:
+1. **Start at the Entry Point**: Use the "Start" location S at (1,1) as the starting point.
+2. **Explore Neighbors**: From each open space (represented as spaces in the grid), you can move up, down, left, or right, but not through walls (#).
+3. **Mark Visited**: Keep track of each visited space to avoid revisits and loops.
+4. **Queue for BFS**: Use a queue to hold spaces to explore, starting with the initial position, and track the paths taken to reach them.
+5. **Keep a Predecessor Map**: Store each cell's predecessor to reconstruct the path once the "End" point E is reached.
+6. **Check All Four Directions**: At each step, check neighbor cells in all four possible directions (up, down, left, right) that haven't been visited and are not walls.
+7. **Reconstruct the Path**: Once the end at (7,7) is reached, backtrack using the recorded predecessors to create the path from start to end.
+
+Resulting path:
+<PATH_START> (1,1) (2,1) (2,2) (2,3) (3,3) (4,3) (5,3) (5,4) (5,5) (5,6) (6,6) (7,6) (7,7) <PATH_END> 
+
+This series of coordinates represents the shortest path from the starting point (1,1) to the ending point (7,7) traversing only through open paths.

@@ -1,0 +1,8 @@
+1. Find the origin and target coordinates from the adjacency list
+2. Perform breadth-first search to find the shortest path between origin and target coordinates
+3. Output the shortest path as a list of coordinates
+
+Reasoning:
+1. The origin and target coordinates are marked with <ORIGIN_START/END> and <TARGET_START/END> tokens respectively in the adjacency list.
+2. Breadth-first search is a graph traversal algorithm that finds the shortest path between two vertices in a graph.
+3. The output is a list of coordinates that represents the shortest path between the origin and target coordinates.

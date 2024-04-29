@@ -1,0 +1,9 @@
+A maze can be solved by using a breadth-first search algorithm. We start at the origin, and then try all possible moves from that point. If a move leads to a dead end, we backtrack and try a different move. If a move leads to the target, we have found a solution.
+
+Using the adjacency list provided, we can construct a graph of the maze. The nodes of the graph are the cells of the maze, and the edges of the graph are the possible moves from one cell to another.
+
+We can then use a breadth-first search algorithm to find a solution to the maze. We start at the origin, and then add all of the possible moves from that point to a queue. We then dequeue the first item from the queue, and add all of the possible moves from that point to the queue. We continue this process until we reach the target.
+
+For the maze provided, the solution is as follows:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>

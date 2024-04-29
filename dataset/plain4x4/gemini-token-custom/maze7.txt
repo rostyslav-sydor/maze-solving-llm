@@ -1,0 +1,3 @@
+<PATH_START> (0,0) (1,0) (1,1) (1,2) (1,3) (2,3) (3,3) <PATH_END>
+
+The maze is a simple grid, the only way to get to the target is to move along the edge of the grid, until the target is reached.

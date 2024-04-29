@@ -1,0 +1,15 @@
+**Step 1: Find the starting and ending points**
+Find the tokens <ORIGIN_START> and <TARGET_START> to identify the starting and ending points of the maze.
+
+**Step 2: Traverse the maze**
+Start from the starting point and follow the adjacency list to explore the maze. Mark the visited nodes to avoid loops. Continue until the ending point is reached.
+
+**Step 3: Construct the path**
+As you traverse the maze, keep track of the coordinates of the visited nodes. This will form the path from the starting point to the ending point.
+
+**Step 4: Output the solution**
+Once the path is constructed, output it in the format of coordinate list between <PATH_START> and <PATH_END> tokens.
+
+**Solution:**
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (0,4) (1,4) (2,4) (3,4) <PATH_END>

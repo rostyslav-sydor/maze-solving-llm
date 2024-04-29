@@ -1,0 +1,10 @@
+Using depth-first search, the shortest path between (1,1) and (7,7) in the given maze is as follows:
+
+(1,1) -> (2,1) -> (3,1) -> (4,1) ->
+(5,1) -> (6,1) -> (7,1) -> (7,2) ->
+(7,3) -> (7,4) -> (7,5) -> (7,6) ->
+(7,7)
+
+Here's the complete solution in the expected format:
+
+<PATH_START> (1,1) (2,1) (3,1) (4,1) (5,1) (6,1) (7,1) (7,2) (7,3) (7,4) (7,5) (7,6) (7,7) <PATH_END>

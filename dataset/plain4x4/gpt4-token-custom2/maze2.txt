@@ -1,0 +1,12 @@
+Starting from the origin at (0,0) using the given adjacency list, we can leverage the Breadth-First Search (BFS) algorithm to find the shortest path to the target at (3,3). Here's how:
+
+1) From (0,0), move right to (0,1).
+2) From (0,1), move right to (0,2).
+3) From (0,2), move down to (1,2).
+4) From (1,2), move down to (2,2).
+5) From (2,2), move down to (3,2).
+6) From (3,2), move right to (3,3).
+
+Checkpointing nodes and tracking the path as we proceed, the derived shortest path from the origin to the destination, according to the adjacency relationships provided, is:
+
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (2,2) (3,2) (3,3) <PATH_END>

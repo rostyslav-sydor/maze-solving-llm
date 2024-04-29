@@ -1,0 +1,35 @@
+To solve the maze represented by the adjacency list, we can treat this as a graph where each node represents a coordinate, and the edges between nodes indicate the ability to move between those coordinates. The goal is to find a path from the origin (0,0) to the target (3,3).
+
+Given the adjacency information:
+
+- (3,3) <--> (2,3)
+- (1,1) <--> (2,1)
+- (1,2) <--> (1,1)
+- (2,0) <--> (3,0)
+- (2,0) <--> (1,0)
+- (1,3) <--> (0,3)
+- (3,1) <--> (3,0)
+- (0,2) <--> (0,1)
+- (1,2) <--> (1,3)
+- (0,0) <--> (0,1)
+- (2,2) <--> (2,3)
+- (2,2) <--> (3,2)
+- (1,3) <--> (2,3)
+- (3,2) <--> (3,1)
+- (1,0) <--> (0,0)
+
+The simplest solution can be solved via Breadth First Search (BFS) to ensure the shortest path is found.
+
+Using BFS, the path is traced as follows:
+
+- Start at (0,0)
+- Move to (0,1) via (0,0) <--> (0,1)
+- Move to (0,2) via (0,1) <--> (0,2)
+- Move to (0,3) via (0,2) <--> (0,3)
+- Move to (1,3) via (1,3) <--> (0,3)
+- Move to (2,3) via (1,3) <--> (2,3)
+- Arrive at (3,3) via (3,3) <--> (2,3)
+    
+Thus the complete path is:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>

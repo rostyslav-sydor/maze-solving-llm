@@ -1,0 +1,4 @@
+First, we can start at (0,0) and move to (0,1), then to (1,1), (2,1), (2,2), (2,3), and finally reach the target at (3,3). Following this path will lead us to the exit.
+
+Thus, the solution path is:
+<PATH_START> (0,0) (0,1) (1,1) (2,1) (2,2) (2,3) (3,3) <PATH_END>

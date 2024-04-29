@@ -1,0 +1,12 @@
+To solve this maze, I'll trace the path from the entry point (0,0) to the exit point (4,4), navigating through the openings between the walls.
+
+Starting at the top left corner:
+1. Move down to (0,0), (1,0), (2,0), (3,0), then to (4,0) because there are no walls blocking the southward movement in the first column.
+2. From (4,0), move right to (4,1), (4,2) because the path is open.
+3. Move up to (3,2) because there is a wall blocking further eastward movement at row 4.
+4. Move right again to (3,3), and (3,4) because the path is clear.
+5. From (3,4), head north to (2,4), (1,4), and finally to the exit point at (0,4).
+
+Here is the path in the specified format:
+
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (4,0) (4,1) (4,2) (3,2) (3,3) (3,4) (2,4) (1,4) (0,4) <PATH_END>

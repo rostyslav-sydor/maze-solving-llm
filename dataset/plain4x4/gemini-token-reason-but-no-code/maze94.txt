@@ -1,0 +1,6 @@
+The Breadth first search (BFS), starting from the <ORIGIN_START> token and finishing at  <TARGET_END> will find the solution.
+The algorithm traverses through the graph visiting all nodes and explores all paths one step at the time.
+It uses a queue as the data structures which follows the FIFO principle (first in first out) and will guarantee the shortest path (if there are multiple solutions) as the first path found will also be the shortest one.
+
+For the provided maze the solution path is:
+<PATH_START> (0,0) (0,1) (1,1) (1,2) (2,2) (3,2) (3,3) <PATH_END>,

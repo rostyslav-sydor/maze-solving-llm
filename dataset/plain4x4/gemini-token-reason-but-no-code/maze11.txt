@@ -1,0 +1,15 @@
+For this we can perform DFS algorithm.
+DFS is a recursive algorithm that traverses a tree or graph. It starts at the root node and visits all of its neighbors, then visits all of the neighbors of those neighbors, and so on, until it has visited all of the nodes in the graph.
+In the case of a maze, we can use DFS to find a path from the starting point to the ending point. The algorithm will start at the starting point and visit all of its neighbors, then visit all of the neighbors of those neighbors, and so on, until it reaches the ending point.
+To implement DFS, we can use a stack. The stack will store the nodes that we have visited but have not yet fully explored. The algorithm will start by pushing the starting point onto the stack. Then, it will pop the top node from the stack and visit all of its neighbors. If any of the neighbors have not been visited before, the algorithm will push them onto the stack. The algorithm will continue until the stack is empty or the ending point is reached.
+To find a solution for the given maze, we can use the following steps:
+1. Initialize a stack with the starting point.
+2. While the stack is not empty:
+    1. Pop the top node from the stack.
+    2. Visit all of the neighbors of the top node.
+    3. If any of the neighbors have not been visited before, push them onto the stack.
+    4. If the ending point is reached, stop the algorithm.
+3. Print the path from the starting point to the ending point.
+
+The solution for the given maze is:
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>

@@ -1,0 +1,30 @@
+To solve the maze problem described as an adjacency list, we can utilize a graph traversal algorithm such as Breadth-First Search (BFS). BFS is particularly useful in this context as it explores neighbors level by level, essentially ensuring the shortest path (in terms of number of edges) is found in an unweighted graph, which in this case, the maze's corridors serve as graph edges.
+
+**Reasoning Using BFS:**
+1. **Initialization**: Start with the entry point of the maze, which is (0,0), and queue it.
+2. **Exploration**: Expand each node by visiting all its connected neighbors based on the adjacency list. For each node explored, check if it is the target.
+3. **Path Reconstruction**: Keeping track of each node’s parent node allows for path construction once the target is found by backtracking from the target node to the origin.
+
+Considering the maze specification and utilizing the BFS:
+- Start from (0,0). 
+- Employ BFS to find the shortest path from (0,0) to (4,4).
+
+
+Following BFS exploration using the adjacency mappings, you can reconstruct the path from the target (4,4) back to the origin (0,0) once you find the target. The path construction depends heavily on tracking from where each visited node was reached.
+
+**Solution for the specific maze**:
+Given the adjacency list and target from (0,0) to (4,4), the BFS would:
+1. Start at (0,0), check unvisited neighbors.
+2. Progress through closest edges, enqueue these, and mark them as visited and noting where you came from for each.
+3. Continue this process iteratively lot until (4,4) is reached.
+
+Upon reaching (4,4) and tracing back using the parent relationship established during the BFS traversal:
+
+**Specific Path Solution**
+After proceeding through BFS:
+- Start from (0,0) directly to (0,1), which connects to (0,2), move forward to (0,3) then (0,4).
+- From (0,4) proceed to (1,4), then (2,4), and subsequently reach (3,4).
+- Finally move from (3,4) to (4,4).
+
+**Formatted Output**:
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (0,4) (1,4) (2,4) (3,4) (4,4) <PATH_END>

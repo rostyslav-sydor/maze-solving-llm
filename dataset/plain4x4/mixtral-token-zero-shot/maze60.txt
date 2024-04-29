@@ -1,0 +1,14 @@
+<MAZE_SOLUTION_START>
+
+(0,0) --> (0,1) --> (1,1) --> (1,2) --> (1,3) --> (2,3) --> (2,2) -->
+(2,1) --> (2,0) --> (3,0) --> (3,1) --> (3,2) --> (3,3)
+
+<MAZE_SOLUTION_END>
+
+The above path connects the 'Origin' node to the 'Target' node. These steps translate vertically and horizontally from one point to another according to the adjacency list of the maze, leading from 'Origin' at (0,0) to 'Target' at (3,3). However, the exact 2D path coordinates are (row, column) pairs. Traversing the maze in the given order renders:
+
+<PATH_START>
+(0,0) (0,1) (1,1) (1,2) (1,3) (2,3) (2,2) (2,1) (2,0) (3,0) (3,1) (3,2) (3,3)
+<PATH_END>
+
+I hope this answer helps. Let me know if you have any additional questions or need further assistance. 

@@ -1,0 +1,26 @@
+Given the ASCII maze and the adjacency list representation of passable paths, we'll find a path from the start at (0,0) to the target at (3,3).
+
+We can solve the maze using these passable connections from the adjacency list:
+
+1. (0,0) <--> (1,0)
+2. (1,0) <--> (1,1)
+3. (1,1) <--> (0,1)
+4. (0,1) <--> (0,2)
+5. (0,2) <--> (0,3)
+6. (0,3) <--> (1,3)
+7. (1,2) <--> (1,3)
+8. (2,2) <--> (1,2)
+9. (2,2) <--> (2,3)
+10. (2,3) <--> (3,3)
+11. (3,2) <--> (3,3)
+12. (3,2) <--> (3,1)
+13. (3,1) <--> (3,0)
+14. (3,0) <--> (2,0)
+15. (2,0) <--> (2,1)
+16. (2,1) <--> (2,0)
+
+Calculating the shortest path using typical pathfinding algorithms leads us through:
+
+<PATH_START> (0,0) (1,0) (1,1) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>
+
+This path leads from the start to the exit, exclusively using connections listed in the adjacency section.

@@ -1,0 +1,16 @@
+To find a path through the maze, we can use the Depth-First Search (DFS) algorithm. DFS works by recursively exploring all possible paths through a graph, starting from the initial node and backtracking when it reaches a dead end.
+
+In this case, the graph is represented by the adjacency list. We can start the DFS at the entry point (0,0) and explore all the paths until we reach the exit point (4,4).
+
+The following is a detailed explanation of the DFS algorithm:
+
+1. Start at the entry point (0,0).
+2. Mark (0,0) as visited.
+3. For each unvisited neighbor of (0,0), recursively call the DFS algorithm on that neighbor.
+4. If the DFS algorithm reaches the exit point (4,4), then the path from the entry point to the exit point has been found.
+5. Otherwise, backtrack to the previous node and continue the DFS algorithm on the remaining unvisited neighbors.
+6. Repeat steps 3-5 until all paths have been explored or the exit point has been reached.
+
+The following is a solution to the given maze using the DFS algorithm:
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (0,4) (1,4) (2,4) (2,3) (3,3) (4,3) (4,4) <PATH_END>

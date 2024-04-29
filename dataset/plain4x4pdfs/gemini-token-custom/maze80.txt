@@ -1,0 +1,25 @@
+<PATH_START> (0,0) (0,1) (1,1) (1,2) (2,2) (3,2) (3,3) <PATH_END>
+
+The given maze can be solved by using a breadth-first search (BFS) algorithm.
+
+- We start from the origin and add it to the queue.
+- We mark the origin as visited to avoid cycles.
+- While the queue is not empty, we dequeue the first element and check if it is the target.
+- If it is the target, we stop the search and output the path.
+- Otherwise, we add all the unvisited adjacent cells to the queue and mark them as visited.
+- We continue this process until we reach the target or the queue is empty.
+
+In this case, we can use the following steps:
+
+1. Start from (0,0) and add it to the queue.
+2. Mark (0,0) as visited.
+3. Dequeue (0,0) from the queue and check if it is (3,3).
+4. It is not (3,3), so we add all the unvisited adjacent cells to the queue and mark them as visited.
+5. The adjacent cells of (0,0) are (0,1), (1,0), and (0,0). (0,0) is already visited, so we add (0,1) and (1,0) to the queue and mark them as visited.
+6. Dequeue (0,1) from the queue and check if it is (3,3).
+7. It is not (3,3), so we add all the unvisited adjacent cells to the queue and mark them as visited.
+8. The adjacent cells of (0,1) are (1,1), (0,0), and (0,2). (0,0) is already visited, so we add (1,1) and (0,2) to the queue and mark them as visited.
+9. Continue this process until we reach (3,3).
+10. Once we reach (3,3), we stop the search and output the path: (0,0) (0,1) (1,1) (1,2) (2,2) (3,2) (3,3).
+
+To check if our solution does not cross any walls and uses only adjacent cells, we can check the adjacency list. For each cell in the path, we check if it is adjacent to the next cell. In this case, all the cells in the path are adjacent to each other, so our solution is valid.

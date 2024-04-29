@@ -1,0 +1,7 @@
+1. Start from the origin at (0, 0) and follow the path (0, 0) -> (0, 1) -> (1, 1) -> (1, 2) -> (1, 3) -> (2, 3) -> (3, 3) to reach the target.
+
+2. The path can be represented as:
+
+```
+<PATH_START> (0,0) (0,1) (1,1) (1,2) (1,3) (2,3) (3,3) <PATH_END>
+```

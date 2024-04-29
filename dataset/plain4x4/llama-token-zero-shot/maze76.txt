@@ -1,0 +1,17 @@
+I understand. You have a maze represented as an adjacency list, with entry and exit points marked. I will help you find a solution to the maze.
+
+To start, I will find the shortest path from the origin (0,0) to the target (3,3). I will use a breadth-first search (BFS) algorithm to explore the maze.
+
+Here is the path from the origin to the target:
+
+<PATH_START> (0,0) (1,1) (1,2) (2,2) (2,3) (3,3) <PATH_END>
+
+The path has 5 steps.
+
+Now, let's find the shortest path from the origin to the exit point (3,3). Here is the path:
+
+<PATH_START> (0,0) (1,1) (1,2) (2,2) (3,3) <PATH_END>
+
+The path has 5 steps.
+
+Please let me know if you have any questions or if there is anything else I can help you with.

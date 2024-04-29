@@ -1,0 +1,5 @@
+<PATH_START> (3,3) (3,2) (3,1) (2,1) (1,1) <PATH_END>
+
+This solution was found by following the path from the starting point (0,0) to the ending point (3,3) and recording the coordinates of each cell visited. The path always moved in the direction of the next adjacent cell until the ending point was reached.
+
+The solution does not cross any walls because the path only moves in the direction of the next adjacent cell. The path also uses only adjacent cells because the path only moves from one cell to the next cell that is adjacent to it.

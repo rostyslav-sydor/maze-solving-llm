@@ -1,0 +1,9 @@
+<ADJLIST_START> (2,4) <--> (1,4) ; (3,4) <--> (3,3) ; (0,2) <--> (1,2) ; (3,3) <--> (3,2) ; (0,4) <--> (0,3) ; (1,0) <--> (1,1) ; (3,1) <--> (3,2) ; (0,1) <--> (0,0) ; (1,3) <--> (1,2) ; (2,1) <--> (3,1) ; (1,1) <--> (0,1) ; (3,4) <--> (2,4) ; (3,1) <--> (3,0) ; (0,3) <--> (0,2) ; (1,0) <--> (2,0) ; (2,1) <--> (2,0) ; (1,2) <--> (2,2) ; (2,3) <--> (2,2) ; (1,4) <--> (1,3) ; <ADJLIST_END> <ORIGIN_START> (0,0) <ORIGIN_END> <TARGET_START> (3,4) <TARGET_END>
+
+- First, let's look for the origin. It is marked with <ORIGIN_START> token. In this case, it is (0,0).
+
+- Next, we need to find the target. It is marked with <TARGET_START> token. In this case, it is (3,4).
+
+- Now, let's start from the origin and try to reach the target by following the connections between the nodes in the graph.
+
+<PATH_START> (0,0) <--> (0,1) <--> (0,2) <--> (0,3) <--> (0,4) <--> (1,4) <--> (2,4) <--> (3,4) <PATH_END>

@@ -1,0 +1,14 @@
+To solve the maze, one could typically apply a pathfinding algorithm such as Breadth-First Search (BFS), Depth-First Search (DFS), or A* Search Algorithm. Here, starting from the entrance 'S' at (1, 1), we explore adjacent paths while avoiding walls '#' and aim to reach the exit 'E' at (7, 7).
+
+Tracing the movement step-by-step:
+1. Begin at S (1, 1).
+2. Move right to (1, 2), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7) until encountering an open path downward at (1, 7).
+3. Move downward to (2, 7), then (3, 7).
+4. Move left to (3, 6), then (3, 5).
+5. Move downward to (4, 5), then right to (4, 6) and (4, 7).
+6. Move down to (5, 7), then (6, 7), then (7, 7) where the exit E is located.
+
+This path involves moving through opened passages, bypassing all walls. 
+Here's the step-by-step path:
+<PATH_START> (1,1) (1,2) (1,3) (1,4) (1,5) (1,6) (1,7) (2,7) (3,7) (3,6) (3,5) (4,5) (4,6) (4,7) (5,7) (6,7) (7,7) <PATH_END>
+This solution traces a route that safely navigates through the maze from the start to the exit.

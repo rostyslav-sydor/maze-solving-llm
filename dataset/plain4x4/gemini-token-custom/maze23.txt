@@ -1,0 +1,15 @@
+From the origin point (0,0) we can chose to go to either (0,1) or (1,0) as both are adjacent and they do not cross any walls. We can eliminate points (0,2) and (0,3) as they are not adjacent to origin.
+
+Let's try (0,1) first. From (0,1) we can go to (1,1) which is adjacent and does not cross walls. From (1,1) we have choice to go to either (1,0), (1,2) or (2,1). We can eliminate (1,0) as we have already visited it. Both (1,2) and (2,1) are adjacent and do not cross walls.
+
+Let's try (1,2) next. From (1,2) we can go to (1,3), (2,2) or (0,2). We can eliminate (0,2) as we already visited it and (2,2) as it is not adjacent. So we go to (1,3) next. From (1,3) we can go to (2,3) which is adjacent and does not cross any walls.
+
+From (2,3) we can go to (3,3) which is the target point.
+
+Therefore, our solution is: <PATH_START> (0,0) (0,1) (1,1) (1,2) (1,3) (2,3) (3,3) <PATH_END>
+
+To check if the solution is valid, we can check if first coordinate of each point is adjacent to the second coordinate of the previous point. We can also check if any of the points cross any walls.
+
+First check passes as all points are adjacent to each other. For the second check, we can see that no point crosses any wall as all points are connected to each other and all points are within the maze boundaries.
+
+Therefore, the solution is valid.

@@ -1,0 +1,26 @@
+To solve the maze provided and determine the path between the start and the exit points, here's how you can approach the problem:
+
+1. **Visualize the maze grid**: Understand that every coordinate `(i,j)` represents a vertex in a maze, and each `<--->` represents an edge or path available between two vertices.
+
+2. **Start and End Points**: Given in the prompt, you'll begin at `(1,1)` and need to conclude at `(3,3)`.
+
+3. **Develop a Graph Representation**: Extract the paths or edges between the maze nodes from the adjacency list given.
+
+   Below is graph representation based on the adjacency list:
+   - (1,0) <-> (0,0); (3,3) <-> (2,3); (1,3) <-> (2,3); (2,1) <-> (3,1);
+   - (1,3) <-> (1,2); (2,0) <-> (1,0); (3,0) <-> (3,1); (1,2) <-> (1,1);
+   - (3,3) <-> (3,2); (0,2) <-> (0,1); (0,1) <-> (0,0); (2,0) <-> (2,1); 
+   - (3,2) <-> (2,2); (0,2) <-> (0,3); (0,1) <-> (1,1).
+
+4. **Determine the Path**: Use an algorithm such as Breadth-First Search (BFS) or Depth-First Search (DFS) to traverse this representation from start `(1,1)` to target `(3,3)`. 
+
+Solution using BFS from `(1,1)` to `(3,3)`:
+- Begin at `(1,1)`
+- Travel to `(1,2)` 
+- Continue to `(1,3)`
+- Proceed to `(2,3)`
+- Finally reach `(3,3)`
+
+So, the shortest path through the maze based on the adjacency list provided is:
+
+<PATH_START> (1,1) (1,2) (1,3) (2,3) (3,3) <PATH_END>

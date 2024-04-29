@@ -1,0 +1,1 @@
+The solution for the ASCII maze provided is: <PATH_START> (1,1) (1,2) (2,2) (3,2) (4,2) (4,3) (4,4) (5,4) (6,4) (6,5) (6,6) (7,6) (7,7) <PATH_END>

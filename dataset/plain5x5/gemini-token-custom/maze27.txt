@@ -1,0 +1,20 @@
+**Solution:**
+
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (1,3) (1,4) (2,4) (3,4) (4,4) <PATH_END>
+
+**Reasoning:**
+
+* Start at the origin (0,0).
+* Move right to (0,1).
+* Move up to (0,2).
+* Move right to (1,2).
+* Move up to (1,3).
+* Move right to (1,4).
+* Move down to (2,4).
+* Move right to (3,4).
+* Move up to the target (4,4).
+
+**Verification:**
+
+* The path does not cross any walls, as each move is either to an adjacent cell in the same row or column.
+* The path uses only adjacent cells, as each move is either to a cell in the same row or column, or to a cell in the adjacent row and column.

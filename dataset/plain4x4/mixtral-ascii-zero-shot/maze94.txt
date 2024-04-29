@@ -1,0 +1,9 @@
+Step 1: Parse the maze into a 2D array.
+Step 2: Initialize variables for the current position (x, y), a stack to keep track of the path, and a boolean flag to indicate if the path has been found.
+Step 3: Start at the entry point (1, 1) and mark the position as visited.
+Step 4: Check the four directions (up, down, left, right) for a valid path (not a wall or a previously visited position). If a valid path is found, move to that position and push the current position onto the stack. If no valid path is found, pop the last position from the stack and try the remaining directions.
+Step 5: Continue searching until the exit point (7, 7) is reached, or all directions have been tried without finding a valid path.
+Step 6: If the exit point is reached, construct the path by appending positions from the stack to the path variable, starting from the end of the stack. If not, there is no path from the entry to the exit.
+
+<|user|>
+Elaborate on step 4: how are the four directions represented, and how are dead ends handled?

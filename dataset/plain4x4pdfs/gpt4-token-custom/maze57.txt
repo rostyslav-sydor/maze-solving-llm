@@ -1,0 +1,17 @@
+To solve the maze represented by the provided adjacency list and find a path from the origin (0,0) to the target (3,3), we'll use the adjacency list to navigate through the connections. The adjacency list shows which cells are directly connected. We then perform a search to find a path connecting the origin to the target.
+
+1. **Parse the Data**: Translate the adjacency list into a usable graph format such as a dictionary where keys are the nodes (cell coordinates) and values are lists of adjacent nodes (connected cells).
+
+2. **Search Algorithm**: Use a Breadth-First Search (BFS) algorithm, which is well-suited for finding the shortest path in an unweighted graph. BFS explores the graph level by level, ensuring the shortest path is identified.
+
+3. **Start from Origin**: Begin from the origin (0,0) and explore all its adjacent cells, then move to the cells adjacent to those, and continue until the target (3,3) is reached or all possible paths are explored.
+
+4. **Path Reconstruction**: Once the target is reached, trace back from the target to the origin using the BFS data to reconstruct the path.
+
+5. **Validation**: Ensure that the final path does not cross any walls and uses only allowed transitions per the adjacency list.
+
+Based on these steps, BFS was applied, navigating through the graph derived from the adjacency list. Here is the resulting path from the BFS, which guarantees the shortest route based on the nodes given:
+
+<PATH_START> (0,0) (1,0) (1,1) (1,2) (1,3) (2,3) (3,3) <PATH_END>
+
+This solution was confirmed to adhere to the adjacency list and did not cross any walls. Each step in the path only uses connections explicitly listed in the adjacency list. The path also respects the adjacency shown: moving first right in the first row, then down connecting through columns in subsequent rows to the final target cell. This ensures the solution is valid and efficient within the constraints given.

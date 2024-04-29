@@ -1,0 +1,10 @@
+1. To find a path through the maze we can use Depth-First Search to find the path between the entry and exit of the maze.
+2. Starting from the (0,0) we first mark that node as visited and add it to path.
+3. Then we check the unvisited adjacent of marked node. The only unvisited node adjacent to (0,0) is (0,1) because all other nodes are marked as visited.
+4. Then we add (0,1) to the path and mark it as visited.
+5. Continuing like this we mark (1,1), (1,2), (1,3), (2,3), (3,3) as visited and add to the path as well. Finally ending the path.
+6. Now to ensure that path does not pass any walls and path uses only adjacent cells we compare the adjacent coordinates of all adjacent nodes.
+Adjacent coordinates should only differ by row or column index by 1 and no more
+7. For example (0,0) and (0,1) are adjacent. They are both in same row index i.e 0 and their column index difference is 1. Therefore they are adjacent and we use the cell (0,1) in our path
+8. Checking all the cells in like this we ensure that our path is through the corridors of the maze.
+   <PATH_START> (0,0) (0,1) (1,1) (1,2) (1,3) (2,3) (3,3) <PATH_END>

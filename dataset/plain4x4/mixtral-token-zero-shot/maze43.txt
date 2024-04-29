@@ -1,0 +1,29 @@
+In this maze, we have a grid of size 4x4 with two special points: the origin at (0,0) and the target at (3,3). The aim is to first find the target starting from the origin and then traverse back to the origin, recording the path required to do so. Here, I will use the depth-first search algorithm to find the shortest path in this undirected maze graph.
+
+Depth-first search in graph theory algorithm is a recursive function that starts at the root node (origin in this case) and explores as far as possible along each branch before backtracking.
+
+Given the adjacency list:
+<ADJLIST_START>
+(2,2) <--> (3,2) ; (0,1) <--> (0,2) ; (2,1) <--> (1,1) ; (0,1) <--> (1,1) ; (1,0) <--> (0,0) ; (2,3) <--> (3,3) ;
+(1,2) <--> (2,2) ; (1,3) <--> (0,3) ; (3,0) <--> (3,1) ; (1,2) <--> (0,2) ; (0,1) <--> (0,0) ; (3,1) <--> (3,2) ; (2,3) <--> (1,3) ;
+(3,2) <--> (3,3) ; (2,0) <--> (2,1) ;
+<ADJLIST_END>
+
+Now, let's develop the depth-first search algorithm pseudocode that will traverse these connections:
+
+```python
+function visitMaze(origin, visitedNodes, stack, path)
+   // if the origin node matches the target, return the path
+   if origin == target
+      return path
+   
+   // otherwise, mark the origin node as visited and add it to the stack
+   visitedNodes[origin] = true
+   stack.add(origin)
+   
+   // for each unvisited adjacent node
+   for each neighbour in maze[origin]:
+      // skip if the neighbour is already visited
+      if visitedNodes[neighbour]:
+         continue
+      // visit

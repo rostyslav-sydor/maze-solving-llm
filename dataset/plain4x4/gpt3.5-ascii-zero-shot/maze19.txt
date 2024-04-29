@@ -1,0 +1,9 @@
+1. Start at the entry point (1,1) and explore the adjacent squares. 
+2. Move to the right (1,2) and continue exploring.
+3. Move down (2,2) and then right (2,3).
+4. Continue moving down until you reach the bottom wall, then move right until you reach the right wall.
+5. Move up until you reach the top wall, then move left towards the exit point (7,7).
+6. Once you reach the exit point, mark this path as the solution.
+
+Therefore, the solution path for this maze is: 
+<PATH_START> (1,1) (1,2) (2,2) (2,3) (3,3) (4,3) (5,3) (6,3) (6,4) (6,5) (6,6) (6,7) (7,7) <PATH_END>

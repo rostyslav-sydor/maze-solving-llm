@@ -1,0 +1,9 @@
+1. Start at the <ORIGIN_START> token, which is at (0,0)
+
+2. Find the <TARGET_END> token, which is at (3,3)
+
+3. Use depth-first search or breadth-first search to find a path from <ORIGIN_START> to <TARGET_END>
+
+4. The path found in step 3 is the solution to the maze
+
+<PATH_START> (0,0) (0,1) (1,1) (1,2) (1,3) (2,3) (3,3) <PATH_END>

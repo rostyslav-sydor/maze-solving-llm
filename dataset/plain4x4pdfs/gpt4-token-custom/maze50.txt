@@ -1,0 +1,40 @@
+To solve the maze, I will perform a Breadth-First Search (BFS) to find the shortest path from the entry point to the exit point, using the adjacency list. Here's the simplified reasoning based on the BFS algorithm:
+
+1. **Converting the adjacency list to a usable format**: 
+   Parse the adjacency list between `<ADJLIST_START>` and `<ADJLIST_END>`. Create a dictionary where each key is a cell and associated values are the cells it directly connects to.
+
+2. **Initialize BFS structures**:
+   - Start with the queue initialized to the origin point `<ORIGIN_START> (0,0) <ORIGIN_END>`.
+   - Use a dictionary to track visited nodes and to reconstruct the path as we process through the BFS.
+
+3. **Perform BFS**:
+   - Begin by enqueueing the starting node (0,0) and mark it as visited.
+   - Iteratively dequeue and examine the current node's neighbors (based on the adjacency dictionary).
+   - If a neighbor is the target node `<TARGET_START> (3,3) <TARGET_END>`, trace back the path using our visited dictionary and terminate.
+   - If not, enqueue the neighboring node if it has not been visited, and mark it as visited.
+   - This is repeated until we either find the target or exhaust the queue (which means no path exists).
+
+4. **Backtrack to find the path**:
+   - Once the target node is reached during BFS, use the visited nodes tracking dictionary to backtrack and construct the path from the target back to the origin.
+   - This yields the reverse of the path, so reverse it to get the path starting from the origin to the target.
+
+5. **Format the path for output**:
+   - Convert the calculated path into the required format `<PATH_START> (0,0) (...) (3,3) <PATH_END>`.
+
+6. **Validation**:
+   - Confirm that each step in the finalized path is directly connected to its subsequent steps according to the adjacency list. This ensures that no walls are crossed and that movement is confined to adjacent cells directly linked in the adjacency list.
+
+Based on these steps, the output can be derived. Here's what a valid output might look like considering a correct BFS implementation and validation:
+
+```
+<PATH_START> (0,0) (1,0) (2,0) (2,1) (3,1) (3,2) (3,3) <PATH_END>
+```
+
+In this path:
+- (0,0) connects directly to (1,0),
+- (1,0) connects directly to (2,0),
+- (2,0) connects to (2,1),
+- (2,1) connects to (3,1),
+- (3,1) connects to (3,2), 
+- (3,2) connects to (3,3), 
+which are all valid transitions per the given adjacency list, indicating no walls are crossed and all moves use directly adjacent cells.

@@ -1,0 +1,13 @@
+This is a classic adjacency list representation of a maze, and it can be solved by using Depth-First Search (DFS) or Breadth-First Search (BFS).
+
+Let's use DFS to find a path from the start point to the end point of the maze. Here is how the algorithm works:
+
+1. Start from the start point.
+2. If the current point is the end point, then we have found a path.
+3. Otherwise, visit all the adjacent points of the current point.
+4. If any of the adjacent points has not been visited before, then repeat step 2 for that point.
+5. If all the adjacent points have been visited before, then backtrack to the previous point.
+
+Here is a solution for the given maze using DFS:
+
+<PATH_START> (0,0) (0,1) (1,1) (1,2) (1,3) (2,3) (3,3) (3,4) (4,4) <PATH_END>

@@ -1,0 +1,8 @@
+**Step 1: Identify the starting and ending points.**
+The starting point is given as (0,0) and the ending point is given as (3,3).
+
+**Step 2: Find a path from the starting point to the ending point.**
+One possible path is: (0,0) -> (0,1) -> (1,1) -> (1,2) -> (1,3) -> (2,3) -> (3,3).
+
+**Step 3: Output the path in the required format.**
+<PATH_START> (0,0) (0,1) (1,1) (1,2) (1,3) (2,3) (3,3) <PATH_END>

@@ -1,0 +1,8 @@
+**Step 1: Identify the starting and ending points**
+<ADJLIST_START> (0,0) <ORIGIN_END> <TARGET_START> (3,3) <TARGET_END>
+
+**Step 2: Start from the starting point and explore the adjacency list recursively**
+(0,0) -> (1,0) -> (2,0) -> (3,0) -> (3,1) -> (3,2) -> (3,3)
+
+**Step 3: Output the solution**
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (3,2) (3,3) <PATH_END>

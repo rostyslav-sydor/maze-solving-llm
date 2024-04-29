@@ -1,0 +1,5 @@
+To solve this maze, we begin at the entry point at (0,0) and try to find a path to the exit point at (4,4), weaving through the grid while navigating around the walls. Below is the pathway to the exit calculated by observing the possible paths in the image:
+
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (4,0) (4,1) (4,2) (4,3) (4,4) <PATH_END>
+
+This path moves down the first column, and then moves right through the last row to reach the exit.

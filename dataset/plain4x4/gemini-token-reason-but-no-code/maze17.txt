@@ -1,0 +1,4 @@
+We start at the origin and check it's neighbors. We see that there is only one neighbor, so we add it to the path and check it's neighbors. We continue this process until we reach the target.
+
+In this case, the path is:
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (3,2) (3,3) <PATH_END>

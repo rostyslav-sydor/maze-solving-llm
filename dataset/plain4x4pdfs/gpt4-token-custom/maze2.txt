@@ -1,0 +1,15 @@
+<PATH_START> (0,0) (1,0) (1,1) (1,2) (2,2) (2,3) (3,3) <PATH_END>
+
+Reasoning:
+1. From the adjacency list, we infer the valid connections between each coordinate pair. The maze's entry point is given as (0,0) and exit at (3,3).
+2. Starting from (0,0), the adjacency list allows a move to (1,0).
+3. From (1,0), we can go to (1,1).
+4. From (1,1), the next valid move according to the list is to (1,2).
+5. From (1,2), we can go to (2,2).
+6. From (2,2), proceed to (2,3).
+7. Finally, from (2,3), we reach the exit at (3,3).
+
+Validation:
+- Each step uses only directly connected spaces as per the adjacency list.
+- The path does not backtrack or violate any constraints provided.
+- Each space is adjacent to the previous one, ensuring no walls are crossed unlawfully.

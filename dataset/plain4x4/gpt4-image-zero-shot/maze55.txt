@@ -1,0 +1,12 @@
+To solve the maze, we start from the entry point at (0,0) and explore paths that do not cross the black lines (walls). From the visualization and description:
+
+1. Begin at (0,0), which is the entry point.
+2. Move right to (0,1), and then to (0,2) - moving further to the right towards (0,3) would cross a wall, so it's not allowed.
+3. From (0,2), move down to (1,2).
+4. Continue moving down to (2,2).
+5. From (2,2), move right to (2,3).
+6. Since moving right from (2,3) would hit the border, move down to (3,3), which is the exit point.
+
+Thus, the path from the entrance to the exit is as follows:
+
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (2,2) (2,3) (3,3) <PATH_END>

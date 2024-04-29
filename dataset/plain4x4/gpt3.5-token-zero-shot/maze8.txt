@@ -1,0 +1,8 @@
+First, we need to find a path from the origin (0,0) to the target (3,3) in the maze. 
+
+Starting from (0,0), we can move to (1,0), then (2,0), (2,1), (2,2), (2,3), (3,3). This gives us a path from the origin to the target.
+
+Therefore, the solution path in coordinate list format is:
+<PATH_START> (0,0) (1,0) (2,0) (2,1) (2,2) (2,3) (3,3) <PATH_END>
+
+By following this path, we can navigate through the maze from the starting point to the ending point.

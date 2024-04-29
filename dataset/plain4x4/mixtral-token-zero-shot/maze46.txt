@@ -1,0 +1,36 @@
+ To find a solution for the given maze, we can utilize a graph traversal algorithm such as Breadth-First Search (BFS) or Depth-First Search (DFS) to find the shortest path from the origin to the target.
+
+Steps to view a Breadth-First Search solution:
+
+1. Represent the connections between points in the maze as a graph, with each point as a vertex and connections between points as edges.
+
+2. Initialize a queue data structure to store points/vertices in the order they are encountered during traversal.
+
+3. Mark the origin point as visited and enqueue its connections/neighbors in the queue.
+
+4. Dequeue the vertex at the front of the queue (if no points remain in the queue, stop), mark that vertex as visited, and enqueue its connections/neighbors that have not been visited.
+
+5. Repeat step 4 until the target point is dequeued and marked as visited, which indicates that a solution has been found.
+
+6. The path from the origin to the target can be traced back by following the parent pointers for each vertex: start at the target, follow the parent pointer of the target, then navigate from the parent to their parent, until arriving at the origin point.
+
+To output the solution in the desired format, you can use one of the following algorithms (DFS not shown here):
+
+```javascript
+const graph = {
+  // BFS traversal for finding the solution:
+  const visited = new Set(); // Keep track of visited vertices
+  const parents = {}; // Store parents for traceback later
+  const queue = []; // Initial queue with the origin
+  queue.push({ point: originPoint, isOrigin: true });
+  while (queue.length) {
+    const { point: current, isOrigin } = queue.shift();
+    realised.add(current);
+    // Get the connections of the visited point:
+    const connectionArray = adjacencyList[current];
+    // Iterate through connections, add unvisited vertices to the queue:
+    connectionArray.forEach(connection => {
+      if (!visited.has(connection)) {
+        queue.push({ point: connection, parent: current });
+        visited.add(connection);
+        // If this is an un

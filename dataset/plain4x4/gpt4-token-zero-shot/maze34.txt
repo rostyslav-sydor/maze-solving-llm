@@ -1,0 +1,21 @@
+To solve the maze given in the adjacency list format provided, we need to find the shortest path from the origin (0,0) to the target (3,3). 
+
+Firstly, let's gather the edges of the graph based on the adjacency list: 
+- (0,0) is connected to (1,0) and (0,1)
+- (1,0) is connected to (0,0) and (1,1)
+- (0,1) is connected to (0,0) and (0,2)
+- (1,1) is connected to (1,0) and (2,1)
+- (0,2) is connected to (0,1) and (0,3)
+- (2,1) is connected to (1,1) and (3,1)
+- and so on.
+
+Using these connections, apply a shortest path finding algorithm such as Breadth-First Search (BFS). 
+
+Starting from the origin (0,0), BFS would explore all possible paths and nodes. We would check adjacent nodes or coordinates and keep track of visited nodes to avoid loops.
+
+After implementing BFS, we find this shortest path from the origin to the target:
+(0,0) -> (1,0) -> (1,1) -> (2,1) -> (3,1) -> (3,2) -> (3,3).
+
+This path is then formatted between the required tokens:
+
+<PATH_START> (0,0) (1,0) (1,1) (2,1) (3,1) (3,2) (3,3) <PATH_END>

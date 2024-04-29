@@ -1,0 +1,14 @@
+To solve the maze, start at the entry point (0,0) and find a path to the exit point at (3,3). Analyzing the maze:
+
+1. Begin at (0,0), where the only option is to move right to (0,1).
+2. From (0,1), continue right to (0,2).
+3. From (0,2), move down to (1,2).
+4. At (1,2), the path leads right to (1,3).
+5. Moving down from (1,3), reach (2,3).
+6. Continue downward from (2,3) to reach the exit at (3,3).
+
+Thus, the sequence of movements through the maze follows this path:
+
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (1,3) (2,3) (3,3) <PATH_END> 
+
+Each step is chosen based on the available paths and avoiding walls, aiming to progress towards the bottom right corner of the maze, which is the designated exit.

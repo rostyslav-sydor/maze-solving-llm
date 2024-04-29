@@ -1,0 +1,7 @@
+<PATH_START> (1,1) (1,2) (1,3) (1,4) (1,5) (1,6) (1,7) (2,7) (3,7) (4,7) (4,6) (4,5) (5,5) (6,5) (6,4) (6,3) (6,2) (6,1) (7,1) (7,2) (7,3) (7,4) (7,5) (7,6) (7,7) <PATH_END>
+
+The solution provided begins at the starting point (S) at position (1,1) and follows open paths that do not encounter walls (#). The coordinates make a careful traversal:
+- First, traveling right across the first row until blocked by a wall.
+- Then moving down until a clear path to the right is not available.
+- Next, moving left to avoid a dead-end and subsequently moving downwards.
+- Finally moving to the right again, steering downward where possible and leading directly to the exit (E) at position (7,7). This solution ensures each move skirts around walls and adheres to accessible paths only, efficiently reaching the exit.

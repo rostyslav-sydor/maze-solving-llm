@@ -1,0 +1,23 @@
+Sure, let's use the breadth-first search (BFS) algorithm for maze solving and represent the solution as a coordinate list between <PATH_START> and <PATH_END> tokens.
+
+1. Define the queue for the breadth-first search, initially containing only the starting position (1,1).
+2. Define a queue to keep track of the parents of each position.
+3. Initialize an empty matrix of the same size as the maze to keep track of visited positions.
+4. Begin the search:
+	While the queue is not empty:
+		1. Dequeue a position from the queue.
+		2. Enqueue the parent position into the parent queue.
+		3. Check if the dequeued position is the goal (7,7). If so, reconstruct the path and print it.
+		4. Check if the dequeue position is not out of bounds, is not a wall, and is not visited. If all three are true:
+			* Mark the position as visited in the visited matrix.
+			* Check its unvisited neighbors: up, down, left, and right.
+			* For each valid unvisited neighbor:
+				- Append it to the work queue.
+				- Store the current position (dequeued position) as the parent of the new position (the neighbor) in the parent matrix.
+
+Once we reach the goal (7,7), reconstruct the path by tracing back from the goal to the start using the parent matrix.
+
+Here's the solution in coordinate list format:
+<PATH_START>
+(1,1) (1,2) (2,2) (2,3) (2,4) (2,5) (2,6) (2,7) (3,7) (4,7) (4,6) (4,5) (5,5) (6,5) (6,6) (6,7) (7,7)
+<PATH_END>

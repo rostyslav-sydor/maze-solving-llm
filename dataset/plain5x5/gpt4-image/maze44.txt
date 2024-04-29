@@ -1,0 +1,5 @@
+Based on the visual inspection of the maze and the paths available between the walls, we can trace a valid route from the entry point (0,0) to the exit point (4,4).
+
+Here is the deduced path:
+
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (4,0) (4,1) (4,2) (4,3) (4,4) <PATH_END>

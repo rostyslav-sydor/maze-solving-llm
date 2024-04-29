@@ -1,0 +1,48 @@
+To solve the maze, we can use a simple pathfinding algorithm like Depth-First Search (DFS) or Breadth-First Search (BFS). Here's a DFS implementation in Python:
+
+```python
+def solve_maze(maze, start, end, path=[]):
+    if start == end:
+        path.append(start)
+        return path
+
+    (x, y) = start
+    maze[x][y] = '#'  # Mark the current position as visited
+
+    for (dx, dy) in [(1, 0), (0, 1), (-1, 0), (0, -1)]:
+        nx, ny = x + dx, y + dy
+        if 0 <= nx < len(maze) and 0 <= ny <len(maze[0]) and maze[nx][ny] == ' ':
+            new_path = path + [start]
+            result = solve_maze(maze, (nx, ny), end, new_path)
+            if result is not None:
+                return result
+
+    return None
+
+# Convert the ASCII representation to a 2D list
+maze = []
+with open('maze.txt', 'r') as f:
+    for line in f:
+        maze.append(list(line.rstrip()))
+
+# Find the start and end positions
+start = None
+end = None
+for row in range(len(maze)):
+    for col in range(len(maze[0])):
+        if maze[row][col] == 'S':
+            start = (row, col)
+        elif maze[row][col] == 'E':
+            end = (row, col)
+
+# Solve the maze
+path = solve_maze(maze, start, end)
+
+# Output the solution
+print('<PATH_START>', end='')
+for (x, y) in path:
+    print(f'({x},{y})', end=' ')
+print('<PATH_END>')
+```
+
+This script reads the maze from a text file (maze.txt) and outputs the solution in the format you specified. For example, for this

@@ -1,0 +1,9 @@
+In order to solve this maze, Depth-First Search can be used. 
+It requires a stack of visited nodes and current node. 
+Starting from the origin node, the algorithm enters the loop:
+1. If the current node is the target node, the path to the target is found and the algorithm terminates.
+2. If the current node is not the target node, the algorithm searches for an unvisited neighbor of the current node.
+3. If there is an unvisited neighbor, the algorithm pushes the current node onto the stack and makes the unvisited neighbor the current node.
+4. If there are no unvisited neighbors, the algorithm pops the current node from the stack and makes the parent of the current node the current node.
+
+In this specific maze, the solution is: <PATH_START> (0,0) (0,1) (0,2) (0,3) (0,4) (1,4) (2,4) (3,4) (4,4) <PATH_END>

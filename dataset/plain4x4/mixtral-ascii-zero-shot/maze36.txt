@@ -1,0 +1,19 @@
+Step 1: First, we need to understand how maze solving algorithms work. There are various methods, but two popular ones are depth-first search (DFS) and breadth-first search (BFS).
+
+Step 2: In the provided maze, start from the entrance (1,1). We can follow these directions initially: RRU (Right, Right, Up) to reach the point (3,3). From this point, we can continue exploring the maze following the same directions (in order of priority): Right (R), Down (D), Left (L), and Up (U).
+
+Step 3: The first location we can move to from (3,3) is (3,4), following the direction R (Right). Now, there's no possible movement in this direction, so we go to the next direction, which is D (Down).
+
+At (4,4), the next place we can move to is (4,3) following the direction L (Left).
+
+At (4,3), there are no movement options in any direction other than going back to (4,4) in direction L (Left). Notice that we have reached the same point as before, so we should not proceed in this direction. Instead, we return to point (4,4).
+
+In (4,4), we must move following the direction U (Up), as all possible moves in the other directions lead to the current point.
+
+Continue exploring the maze in a similar way until we reach the exit point (7,7).
+
+Step 4: The path in the format of coordinate list would be <PATH_START> (1,1) (2,1) (3,1) (3,3) (4,4) (5,5) (6,4) (7,4) (7,3) (7,2) (7,1) (7,0) <PATH_END>
+
+Please note that you may need to adjust the solution based on your specific implementation of the pathfinding algorithm. With this example, you can now research a specific maze-solving algorithm and implement it for your use case.
+
+There are open-source maze-solving libraries available, like astar and python-maze, which could facilitate the implementation of your solution.

@@ -1,0 +1,13 @@
+To find the solution for the maze, we can follow the path from the entry point (0,0) to the exit point (3,3) by checking open paths without running into walls.
+
+1. Start at (0,0), which is open.
+2. Move right from (0,0) to (0,1) as moving down leads to a wall. 
+3. From (0,1), continue to move right to (0,2) since down is blocked by a wall.
+4. Now at (0,2), the only open direction without a wall is down. Move down to (1,2).
+5. From (1,2), continue moving down to (2,2).
+6. At (2,2), only the right (2,3) and down (3,2) paths are open. Moving to (3,2) sets up for easier access to the exit. Move down to (3,2).
+7. Then move right from (3,2) to (3,3), which is the exit point.
+
+This sequence of moves avoids all walls and successfully navigates from entrance to exit and is represented by the coordinates:
+
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (2,2) (3,2) (3,3) <PATH_END>

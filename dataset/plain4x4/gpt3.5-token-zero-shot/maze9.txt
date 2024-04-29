@@ -1,0 +1,8 @@
+First, we can start at the origin point (0,0) and explore the adjacent points based on the given adjacency list. From (0,0), we can move to (0,1), then to (0,2) and finally to (0,3).
+
+Next, we can move from (0,3) to (1,3), then to (2,3) and finally to (3,3) which is our target point.
+
+Therefore, the solution to this maze is the path:
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>
+
+By following the connections between the points in the adjacency list, we were able to navigate from the origin to the target point efficiently.

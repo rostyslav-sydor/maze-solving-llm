@@ -1,0 +1,9 @@
+<PATH_START> (1,1) (2,1) (3,1) (4,1) (5,1) (6,1) (7,1) (7,2) (7,3) (7,4) (7,5) (7,6) (7,7) <PATH_END>
+
+To navigate from S to E: 
+
+1. Start at (1,1) and move vertically downwards through column 1 as there are no obstacles. Continue this path until reaching (7,1).
+2. At (7,1), a shift to the right begins since moving further down is blocked. Traverse horizontally to the right through row 7.
+3. Continue from (7,1) to (7,2), (7,3), (7,4), (7,5), (7,6) and finally to (7,7) where the exit E is located.
+
+This strategy is a straightforward approach since every movement forward during both the vertical and horizontal paths is unimpeded by walls, making it a valid and quick solution.

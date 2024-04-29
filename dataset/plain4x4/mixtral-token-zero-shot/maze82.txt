@@ -1,0 +1,34 @@
+In the given maze, we find that some coordinates are unreachable from each other. Here is a list of reachability for each coordinate:
+
+- (0,0) has paths to (0,1), (1,0), and directly to target destination (3,3) 
+- (1,0) has paths to (0,0), (1,1), (2,0)
+- (2,0) has paths to (1,0), (2,1), directly to origin coordinate (0,0)
+- (3,0) has paths to (2,0), (3,1)
+- (1,1) has paths to (0,1), (1,0), (1,2), (2,1)
+- (2,1) has paths to (1,1), (2,0), (2,2), (3,1)
+- (0,1) can only reach (0,0)
+- (2,2) has paths to (1,2), (2,1), (3,2)
+- (3,1) can only reach (3,2)
+- (1,2) has paths to (1,1), (1,3), (2,2)
+- (0,2) has paths to (0,1), (0,3)
+- (1,3) has paths to (0,3)
+- (0,3) can only reach (0,2) or directly to target (3,3)
+- (3,2) has paths to (3,1), (3,3)
+- (2,3) has paths to (3,3) directly
+
+From the given list, we can find the shortest path by using Depth First Search (DFS) algorithm. Here is the pseudo code of the algorithm:
+
+```
+class Node:
+    def __init__(self, coordinate, path):
+        self.coordinate = coordinate
+        self.path = path
+
+def DFS(origin, target, graph):
+    stack = []
+    start_state = Node(origin, [])
+    stack.append(start_state)
+    
+    while(len(stack) > 0):
+        current_node = stack.pop(0)
+        if current_node

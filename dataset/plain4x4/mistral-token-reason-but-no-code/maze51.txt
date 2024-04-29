@@ -1,0 +1,50 @@
+To solve the maze, we can use a graph traversal algorithm like Depth-First Search (DFS) or Breadth-First Search (BFS). Since the maze is represented as an adjacency list, we can use BFS to find the shortest path from the origin to the target.
+
+Here's the reasoning behind using BFS:
+
+1. BFS explores all the neighboring nodes at the current depth before moving on to the next depth level. This ensures that we find the shortest path to the target.
+2. BFS uses a queue data structure to store the nodes to be visited. This allows us to process the nodes in the order they are discovered, which is crucial for finding the shortest path.
+
+Now, let's apply BFS to the given maze:
+
+1. Initialize an empty queue and a visited set.
+2. Enqueue the origin node (0,0) and mark it as visited.
+3. While the queue is not empty:
+   a. Dequeue a node from the queue.
+   b. If the dequeued node is the target node (3,3), we have found the shortest path. Break the loop.
+   c. Otherwise, enqueue all unvisited neighboring nodes of the dequeued node and mark them as visited.
+4. If the target node is not found, there is no path from the origin to the target.
+
+Now, let's apply BFS to the given maze and find the shortest path:
+
+1. Initialize an empty queue and a visited set.
+2. Enqueue the origin node (0,0) and mark it as visited.
+3. While the queue is not empty:
+   a. Dequeue a node from the queue: (0,0)
+   b. Enqueue all unvisited neighboring nodes of the dequeued node and mark them as visited: (1,0), (0,1)
+   c. Dequeue a node from the queue: (1,0)
+   d. Enqueue all unvisited neighboring nodes of the dequeued node and mark them as visited: (2,0)
+   e. Dequeue a node from the queue: (0,1)
+   f. Enqueue all unvisited neighboring nodes of the dequeued node and mark them as visited: (0,2)
+   g. Dequeue a node from the queue: (2,0)
+   h. Enqueue all unvisited neighboring nodes of the dequeued node and mark them as visited: (3,0)
+   i. Dequeue a node from the queue: (0,2)
+   j. Enqueue all unvisited neighboring nodes of the dequeued node and mark them as visited: (0,3)
+   k. Dequeue a node from the queue: (3,0)
+   l. Enqueue all unvisited neighboring nodes of the dequeued node and mark them as visited: (3,1)
+   m. Dequeue a node from the queue: (0,3)
+   n. Enqueue all unvisited neighboring nodes of the dequeued node and mark them as visited: (1,3)
+   o. Dequeue a node from the queue: (3,1)
+   p. Enqueue all unvisited neighboring nodes of the dequeued node and mark them as visited: (3,2)
+   q. Dequeue a node from the queue: (1,3)
+   r. Enqueue all unvisited neighboring nodes of the dequeued node and mark them as visited: (1,2)
+   s. Dequeue a node from the queue: (3,2)
+   t. Enqueue all unvisited neighboring nodes of the dequeued node and mark them as visited: (3,3)
+   u. Dequeue a node from the queue: (1,2)
+   v. Enqueue all unvisited neighboring nodes of the dequeued node and mark them as visited: (2,2)
+   w. Dequeue a node from the queue: (3,3)
+   x. We have found the target node (3,3). Break the loop.
+
+The shortest path from the origin (0,0) to the target (3,3) is:
+
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (3,2) (3,3) <PATH_END>

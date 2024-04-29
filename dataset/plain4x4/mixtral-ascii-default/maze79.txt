@@ -1,0 +1,31 @@
+Recursive backtracker maze solver
+
+Assuming ASCII representation of the maze has been read and `maze` and `path` arrays are initialized correctly.
+
+```python
+def solve_maze(maze, path, curr_pos, end_pos):
+    # mark current position as visited in the path array
+    path[curr_pos[0]][curr_pos[1]] = True
+
+    # check if the current position is the end position (exit)
+    if curr_pos == end_pos:
+        return True
+
+    # try moving in different directions: up, right, down, left
+    # Move up from the current position
+    if curr_pos[0] > 0 and maze[curr_pos[0] - 1][curr_pos[1]] == ' ' and not path[curr_pos[0] - 1][curr_pos[1]]:
+        if solve_maze(maze, path, (curr_pos[0] - 1, curr_pos[1]), end_pos):
+            return True
+
+    # Move right from the current position
+    if curr_pos[1] < len(maze[0]) - 1 and maze[curr_pos[0]][curr_pos[1] + 1] == ' ' and not path[curr_pos[0]][curr_pos[1] + 1]:
+        if solve_maze(maze, path, (curr_pos[0], curr_pos[1] + 1), end_pos):
+            return True
+
+    # Move down from the current position
+    if curr_pos[0] < len(maze) - 1 and maze[curr_pos[0] + 1][curr_pos[1]] == ' ' and not path[curr_pos[0] + 1][curr_pos[1]]:
+        if solve_maze(maze, path, (curr_pos[0] + 1, curr_pos[1]), end_pos):
+            return True
+
+    # Move left from the current position
+    if curr_pos[1] > 0 and maze[curr_pos[0]][curr_pos[1] - 1]

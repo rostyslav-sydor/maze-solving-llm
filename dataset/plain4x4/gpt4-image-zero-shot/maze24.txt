@@ -1,0 +1,12 @@
+To solve the maze, you start at the entry point (0,0). Let's analyze possible movements from here, following paths that are not blocked by walls:
+
+- From (0,0), you can only move to (1,0) as moving to the right (0,1) is blocked.
+- From (1,0), you can only move down to (2,0) as moving to the right (1,1) is blocked.
+- From (2,0), you can move to (2,1) or down to (3,0). Moving to (3,0) leads to a dead end at (3,1), so the right choice is (2,1).
+- From (2,1), proceed to (2,2).
+- From (2,2), move to (2,3) or down to (3,2). Moving to (3,2) is a better choice as from there you can directly go to (3,3) without hitting a dead end.
+- From (3,2), finally move to the exit at (3,3).
+
+Thus, the path from the entry to the exit is:
+
+<PATH_START> (0,0) (1,0) (2,0) (2,1) (2,2) (2,3) (3,2) (3,3) <PATH_END>

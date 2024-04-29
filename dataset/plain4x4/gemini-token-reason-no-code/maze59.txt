@@ -1,0 +1,11 @@
+The goal is to find a path from the origin to the target in the given maze represented as a adjacency list. 
+
+Depth First Search algorithm is suitable for solving this problem, as the algorithm explores possible paths in a recursive manner, finding a path once all possibilities have been explored.
+
+The reasoning behind this algorithm is that it will start at the origin and continue down a path until it reaches the target or until there are no more paths to explore. 
+
+If there are no more paths to explore, the algorithm will backtrack to the previous node and try a different path. 
+This process will continue until the target is reached or until all possible paths have been explored. 
+
+Once the target is reached, the path from the origin to the target can be extracted by backtracking from the target to the origin. 
+The output will be a list of coordinates representing the path from the origin to the target, formatted as <PATH_START> (row, column) (row, column) ... <PATH_END>.

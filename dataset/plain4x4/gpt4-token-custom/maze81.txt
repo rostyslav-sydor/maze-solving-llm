@@ -1,0 +1,17 @@
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>
+
+In this solution, the path begins at the origin point (0,0) and progresses to the target point (3,3). The moves were made as follows:
+
+1. From (0,0) to (0,1) - the adjacency list contains (0,1) <--> (0,0)
+2. From (0,1) to (0,2) - the adjacency list contains (0,2) <--> (0,1)
+3. From (0,2) to (0,3) - the adjacency list contains (0,2) <--> (0,3)
+4. From (0,3) to (1,3) - the adjacency list contains (1,3) <--> (0,3)
+5. From (1,3) to (2,3) - the adjacency list contains (1,3) <--> (2,3)
+6. From (2,3) to (3,3) - the adjacency list lists (3,3) <--> (2,3)
+
+Throughout this path:
+- All steps take us from one cell to a directly adjoining cell.
+- Each consecutive pair of coordinates is adjacent in the maze's graph.
+- There are no detours or backtracking: the shortest route is found, always proceeding toward the target, without violating any maze walls as per the adjacency list.
+
+Thus, the provided solution is efficient and adheres strictly to the possible pathways shown in the adjacency list.

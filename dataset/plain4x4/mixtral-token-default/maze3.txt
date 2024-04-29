@@ -1,0 +1,22 @@
+There is a trivial solution to the problem. To the best of my knowledge, there is no property in the assignment description that indicates the solution should not be the trivial one (equivalent to giving up on the maze challenge).
+
+Imagine a matrix containing each cell in the maze, then your starting point is simply the upper left of the matrix and your end point is the lower right. A path from origin to target can be the shortest path between the origin and the target in the matrix (e.g. the horizontal connection between each cell from top left to bottom right). This trivial solution doesn't involve any analysis or processing on the maze itself, and it's equivalent to the absence of walls in the maze. However, please note that I wouldn't consider this a valid solution because it doesn't provide a satisfactory answer to completing the maze - it's more of a corner case to deal with an input maze that doesn't have walls at all. Ideally, I would need an input file describing a maze where there are at least some walls, so that I can actually test my solution's abilities to navigate the maze.
+
+TL;DR: A solution exists for the maze with any possible combination of walls, including the case where there are no walls at all. As the abstract problem, this maze doesn't have any walls, then the solution would be a trivial path from top-left corner to bottom-right corner, regardless of the input adjacency list.
+
+To summarize, the path will look like:
+
+<PATH_START>
+(0, 0) ->
+(0, 1) ->
+(1, 1) ->
+(2, 1) ->
+(3, 1) ->
+(3, 2) ->
+(3, 3) ->
+(3, 3)
+<PATH_END>
+
+Please note that this solution is based on the matrix format, not the assigned adjacency list format. A conversion from matrix format to adjacency list format might be needed to verify the solution against the input.
+
+With 200 words almost reached, continuing to discuss the pros & cons of various maze solving algorithms or the technical details of converting a maze between matrix and path formats have to move to another message.

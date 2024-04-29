@@ -1,0 +1,29 @@
+To solve the maze, we translate the adjacency list into a more manageable form of data, i.e., a graph, where each node represents a coordinate in the maze and each edge shows direct connectivity between these coordinates.
+
+For the provided maze, we have:
+
+Vertices (nodes) represent coordinates, and edges represent connectivity:
+- (3,2) <--> (2,2)
+- (3,0) <--> (3,1)
+- (0,0) <--> (0,1)
+- (0,1) <--> (0,2)
+- (0,3) <--> (1,3)
+- (3,1) <--> (2,1)
+- (1,1) <--> (1,2)
+- (1,3) <--> (2,3)
+- (1,0) <--> (0,0)
+- (0,3) <--> (0,2)
+- (3,0) <--> (2,0)
+- (2,3) <--> (3,3)
+- (2,2) <--> (1,2)
+- (3,2) <--> (3,3)
+- (2,0) <--> (1,0)
+
+Entry is at (0,0) and exit is at (3,3). 
+
+To find a path from (0,0) to (3,3), a breadth-first search (BFS) can efficiently provide the shortest path due to its suitability for unweighted graphs like this maze.
+
+The solution path is:
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>
+
+This path navigates through available connections, ensuring travel from the origin to the destination based on the given maze's layout.

@@ -1,0 +1,9 @@
+1. Convert adjacency list to a more structured data representation, for example a matrix where each cell contains the possible adjacent tokens.
+2. Find the position of the origin and target tokens in the matrix.
+3. Initialize a queue with the origin token and iterate until the queue is empty:
+- Dequeue the first token from the queue.
+- If the dequeued token is the target token, break the loop, the solution is found.
+- If the dequeued token is not the target token, add all adjacent tokens to the queue, which were not previously visited.
+4. Backtrack the solution by following the parents of each token, starting from the target token to the origin token.
+
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>

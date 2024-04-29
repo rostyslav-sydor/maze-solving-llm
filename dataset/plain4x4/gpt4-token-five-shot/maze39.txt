@@ -1,0 +1,31 @@
+To solve the maze described in the last example, the given adjacency list shows paths between cells (nodes). The required path is from the origin (0,0) to the target (3,3). Here is the adjacency list parsed as connections:
+
+- (0,2) <---> (1,2)
+- (3,1) <---> (3,0)
+- (1,1) <---> (2,1)
+- (0,1) <---> (0,2)
+- (2,0) <---> (1,0)
+- (3,1) <---> (2,1)
+- (2,2) <---> (2,3)
+- (1,2) <---> (2,2)
+- (3,0) <---> (2,0)
+- (2,3) <---> (1,3)
+- (3,3) <---> (2,3)
+- (0,0) <---> (0,1)
+- (3,3) <---> (3,2)
+- (1,3) <---> (0,3)
+- (0,1) <---> (1,1)
+
+Now, starting from the origin (0,0), we can follow a path to the target (3,3). Using a graph traversal such as breadth-first search (BFS) or depth-first search (DFS), we can find a path through the graph:
+
+1. Start at (0,0)
+2. Move to (0,1) via connection (0,0) <---> (0,1)
+3. Move to (0,2) via connection (0,1) <---> (0,2)
+4. Move to (1,2) via connection (0,2) <---> (1,2)
+5. Move to (2,2) via connection (1,2) <---> (2,2)
+6. Move to (2,3) via connection (2,2) <---> (2,3)
+7. Move to (3,3) via connection (3,3) <---> (2,3), completing the path.
+
+Thus, the solution path through the maze from (0,0) to (3,3) is:
+
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (2,2) (2,3) (3,3) <PATH_END>

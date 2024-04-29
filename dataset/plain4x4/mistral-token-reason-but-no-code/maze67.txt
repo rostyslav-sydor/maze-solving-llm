@@ -1,0 +1,32 @@
+The given maze is represented as a graph using an adjacency list. The goal is to find a path from the origin point (0,0) to the target point (3,3), while navigating through the available connections between coordinates.
+
+The reasoning behind choosing a pathfinding strategy can be based on the following points:
+
+1. The graph representation of the maze allows us to use graph traversal algorithms such as depth-first search (DFS) or breadth-first search (BFS).
+
+2. DFS is a recursive approach and can lead to exponential time complexity in certain cases, whereas BFS has a linear time complexity and is more suitable for finding the shortest path in a graph.
+
+3. In this case, we will use BFS to find the solution, as it is more efficient and guarantees a shortest path, if one exists.
+
+Here are the steps to implement BFS for this maze:
+
+1. Initialize a queue, a set to keep track of visited coordinates, and a parent dictionary to reconstruct the path.
+
+2. Enqueue the origin point and mark it as visited.
+
+3. While the queue is not empty:
+   a. Dequeue the current coordinate.
+   b. Check if the current coordinate is the target point. If it is, reconstruct the path using the parent dictionary and stop.
+   c. Otherwise, check all neighboring coordinates of the current coordinate, and enqueue and mark them as visited if they are not visited before.
+
+Applying the BFS algorithm to the given maze with the origin point (0,0) and target point (3,3), we obtain the following path:
+
+<PATH_START>
+(0,0)
+(0,1)
+(0,2)
+(0,3)
+(1,3)
+(2,3)
+(3,3)
+<PATH_END>

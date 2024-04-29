@@ -1,0 +1,9 @@
+1. Find the origin and target coordinates from the maze description.
+2. Perform a depth-first search (DFS) starting from the origin coordinate, marking visited coordinates to avoid loops.
+3. While performing DFS, keep track of the path taken by storing the coordinates in a list.
+4. Once the target coordinate is reached, the path list contains the solution.
+5. Reverse the path list to get the path from origin to target.
+
+Following the steps above, we get the following solution:
+
+<PATH_START> (0,0) (0,1) (1,1) (1,2) (1,3) (2,3) (3,3) <PATH_END>

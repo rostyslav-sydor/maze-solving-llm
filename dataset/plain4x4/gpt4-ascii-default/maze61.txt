@@ -1,0 +1,12 @@
+<PATH_START> (1,1) (1,2) (1,3) (1,4) (2,4) (3,4) (3,5) (3,6) (3,7) (4,7) (5,7) (6,7) (7,7) <PATH_END>
+
+Explanation: 
+The maze traversal begins at point S (1,1). The goal is to advance to point E (7,7). The solution follows:
+
+1. Move right from (1,1) through (1,3) since path is clear.
+2. From (1,4), move straight down to (3,4) to avoid walls.
+3. Move right from (3,4) to (3,7) - this path is open.
+4. Turn downwards from (3,7) to (4,7) and proceed to move down along column 7 bypassing walls.
+5. Continue descending directly to the bottom row to maintain a clear path towards the exit point E (7,7). 
+
+Throughout the pathfinding process, the aim is to maximize linear movements and minimize turns, guided by open pathways and wall placements until the destination is reached.

@@ -1,0 +1,7 @@
+<PATH_START> (0,0) (0,1) (1,1) (1,2) (2,2) (3,2) (3,3) <PATH_END>
+
+Reasoning: In order to get from the entry point (0,0) to the exit point (3,3), we need to follow a path that connects adjacent cells. We start at (0,0) and move right to (0,1), then up to (1,1), then right to (1,2), then up to (2,2), then right to (3,2), and finally up to (3,3). This path connects all the cells in the correct order, and it does not cross any walls.
+
+Checking if the solution does not cross any walls and path uses only adjacent cells: The path provided does not cross any walls because it follows a path that connects adjacent cells. It starts at (0,0) and moves right to (0,1), then up to (1,1), then right to (1,2), then up to (2,2), then right to (3,2), and finally up to (3,3). Each of these moves is to an adjacent cell, and there are no walls between any of the cells.
+
+The path provided uses only adjacent cells because it follows a path that connects adjacent cells. It starts at (0,0) and moves right to (0,1), then up to (1,1), then right to (1,2), then up to (2,2), then right to (3,2), and finally up to (3,3). Each of these moves is to an adjacent cell, and there are no moves to non-adjacent cells.

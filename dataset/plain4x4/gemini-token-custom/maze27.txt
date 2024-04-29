@@ -1,0 +1,8 @@
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (3,2) (3,3) <PATH_END>
+
+**Reasoning:**
+
+- Start from the origin cell `(0,0)` marked with `<ORIGIN_START>` token.
+- From the origin cell, move right until you reach the rightmost cell `(3,0)` as the only other adjacent cell to the right is a wall.
+- From the `(3,0)` cell, move down until you reach the target cell `(3,3)` as the only other adjacent cell below is a wall.
+- The path does not cross any walls and uses only adjacent cells, hence it is a valid solution.

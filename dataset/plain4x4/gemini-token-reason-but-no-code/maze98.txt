@@ -1,0 +1,9 @@
+**Reasoning**
+
+To find the path, we can use **breadth-first search**. This algorithm traverses a graph in a **level-by-level** manner, starting from the **root node**. It adds all neighbors of the current node to a **queue**. It then visits the **first node** in the queue, adds its **neighbors** to the queue, and repeats the process until it reaches the **target node**.
+
+**Solution for the given maze**
+
+Applying **breadth-first search** on the provided adjacency list of the maze, we get the following path:
+
+<PATH_START> (0,0) (1,0) (1,1) (1,2) (1,3) (2,3) (3,3) <PATH_END>

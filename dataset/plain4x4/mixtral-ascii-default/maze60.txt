@@ -1,0 +1,27 @@
+To solve the maze, we can use a recursive backtracking algorithm. Here is the list of coordinates between the <PATH_START> and <PATH_END> tokens for the solution:
+
+<PATH_START>
+(1,1)
+(1,2)
+(2,2)
+(2,3)
+(3,3)
+(4,3)
+(4,2)
+(5,2)
+(5,3)
+(5,4)
+(4,4)
+(4,5)
+(3,5)
+(2,5)
+(2,6)
+(3,6)
+(4,6)
+(4,7)
+(5,7)
+(6,7)
+(7,7)
+<PATH_END>
+
+This solution will lead the player from the entrance at (1,1) to the exit at (7,7).

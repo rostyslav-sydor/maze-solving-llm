@@ -1,0 +1,33 @@
+ASCII representation of a maze is:
+
+#########
+#S      #
+# ##### #
+# #   # #
+# ### # #
+# # # # #
+# # # # #
+#   #  E#
+#########
+
+Entry point is: (1,1)
+Exit point is: (7,7)
+
+To find the path for this maze, let’s analyze the maze :
+The entry point is connected to the coordinates in the row : (1,2) and (1,3). Let’s tentatively store all these options as a binary tree or a list of branches. Since two branches are available in this step, we will label them as 0,1 at this position.
+
+Now let’s note the available connectors from row (1,2). The options are (2,2) and (1,3). Since the (2,2) connection was already found earlier (as 0 in our coding), we will use 0 again (since it was found earlier), thus the 0, 0 row in our binary tree is created here. Now for (1,3) we didn’t have any prior connections, and this is the first time it’s mentioned in our tree, so let’s assign a new number for the connector, say 1. So, the second connection for this row is (1,3) - 1.
+
+Repeat the same process for all the rows (you can find the connectors in the rows which contain # signs). I created a map out of all the connections below:
+
+0 (1,1): (1,2) - 0 / (1,3) - 1
+1 (1,2): (2,2) - 0 / (1,3) - 1
+2 (1,3): 
+3 (2,2): (2,4) - 0
+4 (2,4): (3,4) - 0 / (2,5) - 1
+5 (3,4): (4,4) - 0
+6 (4,4): (4,5) - 0
+7 (4,5): (5,5) - 0
+8 (5,5): (7,5) - 0
+9 (7,5): 
+10 (7

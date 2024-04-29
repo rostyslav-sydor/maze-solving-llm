@@ -1,0 +1,39 @@
+To solve the maze, we need to find a valid path from the origin `(0,0)` to the target `(3,3)` using the adjacency list provided:
+
+The adjacency list describes the connections between each cell in the maze:
+
+- `(2,0) <--> (3,0)`
+- `(0,1) <--> (0,0)`
+- `(0,3) <--> (0,2)`
+- `(2,2) <--> (3,2)`
+- `(1,3) <--> (1,2)`
+- `(3,2) <--> (3,3)`
+- `(2,3) <--> (3,3)`
+- `(1,1) <--> (2,1)`
+- `(2,2) <--> (2,1)`
+- `(3,0) <--> (3,1)`
+- `(1,3) <--> (2,3)`
+- `(0,1) <--> (0,2)`
+- `(3,1) <--> (3,2)`
+- `(1,2) <--> (0,2)`
+- `(1,0) <--> (1,1)`
+
+### Step-by-step solution
+1. Start at the origin `(0,0)`.
+2. From `(0,0)`, the adjacency list allows a move to `(0,1)`.
+3. From `(0,1)`, you can move to `(0,2)`.
+4. From `(0,2)`, go to `(1,2)` (as per the connection `(1,2) <--> (0,2)`).
+5. From `(1,2)`, proceed to `(1,3)` (due to adjacency `(1,3) <--> (1,2)`).
+6. From `(1,3)`, move to `(2,3)` (connected by `(1,3) <--> (2,3)`).
+7. From `(2,3)`, you can move to `(3,3)` - the target (since `(2,3) <--> (3,3)` and `(3,2) <--> (3,3)` provide a direct route).
+
+This path is continuous, correctly using the adjacencies listed, and reaches the target:
+
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (1,3) (2,3) (3,3) <PATH_END>
+
+### Validation:
+- Each step in the path uses an adjacent connection listed in the adjacency section.
+- No steps in the generated path involve diagonal or non-adjacent moves.
+- The solution does not cross any walls and respects the maze structure defined by listed connections.
+
+Thus, the solution is valid and correctly navigates the maze from the start (origin) to the finish (target).

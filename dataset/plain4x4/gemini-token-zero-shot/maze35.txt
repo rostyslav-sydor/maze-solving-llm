@@ -1,0 +1,8 @@
+1. Start from the origin coordinate (0, 0) and mark it as visited.
+2. Explore all adjacent coordinates of the current coordinate.
+3. If an adjacent coordinate is the target coordinate, then stop and output the path.
+4. Otherwise, if an adjacent coordinate is not visited and is not an obstacle, then mark it as visited and add it to the queue.
+5. Repeat steps 2-4 until the target coordinate is reached or the queue is empty.
+
+The solution path for the given maze is:
+<PATH_START> (0, 0) (1, 0) (1, 1) (1, 2) (1, 3) (2, 3) (3, 3) <PATH_END>

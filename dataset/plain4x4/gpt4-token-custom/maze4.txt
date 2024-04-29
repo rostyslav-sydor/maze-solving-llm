@@ -1,0 +1,17 @@
+<PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END>
+
+To solve this maze represented as graph adjacency list:
+
+1. **Start at the specified origin, (0,0)**, and look for directly connected cells.
+2. **Navigate the graph using a search algorithm**: In this case, an intuitive Breadth-First Search (BFS) strategy was considered to find the shortest path from start to end based on provided adjacency relationship.
+3. **List the path transitions as given in the adjacency list**:
+   - From (0,0), move to (0,1), verified by `(0,1) <--> (0,0)`.
+   - Continue from (0,1) to (0,2), verified by `(0,3) <--> (0,2)`.
+   - Then, move from (0,2) to (0,3), as noted in `(0,3) <--> (0,2)`.
+   - From (0,3), proceed to (1,3), confirmed through `(1,3) <--> (0,3)`.
+   - From (1,3), the adjacent cell is (2,3), explained by `(1,3) <--> (2,3)`.
+   - Lastly, move from (2,3) to target (3,3), thanks to `(3,3) <--> (2,3)`.
+4. **Each chosen cell is adjacent** to the previous cell in the path, meeting the maze's connectivity condition.
+5. **Verify that no traversals break wall rules**: The path does not include any blocked or non-adjacent cell transitions.
+
+Conclusively, the mentioned path <PATH_START> (0,0) (0,1) (0,2) (0,3) (1,3) (2,3) (3,3) <PATH_END> is based on linking directly adjacent cells without any obstruction or wall crossings as per the maze's adjacency list.

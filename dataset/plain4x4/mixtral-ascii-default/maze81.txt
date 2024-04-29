@@ -1,0 +1,7 @@
+I've analyzed the maze and found a valid path that starts at (1,1) and exits the maze at (7,7). Here is the list of coordinates between <PATH_START> and <PATH_END> tokens:
+
+<PATH_START>
+(1,1) (1,2) (2,2) (3,2) (4,2) (4,3) (4,4) (5,4) (6,4) (6,3) (6,2) (6,1) (7,1) (7,2) (7,3) (7,4) (7,5) (7,6) (7,7)
+<PATH_END>
+
+This path follows the shortest route through the maze and avoids any walls (represented by '#' symbols).

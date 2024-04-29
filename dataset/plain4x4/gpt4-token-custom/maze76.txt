@@ -1,0 +1,36 @@
+To solve the maze represented by the adjacency list, we will use Breadth-First Search (BFS), a common algorithm for finding the shortest path in an unweighted graph. The existence of pairs in the list shows each directly connected point (or cell) in the graph. This approach ensures that we explore all possible paths from the origin until the shortest path to the target is determined without retracing unnecessary routes.
+
+**Steps:**
+1. Start at the origin point (0,0).
+2. Explore all directly connected adjacent points using the adjacency list.
+3. Move to the next point in a sequential manner, ensuring not to revisit points already checked.
+4. Continue until the target point (3,3) is reached, keeping track of the path taken.
+
+**Path Construction:**
+Starting from (0,0), follow the connected points in the list:
+- From (0,0) the adjacency list permits a move to (1,0).
+- From (1,0) move to (2,0), then to (3,0).
+- From (3,0) go to (3,1).
+- From (3,1) move to (3,2).
+- From (3,2) next points can be (2,2) or directly to (3,3).
+
+It's clear that moving from (3,2) directly to (3,3) leads to the target, thus completing the path.
+
+**Verification:**
+We need to verify that the constructed path only moves between directly connected points and does not cross any implicit or explicit walls marked by unlisted adjacency pairs.
+
+Path examined: 
+(0,0) -> (1,0) -> (2,0) -> (3,0) -> (3,1) -> (3,2) -> (3,3)
+
+All transitions match the pairs in the adjacency list:
+- (0,0) <--> (1,0)
+- (1,0) <--> (2,0)
+- (2,0) <--> (3,0)
+- (3,0) <--> (3,1)
+- (3,1) <--> (3,2)
+- (3,2) <--> (3,3)
+
+Thus, the path is valid, and each step only proceeds to adjacent cells without crossing walls.
+
+**Final output for the path:**
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (3,2) (3,3) <PATH_END>

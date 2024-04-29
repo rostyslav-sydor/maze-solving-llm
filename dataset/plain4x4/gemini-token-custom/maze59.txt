@@ -1,0 +1,28 @@
+<PATH_START> (0, 0) (1, 0) (1, 1) (1, 2) (1, 3) (2, 3) (3, 3) <PATH_END>
+
+Explanation: 
+
+Starting from entry coordinates (0,0), the paths first moves right for one step into the adjacent cell (0,1). 
+
+Then, we can only move to the adjacent cells (0,0) or (0,2), we continue in the direction we originally started and reach cell (0,2) through cell (1,2)
+
+From cell (0,2) we move to cell (0,3) from which only one adjacent cell (1,3) to visit is available
+
+Now from (1,3), by following our rule for visiting cells we continue in the same direction and arrive in cell (2,3). Here we have to change direction, as the cell in current direction (3,3) has been already visited. 
+
+So we turn down to reach the final cell and exit of the maze (3,3)
+```
+# First check that maze structure and solution do not violate any maze constraints
+adj_list = [ (2,3),(3,3) ] # (0,0)
+adj_list = [ (2,0),(1,0) ] # (1,0)
+adj_list = [ (1,0) ] # (2,0)
+adj_list = [ (3,3) ] # (3,0)
+adj_list = [ (3,3),(2,3) ] # (2,1)
+adj_list = [ (2,2) ] # (1,1)
+adj_list = [ (2,3),(1,2),(0,2) ] # (1,2)
+adj_list = [ (3,3),(3,2) ] # (2,2)
+adj_list = [ (2,3) ] # (1,3)
+adj_list = [ (3,2) ] # (3,1)
+adj_list = [ (1,2) ] # (0,2)
+adj_list = [ (0,2),(0,1) ] # (0,3)
+```

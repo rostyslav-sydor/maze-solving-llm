@@ -1,0 +1,14 @@
+To solve the maze starting at (0,0) and ending at (3,3), we follow a path considering open passages and avoiding walls.
+
+1. From (0,0), move east to (0,1), as there's no wall blocking the path.
+2. From (0,1), proceed directly to (0,2).
+3. From (0,2), only feasible move without intersecting walls is south to (1,2).
+4. From (1,2), continue south to (2,2).
+5. From (2,2), go west to (2,1) because there's no wall.
+6. From (2,1), again move west to (2,0).
+7. Then, head south from (2,0) to (3,0), directed by the lack of walls.
+8. Lastly, from (3,0), move east through clear paths to (3,1), (3,2), and ultimately (3,3) for the exit.
+
+Thus, the solution path is:
+
+<PATH_START> (0,0) (0,1) (0,2) (1,2) (2,2) (2,1) (2,0) (3,0) (3,1) (3,2) (3,3) <PATH_END>

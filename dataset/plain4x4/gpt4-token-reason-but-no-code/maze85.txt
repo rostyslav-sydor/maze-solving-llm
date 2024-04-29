@@ -1,0 +1,36 @@
+To solve the maze given as an adjacency list, the goal is to determine a path from the origin point (0,0) to the target point (3,3) by traversing through connected points (or nodes). An adjacency list specifies direct connections between nodes, which in this case are represented as grid coordinates.
+
+Given the adjacency relationships:
+- The list "adj" shows direct connections, e.g., (1,1) <--> (0,1) indicates that (1,1) and (0,1) are directly connected.
+- The origin is (0,0) and the target is (3,3).
+
+To solve the maze:
+1. Convert the adjacency list to a more structured graph representation (preferably a dictionary) for easier traversal.
+2. Use a pathfinding algorithm, such as breadth-first search (BFS), which is optimal for unweighted graphs like this one to find the shortest path from the origin to the target.
+3. The BFS algorithm works by exploring neighbors level-by-level, ensuring that the shortest path to any node is found the first time it is visited.
+4. Once the target node is reached, backtrack the path using the parent or predecessor nodes stored during the BFS traversal.
+
+Steps in BFS:
+- Start at (0,0), marking it visited, and explore all directly connected nodes.
+- Move to each of these nodes, mark them visited, and explore their unvisited neighbors.
+- Continue this process iteratively until the target (3,3) is reached or all possible paths are explored.
+
+With the provided adjacency:
+- By building the graph and using BFS from (0,0), we find connections from each node until reaching (3,3).
+- Based on the list, the possible paths and connections eventually leading to (3,3) are examined.
+
+Solution Path:
+1. Starting at (0,0) which connects to (1,0).
+2. From (1,0) next go to (2,0).
+3. (2,0) connects to (3,0).
+4. From (3,0) move to (3,1).
+5. Proceed from (3,1) to (3,2).
+6. Finally, from (3,2) move to (3,3).
+
+Thus, tracing this on the grid:
+- The path starts at the top left of the grid and moves down directly to the bottom left, then moves step by step to the right until reaching the bottom-right corner.
+
+Formatted solution:
+<PATH_START> (0,0) (1,0) (2,0) (3,0) (3,1) (3,2) (3,3) <PATH_END>
+
+This path travels vertically down the first column, then transitions horizontally across the bottom row to the target, representing the most direct path according to the given connections and using the BFS approach for unweighted graphs.

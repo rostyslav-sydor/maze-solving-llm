@@ -1,0 +1,12 @@
+<PATH_START> (1,1) (1,2) (1,3) (1,4) (2,4) (3,4) (4,4) (5,4) (5,5) (5,6) (5,7) (6,7) (7,7) <PATH_END>
+
+Explanation:
+
+1. Start at the entry point (1,1).
+2. Move right (east) from (1,1) to (1,4) because moving down leads to a wall.
+3. Move down (south) from (1,4) to (4,4). Other options, like moving up, are not feasible because of walls or the boundary.
+4. Move down (south) to (5,4) since moving directly left or down leads to dead ends.
+5. Continue right (east) from (5,4) to (5,7) as the next column at each step doesn't contain walls.
+6. Move down (south) finally from (5,7) to (7,7), as no obstacles are present and it directly leads to the exit (E). 
+
+This path directly navigates the maze with turn-by-turn right or down moves avoiding all dead ends and walls, ensuring an efficient exit.

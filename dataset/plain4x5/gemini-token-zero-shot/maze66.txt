@@ -1,0 +1,10 @@
+<ADJLIST_START> (3,3) <--> (3,2) ; (3,4) <--> (3,3) ; (1,4) <--> (1,3) ; (2,0) <--> (1,0) ; (0,2) <--> (1,2) ; (1,4) <--> (0,4) ; (3,4) <--> (2,4) ; (0,0) <--> (0,1) ; (2,4) <--> (1,4) ; (3,1) <--> (3,0) ; (0,2) <--> (0,3) ; (2,2) <--> (2,1) ; (3,1) <--> (2,1) ; (1,1) <--> (1,0) ; (0,1) <--> (0,2) ; (1,3) <--> (2,3) ; (2,0) <--> (3,0) ; (0,3) <--> (0,4) ; (2,2) <--> (2,3) ; <ADJLIST_END> <ORIGIN_START> (0,0) <ORIGIN_END> <TARGET_START> (3,4) <TARGET_END>
+
+1. Start from the origin (0,0)
+<PATH_START> (0,0)
+
+2. Traverse through the adjacency list to find the path to the target (3,4)
+(0,1) (0,2) (0,3) (0,4) (1,4) (2,4) (3,4)
+
+3. Output the path as a coordinate list
+<PATH_END>

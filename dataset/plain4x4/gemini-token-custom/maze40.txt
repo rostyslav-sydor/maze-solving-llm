@@ -1,0 +1,18 @@
+1. First, find the origin and target coordinates from the adjacency list by looking for `<ORIGIN_START>` and `<TARGET_START>` tokens. In this case,
+> Origin: (0,0)
+> Target: (3,3)
+
+2. For path from (0,0) to (3,3), use depth-first search algorithm, starting from the origin coordinate:
+> (0,0) -> (1,0) -> (2,0) -> (2,1) -> (2,2) -> (2,3) -> (3,3)
+
+3. Check if the path is valid by making sure that each step is an adjacent cell and no walls are crossed:
+> (0,0) -> (1,0) - valid, adjacent cell
+> (1,0) -> (2,0) - valid, adjacent cell
+> (2,0) -> (2,1) - valid, adjacent cell
+> (2,1) -> (2,2) - valid, adjacent cell
+> (2,2) -> (2,3) - valid, adjacent cell
+> (2,3) -> (3,3) - valid, adjacent cell
+
+Therefore, the path is valid and solution is:
+
+<PATH_START> (0,0) (1,0) (2,0) (2,1) (2,2) (2,3) (3,3) <PATH_END>

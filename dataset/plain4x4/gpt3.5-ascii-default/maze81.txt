@@ -1,0 +1,3 @@
+<Path_Start> (1,1) (1,2) (1,3) (1,4) (1,5) (1,6) (1,7) (1,8) (2,8) (3,8) (4,8) (5,8) (5,7) (5,6) (5,5) (5,4) (5,3) (5,2) (5,1) (6,1) (7,1) (7,2) (7,3) (7,4) (7,5) (7,6) (7,7) <PATH_END> 
+
+The solution to the maze is to start at the entrance (S) at coordinate (1,1) and move through the open paths, avoiding the walls marked by hash signs. The path leads to the exit (E) at coordinate (7,7). This sequence of coordinates represents the optimal route through the maze.
